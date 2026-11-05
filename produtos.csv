@@ -1,0 +1,14 @@
+# ===== PRODUTOS DO CHOCALHO DE OFERTAS =====
+# Uma linha por produto. Linhas que começam com # são ignoradas.
+#
+# link_produto      → o endereço do produto no Mercado Livre (copie da barra do navegador)
+# link_afiliado     → o link que o painel de afiliados gera para esse produto (meli.la/...)
+# categoria         → fralda, higiene, roupa, brinquedo, jogo, quarto, passeio, alimentacao, gestante, outros
+# preco_referencia  → opcional: o preço "normal" do produto. Se cair 15% abaixo disso, vira oferta.
+#
+# Não entram (o bot bloqueia sozinho): mamadeira, bico, chupeta, protetor de mamilo,
+# fórmulas e leites infantis, remédios e suplementos.
+#
+# Exemplo (apague o # para usar):
+# https://www.mercadolivre.com.br/fralda-exemplo/p/MLB12345678,https://meli.la/xxxxxxx,fralda,89.90
+link_produto,link_afiliado,categoria,preco_referencia

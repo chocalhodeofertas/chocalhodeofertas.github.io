@@ -1,0 +1,31 @@
+name: Configurar token do Mercado Livre
+
+on:
+  workflow_dispatch:
+    inputs:
+      codigo:
+        description: "Cole aqui o endereço inteiro (ou só o código depois de code=) que apareceu após autorizar"
+        required: true
+      redirect_uri:
+        description: "O mesmo Redirect URI cadastrado no app do Mercado Livre"
+        required: true
+        default: "https://github.com/lgabanella/bot-ofertas"
+
+jobs:
+  configurar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Trocar código por token
+        run: python -m bot.configurar_token
+        env:
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          CODIGO: ${{ inputs.codigo }}
+          REDIRECT_URI: ${{ inputs.redirect_uri }}

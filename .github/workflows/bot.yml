@@ -1,0 +1,60 @@
+name: Chocalho de Ofertas
+
+on:
+  schedule:
+    - cron: "17 * * * *" # de hora em hora (o bot só posta entre 8h e 22h)
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "teste = manda só pra você · diagnostico = confere a configuração · normal = posta no canal"
+        type: choice
+        default: diagnostico
+        options: [diagnostico, teste, normal]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chocalho-bot
+  cancel-in-progress: false
+
+jobs:
+  rodar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Rodar o bot
+        run: python -m bot.main --modo "${{ inputs.modo || 'normal' }}"
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CANAL: ${{ secrets.TELEGRAM_CANAL }}
+          TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID }}
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+          ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          MIN_DESCONTO: ${{ vars.MIN_DESCONTO }}
+          MAX_POSTS_POR_RODADA: ${{ vars.MAX_POSTS_POR_RODADA }}
+          MAX_POSTS_POR_DIA: ${{ vars.MAX_POSTS_POR_DIA }}
+          HORA_INICIO: ${{ vars.HORA_INICIO }}
+          HORA_FIM: ${{ vars.HORA_FIM }}
+
+      - name: Salvar histórico de preços
+        if: always()
+        run: |
+          git config user.name "chocalho-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/estado.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Atualiza histórico de preços"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push

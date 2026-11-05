@@ -1,0 +1,280 @@
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+
+import pytest
+
+from bot import estado as est
+from bot import mensagens
+from bot.filtros import motivo_bloqueio
+from bot.main import Config, Produto, carregar_produtos, rodar
+from bot.mercadolivre import AcessoNegado, InfoProduto, MercadoLivre, extrair_id
+from bot.ofertas import avaliar
+
+FUSO = ZoneInfo("America/Sao_Paulo")
+AGORA = datetime(2026, 11, 5, 15, 0, tzinfo=FUSO)
+
+
+# ---------- links ----------
+
+@pytest.mark.parametrize(
+    "link,esperado",
+    [
+        ("https://produto.mercadolivre.com.br/MLB-1234567890-fralda-pampers-_JM", ("item", "MLB1234567890")),
+        ("https://www.mercadolivre.com.br/fralda-huggies/p/MLB19876543", ("catalogo", "MLB19876543")),
+        ("https://www.mercadolivre.com.br/x/p/MLB19876543?wid=MLB5555555555&sid=y", ("item", "MLB5555555555")),
+        ("MLB1234567890", ("item", "MLB1234567890")),
+    ],
+)
+def test_extrair_id(link, esperado):
+    assert extrair_id(link) == esperado
+
+
+def test_extrair_id_invalido():
+    with pytest.raises(ValueError):
+        extrair_id("https://meli.la/abc")
+
+
+# ---------- filtros ----------
+
+@pytest.mark.parametrize(
+    "titulo",
+    [
+        "Kit Mamadeira Avent 260ml",
+        "Chupeta Nuk Silicone Tam 2",
+        "Bico de Silicone Para Mamadeira",
+        "Protetor de Mamilo Medela",
+        "Fórmula Infantil Aptamil 800g",
+        "Composto Lácteo Ninho Fases",
+        "Leite em pó NAN Supreme",
+        "Vitamina D Gotas Infantil",
+        "Xarope Infantil Tosse",
+        "Suplemento Infantil Pediasure",
+    ],
+)
+def test_bloqueia(titulo):
+    assert motivo_bloqueio(titulo)
+
+
+@pytest.mark.parametrize(
+    "titulo",
+    [
+        "Fralda Pampers Confort Sec G 92 unidades",
+        "Lenço Umedecido Huggies 4 pacotes",
+        "Copo de Transição com Alça 300ml",
+        "Carrinho de Bebê Travel System",
+        "Bicicleta Infantil Aro 16",
+        "Body Bebê Manga Longa Kit 5",
+        "Babador Silicone Pega Migalha",
+    ],
+)
+def test_libera(titulo):
+    assert motivo_bloqueio(titulo) is None
+
+
+# ---------- planilha ----------
+
+def test_carregar_produtos(tmp_path):
+    arq = tmp_path / "produtos.csv"
+    arq.write_text(
+        "# comentário\n"
+        "link_produto,link_afiliado,categoria,preco_referencia\n"
+        "https://produto.mercadolivre.com.br/MLB-111111111-fralda-_JM,https://meli.la/a,fralda,\"1.299,90\"\n"
+        "https://produto.mercadolivre.com.br/MLB-222222222-chupeta-nuk-_JM,https://meli.la/b,outros,\n"
+        "https://produto.mercadolivre.com.br/MLB-333333333-body-_JM,,roupa,\n"
+        "https://produto.mercadolivre.com.br/MLB-444444444-body-_JM,https://meli.la/d,Roupa,49.90\n"
+        "https://produto.mercadolivre.com.br/MLB-111111111-fralda-_JM,https://meli.la/a,fralda,\n",
+        encoding="utf-8",
+    )
+    produtos, avisos = carregar_produtos(arq)
+    assert [p.id for p in produtos] == ["MLB111111111", "MLB444444444"]
+    assert produtos[0].preco_referencia == 1299.90
+    assert produtos[1].preco_referencia == 49.90
+    assert produtos[1].categoria == "roupa"
+    assert len(avisos) == 3  # chupeta, sem afiliado, repetido
+
+
+# ---------- avaliação ----------
+
+def prod(pid="MLB1", ref=None):
+    return Produto(pid, "item", "x", "https://meli.la/a", "fralda", ref, 2)
+
+
+def info(preco, original=None, pid="MLB1"):
+    return InfoProduto(pid, "Fralda Teste G", preco, original, "https://img/x-O.jpg", True)
+
+
+def test_oferta_por_desconto_do_ml():
+    o = avaliar(prod(), info(70, 100), est.novo(), AGORA)
+    assert o and round(o.desconto, 2) == 0.30 and o.preco_de == 100
+
+
+def test_desconto_pequeno_nao_posta():
+    assert avaliar(prod(), info(95, 100), est.novo(), AGORA) is None
+
+
+def test_oferta_por_preco_de_referencia():
+    o = avaliar(prod(ref=100), info(80), est.novo(), AGORA)
+    assert o and o.preco_de is None and round(o.abaixo_do_habitual, 2) == 0.20
+
+
+def test_menor_preco_historico():
+    e = est.novo()
+    for i, p in enumerate([100, 98, 99]):
+        est.registrar_preco(e, "MLB1", p, AGORA - timedelta(days=3 - i))
+    assert avaliar(prod(), info(90), e, AGORA).menor_preco_historico
+    assert avaliar(prod(), info(97), e, AGORA) is None
+
+
+def test_nao_repete_logo():
+    e = est.novo()
+    est.registrar_post(e, "MLB1", 70, AGORA - timedelta(days=1))
+    assert avaliar(prod(), info(70, 100), e, AGORA) is None
+    assert avaliar(prod(), info(60, 100), e, AGORA) is not None  # caiu mais
+    assert avaliar(prod(), info(70, 100), e, AGORA + timedelta(days=3)) is not None
+
+
+def test_indisponivel():
+    i = info(50, 100)
+    i.disponivel = False
+    assert avaliar(prod(), i, est.novo(), AGORA) is None
+
+
+# ---------- mensagens ----------
+
+def test_brl():
+    assert mensagens.brl(1299.9) == "R$ 1.299,90"
+
+
+def test_mensagem_telegram_e_whatsapp():
+    o = avaliar(prod(), info(70, 100), est.novo(), AGORA)
+    o.titulo = "Fralda <Premium> & Cia"
+    tg = mensagens.montar_telegram(o)
+    assert "<s>R$ 100,00</s>" in tg and "<b>R$ 70,00</b>" in tg and "(-30%)" in tg
+    assert "&lt;Premium&gt; &amp;" in tg and 'href="https://meli.la/a"' in tg
+    wa = mensagens.montar_whatsapp(o)
+    assert "~R$ 100,00~" in wa and "*R$ 70,00*" in wa and "https://meli.la/a" in wa
+
+
+def test_mensagem_x_cabe():
+    o = avaliar(prod(), info(70, 100), est.novo(), AGORA)
+    o.titulo = "Fralda " * 80
+    x = mensagens.montar_x(o)
+    peso = len(x) - len(o.link) + 23 + 1  # emoji conta 2
+    assert peso <= 280
+
+
+# ---------- API do ML (simulada) ----------
+
+class Resp:
+    def __init__(self, status, dados):
+        self.status_code, self._d, self.text, self.content = status, dados, str(dados), b"x"
+
+    def json(self):
+        return self._d
+
+
+class SessaoFalsa:
+    def __init__(self, resposta):
+        self.resposta, self.chamadas = resposta, []
+
+    def get(self, url, params=None, headers=None, timeout=None):
+        self.chamadas.append((url, params, headers))
+        return self.resposta
+
+
+def test_ml_itens():
+    s = SessaoFalsa(Resp(200, [
+        {"code": 200, "body": {"id": "MLB1", "title": "Fralda", "price": 70, "original_price": 100,
+                               "status": "active", "available_quantity": 5,
+                               "secure_thumbnail": "https://http2.mlstatic.com/D_123-I.jpg"}},
+        {"code": 404, "body": {"message": "not found"}},
+    ]))
+    r = MercadoLivre("tok", session=s).itens(["MLB1", "MLB2"])
+    assert list(r) == ["MLB1"]
+    assert r["MLB1"].imagem.endswith("-O.jpg")
+    assert s.chamadas[0][2]["Authorization"] == "Bearer tok"
+
+
+def test_ml_acesso_negado():
+    with pytest.raises(AcessoNegado):
+        MercadoLivre(session=SessaoFalsa(Resp(403, {"message": "forbidden"}))).itens(["MLB1"])
+
+
+# ---------- rodada completa (simulada) ----------
+
+class MLFalso:
+    def __init__(self, infos):
+        self.infos = infos
+
+    def itens(self, ids):
+        return {i: self.infos[i] for i in ids if i in self.infos}
+
+    def catalogo(self, pid):
+        return self.infos[pid]
+
+
+class TGFalso:
+    def __init__(self):
+        self.enviados = []
+
+    def enviar_oferta(self, chat, legenda, imagem=None):
+        self.enviados.append(("oferta", chat, legenda))
+
+    def enviar_texto(self, chat, texto, html=False):
+        self.enviados.append(("texto", chat, texto))
+
+
+def cenario():
+    produtos = [prod("MLB1"), prod("MLB2"), prod("MLB3")]
+    infos = {
+        "MLB1": info(70, 100, "MLB1"),  # 30%
+        "MLB2": info(50, 100, "MLB2"),  # 50% — melhor
+        "MLB3": InfoProduto("MLB3", "Chupeta Nuk", 10, 50, None, True),  # bloqueada
+    }
+    return produtos, MLFalso(infos)
+
+
+def test_rodada_normal_posta_a_melhor():
+    produtos, ml = cenario()
+    tg, e = TGFalso(), est.novo()
+    cfg = Config(canal="@canal", admin_chat="123", max_por_rodada=1)
+    enviadas = rodar("normal", cfg, ml, tg, e, produtos, agora=AGORA)
+    assert [o.id for o in enviadas] == ["MLB2"]
+    assert tg.enviados[0][:2] == ("oferta", "@canal")
+    assert [t[1] for t in tg.enviados[1:]] == ["123", "123"]  # cópias WhatsApp e X
+    assert "MLB2" in e["postados"] and "MLB3" not in e["precos"]
+    # Na rodada seguinte não repete a MLB2, posta a MLB1
+    enviadas = rodar("normal", cfg, ml, TGFalso(), e, produtos, agora=AGORA + timedelta(hours=1))
+    assert [o.id for o in enviadas] == ["MLB1"]
+
+
+def test_rodada_fora_do_horario():
+    produtos, ml = cenario()
+    tg, e = TGFalso(), est.novo()
+    madrugada = AGORA.replace(hour=3)
+    assert rodar("normal", Config(canal="@c"), ml, tg, e, produtos, agora=madrugada) == []
+    assert tg.enviados == [] and e["precos"]  # preços registrados mesmo assim
+
+
+def test_limite_diario():
+    produtos, ml = cenario()
+    e = est.novo()
+    e["contagem_dia"] = {AGORA.date().isoformat(): 12}
+    assert rodar("normal", Config(canal="@c"), ml, TGFalso(), e, produtos, agora=AGORA) == []
+
+
+def test_modo_teste_manda_so_para_admin():
+    produtos, ml = cenario()
+    tg, e = TGFalso(), est.novo()
+    rodar("teste", Config(canal="@canal", admin_chat="123"), ml, tg, e, produtos, agora=AGORA.replace(hour=3))
+    assert tg.enviados and all(chat == "123" for _, chat, _ in tg.enviados)
+    assert "[TESTE]" in tg.enviados[0][2]
+    assert e["postados"] == {}
+
+
+def test_modo_teste_sem_oferta_manda_exemplo():
+    produtos = [prod("MLB1")]
+    ml = MLFalso({"MLB1": info(99, 100, "MLB1")})
+    tg = TGFalso()
+    rodar("teste", Config(admin_chat="123"), ml, tg, est.novo(), produtos, agora=AGORA)
+    assert tg.enviados and "R$ 99,00" in tg.enviados[0][2]
