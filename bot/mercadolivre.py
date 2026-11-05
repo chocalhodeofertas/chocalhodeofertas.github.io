@@ -55,6 +55,12 @@ def extrair_id(link: str):
     raise ValueError(f"não achei o código MLB no link: {link}")
 
 
+def _resumo(texto):
+    """Tira HTML e espaços da resposta de erro, para o log ficar legível."""
+    texto = re.sub(r"<[^>]+>", " ", texto or "")
+    return " ".join(texto.split())[:150]
+
+
 def _imagem_grande(url: Optional[str]) -> Optional[str]:
     if not url:
         return None
@@ -77,9 +83,9 @@ class MercadoLivre:
         except requests.RequestException as e:
             raise ErroML(f"falha de conexão com o Mercado Livre ({type(e).__name__})")
         if r.status_code in (401, 403):
-            raise AcessoNegado(f"HTTP {r.status_code} em {caminho}: {r.text[:200]}")
+            raise AcessoNegado(f"HTTP {r.status_code} em {caminho}: {_resumo(r.text)}")
         if r.status_code >= 400:
-            raise ErroML(f"HTTP {r.status_code} em {caminho}: {r.text[:200]}")
+            raise ErroML(f"HTTP {r.status_code} em {caminho}: {_resumo(r.text)}")
         return r.json()
 
     def itens(self, ids):
