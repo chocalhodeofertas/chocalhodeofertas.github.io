@@ -55,7 +55,7 @@ class Config:
     min_desconto: float = 0.15
     max_por_rodada: int = 1
     max_por_hora: int = 2
-    chance_postar: float = 1.0  # do ambiente vem 70%
+    chance_postar: float = 1.0
     max_por_dia: int = 25
     repost_dias: int = 3
     hora_inicio: int = 8
@@ -83,7 +83,7 @@ class Config:
             min_desconto=num("MIN_DESCONTO", 15) / 100,
             max_por_rodada=num("MAX_POSTS_POR_RODADA", 1, int),
             max_por_hora=num("MAX_POSTS_POR_HORA", 2, int),
-            chance_postar=num("CHANCE_POSTAR", 70) / 100,
+            chance_postar=num("CHANCE_POSTAR", 100) / 100,
             max_por_dia=num("MAX_POSTS_POR_DIA", 25, int),
             repost_dias=num("REPOST_DIAS", 3, int),
             hora_inicio=num("HORA_INICIO", 8, int),
