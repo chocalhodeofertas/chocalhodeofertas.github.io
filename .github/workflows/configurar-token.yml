@@ -11,6 +11,13 @@ on:
         required: true
         default: "https://github.com/lgabanella/bot-ofertas"
 
+permissions:
+  contents: write
+
+concurrency:
+  group: chocalho-bot
+  cancel-in-progress: false
+
 jobs:
   configurar:
     runs-on: ubuntu-latest
@@ -26,6 +33,13 @@ jobs:
         env:
           ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
           ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
-          GH_PAT: ${{ secrets.GH_PAT }}
           CODIGO: ${{ inputs.codigo }}
           REDIRECT_URI: ${{ inputs.redirect_uri }}
+      - name: Salvar token criptografado
+        run: |
+          git config user.name "chocalho-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/token_ml.enc
+          git commit -m "Token do Mercado Livre configurado [skip ci]"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push

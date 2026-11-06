@@ -28,13 +28,9 @@ No GitHub, abra o repositório → **Settings** → **Secrets and variables** �
 | `TELEGRAM_BOT_TOKEN` | o token que o @BotFather te deu |
 | `TELEGRAM_CANAL` | o @ do canal, ex.: `@chocalhodeofertas` |
 
-## Passo 2: Descobrir o seu chat ID
+## Passo 2: Chat ID
 
-1. No Telegram, abra uma conversa com o **seu bot** e mande um "oi".
-2. No GitHub, vá em **Actions** → **Chocalho de Ofertas** → **Run workflow** → modo
-   **diagnostico** → **Run workflow**.
-3. Abra a execução e clique em **Rodar o bot**. Vai aparecer uma linha "chat ID = 123456789".
-4. Crie o secret `TELEGRAM_ADMIN_CHAT_ID` com esse número.
+Já configurado (o seu chat ID está no workflow). Nada a fazer.
 
 ## Passo 3: Adicionar produtos
 
@@ -66,16 +62,12 @@ Se aparecer "Mercado Livre recusou o acesso", vá para o passo 5. Se não, pode 
 1. Em **developers.mercadolivre.com.br**, crie um aplicativo. Em **Redirect URI**, use
    `https://github.com/lgabanella/bot-ofertas`.
 2. Crie os secrets `ML_CLIENT_ID` e `ML_CLIENT_SECRET` com os valores do app.
-3. Crie um token do GitHub para o bot conseguir renovar o token do ML sozinho:
-   GitHub → foto → **Settings** → **Developer settings** → **Personal access tokens** →
-   **Fine-grained tokens** → **Generate new token**. Em **Repository access**, escolha só o
-   `bot-ofertas`. Em **Permissions**, coloque **Secrets: Read and write**. Salve como o secret `GH_PAT`.
-4. Abra no navegador (troque SEU_CLIENT_ID):
+3. Abra no navegador (troque SEU_CLIENT_ID):
    `https://auth.mercadolivre.com.br/authorization?response_type=code&client_id=SEU_CLIENT_ID&redirect_uri=https://github.com/lgabanella/bot-ofertas`
-5. Autorize. O navegador vai abrir o GitHub com `?code=...` no endereço. Copie o endereço inteiro.
-6. Em **Actions** → **Configurar token do Mercado Livre** → **Run workflow**, cole o endereço
+4. Autorize. O navegador vai abrir o GitHub com `?code=...` no endereço. Copie o endereço inteiro.
+5. Em **Actions** → **Configurar token do Mercado Livre** → **Run workflow**, cole o endereço
    e rode. **Faça isso logo**, porque o código vale só alguns minutos.
-7. Rode o **diagnostico** de novo.
+6. Rode o **diagnostico** de novo.
 
 ## Passo 6: Ligar
 

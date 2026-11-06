@@ -278,3 +278,28 @@ def test_modo_teste_sem_oferta_manda_exemplo():
     tg = TGFalso()
     rodar("teste", Config(admin_chat="123"), ml, tg, est.novo(), produtos, agora=AGORA)
     assert tg.enviados and "R$ 99,00" in tg.enviados[0][2]
+
+
+# ---------- cofre do token ----------
+
+def test_cofre(tmp_path):
+    from bot import cofre
+    arq = tmp_path / "t.enc"
+    cofre.guardar("TG-refresh-123", "segredo", arq)
+    assert b"TG-refresh" not in arq.read_bytes()
+    assert cofre.ler("segredo", arq) == "TG-refresh-123"
+    assert cofre.ler("outro", arq) is None
+    assert cofre.ler("segredo", tmp_path / "nao-existe") is None
+
+
+def test_conectar_ml_guarda_token_novo(tmp_path, monkeypatch):
+    from bot import cofre, main
+    arq = tmp_path / "t.enc"
+    monkeypatch.setattr(cofre, "ARQ_TOKEN", arq)
+    monkeypatch.setattr(cofre.guardar, "__defaults__", (arq,))
+    monkeypatch.setattr(cofre.ler, "__defaults__", (arq,))
+    cofre.guardar("velho", "s")
+    monkeypatch.setattr(main, "renovar_token", lambda c, s, r: ("acesso", "novo" if r == "velho" else "x"))
+    ml, modo = main.conectar_ml(Config(ml_client_id="c", ml_client_secret="s"))
+    assert ml.token == "acesso" and modo == "com token"
+    assert cofre.ler("s") == "novo"

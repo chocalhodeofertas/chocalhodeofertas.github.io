@@ -37,11 +37,10 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CANAL: ${{ secrets.TELEGRAM_CANAL }}
-          TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID }}
+          TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID || '787296152' }}
           ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
           ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
           ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
-          GH_PAT: ${{ secrets.GH_PAT }}
           MIN_DESCONTO: ${{ vars.MIN_DESCONTO }}
           MAX_POSTS_POR_RODADA: ${{ vars.MAX_POSTS_POR_RODADA }}
           MAX_POSTS_POR_DIA: ${{ vars.MAX_POSTS_POR_DIA }}
@@ -53,8 +52,8 @@ jobs:
         run: |
           git config user.name "chocalho-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/estado.json
+          git add data/estado.json data/token_ml.enc 2>/dev/null || git add data/estado.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Atualiza histórico de preços"
+          git commit -m "Atualiza histórico de preços [skip ci]"
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
           git push

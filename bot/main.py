@@ -17,10 +17,11 @@ from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
+from . import cofre
 from . import estado as est
 from . import mensagens
 from .filtros import motivo_bloqueio
-from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, renovar_token, salvar_secret
+from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, renovar_token
 from .ofertas import avaliar
 from .telegram import Telegram, TelegramErro
 
@@ -134,14 +135,14 @@ def carregar_produtos(caminho=ARQ_PRODUTOS):
 
 def conectar_ml(cfg: Config):
     """Gera o token do ML (se configurado) e já salva o refresh_token novo."""
-    if not (cfg.ml_client_id and cfg.ml_client_secret and cfg.ml_refresh_token):
+    if not (cfg.ml_client_id and cfg.ml_client_secret):
         return MercadoLivre(), "sem token"
-    access, novo_refresh = renovar_token(cfg.ml_client_id, cfg.ml_client_secret, cfg.ml_refresh_token)
-    if novo_refresh != cfg.ml_refresh_token:
-        if salvar_secret("ML_REFRESH_TOKEN", novo_refresh):
-            log("Token do Mercado Livre renovado e salvo.")
-        else:
-            log("ATENÇÃO: o token do ML foi renovado mas não consegui salvar o novo (confira o GH_PAT).")
+    refresh = cofre.ler(cfg.ml_client_secret) or cfg.ml_refresh_token
+    if not refresh:
+        return MercadoLivre(), "sem token — falta rodar 'Configurar token do Mercado Livre'"
+    access, novo_refresh = renovar_token(cfg.ml_client_id, cfg.ml_client_secret, refresh)
+    # O ML troca o refresh_token a cada uso: guarda o novo na hora
+    cofre.guardar(novo_refresh, cfg.ml_client_secret)
     return MercadoLivre(access), "com token"
 
 
@@ -313,7 +314,7 @@ def diagnostico(cfg: Config, produtos, avisos):
     except AcessoNegado as e:
         ok = False
         rel.append(f"❌ Mercado Livre recusou o acesso: {e}")
-        if not cfg.ml_refresh_token:
+        if not cofre.ler(cfg.ml_client_secret or "x"):
             rel.append("   → Precisa configurar o token do ML (veja o README, passo 'Token do Mercado Livre').")
     except ErroML as e:
         ok = False

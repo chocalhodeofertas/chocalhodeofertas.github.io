@@ -2,7 +2,6 @@
 import json
 import os
 import re
-import subprocess
 from dataclasses import dataclass
 from typing import Optional
 from urllib.parse import parse_qs, urlparse
@@ -180,22 +179,3 @@ def _mascarar(valor):
     """No GitHub Actions, esconde o valor caso apareça em algum log."""
     if os.environ.get("GITHUB_ACTIONS") == "true" and valor:
         print(f"::add-mask::{valor}")
-
-
-def salvar_secret(nome, valor) -> bool:
-    """Grava um secret no repositório (precisa do GH_PAT). Retorna True se deu certo."""
-    pat = os.environ.get("GH_PAT")
-    repo = os.environ.get("GITHUB_REPOSITORY")
-    if not pat or not repo:
-        return False
-    env = dict(os.environ, GH_TOKEN=pat)
-    r = subprocess.run(
-        ["gh", "secret", "set", nome, "--repo", repo],
-        input=valor,
-        text=True,
-        capture_output=True,
-        env=env,
-    )
-    if r.returncode != 0:
-        print(f"Aviso: não consegui salvar o secret {nome}: {r.stderr.strip()[:200]}")
-    return r.returncode == 0

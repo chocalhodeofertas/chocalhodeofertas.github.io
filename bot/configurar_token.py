@@ -1,12 +1,13 @@
 """Primeira autorização do Mercado Livre (roda pelo GitHub Actions).
 
 Troca o código que aparece na URL depois de autorizar o app por um
-refresh_token, e salva como secret ML_REFRESH_TOKEN no repositório.
+refresh_token, e guarda criptografado em data/token_ml.enc.
 """
 import os
 import sys
 
-from .mercadolivre import AcessoNegado, ErroML, salvar_secret, trocar_codigo
+from . import cofre
+from .mercadolivre import AcessoNegado, ErroML, trocar_codigo
 
 
 def main():
@@ -28,11 +29,9 @@ def main():
         print(f"Não deu certo: {e}")
         print("O código vale poucos minutos e só pode ser usado uma vez. Gere outro e tente de novo.")
         return 1
-    if salvar_secret("ML_REFRESH_TOKEN", refresh):
-        print("✅ Token do Mercado Livre salvo! Agora rode o bot no modo diagnostico.")
-        return 0
-    print("Consegui o token, mas não consegui salvá-lo. Confira se o secret GH_PAT está configurado.")
-    return 1
+    cofre.guardar(refresh, secret)
+    print("✅ Token do Mercado Livre salvo! Agora rode o bot no modo diagnostico.")
+    return 0
 
 
 if __name__ == "__main__":
