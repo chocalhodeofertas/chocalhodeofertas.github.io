@@ -2,7 +2,10 @@ name: Chocalho de Ofertas
 
 on:
   schedule:
-    - cron: "17 * * * *" # de hora em hora (o bot só posta entre 8h e 22h)
+    # A cada 20 min, das 8h às 21h47 (horário de Brasília; o cron é em UTC).
+    # O GitHub às vezes pula rodadas agendadas; rodar mais vezes compensa,
+    # e o próprio bot limita a 2 posts por hora.
+    - cron: "7,27,47 11-23,0 * * *"
   workflow_dispatch:
     inputs:
       modo:
@@ -42,7 +45,8 @@ jobs:
           ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
           ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
           MIN_DESCONTO: ${{ vars.MIN_DESCONTO || '20' }}
-          MAX_POSTS_POR_RODADA: ${{ vars.MAX_POSTS_POR_RODADA || '2' }}
+          MAX_POSTS_POR_RODADA: ${{ vars.MAX_POSTS_POR_RODADA || '1' }}
+          MAX_POSTS_POR_HORA: ${{ vars.MAX_POSTS_POR_HORA || '2' }}
           MAX_POSTS_POR_DIA: ${{ vars.MAX_POSTS_POR_DIA || '25' }}
           HORA_INICIO: ${{ vars.HORA_INICIO }}
           HORA_FIM: ${{ vars.HORA_FIM }}

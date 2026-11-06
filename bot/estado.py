@@ -44,3 +44,17 @@ def registrar_post(estado, pid, preco, agora):
 
 def posts_hoje(estado, agora):
     return estado["contagem_dia"].get(agora.date().isoformat(), 0)
+
+
+def posts_ultima_hora(estado, agora):
+    """Quantos posts foram feitos nos últimos 60 minutos."""
+    from datetime import datetime
+
+    total = 0
+    for p in estado["postados"].values():
+        try:
+            if (agora - datetime.fromisoformat(p["quando"])).total_seconds() < 3600:
+                total += 1
+        except (KeyError, ValueError, TypeError):
+            pass
+    return total

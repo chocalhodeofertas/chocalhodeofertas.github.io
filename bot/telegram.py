@@ -31,10 +31,13 @@ class Telegram:
     def atualizacoes(self):
         return self._chamar("getUpdates", limit=50)
 
-    def enviar_texto(self, chat, texto, html=False):
-        dados = {"chat_id": chat, "text": texto}
+    def enviar_texto(self, chat, texto, html=False, botoes=None):
+        """botoes: lista de (rótulo, url), um botão por linha."""
+        dados = {"chat_id": chat, "text": texto, "link_preview_options": {"is_disabled": True}}
         if html:
             dados["parse_mode"] = "HTML"
+        if botoes:
+            dados["reply_markup"] = {"inline_keyboard": [[{"text": t, "url": u}] for t, u in botoes]}
         return self._chamar("sendMessage", **dados)
 
     def enviar_oferta(self, chat, legenda_html, imagem=None):

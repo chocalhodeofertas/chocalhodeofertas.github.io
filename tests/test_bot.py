@@ -222,8 +222,9 @@ class TGFalso:
     def enviar_oferta(self, chat, legenda, imagem=None):
         self.enviados.append(("oferta", chat, legenda))
 
-    def enviar_texto(self, chat, texto, html=False):
+    def enviar_texto(self, chat, texto, html=False, botoes=None):
         self.enviados.append(("texto", chat, texto))
+        self.botoes = botoes
 
 
 def cenario():
@@ -243,11 +244,29 @@ def test_rodada_normal_posta_a_melhor():
     enviadas = rodar("normal", cfg, ml, tg, e, produtos, agora=AGORA)
     assert [o.id for o in enviadas] == ["MLB2"]
     assert tg.enviados[0][:2] == ("oferta", "@canal")
-    assert [t[1] for t in tg.enviados[1:]] == ["123", "123"]  # cópias WhatsApp e X
+    assert [t[1] for t in tg.enviados[1:]] == ["123"]  # cópia com botões
+    assert tg.botoes[0][1].startswith("https://wa.me/?text=")
+    assert tg.botoes[1][1].startswith("https://x.com/intent/tweet?text=")
     assert "MLB2" in e["postados"] and "MLB3" not in e["precos"]
     # Na rodada seguinte não repete a MLB2, posta a MLB1
-    enviadas = rodar("normal", cfg, ml, TGFalso(), e, produtos, agora=AGORA + timedelta(hours=1))
+    enviadas = rodar("normal", cfg, ml, TGFalso(), e, produtos, agora=AGORA + timedelta(minutes=20))
     assert [o.id for o in enviadas] == ["MLB1"]
+
+
+def test_limite_por_hora():
+    produtos = [prod(f"MLB{i}") for i in range(1, 6)]
+    ml = MLFalso({f"MLB{i}": info(50, 100, f"MLB{i}") for i in range(1, 6)})
+    e, cfg = est.novo(), Config(canal="@c", max_por_rodada=1, max_por_hora=2)
+    feitos = [len(rodar("normal", cfg, ml, TGFalso(), e, produtos, agora=AGORA + timedelta(minutes=m)))
+              for m in (0, 20, 40, 65)]
+    assert feitos == [1, 1, 0, 1]
+
+
+def test_sorteio_pula_rodada():
+    import random as _r
+    produtos, ml = cenario()
+    cfg = Config(canal="@c", chance_postar=0.0)
+    assert rodar("normal", cfg, ml, TGFalso(), est.novo(), produtos, agora=AGORA, rng=_r.Random(1)) == []
 
 
 def test_rodada_fora_do_horario():
@@ -261,7 +280,7 @@ def test_rodada_fora_do_horario():
 def test_limite_diario():
     produtos, ml = cenario()
     e = est.novo()
-    e["contagem_dia"] = {AGORA.date().isoformat(): 12}
+    e["contagem_dia"] = {AGORA.date().isoformat(): 25}
     assert rodar("normal", Config(canal="@c"), ml, TGFalso(), e, produtos, agora=AGORA) == []
 
 

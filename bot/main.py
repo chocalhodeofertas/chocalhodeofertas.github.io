@@ -54,7 +54,9 @@ class Config:
     ml_refresh_token: str = ""
     min_desconto: float = 0.15
     max_por_rodada: int = 1
-    max_por_dia: int = 12
+    max_por_hora: int = 2
+    chance_postar: float = 1.0  # do ambiente vem 70%
+    max_por_dia: int = 25
     repost_dias: int = 3
     hora_inicio: int = 8
     hora_fim: int = 22
@@ -80,7 +82,9 @@ class Config:
             ml_refresh_token=e("ML_REFRESH_TOKEN", ""),
             min_desconto=num("MIN_DESCONTO", 15) / 100,
             max_por_rodada=num("MAX_POSTS_POR_RODADA", 1, int),
-            max_por_dia=num("MAX_POSTS_POR_DIA", 12, int),
+            max_por_hora=num("MAX_POSTS_POR_HORA", 2, int),
+            chance_postar=num("CHANCE_POSTAR", 70) / 100,
+            max_por_dia=num("MAX_POSTS_POR_DIA", 25, int),
             repost_dias=num("REPOST_DIAS", 3, int),
             hora_inicio=num("HORA_INICIO", 8, int),
             hora_fim=num("HORA_FIM", 22, int),
@@ -256,7 +260,16 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
         log(f"Fora do horário de postagem ({cfg.hora_inicio}h–{cfg.hora_fim}h). Só atualizei os preços.")
         return []
 
-    vagas = min(cfg.max_por_rodada, cfg.max_por_dia - est.posts_hoje(estado, agora))
+    # Sorteio: nem toda rodada posta, para os horários não ficarem certinhos
+    if rng.random() > cfg.chance_postar:
+        log("Sorteio: esta rodada não posta (deixa os horários mais naturais).")
+        return []
+
+    vagas = min(
+        cfg.max_por_rodada,
+        cfg.max_por_hora - est.posts_ultima_hora(estado, agora),
+        cfg.max_por_dia - est.posts_hoje(estado, agora),
+    )
     enviadas = []
     for o in candidatas[: max(vagas, 0)]:
         try:
@@ -268,10 +281,8 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
         enviadas.append(o)
         log(f"Postado: {o.id} {mensagens.brl(o.preco)} (-{round(o.desconto * 100)}%)")
         if cfg.admin_chat:
-            # Cópias prontas para colar no WhatsApp e no X
             try:
-                tg.enviar_texto(cfg.admin_chat, "📋 WhatsApp:\n\n" + mensagens.montar_whatsapp(o, rng))
-                tg.enviar_texto(cfg.admin_chat, "📋 X:\n\n" + mensagens.montar_x(o))
+                _copias(tg, cfg.admin_chat, o, rng)
             except TelegramErro as e:
                 log(f"Aviso: não consegui mandar a cópia para você: {e}")
         time.sleep(1)
@@ -298,8 +309,14 @@ def _enviar(tg, chat, oferta, rng, rotulo=""):
         log(mensagens.montar_whatsapp(oferta, rng))
         return
     tg.enviar_oferta(chat, rotulo + mensagens.montar_telegram(oferta, rng), oferta.imagem)
-    tg.enviar_texto(chat, "📋 WhatsApp:\n\n" + mensagens.montar_whatsapp(oferta, rng))
-    tg.enviar_texto(chat, "📋 X:\n\n" + mensagens.montar_x(oferta))
+    _copias(tg, chat, oferta, rng)
+
+
+def _copias(tg, chat, oferta, rng):
+    """Uma mensagem com o texto do WhatsApp e botões que abrem WhatsApp e X já preenchidos."""
+    wa = mensagens.montar_whatsapp(oferta, rng)
+    tg.enviar_texto(chat, "📋 Pronto para compartilhar:\n\n" + wa,
+                    botoes=mensagens.botoes_compartilhar(wa, mensagens.montar_x(oferta)))
 
 
 def diagnostico(cfg: Config, produtos, avisos):

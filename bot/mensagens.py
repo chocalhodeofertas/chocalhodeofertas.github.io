@@ -1,6 +1,7 @@
 """Textos das postagens do Chocalho de Ofertas."""
 import html
 import random
+from urllib.parse import quote
 
 NOME_CANAL = "Chocalho de Ofertas"
 
@@ -96,3 +97,11 @@ def montar_x(oferta):
     # O X conta todo link como 23 caracteres e emojis como 2; sobra folga de 5
     espaco = 280 - 23 - len(meio) - 3 - 2 - 5
     return "🪇 " + _titulo_curto(oferta.titulo, max(espaco, 40)) + meio + oferta.link
+
+
+def botoes_compartilhar(texto_whatsapp, texto_x):
+    """Links que já abrem o WhatsApp e o X com a mensagem pronta."""
+    return [
+        ("📲 Compartilhar no WhatsApp", "https://wa.me/?text=" + quote(texto_whatsapp)),
+        ("✖️ Postar no X", "https://x.com/intent/tweet?text=" + quote(texto_x)),
+    ]
