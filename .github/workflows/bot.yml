@@ -46,6 +46,9 @@ jobs:
           MAX_POSTS_POR_DIA: ${{ vars.MAX_POSTS_POR_DIA }}
           HORA_INICIO: ${{ vars.HORA_INICIO }}
           HORA_FIM: ${{ vars.HORA_FIM }}
+          POR_CATEGORIA: ${{ vars.POR_CATEGORIA }}
+          AFILIADO_MATT_WORD: ${{ vars.AFILIADO_MATT_WORD || 'chocalhodeofertas' }}
+          AFILIADO_MATT_TOOL: ${{ vars.AFILIADO_MATT_TOOL || '39326742' }}
 
       - name: Salvar histórico de preços
         if: always()

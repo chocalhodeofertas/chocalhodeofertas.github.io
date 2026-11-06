@@ -11,17 +11,19 @@ import os
 import random
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
-from . import cofre
+from . import afiliado, cofre
 from . import estado as est
 from . import mensagens
+from .descoberta import descobrir
 from .filtros import motivo_bloqueio
-from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, renovar_token, token_do_app
+from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, link_produto, renovar_token, token_do_app
 from .ofertas import avaliar
 from .telegram import Telegram, TelegramErro
 
@@ -56,6 +58,10 @@ class Config:
     repost_dias: int = 3
     hora_inicio: int = 8
     hora_fim: int = 22
+    matt_word: str = ""
+    matt_tool: str = ""
+    por_categoria: int = 8
+    horas_descoberta: int = 20
 
     @classmethod
     def do_ambiente(cls):
@@ -78,6 +84,10 @@ class Config:
             repost_dias=num("REPOST_DIAS", 3, int),
             hora_inicio=num("HORA_INICIO", 8, int),
             hora_fim=num("HORA_FIM", 22, int),
+            matt_word=e("AFILIADO_MATT_WORD", ""),
+            matt_tool=e("AFILIADO_MATT_TOOL", ""),
+            por_categoria=num("POR_CATEGORIA", 8, int),
+            horas_descoberta=num("HORAS_DESCOBERTA", 20, int),
         )
 
 
@@ -107,9 +117,6 @@ def carregar_produtos(caminho=ARQ_PRODUTOS):
             tipo, pid = extrair_id(link)
         except ValueError as e:
             avisos.append(f"linha {n}: {e}")
-            continue
-        if not afiliado:
-            avisos.append(f"linha {n}: sem link_afiliado — produto ignorado (sem ele não há comissão)")
             continue
         if pid in vistos:
             avisos.append(f"linha {n}: produto {pid} repetido — ignorado")
@@ -151,24 +158,66 @@ def conectar_ml(cfg: Config):
     return MercadoLivre(access), "com token"
 
 
-def buscar_infos(ml: MercadoLivre, produtos):
+def montar_lista(cfg: Config, da_planilha, estado):
+    """Junta os produtos da planilha com os descobertos e garante o link de afiliado."""
+    lista, vistos = [], set()
+    for p in da_planilha:
+        if not p.link_afiliado:
+            p.link_afiliado = afiliado.montar(link_produto(p.tipo, p.id), cfg.matt_word, cfg.matt_tool)
+        lista.append(p)
+        vistos.add(p.id)
+    for pid, d in estado.get("descobertos", {}).items():
+        if pid in vistos:
+            continue
+        url = link_produto(d["tipo"], pid)
+        lista.append(Produto(pid, d["tipo"], url, afiliado.montar(url, cfg.matt_word, cfg.matt_tool),
+                             d["categoria"], None, 0))
+    return lista
+
+
+def atualizar_descoberta(cfg: Config, ml, estado, agora, forcar=False):
+    ultima = estado.get("descoberta_em")
+    if not forcar and ultima:
+        horas = (agora - datetime.fromisoformat(ultima)).total_seconds() / 3600
+        if horas < cfg.horas_descoberta:
+            return False
+    achados = descobrir(ml, cfg.por_categoria, log)
+    if achados:
+        estado["descobertos"] = achados
+        estado["descoberta_em"] = agora.isoformat(timespec="minutes")
+        validos = set(achados) | set(estado["postados"])
+        estado["cache"] = {k: v for k, v in estado.get("cache", {}).items() if k in validos}
+    return True
+
+
+def buscar_infos(ml: MercadoLivre, produtos, estado=None):
     infos = {}
+    cache = (estado or {}).setdefault("cache", {}) if estado is not None else {}
     ids_itens = [p.id for p in produtos if p.tipo == "item"]
     if ids_itens:
         infos.update(ml.itens(ids_itens))
-    for p in produtos:
-        if p.tipo == "catalogo":
-            try:
-                infos[p.id] = ml.catalogo(p.id)
-            except ErroML as e:
-                log(f"Aviso: {p.id}: {e}")
+
+    def um(p):
+        titulo, imagem = cache.get(p.id, (None, None))
+        try:
+            return p.id, ml.catalogo(p.id, titulo, imagem)
+        except (ErroML, AcessoNegado) as e:
+            log(f"Aviso: {p.id}: {e}")
+            return p.id, None
+
+    catalogo = [p for p in produtos if p.tipo == "catalogo"]
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        for pid, info in ex.map(um, catalogo):
+            if info:
+                infos[pid] = info
+                cache[pid] = [info.titulo, info.imagem]
     return infos
 
 
 def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
     """Uma rodada completa. Retorna a lista de ofertas enviadas."""
     agora = agora or datetime.now(FUSO)
-    infos = buscar_infos(ml, produtos)
+    infos = buscar_infos(ml, produtos, estado)
 
     candidatas = []
     for p in produtos:
@@ -305,17 +354,25 @@ def diagnostico(cfg: Config, produtos, avisos):
     try:
         ml, modo_ml = conectar_ml(cfg)
         rel.append(f"🔎 Mercado Livre: testando acesso ({modo_ml})...")
-        if produtos:
-            infos = buscar_infos(ml, produtos[:3])
-            for p in produtos[:3]:
-                i = infos.get(p.id)
-                if i and i.preco:
-                    rel.append(f"   ✅ {p.id}: {mensagens.brl(i.preco)} — {i.titulo[:50]}")
-                else:
-                    rel.append(f"   ❌ {p.id}: sem dados")
+        amostra = produtos[:3]
+        if not amostra:
+            # Testa a descoberta com os 3 mais vendidos de Bebês
+            amostra = [Produto(pid, tipo, "", "", "outros", None, 0)
+                       for tipo, pid in ml.mais_vendidos("MLB1384")[:3]]
+            rel.append(f"   ✅ Lista de mais vendidos acessível ({len(amostra)} de exemplo).")
+        infos = buscar_infos(ml, amostra)
+        for p in amostra:
+            i = infos.get(p.id)
+            if i and i.preco:
+                rel.append(f"   ✅ {p.id}: {mensagens.brl(i.preco)} — {i.titulo[:50]}")
+            else:
+                rel.append(f"   ❌ {p.id}: sem preço")
+        if cfg.matt_word and cfg.matt_tool:
+            rel.append("✅ Link de afiliado automático, ex.: "
+                       + afiliado.montar(link_produto("catalogo", "MLB123"), cfg.matt_word, cfg.matt_tool))
         else:
-            ml.itens(["MLB1"])  # só para testar se a API responde
-            rel.append("   ✅ A API respondeu. Adicione produtos para testar de verdade.")
+            ok = False
+            rel.append("❌ Faltam AFILIADO_MATT_WORD / AFILIADO_MATT_TOOL.")
     except AcessoNegado as e:
         ok = False
         rel.append(f"❌ Mercado Livre recusou o acesso: {e}")
@@ -349,9 +406,6 @@ def main(argv=None):
     if args.modo == "diagnostico":
         return 0 if diagnostico(cfg, produtos, avisos) else 1
 
-    if not produtos:
-        log("Nenhum produto em produtos.csv ainda. Adicione alguns e rode de novo.")
-        return 0
     if not cfg.telegram_token or (args.modo == "normal" and not cfg.canal):
         log("Faltam secrets do Telegram. Rode o modo diagnostico para ver o que falta.")
         return 1
@@ -359,7 +413,13 @@ def main(argv=None):
     estado = est.carregar(ARQ_ESTADO)
     try:
         ml, _ = conectar_ml(cfg)
-        rodar(args.modo, cfg, ml, Telegram(cfg.telegram_token), estado, produtos)
+        agora = datetime.now(FUSO)
+        atualizar_descoberta(cfg, ml, estado, agora)
+        lista = montar_lista(cfg, produtos, estado)
+        if not lista:
+            log("Nenhum produto para acompanhar (planilha vazia e descoberta sem resultado).")
+            return 0
+        rodar(args.modo, cfg, ml, Telegram(cfg.telegram_token), estado, lista, agora=agora)
     except AcessoNegado as e:
         log(f"Mercado Livre recusou o acesso: {e}\nRode o modo diagnostico para ver o que fazer.")
         return 1

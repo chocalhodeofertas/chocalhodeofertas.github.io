@@ -112,19 +112,51 @@ class MercadoLivre:
                 )
         return resultado
 
-    def catalogo(self, pid):
-        """Busca um produto de catálogo e o anúncio que está ganhando a compra."""
-        dados = self._get(f"/products/{pid}")
-        vencedor = dados.get("buy_box_winner") or {}
-        fotos = dados.get("pictures") or []
+    def catalogo(self, pid, titulo=None, imagem=None):
+        """Produto de catálogo: pega o menor preço entre as lojas que vendem.
+
+        Nome e foto só são buscados se não vierem prontos (economiza pedidos).
+        """
+        if not titulo:
+            dados = self._get(f"/products/{pid}")
+            titulo = dados.get("name") or ""
+            fotos = dados.get("pictures") or []
+            imagem = _imagem_grande(fotos[0].get("url")) if fotos else None
+        try:
+            ofertas = self._get(f"/products/{pid}/items", {"limit": 5}).get("results") or []
+        except ErroML:
+            ofertas = []  # 404 = nenhuma loja vendendo agora
+        ofertas = [o for o in ofertas if o.get("price")]
+        melhor = min(ofertas, key=lambda o: o["price"]) if ofertas else {}
         return InfoProduto(
             id=pid,
-            titulo=dados.get("name") or "",
-            preco=vencedor.get("price"),
-            preco_original=vencedor.get("original_price"),
-            imagem=_imagem_grande(fotos[0].get("url")) if fotos else None,
-            disponivel=bool(vencedor) and dados.get("status", "active") == "active",
+            titulo=titulo,
+            preco=melhor.get("price"),
+            preco_original=melhor.get("original_price"),
+            imagem=imagem,
+            disponivel=bool(melhor),
         )
+
+    def mais_vendidos(self, categoria):
+        """Lista (tipo, id) dos mais vendidos de uma categoria, em ordem."""
+        dados = self._get(f"/highlights/MLB/category/{categoria}")
+        tipos = {"PRODUCT": "catalogo", "ITEM": "item"}
+        return [
+            (tipos[c["type"]], c["id"])
+            for c in sorted(dados.get("content") or [], key=lambda c: c.get("position", 999))
+            if c.get("type") in tipos
+        ]
+
+    def subcategorias(self, categoria):
+        dados = self._get(f"/categories/{categoria}")
+        return [(c["id"], c["name"]) for c in dados.get("children_categories") or []]
+
+
+def link_produto(tipo, pid):
+    """Endereço público do produto no Mercado Livre."""
+    if tipo == "catalogo":
+        return f"https://www.mercadolivre.com.br/p/{pid}"
+    return f"https://produto.mercadolivre.com.br/MLB-{pid[3:]}"
 
 
 # ---------- Autenticação (token) ----------

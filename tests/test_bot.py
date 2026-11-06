@@ -86,11 +86,12 @@ def test_carregar_produtos(tmp_path):
         encoding="utf-8",
     )
     produtos, avisos = carregar_produtos(arq)
-    assert [p.id for p in produtos] == ["MLB111111111", "MLB444444444"]
+    assert [p.id for p in produtos] == ["MLB111111111", "MLB333333333", "MLB444444444"]
     assert produtos[0].preco_referencia == 1299.90
-    assert produtos[1].preco_referencia == 49.90
-    assert produtos[1].categoria == "roupa"
-    assert len(avisos) == 3  # chupeta, sem afiliado, repetido
+    assert produtos[2].preco_referencia == 49.90
+    assert produtos[2].categoria == "roupa"
+    assert produtos[1].link_afiliado == ""  # será montado automaticamente
+    assert len(avisos) == 2  # chupeta, repetido
 
 
 # ---------- avaliação ----------
@@ -209,7 +210,7 @@ class MLFalso:
     def itens(self, ids):
         return {i: self.infos[i] for i in ids if i in self.infos}
 
-    def catalogo(self, pid):
+    def catalogo(self, pid, titulo=None, imagem=None):
         return self.infos[pid]
 
 
@@ -303,3 +304,80 @@ def test_conectar_ml_guarda_token_novo(tmp_path, monkeypatch):
     ml, modo = main.conectar_ml(Config(ml_client_id="c", ml_client_secret="s"))
     assert ml.token == "acesso" and modo == "com token"
     assert cofre.ler("s") == "novo"
+
+
+# ---------- descoberta e link de afiliado ----------
+
+def test_afiliado():
+    from bot import afiliado
+    url = afiliado.montar("https://www.mercadolivre.com.br/p/MLB123?x=1#y", "chocalho", "999")
+    assert url == "https://www.mercadolivre.com.br/p/MLB123?matt_word=chocalho&matt_tool=999"
+    with pytest.raises(ValueError):
+        afiliado.montar("https://x", "", "")
+
+
+class SessaoRotas:
+    def __init__(self, rotas):
+        self.rotas, self.chamadas = rotas, []
+
+    def get(self, url, params=None, headers=None, timeout=None):
+        caminho = url.replace("https://api.mercadolibre.com", "")
+        self.chamadas.append(caminho)
+        status, dados = self.rotas.get(caminho, (404, {"message": "not found"}))
+        return Resp(status, dados)
+
+
+def test_catalogo_menor_preco_e_cache():
+    s = SessaoRotas({
+        "/products/MLB9": (200, {"name": "Fralda Huggies XG", "pictures": [{"url": "https://i/a-I.jpg"}],
+                                 "buy_box_winner": None}),
+        "/products/MLB9/items": (200, {"results": [{"price": 194.99, "original_price": 197.75},
+                                                   {"price": 180.0, "original_price": 250.0}]}),
+    })
+    ml = MercadoLivre("t", session=s)
+    i = ml.catalogo("MLB9")
+    assert (i.titulo, i.preco, i.preco_original, i.disponivel) == ("Fralda Huggies XG", 180.0, 250.0, True)
+    assert i.imagem == "https://i/a-O.jpg"
+    s.chamadas.clear()
+    ml.catalogo("MLB9", "Fralda", "img")
+    assert s.chamadas == ["/products/MLB9/items"]  # usou o cache, sem pedir nome/foto
+    assert ml.catalogo("MLB8", "X", None).disponivel is False  # ninguém vendendo
+
+
+def test_descobrir():
+    from bot import descoberta
+    s = SessaoRotas({
+        "/categories/MLB1384": (200, {"children_categories": [
+            {"id": "MLB1396", "name": "Roupas"}, {"id": "MLB39965", "name": "Alimentos"}]}),
+        "/categories/MLB1132": (200, {"children_categories": [{"id": "MLB1166", "name": "Pelúcias"}]}),
+        "/highlights/MLB/category/MLB1384": (200, {"content": [
+            {"id": "MLB2", "position": 2, "type": "PRODUCT"}, {"id": "MLB1", "position": 1, "type": "ITEM"},
+            {"id": "MLB7", "position": 3, "type": "USER_PRODUCT"}]}),
+        "/highlights/MLB/category/MLB1396": (200, {"content": [{"id": "MLB3", "position": 1, "type": "PRODUCT"}]}),
+        "/highlights/MLB/category/MLB1166": (403, {"message": "forbidden"}),
+    })
+    achados = descoberta.descobrir(MercadoLivre("t", session=s), por_categoria=5, log=lambda m: None)
+    assert achados == {
+        "MLB1": {"tipo": "item", "categoria": "outros"},
+        "MLB2": {"tipo": "catalogo", "categoria": "outros"},
+        "MLB3": {"tipo": "catalogo", "categoria": "roupa"},
+    }
+    assert "/highlights/MLB/category/MLB39965" not in s.chamadas  # categoria excluída
+
+
+def test_montar_lista_e_descoberta_periodica(monkeypatch):
+    from bot import main
+    cfg = Config(matt_word="w", matt_tool="1")
+    e = est.novo()
+    chamadas = []
+    monkeypatch.setattr(main, "descobrir", lambda ml, n, log: chamadas.append(1) or
+                        {"MLB5": {"tipo": "catalogo", "categoria": "brinquedo"}})
+    assert main.atualizar_descoberta(cfg, None, e, AGORA)
+    assert not main.atualizar_descoberta(cfg, None, e, AGORA + timedelta(hours=5))
+    assert main.atualizar_descoberta(cfg, None, e, AGORA + timedelta(hours=21))
+    assert len(chamadas) == 2
+    planilha = [Produto("MLB9", "item", "x", "", "fralda", None, 2)]
+    lista = main.montar_lista(cfg, planilha, e)
+    assert [p.id for p in lista] == ["MLB9", "MLB5"]
+    assert lista[0].link_afiliado == "https://produto.mercadolivre.com.br/MLB-9?matt_word=w&matt_tool=1"
+    assert lista[1].link_afiliado == "https://www.mercadolivre.com.br/p/MLB5?matt_word=w&matt_tool=1"
