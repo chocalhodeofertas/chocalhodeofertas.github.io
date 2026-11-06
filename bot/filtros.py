@@ -48,6 +48,8 @@ _COMPILADAS = [(motivo, re.compile(p)) for motivo, p in _REGRAS]
 def motivo_bloqueio(*textos: str):
     """Retorna o motivo do bloqueio, ou None se o produto pode ser divulgado."""
     alvo = " ".join(normalizar(t) for t in textos if t)
+    # "bicos" de aspirador nasal não são bicos de mamadeira
+    alvo = re.sub(r"(aspirador nasal.*?)\bbicos?\b", r"\1", alvo)
     for motivo, padrao in _COMPILADAS:
         if padrao.search(alvo):
             return motivo

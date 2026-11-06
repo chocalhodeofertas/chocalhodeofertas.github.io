@@ -65,6 +65,7 @@ def test_bloqueia(titulo):
         "Bicicleta Infantil Aro 16",
         "Body Bebê Manga Longa Kit 5",
         "Babador Silicone Pega Migalha",
+        "Aspirador Nasal Manual Buba Com Estojo 2 Bicos",
     ],
 )
 def test_libera(titulo):
