@@ -65,7 +65,7 @@ def montar_telegram(oferta, rng=random):
         "",
         f'👉 <a href="{html.escape(oferta.link, quote=True)}">Ver oferta no Mercado Livre</a>',
         "",
-        "<i>Preço e estoque podem mudar a qualquer momento.</i>",
+        "<i>Preço e estoque podem mudar a qualquer momento. #publi · link de afiliado</i>",
     ]
     return "\n".join(partes)[:1024]
 
@@ -82,7 +82,7 @@ def montar_whatsapp(oferta, rng=random):
         "",
         f"👉 {oferta.link}",
         "",
-        "_Preço e estoque podem mudar a qualquer momento._",
+        "_Preço e estoque podem mudar a qualquer momento. #publi · link de afiliado_",
     ]
     return "\n".join(partes)
 
@@ -93,7 +93,7 @@ def montar_x(oferta):
         preco = f"De {brl(oferta.preco_de)} por {brl(oferta.preco)} (-{round(oferta.desconto * 100)}%)"
     else:
         preco = f"Por {brl(oferta.preco)}"
-    meio = f"\n{preco}\n👉 "
+    meio = f"\n{preco} #publi\n👉 "
     # O X conta todo link como 23 caracteres e emojis como 2; sobra folga de 5
     espaco = 280 - 23 - len(meio) - 3 - 2 - 5
     return "🪇 " + _titulo_curto(oferta.titulo, max(espaco, 40)) + meio + oferta.link
