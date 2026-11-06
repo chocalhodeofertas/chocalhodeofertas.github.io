@@ -950,7 +950,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-06": 7
+  "2026-11-06": 9
  },
  "descoberta_em": "2026-11-06T02:06-03:00",
  "descobertos": {
@@ -1903,79 +1903,118 @@
    "tipo": "catalogo"
   }
  },
- "links": {},
+ "links": {
+  "MLB23581207": "https://meli.la/2vG97Ni",
+  "MLB24208936": "https://meli.la/28xGnDR",
+  "MLB24626810": "https://meli.la/2DF2FDU",
+  "MLB26851070": "https://meli.la/2C4ZDFq",
+  "MLB28717101": "https://meli.la/182h9X2",
+  "MLB29573091": "https://meli.la/1dhm1rT",
+  "MLB30890350": "https://meli.la/2UwBck9",
+  "MLB35340738": "https://meli.la/1Rug6so",
+  "MLB36436855": "https://meli.la/2w1vR4r",
+  "MLB38654615": "https://meli.la/13aW58Y",
+  "MLB41517901": "https://meli.la/19SRyJD",
+  "MLB45286830": "https://meli.la/2bAX86M",
+  "MLB50368079": "https://meli.la/1xWzJ9R",
+  "MLB52680667": "https://meli.la/2tpB2Xw",
+  "MLB54136862": "https://meli.la/2dtcNri",
+  "MLB54159991": "https://meli.la/1VuJLz6",
+  "MLB57001621": "https://meli.la/2ga2RTj",
+  "MLB61118769": "https://meli.la/2qfyL4H",
+  "MLB61884199": "https://meli.la/1eRadeN",
+  "MLB62683214": "https://meli.la/1fTzXmp",
+  "MLB62933980": "https://meli.la/1oUxMqd",
+  "MLB66548761": "https://meli.la/2VzY1Mf",
+  "MLB66986360": "https://meli.la/14u3fxV",
+  "MLB73061689": "https://meli.la/18vy1iU",
+  "MLB76227639": "https://meli.la/2JnNyvo",
+  "MLB77186530": "https://meli.la/22fkRj4",
+  "MLB78828696": "https://meli.la/2iWG7Fy",
+  "MLB79313725": "https://meli.la/224xLLB",
+  "MLB79381515": "https://meli.la/1Bmp6J8",
+  "MLB80331375": "https://meli.la/29sFqaC"
+ },
  "lote": {
   "dia": "2026-11-06",
   "ids": [
-   "MLB50368079",
-   "MLB41517901",
-   "MLB77186530",
-   "MLB28717101",
-   "MLB61884199",
-   "MLB29573091",
-   "MLB26851070",
-   "MLB52680667",
-   "MLB79381515",
-   "MLB62933980",
-   "MLB73061689",
-   "MLB76227639",
-   "MLB79313725",
-   "MLB54159991",
-   "MLB45286830",
-   "MLB57001621",
-   "MLB24626810",
-   "MLB36436855",
-   "MLB38654615",
-   "MLB30890350",
-   "MLB80331375",
-   "MLB24208936",
-   "MLB62683214",
-   "MLB35340738",
-   "MLB54136862",
-   "MLB66548761",
-   "MLB23581207",
-   "MLB78828696",
-   "MLB66986360",
-   "MLB61118769"
+   "MLB67741951",
+   "MLB67746701",
+   "MLB58047533",
+   "MLB61794290",
+   "MLB80779802",
+   "MLB64866580",
+   "MLB70334862",
+   "MLB57075978",
+   "MLB63830721",
+   "MLB18581975",
+   "MLB25654240",
+   "MLB80823637",
+   "MLB62416353",
+   "MLB17489277",
+   "MLB25366146",
+   "MLB45423403",
+   "MLB44895132",
+   "MLB62169781",
+   "MLB47899174",
+   "MLB77687455",
+   "MLB42082195",
+   "MLB72653285",
+   "MLB67991030",
+   "MLB43880173",
+   "MLB38412815",
+   "MLB62645299",
+   "MLB24647466",
+   "MLB80328135",
+   "MLB37887504",
+   "MLB79143996"
   ],
   "urls": [
-   "https://produto.mercadolivre.com.br/MLB-5535978042-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-3870592109-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4530343781-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4287637614-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4295188001-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-5877099132-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-3835855585-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-5504592964-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-7684956502-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-6017351554-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-6935276010-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-7317383698-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-5271795557-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-5652549780-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-6194843022-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-5321022089-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4442934324-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4648803608-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4380908807-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-3582197917-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-7778574520-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-3793237586-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4343982189-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-5774224022-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-7029985996-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-6448770124-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-3696257728-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-5941561358-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4550389799-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-5857608290-produto-_JM"
+   "https://produto.mercadolivre.com.br/MLB-6840415150-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6596438294-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4225811811-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4291761059-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7940026168-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5440300725-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5491411047-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4216898827-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6124932056-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-2743138384-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3609965211-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7877172896-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5960353064-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-2743167754-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4705009889-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6224601478-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5316391876-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4954306193-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5597599964-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7454420078-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3928915367-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6927085280-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7013062438-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4447322393-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7023166110-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5997088262-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6031519290-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7783969010-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5662615318-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5452762477-produto-_JM"
   ]
  },
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-06": 1
+  "2026-11-06": 2
  },
  "postados": {
+  "MLB41517901": {
+   "preco": 78.9,
+   "quando": "2026-11-06T14:13-03:00"
+  },
+  "MLB50368079": {
+   "preco": 178.38,
+   "quando": "2026-11-06T14:13-03:00"
+  },
   "MLB51652593": {
    "preco": 99.9,
    "quando": "2026-11-06T12:12-03:00"
@@ -3365,6 +3404,10 @@
     [
      "2026-11-06",
      56.89
+    ],
+    [
+     "2026-11-06",
+     109.9
     ]
    ],
    "min": 56.89
@@ -3655,6 +3698,10 @@
     [
      "2026-11-06",
      31.83
+    ],
+    [
+     "2026-11-06",
+     23.4
     ]
    ],
    "min": 23.4
@@ -4256,5 +4303,5 @@
    "min": 67.39
   }
  },
- "tg_offset": 273517973
+ "tg_offset": 273517974
 }
