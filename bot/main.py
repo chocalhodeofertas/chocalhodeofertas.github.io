@@ -66,7 +66,8 @@ class Config:
     por_categoria: int = 15
     horas_descoberta: int = 20
     link_modo: str = "oficial"  # "oficial" (meli.la via Linkbuilder) ou "direto"
-    lote_tamanho: int = 40
+    lote_tamanho: int = 30
+    lotes_por_dia: int = 3
 
     @classmethod
     def do_ambiente(cls):
@@ -95,7 +96,8 @@ class Config:
             matt_tool=e("AFILIADO_MATT_TOOL", ""),
             por_categoria=num("POR_CATEGORIA", 15, int),
             link_modo=(e("LINK_MODO") or "oficial").strip().lower(),
-            lote_tamanho=num("LOTE_TAMANHO", 40, int),
+            lote_tamanho=min(num("LOTE_TAMANHO", 30, int), 30),  # limite do Linkbuilder
+            lotes_por_dia=num("LOTES_POR_DIA", 3, int),
             horas_descoberta=num("HORAS_DESCOBERTA", 20, int),
         )
 
@@ -310,20 +312,26 @@ def _link_direto(link):
 
 
 def _talvez_mandar_lote(cfg, tg, estado, sem_link, agora):
-    """Uma vez por dia (no horário de postagem), manda o lote para o Linkbuilder."""
+    """Manda um lote para o Linkbuilder quando não há outro pendente.
+
+    O próximo lote sai assim que você responde o anterior, até LOTES_POR_DIA.
+    """
     if not cfg.admin_chat or not (cfg.hora_inicio <= agora.hour < cfg.hora_fim):
         return
-    if (estado.get("lote") or {}).get("dia") == agora.date().isoformat():
-        return
-    if estado.get("lote_enviado_em") == agora.date().isoformat():
+    hoje = agora.date().isoformat()
+    pendente = estado.get("lote") or {}
+    if pendente.get("dia") == hoje and len(pendente.get("ids", [])) <= cfg.lote_tamanho:
+        return  # ainda esperando sua resposta
+    feitos = (estado.get("lotes_dia") or {}).get(hoje, 0)
+    if feitos >= cfg.lotes_por_dia:
         return
     urls = lote.montar_lote(estado, sem_link, cfg.lote_tamanho, agora)
     if not urls:
         return
     try:
-        tg.enviar_texto(cfg.admin_chat, lote.texto_lote(urls), html=True)
-        estado["lote_enviado_em"] = agora.date().isoformat()
-        log(f"Lote de {len(urls)} URLs enviado para o Linkbuilder.")
+        tg.enviar_texto(cfg.admin_chat, lote.texto_lote(urls, feitos + 1, cfg.lotes_por_dia), html=True)
+        estado["lotes_dia"] = {hoje: feitos + 1}
+        log(f"Lote {feitos + 1} de {len(urls)} URLs enviado para o Linkbuilder.")
     except TelegramErro as e:
         estado["lote"] = None
         log(f"Aviso: não consegui mandar o lote: {e}")

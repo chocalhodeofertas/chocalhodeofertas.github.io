@@ -444,10 +444,22 @@ def test_modo_oficial_so_posta_com_link_e_manda_lote():
     assert [o.id for o in enviadas] == ["MLB2"]  # MLB1 tem desconto maior, mas não tem link oficial
     assert e["lote"]["ids"] == ["MLB1"]
     assert any("Linkbuilder" in t[2] for t in tg.enviados)
-    # No mesmo dia não manda outro lote
+    # Com lote pendente, não manda outro
     n = len(tg.enviados)
     main.rodar("normal", Config(canal="@c", admin_chat="123"), MLFalso(infos), tg, e, produtos,
                agora=AGORA + timedelta(minutes=20))
+    assert not any("Linkbuilder" in t[2] for t in tg.enviados[n:])
+    # Lote antigo maior que 30 (feito antes do limite) é refeito
+    e["lote"]["ids"] = ["MLB1"] * 40
+    main.rodar("normal", Config(canal="@c", admin_chat="123"), MLFalso(infos), tg, e, produtos,
+               agora=AGORA + timedelta(minutes=40))
+    assert e["lote"]["ids"] == ["MLB1"] and e["lotes_dia"][AGORA.date().isoformat()] == 2
+    # Respondeu: o próximo sai, até o limite do dia
+    e["lote"] = None
+    e["lotes_dia"] = {AGORA.date().isoformat(): 3}
+    n = len(tg.enviados)
+    main.rodar("normal", Config(canal="@c", admin_chat="123"), MLFalso(infos), tg, e, produtos,
+               agora=AGORA + timedelta(minutes=60))
     assert not any("Linkbuilder" in t[2] for t in tg.enviados[n:])
 
 

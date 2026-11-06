@@ -42,9 +42,9 @@ def montar_lote(estado, sem_link, tamanho, agora):
     return [u for _, u in escolhidas]
 
 
-def texto_lote(urls):
+def texto_lote(urls, numero=1, total=1):
     return (
-        f"🔗 <b>Lote do dia: {len(urls)} ofertas sem link oficial</b>\n\n"
+        f"🔗 <b>Lote {numero} de até {total} hoje: {len(urls)} ofertas sem link oficial</b>\n\n"
         f"1. Toque no bloco abaixo para copiar\n"
         f'2. Abra o <a href="{LINKBUILDER}">Linkbuilder</a>, cole e toque em <b>Gerar</b>\n'
         f"3. Copie todos os links gerados e mande aqui, numa mensagem só\n\n"
@@ -69,7 +69,8 @@ def aplicar_resposta(estado, texto):
     for pid, link in zip(lote["ids"], links):
         estado["links"][pid] = link
     estado["lote"] = None
-    return True, f"✅ {len(links)} links oficiais salvos! Começo a postar essas ofertas nas próximas rodadas."
+    return True, (f"✅ {len(links)} links oficiais salvos ({len(estado['links'])} no total)! "
+                  "Começo a postar nas próximas rodadas. Se ainda houver lote hoje, ele chega em até 20 min.")
 
 
 def processar_mensagens(tg, estado, admin_chat, log=print):

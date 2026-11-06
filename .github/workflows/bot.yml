@@ -49,6 +49,7 @@ jobs:
           POR_CATEGORIA: ${{ vars.POR_CATEGORIA }}
           LINK_MODO: ${{ vars.LINK_MODO }}
           LOTE_TAMANHO: ${{ vars.LOTE_TAMANHO }}
+          LOTES_POR_DIA: ${{ vars.LOTES_POR_DIA }}
           AFILIADO_MATT_WORD: ${{ vars.AFILIADO_MATT_WORD || 'chocalhodeofertas' }}
           AFILIADO_MATT_TOOL: ${{ vars.AFILIADO_MATT_TOOL || '39326742' }}
 
