@@ -1,11 +1,7 @@
 name: Chocalho de Ofertas
 
+# Uso manual (diagnóstico e teste). Quem posta sozinho é o workflow "ciclo".
 on:
-  schedule:
-    # A cada 20 min, das 8h às 21h47 (horário de Brasília; o cron é em UTC)
-    # O GitHub às vezes pula rodadas agendadas; rodar mais vezes compensa,
-    # e o próprio bot limita a 2 posts por hora.
-    - cron: "7,27,47 11-23,0 * * *"
   workflow_dispatch:
     inputs:
       modo:

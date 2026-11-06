@@ -400,3 +400,13 @@ def test_montar_lista_e_descoberta_periodica(monkeypatch):
     assert [p.id for p in lista] == ["MLB9", "MLB5"]
     assert lista[0].link_afiliado == "https://produto.mercadolivre.com.br/MLB-9?matt_word=w&matt_tool=1"
     assert lista[1].link_afiliado == "https://www.mercadolivre.com.br/p/MLB5?matt_word=w&matt_tool=1"
+
+
+# ---------- ciclo ----------
+
+def test_proximo_horario():
+    from bot.ciclo import proximo_horario
+    d = lambda h, m, dia=6: datetime(2026, 11, dia, h, m, tzinfo=FUSO)
+    assert proximo_horario(d(10, 0), 8, 22) == d(10, 20)
+    assert proximo_horario(d(21, 50), 8, 22) == d(8, 2, 7)  # passou das 22h: amanhã cedo
+    assert proximo_horario(d(3, 0), 8, 22) == d(8, 2)  # madrugada: hoje às 8h
