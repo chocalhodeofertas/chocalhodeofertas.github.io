@@ -7,6 +7,7 @@ Uso:
 """
 import argparse
 import csv
+import html
 import os
 import random
 import sys
@@ -315,7 +316,9 @@ def _enviar(tg, chat, oferta, rng, rotulo=""):
 def _copias(tg, chat, oferta, rng):
     """Uma mensagem com o texto do WhatsApp e botões que abrem WhatsApp e X já preenchidos."""
     wa = mensagens.montar_whatsapp(oferta, rng)
-    tg.enviar_texto(chat, "📋 Pronto para compartilhar:\n\n" + wa,
+    # Texto dentro de <pre>: no Telegram, um toque copia tudo, pronto para colar no WhatsApp
+    tg.enviar_texto(chat, "📋 Toque no bloco abaixo para copiar e cole no WhatsApp:\n\n<pre>"
+                    + html.escape(wa) + "</pre>", html=True,
                     botoes=mensagens.botoes_compartilhar(wa, mensagens.montar_x(oferta)))
 
 
