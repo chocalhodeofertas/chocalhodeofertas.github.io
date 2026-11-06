@@ -358,7 +358,6 @@ def test_descobrir():
     })
     achados = descoberta.descobrir(MercadoLivre("t", session=s), por_categoria=5, log=lambda m: None)
     assert achados == {
-        "MLB1": {"tipo": "item", "categoria": "outros"},
         "MLB2": {"tipo": "catalogo", "categoria": "outros"},
         "MLB3": {"tipo": "catalogo", "categoria": "roupa"},
     }

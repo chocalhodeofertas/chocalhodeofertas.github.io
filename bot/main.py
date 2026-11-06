@@ -195,7 +195,11 @@ def buscar_infos(ml: MercadoLivre, produtos, estado=None):
     cache = (estado or {}).setdefault("cache", {}) if estado is not None else {}
     ids_itens = [p.id for p in produtos if p.tipo == "item"]
     if ids_itens:
-        infos.update(ml.itens(ids_itens))
+        try:
+            infos.update(ml.itens(ids_itens))
+        except AcessoNegado:
+            log(f"Aviso: o Mercado Livre bloqueou {len(ids_itens)} anúncio(s) avulso(s). "
+                "Na planilha, use links de catálogo (com /p/ no endereço).")
 
     def um(p):
         titulo, imagem = cache.get(p.id, (None, None))

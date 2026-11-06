@@ -51,6 +51,8 @@ def descobrir(ml, por_categoria=8, log=print):
         except (ErroML, AcessoNegado) as e:
             log(f"Aviso: mais vendidos de {cat}: {e}")
             continue
+        # Só produtos de catálogo: anúncios avulsos são bloqueados para o token do app
+        lista = [(t, i) for t, i in lista if t == "catalogo"]
         for tipo, pid in lista[:por_categoria]:
             achados.setdefault(pid, {"tipo": tipo, "categoria": categoria_do_bot(cat, pai)})
     log(f"Descoberta: {len(achados)} produtos em {len(alvos)} categorias.")
