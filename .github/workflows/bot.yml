@@ -41,9 +41,9 @@ jobs:
           ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
           ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
           ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
-          MIN_DESCONTO: ${{ vars.MIN_DESCONTO }}
-          MAX_POSTS_POR_RODADA: ${{ vars.MAX_POSTS_POR_RODADA }}
-          MAX_POSTS_POR_DIA: ${{ vars.MAX_POSTS_POR_DIA }}
+          MIN_DESCONTO: ${{ vars.MIN_DESCONTO || '20' }}
+          MAX_POSTS_POR_RODADA: ${{ vars.MAX_POSTS_POR_RODADA || '2' }}
+          MAX_POSTS_POR_DIA: ${{ vars.MAX_POSTS_POR_DIA || '25' }}
           HORA_INICIO: ${{ vars.HORA_INICIO }}
           HORA_FIM: ${{ vars.HORA_FIM }}
           POR_CATEGORIA: ${{ vars.POR_CATEGORIA }}

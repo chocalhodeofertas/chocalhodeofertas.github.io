@@ -76,9 +76,9 @@ Depois do teste, o bot já roda sozinho de hora em hora. Para ajustar o comporta
 
 | Variável | Padrão | O que muda |
 |---|---|---|
-| `MIN_DESCONTO` | 15 | desconto mínimo (%) para postar |
-| `MAX_POSTS_POR_RODADA` | 1 | quantas ofertas por hora |
-| `MAX_POSTS_POR_DIA` | 12 | limite diário |
+| `MIN_DESCONTO` | 20 | desconto mínimo (%) para postar |
+| `MAX_POSTS_POR_RODADA` | 2 | quantas ofertas por hora |
+| `MAX_POSTS_POR_DIA` | 25 | limite diário |
 | `HORA_INICIO` / `HORA_FIM` | 8 / 22 | horário de postagem |
 
 Para pausar: **Actions** → **Chocalho de Ofertas** → **⋯** → **Disable workflow**.
