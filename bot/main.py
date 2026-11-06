@@ -21,7 +21,7 @@ from . import cofre
 from . import estado as est
 from . import mensagens
 from .filtros import motivo_bloqueio
-from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, renovar_token
+from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, renovar_token, token_do_app
 from .ofertas import avaliar
 from .telegram import Telegram, TelegramErro
 
@@ -139,7 +139,12 @@ def conectar_ml(cfg: Config):
         return MercadoLivre(), "sem token"
     refresh = cofre.ler(cfg.ml_client_secret) or cfg.ml_refresh_token
     if not refresh:
-        return MercadoLivre(), "sem token — falta rodar 'Configurar token do Mercado Livre'"
+        # Sem autorização do usuário: tenta o token só do app (Client Credentials)
+        try:
+            return MercadoLivre(token_do_app(cfg.ml_client_id, cfg.ml_client_secret)), "token do app"
+        except AcessoNegado as e:
+            log(f"Client Credentials não funcionou ({e}).")
+            return MercadoLivre(), "sem token — falta rodar 'Configurar token do Mercado Livre'"
     access, novo_refresh = renovar_token(cfg.ml_client_id, cfg.ml_client_secret, refresh)
     # O ML troca o refresh_token a cada uso: guarda o novo na hora
     cofre.guardar(novo_refresh, cfg.ml_client_secret)

@@ -148,6 +148,14 @@ def _pedir_token(dados):
     return j
 
 
+def token_do_app(client_id, client_secret):
+    """Token só do aplicativo (Client Credentials), sem autorização do usuário."""
+    j = _pedir_token(
+        {"grant_type": "client_credentials", "client_id": client_id, "client_secret": client_secret}
+    )
+    return j["access_token"]
+
+
 def renovar_token(client_id, client_secret, refresh_token):
     """Gera um token novo. O ML troca o refresh_token a cada uso."""
     j = _pedir_token(
