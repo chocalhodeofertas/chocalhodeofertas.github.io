@@ -102,6 +102,6 @@ def montar_x(oferta):
 def botoes_compartilhar(texto_whatsapp, texto_x):
     """Links que já abrem o WhatsApp e o X com a mensagem pronta."""
     return [
-        ("📲 Compartilhar no WhatsApp", "https://wa.me/?text=" + quote(texto_whatsapp)),
+        ("📲 Compartilhar no WhatsApp", "https://api.whatsapp.com/send?text=" + quote(texto_whatsapp)),
         ("✖️ Postar no X", "https://x.com/intent/tweet?text=" + quote(texto_x)),
     ]
