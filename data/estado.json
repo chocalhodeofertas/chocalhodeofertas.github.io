@@ -1,5 +1,1053 @@
 {
+ "cache": {},
  "contagem_dia": {},
+ "descoberta_em": "2026-11-06T02:06-03:00",
+ "descobertos": {
+  "MLB10683785": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB1590879556": {
+   "categoria": "roupa",
+   "tipo": "item"
+  },
+  "MLB17336025": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB17489277": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB17775080": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB1832725483": {
+   "categoria": "gestante",
+   "tipo": "item"
+  },
+  "MLB18392841": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB18581975": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB19491178": {
+   "categoria": "passeio",
+   "tipo": "catalogo"
+  },
+  "MLB19516361": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB19569079": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB19766898": {
+   "categoria": "passeio",
+   "tipo": "catalogo"
+  },
+  "MLB19807041": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB20794850": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB20948448": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB21727549": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB21780639": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB21843844": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB2188118669": {
+   "categoria": "roupa",
+   "tipo": "item"
+  },
+  "MLB22276797": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB22359613": {
+   "categoria": "alimentacao",
+   "tipo": "catalogo"
+  },
+  "MLB22501041": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB22809818": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB22974681": {
+   "categoria": "passeio",
+   "tipo": "catalogo"
+  },
+  "MLB23480808": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB23535413": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB23581207": {
+   "categoria": "higiene",
+   "tipo": "catalogo"
+  },
+  "MLB23614192": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB23681383": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB23857334": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB24167613": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB24208936": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB24331807": {
+   "categoria": "quarto",
+   "tipo": "catalogo"
+  },
+  "MLB24605630": {
+   "categoria": "alimentacao",
+   "tipo": "catalogo"
+  },
+  "MLB24626810": {
+   "categoria": "alimentacao",
+   "tipo": "catalogo"
+  },
+  "MLB24647466": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB24679082": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB24679612": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB24768816": {
+   "categoria": "passeio",
+   "tipo": "catalogo"
+  },
+  "MLB25073726": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB25163760": {
+   "categoria": "passeio",
+   "tipo": "catalogo"
+  },
+  "MLB25366146": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB25372458": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB25654240": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB25656157": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB25656186": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB25687699": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB25820470": {
+   "categoria": "alimentacao",
+   "tipo": "catalogo"
+  },
+  "MLB25909744": {
+   "categoria": "gestante",
+   "tipo": "catalogo"
+  },
+  "MLB26712966": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB26725453": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB26767546": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB26851070": {
+   "categoria": "higiene",
+   "tipo": "catalogo"
+  },
+  "MLB27861415": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB28001568": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB28299159": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB28717101": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB28868913": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB28992390": {
+   "categoria": "alimentacao",
+   "tipo": "catalogo"
+  },
+  "MLB29261812": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB29573091": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB30890350": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB34061312": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB34078818": {
+   "categoria": "higiene",
+   "tipo": "catalogo"
+  },
+  "MLB34235115": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB3441587069": {
+   "categoria": "brinquedo",
+   "tipo": "item"
+  },
+  "MLB34723648": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB35340738": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB35712627": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB35762220": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB3579358229": {
+   "categoria": "brinquedo",
+   "tipo": "item"
+  },
+  "MLB36436855": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB3711361787": {
+   "categoria": "quarto",
+   "tipo": "item"
+  },
+  "MLB37288971": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB3742382501": {
+   "categoria": "quarto",
+   "tipo": "item"
+  },
+  "MLB37516784": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB3774100563": {
+   "categoria": "brinquedo",
+   "tipo": "item"
+  },
+  "MLB37883472": {
+   "categoria": "passeio",
+   "tipo": "catalogo"
+  },
+  "MLB37887504": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB38281783": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB38412815": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB3842725661": {
+   "categoria": "outros",
+   "tipo": "item"
+  },
+  "MLB38654615": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB3894426784": {
+   "categoria": "gestante",
+   "tipo": "item"
+  },
+  "MLB3897369577": {
+   "categoria": "brinquedo",
+   "tipo": "item"
+  },
+  "MLB39231555": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB39369748": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB39371094": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB39377594": {
+   "categoria": "alimentacao",
+   "tipo": "catalogo"
+  },
+  "MLB39934861": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB40003893": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB40117012": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB40266261": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB41517901": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB41678087": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB4171127299": {
+   "categoria": "brinquedo",
+   "tipo": "item"
+  },
+  "MLB42082195": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB42105593": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB42110938": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB42818400": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB42883246": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB42883642": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB4290122465": {
+   "categoria": "roupa",
+   "tipo": "item"
+  },
+  "MLB4321927376": {
+   "categoria": "brinquedo",
+   "tipo": "item"
+  },
+  "MLB43854141": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB43880173": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB4455337133": {
+   "categoria": "brinquedo",
+   "tipo": "item"
+  },
+  "MLB44604914": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB4478981853": {
+   "categoria": "roupa",
+   "tipo": "item"
+  },
+  "MLB44841272": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB44895132": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB44958164": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB45286830": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB45399002": {
+   "categoria": "gestante",
+   "tipo": "catalogo"
+  },
+  "MLB45423403": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB45739690": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB47096424": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB47257696": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB47430541": {
+   "categoria": "gestante",
+   "tipo": "catalogo"
+  },
+  "MLB47710109": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB47887324": {
+   "categoria": "quarto",
+   "tipo": "catalogo"
+  },
+  "MLB47899174": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB5012138302": {
+   "categoria": "brinquedo",
+   "tipo": "item"
+  },
+  "MLB50196654": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB50368079": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB50869637": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB51035138": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB51652593": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB51668028": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB51979690": {
+   "categoria": "higiene",
+   "tipo": "catalogo"
+  },
+  "MLB52680667": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB5315286594": {
+   "categoria": "higiene",
+   "tipo": "item"
+  },
+  "MLB53308919": {
+   "categoria": "gestante",
+   "tipo": "catalogo"
+  },
+  "MLB54018368": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB54136862": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB54159991": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB54207427": {
+   "categoria": "quarto",
+   "tipo": "catalogo"
+  },
+  "MLB54459787": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB56091356": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB56421479": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB5646281556": {
+   "categoria": "quarto",
+   "tipo": "item"
+  },
+  "MLB57001621": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB57071349": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB57075978": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB57267660": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB57269131": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB5743581538": {
+   "categoria": "passeio",
+   "tipo": "item"
+  },
+  "MLB57471881": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB58047533": {
+   "categoria": "higiene",
+   "tipo": "catalogo"
+  },
+  "MLB5830339830": {
+   "categoria": "roupa",
+   "tipo": "item"
+  },
+  "MLB58625474": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB5940215042": {
+   "categoria": "gestante",
+   "tipo": "item"
+  },
+  "MLB59559956": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB60044790": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB60118314": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB61118769": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB61794290": {
+   "categoria": "quarto",
+   "tipo": "catalogo"
+  },
+  "MLB61874839": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB61884199": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB61974340": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB62169781": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB62416353": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB62445069": {
+   "categoria": "passeio",
+   "tipo": "catalogo"
+  },
+  "MLB62557150": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB62572381": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB62645299": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB62683214": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB62786325": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB62786425": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB62933980": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB62978394": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB62978763": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB63081358": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB63093645": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB63152047": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB63346342": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB63830721": {
+   "categoria": "roupa",
+   "tipo": "catalogo"
+  },
+  "MLB63853817": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB64179089": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB64235405": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB64866580": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB65563974": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB65579852": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB66062610": {
+   "categoria": "roupa",
+   "tipo": "catalogo"
+  },
+  "MLB66141214": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB66384998": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB66463370": {
+   "categoria": "higiene",
+   "tipo": "catalogo"
+  },
+  "MLB66548761": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB66733671": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB66864521": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB66880692": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB66986360": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB67413314": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB67495759": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB67655094": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB67741951": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB67746701": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB67991030": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB68520050": {
+   "categoria": "gestante",
+   "tipo": "catalogo"
+  },
+  "MLB68586926": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB6863342334": {
+   "categoria": "outros",
+   "tipo": "item"
+  },
+  "MLB68833581": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB68934417": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB69054240": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB69086946": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB69251241": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB69621632": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB69702549": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB69735015": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB69818712": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB69899801": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB69980801": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB70063063": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB70138303": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB7028792930": {
+   "categoria": "brinquedo",
+   "tipo": "item"
+  },
+  "MLB70334862": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB70382962": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB70765101": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB72397083": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB72653285": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB72686279": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB73061689": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB73156948": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB73212051": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB73425165": {
+   "categoria": "higiene",
+   "tipo": "catalogo"
+  },
+  "MLB73452366": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB73677012": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB74222754": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB74242291": {
+   "categoria": "alimentacao",
+   "tipo": "catalogo"
+  },
+  "MLB74331737": {
+   "categoria": "roupa",
+   "tipo": "catalogo"
+  },
+  "MLB74743819": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB74960150": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB75233914": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB75654623": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB75712282": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB75846960": {
+   "categoria": "alimentacao",
+   "tipo": "catalogo"
+  },
+  "MLB76227639": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB76397729": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB76690573": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB77186530": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB77496641": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB77624729": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB77672147": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB77687455": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB78182435": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB78828696": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB78974918": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB79143996": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB79164975": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB79182251": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB79313725": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB79319121": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB79381515": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB80142080": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB80205832": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB80328135": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB80331375": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB80460108": {
+   "categoria": "jogo",
+   "tipo": "catalogo"
+  },
+  "MLB80779802": {
+   "categoria": "outros",
+   "tipo": "catalogo"
+  },
+  "MLB80823637": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  },
+  "MLB81142365": {
+   "categoria": "brinquedo",
+   "tipo": "catalogo"
+  }
+ },
  "postados": {},
  "precos": {}
 }
