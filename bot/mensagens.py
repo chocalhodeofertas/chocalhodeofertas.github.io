@@ -12,7 +12,8 @@ ABERTURAS = [
     "🧸 Oferta boa pra família",
     "💛 Pra economizar sem chorar",
 ]
-ABERTURA_HISTORICO = "📉 Menor preço que a gente já viu!"
+# Cláusula 5.4 dos termos: só informações que estão no anúncio. Por isso não
+# afirmamos "menor preço" nem "% abaixo do habitual" (são cálculos nossos).
 
 EMOJI_CATEGORIA = {
     "fralda": "🧷",
@@ -38,7 +39,7 @@ def _titulo_curto(titulo, limite=110):
 
 
 def _abertura(oferta, rng):
-    return ABERTURA_HISTORICO if oferta.menor_preco_historico else rng.choice(ABERTURAS)
+    return rng.choice(ABERTURAS)
 
 
 def _linhas_preco(oferta, negrito, riscado):
@@ -48,8 +49,6 @@ def _linhas_preco(oferta, negrito, riscado):
         linhas.append(f"De {riscado(brl(oferta.preco_de))} por {negrito(brl(oferta.preco))} (-{pct}%)")
     else:
         linhas.append(f"Por {negrito(brl(oferta.preco))}")
-        if oferta.abaixo_do_habitual:
-            linhas.append(f"📉 {round(oferta.abaixo_do_habitual * 100)}% abaixo do preço habitual")
     return linhas
 
 
