@@ -28,8 +28,11 @@ class Telegram:
     def membro(self, chat, user_id):
         return self._chamar("getChatMember", chat_id=chat, user_id=user_id)
 
-    def atualizacoes(self):
-        return self._chamar("getUpdates", limit=50)
+    def atualizacoes(self, offset=None):
+        dados = {"limit": 100, "allowed_updates": ["message"]}
+        if offset:
+            dados["offset"] = offset
+        return self._chamar("getUpdates", **dados)
 
     def enviar_texto(self, chat, texto, html=False, botoes=None):
         """botoes: lista de (rótulo, url), um botão por linha."""

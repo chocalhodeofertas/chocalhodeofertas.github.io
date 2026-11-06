@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
-from . import afiliado, cofre
+from . import afiliado, cofre, lote
 from . import estado as est
 from . import mensagens
 from .descoberta import descobrir
@@ -63,8 +63,10 @@ class Config:
     hora_fim: int = 22
     matt_word: str = ""
     matt_tool: str = ""
-    por_categoria: int = 8
+    por_categoria: int = 15
     horas_descoberta: int = 20
+    link_modo: str = "oficial"  # "oficial" (meli.la via Linkbuilder) ou "direto"
+    lote_tamanho: int = 40
 
     @classmethod
     def do_ambiente(cls):
@@ -91,7 +93,9 @@ class Config:
             hora_fim=num("HORA_FIM", 22, int),
             matt_word=e("AFILIADO_MATT_WORD", ""),
             matt_tool=e("AFILIADO_MATT_TOOL", ""),
-            por_categoria=num("POR_CATEGORIA", 8, int),
+            por_categoria=num("POR_CATEGORIA", 15, int),
+            link_modo=(e("LINK_MODO") or "oficial").strip().lower(),
+            lote_tamanho=num("LOTE_TAMANHO", 40, int),
             horas_descoberta=num("HORAS_DESCOBERTA", 20, int),
         )
 
@@ -166,7 +170,10 @@ def conectar_ml(cfg: Config):
 def montar_lista(cfg: Config, da_planilha, estado):
     """Junta os produtos da planilha com os descobertos e garante o link de afiliado."""
     lista, vistos = [], set()
+    links = estado.get("links", {})
     for p in da_planilha:
+        if not p.link_afiliado and p.id in links:
+            p.link_afiliado = links[p.id]
         if not p.link_afiliado:
             p.link_afiliado = afiliado.montar(link_produto(p.tipo, p.id), cfg.matt_word, cfg.matt_tool)
         lista.append(p)
@@ -175,8 +182,8 @@ def montar_lista(cfg: Config, da_planilha, estado):
         if pid in vistos:
             continue
         url = link_produto(d["tipo"], pid)
-        lista.append(Produto(pid, d["tipo"], url, afiliado.montar(url, cfg.matt_word, cfg.matt_tool),
-                             d["categoria"], None, 0))
+        link = links.get(pid) or afiliado.montar(url, cfg.matt_word, cfg.matt_tool)
+        lista.append(Produto(pid, d["tipo"], url, link, d["categoria"], None, 0))
     return lista
 
 
@@ -247,6 +254,14 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
     candidatas.sort(key=lambda o: o.forca, reverse=True)
     log(f"{len(produtos)} produtos verificados, {len(candidatas)} ofertas encontradas.")
 
+    if modo == "normal" and cfg.link_modo == "oficial":
+        # Só posta quem já tem link oficial; o resto vai para o lote do Linkbuilder
+        oficiais = [o for o in candidatas if not _link_direto(o.link)]
+        sem_link = [(o, getattr(infos.get(o.id), "item_id", None)) for o in candidatas if _link_direto(o.link)]
+        log(f"{len(oficiais)} com link oficial, {len(sem_link)} aguardando link.")
+        _talvez_mandar_lote(cfg, tg, estado, sem_link, agora)
+        candidatas = oficiais
+
     if modo == "teste":
         if not candidatas:
             log("Nenhuma oferta agora. No modo teste, mando um exemplo com o primeiro produto.")
@@ -288,6 +303,30 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
                 log(f"Aviso: não consegui mandar a cópia para você: {e}")
         time.sleep(1)
     return enviadas
+
+
+def _link_direto(link):
+    return "matt_word=" in (link or "")
+
+
+def _talvez_mandar_lote(cfg, tg, estado, sem_link, agora):
+    """Uma vez por dia (no horário de postagem), manda o lote para o Linkbuilder."""
+    if not cfg.admin_chat or not (cfg.hora_inicio <= agora.hour < cfg.hora_fim):
+        return
+    if (estado.get("lote") or {}).get("dia") == agora.date().isoformat():
+        return
+    if estado.get("lote_enviado_em") == agora.date().isoformat():
+        return
+    urls = lote.montar_lote(estado, sem_link, cfg.lote_tamanho, agora)
+    if not urls:
+        return
+    try:
+        tg.enviar_texto(cfg.admin_chat, lote.texto_lote(urls), html=True)
+        estado["lote_enviado_em"] = agora.date().isoformat()
+        log(f"Lote de {len(urls)} URLs enviado para o Linkbuilder.")
+    except TelegramErro as e:
+        estado["lote"] = None
+        log(f"Aviso: não consegui mandar o lote: {e}")
 
 
 def _exemplo(produtos, infos):
@@ -443,7 +482,11 @@ def main(argv=None):
         if not lista:
             log("Nenhum produto para acompanhar (planilha vazia e descoberta sem resultado).")
             return 0
-        rodar(args.modo, cfg, ml, Telegram(cfg.telegram_token), estado, lista, agora=agora)
+        tg = Telegram(cfg.telegram_token)
+        if cfg.admin_chat:
+            lote.processar_mensagens(tg, estado, cfg.admin_chat, log)
+            lista = montar_lista(cfg, produtos, estado)
+        rodar(args.modo, cfg, ml, tg, estado, lista, agora=agora)
     except AcessoNegado as e:
         log(f"Mercado Livre recusou o acesso: {e}\nRode o modo diagnostico para ver o que fazer.")
         return 1

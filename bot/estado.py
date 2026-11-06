@@ -6,7 +6,7 @@ MAX_HISTORICO = 60
 
 
 def novo():
-    return {"precos": {}, "postados": {}, "contagem_dia": {}}
+    return {"precos": {}, "postados": {}, "contagem_dia": {}, "links": {}, "lote": None}
 
 
 def carregar(caminho):

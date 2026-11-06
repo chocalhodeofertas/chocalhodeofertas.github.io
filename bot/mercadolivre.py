@@ -31,6 +31,7 @@ class InfoProduto:
     preco_original: Optional[float]
     imagem: Optional[str]
     disponivel: bool
+    item_id: Optional[str] = None  # anúncio vencedor (para o Linkbuilder)
 
 
 def extrair_id(link: str):
@@ -109,6 +110,7 @@ class MercadoLivre:
                     preco_original=corpo.get("original_price"),
                     imagem=_imagem_grande(corpo.get("secure_thumbnail") or corpo.get("thumbnail")),
                     disponivel=corpo.get("status") == "active" and (qtd is None or qtd > 0),
+                    item_id=corpo["id"],
                 )
         return resultado
 
@@ -135,6 +137,7 @@ class MercadoLivre:
             preco_original=melhor.get("original_price"),
             imagem=imagem,
             disponivel=bool(melhor),
+            item_id=melhor.get("item_id"),
         )
 
     def mais_vendidos(self, categoria):

@@ -49,6 +49,8 @@ jobs:
           HORA_INICIO: ${{ vars.HORA_INICIO }}
           HORA_FIM: ${{ vars.HORA_FIM }}
           POR_CATEGORIA: ${{ vars.POR_CATEGORIA }}
+          LINK_MODO: ${{ vars.LINK_MODO }}
+          LOTE_TAMANHO: ${{ vars.LOTE_TAMANHO }}
           AFILIADO_MATT_WORD: ${{ vars.AFILIADO_MATT_WORD || 'chocalhodeofertas' }}
           AFILIADO_MATT_TOOL: ${{ vars.AFILIADO_MATT_TOOL || '39326742' }}
 

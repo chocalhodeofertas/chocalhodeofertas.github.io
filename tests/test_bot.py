@@ -410,3 +410,58 @@ def test_proximo_horario():
     assert proximo_horario(d(10, 0), 8, 22) == d(10, 20)
     assert proximo_horario(d(21, 50), 8, 22) == d(8, 2, 7)  # passou das 22h: amanhã cedo
     assert proximo_horario(d(3, 0), 8, 22) == d(8, 2)  # madrugada: hoje às 8h
+
+
+# ---------- lote do Linkbuilder ----------
+
+def test_lote_fluxo_completo():
+    from bot import lote
+    e = est.novo()
+    roupa = avaliar(Produto("MLB2", "catalogo", "", "x?matt_word=w", "roupa", None, 0),
+                    info(80, 100, "MLB2"), e, AGORA)  # 20%, mas roupa pesa mais
+    brinq = avaliar(Produto("MLB1", "catalogo", "", "x?matt_word=w", "brinquedo", None, 0),
+                    info(78, 100, "MLB1"), e, AGORA)  # 22%
+    urls = lote.montar_lote(e, [(brinq, "MLB111"), (roupa, "MLB222"), (brinq, "MLB111")], 10, AGORA)
+    assert urls == [lote.url_linkbuilder("MLB222"), lote.url_linkbuilder("MLB111")]
+    assert e["lote"]["ids"] == ["MLB2", "MLB1"]
+    ok, msg = lote.aplicar_resposta(e, "https://meli.la/AAA")
+    assert not ok and "não salvei" in msg
+    ok, msg = lote.aplicar_resposta(e, "aqui:\nhttps://meli.la/AAA\nhttps://meli.la/BBB")
+    assert ok and e["links"] == {"MLB2": "https://meli.la/AAA", "MLB1": "https://meli.la/BBB"}
+    assert e["lote"] is None
+
+
+def test_modo_oficial_so_posta_com_link_e_manda_lote():
+    from bot import main
+    e = est.novo()
+    produtos = [Produto("MLB1", "catalogo", "", "https://x/p/MLB1?matt_word=w&matt_tool=1", "fralda", None, 0),
+                Produto("MLB2", "catalogo", "", "https://meli.la/ok", "fralda", None, 0)]
+    infos = {"MLB1": info(50, 100, "MLB1"), "MLB2": info(70, 100, "MLB2")}
+    infos["MLB1"].item_id = "MLB999"
+    tg = TGFalso()
+    enviadas = main.rodar("normal", Config(canal="@c", admin_chat="123", max_por_rodada=5),
+                          MLFalso(infos), tg, e, produtos, agora=AGORA)
+    assert [o.id for o in enviadas] == ["MLB2"]  # MLB1 tem desconto maior, mas não tem link oficial
+    assert e["lote"]["ids"] == ["MLB1"]
+    assert any("Linkbuilder" in t[2] for t in tg.enviados)
+    # No mesmo dia não manda outro lote
+    n = len(tg.enviados)
+    main.rodar("normal", Config(canal="@c", admin_chat="123"), MLFalso(infos), tg, e, produtos,
+               agora=AGORA + timedelta(minutes=20))
+    assert not any("Linkbuilder" in t[2] for t in tg.enviados[n:])
+
+
+def test_processar_mensagens():
+    from bot import lote
+    e = est.novo()
+    e["lote"] = {"dia": "x", "ids": ["MLB1"], "urls": ["u"]}
+
+    class TG:
+        def __init__(self): self.txt = []
+        def atualizacoes(self, offset=None):
+            return [{"update_id": 7, "message": {"chat": {"id": 999}, "text": "https://meli.la/Z"}},
+                    {"update_id": 8, "message": {"chat": {"id": 123}, "text": "https://meli.la/Q"}}]
+        def enviar_texto(self, chat, t, html=False, botoes=None): self.txt.append(t)
+    tg = TG()
+    lote.processar_mensagens(tg, e, "123", log=lambda m: None)
+    assert e["links"] == {"MLB1": "https://meli.la/Q"} and e["tg_offset"] == 9 and tg.txt
