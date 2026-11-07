@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 25
+  "2026-11-07": 27
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3568,6 +3568,12 @@
   "2026-11-07": 3
  },
  "postados": {
+  "MLB10923645": {
+   "desconto": 0.443,
+   "preco": 155.43,
+   "quando": "2026-11-07T15:12-03:00",
+   "titulo": "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor"
+  },
   "MLB23581207": {
    "preco": 211.94,
    "quando": "2026-11-06T20:23-03:00"
@@ -3775,6 +3781,12 @@
    "preco": 76.53,
    "quando": "2026-11-07T10:22-03:00",
    "titulo": "Boneca Bebê Reborn Menino Recém Nascido Pode Dar Banho"
+  },
+  "MLB69629265": {
+   "desconto": 0.471,
+   "preco": 37.0,
+   "quando": "2026-11-07T15:12-03:00",
+   "titulo": "Tablet Educativo Infantil Bilíngue 54 Funções Azul Interativo Português Inglês L"
   },
   "MLB72720626": {
    "desconto": 0.578,
@@ -7817,7 +7829,7 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T14:52-03:00",
+  "em": "2026-11-07T15:12-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -8421,6 +8433,6 @@
    }
   ]
  },
- "vitrine_assinatura": "e2c890f05ba62391946086b56bfcd6910b18e084",
- "vitrine_publicada_em": "2026-11-07T14:12-03:00"
+ "vitrine_assinatura": "8be7b32773be713655016582e027f5f6f27fedbf",
+ "vitrine_publicada_em": "2026-11-07T15:12-03:00"
 }
