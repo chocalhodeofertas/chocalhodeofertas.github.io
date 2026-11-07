@@ -16,6 +16,7 @@ from zoneinfo import ZoneInfo
 
 FUSO = ZoneInfo("America/Sao_Paulo")
 INTERVALO = timedelta(minutes=20)
+RAPIDO_SEG = 120
 
 
 def log(msg):
@@ -86,9 +87,15 @@ def main(argv=None):
                 time.sleep(espera)
             log("Encerrando esta execução; a próxima continua o ciclo.")
             return 0
-        espera = max((prox - datetime.now(FUSO)).total_seconds(), 0)
         log(f"Próxima rodada às {prox:%H:%M}.")
-        time.sleep(espera)
+        # Até lá, a cada 2 min: suas mensagens e o canal de cupons
+        while (espera := (prox - datetime.now(FUSO)).total_seconds()) > 0:
+            time.sleep(min(RAPIDO_SEG, espera))
+            agora = datetime.now(FUSO)
+            if inicio <= agora.hour < fim and (prox - agora).total_seconds() > 30:
+                sincronizar_antes()
+                subprocess.run([sys.executable, "-m", "bot.main", "--modo", "rapido"])
+                salvar_estado()
 
 
 if __name__ == "__main__":

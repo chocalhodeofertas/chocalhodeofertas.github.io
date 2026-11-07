@@ -796,3 +796,30 @@ def test_sessao_criptografada(tmp_path):
     cupons_ml.guardar_seguro({"sessao": "1Babc"}, "hash123", arq)
     assert b"1Babc" not in arq.read_bytes()
     assert cupons_ml.ler_seguro("hash123", arq) == {"sessao": "1Babc"}
+
+
+def test_reconfere_preco_antes_de_postar(monkeypatch):
+    from bot import main
+    monkeypatch.setattr(main, "dormir", lambda seg: None)
+    produtos = [prod("MLB1"), prod("MLB2"), prod("MLB3")]
+    infos = {"MLB1": info(50, 100, "MLB1"), "MLB2": info(60, 100, "MLB2"), "MLB3": info(70, 100, "MLB3")}
+
+    class MLMuda(MLFalso):
+        """Na segunda consulta, a MLB1 já voltou ao preço cheio."""
+        def __init__(self, infos):
+            super().__init__(infos)
+            self.vezes = {}
+
+        def catalogo(self, pid, titulo=None, imagem=None):
+            self.vezes[pid] = self.vezes.get(pid, 0) + 1
+            if pid == "MLB1" and self.vezes[pid] > 1:
+                return InfoProduto("MLB1", "Fralda", 100, None, None, True)
+            return self.infos[pid]
+
+    produtos = [Produto(p.id, "catalogo", "", "https://meli.la/x", "fralda", None, 0) for p in produtos]
+    cfg = Config(canal="@c", max_por_rodada=2, max_por_hora=10, max_por_dia=50, intervalo_min=4, intervalo_max=8)
+    rodadas = []
+    enviadas = main.rodar("normal", cfg, MLMuda(infos), TGFalso(), est.novo(), produtos, agora=AGORA,
+                          tarefa=lambda: rodadas.append(1))
+    assert [o.id for o in enviadas] == ["MLB2", "MLB3"]  # MLB1 acabou e foi pulada
+    assert rodadas  # mensagens e cupons conferidos durante a espera entre posts

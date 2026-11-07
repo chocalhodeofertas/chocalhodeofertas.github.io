@@ -246,7 +246,42 @@ def buscar_infos(ml: MercadoLivre, produtos, estado=None):
     return infos
 
 
-def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
+def _esperar(segundos, tarefa=None, passo=120):
+    """Espera; se houver tarefa (mensagens e cupons), roda ela a cada 2 min enquanto isso."""
+    if not tarefa:
+        dormir(segundos)
+        return
+    resta = segundos
+    while resta > 0:
+        trecho = min(passo, resta)
+        dormir(trecho)
+        resta -= trecho
+        try:
+            tarefa()
+        except Exception as e:  # noqa: BLE001
+            log(f"Aviso: tarefa rápida falhou: {e}")
+
+
+def _reconferir(ml, produto, oferta, estado, cfg, agora):
+    """Confere o preço de novo logo antes de postar. None = a oferta acabou."""
+    if produto is None:
+        return oferta
+    try:
+        if produto.tipo == "catalogo":
+            info = ml.catalogo(produto.id, oferta.titulo, oferta.imagem)
+        else:
+            info = ml.itens([produto.id]).get(produto.id)
+    except (ErroML, AcessoNegado):
+        return oferta  # sem como conferir agora: vale a consulta de minutos atrás
+    nova = avaliar(produto, info, estado, agora, cfg.min_desconto, cfg.repost_dias)
+    if nova is None:
+        log(f"{oferta.id}: o preço mudou antes do post; pulei.")
+        return None
+    nova.categoria = oferta.categoria
+    return nova
+
+
+def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, tarefa=None):
     """Uma rodada completa. Retorna a lista de ofertas enviadas."""
     agora = agora or datetime.now(FUSO)
     infos = buscar_infos(ml, produtos, estado)
@@ -307,21 +342,30 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
         min(cfg.max_por_dia, meta_ate_agora(cfg.max_por_dia, agora.hour, cfg.hora_inicio, cfg.hora_fim))
         - est.posts_hoje(estado, agora),
     )
+    vagas = max(vagas, 0)
     enviadas = []
-    fila = candidatas[: max(vagas, 0)]
-    if fila and cfg.atraso_max:
+    if vagas and candidatas and cfg.atraso_max:
         # Atraso inicial: as rodadas começam em horário fixo, os posts não
-        dormir(rng.uniform(0, cfg.atraso_max) * 60)
-    for n, o in enumerate(fila):
-        if n > 0:
+        _esperar(rng.uniform(0, cfg.atraso_max) * 60, tarefa)
+    por_id = {p.id: p for p in produtos}
+    esperar_antes = False
+    for o in candidatas:
+        if len(enviadas) >= vagas:
+            break
+        if esperar_antes:
             espera = rng.uniform(cfg.intervalo_min, max(cfg.intervalo_max, cfg.intervalo_min))
             log(f"Próximo post em {espera:.1f} min.")
-            dormir(espera * 60)
+            _esperar(espera * 60, tarefa)
+            esperar_antes = False
+        o = _reconferir(ml, por_id.get(o.id), o, estado, cfg, agora)
+        if o is None:
+            continue  # tenta a próxima da fila, sem esperar de novo
         try:
             tg.enviar_oferta(cfg.canal, mensagens.montar_telegram(o, rng), o.imagem)
         except TelegramErro as e:
             log(f"Erro ao postar {o.id} no canal: {e}")
             continue
+        esperar_antes = True
         est.registrar_post(estado, o.id, o.preco, agora, o.titulo, o.desconto)
         enviadas.append(o)
         log(f"Postado: {o.id} {mensagens.brl(o.preco)} (-{round(o.desconto * 100)}%)")
@@ -482,9 +526,20 @@ def diagnostico(cfg: Config, produtos, avisos):
     return ok
 
 
+def tarefas_rapidas(cfg, ml, tg, estado):
+    """Suas mensagens, o canal de cupons e a validade dos cupons."""
+    agora = datetime.now(FUSO)
+    if not (cfg.hora_inicio <= agora.hour < cfg.hora_fim):
+        return
+    if cfg.admin_chat:
+        comandos.processar(tg, ml, estado, cfg, agora, log)
+    cupons_ml.processar(tg, cfg, estado, agora, log)
+    comandos.verificar_cupons(tg, cfg, estado, agora, log)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("--modo", choices=["normal", "teste", "diagnostico"], default="normal")
+    ap.add_argument("--modo", choices=["normal", "teste", "diagnostico", "rapido"], default="normal")
     args = ap.parse_args(argv)
     cfg = Config.do_ambiente()
     produtos, avisos = carregar_produtos()
@@ -499,6 +554,16 @@ def main(argv=None):
         return 1
 
     estado = est.carregar(ARQ_ESTADO)
+    if args.modo == "rapido":
+        # Entre as rodadas: só suas mensagens e o canal de cupons (leve)
+        try:
+            ml, _ = conectar_ml(cfg)
+            tarefas_rapidas(cfg, ml, Telegram(cfg.telegram_token), estado)
+        except AcessoNegado as e:
+            log(f"Mercado Livre recusou o acesso: {e}")
+        finally:
+            est.salvar(ARQ_ESTADO, estado)
+        return 0
     try:
         ml, _ = conectar_ml(cfg)
         agora = datetime.now(FUSO)
@@ -511,7 +576,8 @@ def main(argv=None):
         if cfg.admin_chat and args.modo == "normal":
             comandos.processar(tg, ml, estado, cfg, agora, log)
             lista = montar_lista(cfg, produtos, estado)
-        rodar(args.modo, cfg, ml, tg, estado, lista, agora=agora)
+        tarefa = (lambda: tarefas_rapidas(cfg, ml, tg, estado)) if args.modo == "normal" else None
+        rodar(args.modo, cfg, ml, tg, estado, lista, agora=agora, tarefa=tarefa)
         if args.modo == "normal":
             if cfg.hora_inicio <= agora.hour < cfg.hora_fim:
                 cupons_ml.processar(tg, cfg, estado, agora, log)
