@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 16
+  "2026-11-07": 17
  },
  "cupons": {
   "MODAAQUI": {
@@ -3580,6 +3580,12 @@
    "quando": "2026-11-07T10:02-03:00",
    "titulo": "Bicicleta de Equilíbrio Infantil Sem Pedal Vermelho Buba"
   },
+  "MLB24812026": {
+   "desconto": 0.568,
+   "preco": 44.9,
+   "quando": "2026-11-07T12:42-03:00",
+   "titulo": "Patinho Amarelo Dançarino Musical Som Luz Marca REDFIN Brinquedo Interativo Cria"
+  },
   "MLB26851070": {
    "preco": 223.73,
    "quando": "2026-11-06T15:34-03:00"
@@ -4302,6 +4308,10 @@
     [
      "2026-11-06",
      32.17
+    ],
+    [
+     "2026-11-07",
+     32.18
     ]
    ],
    "min": 32.17
@@ -7678,28 +7688,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T12:22-03:00",
+  "em": "2026-11-07T12:42-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 129.99,
-    "desconto": 0.546,
-    "id": "MLB44672426",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_700384-MLA99379664790_112025-F.jpg",
-    "link": "https://meli.la/2ppVzCP",
-    "preco": 58.99,
-    "titulo": "Tapete Educativo Interativo Teclado Musical - Verde"
-   },
-   {
-    "categoria": "quarto",
-    "de": 1299.9,
-    "desconto": 0.578,
-    "id": "MLB72720626",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_642241-MLA115658811869_082026-F.jpg",
-    "link": "https://meli.la/1DnYqLQ",
-    "preco": 549.0,
-    "titulo": "Berço Portátil PipDip Co-Sleeper, Com Balanço e Colchão Extra Grosso"
-   },
    {
     "categoria": "brinquedo",
     "de": 103.9,
@@ -8279,6 +8269,26 @@
     "link": "https://meli.la/2HcPWSz",
     "preco": 306.52,
     "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Cinza"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 109.0,
+    "desconto": 0.405,
+    "id": "MLB54178891",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_961120-MLA111456750696_052026-F.jpg",
+    "link": "https://meli.la/2du9XZK",
+    "preco": 64.9,
+    "titulo": "Violão Infantil Acústico Mini Violão de Madeira com 6 Cordas de Aço Instrumento Musical de Verdade para Crianç"
+   },
+   {
+    "categoria": "alimentacao",
+    "de": 449.9,
+    "desconto": 0.402,
+    "id": "MLB53258842",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_612441-MLA99520261016_112025-F.jpg",
+    "link": "https://meli.la/1cPi9vw",
+    "preco": 268.98,
+    "titulo": "Cadeira Alimentação Infantil Portátil 3 em 1 Vira Booster Bandeja Dupla Removível Harmony Maxi Baby"
    }
   ]
  },
