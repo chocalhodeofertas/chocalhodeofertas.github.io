@@ -1,5 +1,5 @@
 {
- "aguardando_link": 21,
+ "aguardando_link": 22,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 12
+  "2026-11-07": 14
  },
  "cupons": {
   "MODAAQUI": {
@@ -3641,8 +3641,10 @@
    "titulo": "Lictin Teclado Eletrônico Digital De 61teclas Para Crianças, Piano Elétrico Para"
   },
   "MLB54136862": {
-   "preco": 76.53,
-   "quando": "2026-11-06T19:43-03:00"
+   "desconto": 0.719,
+   "preco": 41.61,
+   "quando": "2026-11-07T12:02-03:00",
+   "titulo": "Barraca Toca Infantil Menina Cabana Tenda Princesa Criança Princesa Judy Cabanin"
   },
   "MLB54159991": {
    "preco": 219.56,
@@ -3713,6 +3715,12 @@
   "MLB67746701": {
    "preco": 64.9,
    "quando": "2026-11-06T21:44-03:00"
+  },
+  "MLB68031618": {
+   "desconto": 0.7,
+   "preco": 95.94,
+   "quando": "2026-11-07T12:02-03:00",
+   "titulo": "Carrinho Controle Remoto Drift Bateria Recarregavel 4x4 Porsche Atacarejo Kids"
   },
   "MLB68086238": {
    "desconto": 0.575,
@@ -4384,9 +4392,13 @@
     [
      "2026-11-06",
      899.9
+    ],
+    [
+     "2026-11-07",
+     872.9
     ]
    ],
-   "min": 899.9
+   "min": 872.9
   },
   "MLB24812026": {
    "historico": [
@@ -4645,6 +4657,10 @@
     [
      "2026-11-07",
      21.0
+    ],
+    [
+     "2026-11-07",
+     20.9
     ]
    ],
    "min": 18.43
@@ -5433,9 +5449,13 @@
     [
      "2026-11-07",
      61.88
+    ],
+    [
+     "2026-11-07",
+     53.68
     ]
    ],
-   "min": 61.88
+   "min": 53.68
   },
   "MLB49215315": {
    "historico": [
@@ -5478,6 +5498,10 @@
     [
      "2026-11-07",
      1096.99
+    ],
+    [
+     "2026-11-07",
+     1313.14
     ]
    ],
    "min": 1096.99
@@ -5572,9 +5596,13 @@
     [
      "2026-11-06",
      76.53
+    ],
+    [
+     "2026-11-07",
+     41.61
     ]
    ],
-   "min": 76.53
+   "min": 41.61
   },
   "MLB54159991": {
    "historico": [
@@ -6038,9 +6066,13 @@
     [
      "2026-11-06",
      158.53
+    ],
+    [
+     "2026-11-07",
+     134.9
     ]
    ],
-   "min": 148.4
+   "min": 134.9
   },
   "MLB62681535": {
    "historico": [
@@ -6136,6 +6168,10 @@
     [
      "2026-11-07",
      129.44
+    ],
+    [
+     "2026-11-07",
+     63.9
     ]
    ],
    "min": 56.89
@@ -6145,9 +6181,13 @@
     [
      "2026-11-06",
      205.99
+    ],
+    [
+     "2026-11-07",
+     199.0
     ]
    ],
-   "min": 205.99
+   "min": 199.0
   },
   "MLB62978394": {
    "historico": [
@@ -6563,9 +6603,13 @@
     [
      "2026-11-07",
      143.9
+    ],
+    [
+     "2026-11-07",
+     95.94
     ]
    ],
-   "min": 143.9
+   "min": 95.94
   },
   "MLB68086238": {
    "historico": [
@@ -6950,6 +6994,10 @@
     [
      "2026-11-07",
      389.9
+    ],
+    [
+     "2026-11-07",
+     359.8
     ]
    ],
    "min": 359.8
@@ -6968,6 +7016,10 @@
     [
      "2026-11-07",
      23.99
+    ],
+    [
+     "2026-11-07",
+     32.94
     ]
    ],
    "min": 23.99
@@ -7137,6 +7189,10 @@
     [
      "2026-11-07",
      387.33
+    ],
+    [
+     "2026-11-07",
+     406.0
     ]
    ],
    "min": 387.33
@@ -7602,8 +7658,28 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T11:42-03:00",
+  "em": "2026-11-07T12:02-03:00",
   "itens": [
+   {
+    "categoria": "brinquedo",
+    "de": 147.9,
+    "desconto": 0.719,
+    "id": "MLB54136862",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_612380-MLA117540353805_092026-F.jpg",
+    "link": "https://meli.la/2dtcNri",
+    "preco": 41.61,
+    "titulo": "Barraca Toca Infantil Menina Cabana Tenda Princesa Criança Princesa Judy Cabaninha"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 319.9,
+    "desconto": 0.7,
+    "id": "MLB68031618",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_628074-MLA117276490721_092026-F.jpg",
+    "link": "https://meli.la/1TrwyJv",
+    "preco": 95.94,
+    "titulo": "Carrinho Controle Remoto Drift Bateria Recarregavel 4x4 Porsche Atacarejo Kids"
+   },
    {
     "categoria": "brinquedo",
     "de": 129.99,
@@ -7633,16 +7709,6 @@
     "link": "https://meli.la/1dCnjcJ",
     "preco": 44.9,
     "titulo": "Patinho Amarelo Dançarino Musical Som Luz Marca REDFIN Brinquedo Interativo Crianças Presente Infantil Ajuda N"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 319.9,
-    "desconto": 0.55,
-    "id": "MLB68031618",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_628074-MLA117276490721_092026-F.jpg",
-    "link": "https://meli.la/1TrwyJv",
-    "preco": 143.9,
-    "titulo": "Carrinho Controle Remoto Drift Bateria Recarregavel 4x4 Porsche Atacarejo Kids"
    },
    {
     "categoria": "brinquedo",
@@ -7683,6 +7749,16 @@
     "link": "https://meli.la/1y1cfyY",
     "preco": 69.9,
     "titulo": "Tapete De Atividades Musical Bebê Piano Interativo Ginásio Cor Rosa"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 259.9,
+    "desconto": 0.481,
+    "id": "MLB62645299",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_978153-MLA99845859027_112025-F.jpg",
+    "link": "https://meli.la/2M7kgHJ",
+    "preco": 134.9,
+    "titulo": "Mesa de Atividades Infantil 2 em 1 com Cadeira Orelhinha para Blocos de Montar e Desenhar Rosa"
    },
    {
     "categoria": "outros",
@@ -7853,6 +7929,16 @@
     "link": "https://meli.la/1mbZ5jZ",
     "preco": 224.57,
     "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco Estary Shop"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 99.9,
+    "desconto": 0.463,
+    "id": "MLB49086353",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_644538-MLA108177180572_032026-F.jpg",
+    "link": "https://meli.la/1GLLQxc",
+    "preco": 53.68,
+    "titulo": "Boia Bote Bebê Infantil Inflável Piscina Com Cobertura De Proteção UV Cor Azul/amarelo Indue Variedades"
    },
    {
     "categoria": "brinquedo",
@@ -8116,16 +8202,6 @@
    },
    {
     "categoria": "brinquedo",
-    "de": 259.9,
-    "desconto": 0.39,
-    "id": "MLB62645299",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_978153-MLA99845859027_112025-F.jpg",
-    "link": "https://meli.la/2M7kgHJ",
-    "preco": 158.53,
-    "titulo": "Mesa de Atividades Infantil 2 em 1 com Cadeira Orelhinha para Blocos de Montar e Desenhar Rosa"
-   },
-   {
-    "categoria": "brinquedo",
     "de": 293.0,
     "desconto": 0.388,
     "id": "MLB24647466",
@@ -8183,29 +8259,9 @@
     "link": "https://meli.la/1Vfqa7f",
     "preco": 41.48,
     "titulo": "Booster Quádruplo Escuridão Absoluta Português"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 99.9,
-    "desconto": 0.406,
-    "id": "MLB78452515",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_672781-MLA115357836828_082026-F.jpg",
-    "link": "https://meli.la/2cVWJvh",
-    "preco": 59.31,
-    "titulo": "Casinha Boneca Coelho Brinquedo Infantil Mini Cenários Móveis Acessórios Coleção HopJoy Maxi Toys - Mini Cozin"
-   },
-   {
-    "categoria": "higiene",
-    "de": 491.14,
-    "desconto": 0.376,
-    "id": "MLB51979690",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_887090-MLA96078823773_102025-F.jpg",
-    "link": "https://meli.la/2HcPWSz",
-    "preco": 306.52,
-    "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Cinza"
    }
   ]
  },
- "vitrine_assinatura": "95f9204eb2a267ff6e3a98d629ef083d3b4fd1be",
- "vitrine_publicada_em": "2026-11-07T11:02-03:00"
+ "vitrine_assinatura": "79af510d058763d0eef14f18fc9ed71a28455cc6",
+ "vitrine_publicada_em": "2026-11-07T12:02-03:00"
 }
