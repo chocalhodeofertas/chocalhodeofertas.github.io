@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 35
+  "2026-11-07": 36
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3793,6 +3793,12 @@
   "MLB66986360": {
    "preco": 122.87,
    "quando": "2026-11-06T20:43-03:00"
+  },
+  "MLB67069579": {
+   "desconto": 0.439,
+   "preco": 35.9,
+   "quando": "2026-11-07T18:22-03:00",
+   "titulo": "Bola Mágica Disco Voador Brinquedo Ao Ar Livre Bola Maluca Cor Rosa"
   },
   "MLB67648307": {
    "desconto": 0.501,
@@ -7889,6 +7895,10 @@
     [
      "2026-11-07",
      320.0
+    ],
+    [
+     "2026-11-07",
+     259.9
     ]
    ],
    "min": 259.9
@@ -7945,28 +7955,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T18:12-03:00",
+  "em": "2026-11-07T18:22-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 49.0,
-    "desconto": 0.447,
-    "id": "MLB64866580",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_735916-MLA105596119925_012026-F.jpg",
-    "link": "https://meli.la/2G3kCUB",
-    "preco": 27.11,
-    "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensorial 1ª Infância Bebê Conforto Ma"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 349.99,
-    "desconto": 0.442,
-    "id": "MLB18581975",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_797918-MLA118813862854_102026-F.jpg",
-    "link": "https://meli.la/2Sosy4k",
-    "preco": 195.21,
-    "titulo": "LEGO Classic Caixa Média de Peças Criativas 10696; peças LEGO em 35 cores diferentes; Conjunto criativo para c"
-   },
    {
     "categoria": "brinquedo",
     "de": 63.98,
@@ -8546,6 +8536,26 @@
     "link": "https://meli.la/1J9pYbi",
     "preco": 42.9,
     "titulo": "Piano Musical Infantil de Fazenda com 12 Teclas e Sons de Animais, Para Bebê e Criança"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 199.9,
+    "desconto": 0.328,
+    "id": "MLB27861415",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_802710-MLA91575017864_092025-F.jpg",
+    "link": "https://meli.la/2nvA4BA",
+    "preco": 134.24,
+    "titulo": "Cozinha De Brinquedo Infantil Completa Princess Replay Kids"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 57.0,
+    "desconto": 0.353,
+    "id": "MLB63566347",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_957154-MLA112263989564_062026-F.jpg",
+    "link": "https://meli.la/1xh1ufi",
+    "preco": 36.9,
+    "titulo": "Bola Flutuante Futebol Indoor Flat Ball Hoverball com Luz LED Bola de Futebol Elétrica Infantil que Desliza no"
    }
   ]
  },
