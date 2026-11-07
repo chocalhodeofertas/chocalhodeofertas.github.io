@@ -1,5 +1,5 @@
 {
- "aguardando_link": 79,
+ "aguardando_link": 49,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 5
+  "2026-11-07": 6
  },
  "cupons": {
   "MODAAQUI": {
@@ -3526,10 +3526,76 @@
   "MLB80823637": "https://meli.la/32VR6qX",
   "MLB81142365": "https://meli.la/2Lcg3Q4"
  },
- "lote": null,
+ "lote": {
+  "dia": "2026-11-07",
+  "ids": [
+   "MLB72656297",
+   "MLB68934417",
+   "MLB18392677",
+   "MLB71892696",
+   "MLB20618866",
+   "MLB74331737",
+   "MLB65369406",
+   "MLB66141214",
+   "MLB66463370",
+   "MLB25858980",
+   "MLB73156948",
+   "MLB66784003",
+   "MLB58625474",
+   "MLB23535413",
+   "MLB37554844",
+   "MLB70063063",
+   "MLB24064445",
+   "MLB19970137",
+   "MLB22501041",
+   "MLB62572381",
+   "MLB75481308",
+   "MLB36589480",
+   "MLB56421479",
+   "MLB78625949",
+   "MLB43756367",
+   "MLB26712966",
+   "MLB24768816",
+   "MLB81565711",
+   "MLB29003787",
+   "MLB26996563"
+  ],
+  "urls": [
+   "https://produto.mercadolivre.com.br/MLB-5301114959-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7616015240-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3338977456-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6967455734-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3864384873-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4801693347-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5342771879-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5348015449-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4903697078-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3899865340-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7442292960-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4538967269-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4234304013-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4219899172-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7543308508-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5244695303-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4299606714-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3502451255-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4022564397-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6976336790-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4923523763-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5353764482-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5333798889-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7542318354-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3917223693-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4397918132-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4423925853-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7658098506-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3973592249-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4435257163-produto-_JM"
+  ]
+ },
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-07": 2
+  "2026-11-07": 3
  },
  "postados": {
   "MLB23581207": {
@@ -3673,6 +3739,12 @@
   "MLB73212051": {
    "preco": 76.53,
    "quando": "2026-11-06T12:32-03:00"
+  },
+  "MLB73604609": {
+   "desconto": 0.599,
+   "preco": 23.99,
+   "quando": "2026-11-07T09:22-03:00",
+   "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
   },
   "MLB76227639": {
    "preco": 37.0,
@@ -4216,9 +4288,13 @@
     [
      "2026-11-06",
      49.99
+    ],
+    [
+     "2026-11-07",
+     48.75
     ]
    ],
-   "min": 49.99
+   "min": 48.75
   },
   "MLB24626810": {
    "historico": [
@@ -4718,6 +4794,10 @@
     [
      "2026-11-07",
      109.9
+    ],
+    [
+     "2026-11-07",
+     103.9
     ]
    ],
    "min": 78.99
@@ -7462,28 +7542,8 @@
  },
  "tg_offset": 273517978,
  "vitrine": {
-  "em": "2026-11-07T09:02-03:00",
+  "em": "2026-11-07T09:22-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 359.8,
-    "desconto": 0.651,
-    "id": "MLB65579852",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_794094-MLA106544309108_022026-F.jpg",
-    "link": "https://meli.la/2uj3eiU",
-    "preco": 125.73,
-    "titulo": "Adora Bebê Reborn Bonecas Realista De Silicone Menina 48 Cm"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 399.0,
-    "desconto": 0.704,
-    "id": "MLB54068547",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_608639-MLA100077751359_122025-F.jpg",
-    "link": "https://meli.la/1RsXBaj",
-    "preco": 118.0,
-    "titulo": "Lictin Teclado Eletrônico Digital De 61teclas Para Crianças, Piano Elétrico Para Iniciantes Inclui Microfone"
-   },
    {
     "categoria": "quarto",
     "de": 59.9,
@@ -7576,6 +7636,16 @@
    },
    {
     "categoria": "brinquedo",
+    "de": 103.9,
+    "desconto": 0.568,
+    "id": "MLB24812026",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_874054-MLA113500566768_072026-F.jpg",
+    "link": "https://meli.la/1dCnjcJ",
+    "preco": 44.9,
+    "titulo": "Patinho Amarelo Dançarino Musical Som Luz Marca REDFIN Brinquedo Interativo Crianças Presente Infantil Ajuda N"
+   },
+   {
+    "categoria": "brinquedo",
     "de": 319.9,
     "desconto": 0.55,
     "id": "MLB68031618",
@@ -7593,6 +7663,16 @@
     "link": "https://meli.la/1E3rsQs",
     "preco": 67.8,
     "titulo": "Kit 48 Carrinhos Miniatura Nanotoyzzz Metal Fricção 1:64 Container com 2 Pistas Carros Sortidos Brinquedo Infa"
+   },
+   {
+    "categoria": "jogo",
+    "de": 39.9,
+    "desconto": 0.545,
+    "id": "MLB58664244",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_734298-MLA93538649792_102025-F.jpg",
+    "link": "https://meli.la/2hy679q",
+    "preco": 18.14,
+    "titulo": "Jogo Caiu Perdeu Pais & Filhos 54 Peças de Madeira"
    },
    {
     "categoria": "brinquedo",
@@ -7623,6 +7703,16 @@
     "link": "https://meli.la/2xAyqfq",
     "preco": 114.9,
     "titulo": "Andador Educativo Empurrar Infantil Bebê Musical Brinquedo Atentu Rosa"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 162.9,
+    "desconto": 0.516,
+    "id": "MLB77329018",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_625509-MLA117489395443_092026-F.jpg",
+    "link": "https://meli.la/1ALRkVS",
+    "preco": 78.9,
+    "titulo": "Carrinho de Controle Remoto 2 Em 1 que Vira Robô com Bateria Recarregável se Transforma em Robô"
    },
    {
     "categoria": "roupa",
@@ -7693,6 +7783,16 @@
     "link": "https://meli.la/2egipGa",
     "preco": 69.9,
     "titulo": "Dinossauro Rex de Controle Remoto que Anda e Solta Fumaça com Som Tiranossauro Robô de Brinquedo Realista Inte"
+   },
+   {
+    "categoria": "outros",
+    "de": 498.73,
+    "desconto": 0.499,
+    "id": "MLB46681505",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_932524-MLA116048225124_092026-F.jpg",
+    "link": "https://meli.la/1BZwpcU",
+    "preco": 249.96,
+    "titulo": "Cercadinho Bebê Infantil Chiqueirinho Cercado Grande 180x150 Proteção - 8X TECH"
    },
    {
     "categoria": "quarto",
@@ -7865,6 +7965,16 @@
     "titulo": "Aspirador Nasal Rosa Elétrico Infantil Bebê Recarregável USB Sugador de Nariz Limpeza Nasal Portátil Removedor"
    },
    {
+    "categoria": "jogo",
+    "de": 129.9,
+    "desconto": 0.439,
+    "id": "MLB62690385",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_872478-MLA113363849507_062026-F.jpg",
+    "link": "https://meli.la/2QTjCug",
+    "preco": 72.9,
+    "titulo": "Mini Mesa de Sinuca Infantil Bilhar Portátil 48x28cm com 16 Bolas 2 Tacos e Triângulo Mesinha com Pano Aveluda"
+   },
+   {
     "categoria": "outros",
     "de": 600.0,
     "desconto": 0.38,
@@ -7903,6 +8013,16 @@
     "link": "https://meli.la/2N8aBdQ",
     "preco": 29.9,
     "titulo": "Mini Bateria Infantil ATENTU Instrumento Brinquedo 3 Tambores"
+   },
+   {
+    "categoria": "jogo",
+    "de": 161.7,
+    "desconto": 0.431,
+    "id": "MLB65019704",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_879550-MLA105423714224_012026-F.jpg",
+    "link": "https://meli.la/1mtnsKi",
+    "preco": 91.96,
+    "titulo": "Jogo de Tabuleiro - Perfil 8 - Grow - 4992"
    },
    {
     "categoria": "jogo",
@@ -7965,6 +8085,16 @@
     "titulo": "Teclado Elétrico Musical Infantil Com Microfone E Fonte Cor Preto"
    },
    {
+    "categoria": "jogo",
+    "de": 169.99,
+    "desconto": 0.424,
+    "id": "MLB66566409",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_799074-MLA109742234079_032026-F.jpg",
+    "link": "https://meli.la/1AEMg1j",
+    "preco": 97.99,
+    "titulo": "Jogo Banco Imobiliário Grande Estrela em português"
+   },
+   {
     "categoria": "brinquedo",
     "de": 365.0,
     "desconto": 0.392,
@@ -7973,6 +8103,16 @@
     "link": "https://meli.la/2oW2z3N",
     "preco": 221.92,
     "titulo": "Bolinhas Para Piscina Coloridas Braskit 500 Unidades Plástico"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 135.05,
+    "desconto": 0.423,
+    "id": "MLB43200233",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_825638-MLA97504721848_112025-F.jpg",
+    "link": "https://meli.la/2bKrgJ9",
+    "preco": 77.9,
+    "titulo": "Bicicleta de Equilíbrio Brinq Kids Brinquei Vermelho para Crianças 12m+"
    },
    {
     "categoria": "passeio",
@@ -8003,66 +8143,6 @@
     "link": "https://meli.la/1G1hede",
     "preco": 179.44,
     "titulo": "Bicicleta De Equilíbrio 4 Rodas Buba Infantil Sem Pedal Cor Azul"
-   },
-   {
-    "categoria": "passeio",
-    "de": 619.9,
-    "desconto": 0.355,
-    "id": "MLB62445069",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_849686-MLA99207858759_112025-F.jpg",
-    "link": "https://meli.la/1jDpjpK",
-    "preco": 399.9,
-    "titulo": "Cadeirinha Automotiva Atentu BS05 para Bebê e Criança de 9 a 36 kg Vermelha"
-   },
-   {
-    "categoria": "outros",
-    "de": 349.99,
-    "desconto": 0.377,
-    "id": "MLB79143996",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_971252-MLA115967786486_092026-F.jpg",
-    "link": "https://meli.la/1tyysNv",
-    "preco": 218.0,
-    "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco 127"
-   },
-   {
-    "categoria": "higiene",
-    "de": 491.14,
-    "desconto": 0.376,
-    "id": "MLB51979690",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_887090-MLA96078823773_102025-F.jpg",
-    "link": "https://meli.la/2HcPWSz",
-    "preco": 306.52,
-    "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Cinza"
-   },
-   {
-    "categoria": "passeio",
-    "de": 119.0,
-    "desconto": 0.371,
-    "id": "MLB19491178",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_886802-MLA99508601024_112025-F.jpg",
-    "link": "https://meli.la/2onVFMh",
-    "preco": 74.9,
-    "titulo": "Assento de Carro Infantil Elevação Booster Fit Up 15 à 36kgs Preto Maxi Baby - 21423"
-   },
-   {
-    "categoria": "jogo",
-    "de": 89.99,
-    "desconto": 0.344,
-    "id": "MLB60118314",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_862731-MLA99898072617_112025-F.jpg",
-    "link": "https://meli.la/1N87rHK",
-    "preco": 59.0,
-    "titulo": "Kit Ping Pong Raquete Rede Retrátil Mesa Tênis Portátil Ultshop Ferragens"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 78.99,
-    "desconto": 0.343,
-    "id": "MLB25656186",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_944838-MLA99549576346_122025-F.jpg",
-    "link": "https://meli.la/23eCNt7",
-    "preco": 51.9,
-    "titulo": "Patinete Infantil 3 Rodas com Led/Dobrável Menino/Menina"
    }
   ]
  },
