@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 43
+  "2026-11-07": 45
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3764,6 +3764,12 @@
    "preco": 62.9,
    "quando": "2026-11-06T15:14-03:00"
   },
+  "MLB62169781": {
+   "desconto": 0.41,
+   "preco": 21.18,
+   "quando": "2026-11-07T20:22-03:00",
+   "titulo": "Brinquedo Pedagógico Educativo Encaixe Formas Geométricas Cor Colorido"
+  },
   "MLB62225841": {
    "desconto": 0.455,
    "preco": 119.9,
@@ -3903,6 +3909,12 @@
    "preco": 23.99,
    "quando": "2026-11-07T10:02-03:00",
    "titulo": "Naninha Ursinho Algodão Doce Bebê Antialérgica Azul Recém-Nascido 0 a 24 Meses T"
+  },
+  "MLB75846960": {
+   "desconto": 0.415,
+   "preco": 23.41,
+   "quando": "2026-11-07T20:22-03:00",
+   "titulo": "Jogo De Mantimento 5 Potes Personalizado Livre De Bpa Vermelho"
   },
   "MLB76227639": {
    "preco": 37.0,
@@ -4533,6 +4545,10 @@
     [
      "2026-11-07",
      32.17
+    ],
+    [
+     "2026-11-07",
+     32.18
     ]
    ],
    "min": 32.17
@@ -5412,6 +5428,10 @@
     [
      "2026-11-07",
      65.9
+    ],
+    [
+     "2026-11-07",
+     58.79
     ]
    ],
    "min": 30.99
@@ -7743,6 +7763,10 @@
     [
      "2026-11-07",
      109.0
+    ],
+    [
+     "2026-11-07",
+     99.93
     ]
    ],
    "min": 82.9
@@ -8045,28 +8069,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T20:02-03:00",
+  "em": "2026-11-07T20:22-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 29.99,
-    "desconto": 0.42,
-    "id": "MLB25366146",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_779138-MLA117838257698_102026-F.jpg",
-    "link": "https://meli.la/28Z9dMS",
-    "preco": 17.4,
-    "titulo": "Hot Wheels Fingerboard Skate De Dedo Profis. Tênis Sortido"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 249.99,
-    "desconto": 0.416,
-    "id": "MLB45423403",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_857306-MLA100035167343_122025-F.jpg",
-    "link": "https://meli.la/2Qrohet",
-    "preco": 145.99,
-    "titulo": "Lego 77242 Speed Champions Ferrari Sf24 F1 Quantidade de peças 275"
-   },
    {
     "categoria": "alimentacao",
     "de": 40.0,
@@ -8646,6 +8650,26 @@
     "link": "https://meli.la/2Lcg3Q4",
     "preco": 67.39,
     "titulo": "Kit 9 Carrinhos de Fricção Patrulha Canina Com Personagens Removíveis"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 197.34,
+    "desconto": 0.342,
+    "id": "MLB45505951",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_645810-MLA100012607391_122025-F.jpg",
+    "link": "https://meli.la/29itcCA",
+    "preco": 129.9,
+    "titulo": "Penteadeira Castelo Emite Luz E Som Princesa Infantil Azul"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 129.0,
+    "desconto": 0.34,
+    "id": "MLB75462445",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_815957-MLA113266134762_072026-F.jpg",
+    "link": "https://meli.la/1eVZT5a",
+    "preco": 85.14,
+    "titulo": "Kit de Maquiagem Infantil Im Toys com Estojo Rosa para Meninas"
    }
   ]
  },
