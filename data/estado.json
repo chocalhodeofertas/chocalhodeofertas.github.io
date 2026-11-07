@@ -1,5 +1,5 @@
 {
- "aguardando_link": 22,
+ "aguardando_link": 21,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 14
+  "2026-11-07": 16
  },
  "cupons": {
   "MODAAQUI": {
@@ -3618,6 +3618,12 @@
    "preco": 78.9,
    "quando": "2026-11-06T14:13-03:00"
   },
+  "MLB44672426": {
+   "desconto": 0.546,
+   "preco": 58.99,
+   "quando": "2026-11-07T12:22-03:00",
+   "titulo": "Tapete Educativo Interativo Teclado Musical - Verde"
+  },
   "MLB45286830": {
    "preco": 90.0,
    "quando": "2026-11-06T17:35-03:00"
@@ -3727,6 +3733,12 @@
    "preco": 76.53,
    "quando": "2026-11-07T10:22-03:00",
    "titulo": "Boneca Bebê Reborn Menino Recém Nascido Pode Dar Banho"
+  },
+  "MLB72720626": {
+   "desconto": 0.578,
+   "preco": 549.0,
+   "quando": "2026-11-07T12:22-03:00",
+   "titulo": "Berço Portátil PipDip Co-Sleeper, Com Balanço e Colchão Extra Grosso"
   },
   "MLB73061689": {
    "preco": 46.0,
@@ -6487,6 +6499,10 @@
     [
      "2026-11-07",
      19.7
+    ],
+    [
+     "2026-11-07",
+     20.24
     ]
    ],
    "min": 19.7
@@ -7171,6 +7187,10 @@
     [
      "2026-11-07",
      97.0
+    ],
+    [
+     "2026-11-07",
+     109.9
     ]
    ],
    "min": 97.0
@@ -7658,28 +7678,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T12:02-03:00",
+  "em": "2026-11-07T12:22-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 147.9,
-    "desconto": 0.719,
-    "id": "MLB54136862",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_612380-MLA117540353805_092026-F.jpg",
-    "link": "https://meli.la/2dtcNri",
-    "preco": 41.61,
-    "titulo": "Barraca Toca Infantil Menina Cabana Tenda Princesa Criança Princesa Judy Cabaninha"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 319.9,
-    "desconto": 0.7,
-    "id": "MLB68031618",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_628074-MLA117276490721_092026-F.jpg",
-    "link": "https://meli.la/1TrwyJv",
-    "preco": 95.94,
-    "titulo": "Carrinho Controle Remoto Drift Bateria Recarregavel 4x4 Porsche Atacarejo Kids"
-   },
    {
     "categoria": "brinquedo",
     "de": 129.99,
@@ -8259,6 +8259,26 @@
     "link": "https://meli.la/1Vfqa7f",
     "preco": 41.48,
     "titulo": "Booster Quádruplo Escuridão Absoluta Português"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 99.9,
+    "desconto": 0.406,
+    "id": "MLB78452515",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_672781-MLA115357836828_082026-F.jpg",
+    "link": "https://meli.la/2cVWJvh",
+    "preco": 59.31,
+    "titulo": "Casinha Boneca Coelho Brinquedo Infantil Mini Cenários Móveis Acessórios Coleção HopJoy Maxi Toys - Mini Cozin"
+   },
+   {
+    "categoria": "higiene",
+    "de": 491.14,
+    "desconto": 0.376,
+    "id": "MLB51979690",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_887090-MLA96078823773_102025-F.jpg",
+    "link": "https://meli.la/2HcPWSz",
+    "preco": 306.52,
+    "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Cinza"
    }
   ]
  },
