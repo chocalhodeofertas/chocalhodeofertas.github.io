@@ -1,5 +1,5 @@
 {
- "aguardando_link": 21,
+ "aguardando_link": 23,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -4379,6 +4379,10 @@
     [
      "2026-11-07",
      209.0
+    ],
+    [
+     "2026-11-07",
+     214.82
     ]
    ],
    "min": 209.0
@@ -6938,9 +6942,13 @@
     [
      "2026-11-06",
      4.99
+    ],
+    [
+     "2026-11-07",
+     4.5
     ]
    ],
-   "min": 4.99
+   "min": 4.5
   },
   "MLB69251241": {
    "historico": [
@@ -7861,6 +7869,10 @@
     [
      "2026-11-07",
      320.0
+    ],
+    [
+     "2026-11-07",
+     259.9
     ]
    ],
    "min": 259.9
@@ -7917,18 +7929,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T17:32-03:00",
+  "em": "2026-11-07T17:52-03:00",
   "itens": [
-   {
-    "categoria": "quarto",
-    "de": 799.9,
-    "desconto": 0.454,
-    "id": "MLB61794290",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_666205-MLA109881359403_032026-F.jpg",
-    "link": "https://meli.la/17iYotp",
-    "preco": 436.4,
-    "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi Baby - CINZA"
-   },
    {
     "categoria": "brinquedo",
     "de": 49.0,
@@ -8518,6 +8520,16 @@
     "link": "https://meli.la/21aUBb8",
     "preco": 119.9,
     "titulo": "Atentu Mini bateria infantil atentu banquinho brinquedo com 5 tambores vermelho"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 63.9,
+    "desconto": 0.329,
+    "id": "MLB77624729",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_821206-MLA115000447486_082026-F.jpg",
+    "link": "https://meli.la/1J9pYbi",
+    "preco": 42.9,
+    "titulo": "Piano Musical Infantil de Fazenda com 12 Teclas e Sons de Animais, Para Bebê e Criança"
    }
   ]
  },
