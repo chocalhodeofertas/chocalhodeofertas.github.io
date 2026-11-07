@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 11
+  "2026-11-07": 12
  },
  "cupons": {
   "MODAAQUI": {
@@ -3620,6 +3620,12 @@
    "preco": 223.73,
    "quando": "2026-11-06T15:34-03:00"
   },
+  "MLB27267704": {
+   "desconto": 0.597,
+   "preco": 96.61,
+   "quando": "2026-11-07T11:22-03:00",
+   "titulo": "Teclado Eletrônico Musical De 61 Teclas | Brinquedo Infantil Cor Preto"
+  },
   "MLB28717101": {
    "preco": 269.9,
    "quando": "2026-11-06T14:34-03:00"
@@ -5135,6 +5141,10 @@
     [
      "2026-11-07",
      65.9
+    ],
+    [
+     "2026-11-07",
+     58.79
     ]
    ],
    "min": 30.99
@@ -7129,6 +7139,10 @@
     [
      "2026-11-07",
      109.9
+    ],
+    [
+     "2026-11-07",
+     97.0
     ]
    ],
    "min": 97.0
@@ -7612,28 +7626,8 @@
  },
  "tg_offset": 273517978,
  "vitrine": {
-  "em": "2026-11-07T11:02-03:00",
+  "em": "2026-11-07T11:22-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 159.9,
-    "desconto": 0.606,
-    "id": "MLB62681535",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_940943-MLA112952372700_072026-F.jpg",
-    "link": "https://meli.la/34ojmu7",
-    "preco": 62.95,
-    "titulo": "Bateria Infantil Completa com Banquinho e 5 Tambores Mini Bateria de Brinquedo com Prato e 2 Baquetas Instrume"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 149.99,
-    "desconto": 0.527,
-    "id": "MLB79649272",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_859080-MLA116499283624_092026-F.jpg",
-    "link": "https://meli.la/2fN6LwV",
-    "preco": 70.98,
-    "titulo": "Barraca Infantil Ônibus da Patrulha Canina Dobrável, Pop-Up, para Meninos e Meninas"
-   },
    {
     "categoria": "brinquedo",
     "de": 239.99,
@@ -8213,6 +8207,26 @@
     "link": "https://meli.la/1tyysNv",
     "preco": 218.0,
     "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco 127"
+   },
+   {
+    "categoria": "jogo",
+    "de": 69.9,
+    "desconto": 0.407,
+    "id": "MLB74454821",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_917866-MLA114013158499_072026-F.jpg",
+    "link": "https://meli.la/1Vfqa7f",
+    "preco": 41.48,
+    "titulo": "Booster Quádruplo Escuridão Absoluta Português"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 99.9,
+    "desconto": 0.406,
+    "id": "MLB78452515",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_672781-MLA115357836828_082026-F.jpg",
+    "link": "https://meli.la/2cVWJvh",
+    "preco": 59.31,
+    "titulo": "Casinha Boneca Coelho Brinquedo Infantil Mini Cenários Móveis Acessórios Coleção HopJoy Maxi Toys - Mini Cozin"
    }
   ]
  },
