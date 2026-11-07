@@ -43,8 +43,14 @@ async def etapa1(api_id, api_hash, telefone, tentativas=4):
             print(f"O Telegram pediu para esperar {e.seconds // 60 + 1} min antes de pedir outro código.")
             return 1
         except Exception as e:  # noqa: BLE001
-            print(f"Conexão instável ({type(e).__name__}); tentando de novo (tentativa {n}).")
-            await asyncio.sleep(3)
+            # A troca automática de servidor às vezes cai; o motivo original vem "por trás" do erro
+            causa = e.__context__ or e.__cause__
+            if isinstance(causa, PhoneMigrateError):
+                dc = causa.new_dc
+                print(f"Seu número fica no servidor {dc} do Telegram; reconectando lá (tentativa {n}).")
+            else:
+                print(f"Conexão instável ({type(e).__name__}); tentando de novo (tentativa {n}).")
+                await asyncio.sleep(3)
         finally:
             await client.disconnect()
     print("Não consegui falar com o Telegram. Tente rodar a etapa 1 de novo em alguns minutos.")
