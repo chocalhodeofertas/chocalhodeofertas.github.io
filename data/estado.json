@@ -1,5 +1,5 @@
 {
- "aguardando_link": 80,
+ "aguardando_link": 79,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,9 +1495,17 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 3
+  "2026-11-07": 5
  },
- "cupons_ml_ultimo": 6413,
+ "cupons": {
+  "MODAAQUI": {
+   "criado": "2026-11-07T09:04-03:00",
+   "post": 47,
+   "status": "ativo",
+   "validade": "2026-11-07T23:59-03:00"
+  }
+ },
+ "cupons_ml_ultimo": 6414,
  "descoberta_em": "2026-11-07T00:26-03:00",
  "descobertos": {
   "MLB10923645": {
@@ -3620,6 +3628,12 @@
    "preco": 119.61,
    "quando": "2026-11-06T16:14-03:00"
   },
+  "MLB54068547": {
+   "desconto": 0.704,
+   "preco": 118.0,
+   "quando": "2026-11-07T09:02-03:00",
+   "titulo": "Lictin Teclado Eletrônico Digital De 61teclas Para Crianças, Piano Elétrico Para"
+  },
   "MLB54136862": {
    "preco": 76.53,
    "quando": "2026-11-06T19:43-03:00"
@@ -3661,6 +3675,12 @@
   "MLB63152047": {
    "preco": 54.9,
    "quando": "2026-11-06T12:32-03:00"
+  },
+  "MLB65579852": {
+   "desconto": 0.651,
+   "preco": 125.73,
+   "quando": "2026-11-07T09:02-03:00",
+   "titulo": "Adora Bebê Reborn Bonecas Realista De Silicone Menina 48 Cm"
   },
   "MLB66548761": {
    "preco": 78.9,
@@ -3733,6 +3753,19 @@
    "preco": 131.97,
    "quando": "2026-11-07T08:02-03:00",
    "titulo": "Andador Infantil Brinquedo Educativo Musical Didático Bebê Cor Azul-claro"
+  }
+ },
+ "posts_cupom": {
+  "47": {
+   "blocos": [
+    {
+     "codigo": "MODAAQUI",
+     "html": "<b>🎟️ MODAAQUI</b> 👉 <b>12% OFF</b>\n📂 Moda\nCompra mín.: R$79 · Desconto máx.: R$60\n⏰ Válido até 07/11\n👉 <a href=\"https://bit.ly/4zr7sZs\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-07T09:04-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   }
  },
  "precos": {
@@ -3824,6 +3857,10 @@
     [
      "2026-11-07",
      16.96
+    ],
+    [
+     "2026-11-07",
+     17.08
     ]
    ],
    "min": 16.96
@@ -4118,9 +4155,13 @@
     [
      "2026-11-06",
      168.9
+    ],
+    [
+     "2026-11-07",
+     168.0
     ]
    ],
-   "min": 168.9
+   "min": 168.0
   },
   "MLB23776718": {
    "historico": [
@@ -4722,9 +4763,13 @@
     [
      "2026-11-06",
      72.99
+    ],
+    [
+     "2026-11-07",
+     70.8
     ]
    ],
-   "min": 72.99
+   "min": 70.8
   },
   "MLB36371969": {
    "historico": [
@@ -6011,6 +6056,10 @@
     [
      "2026-11-07",
      63.9
+    ],
+    [
+     "2026-11-07",
+     129.44
     ]
    ],
    "min": 56.89
@@ -7449,7 +7498,7 @@
  },
  "tg_offset": 273517977,
  "vitrine": {
-  "em": "2026-11-07T08:42-03:00",
+  "em": "2026-11-07T09:02-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -8053,6 +8102,6 @@
    }
   ]
  },
- "vitrine_assinatura": "bba04c2160f444ae8ebf801ddb9156478a59f7a8",
- "vitrine_publicada_em": "2026-11-07T08:02-03:00"
+ "vitrine_assinatura": "2e4d3627b8653ae68d57bc452440b5bc6199f416",
+ "vitrine_publicada_em": "2026-11-07T09:02-03:00"
 }
