@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 19
+  "2026-11-07": 21
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3640,6 +3640,12 @@
    "preco": 90.0,
    "quando": "2026-11-06T17:35-03:00"
   },
+  "MLB45801082": {
+   "desconto": 0.534,
+   "preco": 69.9,
+   "quando": "2026-11-07T13:32-03:00",
+   "titulo": "Tapete De Atividades Musical Bebê Piano Interativo Ginásio Cor Rosa"
+  },
   "MLB50368079": {
    "preco": 178.38,
    "quando": "2026-11-06T14:13-03:00"
@@ -3791,6 +3797,12 @@
   "MLB77186530": {
    "preco": 72.0,
    "quando": "2026-11-06T14:34-03:00"
+  },
+  "MLB77421641": {
+   "desconto": 0.499,
+   "preco": 29.99,
+   "quando": "2026-11-07T13:32-03:00",
+   "titulo": "Boneca Bailarina Fada Princesa Articulada Ballet Com Asas Brilhantes Grande 30cm"
   },
   "MLB77496641": {
    "preco": 19.97,
@@ -4113,9 +4125,13 @@
     [
      "2026-11-07",
      596.55
+    ],
+    [
+     "2026-11-07",
+     579.99
     ]
    ],
-   "min": 596.55
+   "min": 579.99
   },
   "MLB20794850": {
    "historico": [
@@ -4357,6 +4373,10 @@
     [
      "2026-11-07",
      32.17
+    ],
+    [
+     "2026-11-07",
+     32.18
     ]
    ],
    "min": 32.17
@@ -5955,6 +5975,10 @@
     [
      "2026-11-07",
      39.04
+    ],
+    [
+     "2026-11-07",
+     38.93
     ]
    ],
    "min": 38.24
@@ -6247,6 +6271,10 @@
     [
      "2026-11-07",
      63.9
+    ],
+    [
+     "2026-11-07",
+     129.44
     ]
    ],
    "min": 56.89
@@ -6566,6 +6594,10 @@
     [
      "2026-11-07",
      20.24
+    ],
+    [
+     "2026-11-07",
+     19.9
     ]
    ],
    "min": 19.7
@@ -7685,6 +7717,10 @@
     [
      "2026-11-07",
      315.0
+    ],
+    [
+     "2026-11-07",
+     320.0
     ]
    ],
    "min": 259.9
@@ -7741,28 +7777,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T13:12-03:00",
+  "em": "2026-11-07T13:32-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 149.9,
-    "desconto": 0.548,
-    "id": "MLB79738780",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_876736-MLA116970521266_092026-F.jpg",
-    "link": "https://meli.la/1E3rsQs",
-    "preco": 67.8,
-    "titulo": "Kit 48 Carrinhos Miniatura Nanotoyzzz Metal Fricção 1:64 Container com 2 Pistas Carros Sortidos Brinquedo Infa"
-   },
-   {
-    "categoria": "jogo",
-    "de": 39.9,
-    "desconto": 0.545,
-    "id": "MLB58664244",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_734298-MLA93538649792_102025-F.jpg",
-    "link": "https://meli.la/2hy679q",
-    "preco": 18.14,
-    "titulo": "Jogo Caiu Perdeu Pais & Filhos 54 Peças de Madeira"
-   },
    {
     "categoria": "brinquedo",
     "de": 59.9,
@@ -8342,6 +8358,26 @@
     "link": "https://meli.la/2pqXmxJ",
     "preco": 8.97,
     "titulo": "Jogo de Cartas Uno Clássico para Família e Amigos"
+   },
+   {
+    "categoria": "passeio",
+    "de": 119.0,
+    "desconto": 0.371,
+    "id": "MLB19491178",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_886802-MLA99508601024_112025-F.jpg",
+    "link": "https://meli.la/2onVFMh",
+    "preco": 74.9,
+    "titulo": "Assento de Carro Infantil Elevação Booster Fit Up 15 à 36kgs Preto Maxi Baby - 21423"
+   },
+   {
+    "categoria": "passeio",
+    "de": 39.9,
+    "desconto": 0.399,
+    "id": "MLB66399501",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_649271-MLA112222259950_062026-F.jpg",
+    "link": "https://meli.la/2wv2B2q",
+    "preco": 23.99,
+    "titulo": "Mosquiteiro Para Carrinho Bebê Conforto Portátil Universal Branco"
    }
   ]
  },
