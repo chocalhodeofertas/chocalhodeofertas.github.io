@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 17
+  "2026-11-07": 19
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3678,6 +3678,12 @@
    "preco": 68.0,
    "quando": "2026-11-06T21:44-03:00"
   },
+  "MLB58664244": {
+   "desconto": 0.545,
+   "preco": 18.14,
+   "quando": "2026-11-07T13:12-03:00",
+   "titulo": "Jogo Caiu Perdeu Pais & Filhos 54 Peças de Madeira"
+  },
   "MLB61118769": {
    "preco": 429.0,
    "quando": "2026-11-06T21:24-03:00"
@@ -3807,6 +3813,12 @@
    "preco": 70.98,
    "quando": "2026-11-07T11:02-03:00",
    "titulo": "Barraca Infantil Ônibus da Patrulha Canina Dobrável, Pop-Up, para Meninos e Meni"
+  },
+  "MLB79738780": {
+   "desconto": 0.548,
+   "preco": 67.8,
+   "quando": "2026-11-07T13:12-03:00",
+   "titulo": "Kit 48 Carrinhos Miniatura Nanotoyzzz Metal Fricção 1:64 Container com 2 Pistas "
   },
   "MLB80142080": {
    "preco": 38.32,
@@ -3952,6 +3964,10 @@
     [
      "2026-11-07",
      17.1
+    ],
+    [
+     "2026-11-07",
+     16.96
     ]
    ],
    "min": 16.96
@@ -4075,6 +4091,10 @@
     [
      "2026-11-07",
      499.9
+    ],
+    [
+     "2026-11-07",
+     629.0
     ]
    ],
    "min": 499.9
@@ -4421,6 +4441,10 @@
     [
      "2026-11-07",
      19.31
+    ],
+    [
+     "2026-11-07",
+     20.1
     ]
    ],
    "min": 18.2
@@ -4474,6 +4498,10 @@
     [
      "2026-11-06",
      47.38
+    ],
+    [
+     "2026-11-07",
+     50.0
     ]
    ],
    "min": 47.38
@@ -7713,7 +7741,7 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T12:52-03:00",
+  "em": "2026-11-07T13:12-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -7976,16 +8004,6 @@
     "titulo": "Bicicleta De Equilíbrio Infantil Andador Sem Pedal 4 Rodas Amarelo"
    },
    {
-    "categoria": "outros",
-    "de": 31.9,
-    "desconto": 0.395,
-    "id": "MLB24679612",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
-    "link": "https://meli.la/1hn9qT6",
-    "preco": 19.31,
-    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
-   },
-   {
     "categoria": "brinquedo",
     "de": 29.99,
     "desconto": 0.42,
@@ -8146,6 +8164,16 @@
     "titulo": "Pistola Lança Bolhas de Sabão Vermelha com Luz LED Inclui Líquido"
    },
    {
+    "categoria": "outros",
+    "de": 31.9,
+    "desconto": 0.37,
+    "id": "MLB24679612",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
+    "link": "https://meli.la/1hn9qT6",
+    "preco": 20.1,
+    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
+   },
+   {
     "categoria": "brinquedo",
     "de": 150.0,
     "desconto": 0.393,
@@ -8194,16 +8222,6 @@
     "link": "https://meli.la/2bKrgJ9",
     "preco": 77.9,
     "titulo": "Bicicleta de Equilíbrio Brinq Kids Brinquei Vermelho para Crianças 12m+"
-   },
-   {
-    "categoria": "passeio",
-    "de": 74.9,
-    "desconto": 0.367,
-    "id": "MLB25163760",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_850532-MLA113041435885_062026-F.jpg",
-    "link": "https://meli.la/31NAgHm",
-    "preco": 47.38,
-    "titulo": "Booster Cosco Kids, Clippy, até 36kg, Preto"
    },
    {
     "categoria": "brinquedo",
@@ -8314,9 +8332,19 @@
     "link": "https://meli.la/25jVbap",
     "preco": 87.9,
     "titulo": "LEGO Marvel - Robô do Homem-Aranha vs Anti-Venom - 107 Peças - 76308"
+   },
+   {
+    "categoria": "jogo",
+    "de": 14.97,
+    "desconto": 0.401,
+    "id": "MLB64317110",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_709503-MLA104333409486_012026-F.jpg",
+    "link": "https://meli.la/2pqXmxJ",
+    "preco": 8.97,
+    "titulo": "Jogo de Cartas Uno Clássico para Família e Amigos"
    }
   ]
  },
- "vitrine_assinatura": "79af510d058763d0eef14f18fc9ed71a28455cc6",
- "vitrine_publicada_em": "2026-11-07T12:02-03:00"
+ "vitrine_assinatura": "8efe200364f4e3674de8a397d414ee10574d3514",
+ "vitrine_publicada_em": "2026-11-07T13:12-03:00"
 }
