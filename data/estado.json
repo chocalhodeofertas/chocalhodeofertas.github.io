@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 27
+  "2026-11-07": 28
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3574,6 +3574,12 @@
    "quando": "2026-11-07T15:12-03:00",
    "titulo": "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor"
   },
+  "MLB17489277": {
+   "desconto": 0.44,
+   "preco": 111.92,
+   "quando": "2026-11-07T15:32-03:00",
+   "titulo": "LEGO Classic Maleta Criativa com 213 Peças, Brinquedo de Montar para Crianças"
+  },
   "MLB23581207": {
    "preco": 211.94,
    "quando": "2026-11-06T20:23-03:00"
@@ -4417,6 +4423,10 @@
     [
      "2026-11-07",
      32.17
+    ],
+    [
+     "2026-11-07",
+     32.18
     ]
    ],
    "min": 32.17
@@ -5601,6 +5611,10 @@
     [
      "2026-11-07",
      61.7
+    ],
+    [
+     "2026-11-07",
+     62.9
     ]
    ],
    "min": 61.7
@@ -7773,6 +7787,10 @@
     [
      "2026-11-07",
      320.0
+    ],
+    [
+     "2026-11-07",
+     259.9
     ]
    ],
    "min": 259.9
@@ -7829,28 +7847,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T15:12-03:00",
+  "em": "2026-11-07T15:32-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 279.0,
-    "desconto": 0.443,
-    "id": "MLB10923645",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_621182-MLA52734590675_122022-F.jpg",
-    "link": "https://meli.la/1v1oNAW",
-    "preco": 155.43,
-    "titulo": "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 69.9,
-    "desconto": 0.471,
-    "id": "MLB69629265",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_912072-MLA111649605879_052026-F.jpg",
-    "link": "https://meli.la/1wfjgsG",
-    "preco": 37.0,
-    "titulo": "Tablet Educativo Infantil Bilíngue 54 Funções Azul Interativo Português Inglês Letras Números Palavras Sons Mú"
-   },
    {
     "categoria": "brinquedo",
     "de": 199.99,
@@ -7930,16 +7928,6 @@
     "link": "https://meli.la/2Sosy4k",
     "preco": 195.21,
     "titulo": "LEGO Classic Caixa Média de Peças Criativas 10696; peças LEGO em 35 cores diferentes; Conjunto criativo para c"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 117.9,
-    "desconto": 0.477,
-    "id": "MLB49215315",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_943518-MLA96126332281_102025-F.jpg",
-    "link": "https://meli.la/26zMfay",
-    "preco": 61.7,
-    "titulo": "Rede Tela De Proteção Para Cama Elástica 3,05 Metros Malha 10 Reposição Val Brinquedos Redinha Tela De Seguran"
    },
    {
     "categoria": "brinquedo",
@@ -8430,6 +8418,36 @@
     "link": "https://meli.la/1zcyuvR",
     "preco": 50.19,
     "titulo": "Fralda Pom Pom Protek Proteção de Mãe G 68 Unidades"
+   },
+   {
+    "categoria": "jogo",
+    "de": 169.0,
+    "desconto": 0.349,
+    "id": "MLB51035138",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_942837-MLA104158430322_012026-F.jpg",
+    "link": "https://meli.la/1vczkgB",
+    "preco": 109.99,
+    "titulo": "Taco De Sinuca Bilhar Profissional Com Capa Giz Sola Brindes Snooker Bilhares Mgk"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 129.99,
+    "desconto": 0.346,
+    "id": "MLB20611931",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_897745-MLA99453292044_112025-F.jpg",
+    "link": "https://meli.la/3171Zw3",
+    "preco": 85.02,
+    "titulo": "Sunny Boneco Patrulha Canina 1342 Skye Focos"
+   },
+   {
+    "categoria": "quarto",
+    "de": 499.9,
+    "desconto": 0.323,
+    "id": "MLB54207427",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_865878-MLA95693182272_102025-F.jpg",
+    "link": "https://meli.la/2zi74ho",
+    "preco": 338.53,
+    "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
    }
   ]
  },
