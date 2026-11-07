@@ -1,5 +1,5 @@
 {
- "aguardando_link": 23,
+ "aguardando_link": 22,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 36
+  "2026-11-07": 38
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3676,6 +3676,12 @@
    "quando": "2026-11-07T17:12-03:00",
    "titulo": "Cercadinho Bebê Infantil Chiqueirinho Cercado Grande 180x150 Proteção - 8X TECH"
   },
+  "MLB47899174": {
+   "desconto": 0.407,
+   "preco": 224.57,
+   "quando": "2026-11-07T19:02-03:00",
+   "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco Estary Sh"
+  },
   "MLB50368079": {
    "preco": 178.38,
    "quando": "2026-11-06T14:13-03:00"
@@ -3733,6 +3739,12 @@
   "MLB61884199": {
    "preco": 62.9,
    "quando": "2026-11-06T15:14-03:00"
+  },
+  "MLB62416353": {
+   "desconto": 0.435,
+   "preco": 33.9,
+   "quando": "2026-11-07T19:02-03:00",
+   "titulo": "Bola Vinil Inflável Kit Com 10 Bolas Infláveis Cores Sortidas 23cm Praia Piscina"
   },
   "MLB62645299": {
    "desconto": 0.481,
@@ -5517,9 +5529,13 @@
     [
      "2026-11-06",
      182.4
+    ],
+    [
+     "2026-11-07",
+     180.0
     ]
    ],
-   "min": 182.4
+   "min": 180.0
   },
   "MLB45286830": {
    "historico": [
@@ -6413,6 +6429,10 @@
     [
      "2026-11-07",
      63.9
+    ],
+    [
+     "2026-11-07",
+     129.44
     ]
    ],
    "min": 56.89
@@ -7967,7 +7987,7 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T18:42-03:00",
+  "em": "2026-11-07T19:02-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -8571,6 +8591,6 @@
    }
   ]
  },
- "vitrine_assinatura": "ca595b839903666254ddf23cbd9854d4879a294f",
- "vitrine_publicada_em": "2026-11-07T18:12-03:00"
+ "vitrine_assinatura": "f1abe2eede067a4a5ae22922ef6a8c88dcf3d126",
+ "vitrine_publicada_em": "2026-11-07T19:02-03:00"
 }
