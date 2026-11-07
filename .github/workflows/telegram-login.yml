@@ -1,0 +1,54 @@
+name: Conectar Telegram (cupons)
+
+# Etapa 1: o Telegram manda um código para o seu app.
+# Etapa 2: rode de novo com o código (vale poucos minutos e só uma vez).
+
+on:
+  workflow_dispatch:
+    inputs:
+      etapa:
+        description: "1 = pedir o código · 2 = confirmar com o código"
+        type: choice
+        default: "1 - pedir o código"
+        options: ["1 - pedir o código", "2 - confirmar"]
+      codigo:
+        description: "Só na etapa 2: o código que chegou no Telegram"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chocalho-telegram-login
+  cancel-in-progress: false
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Login
+        run: python -m bot.telegram_login
+        env:
+          ETAPA: ${{ inputs.etapa }}
+          CODIGO: ${{ inputs.codigo }}
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+          TG_TELEFONE: ${{ secrets.TG_TELEFONE }}
+          TG_SENHA_2FA: ${{ secrets.TG_SENHA_2FA }}
+          TG_CANAL_CUPONS: ${{ secrets.TG_CANAL_CUPONS }}
+      - name: Salvar sessão criptografada
+        if: always()
+        run: |
+          git config user.name "chocalho-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/tg_login.enc data/tg_sessao.enc 2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Sessão do Telegram (criptografada) [skip ci]"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push

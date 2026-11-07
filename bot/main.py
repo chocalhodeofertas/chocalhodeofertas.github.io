@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
-from . import afiliado, cofre, comandos, lote, vitrine
+from . import afiliado, cofre, comandos, cupons_ml, lote, vitrine
 from . import estado as est
 from . import mensagens
 from .descoberta import descobrir
@@ -513,6 +513,8 @@ def main(argv=None):
             lista = montar_lista(cfg, produtos, estado)
         rodar(args.modo, cfg, ml, tg, estado, lista, agora=agora)
         if args.modo == "normal":
+            if cfg.hora_inicio <= agora.hour < cfg.hora_fim:
+                cupons_ml.processar(tg, cfg, estado, agora, log)
             comandos.verificar_cupons(tg, cfg, estado, agora, log)
             comandos.talvez_resumo_diario(tg, estado, cfg, agora, log)
             vitrine.talvez_publicar(estado, cfg.canal, agora, log=log)

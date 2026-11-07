@@ -55,6 +55,10 @@ jobs:
           INTERVALO_MIN: ${{ vars.INTERVALO_MIN }}
           INTERVALO_MAX: ${{ vars.INTERVALO_MAX }}
           ATRASO_MAX: ${{ vars.ATRASO_MAX }}
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+          TG_CANAL_CUPONS: ${{ secrets.TG_CANAL_CUPONS }}
+          CUPONS_CATEGORIAS: ${{ vars.CUPONS_CATEGORIAS }}
           AFILIADO_MATT_WORD: ${{ vars.AFILIADO_MATT_WORD || 'chocalhodeofertas' }}
           AFILIADO_MATT_TOOL: ${{ vars.AFILIADO_MATT_TOOL || '39326742' }}
 

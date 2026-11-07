@@ -668,7 +668,7 @@ def test_cupom_esgotou_e_vence():
                               cfg_cmd(), AGORA)
     assert "esgotou BRINCA20" in r and "10/11" in r
     c = e["cupons"]["BRINCA20"]
-    assert c["status"] == "ativo" and c["msg_id"] == 501 and c["validade"].startswith("2026-11-10T23:59")
+    assert c["status"] == "ativo" and c["post"] == 501 and c["validade"].startswith("2026-11-10T23:59")
     comandos.tratar_texto("cupom 10% OFF em roupas, código ROUPA10", tg, None, e, cfg_cmd(), AGORA)
     assert "Me diga qual" in comandos.tratar_texto("esgotou", tg, None, e, cfg_cmd(), AGORA)
     r = comandos.tratar_texto("Esgotou brinca20", tg, None, e, cfg_cmd(), AGORA)
@@ -683,4 +683,116 @@ def test_cupom_esgotou_e_vence():
     assert e["cupons"]["FRALDA15"]["status"] == "encerrado" and "ENCERRADO" in tg.editados[-1][2]
     assert e["cupons"]["ROUPA10"]["status"] == "ativo"
     comandos.verificar_cupons(tg, cfg_cmd(), e, AGORA + timedelta(days=11), log=lambda m: None)
-    assert e["cupons"] == {}  # antigos são esquecidos
+    assert e["cupons"] == {} and e["posts_cupom"] == {}  # antigos são esquecidos
+
+
+# ---------- canal de cupons do Mercado Livre (posts reais) ----------
+
+POST_ML_1 = """Meio-dia: entrada, prato principal e sobremesa servidos juntos!
+
+🎟️ SEMPREOFF 👉 R$300 OFF
+Tecnologia | Compra mínima: R$2.199
+Válido somente em 06.11, em até 90% da categoria.
+🔗 https://bit.ly/4A8Qi2M
+
+🎟️ MOMENTOPROMO 👉 30% OFF
+Compra mín: R$1 | Desconto máx: R$500
+Válido até 31.12, ou enquanto durarem os estoques, em produtos elegíveis.
+🔗 https://bit.ly/4jVaBMn
+
+🎟️ GANHOUOFF 👉 30% OFF
+Compra mín: R$1 | Desconto máx: R$500
+Válido até 28.12, ou enquanto durarem os estoques, em produtos elegíveis.
+🔗 https://bit.ly/4fh8yyT
+
+Buchinho cheio, agora é só dar aquela arrasada!"""
+
+POST_ML_LOTE = """🚚📦 Descarregando o segundo lote:
+
+🎟️ OFFPRACONSTRU 👉 20% OFF
+Indústria e Comércio
+Compra mín: R$79 | Desconto máx: R$80
+
+🎟️ MODAKIDS 👉 15% OFF
+Moda Infantil
+Compra mín: R$99 | Desconto máx: R$50
+
+🎟️ SAUDEMELI 👉 10% OFF
+Saúde
+Compra mín: R$79 | Desconto máx: R$40
+
+Compartilhe!
+🔗 https://bit.ly/4BHIUNj"""
+
+POST_ML_UPDATE = """Confirmado: cupons aumentaram o percentual de desconto:
+
+🎟️ CLIENTESTOP: 10% → 15% OFF
+📱 Tecnologia
+
+🎟️ MOMENTOPROMO: 30% → 35% OFF
+
+Compartilhe agora!
+🔗 https://bit.ly/4AcBZu8
+Válidos até hoje (05/11), em até 90% das respectivas categorias."""
+
+POST_ML_OFERTAS = """Virou o dia, ofertas exclusivas:
+
+💻 Notebook Lenovo IdeaPad Core 3, 8GB/128GB
+💰 De ~~R$ 3.999~~ por R$ 3.389 | Pix: R$ 3.287,33
+🔗 https://bit.ly/4ir6PJA"""
+
+
+def test_parse_cupons_ml():
+    from bot import cupons_ml
+    c = {x["codigo"]: x for x in cupons_ml.parse(POST_ML_1, AGORA)}
+    assert list(c) == ["SEMPREOFF", "MOMENTOPROMO", "GANHOUOFF"]
+    assert c["SEMPREOFF"]["categoria"] == "Tecnologia" and c["SEMPREOFF"]["minimo"] == "R$2.199"
+    assert c["SEMPREOFF"]["validade"] == AGORA.replace(day=6, hour=23, minute=59, second=0)
+    assert c["MOMENTOPROMO"]["categoria"] is None and c["MOMENTOPROMO"]["maximo"] == "R$500"
+    assert c["MOMENTOPROMO"]["validade"].month == 12 and c["MOMENTOPROMO"]["link"] == "https://bit.ly/4jVaBMn"
+    lote_ = {x["codigo"]: x for x in cupons_ml.parse(POST_ML_LOTE, AGORA)}
+    assert lote_["MODAKIDS"]["categoria"] == "Moda Infantil" and lote_["MODAKIDS"]["link"] == "https://bit.ly/4BHIUNj"
+    up = {x["codigo"]: x for x in cupons_ml.parse(POST_ML_UPDATE, AGORA)}
+    assert up["CLIENTESTOP"]["antes"] == "10%" and up["CLIENTESTOP"]["desconto"] == "15% OFF"
+    assert up["CLIENTESTOP"]["categoria"] == "Tecnologia"
+    assert up["MOMENTOPROMO"]["validade"] == AGORA.replace(hour=23, minute=59, second=0)
+    assert cupons_ml.parse(POST_ML_OFERTAS, AGORA) == []
+    assert cupons_ml.relevante({"categoria": None}) and cupons_ml.relevante({"categoria": "Moda Infantil"})
+    assert not cupons_ml.relevante({"categoria": "Tecnologia"})
+    assert cupons_ml.relevante({"categoria": "Tecnologia"}, "todas")
+
+
+def test_tratar_mensagens_do_canal_ml():
+    from bot import comandos, cupons_ml
+    e, tg = est.novo(), TGCmd()
+    log = lambda m: None
+    n = cupons_ml.tratar_mensagem(POST_ML_1, tg, cfg_cmd(), e, AGORA, log=log)
+    assert n == 2  # Tecnologia fica de fora
+    canal = [t for c, t in tg.textos if c == "@canal"]
+    assert "MOMENTOPROMO" in canal[0] and "GANHOUOFF" in canal[0] and "SEMPREOFF" not in canal[0]
+    assert "Ativar o cupom" in canal[0] and "Cupons do Mercado Livre" in canal[0]
+    # Repetido: não posta de novo
+    assert cupons_ml.tratar_mensagem(POST_ML_1, tg, cfg_cmd(), e, AGORA, log=log) == 0
+    # Atualização de um cupom já postado: edita e avisa
+    cupons_ml.tratar_mensagem(POST_ML_UPDATE, tg, cfg_cmd(), e, AGORA, log=log)
+    assert "35% OFF</b> ⬆️" in tg.editados[-1][2] and "Melhorou" in tg.textos[-1][1]
+    assert "Desconto máx.: R$500" in tg.editados[-1][2]  # mantém as regras do post original
+    # Esgotar um cupom risca só ele no post
+    comandos.tratar_texto("esgotou ganhouoff", tg, None, e, cfg_cmd(), AGORA)
+    texto = tg.editados[-1][2]
+    assert "<s><b>🎟️ GANHOUOFF" in texto and "❌ esgotou" in texto and "Cupons do Mercado Livre" in texto
+    # Vencido: GANHOUOFF esgotado, MOMENTOPROMO (atualizado: até hoje) encerra à noite
+    cupons_ml.tratar_mensagem(POST_ML_LOTE, tg, cfg_cmd(), e, AGORA, log=log)
+    comandos.verificar_cupons(tg, cfg_cmd(), e, AGORA + timedelta(days=1), log=log)
+    assert e["cupons"]["MOMENTOPROMO"]["status"] == "encerrado"
+    assert e["cupons"]["MODAKIDS"]["status"] == "ativo"  # sem data: continua
+    # Nada de ofertas de produto
+    assert cupons_ml.tratar_mensagem(POST_ML_OFERTAS, tg, cfg_cmd(), e, AGORA, log=log) == 0
+
+
+def test_sessao_criptografada(tmp_path):
+    from bot import cupons_ml
+    arq = tmp_path / "s.enc"
+    cupons_ml.guardar_seguro({"sessao": "1Babc"}, "hash123", arq)
+    assert b"1Babc" not in arq.read_bytes()
+    assert cupons_ml.ler_seguro("hash123", arq) == {"sessao": "1Babc"}

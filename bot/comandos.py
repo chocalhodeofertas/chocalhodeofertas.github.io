@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 import requests
 
 from . import estado as est
-from . import lote, mensagens
+from . import cupons, lote, mensagens
 from .filtros import motivo_bloqueio
 from .mercadolivre import AcessoNegado, ErroML
 from .ofertas import Oferta
@@ -165,20 +165,14 @@ def postar_cupom(texto, tg, cfg, estado=None, agora=None):
     rodape = "Cupons têm quantidade e prazo limitados."
     if tem_link:
         rodape += " #publi · link de afiliado"
-    msg = f"🎟️ <b>Cupom pra economizar!</b>\n\n{html.escape(corpo)}\n\n<i>{rodape}</i>"
-    try:
-        enviada = tg.enviar_texto(cfg.canal, msg, html=True)
-    except TelegramErro as e:
-        return f"⚠️ Não consegui postar o cupom: {e}"
     codigo = extrair_codigo(corpo)
     validade = extrair_validade(corpo, agora) if agora else None
-    if estado is not None and isinstance(enviada, dict) and enviada.get("message_id"):
-        chave = codigo or f"#{enviada['message_id']}"
-        estado.setdefault("cupons", {})[chave] = {
-            "msg_id": enviada["message_id"], "texto": msg, "status": "ativo",
-            "validade": validade.isoformat(timespec="minutes") if validade else None,
-            "criado": agora.isoformat(timespec="minutes") if agora else None,
-        }
+    estado = estado if estado is not None else {}
+    try:
+        cupons.publicar(tg, cfg, estado, "🎟️ <b>Cupom pra economizar!</b>",
+                        [(codigo, html.escape(corpo), validade)], agora or datetime.now(), rodape)
+    except TelegramErro as e:
+        return f"⚠️ Não consegui postar o cupom: {e}"
     wa = f"*🎟️ Cupom pra economizar!*\n\n{corpo}\n\n_{rodape}_"
     try:
         tg.enviar_texto(cfg.admin_chat, "📋 Cupom para o WhatsApp:\n\n<pre>" + html.escape(wa) + "</pre>",
@@ -195,56 +189,30 @@ def postar_cupom(texto, tg, cfg, estado=None, agora=None):
     return "\n".join(partes)
 
 
-def _marcar_cupom(tg, cfg, cupom, titulo, avisar=None):
-    novo = f"{titulo}\n\n<s>{cupom['texto'].split(chr(10), 1)[0]}</s>\n" + cupom["texto"].split("\n", 1)[1]
-    try:
-        tg.editar_texto(cfg.canal, cupom["msg_id"], novo)
-    except TelegramErro:
-        pass  # mensagem antiga demais ou apagada: segue com o aviso
-    if avisar:
-        tg.enviar_texto(cfg.canal, avisar, html=True, responder_a=cupom["msg_id"])
-
-
 def esgotar_cupom(texto, tg, cfg, estado):
     codigo = re.sub(r"^\s*/?(esgotou|esgotado|acabou)\s*", "", texto, flags=re.I).strip().upper()
-    ativos = {k: c for k, c in (estado.get("cupons") or {}).items() if c.get("status") == "ativo"}
-    if not ativos:
+    lista = cupons.ativos(estado)
+    if not lista:
         return "Não tenho nenhum cupom ativo registrado."
     if codigo:
-        chave = next((k for k in ativos if k.upper() == codigo), None)
+        chave = next((k for k in lista if k.upper() == codigo), None)
         if not chave:
-            return f"Não achei o cupom {html.escape(codigo)}. Ativos: " + ", ".join(html.escape(k) for k in ativos)
-    elif len(ativos) == 1:
-        chave = next(iter(ativos))
+            return f"Não achei o cupom {html.escape(codigo)}. Ativos: " + ", ".join(html.escape(k) for k in lista)
+    elif len(lista) == 1:
+        chave = next(iter(lista))
     else:
         return "Tem mais de um cupom ativo. Me diga qual: " + ", ".join(
-            f"<code>esgotou {html.escape(k)}</code>" for k in ativos)
-    cupom = ativos[chave]
-    nome = "" if chave.startswith("#") else f" {html.escape(chave)}"
+            f"<code>esgotou {html.escape(k)}</code>" for k in lista)
     try:
-        _marcar_cupom(tg, cfg, cupom, "❌ <b>CUPOM ESGOTADO</b>",
-                      f"❌ O cupom{nome} esgotou! Fica de olho no canal que sempre aparece outro 🪇")
+        cupons.marcar(tg, cfg, estado, chave, "esgotado",
+                      f"❌ O cupom{cupons.nome(chave)} esgotou! Fica de olho no canal que sempre aparece outro 🪇")
     except TelegramErro as e:
         return f"⚠️ Não consegui avisar no canal: {e}"
-    cupom["status"] = "esgotado"
-    return f"✅ Marquei o cupom{nome} como esgotado e avisei no canal."
+    return f"✅ Marquei o cupom{cupons.nome(chave)} como esgotado e avisei no canal."
 
 
 def verificar_cupons(tg, cfg, estado, agora, log=print):
-    """Marca como encerrados os cupons vencidos; esquece os antigos."""
-    cupons = estado.get("cupons") or {}
-    for chave, c in list(cupons.items()):
-        if c.get("status") == "ativo" and c.get("validade"):
-            if datetime.fromisoformat(c["validade"]) < agora:
-                try:
-                    _marcar_cupom(tg, cfg, c, "⏰ <b>CUPOM ENCERRADO</b>")
-                    c["status"] = "encerrado"
-                    log(f"Cupom {chave} encerrado (venceu).")
-                except TelegramErro as e:
-                    log(f"Aviso: não consegui marcar o cupom {chave}: {e}")
-        criado = c.get("criado")
-        if criado and (agora - datetime.fromisoformat(criado)).days > 10:
-            del cupons[chave]
+    cupons.verificar(tg, cfg, estado, agora, log)
 
 
 # ---------- resumo ----------
