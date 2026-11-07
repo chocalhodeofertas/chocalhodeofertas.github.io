@@ -3906,6 +3906,10 @@
     [
      "2026-11-07",
      34.12
+    ],
+    [
+     "2026-11-07",
+     34.88
     ]
    ],
    "min": 34.12
@@ -6300,6 +6304,10 @@
     [
      "2026-11-07",
      125.73
+    ],
+    [
+     "2026-11-07",
+     132.9
     ]
    ],
    "min": 125.73
@@ -7542,18 +7550,8 @@
  },
  "tg_offset": 273517978,
  "vitrine": {
-  "em": "2026-11-07T09:22-03:00",
+  "em": "2026-11-07T09:42-03:00",
   "itens": [
-   {
-    "categoria": "quarto",
-    "de": 59.9,
-    "desconto": 0.599,
-    "id": "MLB73604609",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_615687-MLA120304135779_102026-F.jpg",
-    "link": "https://meli.la/2nnzRT6",
-    "preco": 23.99,
-    "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
-   },
    {
     "categoria": "quarto",
     "de": 59.9,
@@ -8143,6 +8141,16 @@
     "link": "https://meli.la/1G1hede",
     "preco": 179.44,
     "titulo": "Bicicleta De Equilíbrio 4 Rodas Buba Infantil Sem Pedal Cor Azul"
+   },
+   {
+    "categoria": "outros",
+    "de": 219.9,
+    "desconto": 0.417,
+    "id": "MLB61713566",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_766581-MLA97341274561_112025-F.jpg",
+    "link": "https://meli.la/2wEAaHE",
+    "preco": 128.14,
+    "titulo": "Andador De Empurrar Infantil Com Atividades Azul - Maxi Baby"
    }
   ]
  },
