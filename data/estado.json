@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 41
+  "2026-11-07": 43
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3610,6 +3610,12 @@
    "quando": "2026-11-07T12:42-03:00",
    "titulo": "Patinho Amarelo Dançarino Musical Som Luz Marca REDFIN Brinquedo Interativo Cria"
   },
+  "MLB25366146": {
+   "desconto": 0.42,
+   "preco": 17.4,
+   "quando": "2026-11-07T20:02-03:00",
+   "titulo": "Hot Wheels Fingerboard Skate De Dedo Profis. Tênis Sortido"
+  },
   "MLB26816126": {
    "desconto": 0.455,
    "preco": 17.37,
@@ -3675,6 +3681,12 @@
   "MLB45286830": {
    "preco": 90.0,
    "quando": "2026-11-06T17:35-03:00"
+  },
+  "MLB45423403": {
+   "desconto": 0.416,
+   "preco": 145.99,
+   "quando": "2026-11-07T20:02-03:00",
+   "titulo": "Lego 77242 Speed Champions Ferrari Sf24 F1 Quantidade de peças 275"
   },
   "MLB45801082": {
    "desconto": 0.534,
@@ -4517,6 +4529,10 @@
     [
      "2026-11-07",
      32.18
+    ],
+    [
+     "2026-11-07",
+     32.17
     ]
    ],
    "min": 32.17
@@ -5392,6 +5408,10 @@
     [
      "2026-11-07",
      58.79
+    ],
+    [
+     "2026-11-07",
+     65.9
     ]
    ],
    "min": 30.99
@@ -7009,6 +7029,10 @@
     [
      "2026-11-07",
      163.29
+    ],
+    [
+     "2026-11-07",
+     171.0
     ]
    ],
    "min": 163.29
@@ -8021,18 +8045,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T19:42-03:00",
+  "em": "2026-11-07T20:02-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 219.9,
-    "desconto": 0.455,
-    "id": "MLB62225841",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_757979-MLA98071198818_112025-F.jpg",
-    "link": "https://meli.la/2BT6o4S",
-    "preco": 119.9,
-    "titulo": "Bicicleta De Equilíbrio Infantil Andador Sem Pedal 4 Rodas Amarelo"
-   },
    {
     "categoria": "brinquedo",
     "de": 29.99,
@@ -8622,9 +8636,19 @@
     "link": "https://meli.la/1D7g9GT",
     "preco": 129.4,
     "titulo": "Taco De Sinuca Bilhar Maxxi Cruz De Malta Profissional Preto Peso 480 g"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 98.84,
+    "desconto": 0.318,
+    "id": "MLB81142365",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_644449-MLA118688058770_102026-F.jpg",
+    "link": "https://meli.la/2Lcg3Q4",
+    "preco": 67.39,
+    "titulo": "Kit 9 Carrinhos de Fricção Patrulha Canina Com Personagens Removíveis"
    }
   ]
  },
- "vitrine_assinatura": "f1abe2eede067a4a5ae22922ef6a8c88dcf3d126",
- "vitrine_publicada_em": "2026-11-07T19:02-03:00"
+ "vitrine_assinatura": "c5b9ffe028c75d21ccc272d2c6e0a0bb2f8c2076",
+ "vitrine_publicada_em": "2026-11-07T20:02-03:00"
 }
