@@ -1498,6 +1498,12 @@
   "2026-11-07": 17
  },
  "cupons": {
+  "MELIOFERTAS": {
+   "criado": "2026-11-07T13:02-03:00",
+   "post": 62,
+   "status": "ativo",
+   "validade": "2026-11-07T23:59-03:00"
+  },
   "MODAAQUI": {
    "criado": "2026-11-07T09:04-03:00",
    "post": 47,
@@ -1505,7 +1511,7 @@
    "validade": "2026-11-07T23:59-03:00"
   }
  },
- "cupons_ml_ultimo": 6414,
+ "cupons_ml_ultimo": 6415,
  "descoberta_em": "2026-11-07T00:26-03:00",
  "descobertos": {
   "MLB10923645": {
@@ -3826,6 +3832,17 @@
     }
    ],
    "criado": "2026-11-07T09:04-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "62": {
+   "blocos": [
+    {
+     "codigo": "MELIOFERTAS",
+     "html": "<b>🎟️ MELIOFERTAS</b> 👉 <b>R$0,10 OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 07/11\n👉 <a href=\"https://bit.ly/4zqYVpl\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-07T13:02-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   }
