@@ -3855,6 +3855,10 @@
     [
      "2026-11-07",
      44.0
+    ],
+    [
+     "2026-11-07",
+     45.59
     ]
    ],
    "min": 27.87
@@ -4451,9 +4455,13 @@
     [
      "2026-11-06",
      223.73
+    ],
+    [
+     "2026-11-07",
+     223.71
     ]
    ],
-   "min": 223.73
+   "min": 223.71
   },
   "MLB26941741": {
    "historico": [
@@ -4988,6 +4996,10 @@
     [
      "2026-11-07",
      58.77
+    ],
+    [
+     "2026-11-07",
+     58.79
     ]
    ],
    "min": 30.99
@@ -6160,6 +6172,10 @@
     [
      "2026-11-07",
      91.94
+    ],
+    [
+     "2026-11-07",
+     91.96
     ]
    ],
    "min": 91.94
@@ -7433,18 +7449,8 @@
  },
  "tg_offset": 273517977,
  "vitrine": {
-  "em": "2026-11-07T08:22-03:00",
+  "em": "2026-11-07T08:42-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 78.99,
-    "desconto": 0.707,
-    "id": "MLB76574611",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_815293-MLA115438222718_082026-F.jpg",
-    "link": "https://meli.la/1c7EjFK",
-    "preco": 23.18,
-    "titulo": "Tapete De Atividades Para Bebes Almofada De Água Inflável Interativo Aquário Sensorial Fundo Do Mar Rosa Tsc S"
-   },
    {
     "categoria": "brinquedo",
     "de": 359.8,
@@ -8034,6 +8040,16 @@
     "link": "https://meli.la/1N87rHK",
     "preco": 59.0,
     "titulo": "Kit Ping Pong Raquete Rede Retrátil Mesa Tênis Portátil Ultshop Ferragens"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 78.99,
+    "desconto": 0.343,
+    "id": "MLB25656186",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_944838-MLA99549576346_122025-F.jpg",
+    "link": "https://meli.la/23eCNt7",
+    "preco": 51.9,
+    "titulo": "Patinete Infantil 3 Rodas com Led/Dobrável Menino/Menina"
    }
   ]
  },
