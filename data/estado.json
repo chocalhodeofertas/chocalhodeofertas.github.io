@@ -1,5 +1,5 @@
 {
- "aguardando_link": 110,
+ "aguardando_link": 101,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-06": 39
+  "2026-11-07": 2
  },
  "cupons_ml_ultimo": 6413,
  "descoberta_em": "2026-11-07T00:26-03:00",
@@ -3458,10 +3458,76 @@
   "MLB80823637": "https://meli.la/32VR6qX",
   "MLB81142365": "https://meli.la/2Lcg3Q4"
  },
- "lote": null,
+ "lote": {
+  "dia": "2026-11-07",
+  "ids": [
+   "MLB76574611",
+   "MLB65579852",
+   "MLB54068547",
+   "MLB73604609",
+   "MLB75537532",
+   "MLB24647472",
+   "MLB68086238",
+   "MLB62681535",
+   "MLB79649272",
+   "MLB27267704",
+   "MLB44672426",
+   "MLB72720626",
+   "MLB68031618",
+   "MLB79738780",
+   "MLB77421641",
+   "MLB45801082",
+   "MLB43292361",
+   "MLB10923645",
+   "MLB69629265",
+   "MLB67648307",
+   "MLB62727038",
+   "MLB49215315",
+   "MLB67069579",
+   "MLB26816126",
+   "MLB62225841",
+   "MLB24679612",
+   "MLB24635461",
+   "MLB61700105",
+   "MLB24156713",
+   "MLB45528856"
+  ],
+  "urls": [
+   "https://produto.mercadolivre.com.br/MLB-7380240548-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4482404837-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6940070902-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7068064238-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4902495599-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5478391075-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4615808661-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6011420542-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7678623276-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6855110504-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6761768012-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7320334982-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4630934921-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7729139324-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5069141309-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6067987316-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3911199139-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4136382397-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4679822341-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6582073968-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4341499835-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5055662642-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7692115470-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3611839701-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5941744600-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3611890969-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4534507436-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5930202958-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3515801135-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5419706551-produto-_JM"
+  ]
+ },
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-06": 3
+  "2026-11-07": 1
  },
  "postados": {
   "MLB23581207": {
@@ -3531,6 +3597,12 @@
   "MLB54159991": {
    "preco": 219.56,
    "quando": "2026-11-06T15:34-03:00"
+  },
+  "MLB57075978": {
+   "desconto": 0.445,
+   "preco": 99.9,
+   "quando": "2026-11-07T08:02-03:00",
+   "titulo": "Mini Mesa de Pebolim Infantil Madeira Maxi Toys 2 Bolas"
   },
   "MLB58047533": {
    "preco": 68.0,
@@ -3619,6 +3691,12 @@
   "MLB80331375": {
    "preco": 78.98,
    "quando": "2026-11-06T18:43-03:00"
+  },
+  "MLB80779802": {
+   "desconto": 0.448,
+   "preco": 131.97,
+   "quando": "2026-11-07T08:02-03:00",
+   "titulo": "Andador Infantil Brinquedo Educativo Musical Didático Bebê Cor Azul-claro"
   }
  },
  "precos": {
@@ -3671,6 +3749,10 @@
     [
      "2026-11-06",
      194.99
+    ],
+    [
+     "2026-11-07",
+     199.99
     ]
    ],
    "min": 194.99
@@ -3684,9 +3766,13 @@
     [
      "2026-11-07",
      114.97
+    ],
+    [
+     "2026-11-07",
+     111.92
     ]
    ],
-   "min": 114.97
+   "min": 111.92
   },
   "MLB17775080": {
    "historico": [
@@ -3853,9 +3939,13 @@
     [
      "2026-11-06",
      38.9
+    ],
+    [
+     "2026-11-07",
+     38.85
     ]
    ],
-   "min": 38.9
+   "min": 38.85
   },
   "MLB21006188": {
    "historico": [
@@ -4410,6 +4500,10 @@
     [
      "2026-11-06",
      18.43
+    ],
+    [
+     "2026-11-07",
+     20.9
     ]
    ],
    "min": 18.43
@@ -4854,6 +4948,10 @@
     [
      "2026-11-06",
      30.99
+    ],
+    [
+     "2026-11-07",
+     58.77
     ]
    ],
    "min": 30.99
@@ -5581,6 +5679,10 @@
     [
      "2026-11-07",
      38.24
+    ],
+    [
+     "2026-11-07",
+     39.04
     ]
    ],
    "min": 38.24
@@ -5670,6 +5772,10 @@
     [
      "2026-11-07",
      295.75
+    ],
+    [
+     "2026-11-07",
+     299.9
     ]
    ],
    "min": 295.75
@@ -5853,6 +5959,10 @@
     [
      "2026-11-07",
      129.44
+    ],
+    [
+     "2026-11-07",
+     63.9
     ]
    ],
    "min": 56.89
@@ -6777,9 +6887,13 @@
     [
      "2026-11-06",
      189.99
+    ],
+    [
+     "2026-11-07",
+     179.0
     ]
    ],
-   "min": 189.99
+   "min": 179.0
   },
   "MLB75233914": {
    "historico": [
@@ -7009,6 +7123,10 @@
     [
      "2026-11-07",
      105.0
+    ],
+    [
+     "2026-11-07",
+     109.0
     ]
    ],
    "min": 82.9
@@ -7237,9 +7355,13 @@
     [
      "2026-11-06",
      78.05
+    ],
+    [
+     "2026-11-07",
+     78.01
     ]
    ],
-   "min": 78.05
+   "min": 78.01
   },
   "MLB80860088": {
    "historico": [
@@ -7271,7 +7393,7 @@
  },
  "tg_offset": 273517976,
  "vitrine": {
-  "em": "2026-11-07T00:26-03:00",
+  "em": "2026-11-07T08:02-03:00",
   "itens": [
    {
     "categoria": "outros",
@@ -7305,12 +7427,22 @@
    },
    {
     "categoria": "brinquedo",
+    "de": 199.99,
+    "desconto": 0.44,
+    "id": "MLB17489277",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_678645-MLA99447823800_112025-F.jpg",
+    "link": "https://meli.la/1HtwReq",
+    "preco": 111.92,
+    "titulo": "LEGO Classic Maleta Criativa com 213 Peças, Brinquedo de Montar para Crianças"
+   },
+   {
+    "categoria": "brinquedo",
     "de": 139.0,
-    "desconto": 0.438,
+    "desconto": 0.439,
     "id": "MLB80823637",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_700858-MLA118454303778_102026-F.jpg",
     "link": "https://meli.la/32VR6qX",
-    "preco": 78.05,
+    "preco": 78.01,
     "titulo": "Kit Completo Hama Beads 28000 Peças 72 Cores Para Iniciantes 2,6mm Brinquedo Miçangas De Passar Pixel Art Mold"
    },
    {
@@ -7322,26 +7454,6 @@
     "link": "https://meli.la/17iYotp",
     "preco": 436.4,
     "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi Baby - CINZA"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 199.99,
-    "desconto": 0.425,
-    "id": "MLB17489277",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_678645-MLA99447823800_112025-F.jpg",
-    "link": "https://meli.la/1HtwReq",
-    "preco": 114.97,
-    "titulo": "LEGO Classic Maleta Criativa com 213 Peças, Brinquedo de Montar para Crianças"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 49.0,
-    "desconto": 0.447,
-    "id": "MLB64866580",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_735916-MLA105596119925_012026-F.jpg",
-    "link": "https://meli.la/2G3kCUB",
-    "preco": 27.11,
-    "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensorial 1ª Infância Bebê Conforto Ma"
    },
    {
     "categoria": "brinquedo",
@@ -7614,16 +7726,6 @@
     "titulo": "Fralda Pom Pom Protek Proteção de Mãe G 68 Unidades"
    },
    {
-    "categoria": "jogo",
-    "de": 169.0,
-    "desconto": 0.349,
-    "id": "MLB51035138",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_942837-MLA104158430322_012026-F.jpg",
-    "link": "https://meli.la/1vczkgB",
-    "preco": 109.99,
-    "titulo": "Taco De Sinuca Bilhar Profissional Com Capa Giz Sola Brindes Snooker Bilhares Mgk"
-   },
-   {
     "categoria": "quarto",
     "de": 499.9,
     "desconto": 0.323,
@@ -7665,16 +7767,6 @@
    },
    {
     "categoria": "brinquedo",
-    "de": 63.9,
-    "desconto": 0.329,
-    "id": "MLB77624729",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_821206-MLA115000447486_082026-F.jpg",
-    "link": "https://meli.la/1J9pYbi",
-    "preco": 42.9,
-    "titulo": "Piano Musical Infantil de Fazenda com 12 Teclas e Sons de Animais, Para Bebê e Criança"
-   },
-   {
-    "categoria": "brinquedo",
     "de": 199.9,
     "desconto": 0.328,
     "id": "MLB27861415",
@@ -7712,16 +7804,6 @@
     "link": "https://meli.la/1AQ8upt",
     "preco": 194.79,
     "titulo": "Cercadinho Bebê Infantil Chiqueirinho Grande Criança Baby Bear Rosa"
-   },
-   {
-    "categoria": "jogo",
-    "de": 189.9,
-    "desconto": 0.319,
-    "id": "MLB19807041",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_760358-MLA114604635979_072026-F.jpg",
-    "link": "https://meli.la/1D7g9GT",
-    "preco": 129.4,
-    "titulo": "Taco De Sinuca Bilhar Maxxi Cruz De Malta Profissional Preto Peso 480 g"
    },
    {
     "categoria": "brinquedo",
@@ -7805,6 +7887,6 @@
    }
   ]
  },
- "vitrine_assinatura": "886c9404cd228fb4ab4232ece8284fd660ce3dc8",
- "vitrine_publicada_em": "2026-11-07T00:26-03:00"
+ "vitrine_assinatura": "bba04c2160f444ae8ebf801ddb9156478a59f7a8",
+ "vitrine_publicada_em": "2026-11-07T08:02-03:00"
 }
