@@ -5446,6 +5446,10 @@
     [
      "2026-11-06",
      47.4
+    ],
+    [
+     "2026-11-07",
+     41.0
     ]
    ],
    "min": 41.0
@@ -6698,6 +6702,10 @@
     [
      "2026-11-06",
      44.9
+    ],
+    [
+     "2026-11-07",
+     45.9
     ]
    ],
    "min": 29.99
@@ -7899,6 +7907,10 @@
     [
      "2026-11-07",
      259.9
+    ],
+    [
+     "2026-11-07",
+     320.0
     ]
    ],
    "min": 259.9
@@ -7955,18 +7967,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T18:22-03:00",
+  "em": "2026-11-07T18:42-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 63.98,
-    "desconto": 0.439,
-    "id": "MLB67069579",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_978753-MLA118797832693_102026-F.jpg",
-    "link": "https://meli.la/2PTw8TJ",
-    "preco": 35.9,
-    "titulo": "Bola Mágica Disco Voador Brinquedo Ao Ar Livre Bola Maluca Cor Rosa"
-   },
    {
     "categoria": "brinquedo",
     "de": 59.99,
@@ -8556,6 +8558,16 @@
     "link": "https://meli.la/1xh1ufi",
     "preco": 36.9,
     "titulo": "Bola Flutuante Futebol Indoor Flat Ball Hoverball com Luz LED Bola de Futebol Elétrica Infantil que Desliza no"
+   },
+   {
+    "categoria": "outros",
+    "de": 359.9,
+    "desconto": 0.353,
+    "id": "MLB57083030",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_741342-MLA92558466166_092025-F.jpg",
+    "link": "https://meli.la/168F5Rm",
+    "preco": 233.0,
+    "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
    }
   ]
  },
