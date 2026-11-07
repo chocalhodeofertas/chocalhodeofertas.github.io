@@ -13,20 +13,42 @@ import sys
 from .cupons_ml import ARQ_LOGIN, ARQ_SESSAO, _resolver, guardar_seguro, ler_seguro
 
 
-async def etapa1(api_id, api_hash, telefone):
+# Endereços oficiais dos servidores (DCs) do Telegram
+DCS = {1: "149.154.175.53", 2: "149.154.167.51", 3: "149.154.175.100", 4: "149.154.167.91", 5: "91.108.56.130"}
+
+
+async def etapa1(api_id, api_hash, telefone, tentativas=4):
     from telethon import TelegramClient
+    from telethon.errors import FloodWaitError, PhoneMigrateError
     from telethon.sessions import StringSession
 
-    client = TelegramClient(StringSession(), int(api_id), api_hash)
-    await client.connect()
-    try:
-        enviado = await client.send_code_request(telefone)
-        guardar_seguro({"sessao": client.session.save(), "hash": enviado.phone_code_hash}, api_hash, ARQ_LOGIN)
-    finally:
-        await client.disconnect()
-    print("✅ Código enviado para o seu Telegram (confira o app, na conversa 'Telegram').")
-    print("Agora rode de novo este workflow escolhendo a etapa 2 e digitando o código.")
-    return 0
+    dc = None
+    for n in range(1, tentativas + 1):
+        sessao = StringSession()
+        if dc:
+            sessao.set_dc(dc, DCS[dc], 443)  # já conecta no servidor do seu número
+        client = TelegramClient(sessao, int(api_id), api_hash, connection_retries=5, retry_delay=2)
+        try:
+            await client.connect()
+            enviado = await client.send_code_request(telefone)
+            guardar_seguro({"sessao": client.session.save(), "hash": enviado.phone_code_hash},
+                           api_hash, ARQ_LOGIN)
+            print("✅ Código enviado para o seu Telegram (confira o app, na conversa 'Telegram').")
+            print("Agora rode de novo este workflow escolhendo a etapa 2 e digitando o código.")
+            return 0
+        except PhoneMigrateError as e:
+            dc = e.new_dc
+            print(f"Seu número fica no servidor {dc} do Telegram; reconectando lá (tentativa {n}).")
+        except FloodWaitError as e:
+            print(f"O Telegram pediu para esperar {e.seconds // 60 + 1} min antes de pedir outro código.")
+            return 1
+        except Exception as e:  # noqa: BLE001
+            print(f"Conexão instável ({type(e).__name__}); tentando de novo (tentativa {n}).")
+            await asyncio.sleep(3)
+        finally:
+            await client.disconnect()
+    print("Não consegui falar com o Telegram. Tente rodar a etapa 1 de novo em alguns minutos.")
+    return 1
 
 
 async def etapa2(api_id, api_hash, telefone, codigo, senha, convite):
@@ -38,7 +60,8 @@ async def etapa2(api_id, api_hash, telefone, codigo, senha, convite):
     if not dados:
         print("Rode primeiro a etapa 1.")
         return 1
-    client = TelegramClient(StringSession(dados["sessao"]), int(api_id), api_hash)
+    client = TelegramClient(StringSession(dados["sessao"]), int(api_id), api_hash,
+                            connection_retries=5, retry_delay=2)
     await client.connect()
     try:
         try:
