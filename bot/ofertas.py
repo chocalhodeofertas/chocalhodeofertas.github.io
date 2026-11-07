@@ -64,3 +64,31 @@ def avaliar(produto, info, estado, agora: datetime, min_desconto=0.15, repost_di
         imagem=info.imagem,
         categoria=produto.categoria,
     )
+
+
+# Comissão por categoria: roupa paga 16%, a maioria 12%
+PESO_CATEGORIA = {"roupa": 1.3}
+
+# Horários de pico (almoço e noite) recebem mais posts
+PESO_HORA = {12: 1.6, 13: 1.6, 19: 1.6, 20: 1.6, 21: 1.6}
+
+
+def pontuacao(oferta, posicao=None):
+    """Desconto x comissão da categoria x popularidade (posição nos mais vendidos)."""
+    bonus = 0.0
+    if posicao is not None:
+        bonus = 0.15 if posicao < 3 else 0.08 if posicao < 8 else 0.0
+    return oferta.forca * PESO_CATEGORIA.get(oferta.categoria, 1.0) * (1 + bonus)
+
+
+def meta_ate_agora(max_por_dia, hora, inicio=8, fim=22):
+    """Quantos posts já 'deveriam' ter saído até o fim desta hora (ritmo do dia)."""
+    pesos = {h: PESO_HORA.get(h, 1.0) for h in range(inicio, fim)}
+    total = sum(pesos.values()) or 1
+    feito = sum(v for h, v in pesos.items() if h <= hora)
+    return int(max_por_dia * feito / total + 0.999)
+
+
+def limite_hora(max_por_hora, hora):
+    """No pico, até 2 posts a mais por hora."""
+    return max_por_hora + (2 if hora in PESO_HORA else 0)

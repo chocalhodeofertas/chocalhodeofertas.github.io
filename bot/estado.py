@@ -35,8 +35,12 @@ def registrar_preco(estado, pid, preco, agora):
     reg["min"] = min(reg["min"], preco)
 
 
-def registrar_post(estado, pid, preco, agora):
+def registrar_post(estado, pid, preco, agora, titulo=None, desconto=None):
     estado["postados"][pid] = {"quando": agora.isoformat(timespec="minutes"), "preco": preco}
+    if titulo:
+        estado["postados"][pid]["titulo"] = titulo[:80]
+    if desconto is not None:
+        estado["postados"][pid]["desconto"] = round(desconto, 3)
     dia = agora.date().isoformat()
     # Só guarda a contagem de hoje
     estado["contagem_dia"] = {dia: estado["contagem_dia"].get(dia, 0) + 1}

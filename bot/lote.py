@@ -18,14 +18,17 @@ def url_linkbuilder(item_id):
     return f"https://produto.mercadolivre.com.br/MLB-{item_id[3:]}-produto-_JM"
 
 
-def prioridade(oferta):
-    return oferta.forca * PESO_CATEGORIA.get(oferta.categoria, 1.0)
+def prioridade(oferta, posicao=None):
+    from .ofertas import pontuacao
+
+    return pontuacao(oferta, posicao)
 
 
 def montar_lote(estado, sem_link, tamanho, agora):
+    pos = {pid: d.get("pos") for pid, d in estado.get("descobertos", {}).items()}
     """sem_link: lista de (oferta, item_id). Grava o lote pendente e devolve as URLs."""
     escolhidas, vistos = [], set()
-    for o, item in sorted(sem_link, key=lambda x: prioridade(x[0]), reverse=True):
+    for o, item in sorted(sem_link, key=lambda x: prioridade(x[0], pos.get(x[0].id)), reverse=True):
         if o.id in vistos or o.id in estado["links"] or not item:
             continue
         vistos.add(o.id)
@@ -71,24 +74,3 @@ def aplicar_resposta(estado, texto):
     estado["lote"] = None
     return True, (f"✅ {len(links)} links oficiais salvos ({len(estado['links'])} no total)! "
                   "Começo a postar nas próximas rodadas. Se ainda houver lote hoje, ele chega em até 20 min.")
-
-
-def processar_mensagens(tg, estado, admin_chat, log=print):
-    """Lê as mensagens novas que você mandou para o bot."""
-    try:
-        updates = tg.atualizacoes(offset=estado.get("tg_offset"))
-    except Exception as e:  # noqa: BLE001
-        log(f"Aviso: não consegui ler mensagens do Telegram: {e}")
-        return
-    for u in updates:
-        estado["tg_offset"] = u["update_id"] + 1
-        msg = u.get("message") or {}
-        if str((msg.get("chat") or {}).get("id")) != str(admin_chat):
-            continue
-        ok, resposta = aplicar_resposta(estado, msg.get("text") or msg.get("caption") or "")
-        if resposta:
-            log(resposta)
-            try:
-                tg.enviar_texto(admin_chat, resposta)
-            except Exception:  # noqa: BLE001
-                pass

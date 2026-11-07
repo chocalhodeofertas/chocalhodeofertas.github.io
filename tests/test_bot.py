@@ -378,8 +378,8 @@ def test_descobrir():
     })
     achados = descoberta.descobrir(MercadoLivre("t", session=s), por_categoria=5, log=lambda m: None)
     assert achados == {
-        "MLB2": {"tipo": "catalogo", "categoria": "outros"},
-        "MLB3": {"tipo": "catalogo", "categoria": "roupa"},
+        "MLB2": {"tipo": "catalogo", "categoria": "outros", "pos": 0},
+        "MLB3": {"tipo": "catalogo", "categoria": "roupa", "pos": 0},
     }
     assert "/highlights/MLB/category/MLB39965" not in s.chamadas  # categoria excluída
 
@@ -463,17 +463,163 @@ def test_modo_oficial_so_posta_com_link_e_manda_lote():
     assert not any("Linkbuilder" in t[2] for t in tg.enviados[n:])
 
 
-def test_processar_mensagens():
-    from bot import lote
-    e = est.novo()
-    e["lote"] = {"dia": "x", "ids": ["MLB1"], "urls": ["u"]}
+class TGCmd:
+    """Telegram falso para os comandos."""
+    def __init__(self, updates=()):
+        self.updates, self.textos, self.ofertas = list(updates), [], []
 
-    class TG:
-        def __init__(self): self.txt = []
-        def atualizacoes(self, offset=None):
-            return [{"update_id": 7, "message": {"chat": {"id": 999}, "text": "https://meli.la/Z"}},
-                    {"update_id": 8, "message": {"chat": {"id": 123}, "text": "https://meli.la/Q"}}]
-        def enviar_texto(self, chat, t, html=False, botoes=None): self.txt.append(t)
-    tg = TG()
-    lote.processar_mensagens(tg, e, "123", log=lambda m: None)
-    assert e["links"] == {"MLB1": "https://meli.la/Q"} and e["tg_offset"] == 9 and tg.txt
+    def atualizacoes(self, offset=None):
+        return self.updates
+
+    def enviar_texto(self, chat, t, html=False, botoes=None):
+        self.textos.append((chat, t))
+
+    def enviar_oferta(self, chat, legenda, imagem=None):
+        self.ofertas.append((chat, legenda))
+
+    def membros(self, chat):
+        return 120
+
+
+class PaginaFalsa:
+    def __init__(self, texto):
+        self.texto = texto
+
+    def get(self, url, headers=None, timeout=None):
+        class R: pass
+        r = R(); r.text = self.texto
+        return r
+
+
+HTML_SOCIAL = 'x"item_id":"MLB555"y"product_id":"MLB9"z ... "item_id":"MLB777" "product_id":"MLB8"'
+
+
+def cfg_cmd():
+    return Config(canal="@canal", admin_chat="123")
+
+
+def test_resolver_meli():
+    from bot import comandos
+    assert comandos.resolver_meli("https://meli.la/x", PaginaFalsa(HTML_SOCIAL)) == ("catalogo", "MLB9")
+    assert comandos.resolver_meli("https://meli.la/x", PaginaFalsa('"item_id":"MLB5"')) == ("item", "MLB5")
+    assert comandos.resolver_meli("https://meli.la/x", PaginaFalsa("nada")) is None
+
+
+def test_comando_link_avulso_posta_e_passa_a_acompanhar():
+    from bot import comandos
+    e, tg = est.novo(), TGCmd()
+    ml = MLFalso({"MLB9": InfoProduto("MLB9", "Body Bebê Kit 3", 50, 80, "img", True)})
+    r = comandos.tratar_texto("olha esse https://meli.la/AbC", tg, ml, e, cfg_cmd(), AGORA,
+                              session=PaginaFalsa(HTML_SOCIAL))
+    assert r.startswith("✅ Postado") and tg.ofertas[0][0] == "@canal"
+    assert e["links"]["MLB9"] == "https://meli.la/AbC" and "MLB9" in e["manuais"]
+    assert "MLB9" in e["postados"]
+    # Entra na lista de acompanhamento do bot
+    from bot.main import montar_lista
+    assert "MLB9" in [p.id for p in montar_lista(Config(matt_word="w", matt_tool="1"), [], e)]
+
+
+def test_comando_link_bloqueado_nbcal():
+    from bot import comandos
+    e, tg = est.novo(), TGCmd()
+    ml = MLFalso({"MLB9": InfoProduto("MLB9", "Mamadeira Anticólica 260ml", 30, 60, None, True)})
+    r = comandos.tratar_texto("https://meli.la/AbC", tg, ml, e, cfg_cmd(), AGORA, session=PaginaFalsa(HTML_SOCIAL))
+    assert r.startswith("🚫") and not tg.ofertas
+
+
+def test_comando_lote_tem_prioridade():
+    from bot import comandos
+    e, tg = est.novo(), TGCmd()
+    e["lote"] = {"dia": "x", "ids": ["MLB1", "MLB2"], "urls": ["u", "v"]}
+    r = comandos.tratar_texto("https://meli.la/A https://meli.la/B", tg, MLFalso({}), e, cfg_cmd(), AGORA)
+    assert "salvos" in r and e["links"] == {"MLB1": "https://meli.la/A", "MLB2": "https://meli.la/B"}
+    assert not tg.ofertas
+
+
+def test_comando_cupom_e_ajuda():
+    from bot import comandos
+    e, tg = est.novo(), TGCmd()
+    r = comandos.tratar_texto("Cupom: 20% OFF em brinquedos, código BRINCA20", tg, None, e, cfg_cmd(), AGORA)
+    assert r.startswith("✅") and tg.textos[0][0] == "@canal" and "BRINCA20" in tg.textos[0][1]
+    assert "#publi" not in tg.textos[0][1]
+    assert "Compartilhar" in comandos.tratar_texto("https://www.mercadolivre.com.br/x/p/MLB1", tg, None, e,
+                                                   cfg_cmd(), AGORA)
+    assert "O que você pode me mandar" in comandos.tratar_texto("oi", tg, None, e, cfg_cmd(), AGORA)
+
+
+def test_processar_membros_e_resumo():
+    from bot import comandos
+    e = est.novo()
+    e["membros_hist"] = {"2026-11-04": 100}
+    entra = {"old_chat_member": {"status": "left"}, "new_chat_member": {"status": "member"}}
+    sai = {"old_chat_member": {"status": "member"}, "new_chat_member": {"status": "left"}}
+    tg = TGCmd([{"update_id": 7, "chat_member": entra}, {"update_id": 8, "chat_member": entra},
+                {"update_id": 9, "chat_member": sai},
+                {"update_id": 10, "message": {"chat": {"id": 999}, "text": "oi"}},
+                {"update_id": 11, "message": {"chat": {"id": 123}, "text": "resumo"}}])
+    est.registrar_post(e, "MLB1", 50, AGORA, "Fralda Pampers G", 0.4)
+    comandos.processar(tg, None, e, cfg_cmd(), AGORA, log=lambda m: None)
+    assert e["tg_offset"] == 12 and e["membros_dia"][AGORA.date().isoformat()] == {"entrou": 2, "saiu": 1}
+    resumo = tg.textos[-1][1]
+    assert tg.textos[-1][0] == "123" and "120" in resumo and "2 entraram" in resumo and "-40% Fralda" in resumo
+    # Resumo automático: só na última hora, uma vez por dia
+    tg2 = TGCmd()
+    comandos.talvez_resumo_diario(tg2, e, cfg_cmd(), AGORA.replace(hour=15), log=lambda m: None)
+    assert not tg2.textos
+    comandos.talvez_resumo_diario(tg2, e, cfg_cmd(), AGORA.replace(hour=21), log=lambda m: None)
+    comandos.talvez_resumo_diario(tg2, e, cfg_cmd(), AGORA.replace(hour=21, minute=40), log=lambda m: None)
+    assert len(tg2.textos) == 1
+
+
+# ---------- ranking, ritmo e chamadas ----------
+
+def test_pontuacao_e_ritmo():
+    from bot.ofertas import limite_hora, meta_ate_agora, pontuacao
+    e = est.novo()
+    roupa = avaliar(Produto("A", "catalogo", "", "l", "roupa", None, 0), info(80, 100, "A"), e, AGORA)
+    brinq = avaliar(Produto("B", "catalogo", "", "l", "brinquedo", None, 0), info(76, 100, "B"), e, AGORA)
+    assert pontuacao(roupa) > pontuacao(brinq)  # 20% de roupa vale mais que 24% de brinquedo
+    assert pontuacao(brinq, 0) > pontuacao(brinq, 10)  # top 3 dos mais vendidos ganha bônus
+    assert meta_ate_agora(50, 21) == 50 and meta_ate_agora(50, 8) < meta_ate_agora(50, 12)
+    # O almoço "pesa" mais que uma hora comum
+    assert meta_ate_agora(50, 12) - meta_ate_agora(50, 11) > meta_ate_agora(50, 10) - meta_ate_agora(50, 9)
+    assert limite_hora(4, 20) == 6 and limite_hora(4, 10) == 4
+
+
+def test_ritmo_guarda_posts_para_a_noite():
+    produtos = [prod(f"MLB{i}") for i in range(1, 30)]
+    ml = MLFalso({f"MLB{i}": info(50, 100, f"MLB{i}") for i in range(1, 30)})
+    e = est.novo()
+    cfg = Config(canal="@c", max_por_rodada=5, max_por_hora=10, max_por_dia=20)
+    cedo = rodar("normal", cfg, ml, TGFalso(), e, produtos, agora=AGORA.replace(hour=8, minute=5))
+    assert 0 < len(cedo) <= 2  # 8h: só a "cota" da primeira hora
+
+
+def test_chamada_por_categoria():
+    import random as _r
+    o = avaliar(prod(), info(70, 100), est.novo(), AGORA)
+    o.categoria = "fralda"
+    textos = {mensagens._abertura(o, _r.Random(i)) for i in range(40)}
+    assert any(t in mensagens.CHAMADAS["fralda"] for t in textos)
+    assert any(t in mensagens.ABERTURAS for t in textos)
+
+
+# ---------- página (vitrine) ----------
+
+def test_vitrine(tmp_path):
+    from bot import vitrine
+    e = est.novo()
+    o = avaliar(Produto("MLB1", "catalogo", "", "https://meli.la/A", "roupa", None, 0), info(60, 100, "MLB1"), e, AGORA)
+    o.titulo = "Body <bebê> & cia"
+    vitrine.guardar(e, [o], AGORA)
+    arq = tmp_path / "index.html"
+    assert vitrine.talvez_publicar(e, "@chocalho", AGORA, arq, log=lambda m: None)
+    h = arq.read_text()
+    assert "https://t.me/chocalho" in h and "Body &lt;bebê&gt; &amp; cia" in h and "-40%" in h
+    assert "https://meli.la/A" in h and "#publi" in h and 'data-f="roupa"' in h
+    # Mesma hora: não reescreve; hora seguinte sem mudança: também não
+    assert not vitrine.talvez_publicar(e, "@chocalho", AGORA, arq, log=lambda m: None)
+    assert not vitrine.talvez_publicar(e, "@chocalho", AGORA + timedelta(hours=1), arq, log=lambda m: None)
+    o.preco = 55
+    vitrine.guardar(e, [o], AGORA)
+    assert vitrine.talvez_publicar(e, "@chocalho", AGORA + timedelta(hours=1), arq, log=lambda m: None)

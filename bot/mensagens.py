@@ -12,6 +12,19 @@ ABERTURAS = [
     "🧸 Oferta boa pra família",
     "💛 Pra economizar sem chorar",
 ]
+# Chamadas por categoria: só clima, nunca fatos sobre o produto (cláusula 5.4)
+CHAMADAS = {
+    "fralda": ["🧷 Hora de abastecer o estoque de fraldas!", "🧷 Fralda com preço bom", "🧷 Pra quem troca fralda o dia todo"],
+    "higiene": ["🛁 Pra hora do banho", "🫧 Cuidado com o bebê, economia pra família", "🛁 Pro kit de higiene do pequeno"],
+    "roupa": ["👕 Look novo pro pequeno", "👗 Pra renovar o guarda-roupa dos pequenos", "🧦 Eles crescem rápido, né?"],
+    "brinquedo": ["🧸 Pra brincar muito", "🎁 Ideia de presente", "🪀 Diversão pros pequenos"],
+    "jogo": ["🎲 Pra brincar em família", "🧩 Pra animar a brincadeira", "🎁 Ideia de presente"],
+    "quarto": ["🛏️ Pro cantinho do bebê", "🌙 Pro quarto do pequeno", "🧸 Pra deixar o quarto do bebê pronto"],
+    "passeio": ["🚼 Pros passeios com o pequeno", "🚗 Pros passeios em família", "🌳 Bora passear?"],
+    "alimentacao": ["🥣 Pra hora da papinha", "🍽️ Pra hora de comer", "🥄 Pra introdução alimentar"],
+    "gestante": ["🤰 Pra mamãe que tá esperando", "💕 Pra gestação mais confortável", "🤰 Pro enxoval que tá chegando"],
+}
+
 # Cláusula 5.4 dos termos: só informações que estão no anúncio. Por isso não
 # afirmamos "menor preço" nem "% abaixo do habitual" (são cálculos nossos).
 
@@ -39,6 +52,10 @@ def _titulo_curto(titulo, limite=110):
 
 
 def _abertura(oferta, rng):
+    """70% das vezes uma chamada da categoria, 30% uma chamada geral do canal."""
+    proprias = CHAMADAS.get(oferta.categoria)
+    if proprias and rng.random() < 0.7:
+        return rng.choice(proprias)
     return rng.choice(ABERTURAS)
 
 

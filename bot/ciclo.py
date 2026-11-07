@@ -35,9 +35,10 @@ def sincronizar_antes():
 
 def salvar_estado():
     git("add", "data/estado.json")
+    git("add", "docs")  # separado: se a pasta não existir, não atrapalha o resto
     if git("diff", "--cached", "--quiet").returncode == 0:
         return
-    git("commit", "-q", "-m", "Atualiza histórico de preços [skip ci]")
+    git("commit", "-q", "-m", "Atualiza histórico de preços e página [skip ci]")
     for _ in range(3):
         sincronizar_antes()
         if git("push", "-q").returncode == 0:

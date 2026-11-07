@@ -19,13 +19,13 @@ from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
-from . import afiliado, cofre, lote
+from . import afiliado, cofre, comandos, lote, vitrine
 from . import estado as est
 from . import mensagens
 from .descoberta import descobrir
 from .filtros import motivo_bloqueio
 from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, link_produto, renovar_token, token_do_app
-from .ofertas import avaliar
+from .ofertas import avaliar, limite_hora, meta_ate_agora, pontuacao
 from .telegram import Telegram, TelegramErro
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -180,7 +180,8 @@ def montar_lista(cfg: Config, da_planilha, estado):
             p.link_afiliado = afiliado.montar(link_produto(p.tipo, p.id), cfg.matt_word, cfg.matt_tool)
         lista.append(p)
         vistos.add(p.id)
-    for pid, d in estado.get("descobertos", {}).items():
+    extras = {**estado.get("manuais", {}), **estado.get("descobertos", {})}
+    for pid, d in extras.items():
         if pid in vistos:
             continue
         url = link_produto(d["tipo"], pid)
@@ -253,7 +254,8 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
         if oferta:
             candidatas.append(oferta)
 
-    candidatas.sort(key=lambda o: o.forca, reverse=True)
+    posicoes = {pid: d.get("pos") for pid, d in estado.get("descobertos", {}).items()}
+    candidatas.sort(key=lambda o: pontuacao(o, posicoes.get(o.id)), reverse=True)
     log(f"{len(produtos)} produtos verificados, {len(candidatas)} ofertas encontradas.")
 
     if modo == "normal" and cfg.link_modo == "oficial":
@@ -261,6 +263,8 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
         oficiais = [o for o in candidatas if not _link_direto(o.link)]
         sem_link = [(o, getattr(infos.get(o.id), "item_id", None)) for o in candidatas if _link_direto(o.link)]
         log(f"{len(oficiais)} com link oficial, {len(sem_link)} aguardando link.")
+        estado["aguardando_link"] = len(sem_link)
+        vitrine.guardar(estado, oficiais, agora)
         _talvez_mandar_lote(cfg, tg, estado, sem_link, agora)
         candidatas = oficiais
 
@@ -283,10 +287,12 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
         log("Sorteio: esta rodada não posta (deixa os horários mais naturais).")
         return []
 
+    # Ritmo: mais posts no almoço e à noite, sem gastar o limite do dia cedo demais
     vagas = min(
         cfg.max_por_rodada,
-        cfg.max_por_hora - est.posts_ultima_hora(estado, agora),
-        cfg.max_por_dia - est.posts_hoje(estado, agora),
+        limite_hora(cfg.max_por_hora, agora.hour) - est.posts_ultima_hora(estado, agora),
+        min(cfg.max_por_dia, meta_ate_agora(cfg.max_por_dia, agora.hour, cfg.hora_inicio, cfg.hora_fim))
+        - est.posts_hoje(estado, agora),
     )
     enviadas = []
     for o in candidatas[: max(vagas, 0)]:
@@ -295,12 +301,12 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
         except TelegramErro as e:
             log(f"Erro ao postar {o.id} no canal: {e}")
             continue
-        est.registrar_post(estado, o.id, o.preco, agora)
+        est.registrar_post(estado, o.id, o.preco, agora, o.titulo, o.desconto)
         enviadas.append(o)
         log(f"Postado: {o.id} {mensagens.brl(o.preco)} (-{round(o.desconto * 100)}%)")
         if cfg.admin_chat:
             try:
-                _copias(tg, cfg.admin_chat, o, rng)
+                comandos.enviar_copias(tg, cfg.admin_chat, o, rng)
             except TelegramErro as e:
                 log(f"Aviso: não consegui mandar a cópia para você: {e}")
         time.sleep(1)
@@ -357,16 +363,7 @@ def _enviar(tg, chat, oferta, rng, rotulo=""):
         log(mensagens.montar_whatsapp(oferta, rng))
         return
     tg.enviar_oferta(chat, rotulo + mensagens.montar_telegram(oferta, rng), oferta.imagem)
-    _copias(tg, chat, oferta, rng)
-
-
-def _copias(tg, chat, oferta, rng):
-    """Uma mensagem com o texto do WhatsApp e botões que abrem WhatsApp e X já preenchidos."""
-    wa = mensagens.montar_whatsapp(oferta, rng)
-    # Texto dentro de <pre>: no Telegram, um toque copia tudo, pronto para colar no WhatsApp
-    tg.enviar_texto(chat, "📋 Toque no bloco abaixo para copiar e cole no WhatsApp:\n\n<pre>"
-                    + html.escape(wa) + "</pre>", html=True,
-                    botoes=mensagens.botoes_compartilhar(wa, mensagens.montar_x(oferta)))
+    comandos.enviar_copias(tg, chat, oferta, rng)
 
 
 def diagnostico(cfg: Config, produtos, avisos):
@@ -491,10 +488,13 @@ def main(argv=None):
             log("Nenhum produto para acompanhar (planilha vazia e descoberta sem resultado).")
             return 0
         tg = Telegram(cfg.telegram_token)
-        if cfg.admin_chat:
-            lote.processar_mensagens(tg, estado, cfg.admin_chat, log)
+        if cfg.admin_chat and args.modo == "normal":
+            comandos.processar(tg, ml, estado, cfg, agora, log)
             lista = montar_lista(cfg, produtos, estado)
         rodar(args.modo, cfg, ml, tg, estado, lista, agora=agora)
+        if args.modo == "normal":
+            comandos.talvez_resumo_diario(tg, estado, cfg, agora, log)
+            vitrine.talvez_publicar(estado, cfg.canal, agora, log=log)
     except AcessoNegado as e:
         log(f"Mercado Livre recusou o acesso: {e}\nRode o modo diagnostico para ver o que fazer.")
         return 1

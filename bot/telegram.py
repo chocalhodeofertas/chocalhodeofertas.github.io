@@ -28,8 +28,11 @@ class Telegram:
     def membro(self, chat, user_id):
         return self._chamar("getChatMember", chat_id=chat, user_id=user_id)
 
+    def membros(self, chat):
+        return self._chamar("getChatMemberCount", chat_id=chat)
+
     def atualizacoes(self, offset=None):
-        dados = {"limit": 100, "allowed_updates": ["message"]}
+        dados = {"limit": 100, "allowed_updates": ["message", "chat_member"]}
         if offset:
             dados["offset"] = offset
         return self._chamar("getUpdates", **dados)
