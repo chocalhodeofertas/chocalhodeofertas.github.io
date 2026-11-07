@@ -68,6 +68,11 @@ class Config:
     link_modo: str = "oficial"  # "oficial" (meli.la via Linkbuilder) ou "direto"
     lote_tamanho: int = 30
     lotes_por_dia: int = 3
+    # Intervalo aleatório entre posts da mesma rodada e atraso antes do 1º (minutos).
+    # Padrão 0 aqui (testes); no GitHub vem do ambiente: 4–8 e até 3.
+    intervalo_min: float = 0
+    intervalo_max: float = 0
+    atraso_max: float = 0
 
     @classmethod
     def do_ambiente(cls):
@@ -98,8 +103,16 @@ class Config:
             link_modo=(e("LINK_MODO") or "oficial").strip().lower(),
             lote_tamanho=min(num("LOTE_TAMANHO", 30, int), 30),  # limite do Linkbuilder
             lotes_por_dia=num("LOTES_POR_DIA", 3, int),
+            intervalo_min=num("INTERVALO_MIN", 4),
+            intervalo_max=num("INTERVALO_MAX", 8),
+            atraso_max=num("ATRASO_MAX", 3),
             horas_descoberta=num("HORAS_DESCOBERTA", 20, int),
         )
+
+
+def dormir(segundos):
+    if segundos > 0:
+        time.sleep(segundos)
 
 
 def log(msg):
@@ -295,7 +308,15 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
         - est.posts_hoje(estado, agora),
     )
     enviadas = []
-    for o in candidatas[: max(vagas, 0)]:
+    fila = candidatas[: max(vagas, 0)]
+    if fila and cfg.atraso_max:
+        # Atraso inicial: as rodadas começam em horário fixo, os posts não
+        dormir(rng.uniform(0, cfg.atraso_max) * 60)
+    for n, o in enumerate(fila):
+        if n > 0:
+            espera = rng.uniform(cfg.intervalo_min, max(cfg.intervalo_max, cfg.intervalo_min))
+            log(f"Próximo post em {espera:.1f} min.")
+            dormir(espera * 60)
         try:
             tg.enviar_oferta(cfg.canal, mensagens.montar_telegram(o, rng), o.imagem)
         except TelegramErro as e:
@@ -309,7 +330,6 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random):
                 comandos.enviar_copias(tg, cfg.admin_chat, o, rng)
             except TelegramErro as e:
                 log(f"Aviso: não consegui mandar a cópia para você: {e}")
-        time.sleep(1)
     return enviadas
 
 

@@ -68,6 +68,7 @@ def main(argv=None):
 
     while True:
         agora = datetime.now(FUSO)
+        inicio_rodada = agora
         if inicio <= agora.hour < fim:
             sincronizar_antes()
             r = subprocess.run([sys.executable, "-m", "bot.main", "--modo", "normal"])
@@ -75,7 +76,8 @@ def main(argv=None):
                 log(f"Rodada terminou com erro (código {r.returncode}); sigo para a próxima.")
             salvar_estado()
 
-        prox = proximo_horario(datetime.now(FUSO), inicio, fim)
+        # Conta 20 min a partir do INÍCIO da rodada (os posts espaçados tomam parte desse tempo)
+        prox = max(proximo_horario(inicio_rodada, inicio, fim), datetime.now(FUSO))
         if prox >= limite:
             # Espera até o limite (inclusive de madrugada) para não emendar execuções vazias
             espera = (limite - datetime.now(FUSO)).total_seconds()

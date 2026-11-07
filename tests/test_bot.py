@@ -623,3 +623,18 @@ def test_vitrine(tmp_path):
     o.preco = 55
     vitrine.guardar(e, [o], AGORA)
     assert vitrine.talvez_publicar(e, "@chocalho", AGORA + timedelta(hours=1), arq, log=lambda m: None)
+
+
+def test_intervalo_aleatorio_entre_posts(monkeypatch):
+    import random as _r
+    from bot import main
+    esperas = []
+    monkeypatch.setattr(main, "dormir", lambda seg: esperas.append(seg))
+    produtos = [prod(f"MLB{i}") for i in range(1, 6)]
+    ml = MLFalso({f"MLB{i}": info(50, 100, f"MLB{i}") for i in range(1, 6)})
+    cfg = Config(canal="@c", max_por_rodada=3, max_por_hora=10, max_por_dia=50,
+                 intervalo_min=4, intervalo_max=8, atraso_max=3)
+    enviadas = main.rodar("normal", cfg, ml, TGFalso(), est.novo(), produtos, agora=AGORA, rng=_r.Random(3))
+    assert len(enviadas) == 3 and len(esperas) == 3  # atraso inicial + 2 intervalos
+    assert 0 <= esperas[0] <= 180 and all(240 <= x <= 480 for x in esperas[1:])
+    assert esperas[1] != esperas[2]
