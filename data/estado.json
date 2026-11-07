@@ -1,5 +1,5 @@
 {
- "aguardando_link": 22,
+ "aguardando_link": 23,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 38
+  "2026-11-07": 40
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3610,6 +3610,12 @@
    "quando": "2026-11-07T12:42-03:00",
    "titulo": "Patinho Amarelo Dançarino Musical Som Luz Marca REDFIN Brinquedo Interativo Cria"
   },
+  "MLB26816126": {
+   "desconto": 0.455,
+   "preco": 17.37,
+   "quando": "2026-11-07T19:22-03:00",
+   "titulo": "Massageador Mordedor De Gengiva Banana Bebê Buba Cor Amarelo"
+  },
   "MLB26851070": {
    "preco": 223.73,
    "quando": "2026-11-06T15:34-03:00"
@@ -3659,6 +3665,12 @@
    "preco": 58.99,
    "quando": "2026-11-07T12:22-03:00",
    "titulo": "Tapete Educativo Interativo Teclado Musical - Verde"
+  },
+  "MLB44895132": {
+   "desconto": 0.422,
+   "preco": 51.99,
+   "quando": "2026-11-07T19:22-03:00",
+   "titulo": "LEGO Minecraft - A Batalha da Lava no Nether - 99 Peças - 21266"
   },
   "MLB45286830": {
    "preco": 90.0,
@@ -5366,6 +5378,10 @@
     [
      "2026-11-07",
      58.79
+    ],
+    [
+     "2026-11-07",
+     65.9
     ]
    ],
    "min": 30.99
@@ -6979,9 +6995,13 @@
     [
      "2026-11-07",
      171.0
+    ],
+    [
+     "2026-11-07",
+     163.29
     ]
    ],
-   "min": 171.0
+   "min": 163.29
   },
   "MLB69086946": {
    "historico": [
@@ -7987,28 +8007,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T19:02-03:00",
+  "em": "2026-11-07T19:22-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 59.99,
-    "desconto": 0.435,
-    "id": "MLB62416353",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_766555-MLA117451533520_102026-F.jpg",
-    "link": "https://meli.la/2n2U2q9",
-    "preco": 33.9,
-    "titulo": "Bola Vinil Inflável Kit Com 10 Bolas Infláveis Cores Sortidas 23cm Praia Piscina Festa Aniversario Parque Atac"
-   },
-   {
-    "categoria": "outros",
-    "de": 379.0,
-    "desconto": 0.407,
-    "id": "MLB47899174",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_775995-MLA120917880437_112026-F.jpg",
-    "link": "https://meli.la/1mbZ5jZ",
-    "preco": 224.57,
-    "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco Estary Shop"
-   },
    {
     "categoria": "brinquedo",
     "de": 89.99,
@@ -8588,6 +8588,26 @@
     "link": "https://meli.la/168F5Rm",
     "preco": 233.0,
     "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
+   },
+   {
+    "categoria": "jogo",
+    "de": 42.99,
+    "desconto": 0.304,
+    "id": "MLB74743819",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_650344-MLA116714869329_082026-F.jpg",
+    "link": "https://meli.la/2qDFvi4",
+    "preco": 29.9,
+    "titulo": "Blister Triplo Pokémon ME05 Escuridão Absoluta"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 40.0,
+    "desconto": 0.302,
+    "id": "MLB76397729",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_636014-MLA114307309560_082026-F.jpg",
+    "link": "https://meli.la/1V8XMyo",
+    "preco": 27.9,
+    "titulo": "Kit Mordedor para Bebê brinquedo Sensorial Silicone com Chocalho 8 Peças Coloridas"
    }
   ]
  },
