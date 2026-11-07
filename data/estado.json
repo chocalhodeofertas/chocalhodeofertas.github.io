@@ -1,5 +1,5 @@
 {
- "aguardando_link": 21,
+ "aguardando_link": 22,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -5205,6 +5205,10 @@
     [
      "2026-11-07",
      139.0
+    ],
+    [
+     "2026-11-07",
+     243.88
     ]
    ],
    "min": 139.0
@@ -6333,6 +6337,10 @@
     [
      "2026-11-07",
      129.44
+    ],
+    [
+     "2026-11-07",
+     63.9
     ]
    ],
    "min": 56.89
@@ -7791,6 +7799,10 @@
     [
      "2026-11-07",
      259.9
+    ],
+    [
+     "2026-11-07",
+     320.0
     ]
    ],
    "min": 259.9
@@ -7847,18 +7859,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T15:32-03:00",
+  "em": "2026-11-07T15:52-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 199.99,
-    "desconto": 0.44,
-    "id": "MLB17489277",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_678645-MLA99447823800_112025-F.jpg",
-    "link": "https://meli.la/1HtwReq",
-    "preco": 111.92,
-    "titulo": "LEGO Classic Maleta Criativa com 213 Peças, Brinquedo de Montar para Crianças"
-   },
    {
     "categoria": "brinquedo",
     "de": 139.0,
@@ -8448,6 +8450,16 @@
     "link": "https://meli.la/2zi74ho",
     "preco": 338.53,
     "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
+   },
+   {
+    "categoria": "alimentacao",
+    "de": 285.7,
+    "desconto": 0.34,
+    "id": "MLB74242291",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_874950-MLA112423071970_062026-F.jpg",
+    "link": "https://meli.la/1hp59vH",
+    "preco": 188.44,
+    "titulo": "Cadeira De Alimentação Infantil Acolchoada 3 Em 1 Portátil Cor Rosa"
    }
   ]
  },
