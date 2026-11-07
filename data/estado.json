@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 30
+  "2026-11-07": 32
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3664,6 +3664,12 @@
    "quando": "2026-11-07T13:32-03:00",
    "titulo": "Tapete De Atividades Musical Bebê Piano Interativo Ginásio Cor Rosa"
   },
+  "MLB46681505": {
+   "desconto": 0.499,
+   "preco": 249.96,
+   "quando": "2026-11-07T17:12-03:00",
+   "titulo": "Cercadinho Bebê Infantil Chiqueirinho Cercado Grande 180x150 Proteção - 8X TECH"
+  },
   "MLB50368079": {
    "preco": 178.38,
    "quando": "2026-11-06T14:13-03:00"
@@ -3731,6 +3737,12 @@
   "MLB62683214": {
    "preco": 35.9,
    "quando": "2026-11-06T19:23-03:00"
+  },
+  "MLB62727038": {
+   "desconto": 0.5,
+   "preco": 69.9,
+   "quando": "2026-11-07T17:12-03:00",
+   "titulo": "Dinossauro Rex de Controle Remoto que Anda e Solta Fumaça com Som Tiranossauro R"
   },
   "MLB62933980": {
    "preco": 205.99,
@@ -7891,7 +7903,7 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T16:52-03:00",
+  "em": "2026-11-07T17:12-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -8495,6 +8507,6 @@
    }
   ]
  },
- "vitrine_assinatura": "41bd65e864eb315ad6008d90f8f72702f9e2a57f",
- "vitrine_publicada_em": "2026-11-07T16:12-03:00"
+ "vitrine_assinatura": "9304f241c37b7309acbe913a54760b4c5d2bea0b",
+ "vitrine_publicada_em": "2026-11-07T17:12-03:00"
 }
