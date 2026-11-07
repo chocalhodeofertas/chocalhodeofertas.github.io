@@ -1,5 +1,5 @@
 {
- "aguardando_link": 23,
+ "aguardando_link": 22,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 40
+  "2026-11-07": 41
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3752,6 +3752,12 @@
    "preco": 62.9,
    "quando": "2026-11-06T15:14-03:00"
   },
+  "MLB62225841": {
+   "desconto": 0.455,
+   "preco": 119.9,
+   "quando": "2026-11-07T19:42-03:00",
+   "titulo": "Bicicleta De Equilíbrio Infantil Andador Sem Pedal 4 Rodas Amarelo"
+  },
   "MLB62416353": {
    "desconto": 0.435,
    "preco": 33.9,
@@ -5382,6 +5388,10 @@
     [
      "2026-11-07",
      65.9
+    ],
+    [
+     "2026-11-07",
+     58.79
     ]
    ],
    "min": 30.99
@@ -7656,9 +7666,13 @@
     [
      "2026-11-06",
      42.9
+    ],
+    [
+     "2026-11-07",
+     35.0
     ]
    ],
-   "min": 42.9
+   "min": 35.0
   },
   "MLB77672147": {
    "historico": [
@@ -8007,28 +8021,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T19:22-03:00",
+  "em": "2026-11-07T19:42-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 89.99,
-    "desconto": 0.422,
-    "id": "MLB44895132",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_892160-MLA82678384373_022025-F.jpg",
-    "link": "https://meli.la/1XMuqAC",
-    "preco": 51.99,
-    "titulo": "LEGO Minecraft - A Batalha da Lava no Nether - 99 Peças - 21266"
-   },
-   {
-    "categoria": "outros",
-    "de": 31.9,
-    "desconto": 0.455,
-    "id": "MLB26816126",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_670798-MLA118562377212_102026-F.jpg",
-    "link": "https://meli.la/1p2LXfo",
-    "preco": 17.37,
-    "titulo": "Massageador Mordedor De Gengiva Banana Bebê Buba Cor Amarelo"
-   },
    {
     "categoria": "brinquedo",
     "de": 219.9,
@@ -8551,16 +8545,6 @@
    },
    {
     "categoria": "brinquedo",
-    "de": 63.9,
-    "desconto": 0.329,
-    "id": "MLB77624729",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_821206-MLA115000447486_082026-F.jpg",
-    "link": "https://meli.la/1J9pYbi",
-    "preco": 42.9,
-    "titulo": "Piano Musical Infantil de Fazenda com 12 Teclas e Sons de Animais, Para Bebê e Criança"
-   },
-   {
-    "categoria": "brinquedo",
     "de": 199.9,
     "desconto": 0.328,
     "id": "MLB27861415",
@@ -8608,6 +8592,36 @@
     "link": "https://meli.la/1V8XMyo",
     "preco": 27.9,
     "titulo": "Kit Mordedor para Bebê brinquedo Sensorial Silicone com Chocalho 8 Peças Coloridas"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 259.9,
+    "desconto": 0.346,
+    "id": "MLB54746525",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_677167-MLA99508828416_112025-F.jpg",
+    "link": "https://meli.la/2abq4Ss",
+    "preco": 169.9,
+    "titulo": "Brinquedo triciclo de 3 rodas para crianças com cesto de bolhas rosa chiclete Atentu triciclo infantil motoca"
+   },
+   {
+    "categoria": "outros",
+    "de": 297.5,
+    "desconto": 0.345,
+    "id": "MLB51668028",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_900690-MLA99937810661_112025-F.jpg",
+    "link": "https://meli.la/1AQ8upt",
+    "preco": 194.79,
+    "titulo": "Cercadinho Bebê Infantil Chiqueirinho Grande Criança Baby Bear Rosa"
+   },
+   {
+    "categoria": "jogo",
+    "de": 189.9,
+    "desconto": 0.319,
+    "id": "MLB19807041",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_760358-MLA114604635979_072026-F.jpg",
+    "link": "https://meli.la/1D7g9GT",
+    "preco": 129.4,
+    "titulo": "Taco De Sinuca Bilhar Maxxi Cruz De Malta Profissional Preto Peso 480 g"
    }
   ]
  },
