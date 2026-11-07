@@ -1,5 +1,5 @@
 {
- "aguardando_link": 22,
+ "aguardando_link": 21,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 28
+  "2026-11-07": 30
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3764,6 +3764,12 @@
    "preco": 122.87,
    "quando": "2026-11-06T20:43-03:00"
   },
+  "MLB67648307": {
+   "desconto": 0.501,
+   "preco": 59.89,
+   "quando": "2026-11-07T16:12-03:00",
+   "titulo": "Dinossauro T-Rex Robô que Anda e Solta Fumaça com Luz e Som Movimenta a Cabeça e"
+  },
   "MLB67655094": {
    "preco": 59.9,
    "quando": "2026-11-06T12:12-03:00"
@@ -3887,6 +3893,12 @@
    "preco": 131.97,
    "quando": "2026-11-07T08:02-03:00",
    "titulo": "Andador Infantil Brinquedo Educativo Musical Didático Bebê Cor Azul-claro"
+  },
+  "MLB80823637": {
+   "desconto": 0.439,
+   "preco": 78.01,
+   "quando": "2026-11-07T16:12-03:00",
+   "titulo": "Kit Completo Hama Beads 28000 Peças 72 Cores Para Iniciantes 2,6mm Brinquedo Miç"
   }
  },
  "posts_cupom": {
@@ -4341,9 +4353,13 @@
     [
      "2026-11-07",
      214.82
+    ],
+    [
+     "2026-11-07",
+     209.0
     ]
    ],
-   "min": 214.82
+   "min": 209.0
   },
   "MLB23857334": {
    "historico": [
@@ -6875,9 +6891,13 @@
     [
      "2026-11-07",
      179.0
+    ],
+    [
+     "2026-11-07",
+     173.53
     ]
    ],
-   "min": 174.79
+   "min": 173.53
   },
   "MLB69086946": {
    "historico": [
@@ -7859,7 +7879,7 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T15:52-03:00",
+  "em": "2026-11-07T16:12-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -8463,6 +8483,6 @@
    }
   ]
  },
- "vitrine_assinatura": "8be7b32773be713655016582e027f5f6f27fedbf",
- "vitrine_publicada_em": "2026-11-07T15:12-03:00"
+ "vitrine_assinatura": "41bd65e864eb315ad6008d90f8f72702f9e2a57f",
+ "vitrine_publicada_em": "2026-11-07T16:12-03:00"
 }
