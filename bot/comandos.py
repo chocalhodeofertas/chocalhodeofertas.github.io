@@ -9,7 +9,7 @@ import html
 import random
 import re
 import unicodedata
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 import requests
 
@@ -31,7 +31,9 @@ AJUDA = (
     "🪇 <b>O que você pode me mandar</b>\n\n"
     "🔗 <b>Um link de afiliado</b> (meli.la/...) → eu descubro o produto e posto no canal\n\n"
     "🎟️ <b>cupom</b> + o texto do cupom → eu formato e posto. Ex.:\n"
-    "<code>cupom 20% OFF em brinquedos acima de R$ 99, código BRINCA20</code>\n\n"
+    "<code>cupom 20% OFF em brinquedos acima de R$ 99, código BRINCA20, até 10/11</code>\n"
+    "(com a data, eu marco como encerrado sozinho quando vencer)\n\n"
+    "❌ <b>esgotou</b> + código → aviso no canal que o cupom acabou\n\n"
     "📊 <b>resumo</b> → números do canal agora\n\n"
     "📦 Para os lotes do Linkbuilder, cole todos os links gerados numa mensagem só.\n\n"
     "<i>Eu leio as mensagens a cada 20 min, das 8h às 22h.</i>"
@@ -116,26 +118,133 @@ def postar_link(link, tg, ml, estado, cfg, agora, session=None, rng=random):
     return f"✅ Postado: {info.titulo[:70]} — {mensagens.brl(preco)}{desc}"
 
 
-def postar_cupom(texto, tg, cfg):
+RE_CODIGO = re.compile(r"c[oó]digo\s*[:\-]?\s*([A-Za-z0-9_\-]{3,})", re.I)
+RE_DATA = re.compile(r"at[eé]\s+(?:o\s+dia\s+)?(\d{1,2})/(\d{1,2})(?:/(\d{2,4}))?"
+                     r"(?:\s*(?:[àa]s)?\s*(\d{1,2})\s*(?:h|:)\s*(\d{2})?)?", re.I)
+RE_HOJE = re.compile(r"(?:s[oó]\s+)?hoje|at[eé]\s+(?:[àa]s\s+)?(\d{1,2})\s*(?:h|:)\s*(\d{2})?", re.I)
+
+
+def extrair_codigo(corpo):
+    m = RE_CODIGO.search(corpo)
+    if m:
+        return m.group(1).upper()
+    # Sem a palavra "código": pega uma palavra toda em maiúsculas com 4+ letras/números
+    cands = [w for w in re.findall(r"\b[A-Z0-9]{4,}\b", corpo) if not w.isdigit() and w not in ("OFF", "FRETE")]
+    return cands[-1] if cands else None
+
+
+def extrair_validade(corpo, agora):
+    """'até 10/11', 'até 10/11 às 18h', 'só hoje', 'até 23h59' → datetime (ou None)."""
+    m = RE_DATA.search(corpo)
+    if m:
+        dia, mes, ano, h, mi = m.groups()
+        ano = int(ano) + (2000 if ano and len(ano) == 2 else 0) if ano else agora.year
+        try:
+            fim = agora.replace(year=ano, month=int(mes), day=int(dia),
+                                hour=int(h) if h else 23, minute=int(mi) if mi else (0 if h else 59), second=0, microsecond=0)
+        except ValueError:
+            return None
+        if not m.group(3) and fim < agora - timedelta(days=60):
+            fim = fim.replace(year=fim.year + 1)  # "até 05/01" dito em dezembro
+        return fim
+    m = RE_HOJE.search(corpo)
+    if m:
+        h, mi = (m.group(1), m.group(2)) if m.group(1) else ("23", "59")
+        try:
+            return agora.replace(hour=int(h), minute=int(mi or 0), second=0, microsecond=0)
+        except ValueError:
+            return None
+    return None
+
+
+def postar_cupom(texto, tg, cfg, estado=None, agora=None):
     corpo = re.sub(r"^\s*/?cupom\s*[:\-–]?\s*", "", texto, flags=re.I).strip()
     if not corpo:
-        return "Escreva o cupom depois da palavra cupom. Ex.: cupom 15% OFF em fraldas, código FRALDA15"
+        return "Escreva o cupom depois da palavra cupom. Ex.: cupom 15% OFF em fraldas, código FRALDA15, até 10/11"
     tem_link = bool(lote.RE_MELI.search(corpo))
     rodape = "Cupons têm quantidade e prazo limitados."
     if tem_link:
         rodape += " #publi · link de afiliado"
     msg = f"🎟️ <b>Cupom pra economizar!</b>\n\n{html.escape(corpo)}\n\n<i>{rodape}</i>"
     try:
-        tg.enviar_texto(cfg.canal, msg, html=True)
+        enviada = tg.enviar_texto(cfg.canal, msg, html=True)
     except TelegramErro as e:
         return f"⚠️ Não consegui postar o cupom: {e}"
+    codigo = extrair_codigo(corpo)
+    validade = extrair_validade(corpo, agora) if agora else None
+    if estado is not None and isinstance(enviada, dict) and enviada.get("message_id"):
+        chave = codigo or f"#{enviada['message_id']}"
+        estado.setdefault("cupons", {})[chave] = {
+            "msg_id": enviada["message_id"], "texto": msg, "status": "ativo",
+            "validade": validade.isoformat(timespec="minutes") if validade else None,
+            "criado": agora.isoformat(timespec="minutes") if agora else None,
+        }
     wa = f"*🎟️ Cupom pra economizar!*\n\n{corpo}\n\n_{rodape}_"
     try:
         tg.enviar_texto(cfg.admin_chat, "📋 Cupom para o WhatsApp:\n\n<pre>" + html.escape(wa) + "</pre>",
                         html=True, botoes=mensagens.botoes_compartilhar(wa, "🎟️ " + corpo[:240]))
     except TelegramErro:
         pass
-    return "✅ Cupom postado no canal!"
+    partes = ["✅ Cupom postado no canal!"]
+    if validade:
+        partes.append(f"⏰ Vale até {validade:%d/%m às %H:%M}: aí eu marco como encerrado sozinho.")
+    if codigo:
+        partes.append(f"Quando esgotar, me mande: <code>esgotou {html.escape(codigo)}</code>")
+    else:
+        partes.append("Não achei o código. Quando esgotar, me mande só: <code>esgotou</code>")
+    return "\n".join(partes)
+
+
+def _marcar_cupom(tg, cfg, cupom, titulo, avisar=None):
+    novo = f"{titulo}\n\n<s>{cupom['texto'].split(chr(10), 1)[0]}</s>\n" + cupom["texto"].split("\n", 1)[1]
+    try:
+        tg.editar_texto(cfg.canal, cupom["msg_id"], novo)
+    except TelegramErro:
+        pass  # mensagem antiga demais ou apagada: segue com o aviso
+    if avisar:
+        tg.enviar_texto(cfg.canal, avisar, html=True, responder_a=cupom["msg_id"])
+
+
+def esgotar_cupom(texto, tg, cfg, estado):
+    codigo = re.sub(r"^\s*/?(esgotou|esgotado|acabou)\s*", "", texto, flags=re.I).strip().upper()
+    ativos = {k: c for k, c in (estado.get("cupons") or {}).items() if c.get("status") == "ativo"}
+    if not ativos:
+        return "Não tenho nenhum cupom ativo registrado."
+    if codigo:
+        chave = next((k for k in ativos if k.upper() == codigo), None)
+        if not chave:
+            return f"Não achei o cupom {html.escape(codigo)}. Ativos: " + ", ".join(html.escape(k) for k in ativos)
+    elif len(ativos) == 1:
+        chave = next(iter(ativos))
+    else:
+        return "Tem mais de um cupom ativo. Me diga qual: " + ", ".join(
+            f"<code>esgotou {html.escape(k)}</code>" for k in ativos)
+    cupom = ativos[chave]
+    nome = "" if chave.startswith("#") else f" {html.escape(chave)}"
+    try:
+        _marcar_cupom(tg, cfg, cupom, "❌ <b>CUPOM ESGOTADO</b>",
+                      f"❌ O cupom{nome} esgotou! Fica de olho no canal que sempre aparece outro 🪇")
+    except TelegramErro as e:
+        return f"⚠️ Não consegui avisar no canal: {e}"
+    cupom["status"] = "esgotado"
+    return f"✅ Marquei o cupom{nome} como esgotado e avisei no canal."
+
+
+def verificar_cupons(tg, cfg, estado, agora, log=print):
+    """Marca como encerrados os cupons vencidos; esquece os antigos."""
+    cupons = estado.get("cupons") or {}
+    for chave, c in list(cupons.items()):
+        if c.get("status") == "ativo" and c.get("validade"):
+            if datetime.fromisoformat(c["validade"]) < agora:
+                try:
+                    _marcar_cupom(tg, cfg, c, "⏰ <b>CUPOM ENCERRADO</b>")
+                    c["status"] = "encerrado"
+                    log(f"Cupom {chave} encerrado (venceu).")
+                except TelegramErro as e:
+                    log(f"Aviso: não consegui marcar o cupom {chave}: {e}")
+        criado = c.get("criado")
+        if criado and (agora - datetime.fromisoformat(criado)).days > 10:
+            del cupons[chave]
 
 
 # ---------- resumo ----------
@@ -212,7 +321,9 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
     t = (texto or "").strip()
     n = _norm(t)
     if n.startswith(("cupom", "/cupom")):
-        return postar_cupom(t, tg, cfg)
+        return postar_cupom(t, tg, cfg, estado, agora)
+    if n.startswith(("esgotou", "esgotado", "acabou", "/esgotou")):
+        return esgotar_cupom(t, tg, cfg, estado)
     if n in ("resumo", "/resumo", "status", "/status"):
         return montar_resumo(estado, cfg, tg, agora)
     links = lote.RE_MELI.findall(t)

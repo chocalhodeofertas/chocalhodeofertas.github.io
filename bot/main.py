@@ -513,6 +513,7 @@ def main(argv=None):
             lista = montar_lista(cfg, produtos, estado)
         rodar(args.modo, cfg, ml, tg, estado, lista, agora=agora)
         if args.modo == "normal":
+            comandos.verificar_cupons(tg, cfg, estado, agora, log)
             comandos.talvez_resumo_diario(tg, estado, cfg, agora, log)
             vitrine.talvez_publicar(estado, cfg.canal, agora, log=log)
     except AcessoNegado as e:

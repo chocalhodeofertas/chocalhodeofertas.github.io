@@ -37,9 +37,18 @@ class Telegram:
             dados["offset"] = offset
         return self._chamar("getUpdates", **dados)
 
-    def enviar_texto(self, chat, texto, html=False, botoes=None):
+    def editar_texto(self, chat, message_id, texto, html=True):
+        dados = {"chat_id": chat, "message_id": message_id, "text": texto,
+                 "link_preview_options": {"is_disabled": True}}
+        if html:
+            dados["parse_mode"] = "HTML"
+        return self._chamar("editMessageText", **dados)
+
+    def enviar_texto(self, chat, texto, html=False, botoes=None, responder_a=None):
         """botoes: lista de (rótulo, url), um botão por linha."""
         dados = {"chat_id": chat, "text": texto, "link_preview_options": {"is_disabled": True}}
+        if responder_a:
+            dados["reply_parameters"] = {"message_id": responder_a}
         if html:
             dados["parse_mode"] = "HTML"
         if botoes:

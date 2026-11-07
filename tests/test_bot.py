@@ -471,8 +471,13 @@ class TGCmd:
     def atualizacoes(self, offset=None):
         return self.updates
 
-    def enviar_texto(self, chat, t, html=False, botoes=None):
+    def enviar_texto(self, chat, t, html=False, botoes=None, responder_a=None):
         self.textos.append((chat, t))
+        self.respostas = getattr(self, "respostas", []) + [responder_a]
+        return {"message_id": 500 + len(self.textos)}
+
+    def editar_texto(self, chat, message_id, texto, html=True):
+        self.editados = getattr(self, "editados", []) + [(chat, message_id, texto)]
 
     def enviar_oferta(self, chat, legenda, imagem=None):
         self.ofertas.append((chat, legenda))
@@ -638,3 +643,44 @@ def test_intervalo_aleatorio_entre_posts(monkeypatch):
     assert len(enviadas) == 3 and len(esperas) == 3  # atraso inicial + 2 intervalos
     assert 0 <= esperas[0] <= 180 and all(240 <= x <= 480 for x in esperas[1:])
     assert esperas[1] != esperas[2]
+
+
+# ---------- cupons: esgotado e validade ----------
+
+def test_extrair_codigo_e_validade():
+    from bot import comandos
+    assert comandos.extrair_codigo("15% OFF em fraldas, código fralda15") == "FRALDA15"
+    assert comandos.extrair_codigo("R$ 20 OFF acima de R$ 99 com BEBE20 no app") == "BEBE20"
+    assert comandos.extrair_codigo("10% OFF em tudo") is None
+    v = comandos.extrair_validade
+    assert v("válido até 10/11", AGORA) == AGORA.replace(day=10, hour=23, minute=59, second=0)
+    assert v("até 10/11 às 18h", AGORA) == AGORA.replace(day=10, hour=18, minute=0, second=0)
+    assert v("só hoje!", AGORA) == AGORA.replace(hour=23, minute=59, second=0)
+    assert v("até 15h30", AGORA) == AGORA.replace(hour=15, minute=30, second=0)
+    assert v("até 05/01", AGORA.replace(month=12)).year == AGORA.year + 1
+    assert v("sem data", AGORA) is None
+
+
+def test_cupom_esgotou_e_vence():
+    from bot import comandos
+    e, tg = est.novo(), TGCmd()
+    r = comandos.tratar_texto("cupom 20% OFF em brinquedos, código BRINCA20, até 10/11", tg, None, e,
+                              cfg_cmd(), AGORA)
+    assert "esgotou BRINCA20" in r and "10/11" in r
+    c = e["cupons"]["BRINCA20"]
+    assert c["status"] == "ativo" and c["msg_id"] == 501 and c["validade"].startswith("2026-11-10T23:59")
+    comandos.tratar_texto("cupom 10% OFF em roupas, código ROUPA10", tg, None, e, cfg_cmd(), AGORA)
+    assert "Me diga qual" in comandos.tratar_texto("esgotou", tg, None, e, cfg_cmd(), AGORA)
+    r = comandos.tratar_texto("Esgotou brinca20", tg, None, e, cfg_cmd(), AGORA)
+    assert r.startswith("✅") and e["cupons"]["BRINCA20"]["status"] == "esgotado"
+    assert tg.editados[-1][1] == 501 and "ESGOTADO" in tg.editados[-1][2]
+    assert tg.respostas[-1] == 501 and "esgotou" in tg.textos[-1][1]
+    # Validade: ROUPA10 não tem data; um cupom "só hoje" vence às 23h59
+    comandos.tratar_texto("cupom R$ 15 OFF em fraldas, código FRALDA15, só hoje", tg, None, e, cfg_cmd(), AGORA)
+    comandos.verificar_cupons(tg, cfg_cmd(), e, AGORA.replace(hour=22), log=lambda m: None)
+    assert e["cupons"]["FRALDA15"]["status"] == "ativo"
+    comandos.verificar_cupons(tg, cfg_cmd(), e, AGORA + timedelta(days=1), log=lambda m: None)
+    assert e["cupons"]["FRALDA15"]["status"] == "encerrado" and "ENCERRADO" in tg.editados[-1][2]
+    assert e["cupons"]["ROUPA10"]["status"] == "ativo"
+    comandos.verificar_cupons(tg, cfg_cmd(), e, AGORA + timedelta(days=11), log=lambda m: None)
+    assert e["cupons"] == {}  # antigos são esquecidos
