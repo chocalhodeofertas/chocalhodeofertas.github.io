@@ -1,5 +1,5 @@
 {
- "aguardando_link": 22,
+ "aguardando_link": 21,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 22
+  "2026-11-07": 23
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3630,6 +3630,12 @@
    "preco": 78.9,
    "quando": "2026-11-06T14:13-03:00"
   },
+  "MLB43292361": {
+   "desconto": 0.478,
+   "preco": 114.9,
+   "quando": "2026-11-07T14:12-03:00",
+   "titulo": "Andador Educativo Empurrar Infantil Bebê Musical Brinquedo Atentu Rosa"
+  },
   "MLB44672426": {
    "desconto": 0.546,
    "preco": 58.99,
@@ -4762,6 +4768,10 @@
     [
      "2026-11-07",
      20.9
+    ],
+    [
+     "2026-11-07",
+     21.0
     ]
    ],
    "min": 18.43
@@ -7791,18 +7801,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T13:52-03:00",
+  "em": "2026-11-07T14:12-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 259.9,
-    "desconto": 0.481,
-    "id": "MLB62645299",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_978153-MLA99845859027_112025-F.jpg",
-    "link": "https://meli.la/2M7kgHJ",
-    "preco": 134.9,
-    "titulo": "Mesa de Atividades Infantil 2 em 1 com Cadeira Orelhinha para Blocos de Montar e Desenhar Rosa"
-   },
    {
     "categoria": "outros",
     "de": 220.0,
@@ -8392,9 +8392,19 @@
     "link": "https://meli.la/23eCNt7",
     "preco": 51.9,
     "titulo": "Patinete Infantil 3 Rodas com Led/Dobrável Menino/Menina"
+   },
+   {
+    "categoria": "outros",
+    "de": 529.9,
+    "desconto": 0.385,
+    "id": "MLB27718012",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_823352-MLA116565097240_092026-F.jpg",
+    "link": "https://meli.la/34osqQC",
+    "preco": 325.99,
+    "titulo": "Berço Portátil Basic Cinza Galzerano Chiqueiro Cercado Bebê"
    }
   ]
  },
- "vitrine_assinatura": "8efe200364f4e3674de8a397d414ee10574d3514",
- "vitrine_publicada_em": "2026-11-07T13:12-03:00"
+ "vitrine_assinatura": "e2c890f05ba62391946086b56bfcd6910b18e084",
+ "vitrine_publicada_em": "2026-11-07T14:12-03:00"
 }
