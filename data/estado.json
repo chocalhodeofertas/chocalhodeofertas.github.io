@@ -1,5 +1,5 @@
 {
- "aguardando_link": 21,
+ "aguardando_link": 22,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 21
+  "2026-11-07": 22
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3697,6 +3697,12 @@
   "MLB61884199": {
    "preco": 62.9,
    "quando": "2026-11-06T15:14-03:00"
+  },
+  "MLB62645299": {
+   "desconto": 0.481,
+   "preco": 134.9,
+   "quando": "2026-11-07T13:52-03:00",
+   "titulo": "Mesa de Atividades Infantil 2 em 1 com Cadeira Orelhinha para Blocos de Montar e"
   },
   "MLB62681535": {
    "desconto": 0.606,
@@ -6867,6 +6873,10 @@
     [
      "2026-11-06",
      154.9
+    ],
+    [
+     "2026-11-07",
+     195.9
     ]
    ],
    "min": 108.52
@@ -7003,9 +7013,13 @@
     [
      "2026-11-07",
      25.79
+    ],
+    [
+     "2026-11-07",
+     25.0
     ]
    ],
-   "min": 25.59
+   "min": 25.0
   },
   "MLB71892696": {
    "historico": [
@@ -7777,28 +7791,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T13:32-03:00",
+  "em": "2026-11-07T13:52-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 59.9,
-    "desconto": 0.499,
-    "id": "MLB77421641",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_932322-MLA114852699940_082026-F.jpg",
-    "link": "https://meli.la/237Kzg1",
-    "preco": 29.99,
-    "titulo": "Boneca Bailarina Fada Princesa Articulada Ballet Com Asas Brilhantes Grande 30cm Colorida com Acessorios - Pet"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 149.99,
-    "desconto": 0.534,
-    "id": "MLB45801082",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_729971-MLA117826961230_102026-F.jpg",
-    "link": "https://meli.la/1y1cfyY",
-    "preco": 69.9,
-    "titulo": "Tapete De Atividades Musical Bebê Piano Interativo Ginásio Cor Rosa"
-   },
    {
     "categoria": "brinquedo",
     "de": 259.9,
@@ -8378,6 +8372,26 @@
     "link": "https://meli.la/2wv2B2q",
     "preco": 23.99,
     "titulo": "Mosquiteiro Para Carrinho Bebê Conforto Portátil Universal Branco"
+   },
+   {
+    "categoria": "jogo",
+    "de": 89.99,
+    "desconto": 0.344,
+    "id": "MLB60118314",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_862731-MLA99898072617_112025-F.jpg",
+    "link": "https://meli.la/1N87rHK",
+    "preco": 59.0,
+    "titulo": "Kit Ping Pong Raquete Rede Retrátil Mesa Tênis Portátil Ultshop Ferragens"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 78.99,
+    "desconto": 0.343,
+    "id": "MLB25656186",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_944838-MLA99549576346_122025-F.jpg",
+    "link": "https://meli.la/23eCNt7",
+    "preco": 51.9,
+    "titulo": "Patinete Infantil 3 Rodas com Led/Dobrável Menino/Menina"
    }
   ]
  },
