@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 33
+  "2026-11-07": 35
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3580,6 +3580,12 @@
    "quando": "2026-11-07T15:32-03:00",
    "titulo": "LEGO Classic Maleta Criativa com 213 Peças, Brinquedo de Montar para Crianças"
   },
+  "MLB18581975": {
+   "desconto": 0.442,
+   "preco": 195.21,
+   "quando": "2026-11-07T18:12-03:00",
+   "titulo": "LEGO Classic Caixa Média de Peças Criativas 10696; peças LEGO em 35 cores difere"
+  },
   "MLB23581207": {
    "preco": 211.94,
    "quando": "2026-11-06T20:23-03:00"
@@ -3767,6 +3773,12 @@
    "preco": 124.99,
    "quando": "2026-11-07T14:32-03:00",
    "titulo": "Saída De Maternidade Em Tricô Rosa Bebê Rosa 0 A 3 Meses"
+  },
+  "MLB64866580": {
+   "desconto": 0.447,
+   "preco": 27.11,
+   "quando": "2026-11-07T18:12-03:00",
+   "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensoria"
   },
   "MLB65579852": {
    "desconto": 0.651,
@@ -7873,6 +7885,10 @@
     [
      "2026-11-07",
      259.9
+    ],
+    [
+     "2026-11-07",
+     320.0
     ]
    ],
    "min": 259.9
@@ -7929,7 +7945,7 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T17:52-03:00",
+  "em": "2026-11-07T18:12-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -8533,6 +8549,6 @@
    }
   ]
  },
- "vitrine_assinatura": "9304f241c37b7309acbe913a54760b4c5d2bea0b",
- "vitrine_publicada_em": "2026-11-07T17:12-03:00"
+ "vitrine_assinatura": "ca595b839903666254ddf23cbd9854d4879a294f",
+ "vitrine_publicada_em": "2026-11-07T18:12-03:00"
 }
