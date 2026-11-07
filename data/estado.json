@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 32
+  "2026-11-07": 33
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3718,6 +3718,12 @@
    "preco": 429.0,
    "quando": "2026-11-06T21:24-03:00"
   },
+  "MLB61794290": {
+   "desconto": 0.454,
+   "preco": 436.4,
+   "quando": "2026-11-07T17:32-03:00",
+   "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi Baby - CINZA"
+  },
   "MLB61884199": {
    "preco": 62.9,
    "quando": "2026-11-06T15:14-03:00"
@@ -4085,6 +4091,10 @@
     [
      "2026-11-07",
      45.59
+    ],
+    [
+     "2026-11-07",
+     45.19
     ]
    ],
    "min": 27.87
@@ -6915,9 +6925,13 @@
     [
      "2026-11-07",
      173.53
+    ],
+    [
+     "2026-11-07",
+     171.0
     ]
    ],
-   "min": 173.53
+   "min": 171.0
   },
   "MLB69086946": {
    "historico": [
@@ -7903,28 +7917,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T17:12-03:00",
+  "em": "2026-11-07T17:32-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 139.9,
-    "desconto": 0.5,
-    "id": "MLB62727038",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_884416-MLA111969070636_062026-F.jpg",
-    "link": "https://meli.la/2egipGa",
-    "preco": 69.9,
-    "titulo": "Dinossauro Rex de Controle Remoto que Anda e Solta Fumaça com Som Tiranossauro Robô de Brinquedo Realista Inte"
-   },
-   {
-    "categoria": "outros",
-    "de": 498.73,
-    "desconto": 0.499,
-    "id": "MLB46681505",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_932524-MLA116048225124_092026-F.jpg",
-    "link": "https://meli.la/1BZwpcU",
-    "preco": 249.96,
-    "titulo": "Cercadinho Bebê Infantil Chiqueirinho Cercado Grande 180x150 Proteção - 8X TECH"
-   },
    {
     "categoria": "quarto",
     "de": 799.9,
@@ -8504,6 +8498,26 @@
     "link": "https://meli.la/2o9bXfw",
     "preco": 236.45,
     "titulo": "Piano Teclado Musical Infantil Pianinho Microfone Brinquedo Cor Rosa"
+   },
+   {
+    "categoria": "outros",
+    "de": 26.39,
+    "desconto": 0.357,
+    "id": "MLB17876024",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_940727-MLA117363373934_102026-F.jpg",
+    "link": "https://meli.la/2aCQKSR",
+    "preco": 16.96,
+    "titulo": "Sabonete Líquido Hora Do Sono 200ml Baby Johnson's"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 173.47,
+    "desconto": 0.309,
+    "id": "MLB44604914",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_925988-MLA99936898199_112025-F.jpg",
+    "link": "https://meli.la/21aUBb8",
+    "preco": 119.9,
+    "titulo": "Atentu Mini bateria infantil atentu banquinho brinquedo com 5 tambores vermelho"
    }
   ]
  },
