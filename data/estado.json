@@ -5138,6 +5138,10 @@
     [
      "2026-11-06",
      33.15
+    ],
+    [
+     "2026-11-07",
+     33.53
     ]
    ],
    "min": 33.15
@@ -5622,6 +5626,10 @@
     [
      "2026-11-07",
      53.68
+    ],
+    [
+     "2026-11-07",
+     61.88
     ]
    ],
    "min": 53.68
@@ -7883,7 +7891,7 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T16:32-03:00",
+  "em": "2026-11-07T16:52-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -7964,16 +7972,6 @@
     "link": "https://meli.la/1mbZ5jZ",
     "preco": 224.57,
     "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco Estary Shop"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 99.9,
-    "desconto": 0.463,
-    "id": "MLB49086353",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_644538-MLA108177180572_032026-F.jpg",
-    "link": "https://meli.la/1GLLQxc",
-    "preco": 53.68,
-    "titulo": "Boia Bote Bebê Infantil Inflável Piscina Com Cobertura De Proteção UV Cor Azul/amarelo Indue Variedades"
    },
    {
     "categoria": "brinquedo",
@@ -8404,6 +8402,16 @@
     "link": "https://meli.la/29ASzgj",
     "preco": 61.65,
     "titulo": "Tapete De Atividades Para Bebê Piano Musical Ginásio Móbile 5 Brinquedos Piuí Rosa Maxi Baby"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 99.9,
+    "desconto": 0.381,
+    "id": "MLB49086353",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_644538-MLA108177180572_032026-F.jpg",
+    "link": "https://meli.la/1GLLQxc",
+    "preco": 61.88,
+    "titulo": "Boia Bote Bebê Infantil Inflável Piscina Com Cobertura De Proteção UV Cor Azul/amarelo Indue Variedades"
    },
    {
     "categoria": "passeio",
