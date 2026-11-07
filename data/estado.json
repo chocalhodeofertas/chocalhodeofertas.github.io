@@ -6957,6 +6957,10 @@
     [
      "2026-11-07",
      195.9
+    ],
+    [
+     "2026-11-07",
+     195.0
     ]
    ],
    "min": 108.52
@@ -7879,28 +7883,8 @@
  },
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T16:12-03:00",
+  "em": "2026-11-07T16:32-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 139.0,
-    "desconto": 0.439,
-    "id": "MLB80823637",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_700858-MLA118454303778_102026-F.jpg",
-    "link": "https://meli.la/32VR6qX",
-    "preco": 78.01,
-    "titulo": "Kit Completo Hama Beads 28000 Peças 72 Cores Para Iniciantes 2,6mm Brinquedo Miçangas De Passar Pixel Art Mold"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 119.9,
-    "desconto": 0.501,
-    "id": "MLB67648307",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_761625-MLA109285417256_042026-F.jpg",
-    "link": "https://meli.la/1hGL88n",
-    "preco": 59.89,
-    "titulo": "Dinossauro T-Rex Robô que Anda e Solta Fumaça com Luz e Som Movimenta a Cabeça e as Patas Alimentação a Pilha "
-   },
    {
     "categoria": "brinquedo",
     "de": 139.9,
@@ -8480,6 +8464,26 @@
     "link": "https://meli.la/1hp59vH",
     "preco": 188.44,
     "titulo": "Cadeira De Alimentação Infantil Acolchoada 3 Em 1 Portátil Cor Rosa"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 78.98,
+    "desconto": 0.337,
+    "id": "MLB79164975",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_609797-MLA117801428939_092026-F.jpg",
+    "link": "https://meli.la/1AmC4eT",
+    "preco": 52.36,
+    "titulo": "Cavalinho Upa Upa Good Vision Vermelho Inflável de Borracha Com Som e LED Para Crianças"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 369.9,
+    "desconto": 0.361,
+    "id": "MLB42088228",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_659096-MLA99483685468_112025-F.jpg",
+    "link": "https://meli.la/2o9bXfw",
+    "preco": 236.45,
+    "titulo": "Piano Teclado Musical Infantil Pianinho Microfone Brinquedo Cor Rosa"
    }
   ]
  },
