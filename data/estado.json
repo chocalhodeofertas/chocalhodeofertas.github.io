@@ -1,5 +1,5 @@
 {
- "aguardando_link": 49,
+ "aguardando_link": 51,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -6437,9 +6437,13 @@
     [
      "2026-11-06",
      20.24
+    ],
+    [
+     "2026-11-07",
+     19.7
     ]
    ],
-   "min": 19.9
+   "min": 19.7
   },
   "MLB66880692": {
    "historico": [
@@ -7520,9 +7524,13 @@
     [
      "2026-11-07",
      315.0
+    ],
+    [
+     "2026-11-07",
+     259.9
     ]
    ],
-   "min": 315.0
+   "min": 259.9
   },
   "MLB80779802": {
    "historico": [
@@ -7576,18 +7584,8 @@
  },
  "tg_offset": 273517978,
  "vitrine": {
-  "em": "2026-11-07T10:22-03:00",
+  "em": "2026-11-07T10:42-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 179.9,
-    "desconto": 0.575,
-    "id": "MLB68086238",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_825513-MLA109629080834_042026-F.jpg",
-    "link": "https://meli.la/25BAUrc",
-    "preco": 76.53,
-    "titulo": "Boneca Bebê Reborn Menino Recém Nascido Pode Dar Banho"
-   },
    {
     "categoria": "brinquedo",
     "de": 159.9,
@@ -8177,6 +8175,16 @@
     "link": "https://meli.la/1jDpjpK",
     "preco": 399.9,
     "titulo": "Cadeirinha Automotiva Atentu BS05 para Bebê e Criança de 9 a 36 kg Vermelha"
+   },
+   {
+    "categoria": "outros",
+    "de": 349.99,
+    "desconto": 0.377,
+    "id": "MLB79143996",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_971252-MLA115967786486_092026-F.jpg",
+    "link": "https://meli.la/1tyysNv",
+    "preco": 218.0,
+    "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco 127"
    }
   ]
  },
