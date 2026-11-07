@@ -1495,7 +1495,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 6
+  "2026-11-07": 8
  },
  "cupons": {
   "MODAAQUI": {
@@ -3610,6 +3610,12 @@
    "preco": 29.85,
    "quando": "2026-11-06T17:35-03:00"
   },
+  "MLB24647472": {
+   "desconto": 0.558,
+   "preco": 139.9,
+   "quando": "2026-11-07T10:02-03:00",
+   "titulo": "Bicicleta de Equilíbrio Infantil Sem Pedal Vermelho Buba"
+  },
   "MLB26851070": {
    "preco": 223.73,
    "quando": "2026-11-06T15:34-03:00"
@@ -3745,6 +3751,12 @@
    "preco": 23.99,
    "quando": "2026-11-07T09:22-03:00",
    "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
+  },
+  "MLB75537532": {
+   "desconto": 0.599,
+   "preco": 23.99,
+   "quando": "2026-11-07T10:02-03:00",
+   "titulo": "Naninha Ursinho Algodão Doce Bebê Antialérgica Azul Recém-Nascido 0 a 24 Meses T"
   },
   "MLB76227639": {
    "preco": 37.0,
@@ -7550,7 +7562,7 @@
  },
  "tg_offset": 273517978,
  "vitrine": {
-  "em": "2026-11-07T09:42-03:00",
+  "em": "2026-11-07T10:02-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -8154,6 +8166,6 @@
    }
   ]
  },
- "vitrine_assinatura": "2e4d3627b8653ae68d57bc452440b5bc6199f416",
- "vitrine_publicada_em": "2026-11-07T09:02-03:00"
+ "vitrine_assinatura": "7c56f8a817120a3495745dc8babb85d275d3ff78",
+ "vitrine_publicada_em": "2026-11-07T10:02-03:00"
 }
