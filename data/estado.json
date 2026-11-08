@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 38
+  "2026-11-08": 40
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3744,6 +3744,12 @@
    "preco": 52.49,
    "quando": "2026-11-06T15:14-03:00"
   },
+  "MLB29756545": {
+   "desconto": 0.351,
+   "preco": 434.99,
+   "quando": "2026-11-08T19:35-03:00",
+   "titulo": "Cadeira de Carro Infantil 0 a 36Kg Elite 4 em 1 - Maxi Baby - Preto"
+  },
   "MLB30890350": {
    "preco": 69.9,
    "quando": "2026-11-06T18:43-03:00"
@@ -3851,6 +3857,12 @@
    "preco": 224.57,
    "quando": "2026-11-07T19:02-03:00",
    "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco Estary Sh"
+  },
+  "MLB49086353": {
+   "desconto": 0.381,
+   "preco": 61.88,
+   "quando": "2026-11-08T19:35-03:00",
+   "titulo": "Boia Bote Bebê Infantil Inflável Piscina Com Cobertura De Proteção UV Cor Azul/a"
   },
   "MLB50368079": {
    "preco": 178.38,
@@ -8747,6 +8759,10 @@
     [
      "2026-11-07",
      109.0
+    ],
+    [
+     "2026-11-08",
+     82.9
     ]
    ],
    "min": 82.9
@@ -9102,6 +9118,10 @@
     [
      "2026-11-08",
      317.0
+    ],
+    [
+     "2026-11-08",
+     320.0
     ]
    ],
    "min": 259.9
@@ -9159,28 +9179,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T19:15-03:00",
+  "em": "2026-11-08T19:35-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 137.99,
-    "desconto": 0.445,
-    "id": "MLB70334862",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_972685-MLA112274391971_052026-F.jpg",
-    "link": "https://meli.la/2LKN8M4",
-    "preco": 76.62,
-    "titulo": "Mini Geladeira Brinquedo +2 Bolas Mini Brands Surpresa Azul-turquesa"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 99.9,
-    "desconto": 0.383,
-    "id": "MLB74913640",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_806228-MLA114059791627_072026-F.jpg",
-    "link": "https://meli.la/29ASzgj",
-    "preco": 61.65,
-    "titulo": "Tapete De Atividades Para Bebê Piano Musical Ginásio Móbile 5 Brinquedos Piuí Rosa Maxi Baby"
-   },
    {
     "categoria": "brinquedo",
     "de": 99.9,
@@ -9760,6 +9760,26 @@
     "link": "https://meli.la/1RGvMdG",
     "preco": 37.49,
     "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 179.86,
+    "desconto": 0.25,
+    "id": "MLB47257696",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_868848-MLA99558180590_122025-F.jpg",
+    "link": "https://meli.la/1Z3r5VF",
+    "preco": 134.83,
+    "titulo": "Brastoy Blocos Magnéticos Brinquedo Educativo Educação Infantil 65 Pecas Construção Empilhamento Jogo"
+   },
+   {
+    "categoria": "jogo",
+    "de": 79.99,
+    "desconto": 0.25,
+    "id": "MLB61211409",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_680820-MLA105595010945_012026-F.jpg",
+    "link": "https://meli.la/1NSaJZf",
+    "preco": 59.99,
+    "titulo": "Jogo Stop Eletrônico Trava Letras Leeboom Com Temporizador Educativo 10 Segundos Em Português Cor Vermelho"
    }
   ]
  },
