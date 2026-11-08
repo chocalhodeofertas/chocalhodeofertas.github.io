@@ -4444,9 +4444,13 @@
     [
      "2026-11-06",
      50.19
+    ],
+    [
+     "2026-11-08",
+     45.0
     ]
    ],
-   "min": 50.19
+   "min": 45.0
   },
   "MLB19569079": {
    "historico": [
@@ -4957,6 +4961,10 @@
     [
      "2026-11-07",
      139.9
+    ],
+    [
+     "2026-11-08",
+     155.9
     ]
    ],
    "min": 139.9
@@ -4991,6 +4999,10 @@
     [
      "2026-11-08",
      22.89
+    ],
+    [
+     "2026-11-08",
+     21.26
     ]
    ],
    "min": 18.2
@@ -8754,6 +8766,10 @@
     [
      "2026-11-08",
      317.0
+    ],
+    [
+     "2026-11-08",
+     320.0
     ]
    ],
    "min": 259.9
@@ -8811,27 +8827,17 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T16:15-03:00",
+  "em": "2026-11-08T16:35-03:00",
   "itens": [
    {
-    "categoria": "jogo",
-    "de": 196.99,
-    "desconto": 0.648,
-    "id": "MLB61700105",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_813285-MLA97324226431_112025-F.jpg",
-    "link": "https://meli.la/2SGo6Vo",
-    "preco": 69.25,
-    "titulo": "Box Pokemon Baralho De Batalha Mewtwo Ex Equipe Rocket Português"
-   },
-   {
-    "categoria": "passeio",
-    "de": 119.0,
-    "desconto": 0.371,
-    "id": "MLB19491178",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_886802-MLA99508601024_112025-F.jpg",
-    "link": "https://meli.la/2onVFMh",
-    "preco": 74.9,
-    "titulo": "Assento de Carro Infantil Elevação Booster Fit Up 15 à 36kgs Preto Maxi Baby - 21423"
+    "categoria": "outros",
+    "de": 34.9,
+    "desconto": 0.391,
+    "id": "MLB24679612",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
+    "link": "https://meli.la/1hn9qT6",
+    "preco": 21.26,
+    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
    },
    {
     "categoria": "brinquedo",
@@ -8922,16 +8928,6 @@
     "link": "https://meli.la/1XmiRWF",
     "preco": 434.99,
     "titulo": "Cadeira de Carro Infantil 0 a 36Kg Elite 4 em 1 - Maxi Baby - Preto"
-   },
-   {
-    "categoria": "outros",
-    "de": 77.36,
-    "desconto": 0.351,
-    "id": "MLB19516361",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_684445-MLA99450736120_112025-F.jpg",
-    "link": "https://meli.la/1zcyuvR",
-    "preco": 50.19,
-    "titulo": "Fralda Pom Pom Protek Proteção de Mãe G 68 Unidades"
    },
    {
     "categoria": "outros",
@@ -9224,16 +9220,6 @@
     "titulo": "1 Seringa Lavagem Nariz + 1 Aspirador Sugador Catarro Bebê A Rosa-claro"
    },
    {
-    "categoria": "outros",
-    "de": 31.9,
-    "desconto": 0.282,
-    "id": "MLB24679612",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
-    "link": "https://meli.la/1hn9qT6",
-    "preco": 22.89,
-    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
-   },
-   {
     "categoria": "brinquedo",
     "de": 34.0,
     "desconto": 0.3,
@@ -9412,6 +9398,36 @@
     "link": "https://meli.la/2qpr2WC",
     "preco": 387.33,
     "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
+   },
+   {
+    "categoria": "quarto",
+    "de": 149.0,
+    "desconto": 0.289,
+    "id": "MLB22191149",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_978012-MLA96133498115_102025-F.jpg",
+    "link": "https://meli.la/1YA9wAs",
+    "preco": 106.0,
+    "titulo": "Edredom Casal Queen Coberdrom Sherpa Cor Rose LuckBaby"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 155.98,
+    "desconto": 0.288,
+    "id": "MLB63158085",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_630465-MLA119888186361_102026-F.jpg",
+    "link": "https://meli.la/1NqNEGq",
+    "preco": 111.0,
+    "titulo": "Mobile Musical Berço Bebê Projetor Estrelas Controle Remoto Rotação 360"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 269.9,
+    "desconto": 0.26,
+    "id": "MLB56421479",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_799183-MLA100028172139_122025-F.jpg",
+    "link": "https://meli.la/2MQPV2P",
+    "preco": 199.72,
+    "titulo": "Patins Inline Infantil DM Toys Ajustável 34-37 Rosa com Kit Proteção"
    }
   ]
  },
