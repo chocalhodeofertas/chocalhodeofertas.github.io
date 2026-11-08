@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 14
+  "2026-11-08": 16
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3739,6 +3739,12 @@
    "quando": "2026-11-07T19:22-03:00",
    "titulo": "LEGO Minecraft - A Batalha da Lava no Nether - 99 Peças - 21266"
   },
+  "MLB44958164": {
+   "desconto": 0.486,
+   "preco": 180.0,
+   "quando": "2026-11-08T12:33-03:00",
+   "titulo": "Cadeira De Alimentação Bebê Portátil 3em1 Styll Baby Segura Cor Cinza Cor"
+  },
   "MLB45286830": {
    "preco": 90.0,
    "quando": "2026-11-06T17:35-03:00"
@@ -3986,6 +3992,12 @@
    "preco": 37.0,
    "quando": "2026-11-07T15:12-03:00",
    "titulo": "Tablet Educativo Infantil Bilíngue 54 Funções Azul Interativo Português Inglês L"
+  },
+  "MLB72024607": {
+   "desconto": 0.465,
+   "preco": 26.75,
+   "quando": "2026-11-08T12:33-03:00",
+   "titulo": "Assento Redutor Sanitário Infantil Almofadado Acolchoado Desfralde Bebê Criança "
   },
   "MLB72653285": {
    "desconto": 0.397,
@@ -4773,6 +4785,10 @@
     [
      "2026-11-08",
      32.99
+    ],
+    [
+     "2026-11-08",
+     32.17
     ]
    ],
    "min": 32.17
@@ -7156,6 +7172,10 @@
     [
      "2026-11-08",
      42.95
+    ],
+    [
+     "2026-11-08",
+     42.86
     ]
    ],
    "min": 41.53
@@ -8641,28 +8661,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517980,
  "vitrine": {
-  "em": "2026-11-08T12:13-03:00",
+  "em": "2026-11-08T12:33-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 10.0,
-    "desconto": 0.55,
-    "id": "MLB69086946",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_610955-MLA111166354385_052026-F.jpg",
-    "link": "https://meli.la/2o5yjsh",
-    "preco": 4.5,
-    "titulo": "Pacote Figurinhas Copa do mundo 2026 PANINI"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 157.98,
-    "desconto": 0.555,
-    "id": "MLB80331375",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_895387-MLA119039304811_102026-F.jpg",
-    "link": "https://meli.la/29sFqaC",
-    "preco": 70.29,
-    "titulo": "Piscina de Bolinhas Lelor Infantil com 50 Bolinhas, Estampa Fundo do Mar"
-   },
    {
     "categoria": "brinquedo",
     "de": 350.0,
@@ -9242,6 +9242,26 @@
     "link": "https://meli.la/1VMFgJB",
     "preco": 51.0,
     "titulo": "Maiô Natação Infantil Biquíni Manga Longa Proteção Solar Uv Cor Água Tamanho 4"
+   },
+   {
+    "categoria": "outros",
+    "de": 51.04,
+    "desconto": 0.317,
+    "id": "MLB18392677",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_990051-MLA110123026010_042026-F.jpg",
+    "link": "https://meli.la/2pHZDtK",
+    "preco": 34.88,
+    "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
+   },
+   {
+    "categoria": "jogo",
+    "de": 58.9,
+    "desconto": 0.29,
+    "id": "MLB66141214",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_633703-MLA120091503725_102026-F.jpg",
+    "link": "https://meli.la/1fhC97o",
+    "preco": 41.81,
+    "titulo": "Jogo Stop De Palavras Adedonha Educativo Infantil Interativo Familia Adultos E Crianças Babuu Brinquedos Educa"
    }
   ]
  },
