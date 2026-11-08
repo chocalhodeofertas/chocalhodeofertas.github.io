@@ -1,5 +1,5 @@
 {
- "aguardando_link": 30,
+ "aguardando_link": 2,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -3568,10 +3568,20 @@
   "MLB81142365": "https://meli.la/2Lcg3Q4",
   "MLB81565711": "https://meli.la/1C8TRy9"
  },
- "lote": null,
+ "lote": {
+  "dia": "2026-11-08",
+  "ids": [
+   "MLB73606285",
+   "MLB69251241"
+  ],
+  "urls": [
+   "https://produto.mercadolivre.com.br/MLB-6965028666-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4126427615-produto-_JM"
+  ]
+ },
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-08": 1
+  "2026-11-08": 2
  },
  "membros_hist": {
   "2026-11-07": 2
@@ -4686,6 +4696,10 @@
     [
      "2026-11-08",
      63.89
+    ],
+    [
+     "2026-11-08",
+     67.9
     ]
    ],
    "min": 63.89
@@ -4887,9 +4901,13 @@
     [
      "2026-11-06",
      18.65
+    ],
+    [
+     "2026-11-08",
+     17.9
     ]
    ],
-   "min": 18.65
+   "min": 17.9
   },
   "MLB25163760": {
    "historico": [
@@ -8587,17 +8605,37 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517980,
  "vitrine": {
-  "em": "2026-11-08T11:33-03:00",
+  "em": "2026-11-08T11:53-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
-    "de": 365.0,
-    "desconto": 0.392,
-    "id": "MLB38412815",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_793554-MLA96429306358_102025-F.jpg",
-    "link": "https://meli.la/2oW2z3N",
-    "preco": 221.92,
-    "titulo": "Bolinhas Para Piscina Coloridas Braskit 500 Unidades Plástico"
+    "de": 10.0,
+    "desconto": 0.55,
+    "id": "MLB69086946",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_610955-MLA111166354385_052026-F.jpg",
+    "link": "https://meli.la/2o5yjsh",
+    "preco": 4.5,
+    "titulo": "Pacote Figurinhas Copa do mundo 2026 PANINI"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 350.0,
+    "desconto": 0.486,
+    "id": "MLB44958164",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_627665-MLA113620705920_072026-F.jpg",
+    "link": "https://meli.la/1Ed1cyx",
+    "preco": 180.0,
+    "titulo": "Cadeira De Alimentação Bebê Portátil 3em1 Styll Baby Segura Cor Cinza Cor"
+   },
+   {
+    "categoria": "higiene",
+    "de": 49.99,
+    "desconto": 0.465,
+    "id": "MLB72024607",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_786352-MLA120947062033_112026-F.jpg",
+    "link": "https://meli.la/2Rr1je8",
+    "preco": 26.75,
+    "titulo": "Assento Redutor Sanitário Infantil Almofadado Acolchoado Desfralde Bebê Criança Menina Antiderrapante Antirres"
    },
    {
     "categoria": "brinquedo",
@@ -8688,6 +8726,16 @@
     "link": "https://meli.la/2HcPWSz",
     "preco": 306.52,
     "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Cinza"
+   },
+   {
+    "categoria": "quarto",
+    "de": 499.9,
+    "desconto": 0.402,
+    "id": "MLB54357048",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_903019-MLA100032407355_122025-F.jpg",
+    "link": "https://meli.la/2ybULdP",
+    "preco": 298.8,
+    "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
    },
    {
     "categoria": "alimentacao",
@@ -8808,6 +8856,26 @@
     "link": "https://meli.la/1zcyuvR",
     "preco": 50.19,
     "titulo": "Fralda Pom Pom Protek Proteção de Mãe G 68 Unidades"
+   },
+   {
+    "categoria": "outros",
+    "de": 59.9,
+    "desconto": 0.35,
+    "id": "MLB60842313",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_622299-MLA95510663270_102025-F.jpg",
+    "link": "https://meli.la/1inDkwx",
+    "preco": 38.93,
+    "titulo": "Xô Febre: Compressas Refrescantes para Aliviar a Febre do Bebê – Kit com 4"
+   },
+   {
+    "categoria": "outros",
+    "de": 755.48,
+    "desconto": 0.378,
+    "id": "MLB26727193",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_633344-MLA99978521031_112025-F.jpg",
+    "link": "https://meli.la/1nHt6dh",
+    "preco": 469.99,
+    "titulo": "Berço Portátil Serenata Black Burigotto"
    },
    {
     "categoria": "outros",
@@ -9030,6 +9098,16 @@
     "titulo": "Carro Hot Wheels Premium Chevrolet K5 Blazer Stranger Things"
    },
    {
+    "categoria": "outros",
+    "de": 249.9,
+    "desconto": 0.312,
+    "id": "MLB39456030",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_957293-MLA99458185276_112025-F.jpg",
+    "link": "https://meli.la/24rKWBQ",
+    "preco": 172.0,
+    "titulo": "Bicicleta De Equilibrio Rosa Com Som Sem Pedal 18824 - Buba"
+   },
+   {
     "categoria": "gestante",
     "de": 44.99,
     "desconto": 0.293,
@@ -9080,6 +9158,16 @@
     "titulo": "Cavalinho Upa Upa Rosa com LED e Música para Bebê"
    },
    {
+    "categoria": "outros",
+    "de": 29.9,
+    "desconto": 0.301,
+    "id": "MLB79736952",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_914214-MLA116563306482_092026-F.jpg",
+    "link": "https://meli.la/19igU6J",
+    "preco": 20.9,
+    "titulo": "1 Seringa Lavagem Nariz + 1 Aspirador Sugador Catarro Bebê A Rosa-claro"
+   },
+   {
     "categoria": "brinquedo",
     "de": 34.0,
     "desconto": 0.3,
@@ -9088,6 +9176,16 @@
     "link": "https://meli.la/1Y4uD27",
     "preco": 23.8,
     "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 167.99,
+    "desconto": 0.321,
+    "id": "MLB61715651",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_772587-MLA96885902224_112025-F.jpg",
+    "link": "https://meli.la/1YC9QxG",
+    "preco": 114.0,
+    "titulo": "Barraca Infantil Rosa Toca Túnel 3 Em 1 Cabana Cercadinho"
    },
    {
     "categoria": "roupa",
@@ -9108,86 +9206,6 @@
     "link": "https://meli.la/2pHZDtK",
     "preco": 34.88,
     "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
-   },
-   {
-    "categoria": "jogo",
-    "de": 58.9,
-    "desconto": 0.29,
-    "id": "MLB66141214",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_633703-MLA120091503725_102026-F.jpg",
-    "link": "https://meli.la/1fhC97o",
-    "preco": 41.81,
-    "titulo": "Jogo Stop De Palavras Adedonha Educativo Infantil Interativo Familia Adultos E Crianças Babuu Brinquedos Educa"
-   },
-   {
-    "categoria": "roupa",
-    "de": 49.0,
-    "desconto": 0.223,
-    "id": "MLB65369406",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_960611-MLA106760006275_022026-F.jpg",
-    "link": "https://meli.la/2STyvLe",
-    "preco": 38.09,
-    "titulo": "Kit 3 Bodys Bebê Liso Manga Curta 100% Algodão Menina Menino Cor Azul-marinho Azul-claro E Branco Tamanho G"
-   },
-   {
-    "categoria": "higiene",
-    "de": 142.59,
-    "desconto": 0.271,
-    "id": "MLB66463370",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_985616-MLA99826484365_112025-F.jpg",
-    "link": "https://meli.la/2muow7h",
-    "preco": 103.89,
-    "titulo": "Loção Corporal Hydrabebe Mustela Para Pele Normal, 500ml"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 39.0,
-    "desconto": 0.31,
-    "id": "MLB79182251",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_730821-MLA116010973966_092026-F.jpg",
-    "link": "https://meli.la/1jeK2Nc",
-    "preco": 26.9,
-    "titulo": "Kit Chocalhos e Mordedores Sensoriais para Bebê com 8 Peças de Silicone e Plástico"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 78.9,
-    "desconto": 0.267,
-    "id": "MLB73156948",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_647260-MLA113092149523_062026-F.jpg",
-    "link": "https://meli.la/2ShKRwP",
-    "preco": 57.8,
-    "titulo": "Urso De Pelúcia Teddy Bear Grande Com Laço 50cm Antialérgico Cor Baunilha com Azul Bebe"
-   },
-   {
-    "categoria": "jogo",
-    "de": 59.99,
-    "desconto": 0.298,
-    "id": "MLB37554844",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_846045-MLA99579753132_122025-F.jpg",
-    "link": "https://meli.la/2srZGGy",
-    "preco": 42.09,
-    "titulo": "Raquete Ping Pong De Tenis De Mesa Profissional C/raqueteira Cor Case Preta ou Vermelha Tipo De Cabo Fl (cônca"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 99.99,
-    "desconto": 0.276,
-    "id": "MLB23535413",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_852508-MLU73117589489_112023-F.jpg",
-    "link": "https://meli.la/2TTsbgY",
-    "preco": 72.44,
-    "titulo": "Laptop Infantil Educativo Frozen 8303 Português E Inglês Candide"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 129.99,
-    "desconto": 0.296,
-    "id": "MLB20794850",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_873057-MLA100043981585_122025-F.jpg",
-    "link": "https://meli.la/1tKMmv8",
-    "preco": 91.52,
-    "titulo": "Boneco Pelúcia Chase Patrulha Canina 1328 Sunny Brinquedos"
    }
   ]
  },
