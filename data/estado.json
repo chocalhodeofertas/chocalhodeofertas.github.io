@@ -1,5 +1,5 @@
 {
- "aguardando_link": 0,
+ "aguardando_link": 1,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 28
+  "2026-11-08": 30
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3570,10 +3570,18 @@
   "MLB81142365": "https://meli.la/2Lcg3Q4",
   "MLB81565711": "https://meli.la/1C8TRy9"
  },
- "lote": null,
+ "lote": {
+  "dia": "2026-11-08",
+  "ids": [
+   "MLB68833581"
+  ],
+  "urls": [
+   "https://produto.mercadolivre.com.br/MLB-6688959472-produto-_JM"
+  ]
+ },
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-08": 2
+  "2026-11-08": 3
  },
  "membros_hist": {
   "2026-11-07": 2
@@ -3596,6 +3604,12 @@
    "preco": 195.21,
    "quando": "2026-11-07T18:12-03:00",
    "titulo": "LEGO Classic Caixa Média de Peças Criativas 10696; peças LEGO em 35 cores difere"
+  },
+  "MLB19491178": {
+   "desconto": 0.371,
+   "preco": 74.9,
+   "quando": "2026-11-08T16:15-03:00",
+   "titulo": "Assento de Carro Infantil Elevação Booster Fit Up 15 à 36kgs Preto Maxi Baby - 2"
   },
   "MLB19569079": {
    "desconto": 0.409,
@@ -3856,9 +3870,9 @@
    "quando": "2026-11-06T21:24-03:00"
   },
   "MLB61700105": {
-   "desconto": 0.429,
-   "preco": 79.9,
-   "quando": "2026-11-08T09:22-03:00",
+   "desconto": 0.648,
+   "preco": 69.25,
+   "quando": "2026-11-08T16:15-03:00",
    "titulo": "Box Pokemon Baralho De Batalha Mewtwo Ex Equipe Rocket Português"
   },
   "MLB61713566": {
@@ -4399,6 +4413,10 @@
     [
      "2026-11-08",
      44.0
+    ],
+    [
+     "2026-11-08",
+     43.74
     ]
    ],
    "min": 27.87
@@ -7606,6 +7624,10 @@
     [
      "2026-11-06",
      44.99
+    ],
+    [
+     "2026-11-08",
+     39.99
     ]
    ],
    "min": 39.95
@@ -8789,7 +8811,7 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T15:55-03:00",
+  "em": "2026-11-08T16:15-03:00",
   "itens": [
    {
     "categoria": "jogo",
@@ -9393,6 +9415,6 @@
    }
   ]
  },
- "vitrine_assinatura": "4d49a9c2c8b7bc9c820b3244327cf3696058cced",
- "vitrine_publicada_em": "2026-11-08T15:13-03:00"
+ "vitrine_assinatura": "f0062ef4e65e5eb66cf35f6b0b51afe33f6bb993",
+ "vitrine_publicada_em": "2026-11-08T16:15-03:00"
 }
