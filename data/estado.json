@@ -1,5 +1,5 @@
 {
- "aguardando_link": 30,
+ "aguardando_link": 32,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 2
+  "2026-11-08": 3
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3772,6 +3772,12 @@
   "MLB50368079": {
    "preco": 178.38,
    "quando": "2026-11-06T14:13-03:00"
+  },
+  "MLB50967900": {
+   "desconto": 0.401,
+   "preco": 1069.99,
+   "quando": "2026-11-08T08:22-03:00",
+   "titulo": "Cama Elástica Orbitoys 3.05 m com Rede de Proteção e Suporte de 335 kg"
   },
   "MLB51652593": {
    "preco": 99.9,
@@ -7020,9 +7026,13 @@
     [
      "2026-11-07",
      132.9
+    ],
+    [
+     "2026-11-08",
+     123.0
     ]
    ],
-   "min": 125.73
+   "min": 123.0
   },
   "MLB65999756": {
    "historico": [
@@ -8495,28 +8505,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-08T08:02-03:00",
+  "em": "2026-11-08T08:22-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 279.0,
-    "desconto": 0.499,
-    "id": "MLB10923645",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_621182-MLA52734590675_122022-F.jpg",
-    "link": "https://meli.la/1v1oNAW",
-    "preco": 139.9,
-    "titulo": "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor"
-   },
-   {
-    "categoria": "outros",
-    "de": 26.9,
-    "desconto": 0.436,
-    "id": "MLB24635461",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_819209-MLA117418380545_092026-F.jpg",
-    "link": "https://meli.la/1ETa1Vp",
-    "preco": 15.18,
-    "titulo": "Buba, Aspirador Nasal de Sucção em Silicone para Bebês"
-   },
    {
     "categoria": "brinquedo",
     "de": 1786.0,
@@ -8606,6 +8596,16 @@
     "link": "https://meli.la/1AEMg1j",
     "preco": 97.99,
     "titulo": "Jogo Banco Imobiliário Grande Estrela em português"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 365.0,
+    "desconto": 0.392,
+    "id": "MLB38412815",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_793554-MLA96429306358_102025-F.jpg",
+    "link": "https://meli.la/2oW2z3N",
+    "preco": 221.92,
+    "titulo": "Bolinhas Para Piscina Coloridas Braskit 500 Unidades Plástico"
    },
    {
     "categoria": "brinquedo",
@@ -8828,6 +8828,16 @@
     "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco 127"
    },
    {
+    "categoria": "jogo",
+    "de": 169.0,
+    "desconto": 0.349,
+    "id": "MLB51035138",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_942837-MLA104158430322_012026-F.jpg",
+    "link": "https://meli.la/1vczkgB",
+    "preco": 109.99,
+    "titulo": "Taco De Sinuca Bilhar Profissional Com Capa Giz Sola Brindes Snooker Bilhares Mgk"
+   },
+   {
     "categoria": "brinquedo",
     "de": 139.99,
     "desconto": 0.372,
@@ -8898,6 +8908,26 @@
     "titulo": "Atentu Mini bateria infantil atentu banquinho brinquedo com 5 tambores vermelho"
    },
    {
+    "categoria": "brinquedo",
+    "de": 199.9,
+    "desconto": 0.328,
+    "id": "MLB27861415",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_802710-MLA91575017864_092025-F.jpg",
+    "link": "https://meli.la/2nvA4BA",
+    "preco": 134.24,
+    "titulo": "Cozinha De Brinquedo Infantil Completa Princess Replay Kids"
+   },
+   {
+    "categoria": "outros",
+    "de": 359.9,
+    "desconto": 0.353,
+    "id": "MLB57083030",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_741342-MLA92558466166_092025-F.jpg",
+    "link": "https://meli.la/168F5Rm",
+    "preco": 233.0,
+    "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
+   },
+   {
     "categoria": "jogo",
     "de": 42.99,
     "desconto": 0.304,
@@ -8916,6 +8946,16 @@
     "link": "https://meli.la/1V8XMyo",
     "preco": 27.9,
     "titulo": "Kit Mordedor para Bebê brinquedo Sensorial Silicone com Chocalho 8 Peças Coloridas"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 259.9,
+    "desconto": 0.346,
+    "id": "MLB54746525",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_677167-MLA99508828416_112025-F.jpg",
+    "link": "https://meli.la/2abq4Ss",
+    "preco": 169.9,
+    "titulo": "Brinquedo triciclo de 3 rodas para crianças com cesto de bolhas rosa chiclete Atentu triciclo infantil motoca"
    },
    {
     "categoria": "brinquedo",
@@ -9038,6 +9078,16 @@
     "titulo": "Cavalinho Upa Upa Rosa com LED e Música para Bebê"
    },
    {
+    "categoria": "brinquedo",
+    "de": 34.0,
+    "desconto": 0.3,
+    "id": "MLB21843844",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_674475-MLA99598648876_122025-F.jpg",
+    "link": "https://meli.la/1Y4uD27",
+    "preco": 23.8,
+    "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
+   },
+   {
     "categoria": "roupa",
     "de": 64.9,
     "desconto": 0.214,
@@ -9056,46 +9106,6 @@
     "link": "https://meli.la/2pHZDtK",
     "preco": 34.88,
     "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
-   },
-   {
-    "categoria": "jogo",
-    "de": 58.9,
-    "desconto": 0.29,
-    "id": "MLB66141214",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_633703-MLA120091503725_102026-F.jpg",
-    "link": "https://meli.la/1fhC97o",
-    "preco": 41.81,
-    "titulo": "Jogo Stop De Palavras Adedonha Educativo Infantil Interativo Familia Adultos E Crianças Babuu Brinquedos Educa"
-   },
-   {
-    "categoria": "roupa",
-    "de": 49.0,
-    "desconto": 0.223,
-    "id": "MLB65369406",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_960611-MLA106760006275_022026-F.jpg",
-    "link": "https://meli.la/2STyvLe",
-    "preco": 38.09,
-    "titulo": "Kit 3 Bodys Bebê Liso Manga Curta 100% Algodão Menina Menino Cor Azul-marinho Azul-claro E Branco Tamanho G"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 78.9,
-    "desconto": 0.267,
-    "id": "MLB73156948",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_647260-MLA113092149523_062026-F.jpg",
-    "link": "https://meli.la/2ShKRwP",
-    "preco": 57.8,
-    "titulo": "Urso De Pelúcia Teddy Bear Grande Com Laço 50cm Antialérgico Cor Baunilha com Azul Bebe"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 99.99,
-    "desconto": 0.276,
-    "id": "MLB23535413",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_852508-MLU73117589489_112023-F.jpg",
-    "link": "https://meli.la/2TTsbgY",
-    "preco": 72.44,
-    "titulo": "Laptop Infantil Educativo Frozen 8303 Português E Inglês Candide"
    }
   ]
  },
