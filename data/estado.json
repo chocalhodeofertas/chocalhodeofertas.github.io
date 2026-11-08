@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 32
+  "2026-11-08": 33
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3607,6 +3607,16 @@
  "membros_hist": {
   "2026-11-07": 2
  },
+ "pacote_enviado": "2026-11-08",
+ "pacote_usados": {
+  "MLB17876024": "2026-11-08",
+  "MLB26727193": "2026-11-08",
+  "MLB27718012": "2026-11-08",
+  "MLB44895295": "2026-11-08",
+  "MLB49086353": "2026-11-08",
+  "MLB74913640": "2026-11-08",
+  "MLB79143996": "2026-11-08"
+ },
  "postados": {
   "MLB10923645": {
    "desconto": 0.499,
@@ -3897,6 +3907,12 @@
    "preco": 18.14,
    "quando": "2026-11-07T13:12-03:00",
    "titulo": "Jogo Caiu Perdeu Pais & Filhos 54 Peças de Madeira"
+  },
+  "MLB60118314": {
+   "desconto": 0.344,
+   "preco": 59.0,
+   "quando": "2026-11-08T17:35-03:00",
+   "titulo": "Kit Ping Pong Raquete Rede Retrátil Mesa Tênis Portátil Ultshop Ferragens"
   },
   "MLB61118769": {
    "preco": 429.0,
@@ -4450,6 +4466,10 @@
     [
      "2026-11-08",
      43.74
+    ],
+    [
+     "2026-11-08",
+     42.31
     ]
    ],
    "min": 27.87
@@ -9061,28 +9081,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T17:15-03:00",
+  "em": "2026-11-08T17:35-03:00",
   "itens": [
-   {
-    "categoria": "outros",
-    "de": 34.9,
-    "desconto": 0.391,
-    "id": "MLB24679612",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
-    "link": "https://meli.la/1hn9qT6",
-    "preco": 21.26,
-    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 39.99,
-    "desconto": 0.37,
-    "id": "MLB45528856",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_662013-MLA99617015990_122025-F.jpg",
-    "link": "https://meli.la/2Gwm8my",
-    "preco": 25.19,
-    "titulo": "Pistola Lança Bolhas de Sabão Vermelha com Luz LED Inclui Líquido"
-   },
    {
     "categoria": "jogo",
     "de": 89.99,
@@ -9662,6 +9662,26 @@
     "link": "https://meli.la/2G475xk",
     "preco": 899.9,
     "titulo": "Cadeira De Carro All Stages 2.0 Isofix 0-36kgs Cinza Litet"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 1099.0,
+    "desconto": 0.248,
+    "id": "MLB81565711",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_692381-MLA120873230775_112026-F.jpg",
+    "link": "https://meli.la/1C8TRy9",
+    "preco": 826.99,
+    "titulo": "Patinete Elétrico Infantil Triciclo PARES Drift Bluetooth 3 Rodas Vermelho Diversão e Lazer + Kit de segurança"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 259.9,
+    "desconto": 0.267,
+    "id": "MLB29003787",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_912244-MLA99606170153_112025-F.jpg",
+    "link": "https://meli.la/1sJpwuc",
+    "preco": 190.56,
+    "titulo": "Patinete Infantil Rosa 4 Rodas Luz LED Reforçado Altura Ajustável 70kg Desmontável Menina"
    }
   ]
  },
