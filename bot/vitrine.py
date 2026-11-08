@@ -5,6 +5,7 @@ O bot reescreve docs/index.html no máximo uma vez por hora, e só quando muda.
 import hashlib
 import html
 import json
+import re
 from pathlib import Path
 
 from .mensagens import EMOJI_CATEGORIA, brl
@@ -70,8 +71,7 @@ def gerar_html(estado, canal, grupo_wa=None):
     url_canal = link_canal(canal)
     botoes = []
     if grupo_wa:
-        botoes.append(f'<a class="entrar wa" href="{html.escape(grupo_wa, quote=True)}" target="_blank" '
-                      f'rel="noopener">Entrar no grupo do WhatsApp</a>')
+        botoes.append('<a class="entrar wa" href="grupo.html">Entrar no grupo do WhatsApp</a>')
     if url_canal:
         botoes.append(f'<a class="entrar" href="{html.escape(url_canal, quote=True)}" target="_blank" '
                       f'rel="noopener">Entrar no canal do Telegram</a>')
@@ -168,6 +168,68 @@ document.querySelectorAll('.chip').forEach(function (b) {{
 """
 
 
+def gerar_grupo_html(grupo_wa):
+    """Página-ponte: abre o app do WhatsApp direto (inclusive de dentro do Instagram/Facebook)."""
+    m = re.search(r"chat\.whatsapp\.com/([A-Za-z0-9]+)", grupo_wa or "")
+    codigo = m.group(1) if m else ""
+    web = f"https://chat.whatsapp.com/{codigo}" if codigo else (grupo_wa or "")
+    e = html.escape
+    return f"""<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chocalho de Ofertas</title>
+<meta name="description" content="Entre no grupo de ofertas de bebê e criança.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪇</text></svg>">
+<style>
+:root {{ --fundo:#fff8ec; --texto:#2b2620; --suave:#7a6f63; }}
+@media (prefers-color-scheme: dark) {{ :root:not([data-theme="light"]) {{ --fundo:#1d1a16; --texto:#f3ece2; --suave:#b5a998; }} }}
+:root[data-theme="dark"] {{ --fundo:#1d1a16; --texto:#f3ece2; --suave:#b5a998; }}
+* {{ box-sizing:border-box; }}
+body {{ margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center;
+  background:var(--fundo); color:var(--texto); font:17px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; padding:24px 16px; }}
+.logo {{ font-size:56px; }}
+h1 {{ font-size:24px; margin:6px 0 4px; }}
+p {{ color:var(--suave); margin:0 0 22px; }}
+a.botao {{ display:block; max-width:340px; margin:0 auto 14px; padding:16px 22px; border-radius:999px;
+  background:#25d366; color:#08331a; font-weight:800; font-size:19px; text-decoration:none; }}
+small {{ color:var(--suave); display:block; max-width:340px; margin:0 auto; }}
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">🪇</div>
+  <h1>Chocalho de Ofertas</h1>
+  <p>Abrindo o grupo no WhatsApp…</p>
+  <a class="botao" id="entrar" href="{e(web, quote=True)}">Entrar no grupo do WhatsApp</a>
+  <small>Se o WhatsApp não abrir sozinho, toque no botão. #publi: os links do grupo são de afiliado.</small>
+</main>
+<script>
+(function () {{
+  var codigo = {json.dumps(codigo)}, web = {json.dumps(web)}, ua = navigator.userAgent || "";
+  function abrir() {{
+    if (window.fbq) {{ try {{ fbq('track', 'Lead'); }} catch (e) {{}} }}
+    if (!codigo) {{ location.href = web; return; }}
+    if (/android/i.test(ua)) {{
+      location.href = "intent://chat/?code=" + codigo + "#Intent;scheme=whatsapp;package=com.whatsapp;" +
+        "S.browser_fallback_url=" + encodeURIComponent(web) + ";end";
+    }} else if (/iphone|ipad|ipod/i.test(ua)) {{
+      location.href = "whatsapp://chat?code=" + codigo;
+      setTimeout(function () {{ location.href = web; }}, 1600);
+    }} else {{
+      location.href = web;
+    }}
+  }}
+  document.getElementById("entrar").addEventListener("click", function (ev) {{ ev.preventDefault(); abrir(); }});
+  setTimeout(abrir, 400);
+}})();
+</script>
+</body>
+</html>
+"""
+
+
 def talvez_publicar(estado, canal, agora, arquivo=ARQ, log=print, grupo_wa=None):
     """Reescreve a página se mudou e se já passou 1 hora desde a última vez."""
     ultima = estado.get("vitrine_publicada_em")
@@ -181,6 +243,8 @@ def talvez_publicar(estado, canal, agora, arquivo=ARQ, log=print, grupo_wa=None)
         return False
     Path(arquivo).parent.mkdir(parents=True, exist_ok=True)
     Path(arquivo).write_text(conteudo, encoding="utf-8")
+    if grupo_wa:
+        (Path(arquivo).parent / "grupo.html").write_text(gerar_grupo_html(grupo_wa), encoding="utf-8")
     estado["vitrine_assinatura"] = assinatura
     estado["vitrine_publicada_em"] = agora.isoformat(timespec="minutes")
     log("Página de ofertas atualizada.")

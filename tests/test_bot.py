@@ -833,4 +833,18 @@ def test_vitrine_com_grupo_whatsapp(tmp_path):
     arq = tmp_path / "i.html"
     assert vitrine.talvez_publicar(e, "@c", AGORA, arq, log=lambda m: None, grupo_wa="https://chat.whatsapp.com/X")
     h = arq.read_text()
-    assert "Entrar no grupo do WhatsApp" in h and "https://chat.whatsapp.com/X" in h and "t.me/c" in h
+    assert "Entrar no grupo do WhatsApp" in h and 'href="grupo.html"' in h and "t.me/c" in h
+    g = (tmp_path / "grupo.html").read_text()
+    assert '"X"' in g and "intent://chat/?code=" in g and "whatsapp://chat?code=" in g
+
+
+def test_arte_da_oferta():
+    from PIL import Image
+    import io
+    from bot import arte
+    o = avaliar(prod(), info(70, 100), est.novo(), AGORA)
+    o.titulo = "Fralda Pampers Confort Sec Tamanho G Pacote com 92 Unidades Super Absorvente Noturna Extra"
+    png = arte.gerar(o, foto=Image.new("RGBA", (500, 500), (200, 220, 255, 255)))
+    img = Image.open(io.BytesIO(png))
+    assert img.size == (1080, 1350)
+    assert Image.open(io.BytesIO(arte.gerar(o))).size == (1080, 1350)  # sem foto também funciona

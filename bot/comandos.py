@@ -71,7 +71,14 @@ def resolver_meli(link, session=None):
 # ---------- postar ----------
 
 def enviar_copias(tg, chat, oferta, rng=random):
-    """Mensagem com o texto do WhatsApp e botões que abrem WhatsApp e X já preenchidos."""
+    """Arte da oferta + texto do WhatsApp com botões que abrem WhatsApp e X já preenchidos."""
+    if hasattr(tg, "enviar_foto"):
+        try:
+            from . import arte
+
+            tg.enviar_foto(chat, arte.gerar(oferta), "🖼️ Arte para story, feed ou grupo")
+        except Exception:  # noqa: BLE001
+            pass  # sem arte, segue com o texto
     wa = mensagens.montar_whatsapp(oferta, rng)
     tg.enviar_texto(chat, "📋 Toque no bloco abaixo para copiar e cole no WhatsApp:\n\n<pre>"
                     + html.escape(wa) + "</pre>", html=True,

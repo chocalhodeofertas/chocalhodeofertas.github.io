@@ -55,6 +55,21 @@ class Telegram:
             dados["reply_markup"] = {"inline_keyboard": [[{"text": t, "url": u}] for t, u in botoes]}
         return self._chamar("sendMessage", **dados)
 
+    def enviar_foto(self, chat, png, legenda=None, nome="arte.png"):
+        """Envia uma imagem gerada pelo bot (bytes)."""
+        dados = {"chat_id": str(chat)}
+        if legenda:
+            dados["caption"] = legenda
+        try:
+            r = self.s.post(self._url + "sendPhoto", data=dados, files={"photo": (nome, png, "image/png")},
+                            timeout=60)
+            j = r.json()
+        except (requests.RequestException, ValueError) as e:
+            raise TelegramErro(f"falha de conexão com o Telegram ({type(e).__name__})")
+        if not j.get("ok"):
+            raise TelegramErro(j.get("description") or "erro desconhecido")
+        return j["result"]
+
     def enviar_oferta(self, chat, legenda_html, imagem=None):
         """Manda com foto; se a foto falhar, manda só o texto."""
         if imagem:

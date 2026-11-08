@@ -27,11 +27,23 @@ def git(*args):
     return subprocess.run(["git", *args], capture_output=True, text=True)
 
 
+_REQS = {"conteudo": None}
+
+
 def sincronizar_antes():
-    """Pega edições feitas no repositório (ex.: produtos.csv) antes de cada rodada."""
+    """Pega edições feitas no repositório (código, produtos.csv) antes de cada rodada."""
     r = git("pull", "--rebase", "--autostash", "-q", "origin", os.environ.get("GITHUB_REF_NAME", "main"))
     if r.returncode != 0:
         log(f"Aviso: git pull falhou: {r.stderr.strip()[:200]}")
+    # Se surgiu biblioteca nova no requirements.txt, instala sem precisar reiniciar o ciclo
+    try:
+        atual = open("requirements.txt", encoding="utf-8").read()
+    except OSError:
+        return
+    if _REQS["conteudo"] is not None and atual != _REQS["conteudo"]:
+        log("requirements.txt mudou; instalando bibliotecas novas.")
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-r", "requirements.txt"])
+    _REQS["conteudo"] = atual
 
 
 def salvar_estado():
