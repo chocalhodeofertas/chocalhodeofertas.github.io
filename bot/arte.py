@@ -265,6 +265,30 @@ def _sombra_texto(img, desenhar, raio=6):
     img.paste(camada, (0, 0), camada)
 
 
+def _faixa_livre(img, altura, margem_topo=0.08, margem_base=0.12):
+    """Acha a faixa horizontal mais "calma" da foto (menos detalhes) para o texto
+    não cobrir o que importa (o rosto, o brinquedo, o carrinho)."""
+    L, A = img.size
+    esc = 4
+    g = img.convert("L").resize((L // esc, A // esc)).filter(ImageFilter.FIND_EDGES)
+    px = g.load()
+    w, h = g.size
+    linhas = [sum(px[x, y] for x in range(w)) for y in range(h)]
+    alt = max(1, altura // esc)
+    ini, fim = int(h * margem_topo), int(h * (1 - margem_base)) - alt
+    if fim <= ini:
+        return (A - altura) // 2
+    acum = sum(linhas[ini:ini + alt])
+    melhor, y_melhor = acum, ini
+    for y in range(ini + 1, fim + 1):
+        acum += linhas[y + alt - 1] - linhas[y - 1]
+        # leve preferência pelo centro, para não grudar na borda sem motivo
+        peso = acum * (1 + 0.15 * abs((y + alt / 2) / h - 0.5))
+        if peso < melhor:
+            melhor, y_melhor = peso, y
+    return y_melhor * esc
+
+
 def capa(foto, titulo, destaque=None, estilo="grande", L=1080, A=1350):
     """estilo 'grande': letras grandes claras; 'faixas': tarjas claras com texto escuro."""
     if foto is None:
@@ -272,15 +296,16 @@ def capa(foto, titulo, destaque=None, estilo="grande", L=1080, A=1350):
     else:
         img = _cobrir(foto, L, A)
     if estilo == "grande":
-        mascara = Image.new("L", (L, A), 0)
-        ImageDraw.Draw(mascara).rectangle([0, A * 0.22, L, A * 0.78], fill=110)
-        mascara = mascara.filter(ImageFilter.GaussianBlur(120))
-        img = Image.composite(Image.new("RGB", (L, A), (30, 10, 35)), img, mascara)
         d = ImageDraw.Draw(img)
         f = _fredoka(112)
         linhas = _quebrar(d, titulo.upper(), f, L - 140, 4)
         h = len(linhas) * 118 + (80 if destaque else 0)
-        y0 = (A - h) // 2
+        y0 = _faixa_livre(img, h)
+        mascara = Image.new("L", (L, A), 0)
+        ImageDraw.Draw(mascara).rectangle([0, y0 - 60, L, y0 + h + 60], fill=110)
+        mascara = mascara.filter(ImageFilter.GaussianBlur(90))
+        img = Image.composite(Image.new("RGB", (L, A), (30, 10, 35)), img, mascara)
+        d = ImageDraw.Draw(img)
 
         def sombra(dc):
             y = y0
@@ -305,7 +330,7 @@ def capa(foto, titulo, destaque=None, estilo="grande", L=1080, A=1350):
         d = ImageDraw.Draw(img)
         f = _poppins(60, "SemiBold")
         linhas = _quebrar(d, titulo, f, L - 220, 3)
-        y = int(A * 0.42)
+        y = _faixa_livre(img, len(linhas) * 104 + (130 if destaque else 0))
         for i, ln in enumerate(linhas):
             w = d.textlength(ln, font=f)
             d.rectangle([(L - w) / 2 - 26, y, (L + w) / 2 + 26, y + 92], fill=BRANCO if i % 2 == 0 else (236, 214, 248))

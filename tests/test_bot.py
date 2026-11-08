@@ -850,10 +850,12 @@ def test_arte_da_oferta():
     assert Image.open(io.BytesIO(arte.gerar(o))).size == (1080, 1350)  # sem foto também funciona
 
 
-def test_pacote_do_dia_monta_tudo():
+def test_pacote_do_dia_monta_tudo(monkeypatch):
     import random
     from datetime import datetime
-    from bot import conteudo
+    from PIL import Image
+    from bot import arte, conteudo
+    monkeypatch.setattr(arte, "foto_de_capa", lambda temas, rng=None: Image.new("RGB", (1200, 1600), (240, 230, 220)))
     itens = [{"id": f"MLB{i}", "titulo": f"Brinquedo legal número {i} com nome comprido para quebrar linha",
               "preco": 20.0 + i, "de": 40.0 + i, "desconto": 0.4 - i / 100, "link": f"https://meli.la/x{i}",
               "imagem": None, "categoria": "brinquedo"} for i in range(8)]
@@ -876,3 +878,18 @@ def test_pacote_do_dia_monta_tudo():
     stories = [v for t, v in enviados if t == "foto" and v and v.startswith("📱")]
     assert stories and "meli.la" in stories[0]
     assert len(estado["pacote_usados"]) == 7
+
+
+def test_pacote_pausa_sem_fotos(monkeypatch):
+    from datetime import datetime
+    from bot import arte, conteudo
+    monkeypatch.setattr(arte, "foto_de_capa", lambda temas, rng=None: None)
+    itens = [{"id": f"MLB{i}", "titulo": "Brinquedo", "preco": 20.0, "de": 40.0, "desconto": 0.5,
+              "link": "https://meli.la/x", "imagem": None, "categoria": "brinquedo"} for i in range(5)]
+    msgs = []
+
+    class TG:
+        def enviar_texto(self, c, t, html=False, **k): msgs.append(t)
+
+    assert not conteudo.montar_e_enviar(TG(), 1, {"vitrine": {"itens": itens}}, datetime(2026, 11, 9, 10, tzinfo=FUSO))
+    assert "pausado" in msgs[0]

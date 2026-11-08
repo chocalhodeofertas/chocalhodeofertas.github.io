@@ -1,67 +1,62 @@
-"""Busca fotos livres (CC0 / domínio público) no Openverse para as capas.
+"""Busca fotos no Pexels para as capas (licença Pexels: uso comercial liberado, sem crédito obrigatório).
 
-Roda no GitHub Actions (lá a internet é liberada). Salva em fotos_candidatas/<tema>/
-com um creditos.json; depois a curadoria move as aprovadas para assets/capas/<tema>/.
+Roda no GitHub Actions com o segredo PEXELS_API_KEY. Salva candidatas em
+fotos_candidatas/<tema>/ com creditos.json; a curadoria escolhe as que vão para assets/capas/.
 """
-import io, json, sys, time
+import io, json, os, time
 from pathlib import Path
 import requests
-from PIL import Image
+from PIL import Image, ImageStat
 
 TEMAS = {
-    "familia": ["baby feet", "baby hands", "mother hands baby", "newborn sleeping", "pregnant belly", "pregnancy",
-                "family walking", "father son walking", "mother child walking", "holding hands child", "baby sleeping",
-                "mother baby", "father baby", "breastfeeding", "baby carrier"],
-    "enxoval": ["nursery", "crib", "baby clothes", "baby room", "baby blanket", "baby shoes", "onesie", "baby shower", "diapers"],
-    "brinquedos": ["toys", "wooden toys", "teddy bear", "building blocks", "lego", "toy car", "stuffed animal", "plush toy", "puzzle"],
-    "passeio": ["stroller", "pram", "baby stroller park", "car seat"],
-    "crianca": ["child playing", "kids playing", "child drawing", "crayons", "school backpack", "kids bicycle", "playground",
-                "child running", "kids birthday party", "balloons kids"],
-    "banho": ["baby bath", "towel baby", "rubber duck", "bath toys"],
+    "familia": ["família brasileira com bebê", "mãe brasileira com bebê", "pai segurando bebê", "mãe e filho brincando",
+                "família feliz em casa", "pai e filha", "mãe amamentando", "grávida sorrindo", "brazilian family baby",
+                "brazilian mother child"],
+    "quarto": ["quarto de bebê", "berço de bebê", "quarto infantil decorado", "nursery bright", "baby crib white"],
+    "enxoval": ["enxoval de bebê", "roupas de bebê", "chá de bebê", "fraldas bebê", "body de bebê", "baby clothes pastel"],
+    "brinquedos": ["brinquedos coloridos", "brinquedos de madeira", "criança brincando com brinquedos", "bebê brincando",
+                   "quarto de brinquedos", "pelúcia", "toys bright background"],
+    "crianca": ["criança brincando", "criança desenhando", "criança feliz", "aniversário infantil", "volta às aulas criança",
+                "criança de bicicleta", "brazilian kid"],
+    "passeio": ["carrinho de bebê", "mãe passeando com carrinho de bebê", "cadeirinha de carro bebê", "baby stroller park"],
+    "alimentacao": ["bebê comendo", "cadeira de alimentação bebê", "papinha bebê"],
+    "banho": ["banho de bebê", "bebê na banheira", "toalha de bebê"],
 }
-POR_BUSCA = 20
+POR_BUSCA = 15
 SAIDA = Path("fotos_candidatas")
+CHAVE = os.environ["PEXELS_API_KEY"]
 s = requests.Session()
-s.headers["User-Agent"] = "chocalho-de-ofertas-bot/1.0"
+s.headers["Authorization"] = CHAVE
 
 vistos = set()
 for tema, buscas in TEMAS.items():
     pasta = SAIDA / tema
     pasta.mkdir(parents=True, exist_ok=True)
-    creditos = []
-    n = 0
-    for q, pg in [(b, p) for b in buscas for p in (1, 2)]:
+    creditos, n = [], 0
+    for q in buscas:
         try:
-            r = s.get("https://api.openverse.org/v1/images/", params={
-                "q": q, "license": "cc0,pdm", "mature": "false",
-                "source": "stocksnap,wordpress", "page_size": 20, "page": pg}, timeout=30)
+            r = s.get("https://api.pexels.com/v1/search", params={
+                "query": q, "orientation": "portrait", "size": "large", "locale": "pt-BR", "per_page": 40}, timeout=30)
             r.raise_for_status()
-            res = r.json().get("results", [])
+            fotos = r.json().get("photos", [])
         except Exception as e:  # noqa: BLE001
-            print("falhou busca", q, e, flush=True); time.sleep(20); continue
+            print("falhou", q, e, flush=True); continue
         pegos = 0
-        for it in res:
-            if pegos >= POR_BUSCA or it["id"] in vistos:
-                continue
-            w, h = it.get("width") or 0, it.get("height") or 0
-            if w and h and (min(w, h) < 900):
+        for f in fotos:
+            if pegos >= POR_BUSCA or f["id"] in vistos:
                 continue
             try:
-                im = s.get(it["url"], timeout=40)
-                im.raise_for_status()
+                im = requests.get(f["src"]["original"] + "?auto=compress&cs=tinysrgb&w=1400", timeout=40)
                 img = Image.open(io.BytesIO(im.content)).convert("RGB")
             except Exception:  # noqa: BLE001
                 continue
-            if min(img.size) < 900:
+            if ImageStat.Stat(img.convert("L")).mean[0] < 115:  # só fotos claras
                 continue
-            img.thumbnail((1800, 1800))
-            n += 1; pegos += 1; vistos.add(it["id"])
+            n += 1; pegos += 1; vistos.add(f["id"])
             nome = f"{tema}_{n:03d}.jpg"
-            img.save(pasta / nome, quality=88)
-            creditos.append({"arquivo": nome, "busca": q, "titulo": it.get("title"), "autor": it.get("creator"),
-                             "licenca": f'{it.get("license")} {it.get("license_version") or ""}'.strip(),
-                             "fonte": it.get("source"), "pagina": it.get("foreign_landing_url"), "openverse_id": it["id"]})
-            time.sleep(0.3)
+            img.save(pasta / nome, quality=86)
+            creditos.append({"arquivo": nome, "busca": q, "pexels_id": f["id"], "pagina": f["url"],
+                             "fotografo": f["photographer"], "descricao": f.get("alt"), "licenca": "Pexels License"})
         print(tema, q, pegos, flush=True)
-        time.sleep(4)
+        time.sleep(1)
     (pasta / "creditos.json").write_text(json.dumps(creditos, ensure_ascii=False, indent=1), encoding="utf-8")

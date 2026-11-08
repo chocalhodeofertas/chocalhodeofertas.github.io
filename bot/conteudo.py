@@ -36,7 +36,7 @@ TEMAS = [
     Tema("enxoval", {"quarto", "passeio", "alimentacao", "gestante", "higiene", "fralda", "roupa", "outros"},
          ["Achei promoções pro enxoval", "Coisas de bebê que baixaram de preço hoje",
           "O que eu compraria hoje se estivesse montando o enxoval"],
-         ["familia", "enxoval"],
+         ["quarto", "enxoval", "familia"],
          ["Montando o enxoval sem estourar o orçamento?", "Pra quem está preparando a chegada do bebê:",
           "Enxoval não precisa custar uma fortuna."]),
     Tema("brinquedos", {"brinquedo"},
@@ -129,6 +129,10 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
     titulo = rng.choice(tema.titulos)
     estilo = "grande" if agora.toordinal() % 2 == 0 else "faixas"
     capa_foto = arte.foto_de_capa(tema.fotos, rng)
+    if capa_foto is None:
+        tg.enviar_texto(chat, "📦 O pacote está pausado: ainda não tenho fotos de capa para o tema "
+                              f"<b>{tema.nome}</b>.", html=True)
+        return False
     destaque = tema.destaque
 
     tg.enviar_texto(chat, f"📦 <b>Pacote do dia</b> — tema: <b>{titulo}</b>\n"

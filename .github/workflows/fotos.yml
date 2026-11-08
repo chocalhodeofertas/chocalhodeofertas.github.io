@@ -12,6 +12,8 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install -q requests Pillow
       - run: python tools/buscar_fotos.py
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
       - name: Salva no ramo "fotos"
         run: |
           git config user.name "chocalho-bot"; git config user.email "bot@users.noreply.github.com"
