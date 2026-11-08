@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 27
+  "2026-11-08": 28
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3947,6 +3947,12 @@
    "quando": "2026-11-07T14:32-03:00",
    "titulo": "Saída De Maternidade Em Tricô Rosa Bebê Rosa 0 A 3 Meses"
   },
+  "MLB64317110": {
+   "desconto": 0.401,
+   "preco": 8.97,
+   "quando": "2026-11-08T15:35-03:00",
+   "titulo": "Jogo de Cartas Uno Clássico para Família e Amigos"
+  },
   "MLB64866580": {
    "desconto": 0.447,
    "preco": 27.11,
@@ -4673,9 +4679,13 @@
     [
      "2026-11-06",
      64.5
+    ],
+    [
+     "2026-11-08",
+     64.09
     ]
    ],
-   "min": 64.5
+   "min": 64.09
   },
   "MLB23681383": {
    "historico": [
@@ -5368,6 +5378,10 @@
     [
      "2026-11-07",
      449.99
+    ],
+    [
+     "2026-11-08",
+     434.99
     ]
    ],
    "min": 434.99
@@ -8767,28 +8781,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T15:13-03:00",
+  "em": "2026-11-08T15:35-03:00",
   "itens": [
-   {
-    "categoria": "quarto",
-    "de": 499.9,
-    "desconto": 0.402,
-    "id": "MLB54357048",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_903019-MLA100032407355_122025-F.jpg",
-    "link": "https://meli.la/2ybULdP",
-    "preco": 298.8,
-    "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
-   },
-   {
-    "categoria": "alimentacao",
-    "de": 449.9,
-    "desconto": 0.402,
-    "id": "MLB53258842",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_612441-MLA99520261016_112025-F.jpg",
-    "link": "https://meli.la/1cPi9vw",
-    "preco": 268.98,
-    "titulo": "Cadeira Alimentação Infantil Portátil 3 em 1 Vira Booster Bandeja Dupla Removível Harmony Maxi Baby"
-   },
    {
     "categoria": "jogo",
     "de": 14.97,
@@ -8890,6 +8884,16 @@
     "titulo": "Boia Bote Bebê Infantil Inflável Piscina Com Cobertura De Proteção UV Cor Azul/amarelo Indue Variedades"
    },
    {
+    "categoria": "passeio",
+    "de": 670.56,
+    "desconto": 0.351,
+    "id": "MLB29756545",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_786782-MLA99523938502_122025-F.jpg",
+    "link": "https://meli.la/1XmiRWF",
+    "preco": 434.99,
+    "titulo": "Cadeira de Carro Infantil 0 a 36Kg Elite 4 em 1 - Maxi Baby - Preto"
+   },
+   {
     "categoria": "outros",
     "de": 77.36,
     "desconto": 0.351,
@@ -8988,16 +8992,6 @@
     "link": "https://meli.la/2aCQKSR",
     "preco": 16.96,
     "titulo": "Sabonete Líquido Hora Do Sono 200ml Baby Johnson's"
-   },
-   {
-    "categoria": "passeio",
-    "de": 670.56,
-    "desconto": 0.329,
-    "id": "MLB29756545",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_786782-MLA99523938502_122025-F.jpg",
-    "link": "https://meli.la/1XmiRWF",
-    "preco": 449.99,
-    "titulo": "Cadeira de Carro Infantil 0 a 36Kg Elite 4 em 1 - Maxi Baby - Preto"
    },
    {
     "categoria": "brinquedo",
@@ -9118,16 +9112,6 @@
     "link": "https://meli.la/1eVZT5a",
     "preco": 85.14,
     "titulo": "Kit de Maquiagem Infantil Im Toys com Estojo Rosa para Meninas"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 93.99,
-    "desconto": 0.314,
-    "id": "MLB23614192",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_950092-MLA93774317601_092025-F.jpg",
-    "link": "https://meli.la/2LgoYzr",
-    "preco": 64.5,
-    "titulo": "Mesa Mesinha Infantil Desmontável Multiuso Cor Pistache"
    },
    {
     "categoria": "brinquedo",
@@ -9368,6 +9352,36 @@
     "link": "https://meli.la/2jBpr4L",
     "preco": 91.62,
     "titulo": "Patrulha Canina - Pelúcia Marshall 30cm - 1327 Sunny Colorido"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 69.99,
+    "desconto": 0.273,
+    "id": "MLB22501041",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_709652-MLA99593588108_122025-F.jpg",
+    "link": "https://meli.la/2gWN9oe",
+    "preco": 50.91,
+    "titulo": "Balde Primeiros Blocos Fisher-price - Mattel Ffc84 Multicolor"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 160.0,
+    "desconto": 0.255,
+    "id": "MLB62572381",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_631284-MLA110432757997_042026-F.jpg",
+    "link": "https://meli.la/2VM2tsW",
+    "preco": 119.21,
+    "titulo": "Pelúcia Banguela Fúria da Noite 100cm de Satin Preto para Abraçar"
+   },
+   {
+    "categoria": "quarto",
+    "de": 529.9,
+    "desconto": 0.269,
+    "id": "MLB75481308",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_889881-MLA114552950567_072026-F.jpg",
+    "link": "https://meli.la/2qpr2WC",
+    "preco": 387.33,
+    "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
    }
   ]
  },
