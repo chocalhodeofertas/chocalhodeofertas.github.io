@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 17
+  "2026-11-08": 19
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3635,6 +3635,12 @@
    "quando": "2026-11-08T08:02-03:00",
    "titulo": "Buba, Aspirador Nasal de Sucção em Silicone para Bebês"
   },
+  "MLB24647466": {
+   "desconto": 0.388,
+   "preco": 179.44,
+   "quando": "2026-11-08T13:13-03:00",
+   "titulo": "Bicicleta De Equilíbrio 4 Rodas Buba Infantil Sem Pedal Cor Azul"
+  },
   "MLB24647472": {
    "desconto": 0.558,
    "preco": 139.9,
@@ -3838,6 +3844,12 @@
    "preco": 79.9,
    "quando": "2026-11-08T09:22-03:00",
    "titulo": "Box Pokemon Baralho De Batalha Mewtwo Ex Equipe Rocket Português"
+  },
+  "MLB61713566": {
+   "desconto": 0.417,
+   "preco": 128.14,
+   "quando": "2026-11-08T13:13-03:00",
+   "titulo": "Andador De Empurrar Infantil Com Atividades Azul - Maxi Baby"
   },
   "MLB61794290": {
    "desconto": 0.454,
@@ -4337,6 +4349,10 @@
     [
      "2026-11-08",
      32.59
+    ],
+    [
+     "2026-11-08",
+     44.0
     ]
    ],
    "min": 27.87
@@ -5762,6 +5778,10 @@
     [
      "2026-11-08",
      58.77
+    ],
+    [
+     "2026-11-08",
+     67.37
     ]
    ],
    "min": 30.99
@@ -8626,6 +8646,10 @@
     [
      "2026-11-08",
      318.9
+    ],
+    [
+     "2026-11-08",
+     317.0
     ]
    ],
    "min": 259.9
@@ -8683,18 +8707,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517980,
  "vitrine": {
-  "em": "2026-11-08T12:53-03:00",
+  "em": "2026-11-08T13:13-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 135.05,
-    "desconto": 0.423,
-    "id": "MLB43200233",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_825638-MLA97504721848_112025-F.jpg",
-    "link": "https://meli.la/2bKrgJ9",
-    "preco": 77.9,
-    "titulo": "Bicicleta de Equilíbrio Brinq Kids Brinquei Vermelho para Crianças 12m+"
-   },
    {
     "categoria": "brinquedo",
     "de": 293.0,
@@ -9284,9 +9298,19 @@
     "link": "https://meli.la/1yZaTvp",
     "preco": 330.0,
     "titulo": "Carrinho Guarda Chuva De passeio Maxi Baby Até 15kgs cor Preto"
+   },
+   {
+    "categoria": "higiene",
+    "de": 142.59,
+    "desconto": 0.271,
+    "id": "MLB66463370",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_985616-MLA99826484365_112025-F.jpg",
+    "link": "https://meli.la/2muow7h",
+    "preco": 103.89,
+    "titulo": "Loção Corporal Hydrabebe Mustela Para Pele Normal, 500ml"
    }
   ]
  },
- "vitrine_assinatura": "6e58edafe50cca32e95d8f583a3ce74d29226b5a",
- "vitrine_publicada_em": "2026-11-08T12:13-03:00"
+ "vitrine_assinatura": "931b8c232aa2505bd542d0f9ebe37f9c7ec932b8",
+ "vitrine_publicada_em": "2026-11-08T13:13-03:00"
 }
