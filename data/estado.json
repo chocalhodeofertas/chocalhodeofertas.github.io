@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 46
+  "2026-11-07": 48
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3543,6 +3543,9 @@
  "lotes_dia": {
   "2026-11-07": 3
  },
+ "membros_hist": {
+  "2026-11-07": 2
+ },
  "postados": {
   "MLB10923645": {
    "desconto": 0.443,
@@ -3561,6 +3564,12 @@
    "preco": 195.21,
    "quando": "2026-11-07T18:12-03:00",
    "titulo": "LEGO Classic Caixa Média de Peças Criativas 10696; peças LEGO em 35 cores difere"
+  },
+  "MLB19569079": {
+   "desconto": 0.409,
+   "preco": 259.9,
+   "quando": "2026-11-07T21:02-03:00",
+   "titulo": "Cama Elástica Pula Pula Trampolim JustFun 1,40m com Rede de Proteção e 36 Molas"
   },
   "MLB23581207": {
    "preco": 211.94,
@@ -3955,6 +3964,12 @@
   "MLB80142080": {
    "preco": 38.32,
    "quando": "2026-11-06T13:13-03:00"
+  },
+  "MLB80328135": {
+   "desconto": 0.384,
+   "preco": 36.9,
+   "quando": "2026-11-07T21:02-03:00",
+   "titulo": "Aspirador Nasal Rosa Elétrico Infantil Bebê Recarregável USB Sugador de Nariz Li"
   },
   "MLB80331375": {
    "preco": 78.98,
@@ -4576,6 +4591,10 @@
     [
      "2026-11-07",
      32.18
+    ],
+    [
+     "2026-11-07",
+     32.17
     ]
    ],
    "min": 32.17
@@ -5608,6 +5627,10 @@
     [
      "2026-11-07",
      41.0
+    ],
+    [
+     "2026-11-07",
+     47.4
     ]
    ],
    "min": 41.0
@@ -7941,6 +7964,10 @@
     [
      "2026-11-07",
      99.93
+    ],
+    [
+     "2026-11-07",
+     109.0
     ]
    ],
    "min": 82.9
@@ -8277,20 +8304,11 @@
    "min": 826.99
   }
  },
+ "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T20:42-03:00",
+  "em": "2026-11-07T21:02-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 220.0,
-    "desconto": 0.439,
-    "id": "MLB25654240",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_801778-MLA100939855278_122025-F.jpg",
-    "link": "https://meli.la/26jQepG",
-    "preco": 123.5,
-    "titulo": "Mesinha Infantil Kids Baby Hercules Com 2 Cadeiras Plástico Azul"
-   },
    {
     "categoria": "brinquedo",
     "de": 439.9,
@@ -8880,9 +8898,19 @@
     "link": "https://meli.la/2BTByX4",
     "preco": 54.44,
     "titulo": "Kit Bolha de Sabão Babuu com 24 Unidades Para Crianças Brincarem"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 78.99,
+    "desconto": 0.289,
+    "id": "MLB68934417",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_624023-MLA115176687118_082026-F.jpg",
+    "link": "https://meli.la/1dk5sV4",
+    "preco": 56.16,
+    "titulo": "Balanço Infantil GuiBrink de Plástico para Bebê Com Cinto Segurança e Corda"
    }
   ]
  },
- "vitrine_assinatura": "c5b9ffe028c75d21ccc272d2c6e0a0bb2f8c2076",
- "vitrine_publicada_em": "2026-11-07T20:02-03:00"
+ "vitrine_assinatura": "b081afab49cd03146387cb34eb20ffc12afbae42",
+ "vitrine_publicada_em": "2026-11-07T21:02-03:00"
 }
