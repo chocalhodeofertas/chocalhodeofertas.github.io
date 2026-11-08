@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 6
+  "2026-11-08": 8
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3641,6 +3641,12 @@
    "preco": 211.94,
    "quando": "2026-11-06T20:23-03:00"
   },
+  "MLB24156713": {
+   "desconto": 0.428,
+   "preco": 297.9,
+   "quando": "2026-11-08T10:02-03:00",
+   "titulo": "Mesa Infantil De Atividades Tramontina Playground Pic-nic Cor Colorido"
+  },
   "MLB24208936": {
    "preco": 32.17,
    "quando": "2026-11-06T19:23-03:00"
@@ -3977,6 +3983,12 @@
    "quando": "2026-11-07T15:12-03:00",
    "titulo": "Tablet Educativo Infantil Bilíngue 54 Funções Azul Interativo Português Inglês L"
   },
+  "MLB72653285": {
+   "desconto": 0.397,
+   "preco": 88.68,
+   "quando": "2026-11-08T10:02-03:00",
+   "titulo": "Carrinho de Controle Remoto Acrobático 360° para Crianças, com Luzes LED e Som"
+  },
   "MLB72720626": {
    "desconto": 0.578,
    "preco": 549.0,
@@ -4178,9 +4190,13 @@
     [
      "2026-11-07",
      199.99
+    ],
+    [
+     "2026-11-08",
+     33.0
     ]
    ],
-   "min": 194.99
+   "min": 33.0
   },
   "MLB17489277": {
    "historico": [
@@ -4439,9 +4455,13 @@
     [
      "2026-11-07",
      64.0
+    ],
+    [
+     "2026-11-08",
+     54.9
     ]
    ],
-   "min": 64.0
+   "min": 54.9
   },
   "MLB21727549": {
    "historico": [
@@ -4727,6 +4747,10 @@
     [
      "2026-11-07",
      32.18
+    ],
+    [
+     "2026-11-08",
+     32.17
     ]
    ],
    "min": 32.17
@@ -8555,7 +8579,7 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-08T09:42-03:00",
+  "em": "2026-11-08T10:02-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -9159,6 +9183,6 @@
    }
   ]
  },
- "vitrine_assinatura": "74736506ad1a9caaa2d12c7f80829634b6e82a7e",
- "vitrine_publicada_em": "2026-11-08T09:02-03:00"
+ "vitrine_assinatura": "2aa916abf8a7bb227047796ada13c87064c581d0",
+ "vitrine_publicada_em": "2026-11-08T10:02-03:00"
 }
