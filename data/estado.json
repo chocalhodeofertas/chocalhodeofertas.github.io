@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 25
+  "2026-11-08": 27
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3807,6 +3807,12 @@
    "preco": 119.61,
    "quando": "2026-11-06T16:14-03:00"
   },
+  "MLB53258842": {
+   "desconto": 0.402,
+   "preco": 268.98,
+   "quando": "2026-11-08T15:13-03:00",
+   "titulo": "Cadeira Alimentação Infantil Portátil 3 em 1 Vira Booster Bandeja Dupla Removíve"
+  },
   "MLB54068547": {
    "desconto": 0.704,
    "preco": 118.0,
@@ -3822,6 +3828,12 @@
   "MLB54159991": {
    "preco": 219.56,
    "quando": "2026-11-06T15:34-03:00"
+  },
+  "MLB54357048": {
+   "desconto": 0.402,
+   "preco": 298.8,
+   "quando": "2026-11-08T15:13-03:00",
+   "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinh"
   },
   "MLB57075978": {
    "desconto": 0.445,
@@ -7697,6 +7709,10 @@
     [
      "2026-11-07",
      195.0
+    ],
+    [
+     "2026-11-08",
+     154.9
     ]
    ],
    "min": 108.52
@@ -8751,7 +8767,7 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T14:53-03:00",
+  "em": "2026-11-08T15:13-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -9355,6 +9371,6 @@
    }
   ]
  },
- "vitrine_assinatura": "d7a5c7275f267d14baea13ddc8b8ffb2c4c11d8c",
- "vitrine_publicada_em": "2026-11-08T14:13-03:00"
+ "vitrine_assinatura": "4d49a9c2c8b7bc9c820b3244327cf3696058cced",
+ "vitrine_publicada_em": "2026-11-08T15:13-03:00"
 }
