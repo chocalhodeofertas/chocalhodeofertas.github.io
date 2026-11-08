@@ -9,15 +9,17 @@ import requests
 from PIL import Image
 
 TEMAS = {
-    "familia": ["mother holding baby", "father holding baby", "parent baby hands", "mom and toddler walking",
-                "family with baby", "pregnant belly", "dad and child playing"],
-    "enxoval": ["nursery room", "baby crib", "baby clothes", "baby room", "baby blanket", "baby shoes"],
-    "brinquedos": ["wooden toys", "toys colorful", "teddy bear", "building blocks toys", "toy car", "baby toys"],
-    "passeio": ["baby stroller", "stroller park", "car seat baby"],
-    "crianca": ["child playing", "kids playing outdoor", "child drawing", "school backpack", "kids bicycle", "playground"],
-    "banho": ["baby bath", "baby towel", "rubber duck bath"],
+    "familia": ["baby feet", "baby hands", "mother hands baby", "newborn sleeping", "pregnant belly", "pregnancy",
+                "family walking", "father son walking", "mother child walking", "holding hands child", "baby sleeping",
+                "mother baby", "father baby", "breastfeeding", "baby carrier"],
+    "enxoval": ["nursery", "crib", "baby clothes", "baby room", "baby blanket", "baby shoes", "onesie", "baby shower", "diapers"],
+    "brinquedos": ["toys", "wooden toys", "teddy bear", "building blocks", "lego", "toy car", "stuffed animal", "plush toy", "puzzle"],
+    "passeio": ["stroller", "pram", "baby stroller park", "car seat"],
+    "crianca": ["child playing", "kids playing", "child drawing", "crayons", "school backpack", "kids bicycle", "playground",
+                "child running", "kids birthday party", "balloons kids"],
+    "banho": ["baby bath", "towel baby", "rubber duck", "bath toys"],
 }
-POR_BUSCA = 12
+POR_BUSCA = 20
 SAIDA = Path("fotos_candidatas")
 s = requests.Session()
 s.headers["User-Agent"] = "chocalho-de-ofertas-bot/1.0"
@@ -28,11 +30,11 @@ for tema, buscas in TEMAS.items():
     pasta.mkdir(parents=True, exist_ok=True)
     creditos = []
     n = 0
-    for q in buscas:
+    for q, pg in [(b, p) for b in buscas for p in (1, 2)]:
         try:
             r = s.get("https://api.openverse.org/v1/images/", params={
-                "q": q, "license": "cc0,pdm", "category": "photograph", "mature": "false",
-                "size": "large", "page_size": 20}, timeout=30)
+                "q": q, "license": "cc0,pdm", "mature": "false",
+                "source": "stocksnap,wordpress", "page_size": 20, "page": pg}, timeout=30)
             r.raise_for_status()
             res = r.json().get("results", [])
         except Exception as e:  # noqa: BLE001
