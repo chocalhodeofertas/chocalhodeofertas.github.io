@@ -32,6 +32,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 ARQ_PRODUTOS = RAIZ / "produtos.csv"
 ARQ_ESTADO = RAIZ / "data" / "estado.json"
 FUSO = ZoneInfo("America/Sao_Paulo")
+GRUPO_WHATSAPP = "https://chat.whatsapp.com/FOwEWWIjfKoFWmD8Xsv5lq"
 
 
 @dataclass
@@ -583,7 +584,8 @@ def main(argv=None):
                 cupons_ml.processar(tg, cfg, estado, agora, log)
             comandos.verificar_cupons(tg, cfg, estado, agora, log)
             comandos.talvez_resumo_diario(tg, estado, cfg, agora, log)
-            vitrine.talvez_publicar(estado, cfg.canal, agora, log=log)
+            vitrine.talvez_publicar(estado, cfg.canal, agora, log=log,
+                                    grupo_wa=os.environ.get("WHATSAPP_GRUPO") or GRUPO_WHATSAPP)
     except AcessoNegado as e:
         log(f"Mercado Livre recusou o acesso: {e}\nRode o modo diagnostico para ver o que fazer.")
         return 1

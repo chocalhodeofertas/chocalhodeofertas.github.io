@@ -60,7 +60,7 @@ def _card(i):
     )
 
 
-def gerar_html(estado, canal):
+def gerar_html(estado, canal, grupo_wa=None):
     v = estado.get("vitrine") or {}
     itens = v.get("itens") or []
     cats = sorted({i["categoria"] for i in itens}, key=lambda c: NOMES.get(c, c))
@@ -68,8 +68,14 @@ def gerar_html(estado, canal):
         f'<button class="chip" data-f="{c}">{EMOJI_CATEGORIA.get(c, "✨")} {NOMES.get(c, c.title())}</button>'
         for c in cats)
     url_canal = link_canal(canal)
-    botao = (f'<a class="entrar" href="{html.escape(url_canal, quote=True)}" target="_blank" rel="noopener">'
-             f'Entrar no canal do Telegram</a>') if url_canal else ""
+    botoes = []
+    if grupo_wa:
+        botoes.append(f'<a class="entrar wa" href="{html.escape(grupo_wa, quote=True)}" target="_blank" '
+                      f'rel="noopener">Entrar no grupo do WhatsApp</a>')
+    if url_canal:
+        botoes.append(f'<a class="entrar" href="{html.escape(url_canal, quote=True)}" target="_blank" '
+                      f'rel="noopener">Entrar no canal do Telegram</a>')
+    botao = '<div class="botoes">' + "".join(botoes) + "</div>" if botoes else ""
     em = v.get("em", "")
     hora = f"{em[8:10]}/{em[5:7]} às {em[11:16]}" if len(em) >= 16 else ""
     cards = "".join(_card(i) for i in itens) or '<p class="vazio">As próximas ofertas aparecem aqui em breve. 🪇</p>'
@@ -105,6 +111,8 @@ header {{ text-align:center; padding:28px 16px 8px; }}
 .logo {{ font-size:44px; }}
 h1 {{ margin:4px 0 2px; font-size:26px; letter-spacing:-.3px; }}
 .sub {{ margin:0 0 16px; color:var(--suave); }}
+.botoes {{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }}
+.entrar.wa {{ background:#25d366; color:#08331a; }}
 .entrar {{ display:inline-block; background:var(--destaque); color:var(--destaque-texto); font-weight:700;
   padding:12px 22px; border-radius:999px; text-decoration:none; }}
 .chips {{ display:flex; gap:8px; overflow-x:auto; padding:18px 16px 6px; max-width:1100px; margin:0 auto; }}
@@ -160,13 +168,14 @@ document.querySelectorAll('.chip').forEach(function (b) {{
 """
 
 
-def talvez_publicar(estado, canal, agora, arquivo=ARQ, log=print):
+def talvez_publicar(estado, canal, agora, arquivo=ARQ, log=print, grupo_wa=None):
     """Reescreve a página se mudou e se já passou 1 hora desde a última vez."""
     ultima = estado.get("vitrine_publicada_em")
     if ultima and ultima[:13] == agora.isoformat()[:13]:
         return False
-    conteudo = gerar_html(estado, canal)
-    assinatura = hashlib.sha1(json.dumps((estado.get("vitrine") or {}).get("itens"), sort_keys=True)
+    conteudo = gerar_html(estado, canal, grupo_wa)
+    assinatura = hashlib.sha1(json.dumps([(estado.get("vitrine") or {}).get("itens"), canal, grupo_wa],
+                                         sort_keys=True)
                               .encode()).hexdigest()
     if assinatura == estado.get("vitrine_assinatura") and Path(arquivo).exists():
         return False

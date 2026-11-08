@@ -823,3 +823,14 @@ def test_reconfere_preco_antes_de_postar(monkeypatch):
                           tarefa=lambda: rodadas.append(1))
     assert [o.id for o in enviadas] == ["MLB2", "MLB3"]  # MLB1 acabou e foi pulada
     assert rodadas  # mensagens e cupons conferidos durante a espera entre posts
+
+
+def test_vitrine_com_grupo_whatsapp(tmp_path):
+    from bot import vitrine
+    e = est.novo()
+    o = avaliar(Produto("MLB1", "catalogo", "", "https://meli.la/A", "roupa", None, 0), info(60, 100, "MLB1"), e, AGORA)
+    vitrine.guardar(e, [o], AGORA)
+    arq = tmp_path / "i.html"
+    assert vitrine.talvez_publicar(e, "@c", AGORA, arq, log=lambda m: None, grupo_wa="https://chat.whatsapp.com/X")
+    h = arq.read_text()
+    assert "Entrar no grupo do WhatsApp" in h and "https://chat.whatsapp.com/X" in h and "t.me/c" in h
