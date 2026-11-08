@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 16
+  "2026-11-08": 17
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3715,6 +3715,12 @@
    "quando": "2026-11-08T09:02-03:00",
    "titulo": "Mini Bateria Infantil ATENTU Instrumento Brinquedo 3 Tambores"
   },
+  "MLB43200233": {
+   "desconto": 0.423,
+   "preco": 77.9,
+   "quando": "2026-11-08T12:53-03:00",
+   "titulo": "Bicicleta de Equilíbrio Brinq Kids Brinquei Vermelho para Crianças 12m+"
+  },
   "MLB43292361": {
    "desconto": 0.478,
    "preco": 114.9,
@@ -4789,6 +4795,10 @@
     [
      "2026-11-08",
      32.17
+    ],
+    [
+     "2026-11-08",
+     32.99
     ]
    ],
    "min": 32.17
@@ -4881,6 +4891,10 @@
     [
      "2026-11-08",
      20.33
+    ],
+    [
+     "2026-11-08",
+     22.89
     ]
    ],
    "min": 18.2
@@ -7176,6 +7190,10 @@
     [
      "2026-11-08",
      42.86
+    ],
+    [
+     "2026-11-08",
+     42.27
     ]
    ],
    "min": 41.53
@@ -8449,6 +8467,10 @@
     [
      "2026-11-07",
      70.98
+    ],
+    [
+     "2026-11-08",
+     77.95
     ]
    ],
    "min": 70.98
@@ -8661,28 +8683,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517980,
  "vitrine": {
-  "em": "2026-11-08T12:33-03:00",
+  "em": "2026-11-08T12:53-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 350.0,
-    "desconto": 0.486,
-    "id": "MLB44958164",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_627665-MLA113620705920_072026-F.jpg",
-    "link": "https://meli.la/1Ed1cyx",
-    "preco": 180.0,
-    "titulo": "Cadeira De Alimentação Bebê Portátil 3em1 Styll Baby Segura Cor Cinza Cor"
-   },
-   {
-    "categoria": "higiene",
-    "de": 49.99,
-    "desconto": 0.465,
-    "id": "MLB72024607",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_786352-MLA120947062033_112026-F.jpg",
-    "link": "https://meli.la/2Rr1je8",
-    "preco": 26.75,
-    "titulo": "Assento Redutor Sanitário Infantil Almofadado Acolchoado Desfralde Bebê Criança Menina Antiderrapante Antirres"
-   },
    {
     "categoria": "brinquedo",
     "de": 135.05,
@@ -8712,16 +8714,6 @@
     "link": "https://meli.la/2wEAaHE",
     "preco": 128.14,
     "titulo": "Andador De Empurrar Infantil Com Atividades Azul - Maxi Baby"
-   },
-   {
-    "categoria": "outros",
-    "de": 31.9,
-    "desconto": 0.363,
-    "id": "MLB24679612",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
-    "link": "https://meli.la/1hn9qT6",
-    "preco": 20.33,
-    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
    },
    {
     "categoria": "outros",
@@ -9214,6 +9206,16 @@
     "titulo": "1 Seringa Lavagem Nariz + 1 Aspirador Sugador Catarro Bebê A Rosa-claro"
    },
    {
+    "categoria": "outros",
+    "de": 31.9,
+    "desconto": 0.282,
+    "id": "MLB24679612",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
+    "link": "https://meli.la/1hn9qT6",
+    "preco": 22.89,
+    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
+   },
+   {
     "categoria": "brinquedo",
     "de": 34.0,
     "desconto": 0.3,
@@ -9262,6 +9264,26 @@
     "link": "https://meli.la/1fhC97o",
     "preco": 41.81,
     "titulo": "Jogo Stop De Palavras Adedonha Educativo Infantil Interativo Familia Adultos E Crianças Babuu Brinquedos Educa"
+   },
+   {
+    "categoria": "roupa",
+    "de": 49.0,
+    "desconto": 0.223,
+    "id": "MLB65369406",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_960611-MLA106760006275_022026-F.jpg",
+    "link": "https://meli.la/2STyvLe",
+    "preco": 38.09,
+    "titulo": "Kit 3 Bodys Bebê Liso Manga Curta 100% Algodão Menina Menino Cor Azul-marinho Azul-claro E Branco Tamanho G"
+   },
+   {
+    "categoria": "passeio",
+    "de": 479.9,
+    "desconto": 0.312,
+    "id": "MLB30522365",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_935560-MLA100005231121_122025-F.jpg",
+    "link": "https://meli.la/1yZaTvp",
+    "preco": 330.0,
+    "titulo": "Carrinho Guarda Chuva De passeio Maxi Baby Até 15kgs cor Preto"
    }
   ]
  },
