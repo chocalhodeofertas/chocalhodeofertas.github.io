@@ -1,5 +1,5 @@
 {
- "aguardando_link": 32,
+ "aguardando_link": 30,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 50
+  "2026-11-08": 2
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3538,19 +3538,85 @@
   "MLB81142365": "https://meli.la/2Lcg3Q4",
   "MLB81565711": "https://meli.la/1C8TRy9"
  },
- "lote": null,
+ "lote": {
+  "dia": "2026-11-08",
+  "ids": [
+   "MLB69086946",
+   "MLB44958164",
+   "MLB72024607",
+   "MLB54357048",
+   "MLB60842313",
+   "MLB26727193",
+   "MLB39456030",
+   "MLB79736952",
+   "MLB61715651",
+   "MLB18392841",
+   "MLB30522365",
+   "MLB18392608",
+   "MLB22191149",
+   "MLB63158085",
+   "MLB57071349",
+   "MLB75712282",
+   "MLB70382962",
+   "MLB54018368",
+   "MLB47257696",
+   "MLB80107133",
+   "MLB61211409",
+   "MLB56415193",
+   "MLB32073190",
+   "MLB78182435",
+   "MLB73425165",
+   "MLB22974681",
+   "MLB61874839",
+   "MLB62786325",
+   "MLB28001568",
+   "MLB21464638"
+  ],
+  "urls": [
+   "https://produto.mercadolivre.com.br/MLB-7945080336-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5267362966-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4744738229-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5652930912-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7634128218-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4708907333-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4232674333-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7951684836-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6653095030-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4169889151-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3836929229-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3338901706-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4234467025-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7532291206-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5728021772-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7240444098-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6865311404-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5613206510-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5905998822-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7836634238-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4274565581-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7855146866-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3722102795-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5466905133-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4796842341-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3491716099-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5915912548-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6243773304-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3793715245-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6989132212-produto-_JM"
+  ]
+ },
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-07": 3
+  "2026-11-08": 1
  },
  "membros_hist": {
   "2026-11-07": 2
  },
  "postados": {
   "MLB10923645": {
-   "desconto": 0.443,
-   "preco": 155.43,
-   "quando": "2026-11-07T15:12-03:00",
+   "desconto": 0.499,
+   "preco": 139.9,
+   "quando": "2026-11-08T08:02-03:00",
    "titulo": "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor"
   },
   "MLB17489277": {
@@ -3582,6 +3648,12 @@
   "MLB24626810": {
    "preco": 29.85,
    "quando": "2026-11-06T17:35-03:00"
+  },
+  "MLB24635461": {
+   "desconto": 0.436,
+   "preco": 15.18,
+   "quando": "2026-11-08T08:02-03:00",
+   "titulo": "Buba, Aspirador Nasal de Sucção em Silicone para Bebês"
   },
   "MLB24647472": {
    "desconto": 0.558,
@@ -4039,9 +4111,13 @@
     [
      "2026-11-07",
      155.43
+    ],
+    [
+     "2026-11-08",
+     139.9
     ]
    ],
-   "min": 155.43
+   "min": 139.9
   },
   "MLB17335831": {
    "historico": [
@@ -4185,6 +4261,10 @@
     [
      "2026-11-07",
      45.19
+    ],
+    [
+     "2026-11-08",
+     27.87
     ]
    ],
    "min": 27.87
@@ -4474,6 +4554,10 @@
     [
      "2026-11-07",
      168.0
+    ],
+    [
+     "2026-11-08",
+     168.9
     ]
    ],
    "min": 168.0
@@ -4554,6 +4638,10 @@
     [
      "2026-11-06",
      64.99
+    ],
+    [
+     "2026-11-08",
+     67.9
     ]
    ],
    "min": 64.99
@@ -4699,6 +4787,10 @@
     [
      "2026-11-07",
      20.1
+    ],
+    [
+     "2026-11-08",
+     20.33
     ]
    ],
    "min": 18.2
@@ -4721,6 +4813,10 @@
     [
      "2026-11-07",
      872.9
+    ],
+    [
+     "2026-11-08",
+     899.9
     ]
    ],
    "min": 872.9
@@ -5186,6 +5282,10 @@
     [
      "2026-11-07",
      179.8
+    ],
+    [
+     "2026-11-08",
+     179.9
     ]
    ],
    "min": 179.8
@@ -5941,9 +6041,13 @@
     [
      "2026-11-07",
      1313.14
+    ],
+    [
+     "2026-11-08",
+     1069.99
     ]
    ],
-   "min": 1096.99
+   "min": 1069.99
   },
   "MLB51035138": {
    "historico": [
@@ -6043,6 +6147,10 @@
     [
      "2026-11-07",
      76.53
+    ],
+    [
+     "2026-11-08",
+     52.96
     ]
    ],
    "min": 41.61
@@ -6083,6 +6191,10 @@
     [
      "2026-11-07",
      298.79
+    ],
+    [
+     "2026-11-08",
+     298.8
     ]
    ],
    "min": 298.79
@@ -6279,6 +6391,10 @@
     [
      "2026-11-07",
      209.89
+    ],
+    [
+     "2026-11-08",
+     219.99
     ]
    ],
    "min": 199.99
@@ -6328,6 +6444,10 @@
     [
      "2026-11-07",
      199.49
+    ],
+    [
+     "2026-11-08",
+     223.16
     ]
    ],
    "min": 199.49
@@ -6557,6 +6677,10 @@
     [
      "2026-11-07",
      134.9
+    ],
+    [
+     "2026-11-08",
+     158.53
     ]
    ],
    "min": 134.9
@@ -6684,6 +6808,10 @@
     [
      "2026-11-07",
      199.0
+    ],
+    [
+     "2026-11-08",
+     205.99
     ]
    ],
    "min": 199.0
@@ -6791,6 +6919,10 @@
     [
      "2026-11-06",
      124.99
+    ],
+    [
+     "2026-11-08",
+     189.9
     ]
    ],
    "min": 124.99
@@ -6858,6 +6990,10 @@
     [
      "2026-11-07",
      38.0
+    ],
+    [
+     "2026-11-08",
+     38.09
     ]
    ],
    "min": 38.0
@@ -6902,6 +7038,10 @@
     [
      "2026-11-06",
      41.53
+    ],
+    [
+     "2026-11-08",
+     42.95
     ]
    ],
    "min": 41.53
@@ -7007,6 +7147,10 @@
     [
      "2026-11-07",
      19.9
+    ],
+    [
+     "2026-11-08",
+     19.8
     ]
    ],
    "min": 19.7
@@ -7096,6 +7240,10 @@
     [
      "2026-11-07",
      193.22
+    ],
+    [
+     "2026-11-08",
+     338.88
     ]
    ],
    "min": 183.0
@@ -7127,6 +7275,10 @@
     [
      "2026-11-07",
      95.94
+    ],
+    [
+     "2026-11-08",
+     143.9
     ]
    ],
    "min": 95.94
@@ -7238,6 +7390,10 @@
     [
      "2026-11-07",
      171.0
+    ],
+    [
+     "2026-11-08",
+     169.0
     ]
    ],
    "min": 163.29
@@ -7572,6 +7728,10 @@
     [
      "2026-11-07",
      359.8
+    ],
+    [
+     "2026-11-08",
+     389.9
     ]
    ],
    "min": 359.8
@@ -8274,6 +8434,10 @@
     [
      "2026-11-07",
      320.0
+    ],
+    [
+     "2026-11-08",
+     318.9
     ]
    ],
    "min": 259.9
@@ -8331,8 +8495,18 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T21:42-03:00",
+  "em": "2026-11-08T08:02-03:00",
   "itens": [
+   {
+    "categoria": "brinquedo",
+    "de": 279.0,
+    "desconto": 0.499,
+    "id": "MLB10923645",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_621182-MLA52734590675_122022-F.jpg",
+    "link": "https://meli.la/1v1oNAW",
+    "preco": 139.9,
+    "titulo": "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor"
+   },
    {
     "categoria": "outros",
     "de": 26.9,
@@ -8342,6 +8516,16 @@
     "link": "https://meli.la/1ETa1Vp",
     "preco": 15.18,
     "titulo": "Buba, Aspirador Nasal de Sucção em Silicone para Bebês"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 1786.0,
+    "desconto": 0.401,
+    "id": "MLB50967900",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_851844-MLA104766979898_012026-F.jpg",
+    "link": "https://meli.la/1eLBYKK",
+    "preco": 1069.99,
+    "titulo": "Cama Elástica Orbitoys 3.05 m com Rede de Proteção e Suporte de 335 kg"
    },
    {
     "categoria": "brinquedo",
@@ -8394,16 +8578,6 @@
     "titulo": "Mesa Infantil De Atividades Tramontina Playground Pic-nic Cor Colorido"
    },
    {
-    "categoria": "outros",
-    "de": 31.9,
-    "desconto": 0.37,
-    "id": "MLB24679612",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
-    "link": "https://meli.la/1hn9qT6",
-    "preco": 20.1,
-    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
-   },
-   {
     "categoria": "brinquedo",
     "de": 150.0,
     "desconto": 0.393,
@@ -8435,16 +8609,6 @@
    },
    {
     "categoria": "brinquedo",
-    "de": 365.0,
-    "desconto": 0.392,
-    "id": "MLB38412815",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_793554-MLA96429306358_102025-F.jpg",
-    "link": "https://meli.la/2oW2z3N",
-    "preco": 221.92,
-    "titulo": "Bolinhas Para Piscina Coloridas Braskit 500 Unidades Plástico"
-   },
-   {
-    "categoria": "brinquedo",
     "de": 135.05,
     "desconto": 0.423,
     "id": "MLB43200233",
@@ -8472,6 +8636,16 @@
     "link": "https://meli.la/2wEAaHE",
     "preco": 128.14,
     "titulo": "Andador De Empurrar Infantil Com Atividades Azul - Maxi Baby"
+   },
+   {
+    "categoria": "outros",
+    "de": 31.9,
+    "desconto": 0.363,
+    "id": "MLB24679612",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
+    "link": "https://meli.la/1hn9qT6",
+    "preco": 20.33,
+    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
    },
    {
     "categoria": "outros",
@@ -8654,16 +8828,6 @@
     "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco 127"
    },
    {
-    "categoria": "jogo",
-    "de": 169.0,
-    "desconto": 0.349,
-    "id": "MLB51035138",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_942837-MLA104158430322_012026-F.jpg",
-    "link": "https://meli.la/1vczkgB",
-    "preco": 109.99,
-    "titulo": "Taco De Sinuca Bilhar Profissional Com Capa Giz Sola Brindes Snooker Bilhares Mgk"
-   },
-   {
     "categoria": "brinquedo",
     "de": 139.99,
     "desconto": 0.372,
@@ -8734,26 +8898,6 @@
     "titulo": "Atentu Mini bateria infantil atentu banquinho brinquedo com 5 tambores vermelho"
    },
    {
-    "categoria": "brinquedo",
-    "de": 199.9,
-    "desconto": 0.328,
-    "id": "MLB27861415",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_802710-MLA91575017864_092025-F.jpg",
-    "link": "https://meli.la/2nvA4BA",
-    "preco": 134.24,
-    "titulo": "Cozinha De Brinquedo Infantil Completa Princess Replay Kids"
-   },
-   {
-    "categoria": "outros",
-    "de": 359.9,
-    "desconto": 0.353,
-    "id": "MLB57083030",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_741342-MLA92558466166_092025-F.jpg",
-    "link": "https://meli.la/168F5Rm",
-    "preco": 233.0,
-    "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
-   },
-   {
     "categoria": "jogo",
     "de": 42.99,
     "desconto": 0.304,
@@ -8772,16 +8916,6 @@
     "link": "https://meli.la/1V8XMyo",
     "preco": 27.9,
     "titulo": "Kit Mordedor para Bebê brinquedo Sensorial Silicone com Chocalho 8 Peças Coloridas"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 259.9,
-    "desconto": 0.346,
-    "id": "MLB54746525",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_677167-MLA99508828416_112025-F.jpg",
-    "link": "https://meli.la/2abq4Ss",
-    "preco": 169.9,
-    "titulo": "Brinquedo triciclo de 3 rodas para crianças com cesto de bolhas rosa chiclete Atentu triciclo infantil motoca"
    },
    {
     "categoria": "brinquedo",
@@ -8904,16 +9038,6 @@
     "titulo": "Cavalinho Upa Upa Rosa com LED e Música para Bebê"
    },
    {
-    "categoria": "brinquedo",
-    "de": 34.0,
-    "desconto": 0.3,
-    "id": "MLB21843844",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_674475-MLA99598648876_122025-F.jpg",
-    "link": "https://meli.la/1Y4uD27",
-    "preco": 23.8,
-    "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
-   },
-   {
     "categoria": "roupa",
     "de": 64.9,
     "desconto": 0.214,
@@ -8932,9 +9056,49 @@
     "link": "https://meli.la/2pHZDtK",
     "preco": 34.88,
     "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
+   },
+   {
+    "categoria": "jogo",
+    "de": 58.9,
+    "desconto": 0.29,
+    "id": "MLB66141214",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_633703-MLA120091503725_102026-F.jpg",
+    "link": "https://meli.la/1fhC97o",
+    "preco": 41.81,
+    "titulo": "Jogo Stop De Palavras Adedonha Educativo Infantil Interativo Familia Adultos E Crianças Babuu Brinquedos Educa"
+   },
+   {
+    "categoria": "roupa",
+    "de": 49.0,
+    "desconto": 0.223,
+    "id": "MLB65369406",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_960611-MLA106760006275_022026-F.jpg",
+    "link": "https://meli.la/2STyvLe",
+    "preco": 38.09,
+    "titulo": "Kit 3 Bodys Bebê Liso Manga Curta 100% Algodão Menina Menino Cor Azul-marinho Azul-claro E Branco Tamanho G"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 78.9,
+    "desconto": 0.267,
+    "id": "MLB73156948",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_647260-MLA113092149523_062026-F.jpg",
+    "link": "https://meli.la/2ShKRwP",
+    "preco": 57.8,
+    "titulo": "Urso De Pelúcia Teddy Bear Grande Com Laço 50cm Antialérgico Cor Baunilha com Azul Bebe"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 99.99,
+    "desconto": 0.276,
+    "id": "MLB23535413",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_852508-MLU73117589489_112023-F.jpg",
+    "link": "https://meli.la/2TTsbgY",
+    "preco": 72.44,
+    "titulo": "Laptop Infantil Educativo Frozen 8303 Português E Inglês Candide"
    }
   ]
  },
- "vitrine_assinatura": "b081afab49cd03146387cb34eb20ffc12afbae42",
- "vitrine_publicada_em": "2026-11-07T21:02-03:00"
+ "vitrine_assinatura": "0af5c6754119fd2c40888397b939bd326c480867",
+ "vitrine_publicada_em": "2026-11-08T08:02-03:00"
 }
