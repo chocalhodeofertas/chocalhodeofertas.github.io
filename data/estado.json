@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-07": 48
+  "2026-11-07": 50
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3789,6 +3789,12 @@
    "preco": 35.9,
    "quando": "2026-11-06T19:23-03:00"
   },
+  "MLB62690385": {
+   "desconto": 0.439,
+   "preco": 72.9,
+   "quando": "2026-11-07T21:22-03:00",
+   "titulo": "Mini Mesa de Sinuca Infantil Bilhar Portátil 48x28cm com 16 Bolas 2 Tacos e Triâ"
+  },
   "MLB62727038": {
    "desconto": 0.5,
    "preco": 69.9,
@@ -3936,6 +3942,12 @@
   "MLB77496641": {
    "preco": 19.97,
    "quando": "2026-11-06T11:05-03:00"
+  },
+  "MLB77687455": {
+   "desconto": 0.404,
+   "preco": 62.0,
+   "quando": "2026-11-07T21:22-03:00",
+   "titulo": "Splash Sprinkler Pad 170cm Piscina Inflável Chafariz Infantil Redonda Rosa"
   },
   "MLB78828696": {
    "preco": 23.86,
@@ -6023,6 +6035,10 @@
     [
      "2026-11-07",
      41.61
+    ],
+    [
+     "2026-11-07",
+     76.53
     ]
    ],
    "min": 41.61
@@ -7116,6 +7132,10 @@
     [
      "2026-11-07",
      76.53
+    ],
+    [
+     "2026-11-07",
+     78.9
     ]
    ],
    "min": 76.53
@@ -8307,28 +8327,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T21:02-03:00",
+  "em": "2026-11-07T21:22-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 439.9,
-    "desconto": 0.409,
-    "id": "MLB19569079",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_691563-MLA118345386152_102026-F.jpg",
-    "link": "https://meli.la/2nSqsJA",
-    "preco": 259.9,
-    "titulo": "Cama Elástica Pula Pula Trampolim JustFun 1,40m com Rede de Proteção e 36 Molas"
-   },
-   {
-    "categoria": "outros",
-    "de": 59.9,
-    "desconto": 0.384,
-    "id": "MLB80328135",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_820161-MLA119031086759_102026-F.jpg",
-    "link": "https://meli.la/2HDXPjg",
-    "preco": 36.9,
-    "titulo": "Aspirador Nasal Rosa Elétrico Infantil Bebê Recarregável USB Sugador de Nariz Limpeza Nasal Portátil Removedor"
-   },
    {
     "categoria": "jogo",
     "de": 129.9,
@@ -8908,6 +8908,26 @@
     "link": "https://meli.la/1dk5sV4",
     "preco": 56.16,
     "titulo": "Balanço Infantil GuiBrink de Plástico para Bebê Com Cinto Segurança e Corda"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 64.98,
+    "desconto": 0.328,
+    "id": "MLB71892696",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_865407-MLA112685691901_062026-F.jpg",
+    "link": "https://meli.la/1xWdLwa",
+    "preco": 43.64,
+    "titulo": "Cavalinho Upa Upa Rosa com LED e Música para Bebê"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 34.0,
+    "desconto": 0.3,
+    "id": "MLB21843844",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_674475-MLA99598648876_122025-F.jpg",
+    "link": "https://meli.la/1Y4uD27",
+    "preco": 23.8,
+    "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
    }
   ]
  },
