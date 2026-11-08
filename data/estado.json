@@ -4607,6 +4607,10 @@
     [
      "2026-11-07",
      32.17
+    ],
+    [
+     "2026-11-07",
+     32.18
     ]
    ],
    "min": 32.17
@@ -8327,28 +8331,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-07T21:22-03:00",
+  "em": "2026-11-07T21:42-03:00",
   "itens": [
-   {
-    "categoria": "jogo",
-    "de": 129.9,
-    "desconto": 0.439,
-    "id": "MLB62690385",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_872478-MLA113363849507_062026-F.jpg",
-    "link": "https://meli.la/2QTjCug",
-    "preco": 72.9,
-    "titulo": "Mini Mesa de Sinuca Infantil Bilhar Portátil 48x28cm com 16 Bolas 2 Tacos e Triângulo Mesinha com Pano Aveluda"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 104.0,
-    "desconto": 0.404,
-    "id": "MLB77687455",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_633362-MLA115023418984_082026-F.jpg",
-    "link": "https://meli.la/2BGBnmp",
-    "preco": 62.0,
-    "titulo": "Splash Sprinkler Pad 170cm Piscina Inflável Chafariz Infantil Redonda Rosa"
-   },
    {
     "categoria": "outros",
     "de": 26.9,
@@ -8928,6 +8912,26 @@
     "link": "https://meli.la/1Y4uD27",
     "preco": 23.8,
     "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
+   },
+   {
+    "categoria": "roupa",
+    "de": 64.9,
+    "desconto": 0.214,
+    "id": "MLB74331737",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_719686-MLA112427993532_062026-F.jpg",
+    "link": "https://meli.la/1VMFgJB",
+    "preco": 51.0,
+    "titulo": "Maiô Natação Infantil Biquíni Manga Longa Proteção Solar Uv Cor Água Tamanho 4"
+   },
+   {
+    "categoria": "outros",
+    "de": 51.04,
+    "desconto": 0.317,
+    "id": "MLB18392677",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_990051-MLA110123026010_042026-F.jpg",
+    "link": "https://meli.la/2pHZDtK",
+    "preco": 34.88,
+    "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
    }
   ]
  },
