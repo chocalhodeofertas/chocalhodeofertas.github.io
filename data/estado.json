@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 22
+  "2026-11-08": 23
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3877,6 +3877,12 @@
    "quando": "2026-11-07T19:02-03:00",
    "titulo": "Bola Vinil Inflável Kit Com 10 Bolas Infláveis Cores Sortidas 23cm Praia Piscina"
   },
+  "MLB62445069": {
+   "desconto": 0.355,
+   "preco": 399.9,
+   "quando": "2026-11-08T14:13-03:00",
+   "titulo": "Cadeirinha Automotiva Atentu BS05 para Bebê e Criança de 9 a 36 kg Vermelha"
+  },
   "MLB62645299": {
    "desconto": 0.481,
    "preco": 134.9,
@@ -4829,6 +4835,10 @@
     [
      "2026-11-08",
      32.17
+    ],
+    [
+     "2026-11-08",
+     32.18
     ]
    ],
    "min": 32.17
@@ -8725,18 +8735,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T13:53-03:00",
+  "em": "2026-11-08T14:13-03:00",
   "itens": [
-   {
-    "categoria": "outros",
-    "de": 600.0,
-    "desconto": 0.38,
-    "id": "MLB37887504",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_846232-MLA99509492760_112025-F.jpg",
-    "link": "https://meli.la/2yuRBNX",
-    "preco": 372.0,
-    "titulo": "Berço Compacto Confort Bebê Cercado Chiqueirinho Rosa Cor Cinza"
-   },
    {
     "categoria": "passeio",
     "de": 619.9,
@@ -9326,9 +9326,19 @@
     "link": "https://meli.la/1wYBGNu",
     "preco": 35.77,
     "titulo": "Fralda Descartável Turma da Mônica Baby M 50 Unidades 12 h"
+   },
+   {
+    "categoria": "jogo",
+    "de": 59.99,
+    "desconto": 0.298,
+    "id": "MLB37554844",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_846045-MLA99579753132_122025-F.jpg",
+    "link": "https://meli.la/2srZGGy",
+    "preco": 42.09,
+    "titulo": "Raquete Ping Pong De Tenis De Mesa Profissional C/raqueteira Cor Case Preta ou Vermelha Tipo De Cabo Fl (cônca"
    }
   ]
  },
- "vitrine_assinatura": "931b8c232aa2505bd542d0f9ebe37f9c7ec932b8",
- "vitrine_publicada_em": "2026-11-08T13:13-03:00"
+ "vitrine_assinatura": "d7a5c7275f267d14baea13ddc8b8ffb2c4c11d8c",
+ "vitrine_publicada_em": "2026-11-08T14:13-03:00"
 }
