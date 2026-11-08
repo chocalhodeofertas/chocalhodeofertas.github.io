@@ -1,0 +1,21 @@
+name: Buscar fotos para capas
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -q requests Pillow
+      - run: python tools/buscar_fotos.py
+      - name: Salva no ramo "fotos"
+        run: |
+          git config user.name "chocalho-bot"; git config user.email "bot@users.noreply.github.com"
+          git checkout -b fotos
+          git add fotos_candidatas
+          git commit -q -m "Fotos candidatas para capas [skip ci]"
+          git push -f origin fotos
