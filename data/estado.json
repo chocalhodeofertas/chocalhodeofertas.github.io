@@ -1,5 +1,5 @@
 {
- "aguardando_link": 31,
+ "aguardando_link": 30,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 11
+  "2026-11-08": 12
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3720,6 +3720,12 @@
   "MLB36436855": {
    "preco": 64.9,
    "quando": "2026-11-06T18:23-03:00"
+  },
+  "MLB38412815": {
+   "desconto": 0.392,
+   "preco": 221.92,
+   "quando": "2026-11-08T11:33-03:00",
+   "titulo": "Bolinhas Para Piscina Coloridas Braskit 500 Unidades Plástico"
   },
   "MLB38654615": {
    "preco": 64.9,
@@ -7423,6 +7429,10 @@
     [
      "2026-11-06",
      23.4
+    ],
+    [
+     "2026-11-08",
+     31.83
     ]
    ],
    "min": 23.4
@@ -8613,28 +8623,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-08T11:13-03:00",
+  "em": "2026-11-08T11:33-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 129.9,
-    "desconto": 0.393,
-    "id": "MLB43880173",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_935169-MLA99955113883_112025-F.jpg",
-    "link": "https://meli.la/2VC9aoD",
-    "preco": 78.9,
-    "titulo": "Teclado Elétrico Musical Infantil Com Microfone E Fonte Cor Preto"
-   },
-   {
-    "categoria": "jogo",
-    "de": 169.99,
-    "desconto": 0.424,
-    "id": "MLB66566409",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_799074-MLA109742234079_032026-F.jpg",
-    "link": "https://meli.la/1AEMg1j",
-    "preco": 97.99,
-    "titulo": "Jogo Banco Imobiliário Grande Estrela em português"
-   },
    {
     "categoria": "brinquedo",
     "de": 365.0,
@@ -9076,6 +9066,16 @@
     "titulo": "Carro Hot Wheels Premium Chevrolet K5 Blazer Stranger Things"
    },
    {
+    "categoria": "gestante",
+    "de": 44.99,
+    "desconto": 0.293,
+    "id": "MLB68520050",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_884284-MLA109904187596_042026-F.jpg",
+    "link": "https://meli.la/1DnDKti",
+    "preco": 31.83,
+    "titulo": "Rosquinha Para Amamentação Cor Branco Kit 6 Yulababy"
+   },
+   {
     "categoria": "passeio",
     "de": 873.89,
     "desconto": 0.336,
@@ -9214,6 +9214,16 @@
     "link": "https://meli.la/2TTsbgY",
     "preco": 72.44,
     "titulo": "Laptop Infantil Educativo Frozen 8303 Português E Inglês Candide"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 129.99,
+    "desconto": 0.296,
+    "id": "MLB20794850",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_873057-MLA100043981585_122025-F.jpg",
+    "link": "https://meli.la/1tKMmv8",
+    "preco": 91.52,
+    "titulo": "Boneco Pelúcia Chase Patrulha Canina 1328 Sunny Brinquedos"
    }
   ]
  },
