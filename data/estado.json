@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 41
+  "2026-11-08": 43
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3714,6 +3714,12 @@
    "quando": "2026-11-08T18:15-03:00",
    "titulo": "Patinete Infantil 3 Rodas com Led/Dobrável Menino/Menina"
   },
+  "MLB26727193": {
+   "desconto": 0.378,
+   "preco": 469.99,
+   "quando": "2026-11-08T20:15-03:00",
+   "titulo": "Berço Portátil Serenata Black Burigotto"
+  },
   "MLB26816126": {
    "desconto": 0.455,
    "preco": 17.37,
@@ -4252,6 +4258,12 @@
    "preco": 23.86,
    "quando": "2026-11-06T20:43-03:00"
   },
+  "MLB79143996": {
+   "desconto": 0.377,
+   "preco": 218.0,
+   "quando": "2026-11-08T20:15-03:00",
+   "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco 127"
+  },
   "MLB79313725": {
    "preco": 48.0,
    "quando": "2026-11-06T17:15-03:00"
@@ -4720,6 +4732,10 @@
     [
      "2026-11-08",
      19.42
+    ],
+    [
+     "2026-11-08",
+     23.8
     ]
    ],
    "min": 19.42
@@ -5069,6 +5085,10 @@
     [
      "2026-11-08",
      32.99
+    ],
+    [
+     "2026-11-08",
+     39.86
     ]
    ],
    "min": 32.17
@@ -9067,6 +9087,10 @@
     [
      "2026-11-08",
      70.29
+    ],
+    [
+     "2026-11-08",
+     78.98
     ]
    ],
    "min": 70.29
@@ -9140,6 +9164,10 @@
     [
      "2026-11-08",
      320.0
+    ],
+    [
+     "2026-11-08",
+     275.0
     ]
    ],
    "min": 259.9
@@ -9197,18 +9225,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T19:55-03:00",
+  "em": "2026-11-08T20:15-03:00",
   "itens": [
-   {
-    "categoria": "outros",
-    "de": 59.9,
-    "desconto": 0.35,
-    "id": "MLB60842313",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_622299-MLA95510663270_102025-F.jpg",
-    "link": "https://meli.la/1inDkwx",
-    "preco": 38.93,
-    "titulo": "Xô Febre: Compressas Refrescantes para Aliviar a Febre do Bebê – Kit com 4"
-   },
    {
     "categoria": "outros",
     "de": 755.48,
@@ -9458,6 +9476,16 @@
     "link": "https://meli.la/2yRNUqX",
     "preco": 20.9,
     "titulo": "Kit 1 Seringa Lavagem Nariz + 1 Aspirador Sugador Catarro Bebê Lider Comercios Cor Azul-celeste"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 34.0,
+    "desconto": 0.3,
+    "id": "MLB21843844",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_674475-MLA99598648876_122025-F.jpg",
+    "link": "https://meli.la/1Y4uD27",
+    "preco": 23.8,
+    "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
    },
    {
     "categoria": "brinquedo",
@@ -9801,6 +9829,6 @@
    }
   ]
  },
- "vitrine_assinatura": "eff372ff09dec80a81e2f07709c4c0b8ca2009c5",
- "vitrine_publicada_em": "2026-11-08T19:15-03:00"
+ "vitrine_assinatura": "42588517e5132200cf73b473a70d54f48851dbe2",
+ "vitrine_publicada_em": "2026-11-08T20:15-03:00"
 }
