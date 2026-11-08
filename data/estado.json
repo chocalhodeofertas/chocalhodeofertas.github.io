@@ -1,5 +1,5 @@
 {
- "aguardando_link": 32,
+ "aguardando_link": 31,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 8
+  "2026-11-08": 9
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3965,6 +3965,12 @@
    "preco": 64.9,
    "quando": "2026-11-06T21:44-03:00"
   },
+  "MLB67991030": {
+   "desconto": 0.393,
+   "preco": 91.0,
+   "quando": "2026-11-08T10:22-03:00",
+   "titulo": "Xuxão Apoio Urso Banguela Fúria Da Noite Gigante 100cm Pelúcia Preto"
+  },
   "MLB68031618": {
    "desconto": 0.7,
    "preco": 95.94,
@@ -4194,6 +4200,10 @@
     [
      "2026-11-08",
      33.0
+    ],
+    [
+     "2026-11-08",
+     199.99
     ]
    ],
    "min": 33.0
@@ -8579,28 +8589,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-08T10:02-03:00",
+  "em": "2026-11-08T10:22-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 147.0,
-    "desconto": 0.397,
-    "id": "MLB72653285",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_732536-MLA112805902503_062026-F.jpg",
-    "link": "https://meli.la/2UdUWS3",
-    "preco": 88.68,
-    "titulo": "Carrinho de Controle Remoto Acrobático 360° para Crianças, com Luzes LED e Som"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 520.9,
-    "desconto": 0.428,
-    "id": "MLB24156713",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_706045-MLA95660331704_102025-F.jpg",
-    "link": "https://meli.la/2ztdXfS",
-    "preco": 297.9,
-    "titulo": "Mesa Infantil De Atividades Tramontina Playground Pic-nic Cor Colorido"
-   },
    {
     "categoria": "brinquedo",
     "de": 150.0,
@@ -9180,6 +9170,26 @@
     "link": "https://meli.la/1jeK2Nc",
     "preco": 26.9,
     "titulo": "Kit Chocalhos e Mordedores Sensoriais para Bebê com 8 Peças de Silicone e Plástico"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 78.9,
+    "desconto": 0.267,
+    "id": "MLB73156948",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_647260-MLA113092149523_062026-F.jpg",
+    "link": "https://meli.la/2ShKRwP",
+    "preco": 57.8,
+    "titulo": "Urso De Pelúcia Teddy Bear Grande Com Laço 50cm Antialérgico Cor Baunilha com Azul Bebe"
+   },
+   {
+    "categoria": "jogo",
+    "de": 59.99,
+    "desconto": 0.298,
+    "id": "MLB37554844",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_846045-MLA99579753132_122025-F.jpg",
+    "link": "https://meli.la/2srZGGy",
+    "preco": 42.09,
+    "titulo": "Raquete Ping Pong De Tenis De Mesa Profissional C/raqueteira Cor Case Preta ou Vermelha Tipo De Cabo Fl (cônca"
    }
   ]
  },
