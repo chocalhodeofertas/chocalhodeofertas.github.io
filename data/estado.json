@@ -4315,6 +4315,10 @@
     [
      "2026-11-08",
      27.87
+    ],
+    [
+     "2026-11-08",
+     32.59
     ]
    ],
    "min": 27.87
@@ -7748,6 +7752,10 @@
     [
      "2026-11-08",
      49.49
+    ],
+    [
+     "2026-11-08",
+     54.99
     ]
    ],
    "min": 49.49
@@ -8589,18 +8597,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-08T10:22-03:00",
+  "em": "2026-11-08T10:42-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 150.0,
-    "desconto": 0.393,
-    "id": "MLB67991030",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_789052-MLA115096482666_082026-F.jpg",
-    "link": "https://meli.la/2rEVfVu",
-    "preco": 91.0,
-    "titulo": "Xuxão Apoio Urso Banguela Fúria Da Noite Gigante 100cm Pelúcia Preto"
-   },
    {
     "categoria": "brinquedo",
     "de": 129.9,
@@ -8680,16 +8678,6 @@
     "link": "https://meli.la/2BZ8CCL",
     "preco": 115.33,
     "titulo": "Cercadinho Bebê Rister Baby Portátil Grande + Tapete Rosa"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 79.99,
-    "desconto": 0.381,
-    "id": "MLB72656297",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_918081-MLA112807271193_062026-F.jpg",
-    "link": "https://meli.la/1dDaV1U",
-    "preco": 49.49,
-    "titulo": "Carro Hot Wheels Premium Chevrolet K5 Blazer Stranger Things"
    },
    {
     "categoria": "outros",
@@ -9062,6 +9050,16 @@
     "titulo": "Mesa Mesinha Infantil Desmontável Multiuso Cor Pistache"
    },
    {
+    "categoria": "brinquedo",
+    "de": 79.99,
+    "desconto": 0.313,
+    "id": "MLB72656297",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_918081-MLA112807271193_062026-F.jpg",
+    "link": "https://meli.la/1dDaV1U",
+    "preco": 54.99,
+    "titulo": "Carro Hot Wheels Premium Chevrolet K5 Blazer Stranger Things"
+   },
+   {
     "categoria": "passeio",
     "de": 873.89,
     "desconto": 0.336,
@@ -9190,6 +9188,16 @@
     "link": "https://meli.la/2srZGGy",
     "preco": 42.09,
     "titulo": "Raquete Ping Pong De Tenis De Mesa Profissional C/raqueteira Cor Case Preta ou Vermelha Tipo De Cabo Fl (cônca"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 99.99,
+    "desconto": 0.276,
+    "id": "MLB23535413",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_852508-MLU73117589489_112023-F.jpg",
+    "link": "https://meli.la/2TTsbgY",
+    "preco": 72.44,
+    "titulo": "Laptop Infantil Educativo Frozen 8303 Português E Inglês Candide"
    }
   ]
  },
