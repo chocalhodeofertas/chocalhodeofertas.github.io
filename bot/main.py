@@ -584,6 +584,8 @@ def main(argv=None):
                 cupons_ml.processar(tg, cfg, estado, agora, log)
             comandos.verificar_cupons(tg, cfg, estado, agora, log)
             comandos.talvez_resumo_diario(tg, estado, cfg, agora, log)
+            from . import conteudo
+            conteudo.talvez_enviar(tg, cfg, estado, agora, hora=int(os.environ.get("PACOTE_HORA") or 10), log=log)
             vitrine.talvez_publicar(estado, cfg.canal, agora, log=log,
                                     grupo_wa=os.environ.get("WHATSAPP_GRUPO") or GRUPO_WHATSAPP)
     except AcessoNegado as e:

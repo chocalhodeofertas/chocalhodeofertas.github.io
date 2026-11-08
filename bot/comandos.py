@@ -35,6 +35,7 @@ AJUDA = (
     "(com a data, eu marco como encerrado sozinho quando vencer)\n\n"
     "❌ <b>esgotou</b> + código → aviso no canal que o cupom acabou\n\n"
     "📊 <b>resumo</b> → números do canal agora\n\n"
+    "📦 <b>pacote</b> → artes do dia para o Instagram (carrossel, Reel, posts e stories)\n\n"
     "📦 Para os lotes do Linkbuilder, cole todos os links gerados numa mensagem só.\n\n"
     "<i>Eu leio as mensagens a cada 20 min, das 8h às 22h.</i>"
 )
@@ -301,6 +302,10 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
         return esgotar_cupom(t, tg, cfg, estado)
     if n in ("resumo", "/resumo", "status", "/status"):
         return montar_resumo(estado, cfg, tg, agora)
+    if n in ("pacote", "/pacote", "instagram", "/instagram"):
+        from . import conteudo
+        conteudo.montar_e_enviar(tg, cfg.admin_chat, estado, agora, rng=rng, session=session)
+        return None
     links = lote.RE_MELI.findall(t)
     if links:
         pendente = estado.get("lote")

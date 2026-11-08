@@ -70,6 +70,41 @@ class Telegram:
             raise TelegramErro(j.get("description") or "erro desconhecido")
         return j["result"]
 
+    def _multipart(self, metodo, dados, arquivos, timeout=120):
+        try:
+            r = self.s.post(self._url + metodo, data=dados, files=arquivos, timeout=timeout)
+            j = r.json()
+        except (requests.RequestException, ValueError) as e:
+            raise TelegramErro(f"falha de conexão com o Telegram ({type(e).__name__})")
+        if not j.get("ok"):
+            raise TelegramErro(j.get("description") or "erro desconhecido")
+        return j["result"]
+
+    def enviar_album(self, chat, pngs, legenda=None):
+        """Até 10 imagens num álbum só (para salvar o carrossel de uma vez)."""
+        import json as _json
+        midia, arquivos = [], {}
+        for i, png in enumerate(pngs[:10]):
+            item = {"type": "photo", "media": f"attach://f{i}"}
+            if i == 0 and legenda:
+                item["caption"] = legenda
+            midia.append(item)
+            arquivos[f"f{i}"] = (f"slide{i + 1}.png", png, "image/png")
+        return self._multipart("sendMediaGroup", {"chat_id": str(chat), "media": _json.dumps(midia)}, arquivos)
+
+    def enviar_documento(self, chat, dados_arq, nome, legenda=None, tipo="application/octet-stream"):
+        """Manda como arquivo (sem compressão do Telegram)."""
+        dados = {"chat_id": str(chat)}
+        if legenda:
+            dados["caption"] = legenda
+        return self._multipart("sendDocument", dados, {"document": (nome, dados_arq, tipo)})
+
+    def enviar_video(self, chat, mp4, legenda=None, nome="reel.mp4"):
+        dados = {"chat_id": str(chat), "supports_streaming": "true", "width": "1080", "height": "1920"}
+        if legenda:
+            dados["caption"] = legenda
+        return self._multipart("sendVideo", dados, {"video": (nome, mp4, "video/mp4")}, timeout=300)
+
     def enviar_oferta(self, chat, legenda_html, imagem=None):
         """Manda com foto; se a foto falhar, manda só o texto."""
         if imagem:

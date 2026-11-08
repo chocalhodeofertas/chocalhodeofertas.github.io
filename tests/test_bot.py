@@ -848,3 +848,31 @@ def test_arte_da_oferta():
     img = Image.open(io.BytesIO(png))
     assert img.size == (1080, 1350)
     assert Image.open(io.BytesIO(arte.gerar(o))).size == (1080, 1350)  # sem foto também funciona
+
+
+def test_pacote_do_dia_monta_tudo():
+    import random
+    from datetime import datetime
+    from bot import conteudo
+    itens = [{"id": f"MLB{i}", "titulo": f"Brinquedo legal número {i} com nome comprido para quebrar linha",
+              "preco": 20.0 + i, "de": 40.0 + i, "desconto": 0.4 - i / 100, "link": f"https://meli.la/x{i}",
+              "imagem": None, "categoria": "brinquedo"} for i in range(8)]
+    itens.append({"id": "MLBadulto", "titulo": "Taco de sinuca", "preco": 10, "de": 50, "desconto": 0.8,
+                  "link": "https://meli.la/y", "imagem": None, "categoria": "jogo"})
+    estado = {"vitrine": {"em": "x", "itens": itens}}
+    enviados = []
+
+    class TG:
+        def enviar_texto(self, c, t, html=False, **k): enviados.append(("txt", t))
+        def enviar_album(self, c, pngs, leg=None): enviados.append(("album", len(pngs)))
+        def enviar_video(self, c, mp4, leg=None): enviados.append(("video", len(mp4)))
+        def enviar_foto(self, c, png, leg=None): enviados.append(("foto", leg))
+
+    agora = datetime(2026, 11, 9, 10, tzinfo=FUSO)
+    assert conteudo.montar_e_enviar(TG(), 1, estado, agora, rng=random.Random(1))
+    assert ("album", 6) in enviados  # capa + 4 produtos + final
+    assert not any("sinuca" in str(x) for x in enviados)
+    assert any(t == "txt" and "#publi" in str(v) and "Comenta GRUPO" in str(v) for t, v in enviados)
+    stories = [v for t, v in enviados if t == "foto" and v and v.startswith("📱")]
+    assert stories and "meli.la" in stories[0]
+    assert len(estado["pacote_usados"]) == 7
