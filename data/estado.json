@@ -5004,9 +5004,13 @@
     [
      "2026-11-07",
      223.71
+    ],
+    [
+     "2026-11-08",
+     223.45
     ]
    ],
-   "min": 223.71
+   "min": 223.45
   },
   "MLB26941741": {
    "historico": [
@@ -5644,6 +5648,10 @@
     [
      "2026-11-07",
      58.79
+    ],
+    [
+     "2026-11-08",
+     58.77
     ]
    ],
    "min": 30.99
@@ -6987,6 +6995,10 @@
     [
      "2026-11-07",
      91.96
+    ],
+    [
+     "2026-11-08",
+     91.94
     ]
    ],
    "min": 91.94
@@ -7668,9 +7680,13 @@
     [
      "2026-11-07",
      54.99
+    ],
+    [
+     "2026-11-08",
+     49.49
     ]
    ],
-   "min": 54.99
+   "min": 49.49
   },
   "MLB72686279": {
    "historico": [
@@ -8505,18 +8521,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-08T08:22-03:00",
+  "em": "2026-11-08T08:42-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 1786.0,
-    "desconto": 0.401,
-    "id": "MLB50967900",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_851844-MLA104766979898_012026-F.jpg",
-    "link": "https://meli.la/1eLBYKK",
-    "preco": 1069.99,
-    "titulo": "Cama Elástica Orbitoys 3.05 m com Rede de Proteção e Suporte de 335 kg"
-   },
    {
     "categoria": "brinquedo",
     "de": 49.9,
@@ -8534,7 +8540,7 @@
     "id": "MLB65019704",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_879550-MLA105423714224_012026-F.jpg",
     "link": "https://meli.la/1mtnsKi",
-    "preco": 91.96,
+    "preco": 91.94,
     "titulo": "Jogo de Tabuleiro - Perfil 8 - Grow - 4992"
    },
    {
@@ -8656,6 +8662,16 @@
     "link": "https://meli.la/2BZ8CCL",
     "preco": 115.33,
     "titulo": "Cercadinho Bebê Rister Baby Portátil Grande + Tapete Rosa"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 79.99,
+    "desconto": 0.381,
+    "id": "MLB72656297",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_918081-MLA112807271193_062026-F.jpg",
+    "link": "https://meli.la/1dDaV1U",
+    "preco": 49.49,
+    "titulo": "Carro Hot Wheels Premium Chevrolet K5 Blazer Stranger Things"
    },
    {
     "categoria": "outros",
@@ -9028,16 +9044,6 @@
     "titulo": "Mesa Mesinha Infantil Desmontável Multiuso Cor Pistache"
    },
    {
-    "categoria": "brinquedo",
-    "de": 79.99,
-    "desconto": 0.313,
-    "id": "MLB72656297",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_918081-MLA112807271193_062026-F.jpg",
-    "link": "https://meli.la/1dDaV1U",
-    "preco": 54.99,
-    "titulo": "Carro Hot Wheels Premium Chevrolet K5 Blazer Stranger Things"
-   },
-   {
     "categoria": "passeio",
     "de": 873.89,
     "desconto": 0.336,
@@ -9106,6 +9112,16 @@
     "link": "https://meli.la/2pHZDtK",
     "preco": 34.88,
     "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
+   },
+   {
+    "categoria": "jogo",
+    "de": 58.9,
+    "desconto": 0.29,
+    "id": "MLB66141214",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_633703-MLA120091503725_102026-F.jpg",
+    "link": "https://meli.la/1fhC97o",
+    "preco": 41.81,
+    "titulo": "Jogo Stop De Palavras Adedonha Educativo Infantil Interativo Familia Adultos E Crianças Babuu Brinquedos Educa"
    }
   ]
  },
