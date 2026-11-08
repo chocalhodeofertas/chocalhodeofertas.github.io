@@ -330,7 +330,8 @@ def capa(foto, titulo, destaque=None, estilo="grande", L=1080, A=1350):
     if estilo == "grande":
         d = ImageDraw.Draw(img)
         f, linhas = _caber(d, titulo.upper(), [_fredoka(t) for t in (112, 96, 84, 74)], L - 140, 4)
-        passo = int(f.size * 1.05)
+        cap = f.getbbox("H", anchor="ls")[3] - f.getbbox("H", anchor="ls")[1]  # altura da maiúscula
+        passo = int(cap * 1.42)
         h = len(linhas) * passo + (80 if destaque else 0)
         y0 = _faixa_livre(img, h, proibidas=proibidas)
         mascara = Image.new("L", (L, A), 0)
@@ -342,13 +343,14 @@ def capa(foto, titulo, destaque=None, estilo="grande", L=1080, A=1350):
         def sombra(dc):
             y = y0
             for ln in linhas:
-                dc.text((L // 2, y + 6), ln, font=f, fill=(0, 0, 0, 120), anchor="mt")
+                dc.text((L // 2, y + cap + 6), ln, font=f, fill=(0, 0, 0, 120), anchor="ms")
                 y += passo
         _sombra_texto(img, sombra)
         d = ImageDraw.Draw(img)
         y = y0
         for ln in linhas:
-            d.text((L // 2, y), ln, font=f, fill=CREME_TXT, anchor="mt")
+            # pela linha de base: acento (Ç, Õ, Í) não empurra a linha para baixo
+            d.text((L // 2, y + cap), ln, font=f, fill=CREME_TXT, anchor="ms")
             y += passo
         if destaque:
             fd = _poppins(40, "SemiBold")
@@ -402,10 +404,10 @@ def final(chamada="Comenta GRUPO que eu te mando o link", L=1080, A=1350, y0=0):
     img.paste(ic, ((L - ic.width) // 2, y0 + 120), ic)
     y = y0 + 720
     for ln in ["Quer receber as", "ofertas do dia?"]:
-        d.text((L // 2, y), ln, font=_fredoka(84), fill=BRANCO, anchor="mt")
+        d.text((L // 2, y + 62), ln, font=_fredoka(84), fill=BRANCO, anchor="ms")
         y += 96
     for i, ln in enumerate(["Postamos promoções o dia todo no nosso", "grupo de WhatsApp e no Telegram."]):
-        d.text((L // 2, y + 20 + 46 * i), ln, font=_poppins(34, "Regular"), fill=LAVANDA_2, anchor="mt")
+        d.text((L // 2, y + 46 + 46 * i), ln, font=_poppins(34, "Regular"), fill=LAVANDA_2, anchor="ms")
     if chamada:
         f = _fredoka(46)
         w = d.textlength(chamada, font=f) + 90
