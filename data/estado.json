@@ -1,5 +1,5 @@
 {
- "aguardando_link": 17,
+ "aguardando_link": 16,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 45
+  "2026-11-08": 46
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3933,6 +3933,12 @@
    "preco": 219.56,
    "quando": "2026-11-06T15:34-03:00"
   },
+  "MLB54207427": {
+   "desconto": 0.323,
+   "preco": 338.53,
+   "quando": "2026-11-08T20:55-03:00",
+   "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinh"
+  },
   "MLB54357048": {
    "desconto": 0.402,
    "preco": 298.8,
@@ -5110,6 +5116,10 @@
     [
      "2026-11-08",
      39.86
+    ],
+    [
+     "2026-11-08",
+     32.17
     ]
    ],
    "min": 32.17
@@ -5136,6 +5146,10 @@
     [
      "2026-11-08",
      39.9
+    ],
+    [
+     "2026-11-08",
+     48.75
     ]
    ],
    "min": 39.9
@@ -6136,6 +6150,10 @@
     [
      "2026-11-08",
      58.77
+    ],
+    [
+     "2026-11-08",
+     67.37
     ]
    ],
    "min": 30.99
@@ -7629,6 +7647,10 @@
     [
      "2026-11-08",
      42.27
+    ],
+    [
+     "2026-11-08",
+     42.19
     ]
    ],
    "min": 41.53
@@ -9254,28 +9276,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517983,
  "vitrine": {
-  "em": "2026-11-08T20:35-03:00",
+  "em": "2026-11-08T20:55-03:00",
   "itens": [
-   {
-    "categoria": "jogo",
-    "de": 169.0,
-    "desconto": 0.349,
-    "id": "MLB51035138",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_942837-MLA104158430322_012026-F.jpg",
-    "link": "https://meli.la/1vczkgB",
-    "preco": 109.99,
-    "titulo": "Taco De Sinuca Bilhar Profissional Com Capa Giz Sola Brindes Snooker Bilhares Mgk"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 139.99,
-    "desconto": 0.372,
-    "id": "MLB44895295",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_638454-MLA99483761474_112025-F.jpg",
-    "link": "https://meli.la/25jVbap",
-    "preco": 87.9,
-    "titulo": "LEGO Marvel - Robô do Homem-Aranha vs Anti-Venom - 107 Peças - 76308"
-   },
    {
     "categoria": "quarto",
     "de": 499.9,
@@ -9855,6 +9857,26 @@
     "link": "https://meli.la/25dF8SA",
     "preco": 779.9,
     "titulo": "Travel System Duo, Cosco Kids, Reverse, 0 a 15kg, Preto Rajado"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 69.9,
+    "desconto": 0.215,
+    "id": "MLB61874839",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_984405-MLA110242169516_052026-F.jpg",
+    "link": "https://meli.la/1hvxeRf",
+    "preco": 54.9,
+    "titulo": "Teclado Infantil 32 Teclas com Microfone Karaokê Piano de Brinquedo Musical Educativo com Sons de Demonstração"
+   },
+   {
+    "categoria": "outros",
+    "de": 299.9,
+    "desconto": 0.208,
+    "id": "MLB28001568",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_867600-MLA99504966812_112025-F.jpg",
+    "link": "https://meli.la/18u34ak",
+    "preco": 237.41,
+    "titulo": "Andador Infantil Musical Para Bebê Empurrador Compacto 3 Ajustes de Altura La Bamba Maxi Baby - azul"
    }
   ]
  },
