@@ -32,11 +32,11 @@ for tema, buscas in TEMAS.items():
         try:
             r = s.get("https://api.openverse.org/v1/images/", params={
                 "q": q, "license": "cc0,pdm", "category": "photograph", "mature": "false",
-                "size": "large", "page_size": 30}, timeout=30)
+                "size": "large", "page_size": 20}, timeout=30)
             r.raise_for_status()
             res = r.json().get("results", [])
         except Exception as e:  # noqa: BLE001
-            print("falhou busca", q, e); continue
+            print("falhou busca", q, e, flush=True); time.sleep(20); continue
         pegos = 0
         for it in res:
             if pegos >= POR_BUSCA or it["id"] in vistos:
@@ -60,5 +60,6 @@ for tema, buscas in TEMAS.items():
                              "licenca": f'{it.get("license")} {it.get("license_version") or ""}'.strip(),
                              "fonte": it.get("source"), "pagina": it.get("foreign_landing_url"), "openverse_id": it["id"]})
             time.sleep(0.3)
-        print(tema, q, pegos)
+        print(tema, q, pegos, flush=True)
+        time.sleep(4)
     (pasta / "creditos.json").write_text(json.dumps(creditos, ensure_ascii=False, indent=1), encoding="utf-8")
