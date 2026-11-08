@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 9
+  "2026-11-08": 11
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3741,6 +3741,12 @@
    "quando": "2026-11-07T14:12-03:00",
    "titulo": "Andador Educativo Empurrar Infantil Bebê Musical Brinquedo Atentu Rosa"
   },
+  "MLB43880173": {
+   "desconto": 0.393,
+   "preco": 78.9,
+   "quando": "2026-11-08T11:13-03:00",
+   "titulo": "Teclado Elétrico Musical Infantil Com Microfone E Fonte Cor Preto"
+  },
   "MLB44672426": {
    "desconto": 0.546,
    "preco": 58.99,
@@ -3936,6 +3942,12 @@
   "MLB66548761": {
    "preco": 78.9,
    "quando": "2026-11-06T20:23-03:00"
+  },
+  "MLB66566409": {
+   "desconto": 0.424,
+   "preco": 97.99,
+   "quando": "2026-11-08T11:13-03:00",
+   "titulo": "Jogo Banco Imobiliário Grande Estrela em português"
   },
   "MLB66986360": {
    "preco": 122.87,
@@ -4765,6 +4777,10 @@
     [
      "2026-11-08",
      32.17
+    ],
+    [
+     "2026-11-08",
+     32.99
     ]
    ],
    "min": 32.17
@@ -8597,7 +8613,7 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-08T10:53-03:00",
+  "em": "2026-11-08T11:13-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -9201,6 +9217,6 @@
    }
   ]
  },
- "vitrine_assinatura": "2aa916abf8a7bb227047796ada13c87064c581d0",
- "vitrine_publicada_em": "2026-11-08T10:02-03:00"
+ "vitrine_assinatura": "2bca41e7506f9964dde49890e6bb4d3955a29ed0",
+ "vitrine_publicada_em": "2026-11-08T11:13-03:00"
 }
