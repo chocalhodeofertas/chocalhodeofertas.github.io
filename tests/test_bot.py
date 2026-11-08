@@ -877,7 +877,17 @@ def test_pacote_do_dia_monta_tudo(monkeypatch):
     assert any(t == "txt" and "#publi" in str(v) and "Comenta GRUPO" in str(v) for t, v in enviados)
     stories = [v for t, v in enviados if t == "foto" and v and v.startswith("📱")]
     assert stories and "meli.la" in stories[0]
-    assert len(estado["pacote_usados"]) == 7
+    assert len(estado["pacote_usados"]) == 5  # dia 1 do lançamento: 1 carrossel (4) + 1 post
+    assert any(t == "txt" and "dia 1 de 3" in str(v) for t, v in enviados)
+    assert any(t == "txt" and "Como funciona o Chocalho" in str(v) for t, v in enviados)
+
+    # Dia normal (segunda): 1 carrossel + 2 posts + Reel
+    enviados.clear()
+    estado.pop("pacote_usados")
+    assert conteudo.montar_e_enviar(TG(), 1, estado, datetime(2026, 11, 16, 10, tzinfo=FUSO), rng=random.Random(1))
+    assert sum(1 for t, v in enviados if t == "album") == 1
+    assert any(t == "video" for t, v in enviados)
+    assert sum(1 for t, v in enviados if t == "foto" and v and "post do produto" in v) == 2
 
 
 def test_pacote_pausa_sem_fotos(monkeypatch):

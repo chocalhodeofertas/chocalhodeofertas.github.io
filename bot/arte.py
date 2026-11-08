@@ -417,6 +417,100 @@ def final(chamada="Comenta GRUPO que eu te mando o link", L=1080, A=1350, y0=0):
     return img
 
 
+# ---------- posts institucionais (fixados no perfil) ----------
+
+def slide_texto(numero, titulo, texto, indice=None, L=1080, A=1350):
+    """Slide explicativo: número grande, título e texto curto."""
+    img = _fundo(L, A)
+    d = ImageDraw.Draw(img)
+    _cabecalho(img)
+    if indice:
+        f = _fredoka(36)
+        _pilula(d, (L - 60 - d.textlength(indice, font=f) - 56, 70), indice, f, BRANCO, UVA)
+    ft, linhas = _caber(d, titulo, [_fredoka(t) for t in (92, 80, 70)], L - 150, 3)
+    cap = ft.getbbox("H", anchor="ls")[3] - ft.getbbox("H", anchor="ls")[1]
+    fb = _poppins(46, "Regular")
+    corpo = [_quebrar(d, par, fb, L - 150, 6) for par in texto.split("\n")]
+    # mede o bloco inteiro para centralizar na área livre
+    h = (200 if numero else 0) + len(linhas) * int(cap * 1.45) + 50 \
+        + sum(len(c) * 64 + 30 for c in corpo)
+    y = 170 + max(0, (1300 - 170 - h) // 2)
+    if numero:
+        d.ellipse([70, y, 230, y + 160], fill=PINK)
+        d.text((150, y + 80), str(numero), font=_fredoka(100), fill=BRANCO, anchor="mm")
+        y += 200
+    for ln in linhas:
+        d.text((72, y + cap), ln, font=ft, fill=UVA, anchor="ls")
+        y += int(cap * 1.45)
+    y += 50
+    for c in corpo:
+        for ln in c:
+            d.text((72, y + 46), ln, font=fb, fill=SUAVE, anchor="ls")
+            y += 64
+        y += 30
+    return img
+
+
+def final_grupo(L=1080, A=1350):
+    """Último slide dos posts fixados: como entrar no grupo."""
+    img = Image.new("RGB", (L, A), UVA)
+    d = ImageDraw.Draw(img)
+    ic = _icone(460)
+    img.paste(ic, ((L - ic.width) // 2, 130), ic)
+    y = 690
+    for ln in ["Entre no nosso", "grupo gratuito"]:
+        d.text((L // 2, y + 62), ln, font=_fredoka(84), fill=BRANCO, anchor="ms")
+        y += 96
+    for i, ln in enumerate(["Toque no link da bio e escolha", "WhatsApp ou Telegram."]):
+        d.text((L // 2, y + 46 + 46 * i), ln, font=_poppins(34, "Regular"), fill=LAVANDA_2, anchor="ms")
+    f = _fredoka(52)
+    t = "Link na bio"
+    w = d.textlength(t, font=f) + 100
+    d.rounded_rectangle([(L - w) / 2, 1100, (L + w) / 2, 1200], radius=50, fill=PINK)
+    d.text((L // 2, 1150), t, font=f, fill=BRANCO, anchor="mm")
+    d.text((L // 2, 1260), "só administradores postam  ·  saia quando quiser", font=_poppins(26), fill=LAVANDA_2, anchor="mm")
+    return img
+
+
+INSTITUCIONAIS = {
+    "como_funciona": {
+        "capa": ("Como funciona o Chocalho de Ofertas", "faixas", ["familia", "quarto"]),
+        "slides": [
+            (1, "A gente garimpa", "Todo dia procuramos promoções de produtos para bebês e crianças: enxoval, "
+                                   "brinquedos, passeio, alimentação e mais.\nSó entra o que está com desconto."),
+            (2, "Você recebe no grupo", "A oferta chega no nosso grupo gratuito com foto, preço e o link.\n"
+                                        "Sem spam: só os administradores postam."),
+            (3, "Compra direto na loja", "O link leva para a página oficial do produto, e você paga o mesmo preço.\n"
+                                         "Usamos links de afiliado: a loja nos paga uma pequena comissão, "
+                                         "sem custo extra para você."),
+            (4, "Promoção acaba rápido", "Preço e estoque podem mudar a qualquer momento.\n"
+                                         "Sempre confira na loja antes de finalizar a compra."),
+        ],
+    },
+    "o_que_e": {
+        "capa": ("Prazer, Chocalho de Ofertas", "grande", ["quarto", "enxoval"]),
+        "slides": [
+            (None, "Pra famílias que amam economizar", "Somos um canal de ofertas de produtos para bebês e "
+                                                       "crianças, do enxoval aos brinquedos."),
+            (None, "O que você encontra", "Promoções do dia com desconto de verdade.\nCupons das lojas assim que saem.\n"
+                                          "Avisos quando uma promoção acaba."),
+            (None, "Onde acompanhar", "No grupo gratuito do WhatsApp, no canal do Telegram e aqui no perfil.\n"
+                                      "Você entra e sai quando quiser."),
+        ],
+    },
+}
+
+
+def institucional(nome, rng=random):
+    """Slides de um post fixado (capa com foto + explicação + como entrar no grupo)."""
+    cfg = INSTITUCIONAIS[nome]
+    titulo, estilo, temas = cfg["capa"]
+    n = len(cfg["slides"])
+    return ([capa(foto_de_capa(temas, rng), titulo, None, estilo)]
+            + [slide_texto(num, t, txt, indice=f"{k}/{n}") for k, (num, t, txt) in enumerate(cfg["slides"], 1)]
+            + [final_grupo()])
+
+
 # ---------- 5) carrossel e Reel ----------
 
 def carrossel(ofertas, fotos, titulo, foto_capa, destaque=None, estilo="grande"):

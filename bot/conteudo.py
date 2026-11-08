@@ -10,7 +10,7 @@ Você também pode pedir na hora mandando "pacote" para o bot.
 """
 import random
 from dataclasses import dataclass
-from datetime import timedelta
+from datetime import date, timedelta
 from types import SimpleNamespace
 
 from . import arte
@@ -74,21 +74,81 @@ def _candidatos(tema, itens, usados):
     return sorted(r, key=lambda i: -(i.get("desconto") or 0))
 
 
-def escolher(estado, agora, rng=random, n=4):
-    """Escolhe o tema do dia (rodízio) e os produtos do carrossel e dos posts únicos."""
-    itens = _itens(estado)
+def _usados(estado, agora):
     limite = (agora - timedelta(days=3)).date().isoformat()
-    usados = {k for k, v in (estado.get("pacote_usados") or {}).items() if v >= limite}
+    return {k for k, v in (estado.get("pacote_usados") or {}).items() if v >= limite}
+
+
+def escolher_varios(estado, agora, n_carrosseis=1, n_posts=3, n=4):
+    """Escolhe temas diferentes (em rodízio) para os carrosséis e os produtos dos posts únicos,
+    sem repetir produto entre eles."""
+    itens = _itens(estado)
+    usados = set(_usados(estado, agora))
     dia = agora.toordinal()
+    escolhidos = []
     for k in range(len(TEMAS)):
-        tema = TEMAS[(dia + k) % len(TEMAS)]
+        if len(escolhidos) == n_carrosseis:
+            break
+        tema = TEMAS[(dia * n_carrosseis + k) % len(TEMAS)]
         cand = _candidatos(tema, itens, usados)
         if len(cand) >= 3:
             carr = cand[:n]
-            resto = [i for i in sorted(itens, key=lambda i: -(i.get("desconto") or 0))
-                     if i not in carr and i["id"] not in usados][:3]
-            return tema, carr, resto
-    return None, [], []
+            usados |= {i["id"] for i in carr}
+            escolhidos.append((tema, carr))
+    resto = [i for i in sorted(itens, key=lambda i: -(i.get("desconto") or 0)) if i["id"] not in usados][:n_posts]
+    return escolhidos, resto
+
+
+def escolher(estado, agora, rng=random, n=4):
+    """Compatível com o uso antigo: 1 tema + 3 posts."""
+    esc, resto = escolher_varios(estado, agora, 1, 3, n)
+    if not esc:
+        return None, [], []
+    return esc[0][0], esc[0][1], resto
+
+
+# Lançamento do perfil: 9 primeiros posts em 3 dias, 3 por dia.
+# Cada item: (tipo, horário sugerido). Tipos: "fixado:<nome>", "carrossel", "post".
+LANCAMENTO_INICIO = date(2026, 11, 9)
+LANCAMENTO = [
+    [("fixado:como_funciona", "12h"), ("carrossel", "18h"), ("post", "20h30")],
+    [("carrossel", "12h"), ("post", "18h"), ("carrossel", "20h30")],
+    [("carrossel", "12h"), ("post", "18h"), ("fixado:o_que_e", "20h30")],
+]
+LEGENDAS_FIXADOS = {
+    "como_funciona": "\n".join([
+        "Como funciona o Chocalho de Ofertas 🧸",
+        "",
+        "1. A gente garimpa promoções de produtos para bebês e crianças todos os dias.",
+        "2. Você recebe no nosso grupo gratuito, com foto, preço e link.",
+        "3. Compra direto na página oficial da loja, pelo mesmo preço.",
+        "",
+        "Usamos links de afiliado: a loja nos paga uma pequena comissão, sem custo extra para você. "
+        "É assim que o canal se mantém gratuito 💜",
+        "",
+        "🔗 Link do grupo na bio.",
+        "#publi"]),
+    "o_que_e": "\n".join([
+        "Prazer, Chocalho de Ofertas! 🧸",
+        "",
+        "Um canal de ofertas pra famílias que amam economizar: do enxoval aos brinquedos, "
+        "a gente encontra as promoções e você escolhe o que faz sentido pra sua casa.",
+        "",
+        "✨ Promoções do dia com desconto de verdade",
+        "🎟️ Cupons das lojas assim que saem",
+        "⏰ Aviso quando uma promoção acaba",
+        "",
+        "🔗 Entre no grupo gratuito pelo link da bio (WhatsApp ou Telegram).",
+        "#publi"]),
+}
+
+
+def plano_do_dia(agora):
+    """Roteiro de posts do feed para hoje. Fora do lançamento: rotina normal."""
+    k = (agora.date() - LANCAMENTO_INICIO).days
+    if 0 <= k < len(LANCAMENTO):
+        return k + 1, LANCAMENTO[k]
+    return None, [("carrossel", "12h"), ("post", "18h"), ("post", "20h30")]
 
 
 def _curto(titulo, limite=55):
@@ -119,53 +179,90 @@ def legenda_post(o, rng=random):
                       "🔗 Link do grupo na bio — lá a gente posta as ofertas o dia todo.", "", RODAPE_LEGENDA])
 
 
-def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None):
-    tema, carr, resto = escolher(estado, agora, rng)
-    if not tema:
-        tg.enviar_texto(chat, "📦 Ainda não tenho ofertas suficientes para o pacote de hoje. Tento de novo mais tarde.")
-        return False
-    ofs = [_oferta(i) for i in carr]
-    fotos = [arte.baixar_foto(o.imagem, session) for o in ofs]
-    titulo = rng.choice(tema.titulos)
-    estilo = "grande" if agora.toordinal() % 2 == 0 else "faixas"
-    capa_foto = arte.foto_de_capa(tema.fotos, rng)
-    if capa_foto is None:
-        tg.enviar_texto(chat, "📦 O pacote está pausado: ainda não tenho fotos de capa para o tema "
-                              f"<b>{tema.nome}</b>.", html=True)
-        return False
-    destaque = tema.destaque
-
-    tg.enviar_texto(chat, f"📦 <b>Pacote do dia</b> — tema: <b>{titulo}</b>\n"
-                          "Carrossel, Reel, posts e stories logo abaixo. Os preços valem para agora; "
-                          "se demorar muito para postar, confira antes.", html=True)
-
-    slides = arte.carrossel(ofs, fotos, titulo, capa_foto, destaque, estilo)
-    tg.enviar_album(chat, [arte.png(s) for s in slides], "🎠 Carrossel (na ordem)")
-    tg.enviar_texto(chat, legenda_carrossel(tema, ofs, rng))
-
-    try:
-        mp4 = arte.reel(ofs, fotos, titulo, capa_foto, destaque, estilo)
-        if mp4:
-            tg.enviar_video(chat, mp4, "🎬 Reel — escolha a música no Instagram ao postar")
-            tg.enviar_texto(chat, legenda_reel(tema, rng))
-    except TelegramErro as e:
-        log(f"Aviso: não consegui mandar o Reel: {e}")
-
-    for i in resto:
-        o = _oferta(i)
-        tg.enviar_foto(chat, arte.gerar(o, session=session, cta="Link na bio"), "🖼️ Post único")
-        tg.enviar_texto(chat, legenda_post(o, rng))
-
-    for o, f in list(zip(ofs, fotos)) + [(_oferta(i), None) for i in resto]:
-        tg.enviar_foto(chat, arte.png(arte.story(o, f, session=session)), f"📱 Story — link para o adesivo:\n{o.link}")
-
+def _registrar_usados(estado, agora, itens):
     hoje = agora.date().isoformat()
     usados = {k: v for k, v in (estado.get("pacote_usados") or {}).items()
               if v >= (agora - timedelta(days=7)).date().isoformat()}
-    for i in carr + resto:
+    for i in itens:
         usados[i["id"]] = hoje
     estado["pacote_usados"] = usados
-    log(f"Pacote do dia enviado (tema {tema.nome}).")
+
+
+def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None):
+    dia_lanc, plano = plano_do_dia(agora)
+    n_carr = sum(1 for t, _ in plano if t == "carrossel")
+    n_posts = sum(1 for t, _ in plano if t == "post")
+    escolhidos, resto = escolher_varios(estado, agora, n_carr, max(n_posts, 3 if not dia_lanc else n_posts))
+    if n_carr and not escolhidos:
+        tg.enviar_texto(chat, "📦 Ainda não tenho ofertas suficientes para o pacote de hoje. Tento de novo mais tarde.")
+        return False
+    if any(arte.foto_de_capa(t.fotos, rng) is None for t, _ in escolhidos):
+        tg.enviar_texto(chat, "📦 O pacote está pausado: faltam fotos de capa.", html=True)
+        return False
+
+    # Roteiro do dia
+    linhas = [f"🗓️ <b>Lançamento do perfil — dia {dia_lanc} de {len(LANCAMENTO)}</b>" if dia_lanc
+              else "📦 <b>Pacote do dia</b>", "", "<b>Feed — poste nesta ordem:</b>"]
+    fila_c, fila_p = list(escolhidos), list(resto)
+    roteiro = []
+    for k, (tipo, hora) in enumerate(plano, 1):
+        if tipo.startswith("fixado:"):
+            nome = tipo.split(":", 1)[1]
+            roteiro.append((k, hora, "fixado", nome))
+            linhas.append(f"{k}. {hora} — post fixado <b>{arte.INSTITUCIONAIS[nome]['capa'][0]}</b> "
+                          "(depois de postar: ··· → Fixar no perfil)")
+        elif tipo == "carrossel" and fila_c:
+            tema, carr = fila_c.pop(0)
+            roteiro.append((k, hora, "carrossel", (tema, carr)))
+            linhas.append(f"{k}. {hora} — carrossel <b>{tema.nome}</b>")
+        elif tipo == "post" and fila_p:
+            i = fila_p.pop(0)
+            roteiro.append((k, hora, "post", i))
+            linhas.append(f"{k}. {hora} — post do produto <b>{_curto(i['titulo'], 40)}</b>")
+    linhas += ["", "📱 Stories: 4 a 6 ao longo do dia (vêm no fim)."]
+    if not dia_lanc and agora.weekday() in (0, 2, 4, 6):
+        linhas.append("🎬 Hoje tem Reel (vem logo depois do carrossel).")
+    linhas += ["", "Os preços valem para agora. Para os posts da noite, confira o preço antes de postar."]
+    tg.enviar_texto(chat, "\n".join(linhas), html=True)
+
+    estilo_base = agora.toordinal() % 2
+    stories, usados = [], []
+    for n_c, (k, hora, tipo, dado) in enumerate(roteiro):
+        if tipo == "fixado":
+            slides = arte.institucional(dado, rng)
+            tg.enviar_album(chat, [arte.png(s) for s in slides], f"📌 {k}. {hora} — post fixado (na ordem)")
+            tg.enviar_texto(chat, LEGENDAS_FIXADOS[dado])
+        elif tipo == "carrossel":
+            tema, carr = dado
+            ofs = [_oferta(i) for i in carr]
+            fotos = [arte.baixar_foto(o.imagem, session) for o in ofs]
+            titulo = rng.choice(tema.titulos)
+            estilo = "grande" if (estilo_base + n_c) % 2 == 0 else "faixas"
+            capa_foto = arte.foto_de_capa(tema.fotos, rng)
+            slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
+            tg.enviar_album(chat, [arte.png(s) for s in slides], f"🎠 {k}. {hora} — carrossel (na ordem)")
+            tg.enviar_texto(chat, legenda_carrossel(tema, ofs, rng))
+            if not dia_lanc and agora.weekday() in (0, 2, 4, 6) and not any(t == "reel" for t in usados):
+                try:
+                    mp4 = arte.reel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
+                    if mp4:
+                        tg.enviar_video(chat, mp4, "🎬 Reel — escolha a música no Instagram ao postar")
+                        tg.enviar_texto(chat, legenda_reel(tema, rng))
+                        usados.append("reel")
+                except TelegramErro as e:
+                    log(f"Aviso: não consegui mandar o Reel: {e}")
+            stories += list(zip(ofs, fotos))
+            _registrar_usados(estado, agora, carr)
+        elif tipo == "post":
+            o = _oferta(dado)
+            tg.enviar_foto(chat, arte.gerar(o, session=session, cta="Link na bio"), f"🖼️ {k}. {hora} — post do produto")
+            tg.enviar_texto(chat, legenda_post(o, rng))
+            stories.append((o, None))
+            _registrar_usados(estado, agora, [dado])
+
+    for o, f in stories[:6]:
+        tg.enviar_foto(chat, arte.png(arte.story(o, f, session=session)), f"📱 Story — link para o adesivo:\n{o.link}")
+    log(f"Pacote do dia enviado ({len(roteiro)} posts de feed).")
     return True
 
 
