@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 23
+  "2026-11-08": 25
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3797,6 +3797,12 @@
    "preco": 99.9,
    "quando": "2026-11-06T12:12-03:00"
   },
+  "MLB51979690": {
+   "desconto": 0.376,
+   "preco": 306.52,
+   "quando": "2026-11-08T14:33-03:00",
+   "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Cinza"
+  },
   "MLB52680667": {
    "preco": 119.61,
    "quando": "2026-11-06T16:14-03:00"
@@ -4058,6 +4064,12 @@
    "preco": 115.33,
    "quando": "2026-11-08T13:33-03:00",
    "titulo": "Cercadinho Bebê Rister Baby Portátil Grande + Tapete Rosa"
+  },
+  "MLB74454821": {
+   "desconto": 0.407,
+   "preco": 41.48,
+   "quando": "2026-11-08T14:33-03:00",
+   "titulo": "Booster Quádruplo Escuridão Absoluta Português"
   },
   "MLB75537532": {
    "desconto": 0.599,
@@ -8735,18 +8747,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T14:13-03:00",
+  "em": "2026-11-08T14:33-03:00",
   "itens": [
-   {
-    "categoria": "passeio",
-    "de": 619.9,
-    "desconto": 0.355,
-    "id": "MLB62445069",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_849686-MLA99207858759_112025-F.jpg",
-    "link": "https://meli.la/1jDpjpK",
-    "preco": 399.9,
-    "titulo": "Cadeirinha Automotiva Atentu BS05 para Bebê e Criança de 9 a 36 kg Vermelha"
-   },
    {
     "categoria": "jogo",
     "de": 69.9,
@@ -9336,6 +9338,16 @@
     "link": "https://meli.la/2srZGGy",
     "preco": 42.09,
     "titulo": "Raquete Ping Pong De Tenis De Mesa Profissional C/raqueteira Cor Case Preta ou Vermelha Tipo De Cabo Fl (cônca"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 99.99,
+    "desconto": 0.276,
+    "id": "MLB23535413",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_852508-MLU73117589489_112023-F.jpg",
+    "link": "https://meli.la/2TTsbgY",
+    "preco": 72.44,
+    "titulo": "Laptop Infantil Educativo Frozen 8303 Português E Inglês Candide"
    }
   ]
  },
