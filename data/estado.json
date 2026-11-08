@@ -4851,6 +4851,10 @@
     [
      "2026-11-08",
      32.18
+    ],
+    [
+     "2026-11-08",
+     32.17
     ]
    ],
    "min": 32.17
@@ -8747,28 +8751,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T14:33-03:00",
+  "em": "2026-11-08T14:53-03:00",
   "itens": [
-   {
-    "categoria": "jogo",
-    "de": 69.9,
-    "desconto": 0.407,
-    "id": "MLB74454821",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_917866-MLA114013158499_072026-F.jpg",
-    "link": "https://meli.la/1Vfqa7f",
-    "preco": 41.48,
-    "titulo": "Booster Quádruplo Escuridão Absoluta Português"
-   },
-   {
-    "categoria": "higiene",
-    "de": 491.14,
-    "desconto": 0.376,
-    "id": "MLB51979690",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_887090-MLA96078823773_102025-F.jpg",
-    "link": "https://meli.la/2HcPWSz",
-    "preco": 306.52,
-    "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Cinza"
-   },
    {
     "categoria": "quarto",
     "de": 499.9,
@@ -9348,6 +9332,26 @@
     "link": "https://meli.la/2TTsbgY",
     "preco": 72.44,
     "titulo": "Laptop Infantil Educativo Frozen 8303 Português E Inglês Candide"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 129.99,
+    "desconto": 0.296,
+    "id": "MLB20794850",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_873057-MLA100043981585_122025-F.jpg",
+    "link": "https://meli.la/1tKMmv8",
+    "preco": 91.52,
+    "titulo": "Boneco Pelúcia Chase Patrulha Canina 1328 Sunny Brinquedos"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 129.99,
+    "desconto": 0.295,
+    "id": "MLB24064445",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_938241-MLA84559852146_052025-F.jpg",
+    "link": "https://meli.la/2jBpr4L",
+    "preco": 91.62,
+    "titulo": "Patrulha Canina - Pelúcia Marshall 30cm - 1327 Sunny Colorido"
    }
   ]
  },
