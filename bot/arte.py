@@ -265,7 +265,7 @@ def _sombra_texto(img, desenhar, raio=6):
     img.paste(camada, (0, 0), camada)
 
 
-def _faixa_livre(img, altura, margem_topo=0.08, margem_base=0.12):
+def _faixa_livre(img, altura, margem_topo=0.08, margem_base=0.12, proibidas=()):
     """Acha a faixa horizontal mais "calma" da foto (menos detalhes) para o texto
     não cobrir o que importa (o rosto, o brinquedo, o carrinho)."""
     L, A = img.size
@@ -278,29 +278,61 @@ def _faixa_livre(img, altura, margem_topo=0.08, margem_base=0.12):
     ini, fim = int(h * margem_topo), int(h * (1 - margem_base)) - alt
     if fim <= ini:
         return (A - altura) // 2
-    acum = sum(linhas[ini:ini + alt])
-    melhor, y_melhor = acum, ini
-    for y in range(ini + 1, fim + 1):
+    acum = sum(linhas[ini:ini + alt]) - linhas[ini + alt - 1] + linhas[ini - 1]
+    melhor, y_melhor = float("inf"), ini
+    for y in range(ini, fim + 1):
         acum += linhas[y + alt - 1] - linhas[y - 1]
         # leve preferência pelo centro, para não grudar na borda sem motivo
         peso = acum * (1 + 0.15 * abs((y + alt / 2) / h - 0.5))
+        y_px, fim_px = y * esc, (y + alt) * esc
+        for p0, p1 in proibidas:  # nunca em cima de um rosto
+            sobra = min(fim_px, p1) - max(y_px, p0)
+            if sobra > 0:
+                peso += 1e9 * sobra
         if peso < melhor:
             melhor, y_melhor = peso, y
     return y_melhor * esc
+
+
+def _rostos_na_capa(foto, L, A, folga=40):
+    """Faixas verticais (y0, y1) ocupadas por rostos depois do recorte da capa."""
+    rostos = getattr(foto, "rostos", None) or []
+    if not rostos:
+        return []
+    esc = max(L / foto.width, A / foto.height)
+    nw, nh = foto.width * esc, foto.height * esc
+    ox, oy = (nw - L) / 2, (nh - A) / 2
+    faixas = []
+    for x0, y0, x1, y1 in rostos:
+        if x1 * nw - ox < 0 or x0 * nw - ox > L:  # rosto fora do recorte
+            continue
+        faixas.append((y0 * nh - oy - folga, y1 * nh - oy + folga))
+    return faixas
+
+
+def _caber(d, texto, fontes, largura, max_linhas):
+    """Usa a maior fonte em que o título cabe inteiro (sem reticências)."""
+    for f in fontes:
+        linhas = _quebrar(d, texto, f, largura, max_linhas)
+        if not linhas[-1].endswith("…"):
+            return f, linhas
+    return f, linhas
 
 
 def capa(foto, titulo, destaque=None, estilo="grande", L=1080, A=1350):
     """estilo 'grande': letras grandes claras; 'faixas': tarjas claras com texto escuro."""
     if foto is None:
         img = Image.new("RGB", (L, A), (200, 180, 205))
+        proibidas = []
     else:
         img = _cobrir(foto, L, A)
+        proibidas = _rostos_na_capa(foto, L, A)
     if estilo == "grande":
         d = ImageDraw.Draw(img)
-        f = _fredoka(112)
-        linhas = _quebrar(d, titulo.upper(), f, L - 140, 4)
-        h = len(linhas) * 118 + (80 if destaque else 0)
-        y0 = _faixa_livre(img, h)
+        f, linhas = _caber(d, titulo.upper(), [_fredoka(t) for t in (112, 96, 84, 74)], L - 140, 4)
+        passo = int(f.size * 1.05)
+        h = len(linhas) * passo + (80 if destaque else 0)
+        y0 = _faixa_livre(img, h, proibidas=proibidas)
         mascara = Image.new("L", (L, A), 0)
         ImageDraw.Draw(mascara).rectangle([0, y0 - 60, L, y0 + h + 60], fill=110)
         mascara = mascara.filter(ImageFilter.GaussianBlur(90))
@@ -311,13 +343,13 @@ def capa(foto, titulo, destaque=None, estilo="grande", L=1080, A=1350):
             y = y0
             for ln in linhas:
                 dc.text((L // 2, y + 6), ln, font=f, fill=(0, 0, 0, 120), anchor="mt")
-                y += 118
+                y += passo
         _sombra_texto(img, sombra)
         d = ImageDraw.Draw(img)
         y = y0
         for ln in linhas:
             d.text((L // 2, y), ln, font=f, fill=CREME_TXT, anchor="mt")
-            y += 118
+            y += passo
         if destaque:
             fd = _poppins(40, "SemiBold")
             w = d.textlength(destaque, font=fd) + 60
@@ -328,9 +360,8 @@ def capa(foto, titulo, destaque=None, estilo="grande", L=1080, A=1350):
         _brilho(d, L - 200, y0 - 90, 22)
     else:
         d = ImageDraw.Draw(img)
-        f = _poppins(60, "SemiBold")
-        linhas = _quebrar(d, titulo, f, L - 220, 3)
-        y = _faixa_livre(img, len(linhas) * 104 + (130 if destaque else 0))
+        f, linhas = _caber(d, titulo, [_poppins(t, "SemiBold") for t in (60, 52, 46)], L - 220, 3)
+        y = _faixa_livre(img, len(linhas) * 104 + (130 if destaque else 0), proibidas=proibidas)
         for i, ln in enumerate(linhas):
             w = d.textlength(ln, font=f)
             d.rectangle([(L - w) / 2 - 26, y, (L + w) / 2 + 26, y + 92], fill=BRANCO if i % 2 == 0 else (236, 214, 248))
@@ -347,12 +378,19 @@ def capa(foto, titulo, destaque=None, estilo="grande", L=1080, A=1350):
 
 
 def foto_de_capa(temas, rng=random):
-    """Sorteia uma foto da pasta assets/capas/<tema> (o primeiro tema que tiver fotos)."""
-    for t in temas:
-        fotos = sorted((CAPAS / t).glob("*.jpg"))
-        if fotos:
-            return Image.open(rng.choice(fotos)).convert("RGB")
-    return None
+    """Sorteia uma foto entre as pastas assets/capas/<tema> indicadas.
+    A foto volta com `.rostos` (caixas relativas, de assets/capas/rostos.json)."""
+    fotos = [f for t in temas for f in sorted((CAPAS / t).glob("*.jpg"))]
+    if not fotos:
+        return None
+    escolhida = rng.choice(fotos)
+    img = Image.open(escolhida).convert("RGB")
+    try:
+        import json
+        img.rostos = json.loads((CAPAS / "rostos.json").read_text()).get(f"{escolhida.parent.name}/{escolhida.name}", [])
+    except (OSError, ValueError):
+        img.rostos = []
+    return img
 
 
 # ---------- 4) slide final ----------

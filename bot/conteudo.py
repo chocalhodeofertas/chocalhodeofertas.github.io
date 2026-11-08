@@ -36,7 +36,7 @@ TEMAS = [
     Tema("enxoval", {"quarto", "passeio", "alimentacao", "gestante", "higiene", "fralda", "roupa", "outros"},
          ["Achei promoções pro enxoval", "Coisas de bebê que baixaram de preço hoje",
           "O que eu compraria hoje se estivesse montando o enxoval"],
-         ["quarto", "enxoval", "familia"],
+         ["quarto", "enxoval", "gestante", "familia"],
          ["Montando o enxoval sem estourar o orçamento?", "Pra quem está preparando a chegada do bebê:",
           "Enxoval não precisa custar uma fortuna."]),
     Tema("brinquedos", {"brinquedo"},
@@ -47,12 +47,12 @@ TEMAS = [
           "Diversão pros pequenos com preço bom."]),
     Tema("ate50", None,
          ["Achados até R$ 50 pra família", "Coisas úteis até R$ 50 em promoção hoje"],
-         ["crianca", "familia", "brinquedos"],
+         ["familia", "crianca", "enxoval"],
          ["Economizar também é cuidar.", "Pequenos preços, grandes ajudas no dia a dia:"],
          preco_max=50),
     Tema("passeio", {"passeio"},
          ["Pra passear com os pequenos: promoções de hoje", "Itens de passeio que baixaram de preço"],
-         ["passeio", "familia"],
+         ["passeio"],
          ["Sair de casa com criança fica mais fácil com as coisas certas."]),
 ]
 
