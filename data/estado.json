@@ -1,5 +1,5 @@
 {
- "aguardando_link": 18,
+ "aguardando_link": 17,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 36
+  "2026-11-08": 38
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -4114,6 +4114,12 @@
    "quando": "2026-11-07T15:12-03:00",
    "titulo": "Tablet Educativo Infantil Bilíngue 54 Funções Azul Interativo Português Inglês L"
   },
+  "MLB70334862": {
+   "desconto": 0.445,
+   "preco": 76.62,
+   "quando": "2026-11-08T19:15-03:00",
+   "titulo": "Mini Geladeira Brinquedo +2 Bolas Mini Brands Surpresa Azul-turquesa"
+  },
   "MLB72024607": {
    "desconto": 0.465,
    "preco": 26.75,
@@ -4169,6 +4175,12 @@
    "preco": 41.48,
    "quando": "2026-11-08T14:33-03:00",
    "titulo": "Booster Quádruplo Escuridão Absoluta Português"
+  },
+  "MLB74913640": {
+   "desconto": 0.383,
+   "preco": 61.65,
+   "quando": "2026-11-08T19:15-03:00",
+   "titulo": "Tapete De Atividades Para Bebê Piano Musical Ginásio Móbile 5 Brinquedos Piuí Ro"
   },
   "MLB75537532": {
    "desconto": 0.599,
@@ -8493,6 +8505,10 @@
     [
      "2026-11-07",
      109.9
+    ],
+    [
+     "2026-11-08",
+     114.89
     ]
    ],
    "min": 97.0
@@ -9143,7 +9159,7 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T18:55-03:00",
+  "em": "2026-11-08T19:15-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -9747,6 +9763,6 @@
    }
   ]
  },
- "vitrine_assinatura": "095efe9c1c00418132c4e6eab2bd41b2a69e4e82",
- "vitrine_publicada_em": "2026-11-08T18:15-03:00"
+ "vitrine_assinatura": "eff372ff09dec80a81e2f07709c4c0b8ca2009c5",
+ "vitrine_publicada_em": "2026-11-08T19:15-03:00"
 }
