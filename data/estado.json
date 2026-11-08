@@ -1,5 +1,5 @@
 {
- "aguardando_link": 2,
+ "aguardando_link": 0,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 19
+  "2026-11-08": 21
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -4035,6 +4035,18 @@
    "quando": "2026-11-07T09:22-03:00",
    "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
   },
+  "MLB73606285": {
+   "desconto": 0.59,
+   "preco": 69.74,
+   "quando": "2026-11-08T13:33-03:00",
+   "titulo": "Patinete Infantil Dobrável com 3 Rodas e LED Guidão Ajustável Rodas de Uretano B"
+  },
+  "MLB74300089": {
+   "desconto": 0.412,
+   "preco": 115.33,
+   "quando": "2026-11-08T13:33-03:00",
+   "titulo": "Cercadinho Bebê Rister Baby Portátil Grande + Tapete Rosa"
+  },
   "MLB75537532": {
    "desconto": 0.599,
    "preco": 23.99,
@@ -4807,6 +4819,10 @@
     [
      "2026-11-08",
      32.99
+    ],
+    [
+     "2026-11-08",
+     32.17
     ]
    ],
    "min": 32.17
@@ -5774,6 +5790,10 @@
     [
      "2026-11-08",
      67.37
+    ],
+    [
+     "2026-11-08",
+     58.77
     ]
    ],
    "min": 30.99
@@ -8699,27 +8719,17 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T13:13-03:00",
+  "em": "2026-11-08T13:33-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
-    "de": 293.0,
-    "desconto": 0.388,
-    "id": "MLB24647466",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_614285-MLA99933903979_112025-F.jpg",
-    "link": "https://meli.la/1G1hede",
-    "preco": 179.44,
-    "titulo": "Bicicleta De Equilíbrio 4 Rodas Buba Infantil Sem Pedal Cor Azul"
-   },
-   {
-    "categoria": "outros",
-    "de": 219.9,
-    "desconto": 0.417,
-    "id": "MLB61713566",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_766581-MLA97341274561_112025-F.jpg",
-    "link": "https://meli.la/2wEAaHE",
-    "preco": 128.14,
-    "titulo": "Andador De Empurrar Infantil Com Atividades Azul - Maxi Baby"
+    "de": 169.9,
+    "desconto": 0.59,
+    "id": "MLB73606285",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_606461-MLA113479481055_062026-F.jpg",
+    "link": "https://meli.la/1Hyv251",
+    "preco": 69.74,
+    "titulo": "Patinete Infantil Dobrável com 3 Rodas e LED Guidão Ajustável Rodas de Uretano Base Antiderrapante Freio Trase"
    },
    {
     "categoria": "outros",
@@ -9300,6 +9310,16 @@
     "link": "https://meli.la/2muow7h",
     "preco": 103.89,
     "titulo": "Loção Corporal Hydrabebe Mustela Para Pele Normal, 500ml"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 39.0,
+    "desconto": 0.31,
+    "id": "MLB79182251",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_730821-MLA116010973966_092026-F.jpg",
+    "link": "https://meli.la/1jeK2Nc",
+    "preco": 26.9,
+    "titulo": "Kit Chocalhos e Mordedores Sensoriais para Bebê com 8 Peças de Silicone e Plástico"
    }
   ]
  },
