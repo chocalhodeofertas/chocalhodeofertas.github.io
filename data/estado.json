@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 21
+  "2026-11-08": 22
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3692,6 +3692,12 @@
   "MLB36436855": {
    "preco": 64.9,
    "quando": "2026-11-06T18:23-03:00"
+  },
+  "MLB37887504": {
+   "desconto": 0.38,
+   "preco": 372.0,
+   "quando": "2026-11-08T13:53-03:00",
+   "titulo": "Berço Compacto Confort Bebê Cercado Chiqueirinho Rosa Cor Cinza"
   },
   "MLB38412815": {
    "desconto": 0.392,
@@ -8719,28 +8725,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T13:33-03:00",
+  "em": "2026-11-08T13:53-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 169.9,
-    "desconto": 0.59,
-    "id": "MLB73606285",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_606461-MLA113479481055_062026-F.jpg",
-    "link": "https://meli.la/1Hyv251",
-    "preco": 69.74,
-    "titulo": "Patinete Infantil Dobrável com 3 Rodas e LED Guidão Ajustável Rodas de Uretano Base Antiderrapante Freio Trase"
-   },
-   {
-    "categoria": "outros",
-    "de": 196.2,
-    "desconto": 0.412,
-    "id": "MLB74300089",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_663940-MLA113587035261_062026-F.jpg",
-    "link": "https://meli.la/2BZ8CCL",
-    "preco": 115.33,
-    "titulo": "Cercadinho Bebê Rister Baby Portátil Grande + Tapete Rosa"
-   },
    {
     "categoria": "outros",
     "de": 600.0,
@@ -9320,6 +9306,26 @@
     "link": "https://meli.la/1jeK2Nc",
     "preco": 26.9,
     "titulo": "Kit Chocalhos e Mordedores Sensoriais para Bebê com 8 Peças de Silicone e Plástico"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 78.9,
+    "desconto": 0.267,
+    "id": "MLB73156948",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_647260-MLA113092149523_062026-F.jpg",
+    "link": "https://meli.la/2ShKRwP",
+    "preco": 57.8,
+    "titulo": "Urso De Pelúcia Teddy Bear Grande Com Laço 50cm Antialérgico Cor Baunilha com Azul Bebe"
+   },
+   {
+    "categoria": "higiene",
+    "de": 51.04,
+    "desconto": 0.299,
+    "id": "MLB18392608",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_738296-MLA110297780960_052026-F.jpg",
+    "link": "https://meli.la/1wYBGNu",
+    "preco": 35.77,
+    "titulo": "Fralda Descartável Turma da Mônica Baby M 50 Unidades 12 h"
    }
   ]
  },
