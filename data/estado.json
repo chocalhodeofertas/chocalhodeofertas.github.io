@@ -1,5 +1,5 @@
 {
- "aguardando_link": 17,
+ "aguardando_link": 16,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 33
+  "2026-11-08": 35
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3708,6 +3708,12 @@
    "quando": "2026-11-07T20:42-03:00",
    "titulo": "Mesinha Infantil Kids Baby Hercules Com 2 Cadeiras Plástico Azul"
   },
+  "MLB25656186": {
+   "desconto": 0.343,
+   "preco": 51.9,
+   "quando": "2026-11-08T18:15-03:00",
+   "titulo": "Patinete Infantil 3 Rodas com Led/Dobrável Menino/Menina"
+  },
   "MLB26816126": {
    "desconto": 0.455,
    "preco": 17.37,
@@ -4140,6 +4146,12 @@
    "quando": "2026-11-08T13:33-03:00",
    "titulo": "Patinete Infantil Dobrável com 3 Rodas e LED Guidão Ajustável Rodas de Uretano B"
   },
+  "MLB74242291": {
+   "desconto": 0.34,
+   "preco": 188.44,
+   "quando": "2026-11-08T18:15-03:00",
+   "titulo": "Cadeira De Alimentação Infantil Acolchoada 3 Em 1 Portátil Cor Rosa"
+  },
   "MLB74300089": {
    "desconto": 0.412,
    "preco": 115.33,
@@ -4470,6 +4482,10 @@
     [
      "2026-11-08",
      42.31
+    ],
+    [
+     "2026-11-08",
+     43.74
     ]
    ],
    "min": 27.87
@@ -4819,6 +4835,10 @@
     [
      "2026-11-07",
      214.82
+    ],
+    [
+     "2026-11-08",
+     230.99
     ]
    ],
    "min": 209.0
@@ -6611,9 +6631,13 @@
     [
      "2026-11-07",
      169.9
+    ],
+    [
+     "2026-11-08",
+     152.38
     ]
    ],
-   "min": 169.9
+   "min": 152.38
   },
   "MLB55866210": {
    "historico": [
@@ -7845,6 +7869,10 @@
     [
      "2026-11-08",
      39.99
+    ],
+    [
+     "2026-11-08",
+     44.99
     ]
    ],
    "min": 39.95
@@ -9081,7 +9109,7 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T17:55-03:00",
+  "em": "2026-11-08T18:15-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -9282,16 +9310,6 @@
     "link": "https://meli.la/1V8XMyo",
     "preco": 27.9,
     "titulo": "Kit Mordedor para Bebê brinquedo Sensorial Silicone com Chocalho 8 Peças Coloridas"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 259.9,
-    "desconto": 0.346,
-    "id": "MLB54746525",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_677167-MLA99508828416_112025-F.jpg",
-    "link": "https://meli.la/2abq4Ss",
-    "preco": 169.9,
-    "titulo": "Brinquedo triciclo de 3 rodas para crianças com cesto de bolhas rosa chiclete Atentu triciclo infantil motoca"
    },
    {
     "categoria": "brinquedo",
@@ -9682,9 +9700,19 @@
     "link": "https://meli.la/24NuhJE",
     "preco": 99.9,
     "titulo": "Cercadinho Infantil Cercado Bebê Criança Chiqueirinho Seguro Hexagonal JustFun Brinquedos Cinza Rosa Azul"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 99.99,
+    "desconto": 0.23,
+    "id": "MLB69251241",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_948699-MLA110358966152_052026-F.jpg",
+    "link": "https://meli.la/2tSYegn",
+    "preco": 76.99,
+    "titulo": "Barraca Infantil Cabana Tenda Festa Do Pijama Menino Criança Bebê Iglu Portátil Circus Azul"
    }
   ]
  },
- "vitrine_assinatura": "1435b9ce0ede252b301431eef0e9cb0a5f956a1f",
- "vitrine_publicada_em": "2026-11-08T17:15-03:00"
+ "vitrine_assinatura": "095efe9c1c00418132c4e6eab2bd41b2a69e4e82",
+ "vitrine_publicada_em": "2026-11-08T18:15-03:00"
 }
