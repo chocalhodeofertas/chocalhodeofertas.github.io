@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 12
+  "2026-11-08": 14
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3975,6 +3975,12 @@
    "quando": "2026-11-07T10:22-03:00",
    "titulo": "Boneca Bebê Reborn Menino Recém Nascido Pode Dar Banho"
   },
+  "MLB69086946": {
+   "desconto": 0.55,
+   "preco": 4.5,
+   "quando": "2026-11-08T12:13-03:00",
+   "titulo": "Pacote Figurinhas Copa do mundo 2026 PANINI"
+  },
   "MLB69629265": {
    "desconto": 0.471,
    "preco": 37.0,
@@ -4090,8 +4096,10 @@
    "titulo": "Aspirador Nasal Rosa Elétrico Infantil Bebê Recarregável USB Sugador de Nariz Li"
   },
   "MLB80331375": {
-   "preco": 78.98,
-   "quando": "2026-11-06T18:43-03:00"
+   "desconto": 0.555,
+   "preco": 70.29,
+   "quando": "2026-11-08T12:13-03:00",
+   "titulo": "Piscina de Bolinhas Lelor Infantil com 50 Bolinhas, Estampa Fundo do Mar"
   },
   "MLB80779802": {
    "desconto": 0.448,
@@ -5173,6 +5181,10 @@
     [
      "2026-11-07",
      21.0
+    ],
+    [
+     "2026-11-08",
+     22.42
     ]
    ],
    "min": 18.43
@@ -6237,6 +6249,10 @@
     [
      "2026-11-08",
      52.96
+    ],
+    [
+     "2026-11-08",
+     76.53
     ]
    ],
    "min": 41.61
@@ -7114,6 +7130,10 @@
     [
      "2026-11-08",
      123.0
+    ],
+    [
+     "2026-11-08",
+     132.9
     ]
    ],
    "min": 123.0
@@ -7373,6 +7393,10 @@
     [
      "2026-11-08",
      143.9
+    ],
+    [
+     "2026-11-08",
+     95.94
     ]
    ],
    "min": 95.94
@@ -8050,6 +8074,10 @@
     [
      "2026-11-07",
      406.0
+    ],
+    [
+     "2026-11-08",
+     387.33
     ]
    ],
    "min": 387.33
@@ -8352,9 +8380,13 @@
     [
      "2026-11-06",
      52.36
+    ],
+    [
+     "2026-11-08",
+     52.0
     ]
    ],
-   "min": 52.36
+   "min": 52.0
   },
   "MLB79182251": {
    "historico": [
@@ -8491,9 +8523,13 @@
     [
      "2026-11-06",
      78.98
+    ],
+    [
+     "2026-11-08",
+     70.29
     ]
    ],
-   "min": 78.98
+   "min": 70.29
   },
   "MLB80460108": {
    "historico": [
@@ -8605,7 +8641,7 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517980,
  "vitrine": {
-  "em": "2026-11-08T11:53-03:00",
+  "em": "2026-11-08T12:13-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -8616,6 +8652,16 @@
     "link": "https://meli.la/2o5yjsh",
     "preco": 4.5,
     "titulo": "Pacote Figurinhas Copa do mundo 2026 PANINI"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 157.98,
+    "desconto": 0.555,
+    "id": "MLB80331375",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_895387-MLA119039304811_102026-F.jpg",
+    "link": "https://meli.la/29sFqaC",
+    "preco": 70.29,
+    "titulo": "Piscina de Bolinhas Lelor Infantil com 50 Bolinhas, Estampa Fundo do Mar"
    },
    {
     "categoria": "brinquedo",
@@ -8920,11 +8966,11 @@
    {
     "categoria": "brinquedo",
     "de": 78.98,
-    "desconto": 0.337,
+    "desconto": 0.342,
     "id": "MLB79164975",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_609797-MLA117801428939_092026-F.jpg",
     "link": "https://meli.la/1AmC4eT",
-    "preco": 52.36,
+    "preco": 52.0,
     "titulo": "Cavalinho Upa Upa Good Vision Vermelho Inflável de Borracha Com Som e LED Para Crianças"
    },
    {
@@ -9196,19 +9242,9 @@
     "link": "https://meli.la/1VMFgJB",
     "preco": 51.0,
     "titulo": "Maiô Natação Infantil Biquíni Manga Longa Proteção Solar Uv Cor Água Tamanho 4"
-   },
-   {
-    "categoria": "outros",
-    "de": 51.04,
-    "desconto": 0.317,
-    "id": "MLB18392677",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_990051-MLA110123026010_042026-F.jpg",
-    "link": "https://meli.la/2pHZDtK",
-    "preco": 34.88,
-    "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
    }
   ]
  },
- "vitrine_assinatura": "2bca41e7506f9964dde49890e6bb4d3955a29ed0",
- "vitrine_publicada_em": "2026-11-08T11:13-03:00"
+ "vitrine_assinatura": "6e58edafe50cca32e95d8f583a3ce74d29226b5a",
+ "vitrine_publicada_em": "2026-11-08T12:13-03:00"
 }
