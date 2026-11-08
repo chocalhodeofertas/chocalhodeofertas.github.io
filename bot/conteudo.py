@@ -109,7 +109,7 @@ def escolher(estado, agora, rng=random, n=4):
 
 # Lançamento do perfil: 9 primeiros posts em 3 dias, 3 por dia.
 # Cada item: (tipo, horário sugerido). Tipos: "fixado:<nome>", "carrossel", "post".
-LANCAMENTO_INICIO = date(2026, 11, 9)
+LANCAMENTO_INICIO = date(2026, 11, 8)
 LANCAMENTO = [
     [("fixado:como_funciona", "12h"), ("carrossel", "18h"), ("post", "20h30")],
     [("carrossel", "12h"), ("post", "18h"), ("carrossel", "20h30")],

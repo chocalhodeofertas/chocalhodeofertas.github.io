@@ -870,7 +870,7 @@ def test_pacote_do_dia_monta_tudo(monkeypatch):
         def enviar_video(self, c, mp4, leg=None): enviados.append(("video", len(mp4)))
         def enviar_foto(self, c, png, leg=None): enviados.append(("foto", leg))
 
-    agora = datetime(2026, 11, 9, 10, tzinfo=FUSO)
+    agora = datetime(2026, 11, 8, 10, tzinfo=FUSO)
     assert conteudo.montar_e_enviar(TG(), 1, estado, agora, rng=random.Random(1))
     assert ("album", 6) in enviados  # capa + 4 produtos + final
     assert not any("sinuca" in str(x) for x in enviados)
