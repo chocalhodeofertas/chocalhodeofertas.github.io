@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 40
+  "2026-11-08": 41
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3937,6 +3937,12 @@
    "preco": 59.0,
    "quando": "2026-11-08T17:35-03:00",
    "titulo": "Kit Ping Pong Raquete Rede Retrátil Mesa Tênis Portátil Ultshop Ferragens"
+  },
+  "MLB60842313": {
+   "desconto": 0.35,
+   "preco": 38.93,
+   "quando": "2026-11-08T19:55-03:00",
+   "titulo": "Xô Febre: Compressas Refrescantes para Aliviar a Febre do Bebê – Kit com 4"
   },
   "MLB61118769": {
    "preco": 429.0,
@@ -6479,6 +6485,10 @@
     [
      "2026-11-06",
      178.38
+    ],
+    [
+     "2026-11-08",
+     218.41
     ]
    ],
    "min": 178.38
@@ -6990,6 +7000,10 @@
     [
      "2026-11-08",
      69.25
+    ],
+    [
+     "2026-11-08",
+     79.9
     ]
    ],
    "min": 69.25
@@ -8763,6 +8777,10 @@
     [
      "2026-11-08",
      82.9
+    ],
+    [
+     "2026-11-08",
+     109.0
     ]
    ],
    "min": 82.9
@@ -9179,28 +9197,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T19:35-03:00",
+  "em": "2026-11-08T19:55-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 99.9,
-    "desconto": 0.381,
-    "id": "MLB49086353",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_644538-MLA108177180572_032026-F.jpg",
-    "link": "https://meli.la/1GLLQxc",
-    "preco": 61.88,
-    "titulo": "Boia Bote Bebê Infantil Inflável Piscina Com Cobertura De Proteção UV Cor Azul/amarelo Indue Variedades"
-   },
-   {
-    "categoria": "passeio",
-    "de": 670.56,
-    "desconto": 0.351,
-    "id": "MLB29756545",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_786782-MLA99523938502_122025-F.jpg",
-    "link": "https://meli.la/1XmiRWF",
-    "preco": 434.99,
-    "titulo": "Cadeira de Carro Infantil 0 a 36Kg Elite 4 em 1 - Maxi Baby - Preto"
-   },
    {
     "categoria": "outros",
     "de": 59.9,
@@ -9780,6 +9778,26 @@
     "link": "https://meli.la/1NSaJZf",
     "preco": 59.99,
     "titulo": "Jogo Stop Eletrônico Trava Letras Leeboom Com Temporizador Educativo 10 Segundos Em Português Cor Vermelho"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 280.0,
+    "desconto": 0.23,
+    "id": "MLB56415193",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_837115-MLA99440131532_112025-F.jpg",
+    "link": "https://meli.la/2DVXn4S",
+    "preco": 215.64,
+    "titulo": "Patins Inline Ajustável Para Crianças com Rodas de Gel e LED"
+   },
+   {
+    "categoria": "passeio",
+    "de": 439.0,
+    "desconto": 0.244,
+    "id": "MLB32073190",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_677934-MLA99946864087_112025-F.jpg",
+    "link": "https://meli.la/2uBH8p1",
+    "preco": 332.0,
+    "titulo": "Cadeira para Auto Materna Burigotto Preto e Cobre"
    }
   ]
  },
