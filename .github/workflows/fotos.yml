@@ -13,6 +13,7 @@ jobs:
       - run: pip install -q requests Pillow
       - run: python tools/buscar_fotos.py
         env:
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
       - name: Salva no ramo "fotos"
         run: |

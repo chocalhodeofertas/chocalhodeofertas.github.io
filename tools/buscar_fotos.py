@@ -1,6 +1,7 @@
-"""Busca fotos no Pexels para as capas (licença Pexels: uso comercial liberado, sem crédito obrigatório).
+"""Busca fotos para as capas no Pixabay (ou no Pexels, se houver chave).
 
-Roda no GitHub Actions com o segredo PEXELS_API_KEY. Salva candidatas em
+Licenças de ambos: uso comercial liberado, sem crédito obrigatório.
+Roda no GitHub Actions com o segredo PIXABAY_API_KEY (ou PEXELS_API_KEY). Salva candidatas em
 fotos_candidatas/<tema>/ com creditos.json; a curadoria escolhe as que vão para assets/capas/.
 """
 import io, json, os, time
@@ -24,9 +25,26 @@ TEMAS = {
 }
 POR_BUSCA = 15
 SAIDA = Path("fotos_candidatas")
-CHAVE = os.environ["PEXELS_API_KEY"]
+PIXABAY = os.environ.get("PIXABAY_API_KEY")
+PEXELS = os.environ.get("PEXELS_API_KEY")
 s = requests.Session()
-s.headers["Authorization"] = CHAVE
+if PEXELS:
+    s.headers["Authorization"] = PEXELS
+
+
+def buscar(q):
+    """Lista de (id, url_da_imagem, pagina, autor, descricao)."""
+    if PIXABAY:
+        r = s.get("https://pixabay.com/api/", params={
+            "key": PIXABAY, "q": q, "lang": "pt", "image_type": "photo", "orientation": "vertical",
+            "safesearch": "true", "per_page": 60, "min_width": 900}, timeout=30)
+        r.raise_for_status()
+        return [(h["id"], h["largeImageURL"], h["pageURL"], h["user"], h.get("tags")) for h in r.json().get("hits", [])]
+    r = s.get("https://api.pexels.com/v1/search", params={
+        "query": q, "orientation": "portrait", "size": "large", "locale": "pt-BR", "per_page": 40}, timeout=30)
+    r.raise_for_status()
+    return [(f["id"], f["src"]["original"] + "?auto=compress&cs=tinysrgb&w=1400", f["url"], f["photographer"],
+             f.get("alt")) for f in r.json().get("photos", [])]
 
 vistos = set()
 for tema, buscas in TEMAS.items():
@@ -35,28 +53,25 @@ for tema, buscas in TEMAS.items():
     creditos, n = [], 0
     for q in buscas:
         try:
-            r = s.get("https://api.pexels.com/v1/search", params={
-                "query": q, "orientation": "portrait", "size": "large", "locale": "pt-BR", "per_page": 40}, timeout=30)
-            r.raise_for_status()
-            fotos = r.json().get("photos", [])
+            fotos = buscar(q)
         except Exception as e:  # noqa: BLE001
             print("falhou", q, e, flush=True); continue
         pegos = 0
-        for f in fotos:
-            if pegos >= POR_BUSCA or f["id"] in vistos:
+        for fid, url, pagina, autor, descricao in fotos:
+            if pegos >= POR_BUSCA or fid in vistos:
                 continue
             try:
-                im = requests.get(f["src"]["original"] + "?auto=compress&cs=tinysrgb&w=1400", timeout=40)
+                im = requests.get(url, timeout=40)
                 img = Image.open(io.BytesIO(im.content)).convert("RGB")
             except Exception:  # noqa: BLE001
                 continue
             if ImageStat.Stat(img.convert("L")).mean[0] < 115:  # só fotos claras
                 continue
-            n += 1; pegos += 1; vistos.add(f["id"])
+            n += 1; pegos += 1; vistos.add(fid)
             nome = f"{tema}_{n:03d}.jpg"
             img.save(pasta / nome, quality=86)
-            creditos.append({"arquivo": nome, "busca": q, "pexels_id": f["id"], "pagina": f["url"],
-                             "fotografo": f["photographer"], "descricao": f.get("alt"), "licenca": "Pexels License"})
+            creditos.append({"arquivo": nome, "busca": q, "id": fid, "pagina": pagina, "autor": autor,
+                             "descricao": descricao, "licenca": "Pixabay Content License" if PIXABAY else "Pexels License"})
         print(tema, q, pegos, flush=True)
         time.sleep(1)
     (pasta / "creditos.json").write_text(json.dumps(creditos, ensure_ascii=False, indent=1), encoding="utf-8")
