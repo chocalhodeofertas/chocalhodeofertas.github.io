@@ -1491,7 +1491,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 3
+  "2026-11-08": 5
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -1507,7 +1507,7 @@
    "validade": "2026-11-07T23:59-03:00"
   }
  },
- "cupons_ml_ultimo": 6415,
+ "cupons_ml_ultimo": 6416,
  "descoberta_em": "2026-11-07T20:42-03:00",
  "descobertos": {
   "MLB10923645": {
@@ -3723,6 +3723,12 @@
    "preco": 78.9,
    "quando": "2026-11-06T14:13-03:00"
   },
+  "MLB42082195": {
+   "desconto": 0.401,
+   "preco": 29.9,
+   "quando": "2026-11-08T09:02-03:00",
+   "titulo": "Mini Bateria Infantil ATENTU Instrumento Brinquedo 3 Tambores"
+  },
   "MLB43292361": {
    "desconto": 0.478,
    "preco": 114.9,
@@ -3902,6 +3908,12 @@
    "preco": 27.11,
    "quando": "2026-11-07T18:12-03:00",
    "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensoria"
+  },
+  "MLB65019704": {
+   "desconto": 0.431,
+   "preco": 91.94,
+   "quando": "2026-11-08T09:02-03:00",
+   "titulo": "Jogo de Tabuleiro - Perfil 8 - Grow - 4992"
   },
   "MLB65579852": {
    "desconto": 0.651,
@@ -4648,9 +4660,13 @@
     [
      "2026-11-08",
      67.9
+    ],
+    [
+     "2026-11-08",
+     63.89
     ]
    ],
-   "min": 64.99
+   "min": 63.89
   },
   "MLB24208936": {
    "historico": [
@@ -7820,6 +7836,10 @@
     [
      "2026-11-06",
      48.9
+    ],
+    [
+     "2026-11-08",
+     45.99
     ]
    ],
    "min": 45.99
@@ -8521,7 +8541,7 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-08T08:42-03:00",
+  "em": "2026-11-08T09:02-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -9125,6 +9145,6 @@
    }
   ]
  },
- "vitrine_assinatura": "0af5c6754119fd2c40888397b939bd326c480867",
- "vitrine_publicada_em": "2026-11-08T08:02-03:00"
+ "vitrine_assinatura": "74736506ad1a9caaa2d12c7f80829634b6e82a7e",
+ "vitrine_publicada_em": "2026-11-08T09:02-03:00"
 }
