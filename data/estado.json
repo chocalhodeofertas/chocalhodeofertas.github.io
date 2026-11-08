@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 35
+  "2026-11-08": 36
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3730,6 +3730,12 @@
    "quando": "2026-11-07T11:22-03:00",
    "titulo": "Teclado Eletrônico Musical De 61 Teclas | Brinquedo Infantil Cor Preto"
   },
+  "MLB27718012": {
+   "desconto": 0.385,
+   "preco": 325.99,
+   "quando": "2026-11-08T18:35-03:00",
+   "titulo": "Berço Portátil Basic Cinza Galzerano Chiqueiro Cercado Bebê"
+  },
   "MLB28717101": {
    "preco": 269.9,
    "quando": "2026-11-06T14:34-03:00"
@@ -4680,9 +4686,13 @@
     [
      "2026-11-06",
      23.8
+    ],
+    [
+     "2026-11-08",
+     19.42
     ]
    ],
-   "min": 23.8
+   "min": 19.42
   },
   "MLB22191149": {
    "historico": [
@@ -5021,6 +5031,10 @@
     [
      "2026-11-08",
      32.99
+    ],
+    [
+     "2026-11-08",
+     32.17
     ]
    ],
    "min": 32.17
@@ -6039,6 +6053,10 @@
     [
      "2026-11-08",
      67.37
+    ],
+    [
+     "2026-11-08",
+     58.77
     ]
    ],
    "min": 30.99
@@ -9109,28 +9127,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517981,
  "vitrine": {
-  "em": "2026-11-08T18:15-03:00",
+  "em": "2026-11-08T18:35-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 78.99,
-    "desconto": 0.343,
-    "id": "MLB25656186",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_944838-MLA99549576346_122025-F.jpg",
-    "link": "https://meli.la/23eCNt7",
-    "preco": 51.9,
-    "titulo": "Patinete Infantil 3 Rodas com Led/Dobrável Menino/Menina"
-   },
-   {
-    "categoria": "alimentacao",
-    "de": 285.7,
-    "desconto": 0.34,
-    "id": "MLB74242291",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_874950-MLA112423071970_062026-F.jpg",
-    "link": "https://meli.la/1hp59vH",
-    "preco": 188.44,
-    "titulo": "Cadeira De Alimentação Infantil Acolchoada 3 Em 1 Portátil Cor Rosa"
-   },
    {
     "categoria": "outros",
     "de": 529.9,
@@ -9433,16 +9431,6 @@
    },
    {
     "categoria": "brinquedo",
-    "de": 34.0,
-    "desconto": 0.3,
-    "id": "MLB21843844",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_674475-MLA99598648876_122025-F.jpg",
-    "link": "https://meli.la/1Y4uD27",
-    "preco": 23.8,
-    "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
-   },
-   {
-    "categoria": "brinquedo",
     "de": 167.99,
     "desconto": 0.321,
     "id": "MLB61715651",
@@ -9710,6 +9698,36 @@
     "link": "https://meli.la/2tSYegn",
     "preco": 76.99,
     "titulo": "Barraca Infantil Cabana Tenda Festa Do Pijama Menino Criança Bebê Iglu Portátil Circus Azul"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 78.9,
+    "desconto": 0.228,
+    "id": "MLB75712282",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_612686-MLA113900078918_072026-F.jpg",
+    "link": "https://meli.la/2u8EHXu",
+    "preco": 60.89,
+    "titulo": "Dinossauro Interativo Tiranossauro T-Rex com Fumaça, Luz e Som para Crianças"
+   },
+   {
+    "categoria": "outros",
+    "de": 541.2,
+    "desconto": 0.224,
+    "id": "MLB54018368",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_838150-MLA96150683103_102025-F.jpg",
+    "link": "https://meli.la/21gqDeR",
+    "preco": 419.99,
+    "titulo": "Berço Portátil Infantil Cercado 0-15kg Lazy Maxi baby - Cinza"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 48.99,
+    "desconto": 0.235,
+    "id": "MLB26712966",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_935402-MLA99602357854_122025-F.jpg",
+    "link": "https://meli.la/1RGvMdG",
+    "preco": 37.49,
+    "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
    }
   ]
  },
