@@ -5415,9 +5415,13 @@
     [
      "2026-11-07",
      42.32
+    ],
+    [
+     "2026-11-08",
+     42.09
     ]
    ],
-   "min": 42.19
+   "min": 42.09
   },
   "MLB37883472": {
    "historico": [
@@ -8551,18 +8555,8 @@
  "resumo_enviado": "2026-11-07",
  "tg_offset": 273517979,
  "vitrine": {
-  "em": "2026-11-08T09:22-03:00",
+  "em": "2026-11-08T09:42-03:00",
   "itens": [
-   {
-    "categoria": "jogo",
-    "de": 139.99,
-    "desconto": 0.429,
-    "id": "MLB61700105",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_813285-MLA97324226431_112025-F.jpg",
-    "link": "https://meli.la/2SGo6Vo",
-    "preco": 79.9,
-    "titulo": "Box Pokemon Baralho De Batalha Mewtwo Ex Equipe Rocket Português"
-   },
    {
     "categoria": "brinquedo",
     "de": 147.0,
@@ -9152,6 +9146,16 @@
     "link": "https://meli.la/2muow7h",
     "preco": 103.89,
     "titulo": "Loção Corporal Hydrabebe Mustela Para Pele Normal, 500ml"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 39.0,
+    "desconto": 0.31,
+    "id": "MLB79182251",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_730821-MLA116010973966_092026-F.jpg",
+    "link": "https://meli.la/1jeK2Nc",
+    "preco": 26.9,
+    "titulo": "Kit Chocalhos e Mordedores Sensoriais para Bebê com 8 Peças de Silicone e Plástico"
    }
   ]
  },
