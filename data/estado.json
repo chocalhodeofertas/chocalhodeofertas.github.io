@@ -7851,6 +7851,10 @@
     [
      "2026-11-07",
      114.0
+    ],
+    [
+     "2026-11-09",
+     129.9
     ]
    ],
    "min": 114.0
@@ -8318,9 +8322,13 @@
     [
      "2026-11-09",
      256.41
+    ],
+    [
+     "2026-11-09",
+     231.9
     ]
    ],
-   "min": 256.41
+   "min": 231.9
   },
   "MLB63566347": {
    "historico": [
@@ -10354,6 +10362,10 @@
     [
      "2026-11-09",
      320.0
+    ],
+    [
+     "2026-11-09",
+     317.0
     ]
    ],
    "min": 259.9
@@ -10428,18 +10440,8 @@
  },
  "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T13:42-03:00",
+  "em": "2026-11-09T14:02-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 167.99,
-    "desconto": 0.321,
-    "id": "MLB61715651",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_772587-MLA96885902224_112025-F.jpg",
-    "link": "https://meli.la/1YC9QxG",
-    "preco": 114.0,
-    "titulo": "Barraca Infantil Rosa Toca Túnel 3 Em 1 Cabana Cercadinho"
-   },
    {
     "categoria": "brinquedo",
     "de": 129.99,
@@ -10842,6 +10844,6 @@
    }
   ]
  },
- "vitrine_assinatura": "b7abb9910a994d268345cdc4d7010133d162b112",
- "vitrine_publicada_em": "2026-11-09T13:12-03:00"
+ "vitrine_assinatura": "f42c961389dd8eed4bf907aa22708c530d67402f",
+ "vitrine_publicada_em": "2026-11-09T14:02-03:00"
 }
