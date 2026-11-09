@@ -498,6 +498,19 @@ INSTITUCIONAIS = {
                                       "Você entra e sai quando quiser."),
         ],
     },
+    "perguntas": {
+        "capa": ("Perguntas frequentes", "grande", ["familia", "gestante"]),
+        "slides": [
+            (None, "É de graça?", "Sim. O grupo e o canal são gratuitos.\n"
+                                  "E você não paga nada a mais pelos produtos."),
+            (None, "Vocês vendem os produtos?", "Não. A compra é feita direto na loja oficial.\n"
+                                                "Entrega, troca e garantia são com a loja."),
+            (None, "Como vocês ganham?", "Com links de afiliado: quando alguém compra pelo link, "
+                                         "a loja nos paga uma pequena comissão."),
+            (None, "Posso sair quando quiser?", "Claro, a qualquer momento.\n"
+                                                "No grupo, só os administradores postam: nada de spam."),
+        ],
+    },
 }
 
 

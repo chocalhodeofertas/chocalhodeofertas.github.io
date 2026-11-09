@@ -32,29 +32,54 @@ class Tema:
     destaque: str | None = None
 
 
-TEMAS = [
-    Tema("enxoval", {"quarto", "passeio", "alimentacao", "gestante", "higiene", "fralda", "roupa", "outros"},
-         ["Achei promoções pro enxoval", "Coisas de bebê que baixaram de preço hoje",
-          "O que eu compraria hoje se estivesse montando o enxoval"],
-         ["quarto", "enxoval", "gestante", "familia"],
-         ["Montando o enxoval sem estourar o orçamento?", "Pra quem está preparando a chegada do bebê:",
-          "Enxoval não precisa custar uma fortuna."]),
+# Temas por categoria: no dia, vence a categoria com mais promoções
+TEMAS_CATEGORIA = [
     Tema("brinquedos", {"brinquedo"},
          ["Brinquedos que baixaram de preço hoje", "Ideias de presente em promoção",
           "Presentes que estão mais baratos hoje"],
          ["brinquedos", "crianca"],
          ["Aniversário, Natal ou só aquele mimo?", "Pra quem procura presente sem gastar muito:",
           "Diversão pros pequenos com preço bom."]),
+    Tema("roupas", {"roupa"},
+         ["Roupinhas em promoção hoje", "Roupas de bebê e criança com desconto"],
+         ["enxoval"],
+         ["Eles crescem rápido, e a gente economiza onde dá:", "Pra renovar o guarda-roupa dos pequenos:"]),
+    Tema("higiene", {"higiene", "fralda"},
+         ["Higiene e banho do bebê com desconto", "Itens de higiene que baixaram de preço"],
+         ["enxoval"],
+         ["Item de uso diário em promoção é economia o mês todo.", "Pra hora do banho e da troca:"]),
+    Tema("quarto", {"quarto"},
+         ["Pro quarto do bebê: promoções de hoje", "Coisas pro quartinho que baixaram de preço"],
+         ["quarto"],
+         ["Montando ou renovando o quartinho?", "Aconchego pro quarto dos pequenos:"]),
+    Tema("passeio", {"passeio"},
+         ["Pra passear com os pequenos: promoções de hoje", "Itens de passeio que baixaram de preço"],
+         ["passeio"],
+         ["Sair de casa com criança fica mais fácil com as coisas certas."]),
+    Tema("alimentacao", {"alimentacao"},
+         ["Hora da papinha: itens em promoção", "Pra alimentação dos pequenos, com desconto"],
+         ["alimentacao"],
+         ["Introdução alimentar sem gastar muito:", "Pra hora das refeições:"]),
+    Tema("gestante", {"gestante"},
+         ["Pra gestante: promoções de hoje", "Itens pra gravidez com desconto"],
+         ["gestante"],
+         ["Cuidar de você também faz parte.", "Pra quem está esperando um bebê:"]),
+]
+# Reserva, quando nenhuma categoria tem promoções suficientes sozinha
+TEMAS_GERAIS = [
+    Tema("enxoval", {"quarto", "passeio", "alimentacao", "gestante", "higiene", "fralda", "roupa", "outros"},
+         ["Achei promoções pro enxoval", "Coisas de bebê que baixaram de preço hoje",
+          "O que eu compraria hoje se estivesse montando o enxoval"],
+         ["quarto", "enxoval", "gestante", "familia"],
+         ["Montando o enxoval sem estourar o orçamento?", "Pra quem está preparando a chegada do bebê:",
+          "Enxoval não precisa custar uma fortuna."]),
     Tema("ate50", None,
          ["Achados até R$ 50 pra família", "Coisas úteis até R$ 50 em promoção hoje"],
          ["familia", "crianca", "enxoval"],
          ["Economizar também é cuidar.", "Pequenos preços, grandes ajudas no dia a dia:"],
          preco_max=50),
-    Tema("passeio", {"passeio"},
-         ["Pra passear com os pequenos: promoções de hoje", "Itens de passeio que baixaram de preço"],
-         ["passeio"],
-         ["Sair de casa com criança fica mais fácil com as coisas certas."]),
 ]
+TEMAS = TEMAS_CATEGORIA + TEMAS_GERAIS
 
 
 def _itens(estado):
@@ -80,16 +105,19 @@ def _usados(estado, agora):
 
 
 def escolher_varios(estado, agora, n_carrosseis=1, n_posts=3, n=4):
-    """Escolhe temas diferentes (em rodízio) para os carrosséis e os produtos dos posts únicos,
-    sem repetir produto entre eles."""
+    """Escolhe os temas do dia: primeiro as categorias com mais promoções hoje, sem repetir
+    o tema dos últimos 2 dias; se faltar, usa os temas gerais. Produtos não se repetem."""
     itens = _itens(estado)
     usados = set(_usados(estado, agora))
-    dia = agora.toordinal()
+    limite = (agora - timedelta(days=2)).date().isoformat()
+    recentes = {t for t, d in (estado.get("temas_recentes") or {}).items() if d >= limite}
+    ranking = sorted(TEMAS_CATEGORIA, key=lambda t: -len(_candidatos(t, itens, usados)))
+    ordem = ([t for t in ranking if t.nome not in recentes] + TEMAS_GERAIS
+             + [t for t in ranking if t.nome in recentes])
     escolhidos = []
-    for k in range(len(TEMAS)):
+    for tema in ordem:
         if len(escolhidos) == n_carrosseis:
             break
-        tema = TEMAS[(dia * n_carrosseis + k) % len(TEMAS)]
         cand = _candidatos(tema, itens, usados)
         if len(cand) >= 3:
             carr = cand[:n]
@@ -107,13 +135,14 @@ def escolher(estado, agora, rng=random, n=4):
     return esc[0][0], esc[0][1], resto
 
 
-# Lançamento do perfil: 9 primeiros posts em 3 dias, 3 por dia.
-# Cada item: (tipo, horário sugerido). Tipos: "fixado:<nome>", "carrossel", "post".
+# Lançamento do perfil: 9 posts em 3 dias = 3 da marca (fixados), 3 temáticos e 3 de produto.
+# O temático é sempre às 18h (coluna do meio da grade); marca e produto alternam nas pontas.
+# No dia 2 o temático sai como Reel, para testar o formato.
 LANCAMENTO_INICIO = date(2026, 11, 8)
 LANCAMENTO = [
-    [("fixado:como_funciona", "12h"), ("carrossel", "18h"), ("post", "20h30")],
-    [("carrossel", "12h"), ("post", "18h"), ("carrossel", "20h30")],
-    [("carrossel", "12h"), ("post", "18h"), ("fixado:o_que_e", "20h30")],
+    [("fixado:o_que_e", "12h"), ("carrossel", "18h"), ("post", "20h30")],
+    [("post", "12h"), ("reel", "18h"), ("fixado:como_funciona", "20h30")],
+    [("fixado:perguntas", "12h"), ("carrossel", "18h"), ("post", "20h30")],
 ]
 LEGENDAS_FIXADOS = {
     "como_funciona": "\n".join([
@@ -140,6 +169,17 @@ LEGENDAS_FIXADOS = {
         "",
         "🔗 Entre no grupo gratuito pelo link da bio (WhatsApp ou Telegram).",
         "#publi"]),
+    "perguntas": "\n".join([
+        "Perguntas que sempre chegam pra gente 💬",
+        "",
+        "É de graça? Sim, o grupo e o canal são gratuitos.",
+        "Vocês vendem? Não: a compra é direto na loja oficial.",
+        "Como vocês ganham? Com links de afiliado, sem custo extra pra você.",
+        "Posso sair quando quiser? Claro, a qualquer momento.",
+        "",
+        "Ficou alguma dúvida? Manda aqui nos comentários!",
+        "🔗 Link do grupo na bio.",
+        "#publi"]),
 }
 
 
@@ -148,7 +188,7 @@ def plano_do_dia(agora):
     k = (agora.date() - LANCAMENTO_INICIO).days
     if 0 <= k < len(LANCAMENTO):
         return k + 1, LANCAMENTO[k]
-    return None, [("carrossel", "12h"), ("post", "18h"), ("post", "20h30")]
+    return None, [("post", "12h"), ("carrossel", "18h"), ("post", "20h30")]
 
 
 def _curto(titulo, limite=55):
@@ -188,9 +228,17 @@ def _registrar_usados(estado, agora, itens):
     estado["pacote_usados"] = usados
 
 
+def _registrar_tema(estado, agora, tema):
+    hoje = agora.date().isoformat()
+    lim = (agora - timedelta(days=7)).date().isoformat()
+    rec = {t: d for t, d in (estado.get("temas_recentes") or {}).items() if d >= lim}
+    rec[tema.nome] = hoje
+    estado["temas_recentes"] = rec
+
+
 def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None):
     dia_lanc, plano = plano_do_dia(agora)
-    n_carr = sum(1 for t, _ in plano if t == "carrossel")
+    n_carr = sum(1 for t, _ in plano if t in ("carrossel", "reel"))
     n_posts = sum(1 for t, _ in plano if t == "post")
     escolhidos, resto = escolher_varios(estado, agora, n_carr, max(n_posts, 3 if not dia_lanc else n_posts))
     if n_carr and not escolhidos:
@@ -211,10 +259,10 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
             roteiro.append((k, hora, "fixado", nome))
             linhas.append(f"{k}. {hora} — post fixado <b>{arte.INSTITUCIONAIS[nome]['capa'][0]}</b> "
                           "(depois de postar: ··· → Fixar no perfil)")
-        elif tipo == "carrossel" and fila_c:
+        elif tipo in ("carrossel", "reel") and fila_c:
             tema, carr = fila_c.pop(0)
-            roteiro.append((k, hora, "carrossel", (tema, carr)))
-            linhas.append(f"{k}. {hora} — carrossel <b>{tema.nome}</b>")
+            roteiro.append((k, hora, tipo, (tema, carr)))
+            linhas.append(f"{k}. {hora} — {'Reel' if tipo == 'reel' else 'carrossel'} temático <b>{tema.nome}</b>")
         elif tipo == "post" and fila_p:
             i = fila_p.pop(0)
             roteiro.append((k, hora, "post", i))
@@ -232,6 +280,27 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
             slides = arte.institucional(dado, rng)
             tg.enviar_album(chat, [arte.png(s) for s in slides], f"📌 {k}. {hora} — post fixado (na ordem)")
             tg.enviar_texto(chat, LEGENDAS_FIXADOS[dado])
+        elif tipo == "reel":
+            tema, carr = dado
+            ofs = [_oferta(i) for i in carr]
+            fotos = [arte.baixar_foto(o.imagem, session) for o in ofs]
+            titulo = rng.choice(tema.titulos)
+            estilo = "grande" if (estilo_base + n_c) % 2 == 0 else "faixas"
+            capa_foto = arte.foto_de_capa(tema.fotos, rng)
+            mp4 = arte.reel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
+            if mp4:
+                tg.enviar_video(chat, mp4, f"🎬 {k}. {hora} — Reel temático (escolha a música no Instagram)")
+                capa_916 = arte.capa(capa_foto, titulo, tema.destaque, estilo, L=1080, A=1920)
+                tg.enviar_documento(chat, arte.png(capa_916), "capa_reel.png",
+                                    "🖼️ Capa do Reel: em 'Editar capa', escolha 'Adicionar da galeria'", "image/png")
+                tg.enviar_texto(chat, legenda_carrossel(tema, ofs, rng))
+            else:  # sem ffmpeg: manda como carrossel
+                slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
+                tg.enviar_album(chat, [arte.png(s) for s in slides], f"🎠 {k}. {hora} — carrossel (o Reel falhou)")
+                tg.enviar_texto(chat, legenda_carrossel(tema, ofs, rng))
+            stories += list(zip(ofs, fotos))
+            _registrar_usados(estado, agora, carr)
+            _registrar_tema(estado, agora, tema)
         elif tipo == "carrossel":
             tema, carr = dado
             ofs = [_oferta(i) for i in carr]
@@ -253,6 +322,7 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
                     log(f"Aviso: não consegui mandar o Reel: {e}")
             stories += list(zip(ofs, fotos))
             _registrar_usados(estado, agora, carr)
+            _registrar_tema(estado, agora, tema)
         elif tipo == "post":
             o = _oferta(dado)
             tg.enviar_foto(chat, arte.gerar(o, session=session, cta="Link na bio"), f"🖼️ {k}. {hora} — post do produto")

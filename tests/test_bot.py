@@ -869,6 +869,7 @@ def test_pacote_do_dia_monta_tudo(monkeypatch):
         def enviar_album(self, c, pngs, leg=None): enviados.append(("album", len(pngs)))
         def enviar_video(self, c, mp4, leg=None): enviados.append(("video", len(mp4)))
         def enviar_foto(self, c, png, leg=None): enviados.append(("foto", leg))
+        def enviar_documento(self, c, dados, nome, leg=None, tipo=None): enviados.append(("doc", nome))
 
     agora = datetime(2026, 11, 8, 10, tzinfo=FUSO)
     assert conteudo.montar_e_enviar(TG(), 1, estado, agora, rng=random.Random(1))
@@ -879,11 +880,18 @@ def test_pacote_do_dia_monta_tudo(monkeypatch):
     assert stories and "meli.la" in stories[0]
     assert len(estado["pacote_usados"]) == 5  # dia 1 do lançamento: 1 carrossel (4) + 1 post
     assert any(t == "txt" and "dia 1 de 3" in str(v) for t, v in enviados)
-    assert any(t == "txt" and "Como funciona o Chocalho" in str(v) for t, v in enviados)
+    assert any(t == "txt" and "Prazer, Chocalho de Ofertas" in str(v) for t, v in enviados)
+    assert ("album", 5) in enviados  # post fixado: capa + 3 + final
+    assert estado["temas_recentes"] == {"brinquedos": "2026-11-08"}  # categoria com mais promoções
+
+    # Dia 2: temático vira Reel (com capa), e o tema muda (brinquedos foi ontem)
+    enviados.clear()
+    assert conteudo.montar_e_enviar(TG(), 1, estado, datetime(2026, 11, 9, 10, tzinfo=FUSO), rng=random.Random(1))
+    assert any(t == "video" for t, v in enviados) and ("doc", "capa_reel.png") in enviados
 
     # Dia normal (segunda): 1 carrossel + 2 posts + Reel
     enviados.clear()
-    estado.pop("pacote_usados")
+    estado.pop("pacote_usados"); estado.pop("temas_recentes")
     assert conteudo.montar_e_enviar(TG(), 1, estado, datetime(2026, 11, 16, 10, tzinfo=FUSO), rng=random.Random(1))
     assert sum(1 for t, v in enviados if t == "album") == 1
     assert any(t == "video" for t, v in enviados)
