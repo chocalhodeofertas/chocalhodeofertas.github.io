@@ -1527,9 +1527,15 @@
    "post": 47,
    "status": "encerrado",
    "validade": "2026-11-07T23:59-03:00"
+  },
+  "OFFNAMODA": {
+   "criado": "2026-11-09T10:22-03:00",
+   "post": 155,
+   "status": "ativo",
+   "validade": "2026-11-09T23:59-03:00"
   }
  },
- "cupons_ml_ultimo": 6418,
+ "cupons_ml_ultimo": 6419,
  "descoberta_em": "2026-11-08T16:55-03:00",
  "descobertos": {
   "MLB10923645": {
@@ -4420,6 +4426,17 @@
     }
    ],
    "criado": "2026-11-09T10:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "155": {
+   "blocos": [
+    {
+     "codigo": "OFFNAMODA",
+     "html": "<b>🎟️ OFFNAMODA</b> 👉 <b>12% OFF</b>\n📂 Moda\nCompra mín.: R$79 · Desconto máx.: R$60\n⏰ Válido até 09/11\n👉 <a href=\"https://bit.ly/4iyixAW\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-09T10:22-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
