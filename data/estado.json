@@ -1,5 +1,5 @@
 {
- "aguardando_link": 16,
+ "aguardando_link": 18,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -4448,6 +4448,10 @@
     [
      "2026-11-09",
      155.43
+    ],
+    [
+     "2026-11-09",
+     159.0
     ]
    ],
    "min": 139.9
@@ -5225,6 +5229,10 @@
     [
      "2026-11-09",
      32.17
+    ],
+    [
+     "2026-11-09",
+     39.86
     ]
    ],
    "min": 32.17
@@ -5577,9 +5585,13 @@
     [
      "2026-11-08",
      223.45
+    ],
+    [
+     "2026-11-09",
+     223.41
     ]
    ],
-   "min": 223.45
+   "min": 223.41
   },
   "MLB26941741": {
    "historico": [
@@ -5635,6 +5647,10 @@
     [
      "2026-11-09",
      299.9
+    ],
+    [
+     "2026-11-09",
+     359.9
     ]
    ],
    "min": 299.9
@@ -5661,6 +5677,10 @@
     [
      "2026-11-09",
      118.63
+    ],
+    [
+     "2026-11-09",
+     164.99
     ]
    ],
    "min": 118.63
@@ -7034,9 +7054,13 @@
     [
      "2026-11-07",
      233.0
+    ],
+    [
+     "2026-11-09",
+     199.39
     ]
    ],
-   "min": 233.0
+   "min": 199.39
   },
   "MLB57267660": {
    "historico": [
@@ -7359,6 +7383,10 @@
     [
      "2026-11-08",
      20.38
+    ],
+    [
+     "2026-11-09",
+     22.85
     ]
    ],
    "min": 20.38
@@ -7567,6 +7595,10 @@
     [
      "2026-11-09",
      104.0
+    ],
+    [
+     "2026-11-09",
+     79.99
     ]
    ],
    "min": 56.89
@@ -8885,6 +8917,10 @@
     [
      "2026-11-09",
      406.0
+    ],
+    [
+     "2026-11-09",
+     423.0
     ]
    ],
    "min": 387.33
@@ -9565,18 +9601,8 @@
  },
  "tg_offset": 273517985,
  "vitrine": {
-  "em": "2026-11-09T08:12-03:00",
+  "em": "2026-11-09T08:32-03:00",
   "itens": [
-   {
-    "categoria": "outros",
-    "de": 239.0,
-    "desconto": 0.536,
-    "id": "MLB80779802",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_885648-MLA118315793170_102026-F.jpg",
-    "link": "https://meli.la/2F36QRz",
-    "preco": 111.0,
-    "titulo": "Andador Infantil Brinquedo Educativo Musical Didático Bebê Cor Azul-claro"
-   },
    {
     "categoria": "brinquedo",
     "de": 350.0,
@@ -9628,16 +9654,6 @@
     "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
    },
    {
-    "categoria": "brinquedo",
-    "de": 189.9,
-    "desconto": 0.375,
-    "id": "MLB27861415",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_802710-MLA91575017864_092025-F.jpg",
-    "link": "https://meli.la/2nvA4BA",
-    "preco": 118.63,
-    "titulo": "Cozinha De Brinquedo Infantil Completa Princess Replay Kids"
-   },
-   {
     "categoria": "outros",
     "de": 77.36,
     "desconto": 0.351,
@@ -9666,16 +9682,6 @@
     "link": "https://meli.la/1PDozfs",
     "preco": 39.79,
     "titulo": "Boneco Pelúcia Sonic 50cm Grande Envio Imediato Infantil Top Azul"
-   },
-   {
-    "categoria": "outros",
-    "de": 359.9,
-    "desconto": 0.353,
-    "id": "MLB57083030",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_741342-MLA92558466166_092025-F.jpg",
-    "link": "https://meli.la/168F5Rm",
-    "preco": 233.0,
-    "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
    },
    {
     "categoria": "brinquedo",
@@ -9816,6 +9822,16 @@
     "link": "https://meli.la/1VMFgJB",
     "preco": 51.0,
     "titulo": "Maiô Natação Infantil Biquíni Manga Longa Proteção Solar Uv Cor Água Tamanho 4"
+   },
+   {
+    "categoria": "outros",
+    "de": 292.0,
+    "desconto": 0.317,
+    "id": "MLB57083030",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_741342-MLA92558466166_092025-F.jpg",
+    "link": "https://meli.la/168F5Rm",
+    "preco": 199.39,
+    "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
    },
    {
     "categoria": "outros",
@@ -10078,16 +10094,6 @@
     "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
    },
    {
-    "categoria": "quarto",
-    "de": 529.9,
-    "desconto": 0.234,
-    "id": "MLB75481308",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_889881-MLA114552950567_072026-F.jpg",
-    "link": "https://meli.la/2qpr2WC",
-    "preco": 406.0,
-    "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
-   },
-   {
     "categoria": "brinquedo",
     "de": 179.86,
     "desconto": 0.25,
@@ -10156,6 +10162,16 @@
     "link": "https://meli.la/1hvxeRf",
     "preco": 54.9,
     "titulo": "Teclado Infantil 32 Teclas com Microfone Karaokê Piano de Brinquedo Musical Educativo com Sons de Demonstração"
+   },
+   {
+    "categoria": "quarto",
+    "de": 529.9,
+    "desconto": 0.202,
+    "id": "MLB75481308",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_889881-MLA114552950567_072026-F.jpg",
+    "link": "https://meli.la/2qpr2WC",
+    "preco": 423.0,
+    "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
    }
   ]
  },
