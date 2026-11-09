@@ -1510,6 +1510,12 @@
   "2026-11-09": 6
  },
  "cupons": {
+  "HOJEMESMO": {
+   "criado": "2026-11-09T10:01-03:00",
+   "post": 152,
+   "status": "ativo",
+   "validade": "2026-11-09T23:59-03:00"
+  },
   "MELIOFERTAS": {
    "criado": "2026-11-07T13:02-03:00",
    "post": 62,
@@ -1523,7 +1529,7 @@
    "validade": "2026-11-07T23:59-03:00"
   }
  },
- "cupons_ml_ultimo": 6417,
+ "cupons_ml_ultimo": 6418,
  "descoberta_em": "2026-11-08T16:55-03:00",
  "descobertos": {
   "MLB10923645": {
@@ -4406,6 +4412,17 @@
   }
  },
  "posts_cupom": {
+  "152": {
+   "blocos": [
+    {
+     "codigo": "HOJEMESMO",
+     "html": "<b>🎟️ HOJEMESMO</b> 👉 <b>10% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 09/11\n👉 <a href=\"https://bit.ly/4BAzNhs\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-09T10:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
   "47": {
    "blocos": [
     {
