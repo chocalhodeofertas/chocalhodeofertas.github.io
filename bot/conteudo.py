@@ -138,7 +138,7 @@ def escolher(estado, agora, rng=random, n=4):
 # Lançamento do perfil: 9 posts em 3 dias = 3 da marca (fixados), 3 temáticos e 3 de produto.
 # O temático é sempre às 18h (coluna do meio da grade); marca e produto alternam nas pontas.
 # No dia 2 o temático sai como Reel, para testar o formato.
-LANCAMENTO_INICIO = date(2026, 11, 8)
+LANCAMENTO_INICIO = date(2026, 11, 9)
 LANCAMENTO = [
     [("fixado:o_que_e", "12h"), ("carrossel", "18h"), ("post", "20h30")],
     [("post", "12h"), ("reel", "18h"), ("fixado:como_funciona", "20h30")],
