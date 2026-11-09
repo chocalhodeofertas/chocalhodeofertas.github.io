@@ -1531,7 +1531,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 21
+  "2026-11-09": 22
  },
  "cupons": {
   "AUTO70OFF": {
@@ -4126,6 +4126,12 @@
    "quando": "2026-11-08T13:13-03:00",
    "titulo": "Andador De Empurrar Infantil Com Atividades Azul - Maxi Baby"
   },
+  "MLB61715651": {
+   "desconto": 0.321,
+   "preco": 114.0,
+   "quando": "2026-11-09T13:42-03:00",
+   "titulo": "Barraca Infantil Rosa Toca Túnel 3 Em 1 Cabana Cercadinho"
+  },
   "MLB61794290": {
    "desconto": 0.454,
    "preco": 436.4,
@@ -5807,6 +5813,10 @@
     [
      "2026-11-06",
      37.49
+    ],
+    [
+     "2026-11-09",
+     37.5
     ]
    ],
    "min": 37.49
@@ -6692,6 +6702,10 @@
     [
      "2026-11-09",
      67.37
+    ],
+    [
+     "2026-11-09",
+     58.77
     ]
    ],
    "min": 30.99
@@ -10367,28 +10381,8 @@
  },
  "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T13:32-03:00",
+  "em": "2026-11-09T13:42-03:00",
   "itens": [
-   {
-    "categoria": "outros",
-    "de": 356.9,
-    "desconto": 0.364,
-    "id": "MLB57083030",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_741342-MLA92558466166_092025-F.jpg",
-    "link": "https://meli.la/168F5Rm",
-    "preco": 227.05,
-    "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 40.0,
-    "desconto": 0.302,
-    "id": "MLB76397729",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_636014-MLA114307309560_082026-F.jpg",
-    "link": "https://meli.la/1V8XMyo",
-    "preco": 27.9,
-    "titulo": "Kit Mordedor para Bebê brinquedo Sensorial Silicone com Chocalho 8 Peças Coloridas"
-   },
    {
     "categoria": "brinquedo",
     "de": 167.99,
@@ -10728,16 +10722,6 @@
     "link": "https://meli.la/1qdfoDe",
     "preco": 209.89,
     "titulo": "Andador Infantil Musical Para Bebê Quick Maxi Baby AZUL"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 48.99,
-    "desconto": 0.235,
-    "id": "MLB26712966",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_935402-MLA99602357854_122025-F.jpg",
-    "link": "https://meli.la/1RGvMdG",
-    "preco": 37.49,
-    "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
    },
    {
     "categoria": "higiene",
