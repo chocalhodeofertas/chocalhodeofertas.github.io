@@ -555,23 +555,24 @@ def capa_marca(nome, L=1080, A=1350):
     elif nome == "como_funciona":
         img = Image.new("RGB", (L, A), UVA)
         d = ImageDraw.Draw(img)
-        f = _fredoka(140)
-        d.text((L // 2, 470), "Como", font=f, fill=BRANCO, anchor="ms")
-        w2 = d.textlength("funciona?", font=f)
-        ic = _icone(190)
-        total = w2 + 30 + ic.width
-        x0 = (L - total) / 2
-        d.text((x0, 640), "funciona?", font=f, fill=BRANCO, anchor="ls")
-        img.paste(ic, (int(x0 + w2 + 30), 640 - ic.height + 20), ic)
-        fp = _fredoka(48)
-        t = "em 4 passos"
-        w = d.textlength(t, font=fp) + 90
-        d.rounded_rectangle([(L - w) / 2, 780, (L + w) / 2, 870], radius=45, fill=PINK)
-        d.text((L // 2, 825), t, font=fp, fill=BRANCO, anchor="mm")
-        for k in range(4):
-            cx = L // 2 + (k - 1.5) * 150
-            d.ellipse([cx - 52, 960, cx + 52, 1064], outline=LAVANDA_2, width=6)
-            d.text((cx, 1012), str(k + 1), font=_fredoka(60), fill=LAVANDA_2, anchor="mm")
+        # ursinho no canto superior direito, levemente "espiando"
+        ic = _icone(330)
+        img.paste(ic, (L - ic.width - 50, 90), ic)
+        # título alinhado à esquerda, grande
+        f = _fredoka(150)
+        d.text((80, 560), "Como", font=f, fill=BRANCO, anchor="ls")
+        d.text((80, 720), "funciona?", font=f, fill=PINK, anchor="ls")
+        d.text((84, 800), "entenda em 4 passos", font=_poppins(36, "SemiBold"),
+               fill=LAVANDA_2, anchor="ls")
+        # trilha dos 4 passos
+        passos = ["garimpo", "grupo", "loja", "confira"]
+        y = 1010
+        xs = [150 + k * 260 for k in range(4)]
+        d.line([(xs[0], y), (xs[-1], y)], fill=(110, 60, 120), width=8)
+        for k, (x, nome_p) in enumerate(zip(xs, passos)):
+            d.ellipse([x - 62, y - 62, x + 62, y + 62], fill=PINK if k == 0 else LAVANDA, outline=UVA, width=8)
+            d.text((x, y), str(k + 1), font=_fredoka(68), fill=BRANCO if k == 0 else UVA, anchor="mm")
+            d.text((x, y + 120), nome_p, font=_poppins(32, "SemiBold"), fill=LAVANDA_2, anchor="ms")
     else:  # perguntas — mesmo fundo lilás da primeira capa
         img = _fundo(L, A)
         d = ImageDraw.Draw(img)
