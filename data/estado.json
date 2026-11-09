@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 46
+  "2026-11-08": 47
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3605,22 +3605,28 @@
   "2026-11-08": 3
  },
  "membros_hist": {
-  "2026-11-07": 2
+  "2026-11-07": 2,
+  "2026-11-08": 2
  },
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
+  "MLB20611931": "2026-11-08",
   "MLB20618866": "2026-11-08",
   "MLB26727193": "2026-11-08",
   "MLB27718012": "2026-11-08",
+  "MLB27861415": "2026-11-08",
   "MLB42088228": "2026-11-08",
   "MLB44895295": "2026-11-08",
   "MLB49086353": "2026-11-08",
   "MLB51668028": "2026-11-08",
   "MLB54207427": "2026-11-08",
   "MLB57083030": "2026-11-08",
+  "MLB61715651": "2026-11-08",
+  "MLB71892696": "2026-11-08",
   "MLB74913640": "2026-11-08",
-  "MLB79143996": "2026-11-08"
+  "MLB79143996": "2026-11-08",
+  "MLB79164975": "2026-11-08"
  },
  "postados": {
   "MLB10923645": {
@@ -3798,6 +3804,12 @@
    "preco": 29.9,
    "quando": "2026-11-08T09:02-03:00",
    "titulo": "Mini Bateria Infantil ATENTU Instrumento Brinquedo 3 Tambores"
+  },
+  "MLB42088228": {
+   "desconto": 0.361,
+   "preco": 236.45,
+   "quando": "2026-11-08T21:06-03:00",
+   "titulo": "Piano Teclado Musical Infantil Pianinho Microfone Brinquedo Cor Rosa"
   },
   "MLB43200233": {
    "desconto": 0.423,
@@ -9273,21 +9285,14 @@
    "min": 826.99
   }
  },
- "resumo_enviado": "2026-11-07",
- "tg_offset": 273517983,
+ "resumo_enviado": "2026-11-08",
+ "temas_recentes": {
+  "brinquedos": "2026-11-08"
+ },
+ "tg_offset": 273517984,
  "vitrine": {
-  "em": "2026-11-08T20:55-03:00",
+  "em": "2026-11-08T21:06-03:00",
   "itens": [
-   {
-    "categoria": "quarto",
-    "de": 499.9,
-    "desconto": 0.323,
-    "id": "MLB54207427",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_865878-MLA95693182272_102025-F.jpg",
-    "link": "https://meli.la/2zi74ho",
-    "preco": 338.53,
-    "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
-   },
    {
     "categoria": "brinquedo",
     "de": 369.9,
@@ -9877,9 +9882,19 @@
     "link": "https://meli.la/18u34ak",
     "preco": 237.41,
     "titulo": "Andador Infantil Musical Para Bebê Empurrador Compacto 3 Ajustes de Altura La Bamba Maxi Baby - azul"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 79.99,
+    "desconto": 0.201,
+    "id": "MLB62786325",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_622319-MLA100243079561_122025-F.jpg",
+    "link": "https://meli.la/29mX98u",
+    "preco": 63.9,
+    "titulo": "LEGO® Minecraft® A aventura de Steve na Taiga 21583"
    }
   ]
  },
- "vitrine_assinatura": "42588517e5132200cf73b473a70d54f48851dbe2",
- "vitrine_publicada_em": "2026-11-08T20:15-03:00"
+ "vitrine_assinatura": "11cb2ab139ac06eaecad712c468f63c95ba9034a",
+ "vitrine_publicada_em": "2026-11-08T21:06-03:00"
 }
