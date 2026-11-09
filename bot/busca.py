@@ -50,6 +50,15 @@ def pesquisar(ml, termo, log=print):
                     "desconto": (1 - preco / de) if de else 0.0, "rank": ranking.get(pid),
                     "item_id": info.item_id, "categoria": cat})
     res.sort(key=lambda r: (-(r["desconto"] or 0) * (1.5 if r["rank"] is not None and r["rank"] < 10 else 1)))
+    # o mesmo produto às vezes aparece em dois catálogos: fica só o mais barato
+    from .filtros import normalizar
+    unicos, chaves = [], set()
+    for r in sorted(res, key=lambda r: r["preco"]):
+        chave = " ".join(normalizar(r["titulo"]).split()[:5])
+        if chave not in chaves:
+            chaves.add(chave)
+            unicos.append(r)
+    res = [r for r in res if r in unicos]
     return res[:MAX_RESULTADOS]
 
 
