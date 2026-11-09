@@ -1,5 +1,5 @@
 {
- "aguardando_link": 32,
+ "aguardando_link": 31,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1531,7 +1531,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 25
+  "2026-11-09": 26
  },
  "cupons": {
   "AUTO70OFF": {
@@ -1607,7 +1607,7 @@
    "validade": "2026-12-31T23:59-03:00"
   }
  },
- "cupons_ml_ultimo": 6423,
+ "cupons_ml_ultimo": 6425,
  "descoberta_em": "2026-11-09T13:12-03:00",
  "descobertos": {
   "MLB10923645": {
@@ -3767,6 +3767,12 @@
    "preco": 259.9,
    "quando": "2026-11-07T21:02-03:00",
    "titulo": "Cama Elástica Pula Pula Trampolim JustFun 1,40m com Rede de Proteção e 36 Molas"
+  },
+  "MLB19807041": {
+   "desconto": 0.319,
+   "preco": 129.4,
+   "quando": "2026-11-09T15:02-03:00",
+   "titulo": "Taco De Sinuca Bilhar Maxxi Cruz De Malta Profissional Preto Peso 480 g"
   },
   "MLB20611931": {
    "desconto": 0.346,
@@ -6783,6 +6789,10 @@
     [
      "2026-11-09",
      58.77
+    ],
+    [
+     "2026-11-09",
+     65.9
     ]
    ],
    "min": 30.99
@@ -10490,28 +10500,8 @@
  },
  "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T14:42-03:00",
+  "em": "2026-11-09T15:02-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 659.0,
-    "desconto": 0.605,
-    "id": "MLB28717101",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_917104-MLA96155675715_102025-F.jpg",
-    "link": "https://meli.la/182h9X2",
-    "preco": 259.98,
-    "titulo": "Cama Elástica Pula Pula Infantil Trampolim 1,4 Metros Atentu"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 129.99,
-    "desconto": 0.346,
-    "id": "MLB20611931",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_897745-MLA99453292044_112025-F.jpg",
-    "link": "https://meli.la/3171Zw3",
-    "preco": 85.02,
-    "titulo": "Sunny Boneco Patrulha Canina 1342 Skye Focos"
-   },
    {
     "categoria": "jogo",
     "de": 189.9,
@@ -10904,6 +10894,6 @@
    }
   ]
  },
- "vitrine_assinatura": "f42c961389dd8eed4bf907aa22708c530d67402f",
- "vitrine_publicada_em": "2026-11-09T14:02-03:00"
+ "vitrine_assinatura": "7692ec5a38acb1b5eca38e4cf7048e38148b2c99",
+ "vitrine_publicada_em": "2026-11-09T15:02-03:00"
 }
