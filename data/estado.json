@@ -1531,7 +1531,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 30
+  "2026-11-09": 32
  },
  "cupons": {
   "AUTO70OFF": {
@@ -4083,8 +4083,10 @@
    "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Cinza"
   },
   "MLB52680667": {
+   "desconto": 0.557,
    "preco": 119.61,
-   "quando": "2026-11-06T16:14-03:00"
+   "quando": "2026-11-09T17:02-03:00",
+   "titulo": "Andador Infantil Empurrador Atividade Musical Bebê Didático Cor Rosa"
   },
   "MLB53258842": {
    "desconto": 0.402,
@@ -4511,8 +4513,10 @@
    "quando": "2026-11-06T17:15-03:00"
   },
   "MLB79381515": {
+   "desconto": 0.54,
    "preco": 22.99,
-   "quando": "2026-11-06T16:14-03:00"
+   "quando": "2026-11-09T17:02-03:00",
+   "titulo": "Kit 5 Skate De Dedo Bvb Shop Fingerboard Rolamento Peças Acessórios Multicolor M"
   },
   "MLB79649272": {
    "desconto": 0.527,
@@ -6948,6 +6952,10 @@
     [
      "2026-11-09",
      41.0
+    ],
+    [
+     "2026-11-09",
+     47.4
     ]
    ],
    "min": 41.0
@@ -7915,6 +7923,10 @@
     [
      "2026-11-09",
      88.11
+    ],
+    [
+     "2026-11-09",
+     89.9
     ]
    ],
    "min": 69.25
@@ -10582,7 +10594,7 @@
  },
  "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T16:42-03:00",
+  "em": "2026-11-09T17:02-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -10655,16 +10667,6 @@
     "titulo": "Balanço Infantil GuiBrink de Plástico para Bebê Com Cinto Segurança e Corda"
    },
    {
-    "categoria": "outros",
-    "de": 29.9,
-    "desconto": 0.301,
-    "id": "MLB79736952",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_914214-MLA116563306482_092026-F.jpg",
-    "link": "https://meli.la/19igU6J",
-    "preco": 20.9,
-    "titulo": "1 Seringa Lavagem Nariz + 1 Aspirador Sugador Catarro Bebê A Rosa-claro"
-   },
-   {
     "categoria": "brinquedo",
     "de": 34.0,
     "desconto": 0.3,
@@ -10673,16 +10675,6 @@
     "link": "https://meli.la/1Y4uD27",
     "preco": 23.8,
     "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
-   },
-   {
-    "categoria": "roupa",
-    "de": 64.9,
-    "desconto": 0.214,
-    "id": "MLB74331737",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_719686-MLA112427993532_062026-F.jpg",
-    "link": "https://meli.la/1VMFgJB",
-    "preco": 51.0,
-    "titulo": "Maiô Natação Infantil Biquíni Manga Longa Proteção Solar Uv Cor Água Tamanho 4"
    },
    {
     "categoria": "outros",
@@ -10753,16 +10745,6 @@
     "link": "https://meli.la/1tKMmv8",
     "preco": 91.52,
     "titulo": "Boneco Pelúcia Chase Patrulha Canina 1328 Sunny Brinquedos"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 129.99,
-    "desconto": 0.295,
-    "id": "MLB24064445",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_938241-MLA84559852146_052025-F.jpg",
-    "link": "https://meli.la/2jBpr4L",
-    "preco": 91.62,
-    "titulo": "Patrulha Canina - Pelúcia Marshall 30cm - 1327 Sunny Colorido"
    },
    {
     "categoria": "brinquedo",
@@ -10855,16 +10837,6 @@
     "titulo": "Kit Berço Menina Menino Protetor Trança Com Saia 6 Peças Cor Elefantinho Rosa"
    },
    {
-    "categoria": "brinquedo",
-    "de": 59.99,
-    "desconto": 0.25,
-    "id": "MLB80107133",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_678339-MLA116948967176_092026-F.jpg",
-    "link": "https://meli.la/1PDozfs",
-    "preco": 44.99,
-    "titulo": "Boneco Pelúcia Sonic 50cm Grande Envio Imediato Infantil Top Azul"
-   },
-   {
     "categoria": "outros",
     "de": 129.9,
     "desconto": 0.231,
@@ -10903,16 +10875,6 @@
     "link": "https://meli.la/21gqDeR",
     "preco": 419.99,
     "titulo": "Berço Portátil Infantil Cercado 0-15kg Lazy Maxi baby - Cinza"
-   },
-   {
-    "categoria": "outros",
-    "de": 269.9,
-    "desconto": 0.222,
-    "id": "MLB58625474",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_681698-MLA110226819701_042026-F.jpg",
-    "link": "https://meli.la/1qdfoDe",
-    "preco": 209.89,
-    "titulo": "Andador Infantil Musical Para Bebê Quick Maxi Baby AZUL"
    },
    {
     "categoria": "brinquedo",
@@ -10996,6 +10958,6 @@
    }
   ]
  },
- "vitrine_assinatura": "1f274e38568982905819df87f3110352a64cc337",
- "vitrine_publicada_em": "2026-11-09T16:02-03:00"
+ "vitrine_assinatura": "009e67ed3d95a5b6afe136206e4ad158fea7c8d5",
+ "vitrine_publicada_em": "2026-11-09T17:02-03:00"
 }
