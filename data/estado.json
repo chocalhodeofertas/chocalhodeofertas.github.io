@@ -1,5 +1,5 @@
 {
- "aguardando_link": 15,
+ "aguardando_link": 16,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 2
+  "2026-11-09": 3
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -4389,9 +4389,9 @@
    "titulo": "Piscina de Bolinhas Lelor Infantil com 50 Bolinhas, Estampa Fundo do Mar"
   },
   "MLB80779802": {
-   "desconto": 0.448,
-   "preco": 131.97,
-   "quando": "2026-11-07T08:02-03:00",
+   "desconto": 0.536,
+   "preco": 111.0,
+   "quando": "2026-11-09T08:12-03:00",
    "titulo": "Andador Infantil Brinquedo Educativo Musical Didático Bebê Cor Azul-claro"
   },
   "MLB80823637": {
@@ -5221,6 +5221,10 @@
     [
      "2026-11-08",
      39.86
+    ],
+    [
+     "2026-11-09",
+     32.17
     ]
    ],
    "min": 32.17
@@ -5433,9 +5437,13 @@
     [
      "2026-11-06",
      123.5
+    ],
+    [
+     "2026-11-09",
+     118.8
     ]
    ],
-   "min": 123.5
+   "min": 118.8
   },
   "MLB25656157": {
    "historico": [
@@ -6013,9 +6021,13 @@
     [
      "2026-11-06",
      372.0
+    ],
+    [
+     "2026-11-09",
+     359.0
     ]
    ],
-   "min": 372.0
+   "min": 359.0
   },
   "MLB38281783": {
    "historico": [
@@ -6689,9 +6701,13 @@
     [
      "2026-11-08",
      218.41
+    ],
+    [
+     "2026-11-09",
+     172.56
     ]
    ],
-   "min": 178.38
+   "min": 172.56
   },
   "MLB50869637": {
    "historico": [
@@ -7470,6 +7486,10 @@
     [
      "2026-11-06",
      63.9
+    ],
+    [
+     "2026-11-09",
+     79.99
     ]
    ],
    "min": 63.9
@@ -7543,6 +7563,10 @@
     [
      "2026-11-09",
      105.98
+    ],
+    [
+     "2026-11-09",
+     104.0
     ]
    ],
    "min": 56.89
@@ -8625,6 +8649,10 @@
     [
      "2026-11-08",
      389.9
+    ],
+    [
+     "2026-11-09",
+     359.8
     ]
    ],
    "min": 359.8
@@ -8897,6 +8925,10 @@
     [
      "2026-11-07",
      23.41
+    ],
+    [
+     "2026-11-09",
+     26.0
     ]
    ],
    "min": 23.41
@@ -9533,28 +9565,8 @@
  },
  "tg_offset": 273517985,
  "vitrine": {
-  "em": "2026-11-09T08:02-03:00",
+  "em": "2026-11-09T08:12-03:00",
   "itens": [
-   {
-    "categoria": "outros",
-    "de": 899.9,
-    "desconto": 0.667,
-    "id": "MLB27718012",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_823352-MLA116565097240_092026-F.jpg",
-    "link": "https://meli.la/34osqQC",
-    "preco": 299.9,
-    "titulo": "Berço Portátil Basic Cinza Galzerano Chiqueiro Cercado Bebê"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 149.0,
-    "desconto": 0.611,
-    "id": "MLB61884199",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_725150-MLA112600319145_062026-F.jpg",
-    "link": "https://meli.la/1eRadeN",
-    "preco": 58.0,
-    "titulo": "Carrinho Controle Remoto Rally Jipe Max Carro Grande Bateria Recarregavel Off Road Com Amortecedores 4x4 Brinq"
-   },
    {
     "categoria": "outros",
     "de": 239.0,
@@ -9684,6 +9696,16 @@
     "link": "https://meli.la/3171Zw3",
     "preco": 85.02,
     "titulo": "Sunny Boneco Patrulha Canina 1342 Skye Focos"
+   },
+   {
+    "categoria": "outros",
+    "de": 297.5,
+    "desconto": 0.345,
+    "id": "MLB51668028",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_900690-MLA99937810661_112025-F.jpg",
+    "link": "https://meli.la/1AQ8upt",
+    "preco": 194.79,
+    "titulo": "Cercadinho Bebê Infantil Chiqueirinho Grande Criança Baby Bear Rosa"
    },
    {
     "categoria": "jogo",
@@ -9837,6 +9859,36 @@
    },
    {
     "categoria": "brinquedo",
+    "de": 78.9,
+    "desconto": 0.267,
+    "id": "MLB73156948",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_647260-MLA113092149523_062026-F.jpg",
+    "link": "https://meli.la/2ShKRwP",
+    "preco": 57.8,
+    "titulo": "Urso De Pelúcia Teddy Bear Grande Com Laço 50cm Antialérgico Cor Baunilha com Azul Bebe"
+   },
+   {
+    "categoria": "higiene",
+    "de": 499.9,
+    "desconto": 0.28,
+    "id": "MLB73425165",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_704974-MLA112019273416_062026-F.jpg",
+    "link": "https://meli.la/1wjZL9H",
+    "preco": 359.8,
+    "titulo": "Banheira Bebê Dobrável Com Suporte Redutor Assento E Termômetro Embutido Até 20kg Melon Maxi Baby - Azul"
+   },
+   {
+    "categoria": "jogo",
+    "de": 59.99,
+    "desconto": 0.298,
+    "id": "MLB37554844",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_846045-MLA99579753132_122025-F.jpg",
+    "link": "https://meli.la/2srZGGy",
+    "preco": 42.09,
+    "titulo": "Raquete Ping Pong De Tenis De Mesa Profissional C/raqueteira Cor Case Preta ou Vermelha Tipo De Cabo Fl (cônca"
+   },
+   {
+    "categoria": "brinquedo",
     "de": 99.99,
     "desconto": 0.276,
     "id": "MLB23535413",
@@ -9896,6 +9948,16 @@
     "titulo": "Mobile Musical Berço Bebê Projetor Estrelas Controle Remoto Rotação 360"
    },
    {
+    "categoria": "brinquedo",
+    "de": 269.9,
+    "desconto": 0.26,
+    "id": "MLB56421479",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_799183-MLA100028172139_122025-F.jpg",
+    "link": "https://meli.la/2MQPV2P",
+    "preco": 199.72,
+    "titulo": "Patins Inline Infantil DM Toys Ajustável 34-37 Rosa com Kit Proteção"
+   },
+   {
     "categoria": "outros",
     "de": 35.9,
     "desconto": 0.279,
@@ -9934,6 +9996,16 @@
     "link": "https://meli.la/2G475xk",
     "preco": 899.9,
     "titulo": "Cadeira De Carro All Stages 2.0 Isofix 0-36kgs Cinza Litet"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 1099.0,
+    "desconto": 0.248,
+    "id": "MLB81565711",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_692381-MLA120873230775_112026-F.jpg",
+    "link": "https://meli.la/1C8TRy9",
+    "preco": 826.99,
+    "titulo": "Patinete Elétrico Infantil Triciclo PARES Drift Bluetooth 3 Rodas Vermelho Diversão e Lazer + Kit de segurança"
    },
    {
     "categoria": "brinquedo",
@@ -10034,6 +10106,26 @@
     "link": "https://meli.la/1NSaJZf",
     "preco": 59.99,
     "titulo": "Jogo Stop Eletrônico Trava Letras Leeboom Com Temporizador Educativo 10 Segundos Em Português Cor Vermelho"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 280.0,
+    "desconto": 0.23,
+    "id": "MLB56415193",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_837115-MLA99440131532_112025-F.jpg",
+    "link": "https://meli.la/2DVXn4S",
+    "preco": 215.64,
+    "titulo": "Patins Inline Ajustável Para Crianças com Rodas de Gel e LED"
+   },
+   {
+    "categoria": "passeio",
+    "de": 439.0,
+    "desconto": 0.244,
+    "id": "MLB32073190",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_677934-MLA99946864087_112025-F.jpg",
+    "link": "https://meli.la/2uBH8p1",
+    "preco": 332.0,
+    "titulo": "Cadeira para Auto Materna Burigotto Preto e Cobre"
    },
    {
     "categoria": "brinquedo",
