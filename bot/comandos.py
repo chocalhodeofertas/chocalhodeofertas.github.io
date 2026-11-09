@@ -426,7 +426,10 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
         achados = lote.RE_MELI.findall(t)
         if not achados:
             return "Mande <b>insta</b> + o link meli.la do produto."
-        return postar_insta(achados[0], tg, ml, estado, cfg, session, rng)
+        # vários links numa mensagem só: gera um post para cada
+        erros = [postar_insta(l, tg, ml, estado, cfg, session, rng) for l in dict.fromkeys(achados)]
+        erros = [e for e in erros if e]
+        return "\n".join(erros) if erros else None
     links = lote.RE_MELI.findall(t)
     if links:
         pendente = estado.get("lote")
