@@ -102,7 +102,9 @@ def prod(pid="MLB1", ref=None):
 
 
 def info(preco, original=None, pid="MLB1"):
-    return InfoProduto(pid, "Fralda Teste G", preco, original, "https://img/x-O.jpg", True)
+    # título diferente por produto (o bot não repete o mesmo tipo de produto no dia)
+    nome = "".join(chr(97 + int(c)) for c in pid if c.isdigit()) or "item"
+    return InfoProduto(pid, f"Produto {nome}{nome}{nome} teste", preco, original, "https://img/x-O.jpg", True)
 
 
 def test_oferta_por_desconto_do_ml():
@@ -583,7 +585,7 @@ def test_pontuacao_e_ritmo():
     e = est.novo()
     roupa = avaliar(Produto("A", "catalogo", "", "l", "roupa", None, 0), info(80, 100, "A"), e, AGORA)
     brinq = avaliar(Produto("B", "catalogo", "", "l", "brinquedo", None, 0), info(76, 100, "B"), e, AGORA)
-    assert pontuacao(roupa) > pontuacao(brinq)  # 20% de roupa vale mais que 24% de brinquedo
+    assert pontuacao(roupa) < pontuacao(brinq)  # comissão não pesa mais: 24% de desconto ganha de 20%
     assert pontuacao(brinq, 0) > pontuacao(brinq, 10)  # top 3 dos mais vendidos ganha bônus
     assert meta_ate_agora(50, 21) == 50 and meta_ate_agora(50, 8) < meta_ate_agora(50, 12)
     # O almoço "pesa" mais que uma hora comum
@@ -911,3 +913,12 @@ def test_pacote_pausa_sem_fotos(monkeypatch):
 
     assert not conteudo.montar_e_enviar(TG(), 1, {"vitrine": {"itens": itens}}, datetime(2026, 11, 9, 10, tzinfo=FUSO))
     assert "pausado" in msgs[0]
+
+
+def test_variedade_nicho_e_essenciais():
+    from bot.ofertas import essencial, tipo_produto
+    from bot.filtros import motivo_bloqueio
+    assert motivo_bloqueio("Taco De Sinuca Bilhar Profissional Com Capa")
+    assert tipo_produto("Babá Eletrônica Monitor 2.4") == tipo_produto("Baba Eletronica Baby Monitor Vb603")
+    assert tipo_produto("Banheira Plástica Acqua Trio") == "banheira"
+    assert essencial("Fralda Pom Pom Protek G 68 Unidades") and not essencial("Guitarra Infantil")

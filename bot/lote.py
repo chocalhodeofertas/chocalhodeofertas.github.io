@@ -10,7 +10,6 @@ import re
 
 LINKBUILDER = "https://www.mercadolivre.com.br/afiliados/linkbuilder"
 RE_MELI = re.compile(r"https?://meli\.la/[A-Za-z0-9]+")
-PESO_CATEGORIA = {"roupa": 1.3}  # roupa paga 16% de comissão, a maioria 12%
 
 
 def url_linkbuilder(item_id):
@@ -28,9 +27,16 @@ def montar_lote(estado, sem_link, tamanho, agora):
     pos = {pid: d.get("pos") for pid, d in estado.get("descobertos", {}).items()}
     """sem_link: lista de (oferta, item_id). Grava o lote pendente e devolve as URLs."""
     escolhidas, vistos = [], set()
+    from .ofertas import tipo_produto
+
+    por_tipo = {}
     for o, item in sorted(sem_link, key=lambda x: prioridade(x[0], pos.get(x[0].id)), reverse=True):
         if o.id in vistos or o.id in estado["links"] or not item:
             continue
+        tp = tipo_produto(o.titulo)
+        if por_tipo.get(tp, 0) >= 2:  # no máximo 2 do mesmo tipo por lote: mais variedade
+            continue
+        por_tipo[tp] = por_tipo.get(tp, 0) + 1
         vistos.add(o.id)
         escolhidas.append((o.id, url_linkbuilder(item)))
         if len(escolhidas) >= tamanho:

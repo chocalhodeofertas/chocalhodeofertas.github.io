@@ -2,6 +2,7 @@
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional
+import re
 
 
 @dataclass
@@ -67,18 +68,69 @@ def avaliar(produto, info, estado, agora: datetime, min_desconto=0.15, repost_di
 
 
 # Comissão por categoria: roupa paga 16%, a maioria 12%
-PESO_CATEGORIA = {"roupa": 1.3}
-
 # Horários de pico (almoço e noite) recebem mais posts
 PESO_HORA = {12: 1.6, 13: 1.6, 19: 1.6, 20: 1.6, 21: 1.6}
 
+# Itens de uso diário e de alta procura: têm mais chance de venda
+_ESSENCIAIS = re.compile(
+    r"\b(fraldas?|lencos? umedecid[oa]s?|toalhas? umedecidas?|sabonete|shampoo|condicionador infantil|"
+    r"hidratante infantil|bodys?|macacao|kit (body|banho)|babador|cadeirinha|cadeira (de|para) (carro|auto)|"
+    r"bebe conforto|carrinho de bebe|berco|banheira|trocador|mochila maternidade|bolsa maternidade|"
+    r"cueiro|manta|cobertor|lencol|protetor de berco|copo de transicao|pratinho|talheres? infantil)\b"
+)
+
+# Mesmo tipo de produto não repete no mesmo dia (ex.: duas babás eletrônicas)
+_TIPOS = [
+    ("baba eletronica", r"baba eletronica|baby monitor|monitor (de )?bebe|camera (de )?bebe"),
+    ("cadeirinha de carro", r"cadeirinha|cadeira (de|para) (carro|auto)|bebe conforto|assento elevat"),
+    ("carrinho de bebe", r"carrinho de bebe|travel system"),
+    ("cadeira de alimentacao", r"cadeira(s)? de alimentacao|cadeirao"),
+    ("berco", r"\bberco|cercadinho|chiqueirinho|cercado"),
+    ("banheira", r"banheira|kit banho"),
+    ("tapete de atividades", r"tapete (de )?atividades|ginasio"),
+    ("fralda", r"\bfraldas?\b"),
+    ("lenco umedecido", r"lencos? umedecid|toalhas? umedecid"),
+    ("andador", r"\bandador"),
+    ("mobile", r"\bmobile\b"),
+    ("piscina", r"piscina|\bboia\b"),
+    ("pula pula", r"pula pula|cama elastica|trampolim"),
+    ("triciclo/bicicleta", r"triciclo|bicicleta|patinete|motoca"),
+    ("lego/blocos", r"\blego\b|blocos de montar"),
+    ("boneca", r"\bboneca"),
+    ("carrinho de brinquedo", r"hot wheels|carrinho (de )?controle|controle remoto"),
+    ("cozinha de brinquedo", r"cozinha (de )?brinquedo|cozinha infantil|comidinha"),
+    ("instrumento musical", r"\bpiano|teclado|guitarra|bateria infantil|microfone"),
+]
+_TIPOS_RE = [(t, re.compile(p)) for t, p in _TIPOS]
+
+
+def tipo_produto(titulo):
+    """Tipo do produto, para não repetir o mesmo tipo no dia. Sem tipo conhecido: 2 primeiras palavras."""
+    from .filtros import normalizar
+
+    t = normalizar(titulo)
+    for nome, padrao in _TIPOS_RE:
+        if padrao.search(t):
+            return nome
+    palavras = [p for p in re.findall(r"[a-z]+", t) if len(p) > 2 and p not in {"kit", "com", "para", "infantil", "bebe"}]
+    return " ".join(palavras[:2])
+
+
+def essencial(titulo):
+    from .filtros import normalizar
+
+    return bool(_ESSENCIAIS.search(normalizar(titulo)))
+
 
 def pontuacao(oferta, posicao=None):
-    """Desconto x comissão da categoria x popularidade (posição nos mais vendidos)."""
-    bonus = 0.0
+    """Desconto x popularidade (posição nos mais vendidos) x item essencial. Comissão não conta."""
+    pop = 0.0
     if posicao is not None:
-        bonus = 0.15 if posicao < 3 else 0.08 if posicao < 8 else 0.0
-    return oferta.forca * PESO_CATEGORIA.get(oferta.categoria, 1.0) * (1 + bonus)
+        pop = 0.6 if posicao < 3 else 0.35 if posicao < 8 else 0.15 if posicao < 15 else 0.0
+    peso = 1.4 if essencial(oferta.titulo) else 1.0
+    if oferta.categoria == "brinquedo":
+        peso *= 0.85  # brinquedo é o que mais aparece; equilibra com o resto
+    return oferta.forca * (1 + pop) * peso
 
 
 def meta_ate_agora(max_por_dia, hora, inicio=8, fim=22):

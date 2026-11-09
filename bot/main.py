@@ -25,7 +25,7 @@ from . import mensagens
 from .descoberta import descobrir
 from .filtros import motivo_bloqueio
 from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, link_produto, renovar_token, token_do_app
-from .ofertas import avaliar, limite_hora, meta_ate_agora, pontuacao
+from .ofertas import avaliar, limite_hora, meta_ate_agora, pontuacao, tipo_produto
 from .telegram import Telegram, TelegramErro
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -100,7 +100,7 @@ class Config:
             hora_fim=num("HORA_FIM", 22, int),
             matt_word=e("AFILIADO_MATT_WORD", ""),
             matt_tool=e("AFILIADO_MATT_TOOL", ""),
-            por_categoria=num("POR_CATEGORIA", 15, int),
+            por_categoria=max(num("POR_CATEGORIA", 15, int), 15),
             link_modo=(e("LINK_MODO") or "oficial").strip().lower(),
             lote_tamanho=min(num("LOTE_TAMANHO", 30, int), 30),  # limite do Linkbuilder
             lotes_por_dia=num("LOTES_POR_DIA", 3, int),
@@ -349,10 +349,16 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         # Atraso inicial: as rodadas começam em horário fixo, os posts não
         _esperar(rng.uniform(0, cfg.atraso_max) * 60, tarefa)
     por_id = {p.id: p for p in produtos}
+    hoje = agora.date().isoformat()
+    tipos_hoje = {tipo_produto(v.get("titulo", "")) for v in estado["postados"].values()
+                  if v.get("quando", "").startswith(hoje) and v.get("titulo")}
     esperar_antes = False
     for o in candidatas:
         if len(enviadas) >= vagas:
             break
+        tp = tipo_produto(o.titulo)
+        if tp in tipos_hoje:
+            continue  # já saiu um desse tipo hoje (ex.: outra babá eletrônica)
         if esperar_antes:
             espera = rng.uniform(cfg.intervalo_min, max(cfg.intervalo_max, cfg.intervalo_min))
             log(f"Próximo post em {espera:.1f} min.")
@@ -368,6 +374,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
             continue
         esperar_antes = True
         est.registrar_post(estado, o.id, o.preco, agora, o.titulo, o.desconto)
+        tipos_hoje.add(tp)
         enviadas.append(o)
         log(f"Postado: {o.id} {mensagens.brl(o.preco)} (-{round(o.desconto * 100)}%)")
         if cfg.admin_chat:

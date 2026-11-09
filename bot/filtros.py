@@ -42,6 +42,11 @@ _REGRAS = [
         r"omega ?3|probioticos?|colageno|whey)\b",
     ),
 ]
+_REGRAS.append((
+    "Fora do nicho (adulto)",
+    r"\b(sinuca|bilhar|snooker|taco de (sinuca|bilhar)|poker|truco|cassino|roleta|dardos?|airsoft|"
+    r"paintball|narguile|tabacaria|cerveja|vinhos?|whisky|vodka|erotic[oa]s?|sex shop|adult[oa]s? \+?18)\b",
+))
 _COMPILADAS = [(motivo, re.compile(p)) for motivo, p in _REGRAS]
 
 
