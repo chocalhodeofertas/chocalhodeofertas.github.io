@@ -152,11 +152,8 @@ LEGENDAS_FIXADOS = {
         "2. Você recebe no nosso grupo gratuito, com foto, preço e link.",
         "3. Compra direto na página oficial da loja, pelo mesmo preço.",
         "",
-        "Usamos links de afiliado: a loja nos paga uma pequena comissão, sem custo extra para você. "
-        "É assim que o canal se mantém gratuito 💜",
-        "",
         "🔗 Link do grupo na bio.",
-        "#publi"]),
+        "Contém links de afiliado. #publi"]),
     "o_que_e": "\n".join([
         "Prazer, Chocalho de Ofertas! 🧸",
         "",
@@ -173,7 +170,7 @@ LEGENDAS_FIXADOS = {
         "",
         "Ficou com alguma outra? Manda aqui nos comentários!",
         "🔗 Link do grupo na bio.",
-        "Contém links de afiliado. #publi"]),
+        "#publi"]),
 }
 
 

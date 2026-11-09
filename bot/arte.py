@@ -427,9 +427,6 @@ def _linha_justificada(d, x, y, linha, fonte, largura, cor, ultima=False):
         return
     ocupado = sum(d.textlength(p, font=fonte) for p in palavras)
     espaco = (largura - ocupado) / (len(palavras) - 1)
-    if espaco > d.textlength(" ", font=fonte) * 3:  # linha curta demais: não estica
-        d.text((x, y), linha, font=fonte, fill=cor, anchor="ls")
-        return
     cx = x
     for p in palavras:
         d.text((cx, y), p, font=fonte, fill=cor, anchor="ls")
@@ -485,7 +482,6 @@ def final_grupo(L=1080, A=1350):
     w = d.textlength(t, font=f) + 100
     d.rounded_rectangle([(L - w) / 2, 1100, (L + w) / 2, 1200], radius=50, fill=PINK)
     d.text((L // 2, 1150), t, font=f, fill=BRANCO, anchor="mm")
-    d.text((L // 2, 1260), "só administradores postam  ·  saia quando quiser", font=_poppins(26), fill=LAVANDA_2, anchor="mm")
     return img
 
 
@@ -498,8 +494,7 @@ INSTITUCIONAIS = {
             (2, "Você recebe no grupo", "A oferta chega no nosso grupo gratuito com foto, preço e o link.\n"
                                         "Sem spam: só os administradores postam."),
             (3, "Compra direto na loja", "O link leva para a página oficial do produto, e você paga o mesmo preço.\n"
-                                         "Usamos links de afiliado: a loja nos paga uma pequena comissão, "
-                                         "sem custo extra para você."),
+                                         "Pagamento, entrega e garantia são direto com a loja."),
             (4, "Promoção acaba rápido", "Preço e estoque podem mudar a qualquer momento.\n"
                                          "Sempre confira na loja antes de finalizar a compra."),
         ],
