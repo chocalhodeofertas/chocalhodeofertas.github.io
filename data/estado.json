@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 47
+  "2026-11-08": 49
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3641,6 +3641,12 @@
    "quando": "2026-11-07T15:32-03:00",
    "titulo": "LEGO Classic Maleta Criativa com 213 Peças, Brinquedo de Montar para Crianças"
   },
+  "MLB17876024": {
+   "desconto": 0.357,
+   "preco": 16.96,
+   "quando": "2026-11-08T21:26-03:00",
+   "titulo": "Sabonete Líquido Hora Do Sono 200ml Baby Johnson's"
+  },
   "MLB18581975": {
    "desconto": 0.442,
    "preco": 195.21,
@@ -3828,6 +3834,12 @@
    "preco": 78.9,
    "quando": "2026-11-08T11:13-03:00",
    "titulo": "Teclado Elétrico Musical Infantil Com Microfone E Fonte Cor Preto"
+  },
+  "MLB44604914": {
+   "desconto": 0.309,
+   "preco": 119.9,
+   "quando": "2026-11-08T21:26-03:00",
+   "titulo": "Atentu Mini bateria infantil atentu banquinho brinquedo com 5 tambores vermelho"
   },
   "MLB44672426": {
    "desconto": 0.546,
@@ -4775,6 +4787,10 @@
     [
      "2026-11-08",
      19.42
+    ],
+    [
+     "2026-11-08",
+     23.8
     ]
    ],
    "min": 19.42
@@ -5132,6 +5148,10 @@
     [
      "2026-11-08",
      32.17
+    ],
+    [
+     "2026-11-08",
+     39.86
     ]
    ],
    "min": 32.17
@@ -9291,18 +9311,8 @@
  },
  "tg_offset": 273517984,
  "vitrine": {
-  "em": "2026-11-08T21:06-03:00",
+  "em": "2026-11-08T21:26-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 369.9,
-    "desconto": 0.361,
-    "id": "MLB42088228",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_659096-MLA99483685468_112025-F.jpg",
-    "link": "https://meli.la/2o9bXfw",
-    "preco": 236.45,
-    "titulo": "Piano Teclado Musical Infantil Pianinho Microfone Brinquedo Cor Rosa"
-   },
    {
     "categoria": "outros",
     "de": 26.39,
@@ -9492,6 +9502,16 @@
     "link": "https://meli.la/2yRNUqX",
     "preco": 20.9,
     "titulo": "Kit 1 Seringa Lavagem Nariz + 1 Aspirador Sugador Catarro Bebê Lider Comercios Cor Azul-celeste"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 34.0,
+    "desconto": 0.3,
+    "id": "MLB21843844",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_674475-MLA99598648876_122025-F.jpg",
+    "link": "https://meli.la/1Y4uD27",
+    "preco": 23.8,
+    "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
    },
    {
     "categoria": "brinquedo",
