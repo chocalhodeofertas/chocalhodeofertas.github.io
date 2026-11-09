@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-08": 49
+  "2026-11-08": 50
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3758,6 +3758,12 @@
    "preco": 325.99,
    "quando": "2026-11-08T18:35-03:00",
    "titulo": "Berço Portátil Basic Cinza Galzerano Chiqueiro Cercado Bebê"
+  },
+  "MLB27861415": {
+   "desconto": 0.328,
+   "preco": 134.24,
+   "quando": "2026-11-08T21:46-03:00",
+   "titulo": "Cozinha De Brinquedo Infantil Completa Princess Replay Kids"
   },
   "MLB28717101": {
    "preco": 269.9,
@@ -9311,28 +9317,8 @@
  },
  "tg_offset": 273517984,
  "vitrine": {
-  "em": "2026-11-08T21:26-03:00",
+  "em": "2026-11-08T21:46-03:00",
   "itens": [
-   {
-    "categoria": "outros",
-    "de": 26.39,
-    "desconto": 0.357,
-    "id": "MLB17876024",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_940727-MLA117363373934_102026-F.jpg",
-    "link": "https://meli.la/2aCQKSR",
-    "preco": 16.96,
-    "titulo": "Sabonete Líquido Hora Do Sono 200ml Baby Johnson's"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 173.47,
-    "desconto": 0.309,
-    "id": "MLB44604914",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_925988-MLA99936898199_112025-F.jpg",
-    "link": "https://meli.la/21aUBb8",
-    "preco": 119.9,
-    "titulo": "Atentu Mini bateria infantil atentu banquinho brinquedo com 5 tambores vermelho"
-   },
    {
     "categoria": "brinquedo",
     "de": 199.9,
