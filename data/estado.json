@@ -1,5 +1,5 @@
 {
- "aguardando_link": 20,
+ "aguardando_link": 21,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 11
+  "2026-11-09": 12
  },
  "cupons": {
   "HOJEMESMO": {
@@ -4270,6 +4270,12 @@
    "quando": "2026-11-08T10:02-03:00",
    "titulo": "Carrinho de Controle Remoto Acrobático 360° para Crianças, com Luzes LED e Som"
   },
+  "MLB72656297": {
+   "desconto": 0.457,
+   "preco": 70.58,
+   "quando": "2026-11-09T11:32-03:00",
+   "titulo": "Carro Hot Wheels Premium Chevrolet K5 Blazer Stranger Things"
+  },
   "MLB72720626": {
    "desconto": 0.578,
    "preco": 549.0,
@@ -4688,6 +4694,10 @@
     [
      "2026-11-08",
      43.74
+    ],
+    [
+     "2026-11-09",
+     32.59
     ]
    ],
    "min": 27.87
@@ -4793,6 +4803,10 @@
     [
      "2026-11-07",
      629.0
+    ],
+    [
+     "2026-11-09",
+     529.99
     ]
    ],
    "min": 499.9
@@ -5299,9 +5313,13 @@
     [
      "2026-11-09",
      39.86
+    ],
+    [
+     "2026-11-09",
+     31.99
     ]
    ],
-   "min": 32.17
+   "min": 31.99
   },
   "MLB24215255": {
    "historico": [
@@ -6779,6 +6797,10 @@
     [
      "2026-11-07",
      61.88
+    ],
+    [
+     "2026-11-09",
+     59.98
     ]
    ],
    "min": 53.68
@@ -7831,9 +7853,13 @@
     [
      "2026-11-06",
      269.9
+    ],
+    [
+     "2026-11-09",
+     256.41
     ]
    ],
-   "min": 269.9
+   "min": 256.41
   },
   "MLB63566347": {
    "historico": [
@@ -9771,28 +9797,8 @@
  },
  "tg_offset": 273517986,
  "vitrine": {
-  "em": "2026-11-09T11:12-03:00",
+  "em": "2026-11-09T11:32-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 229.95,
-    "desconto": 0.5,
-    "id": "MLB63158085",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_630465-MLA119888186361_102026-F.jpg",
-    "link": "https://meli.la/1NqNEGq",
-    "preco": 115.0,
-    "titulo": "Mobile Musical Berço Bebê Projetor Estrelas Controle Remoto Rotação 360"
-   },
-   {
-    "categoria": "passeio",
-    "de": 873.89,
-    "desconto": 0.497,
-    "id": "MLB20618866",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_902618-MLA95842009463_102025-F.jpg",
-    "link": "https://meli.la/2XrHALZ",
-    "preco": 439.9,
-    "titulo": "Conjunto Bebê Conforto Grid Rosa Com Base - Galzerano"
-   },
    {
     "categoria": "brinquedo",
     "de": 129.99,
@@ -10252,6 +10258,16 @@
     "link": "https://meli.la/1RGvMdG",
     "preco": 37.49,
     "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
+   },
+   {
+    "categoria": "passeio",
+    "de": 709.0,
+    "desconto": 0.252,
+    "id": "MLB19970137",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_928226-MLA99462528060_112025-F.jpg",
+    "link": "https://meli.la/2PJCTUP",
+    "preco": 529.99,
+    "titulo": "Cadeirinha Cosco Kids, Progress, 0 a 36kg, Preto"
    },
    {
     "categoria": "brinquedo",
