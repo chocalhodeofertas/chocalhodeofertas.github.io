@@ -1,5 +1,5 @@
 {
- "aguardando_link": 333,
+ "aguardando_link": 334,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 38
+  "2026-11-09": 40
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12098,6 +12098,12 @@
    "quando": "2026-11-09T11:12-03:00",
    "titulo": "Conjunto Bebê Conforto Grid Rosa Com Base - Galzerano"
   },
+  "MLB22501041": {
+   "desconto": 0.273,
+   "preco": 50.91,
+   "quando": "2026-11-09T19:12-03:00",
+   "titulo": "Balde Primeiros Blocos Fisher-price - Mattel Ffc84 Multicolor"
+  },
   "MLB23581207": {
    "desconto": 0.528,
    "preco": 188.91,
@@ -12605,6 +12611,12 @@
    "preco": 125.73,
    "quando": "2026-11-07T09:02-03:00",
    "titulo": "Adora Bebê Reborn Bonecas Realista De Silicone Menina 48 Cm"
+  },
+  "MLB66463370": {
+   "desconto": 0.271,
+   "preco": 103.89,
+   "quando": "2026-11-09T19:12-03:00",
+   "titulo": "Loção Corporal Hydrabebe Mustela Para Pele Normal, 500ml"
   },
   "MLB66548761": {
    "preco": 78.9,
@@ -13680,6 +13692,10 @@
     [
      "2026-11-09",
      54.22
+    ],
+    [
+     "2026-11-09",
+     59.85
     ]
    ],
    "min": 54.22
@@ -22165,6 +22181,10 @@
     [
      "2026-11-06",
      67.85
+    ],
+    [
+     "2026-11-09",
+     78.19
     ]
    ],
    "min": 67.85
@@ -25325,7 +25345,7 @@
  "tg_offset": 273517995,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-09T19:02-03:00",
+  "em": "2026-11-09T19:12-03:00",
   "itens": [
    {
     "categoria": "passeio",
@@ -25438,16 +25458,6 @@
     "titulo": "Cadeirinha Cosco Kids, Progress, 0 a 36kg, Preto"
    },
    {
-    "categoria": "brinquedo",
-    "de": 39.0,
-    "desconto": 0.31,
-    "id": "MLB79182251",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_730821-MLA116010973966_092026-F.jpg",
-    "link": "https://meli.la/1jeK2Nc",
-    "preco": 26.9,
-    "titulo": "Kit Chocalhos e Mordedores Sensoriais para Bebê com 8 Peças de Silicone e Plástico"
-   },
-   {
     "categoria": "outros",
     "de": 29.9,
     "desconto": 0.301,
@@ -25466,16 +25476,6 @@
     "link": "https://meli.la/2qpr2WC",
     "preco": 423.0,
     "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
-   },
-   {
-    "categoria": "outros",
-    "de": 35.9,
-    "desconto": 0.279,
-    "id": "MLB78625949",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_901002-MLA118513975131_092026-F.jpg",
-    "link": "https://meli.la/2WLTr3L",
-    "preco": 25.9,
-    "titulo": "Mordedor Bebê Estilo Luva de Silicone Macio Massageador Gengiva Dentição - Cores Sortidas"
    },
    {
     "categoria": "brinquedo",
