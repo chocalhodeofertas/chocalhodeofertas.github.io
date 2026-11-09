@@ -1,5 +1,5 @@
 {
- "aguardando_link": 335,
+ "aguardando_link": 334,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 41
+  "2026-11-09": 43
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12734,6 +12734,12 @@
    "preco": 46.0,
    "quando": "2026-11-06T16:35-03:00"
   },
+  "MLB73156948": {
+   "desconto": 0.267,
+   "preco": 57.8,
+   "quando": "2026-11-09T20:12-03:00",
+   "titulo": "Urso De Pelúcia Teddy Bear Grande Com Laço 50cm Antialérgico Cor Baunilha com Az"
+  },
   "MLB73212051": {
    "preco": 76.53,
    "quando": "2026-11-06T12:32-03:00"
@@ -12911,6 +12917,12 @@
    "preco": 78.01,
    "quando": "2026-11-07T16:12-03:00",
    "titulo": "Kit Completo Hama Beads 28000 Peças 72 Cores Para Iniciantes 2,6mm Brinquedo Miç"
+  },
+  "MLB81142365": {
+   "desconto": 0.318,
+   "preco": 67.39,
+   "quando": "2026-11-09T20:12-03:00",
+   "titulo": "Kit 9 Carrinhos de Fricção Patrulha Canina Com Personagens Removíveis"
   }
  },
  "posts_cupom": {
@@ -13206,18 +13218,26 @@
     [
      "2026-11-07",
      111.92
+    ],
+    [
+     "2026-11-09",
+     104.0
     ]
    ],
-   "min": 111.92
+   "min": 104.0
   },
   "MLB17775077": {
    "historico": [
     [
      "2026-11-09",
      14.49
+    ],
+    [
+     "2026-11-09",
+     10.99
     ]
    ],
-   "min": 14.49
+   "min": 10.99
   },
   "MLB17775080": {
    "historico": [
@@ -13338,6 +13358,10 @@
     [
      "2026-11-09",
      5.49
+    ],
+    [
+     "2026-11-09",
+     10.9
     ]
    ],
    "min": 5.49
@@ -14605,6 +14629,10 @@
     [
      "2026-11-09",
      309.0
+    ],
+    [
+     "2026-11-09",
+     323.48
     ]
    ],
    "min": 309.0
@@ -16059,6 +16087,10 @@
     [
      "2026-11-09",
      575.13
+    ],
+    [
+     "2026-11-09",
+     674.0
     ]
    ],
    "min": 575.13
@@ -19605,6 +19637,10 @@
     [
      "2026-11-09",
      4084.0
+    ],
+    [
+     "2026-11-09",
+     4249.0
     ]
    ],
    "min": 4084.0
@@ -21593,6 +21629,10 @@
     [
      "2026-11-09",
      43.86
+    ],
+    [
+     "2026-11-09",
+     42.48
     ]
    ],
    "min": 41.53
@@ -22815,6 +22855,10 @@
     [
      "2026-11-09",
      72.99
+    ],
+    [
+     "2026-11-09",
+     76.62
     ]
    ],
    "min": 72.99
@@ -25413,9 +25457,13 @@
     [
      "2026-11-09",
      64.58
+    ],
+    [
+     "2026-11-09",
+     60.0
     ]
    ],
-   "min": 64.58
+   "min": 60.0
   }
  },
  "resumo_enviado": "2026-11-08",
@@ -25427,7 +25475,7 @@
  "tg_offset": 273517995,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-09T19:52-03:00",
+  "em": "2026-11-09T20:12-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -25728,9 +25776,19 @@
     "link": "https://meli.la/1RGvMdG",
     "preco": 37.49,
     "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": null,
+    "desconto": 0.0,
+    "id": "MLB17489277",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_678645-MLA99447823800_112025-F.jpg",
+    "link": "https://meli.la/1HtwReq",
+    "preco": 104.0,
+    "titulo": "LEGO Classic Maleta Criativa com 213 Peças, Brinquedo de Montar para Crianças"
    }
   ]
  },
- "vitrine_assinatura": "fc30b52aa241cea22accf5fe17c772dace7adb2b",
- "vitrine_publicada_em": "2026-11-09T19:02-03:00"
+ "vitrine_assinatura": "6489ca8dc4511a21377601922aee6457efad8256",
+ "vitrine_publicada_em": "2026-11-09T20:12-03:00"
 }
