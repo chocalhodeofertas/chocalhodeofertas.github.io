@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 45
+  "2026-11-09": 46
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12857,8 +12857,10 @@
    "titulo": "Mordedor Bebê Estilo Luva de Silicone Macio Massageador Gengiva Dentição - Cores"
   },
   "MLB78828696": {
+   "desconto": 0.469,
    "preco": 23.86,
-   "quando": "2026-11-06T20:43-03:00"
+   "quando": "2026-11-09T20:52-03:00",
+   "titulo": "Pistola Lança Bolhas de Sabão Automática Redfin Azul Com Luz Para Crianças"
   },
   "MLB79143996": {
    "desconto": 0.377,
@@ -15841,9 +15843,13 @@
     [
      "2026-11-09",
      24.0
+    ],
+    [
+     "2026-11-09",
+     21.6
     ]
    ],
-   "min": 24.0
+   "min": 21.6
   },
   "MLB27051164": {
    "historico": [
@@ -16744,9 +16750,13 @@
     [
      "2026-11-09",
      91.51
+    ],
+    [
+     "2026-11-09",
+     87.18
     ]
    ],
-   "min": 91.51
+   "min": 87.18
   },
   "MLB34235115": {
    "historico": [
@@ -17042,9 +17052,13 @@
     [
      "2026-11-09",
      51.52
+    ],
+    [
+     "2026-11-09",
+     51.34
     ]
    ],
-   "min": 51.52
+   "min": 51.34
   },
   "MLB36933476": {
    "historico": [
@@ -18520,6 +18534,10 @@
     [
      "2026-11-09",
      26.58
+    ],
+    [
+     "2026-11-09",
+     28.99
     ]
    ],
    "min": 26.58
@@ -20055,6 +20073,10 @@
     [
      "2026-11-09",
      2099.0
+    ],
+    [
+     "2026-11-09",
+     2099.99
     ]
    ],
    "min": 2099.0
@@ -25519,7 +25541,7 @@
  "tg_offset": 273517995,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-09T20:32-03:00",
+  "em": "2026-11-09T20:52-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -25570,6 +25592,16 @@
     "link": "https://meli.la/13aW58Y",
     "preco": 64.9,
     "titulo": "Tapete Infantil De Atividades Piano Musical Com Luz E Som"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 44.9,
+    "desconto": 0.469,
+    "id": "MLB78828696",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_813471-MLA115636214620_092026-F.jpg",
+    "link": "https://meli.la/2iWG7Fy",
+    "preco": 23.86,
+    "titulo": "Pistola Lança Bolhas de Sabão Automática Redfin Azul Com Luz Para Crianças"
    },
    {
     "categoria": "brinquedo",
@@ -25682,16 +25714,6 @@
     "titulo": "Cercadinho Infantil Cercado Bebê Criança Chiqueirinho Seguro Hexagonal JustFun Brinquedos Cinza Rosa Azul"
    },
    {
-    "categoria": "passeio",
-    "de": 479.9,
-    "desconto": 0.312,
-    "id": "MLB30522365",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_935560-MLA100005231121_122025-F.jpg",
-    "link": "https://meli.la/1yZaTvp",
-    "preco": 330.0,
-    "titulo": "Carrinho Guarda Chuva De passeio Maxi Baby Até 15kgs cor Preto"
-   },
-   {
     "categoria": "outros",
     "de": 269.9,
     "desconto": 0.222,
@@ -25700,16 +25722,6 @@
     "link": "https://meli.la/1qdfoDe",
     "preco": 209.89,
     "titulo": "Andador Infantil Musical Para Bebê Quick Maxi Baby AZUL"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 78.9,
-    "desconto": 0.31,
-    "id": "MLB62978394",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_864809-MLA114861867230_082026-F.jpg",
-    "link": "https://meli.la/2BTByX4",
-    "preco": 54.44,
-    "titulo": "Kit Bolha de Sabão Babuu com 24 Unidades Para Crianças Brincarem"
    },
    {
     "categoria": "brinquedo",
