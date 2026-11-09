@@ -1531,7 +1531,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 27
+  "2026-11-09": 28
  },
  "cupons": {
   "AUTO70OFF": {
@@ -3873,8 +3873,10 @@
    "titulo": "Massageador Mordedor De Gengiva Banana Bebê Buba Cor Amarelo"
   },
   "MLB26851070": {
-   "preco": 223.73,
-   "quando": "2026-11-06T15:34-03:00"
+   "desconto": 0.562,
+   "preco": 223.41,
+   "quando": "2026-11-09T15:42-03:00",
+   "titulo": "Burigotto Kit Banho Branco"
   },
   "MLB27267704": {
    "desconto": 0.597,
@@ -5881,6 +5883,10 @@
     [
      "2026-11-09",
      799.9
+    ],
+    [
+     "2026-11-09",
+     920.53
     ]
    ],
    "min": 791.9
@@ -6045,6 +6051,10 @@
     [
      "2026-11-09",
      299.9
+    ],
+    [
+     "2026-11-09",
+     349.1
     ]
    ],
    "min": 299.9
@@ -8075,9 +8085,13 @@
     [
      "2026-11-06",
      119.21
+    ],
+    [
+     "2026-11-09",
+     115.99
     ]
    ],
-   "min": 119.21
+   "min": 115.99
   },
   "MLB62645299": {
    "historico": [
@@ -8486,6 +8500,10 @@
     [
      "2026-11-08",
      91.94
+    ],
+    [
+     "2026-11-09",
+     107.99
     ]
    ],
    "min": 91.94
@@ -10510,17 +10528,27 @@
  },
  "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T15:22-03:00",
+  "em": "2026-11-09T15:42-03:00",
   "itens": [
    {
-    "categoria": "brinquedo",
-    "de": 119.95,
-    "desconto": 0.58,
-    "id": "MLB29573091",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_946445-MLA116669294560_092026-F.jpg",
-    "link": "https://meli.la/1dhm1rT",
-    "preco": 50.41,
-    "titulo": "Kit Brinquedo Comidinha Infantil Frutas Velcro Frigideira 30 peças"
+    "categoria": "higiene",
+    "de": 510.0,
+    "desconto": 0.562,
+    "id": "MLB26851070",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_751805-MLA96144598793_102025-F.jpg",
+    "link": "https://meli.la/2C4ZDFq",
+    "preco": 223.41,
+    "titulo": "Burigotto Kit Banho Branco"
+   },
+   {
+    "categoria": "outros",
+    "de": 499.0,
+    "desconto": 0.56,
+    "id": "MLB54159991",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_629788-MLA98079677296_112025-F.jpg",
+    "link": "https://meli.la/1VuJLz6",
+    "preco": 219.56,
+    "titulo": "Babá Eletrônica Video Baby Noturna Sem Fio Recarregável Branco Estary Shop"
    },
    {
     "categoria": "brinquedo",
@@ -10634,6 +10662,16 @@
    },
    {
     "categoria": "brinquedo",
+    "de": 159.0,
+    "desconto": 0.271,
+    "id": "MLB62572381",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_631284-MLA110432757997_042026-F.jpg",
+    "link": "https://meli.la/2VM2tsW",
+    "preco": 115.99,
+    "titulo": "Pelúcia Banguela Fúria da Noite 100cm de Satin Preto para Abraçar"
+   },
+   {
+    "categoria": "brinquedo",
     "de": 39.0,
     "desconto": 0.31,
     "id": "MLB79182251",
@@ -10681,16 +10719,6 @@
     "link": "https://meli.la/2gWN9oe",
     "preco": 50.91,
     "titulo": "Balde Primeiros Blocos Fisher-price - Mattel Ffc84 Multicolor"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 160.0,
-    "desconto": 0.255,
-    "id": "MLB62572381",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_631284-MLA110432757997_042026-F.jpg",
-    "link": "https://meli.la/2VM2tsW",
-    "preco": 119.21,
-    "titulo": "Pelúcia Banguela Fúria da Noite 100cm de Satin Preto para Abraçar"
    },
    {
     "categoria": "higiene",
