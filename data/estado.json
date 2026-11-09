@@ -4816,6 +4816,10 @@
     [
      "2026-11-07",
      34.88
+    ],
+    [
+     "2026-11-09",
+     34.12
     ]
    ],
    "min": 34.12
@@ -10542,6 +10546,10 @@
     [
      "2026-11-09",
      317.0
+    ],
+    [
+     "2026-11-09",
+     315.99
     ]
    ],
    "min": 252.99
@@ -10614,29 +10622,19 @@
   "brinquedos": "2026-11-08",
   "passeio": "2026-11-09"
  },
- "tg_offset": 273517989,
+ "tg_offset": 273517990,
  "vitrine": {
-  "em": "2026-11-09T17:22-03:00",
+  "em": "2026-11-09T17:42-03:00",
   "itens": [
    {
     "categoria": "outros",
-    "de": 78.9,
-    "desconto": 0.531,
-    "id": "MLB76227639",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_602206-MLA115521014743_082026-F.jpg",
-    "link": "https://meli.la/2JnNyvo",
-    "preco": 37.0,
-    "titulo": "Aspirador Nasal Elétrico Infantil Recarregável Sugador Nasal Bebê 6 Níveis de Sucção 2 Bicos Cabo USB Livre de"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 99.0,
-    "desconto": 0.535,
-    "id": "MLB73061689",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_998432-MLA120558581995_102026-F.jpg",
-    "link": "https://meli.la/18vy1iU",
-    "preco": 46.0,
-    "titulo": "Balanço Infantil Madeira Jardim Criança E Adulto Magno"
+    "de": 185.9,
+    "desconto": 0.516,
+    "id": "MLB45286830",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_771489-MLA100039533847_122025-F.jpg",
+    "link": "https://meli.la/2bAX86M",
+    "preco": 90.0,
+    "titulo": "Andador Empurrador Infantil Musical Educativo Rosa Yuupi YPHE0811"
    },
    {
     "categoria": "brinquedo",
@@ -10651,11 +10649,11 @@
    {
     "categoria": "outros",
     "de": 51.04,
-    "desconto": 0.317,
+    "desconto": 0.332,
     "id": "MLB18392677",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_990051-MLA110123026010_042026-F.jpg",
     "link": "https://meli.la/2pHZDtK",
-    "preco": 34.88,
+    "preco": 34.12,
     "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
    },
    {
@@ -10727,16 +10725,6 @@
     "link": "https://meli.la/1dk5sV4",
     "preco": 56.16,
     "titulo": "Balanço Infantil GuiBrink de Plástico para Bebê Com Cinto Segurança e Corda"
-   },
-   {
-    "categoria": "jogo",
-    "de": 58.9,
-    "desconto": 0.29,
-    "id": "MLB66141214",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_633703-MLA120091503725_102026-F.jpg",
-    "link": "https://meli.la/1fhC97o",
-    "preco": 41.81,
-    "titulo": "Jogo Stop De Palavras Adedonha Educativo Infantil Interativo Familia Adultos E Crianças Babuu Brinquedos Educa"
    },
    {
     "categoria": "quarto",
