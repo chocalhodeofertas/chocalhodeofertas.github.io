@@ -1531,7 +1531,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 28
+  "2026-11-09": 30
  },
  "cupons": {
   "AUTO70OFF": {
@@ -3891,9 +3891,9 @@
    "titulo": "Berço Portátil Basic Cinza Galzerano Chiqueiro Cercado Bebê"
   },
   "MLB27861415": {
-   "desconto": 0.328,
-   "preco": 134.24,
-   "quando": "2026-11-08T21:46-03:00",
+   "desconto": 0.364,
+   "preco": 120.74,
+   "quando": "2026-11-09T16:02-03:00",
    "titulo": "Cozinha De Brinquedo Infantil Completa Princess Replay Kids"
   },
   "MLB28717101": {
@@ -4105,8 +4105,10 @@
    "titulo": "Barraca Toca Infantil Menina Cabana Tenda Princesa Criança Princesa Judy Cabanin"
   },
   "MLB54159991": {
+   "desconto": 0.56,
    "preco": 219.56,
-   "quando": "2026-11-06T15:34-03:00"
+   "quando": "2026-11-09T16:02-03:00",
+   "titulo": "Babá Eletrônica Video Baby Noturna Sem Fio Recarregável Branco Estary Shop"
   },
   "MLB54207427": {
    "desconto": 0.358,
@@ -5662,6 +5664,10 @@
     [
      "2026-11-09",
      20.64
+    ],
+    [
+     "2026-11-09",
+     21.26
     ]
    ],
    "min": 18.2
@@ -6085,6 +6091,10 @@
     [
      "2026-11-09",
      164.99
+    ],
+    [
+     "2026-11-09",
+     120.74
     ]
    ],
    "min": 118.63
@@ -6926,6 +6936,10 @@
     [
      "2026-11-07",
      47.4
+    ],
+    [
+     "2026-11-09",
+     41.0
     ]
    ],
    "min": 41.0
@@ -7408,6 +7422,10 @@
     [
      "2026-11-09",
      119.79
+    ],
+    [
+     "2026-11-09",
+     118.0
     ]
    ],
    "min": 118.0
@@ -7571,6 +7589,10 @@
     [
      "2026-11-09",
      218.9
+    ],
+    [
+     "2026-11-09",
+     226.99
     ]
    ],
    "min": 199.99
@@ -7746,9 +7768,13 @@
     [
      "2026-11-07",
      18.14
+    ],
+    [
+     "2026-11-09",
+     18.0
     ]
    ],
-   "min": 18.14
+   "min": 18.0
   },
   "MLB58831995": {
    "historico": [
@@ -8163,9 +8189,13 @@
     [
      "2026-11-09",
      79.99
+    ],
+    [
+     "2026-11-09",
+     58.9
     ]
    ],
-   "min": 63.9
+   "min": 58.9
   },
   "MLB62786425": {
    "historico": [
@@ -10528,18 +10558,8 @@
  },
  "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T15:42-03:00",
+  "em": "2026-11-09T16:02-03:00",
   "itens": [
-   {
-    "categoria": "higiene",
-    "de": 510.0,
-    "desconto": 0.562,
-    "id": "MLB26851070",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_751805-MLA96144598793_102025-F.jpg",
-    "link": "https://meli.la/2C4ZDFq",
-    "preco": 223.41,
-    "titulo": "Burigotto Kit Banho Branco"
-   },
    {
     "categoria": "outros",
     "de": 499.0,
@@ -10549,6 +10569,16 @@
     "link": "https://meli.la/1VuJLz6",
     "preco": 219.56,
     "titulo": "Babá Eletrônica Video Baby Noturna Sem Fio Recarregável Branco Estary Shop"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 189.9,
+    "desconto": 0.364,
+    "id": "MLB27861415",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_802710-MLA91575017864_092025-F.jpg",
+    "link": "https://meli.la/2nvA4BA",
+    "preco": 120.74,
+    "titulo": "Cozinha De Brinquedo Infantil Completa Princess Replay Kids"
    },
    {
     "categoria": "brinquedo",
@@ -10742,6 +10772,16 @@
    },
    {
     "categoria": "brinquedo",
+    "de": 79.99,
+    "desconto": 0.264,
+    "id": "MLB62786325",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_622319-MLA100243079561_122025-F.jpg",
+    "link": "https://meli.la/29mX98u",
+    "preco": 58.9,
+    "titulo": "LEGO® Minecraft® A aventura de Steve na Taiga 21583"
+   },
+   {
+    "categoria": "brinquedo",
     "de": 269.9,
     "desconto": 0.26,
     "id": "MLB56421479",
@@ -10932,6 +10972,6 @@
    }
   ]
  },
- "vitrine_assinatura": "7692ec5a38acb1b5eca38e4cf7048e38148b2c99",
- "vitrine_publicada_em": "2026-11-09T15:02-03:00"
+ "vitrine_assinatura": "1f274e38568982905819df87f3110352a64cc337",
+ "vitrine_publicada_em": "2026-11-09T16:02-03:00"
 }
