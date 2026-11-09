@@ -5120,9 +5120,13 @@
     [
      "2026-11-08",
      25.9
+    ],
+    [
+     "2026-11-09",
+     25.36
     ]
    ],
-   "min": 25.9
+   "min": 25.36
   },
   "MLB24208936": {
    "historico": [
@@ -6595,9 +6599,13 @@
     [
      "2026-11-07",
      69.9
+    ],
+    [
+     "2026-11-09",
+     64.8
     ]
    ],
-   "min": 69.9
+   "min": 64.8
   },
   "MLB46490903": {
    "historico": [
@@ -7450,9 +7458,13 @@
     [
      "2026-11-06",
      399.9
+    ],
+    [
+     "2026-11-09",
+     349.8
     ]
    ],
-   "min": 399.9
+   "min": 349.8
   },
   "MLB62557150": {
    "historico": [
@@ -9205,6 +9217,10 @@
     [
      "2026-11-09",
      101.06
+    ],
+    [
+     "2026-11-09",
+     109.0
     ]
    ],
    "min": 82.9
@@ -9657,17 +9673,17 @@
  },
  "tg_offset": 273517985,
  "vitrine": {
-  "em": "2026-11-09T09:32-03:00",
+  "em": "2026-11-09T09:52-03:00",
   "itens": [
    {
-    "categoria": "higiene",
-    "de": 399.9,
-    "desconto": 0.528,
-    "id": "MLB23581207",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_706338-MLA113145908796_072026-F.jpg",
-    "link": "https://meli.la/2vG97Ni",
-    "preco": 188.91,
-    "titulo": "Banheira Plástica Acqua Trio Branca Galzerano"
+    "categoria": "brinquedo",
+    "de": 149.99,
+    "desconto": 0.568,
+    "id": "MLB45801082",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_729971-MLA117826961230_102026-F.jpg",
+    "link": "https://meli.la/1y1cfyY",
+    "preco": 64.8,
+    "titulo": "Tapete De Atividades Musical Bebê Piano Interativo Ginásio Cor Rosa"
    },
    {
     "categoria": "brinquedo",
@@ -9678,6 +9694,16 @@
     "link": "https://meli.la/2n2U2q9",
     "preco": 31.0,
     "titulo": "Bola Vinil Inflável Kit Com 10 Bolas Infláveis Cores Sortidas 23cm Praia Piscina Festa Aniversario Parque Atac"
+   },
+   {
+    "categoria": "passeio",
+    "de": 619.9,
+    "desconto": 0.436,
+    "id": "MLB62445069",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_849686-MLA99207858759_112025-F.jpg",
+    "link": "https://meli.la/1jDpjpK",
+    "preco": 349.8,
+    "titulo": "Cadeirinha Automotiva Atentu BS05 para Bebê e Criança de 9 a 36 kg Vermelha"
    },
    {
     "categoria": "passeio",
@@ -9898,6 +9924,16 @@
     "link": "https://meli.la/2pHZDtK",
     "preco": 34.88,
     "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
+   },
+   {
+    "categoria": "jogo",
+    "de": 58.9,
+    "desconto": 0.29,
+    "id": "MLB66141214",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_633703-MLA120091503725_102026-F.jpg",
+    "link": "https://meli.la/1fhC97o",
+    "preco": 41.81,
+    "titulo": "Jogo Stop De Palavras Adedonha Educativo Infantil Interativo Familia Adultos E Crianças Babuu Brinquedos Educa"
    },
    {
     "categoria": "passeio",
