@@ -297,7 +297,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
             log(f"Sem dados para {p.id} (linha {p.linha}) — anúncio pode ter sido removido.")
             continue
         motivo = motivo_bloqueio(info.titulo) or fora_da_faixa(
-            info.titulo, p.categoria, (estado.get("descobertos", {}).get(p.id) or {}).get("exige_infantil"))
+            info.titulo, p.categoria, (estado.get("descobertos", {}).get(p.id) or {}).get("regra"))
         if motivo:
             log(f"Bloqueado {p.id}: {motivo} — '{info.titulo[:60]}'")
             continue

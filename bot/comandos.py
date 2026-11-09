@@ -158,31 +158,37 @@ def relatorio_areas(tg, ml, cfg, log=print):
 
     nomes = {"roupa": "👕 Roupas", "game": "🎮 Games", "livro": "📚 Livros", "escola": "✏️ Escola",
              "esporte": "⚽ Esporte", "casa": "🏠 Casa e quarto", "festa": "🎉 Festa"}
-    areas = explorar_areas(ml, log)
-    if not areas:
-        return "⚠️ Não consegui consultar as categorias do Mercado Livre agora. Tente de novo mais tarde."
-    for area, cats in areas.items():
-        linhas = [f"<b>{nomes.get(area, area)}</b> — {len(cats)} categorias:",
-                  ", ".join(html.escape(n) for _, n, _, _ in cats) or "(nenhuma)", "", "Exemplos dos mais vendidos:"]
-        mostrados = 0
-        for cat, _, exige, _ in cats:
-            if mostrados >= 4:
+    for area, cats in explorar_areas(ml, log).items():
+        linhas = [f"<b>{nomes.get(area, area)}</b>", "Categorias: " + ", ".join(html.escape(n) for _, n, _, _ in cats),
+                  "", "Exemplos do que entraria:"]
+        ok, barrados = 0, 0
+        for cat, _, regra, qtd in cats:
+            if ok >= 5:
                 break
             try:
-                lista = [i for t, i in ml.mais_vendidos(cat) if t == "catalogo"][:2]
+                lista = [i for t, i in ml.mais_vendidos(cat) if t == "catalogo"][:qtd]
             except (ErroML, AcessoNegado):
                 continue
+            achou = 0
             for pid in lista:
+                if ok >= 5 or achou >= 2:
+                    break
                 try:
                     info = ml.catalogo(pid)
                 except (ErroML, AcessoNegado):
                     continue
                 if not info or not info.titulo:
                     continue
-                barrado = motivo_bloqueio(info.titulo) or fora_da_faixa(info.titulo, area, exige)
-                marca = f" 🚫 ({barrado})" if barrado else ""
-                linhas.append(f"• {html.escape(info.titulo[:70])}{marca}")
-                mostrados += 1
+                if motivo_bloqueio(info.titulo) or fora_da_faixa(info.titulo, area, regra):
+                    barrados += 1
+                    continue
+                linhas.append(f"• {html.escape(info.titulo[:70])}")
+                ok += 1
+                achou += 1
+        if not ok:
+            linhas.append("(nenhum produto infantil entre os mais vendidos agora)")
+        if barrados:
+            linhas.append(f"🚫 {barrados} produto(s) de adulto/fora do nicho foram barrados pelos filtros.")
         tg.enviar_texto(cfg.admin_chat, "\n".join(linhas), html=True)
     return ("Se estiver tudo certo, mande <b>aprovar categorias</b> para o bot começar a usar. "
             "Os marcados com 🚫 são barrados pelos filtros.")

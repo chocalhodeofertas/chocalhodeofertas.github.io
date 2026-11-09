@@ -69,21 +69,25 @@ def motivo_bloqueio(*textos: str):
 
 
 _INFANTIL = re.compile(
-    r"\b(infantil|infantis|crianca|criancas|kids|kid|bebe|baby|juvenil|menino|menina|junior|escolar|"
-    r"aro (12|14|16|20)|tamanho (2|4|6|8|10|12|14)\b|pokemon|nintendo|lego|disney|patrulha canina|turma da monica)\b"
+    r"\b(infantil|infantis|infanto|infantojuvenil|crianca|criancas|kids|kid|bebe|bebes|baby|juvenil|"
+    r"menino|meninos|menina|meninas|junior|escolar|aro (12|14|16|20)|"
+    r"pokemon|patrulha canina|turma da monica|peppa|bluey|frozen|homem aranha|minecraft|"
+    r"colorir|livro de atividades|historinhas?|conto de fadas|diario de um banana)\b"
 )
+# Games: só o que é do universo infantil/familiar (fone, cadeira gamer etc. ficam de fora)
 _GAMES_OK = re.compile(
     r"\b(nintendo|switch|pokemon|mario|minecraft|lego|sonic|kirby|zelda|game ?boy|roblox|just dance|"
-    r"album|figurinhas?|panini|yu.?gi.?oh|beyblade|"
-    r"fifa|ea sports fc|playstation|ps5|ps4|xbox|controle|joystick|headset|infantil|kids)\b"
+    r"yu.?gi.?oh|beyblade|fifa|ea sports fc|playstation ?5?|ps5|ps4|xbox series)\b"
 )
+_GAMES_FORA = re.compile(r"\b(headset|fone|cadeira|microfone|mouse|teclado|monitor|gift ?card|cartao pre)")
 
 
-def fora_da_faixa(titulo, categoria, exige_infantil=False):
+def fora_da_faixa(titulo, categoria, regra=None):
     """Motivo para pular produtos das áreas novas que não são do universo infantil (ou None)."""
     t = normalizar(titulo)
-    if categoria == "game" and not _GAMES_OK.search(t):
-        return "game fora da lista infantil"
-    if exige_infantil and not _INFANTIL.search(t):
+    if regra == "game" or categoria == "game":
+        if _GAMES_FORA.search(t) or not _GAMES_OK.search(t):
+            return "game fora da lista infantil"
+    elif regra in ("infantil", True) and not _INFANTIL.search(t):
         return "não parece infantil"
     return None
