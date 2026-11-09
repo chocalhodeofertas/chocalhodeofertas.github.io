@@ -35,6 +35,7 @@ AJUDA = (
     "(com a data, eu marco como encerrado sozinho quando vencer)\n\n"
     "❌ <b>esgotou</b> + código → aviso no canal que o cupom acabou\n\n"
     "📊 <b>resumo</b> → números do canal agora\n\n"
+    "🗂️ <b>categorias</b> → prévia das categorias novas (roupas, games, livros...) · <b>aprovar categorias</b>\n"
     "🎯 <b>temas</b> → quantas promoções cada tema tem agora\n"
     "🎠 <b>carrossel brinquedos</b> / 🎬 <b>reel brinquedos</b> → temático do tema que você escolher\n"
     "🖼️ <b>insta</b> + link meli.la → post, legenda e story do produto escolhido\n\n"
@@ -148,6 +149,43 @@ def _oferta_do_link(link, ml, estado, session=None):
     de = float(info.preco_original) if (info.preco_original or 0) > preco else None
     return Oferta(pid, info.titulo, preco, de, (1 - preco / de) if de else 0.0,
                   None, False, link, info.imagem, "outros"), None
+
+
+def relatorio_areas(tg, ml, cfg, log=print):
+    """Mostra as categorias que o bot achou para as áreas novas e exemplos de produtos (não posta nada)."""
+    from .descoberta import explorar_areas
+    from .filtros import fora_da_faixa
+
+    nomes = {"roupa": "👕 Roupas", "game": "🎮 Games", "livro": "📚 Livros", "escola": "✏️ Escola",
+             "esporte": "⚽ Esporte", "casa": "🏠 Casa e quarto", "festa": "🎉 Festa"}
+    areas = explorar_areas(ml, log)
+    if not areas:
+        return "⚠️ Não consegui consultar as categorias do Mercado Livre agora. Tente de novo mais tarde."
+    for area, cats in areas.items():
+        linhas = [f"<b>{nomes.get(area, area)}</b> — {len(cats)} categorias:",
+                  ", ".join(html.escape(n) for _, n, _, _ in cats) or "(nenhuma)", "", "Exemplos dos mais vendidos:"]
+        mostrados = 0
+        for cat, _, exige, _ in cats:
+            if mostrados >= 4:
+                break
+            try:
+                lista = [i for t, i in ml.mais_vendidos(cat) if t == "catalogo"][:2]
+            except (ErroML, AcessoNegado):
+                continue
+            for pid in lista:
+                try:
+                    info = ml.catalogo(pid)
+                except (ErroML, AcessoNegado):
+                    continue
+                if not info or not info.titulo:
+                    continue
+                barrado = motivo_bloqueio(info.titulo) or fora_da_faixa(info.titulo, area, exige)
+                marca = f" 🚫 ({barrado})" if barrado else ""
+                linhas.append(f"• {html.escape(info.titulo[:70])}{marca}")
+                mostrados += 1
+        tg.enviar_texto(cfg.admin_chat, "\n".join(linhas), html=True)
+    return ("Se estiver tudo certo, mande <b>aprovar categorias</b> para o bot começar a usar. "
+            "Os marcados com 🚫 são barrados pelos filtros.")
 
 
 def postar_insta(link, tg, ml, estado, cfg, session=None, rng=random):
@@ -343,6 +381,17 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
         from . import conteudo
         conteudo.montar_e_enviar(tg, cfg.admin_chat, estado, agora, rng=rng, session=session)
         return None
+    if n in ("categorias", "/categorias"):
+        return relatorio_areas(tg, ml, cfg, log=lambda m: None)
+    if n in ("aprovar categorias", "/aprovar_categorias"):
+        estado["areas_novas"] = True
+        estado["descoberta_em"] = None  # refaz a busca na próxima rodada
+        return ("✅ Categorias novas aprovadas. Na próxima rodada o bot refaz a busca já com roupas, games, "
+                "livros, escola, esporte, casa e festa. Para desligar: <b>pausar categorias</b>.")
+    if n in ("pausar categorias", "/pausar_categorias"):
+        estado["areas_novas"] = False
+        estado["descoberta_em"] = None
+        return "⏸️ Categorias novas desligadas; o bot volta só para Bebês e Brinquedos."
     if n in ("temas", "/temas"):
         from . import conteudo
         return conteudo.listar_temas(estado, agora)

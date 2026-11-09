@@ -150,6 +150,10 @@ class MercadoLivre:
             if c.get("type") in tipos
         ]
 
+    def categorias_raiz(self):
+        dados = self._get("/sites/MLB/categories")
+        return [(c["id"], c["name"]) for c in dados or []]
+
     def subcategorias(self, categoria):
         dados = self._get(f"/categories/{categoria}")
         return [(c["id"], c["name"]) for c in dados.get("children_categories") or []]

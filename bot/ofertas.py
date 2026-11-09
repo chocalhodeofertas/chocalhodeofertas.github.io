@@ -99,6 +99,11 @@ _TIPOS = [
     ("boneca", r"\bboneca"),
     ("carrinho de brinquedo", r"hot wheels|carrinho (de )?controle|controle remoto"),
     ("cozinha de brinquedo", r"cozinha (de )?brinquedo|cozinha infantil|comidinha"),
+    ("console", r"\bps5\b|\bps4\b|playstation|xbox|nintendo switch|console"),
+    ("cartas pokemon", r"pokemon.*(cartas?|booster|box|deck|tcg)|(cartas?|booster).*pokemon"),
+    ("mochila", r"\bmochila|lancheira"),
+    ("fantasia", r"\bfantasia"),
+    ("lapis de cor", r"lapis de cor|canetinha|giz de cera"),
     ("instrumento musical", r"\bpiano|teclado|guitarra|bateria infantil|microfone"),
 ]
 _TIPOS_RE = [(t, re.compile(p)) for t, p in _TIPOS]
@@ -130,6 +135,8 @@ def pontuacao(oferta, posicao=None):
     peso = 1.4 if essencial(oferta.titulo) else 1.0
     if oferta.categoria == "brinquedo":
         peso *= 0.85  # brinquedo é o que mais aparece; equilibra com o resto
+    elif oferta.categoria == "game" and re.search(r"ps5|ps4|playstation|xbox", (oferta.titulo or "").lower()):
+        peso *= 0.7  # console mais comprado por adultos: entra, mas com menos prioridade
     return oferta.forca * (1 + pop) * peso
 
 

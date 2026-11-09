@@ -16,7 +16,8 @@ MAX_ITENS = 60
 NOMES = {
     "fralda": "Fraldas", "higiene": "Higiene", "roupa": "Roupas", "brinquedo": "Brinquedos",
     "jogo": "Jogos", "quarto": "Quarto", "passeio": "Passeio", "alimentacao": "Alimentação",
-    "gestante": "Gestante", "outros": "Outros",
+    "gestante": "Gestante", "game": "Games", "livro": "Livros", "escola": "Escola", "esporte": "Esporte",
+    "casa": "Casa e quarto", "festa": "Festa", "outros": "Outros",
 }
 
 

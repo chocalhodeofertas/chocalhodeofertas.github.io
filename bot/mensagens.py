@@ -23,6 +23,12 @@ CHAMADAS = {
     "passeio": ["🚼 Pros passeios com o pequeno", "🚗 Pros passeios em família", "🌳 Bora passear?"],
     "alimentacao": ["🥣 Pra hora da papinha", "🍽️ Pra hora de comer", "🥄 Pra introdução alimentar"],
     "gestante": ["🤰 Pra mamãe que tá esperando", "💕 Pra gestação mais confortável", "🤰 Pro enxoval que tá chegando"],
+    "game": ["🎮 Pra jogar em família", "🎮 Diversão garantida", "🎁 Ideia de presente"],
+    "livro": ["📚 Hora da leitura", "📖 Pra ler juntinhos", "📚 Pra estante dos pequenos"],
+    "escola": ["✏️ Pro material escolar", "🎒 Pra volta às aulas", "🖍️ Pra desenhar e criar"],
+    "esporte": ["⚽ Pra gastar energia", "🏊 Pra brincar ao ar livre", "🚲 Bora se mexer?"],
+    "casa": ["🏠 Pro cantinho dos pequenos", "🌙 Pro quarto das crianças", "🧺 Pra organizar a casa"],
+    "festa": ["🎉 Pra festa ficar linda", "🎈 Pro aniversário", "🎁 Pra comemorar"],
 }
 
 # Cláusula 5.4 dos termos: só informações que estão no anúncio. Por isso não
@@ -38,6 +44,12 @@ EMOJI_CATEGORIA = {
     "passeio": "🚼",
     "alimentacao": "🥣",
     "gestante": "🤰",
+    "game": "🎮",
+    "livro": "📚",
+    "escola": "✏️",
+    "esporte": "⚽",
+    "casa": "🏠",
+    "festa": "🎉",
 }
 
 

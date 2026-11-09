@@ -65,6 +65,18 @@ TEMAS_CATEGORIA = [
          ["gestante"],
          ["Cuidar de você também faz parte.", "Pra quem está esperando um bebê:"]),
 ]
+TEMAS_CATEGORIA += [
+    Tema("escola", {"escola"}, ["Material escolar em promoção", "Pra volta às aulas: ofertas de hoje"],
+         ["crianca"], ["Lista de material sem susto no bolso:", "Pra mochila ficar completa:"]),
+    Tema("livros", {"livro"}, ["Livros infantis em promoção", "Pra estante dos pequenos: livros com desconto"],
+         ["crianca", "familia"], ["Ler junto é um dos melhores momentos do dia.", "Pra criar o hábito da leitura:"]),
+    Tema("games", {"game"}, ["Games e diversão em promoção", "Pra jogar em família: ofertas de hoje"],
+         ["crianca", "brinquedos"], ["Diversão pra tarde de chuva:", "Pra jogar junto:"]),
+    Tema("esporte", {"esporte"}, ["Pra brincar ao ar livre: promoções", "Esporte e diversão com desconto"],
+         ["crianca"], ["Pra gastar energia:", "Bora se mexer?"]),
+    Tema("casa", {"casa"}, ["Pro quarto das crianças: promoções", "Organização e decoração infantil com desconto"],
+         ["quarto"], ["Casa organizada, vida mais leve:", "Pro cantinho dos pequenos:"]),
+]
 # Reserva, quando nenhuma categoria tem promoções suficientes sozinha
 TEMAS_GERAIS = [
     Tema("enxoval", {"quarto", "passeio", "alimentacao", "gestante", "higiene", "fralda", "roupa", "outros"},

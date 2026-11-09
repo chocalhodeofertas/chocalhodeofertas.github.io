@@ -922,3 +922,30 @@ def test_variedade_nicho_e_essenciais():
     assert tipo_produto("Babá Eletrônica Monitor 2.4") == tipo_produto("Baba Eletronica Baby Monitor Vb603")
     assert tipo_produto("Banheira Plástica Acqua Trio") == "banheira"
     assert essencial("Fralda Pom Pom Protek G 68 Unidades") and not essencial("Guitarra Infantil")
+
+
+def test_areas_novas_filtros_e_comando():
+    from bot.filtros import fora_da_faixa, motivo_bloqueio
+    from bot import descoberta
+
+    assert motivo_bloqueio("Jogo GTA V PS5 Mídia Física")
+    assert motivo_bloqueio("Camisa Flamengo Tailandesa 2026")
+    assert fora_da_faixa("Console Nintendo Switch OLED", "game") is None
+    assert fora_da_faixa("Booster Cartas Pokémon Escarlate", "game") is None
+    assert fora_da_faixa("Óculos de Natação Speedo Vanquisher", "esporte", True)
+    assert fora_da_faixa("Óculos de Natação Infantil Speedo", "esporte", True) is None
+
+    class MLAreas:
+        def categorias_raiz(self):
+            return [("R1", "Games"), ("R2", "Livros, Revistas e Comics"), ("R3", "Brinquedos e Hobbies")]
+
+        def subcategorias(self, c):
+            return {"R1": [("G1", "Consoles")], "R2": [("L1", "Livros Infantis"), ("L2", "Romance")],
+                    "R3": [("B1", "Jogos")], "B1": [("B2", "Cartas Colecionáveis")]}.get(c, [])
+
+        def mais_vendidos(self, c):
+            return [("catalogo", f"MLB{c}{k}") for k in range(3)]
+
+    achados = descoberta.descobrir_areas(MLAreas(), log=lambda m: None)
+    assert {d["categoria"] for d in achados.values()} == {"game", "livro"}
+    assert any("B2" in pid for pid in achados) and not any("L2" in pid for pid in achados)

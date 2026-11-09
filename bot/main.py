@@ -22,8 +22,8 @@ from zoneinfo import ZoneInfo
 from . import afiliado, cofre, comandos, cupons_ml, lote, vitrine
 from . import estado as est
 from . import mensagens
-from .descoberta import descobrir
-from .filtros import motivo_bloqueio
+from .descoberta import descobrir, descobrir_areas
+from .filtros import fora_da_faixa, motivo_bloqueio
 from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, link_produto, renovar_token, token_do_app
 from .ofertas import avaliar, limite_hora, meta_ate_agora, pontuacao, tipo_produto
 from .telegram import Telegram, TelegramErro
@@ -211,6 +211,9 @@ def atualizar_descoberta(cfg: Config, ml, estado, agora, forcar=False):
         if horas < cfg.horas_descoberta:
             return False
     achados = descobrir(ml, cfg.por_categoria, log)
+    if achados and estado.get("areas_novas"):
+        for pid, d in descobrir_areas(ml, log).items():
+            achados.setdefault(pid, d)
     if achados:
         estado["descobertos"] = achados
         estado["descoberta_em"] = agora.isoformat(timespec="minutes")
@@ -293,7 +296,8 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         if not info:
             log(f"Sem dados para {p.id} (linha {p.linha}) — anúncio pode ter sido removido.")
             continue
-        motivo = motivo_bloqueio(info.titulo)
+        motivo = motivo_bloqueio(info.titulo) or fora_da_faixa(
+            info.titulo, p.categoria, (estado.get("descobertos", {}).get(p.id) or {}).get("exige_infantil"))
         if motivo:
             log(f"Bloqueado {p.id}: {motivo} — '{info.titulo[:60]}'")
             continue

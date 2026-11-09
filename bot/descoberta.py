@@ -71,3 +71,82 @@ def descobrir(ml, por_categoria=15, log=print, brinquedos=6):
                 atual["pos"] = min(atual.get("pos", pos), pos)
     log(f"Descoberta: {len(achados)} produtos em {len(alvos)} categorias.")
     return achados
+
+
+# ---------- Universo infantil além de Bebês e Brinquedos (até ~14 anos) ----------
+# Cada área: categoria do bot, nome da categoria raiz no ML, nomes de subcategorias que entram
+# (None = todas), itens por lista, e se o título precisa indicar que é infantil.
+AREAS = [
+    ("roupa", r"calcados.*roupas", r"infant|crianc|menin|bebe|juvenil|kids|fantasia|escolar", 8, False),
+    ("game", r"^games", None, 6, False),
+    ("game", r"brinquedos", r"carta|colecion|trading|figurinha|album", 6, False),  # Pokémon, figurinhas
+    ("livro", r"livros", r"infant|juvenil|crianc|colorir|didatic|escolar", 8, False),
+    ("escola", r"papelaria", r"escolar|papelaria|desenho|pintura|lapis|caderno|mochila|estojo|cartolina|massinha", 6, False),
+    ("esporte", r"esportes", r"natacao|futebol|patin|skate|ciclismo|bicicleta|piscina", 6, True),
+    ("casa", r"casa.*moveis", r"infant|crianc|bebe|kids", 8, False),
+    ("festa", r"festas", None, 6, True),
+]
+MAX_CATS_AREA = 12
+
+
+def _norm(t):
+    from .filtros import normalizar
+
+    return normalizar(t)
+
+
+def explorar_areas(ml, log=print):
+    """Acha, pelo nome, as categorias do ML de cada área. Retorna {area: [(cat_id, nome, exige_infantil, qtd)]}."""
+    import re
+
+    try:
+        raizes = ml.categorias_raiz()
+    except ErroML as e:
+        log(f"Aviso: não consegui listar as categorias do ML: {e}")
+        return {}
+    res = {}
+    for area, raiz_re, sub_re, qtd, exige in AREAS:
+        raiz = next(((c, n) for c, n in raizes if re.search(raiz_re, _norm(n))), None)
+        if not raiz:
+            log(f"Aviso: área {area}: categoria raiz não encontrada.")
+            continue
+        cats = []
+        try:
+            filhos = ml.subcategorias(raiz[0])
+        except ErroML:
+            filhos = []
+        for c, n in filhos:
+            if len(cats) >= MAX_CATS_AREA:
+                break
+            if sub_re is None or re.search(sub_re, _norm(n)):
+                cats.append((c, n, exige, qtd))
+                continue
+            # olha um nível abaixo (ex.: Roupas → Roupas Infantis)
+            try:
+                netos = ml.subcategorias(c)
+            except ErroML:
+                netos = []
+            for c2, n2 in netos:
+                if len(cats) < MAX_CATS_AREA and re.search(sub_re, _norm(n2)):
+                    cats.append((c2, f"{n} › {n2}", exige, qtd))
+        res.setdefault(area, []).extend(c for c in cats if c[0] not in {x[0] for x in res.get(area, [])})
+    return res
+
+
+def descobrir_areas(ml, log=print):
+    """Mais vendidos das áreas novas. Retorna {id: {"tipo", "categoria", "pos", "exige_infantil"}}."""
+    achados = {}
+    for area, cats in explorar_areas(ml, log).items():
+        for cat, _, exige, qtd in cats:
+            try:
+                lista = [(t, i) for t, i in ml.mais_vendidos(cat) if t == "catalogo"]
+            except (ErroML, AcessoNegado) as e:
+                log(f"Aviso: mais vendidos de {cat}: {e}")
+                continue
+            for pos, (tipo, pid) in enumerate(lista[:qtd]):
+                if pid not in achados:
+                    achados[pid] = {"tipo": tipo, "categoria": area, "pos": pos}
+                    if exige:
+                        achados[pid]["exige_infantil"] = True
+    log(f"Áreas novas: {len(achados)} produtos.")
+    return achados
