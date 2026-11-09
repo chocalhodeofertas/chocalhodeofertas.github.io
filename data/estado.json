@@ -1,5 +1,5 @@
 {
- "aguardando_link": 32,
+ "aguardando_link": 33,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1531,7 +1531,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 22
+  "2026-11-09": 23
  },
  "cupons": {
   "AUTO70OFF": {
@@ -3925,8 +3925,10 @@
    "quando": "2026-11-06T18:23-03:00"
   },
   "MLB41517901": {
+   "desconto": 0.601,
    "preco": 78.9,
-   "quando": "2026-11-06T14:13-03:00"
+   "quando": "2026-11-09T14:22-03:00",
+   "titulo": "Guitarra E Microfone Infantil Instrumento Brinquedo Musical Cor Azul"
   },
   "MLB42082195": {
    "desconto": 0.401,
@@ -4868,9 +4870,13 @@
     [
      "2026-11-08",
      19.99
+    ],
+    [
+     "2026-11-09",
+     19.49
     ]
    ],
-   "min": 19.99
+   "min": 19.49
   },
   "MLB19491178": {
    "historico": [
@@ -5822,9 +5828,13 @@
     [
      "2026-11-09",
      73.72
+    ],
+    [
+     "2026-11-09",
+     63.58
     ]
    ],
-   "min": 73.72
+   "min": 63.58
   },
   "MLB26415897": {
    "historico": [
@@ -5864,6 +5874,10 @@
     [
      "2026-11-09",
      37.5
+    ],
+    [
+     "2026-11-09",
+     37.49
     ]
    ],
    "min": 37.49
@@ -9517,6 +9531,10 @@
     [
      "2026-11-09",
      42.42
+    ],
+    [
+     "2026-11-09",
+     41.99
     ]
    ],
    "min": 36.5
@@ -10366,9 +10384,13 @@
     [
      "2026-11-09",
      317.0
+    ],
+    [
+     "2026-11-09",
+     252.99
     ]
    ],
-   "min": 259.9
+   "min": 252.99
   },
   "MLB80779802": {
    "historico": [
@@ -10440,8 +10462,18 @@
  },
  "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T14:02-03:00",
+  "em": "2026-11-09T14:22-03:00",
   "itens": [
+   {
+    "categoria": "brinquedo",
+    "de": 197.79,
+    "desconto": 0.601,
+    "id": "MLB41517901",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_719969-MLA99465165518_112025-F.jpg",
+    "link": "https://meli.la/19SRyJD",
+    "preco": 78.9,
+    "titulo": "Guitarra E Microfone Infantil Instrumento Brinquedo Musical Cor Azul"
+   },
    {
     "categoria": "brinquedo",
     "de": 129.99,
@@ -10771,6 +10803,16 @@
     "link": "https://meli.la/1qdfoDe",
     "preco": 209.89,
     "titulo": "Andador Infantil Musical Para Bebê Quick Maxi Baby AZUL"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 48.99,
+    "desconto": 0.235,
+    "id": "MLB26712966",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_935402-MLA99602357854_122025-F.jpg",
+    "link": "https://meli.la/1RGvMdG",
+    "preco": 37.49,
+    "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
    },
    {
     "categoria": "higiene",
