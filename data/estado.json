@@ -1,5 +1,5 @@
 {
- "aguardando_link": 29,
+ "aguardando_link": 32,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1531,12 +1531,30 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 19
+  "2026-11-09": 21
  },
  "cupons": {
+  "AUTO70OFF": {
+   "criado": "2026-11-09T13:36-03:00",
+   "post": 168,
+   "status": "ativo",
+   "validade": "2026-11-12T23:59-03:00"
+  },
   "HOJEMESMO": {
    "criado": "2026-11-09T10:01-03:00",
    "post": 152,
+   "status": "ativo",
+   "validade": "2026-11-09T23:59-03:00"
+  },
+  "MAISCUPONS25": {
+   "criado": "2026-11-09T13:36-03:00",
+   "post": 168,
+   "status": "ativo",
+   "validade": "2026-12-09T23:59-03:00"
+  },
+  "MELHORDOML": {
+   "criado": "2026-11-09T13:36-03:00",
+   "post": 168,
    "status": "ativo",
    "validade": "2026-11-09T23:59-03:00"
   },
@@ -1557,9 +1575,15 @@
    "post": 155,
    "status": "ativo",
    "validade": "2026-11-09T23:59-03:00"
+  },
+  "OLHAOARABE20": {
+   "criado": "2026-11-09T13:36-03:00",
+   "post": 168,
+   "status": "ativo",
+   "validade": "2026-11-12T23:59-03:00"
   }
  },
- "cupons_ml_ultimo": 6419,
+ "cupons_ml_ultimo": 6421,
  "descoberta_em": "2026-11-09T13:12-03:00",
  "descobertos": {
   "MLB10923645": {
@@ -4058,6 +4082,12 @@
    "quando": "2026-11-07T08:02-03:00",
    "titulo": "Mini Mesa de Pebolim Infantil Madeira Maxi Toys 2 Bolas"
   },
+  "MLB57083030": {
+   "desconto": 0.364,
+   "preco": 227.05,
+   "quando": "2026-11-09T13:32-03:00",
+   "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
+  },
   "MLB58047533": {
    "preco": 68.0,
    "quando": "2026-11-06T21:44-03:00"
@@ -4374,6 +4404,12 @@
    "preco": 37.0,
    "quando": "2026-11-06T17:15-03:00"
   },
+  "MLB76397729": {
+   "desconto": 0.302,
+   "preco": 27.9,
+   "quando": "2026-11-09T13:32-03:00",
+   "titulo": "Kit Mordedor para Bebê brinquedo Sensorial Silicone com Chocalho 8 Peças Colorid"
+  },
   "MLB76574611": {
    "desconto": 0.707,
    "preco": 23.18,
@@ -4489,6 +4525,29 @@
    "criado": "2026-11-09T10:22-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "168": {
+   "blocos": [
+    {
+     "codigo": "MELHORDOML",
+     "html": "<b>🎟️ MELHORDOML</b> 👉 <b>20% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$60\n⏰ Válido até 09/11\n👉 <a href=\"https://bit.ly/4ejXFw0\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "OLHAOARABE20",
+     "html": "<b>🎟️ OLHAOARABE20</b> 👉 <b>20% OFF</b>\nCompra mín.: R$150 · Desconto máx.: R$35\n⏰ Válido até 12/11\n👉 <a href=\"https://bit.ly/4iJ8JnA\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "AUTO70OFF",
+     "html": "<b>🎟️ AUTO70OFF</b> 👉 <b>R$70 OFF</b>\n⏰ Válido até 12/11\n👉 <a href=\"https://bit.ly/4kFMiSO\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "MAISCUPONS25",
+     "html": "<b>🎟️ MAISCUPONS25</b> 👉 <b>25% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 09/12\n👉 <a href=\"https://bit.ly/4eo6WDb\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-09T13:36-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
@@ -5731,6 +5790,10 @@
     [
      "2026-11-09",
      920.53
+    ],
+    [
+     "2026-11-09",
+     799.9
     ]
    ],
    "min": 791.9
@@ -5998,9 +6061,13 @@
     [
      "2026-11-06",
      269.9
+    ],
+    [
+     "2026-11-09",
+     259.98
     ]
    ],
-   "min": 269.9
+   "min": 259.98
   },
   "MLB28868913": {
    "historico": [
@@ -6906,9 +6973,13 @@
     [
      "2026-11-09",
      114.9
+    ],
+    [
+     "2026-11-09",
+     106.7
     ]
    ],
-   "min": 114.9
+   "min": 106.7
   },
   "MLB46490903": {
    "historico": [
@@ -8077,6 +8148,10 @@
     [
      "2026-11-09",
      183.0
+    ],
+    [
+     "2026-11-09",
+     205.99
     ]
    ],
    "min": 183.0
@@ -10214,6 +10289,10 @@
     [
      "2026-11-09",
      299.0
+    ],
+    [
+     "2026-11-09",
+     320.0
     ]
    ],
    "min": 259.9
@@ -10288,28 +10367,8 @@
  },
  "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T13:12-03:00",
+  "em": "2026-11-09T13:32-03:00",
   "itens": [
-   {
-    "categoria": "outros",
-    "de": 297.5,
-    "desconto": 0.345,
-    "id": "MLB51668028",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_900690-MLA99937810661_112025-F.jpg",
-    "link": "https://meli.la/1AQ8upt",
-    "preco": 194.79,
-    "titulo": "Cercadinho Bebê Infantil Chiqueirinho Grande Criança Baby Bear Rosa"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 64.98,
-    "desconto": 0.338,
-    "id": "MLB71892696",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_865407-MLA112685691901_062026-F.jpg",
-    "link": "https://meli.la/1xWdLwa",
-    "preco": 43.0,
-    "titulo": "Cavalinho Upa Upa Rosa com LED e Música para Bebê"
-   },
    {
     "categoria": "outros",
     "de": 356.9,
