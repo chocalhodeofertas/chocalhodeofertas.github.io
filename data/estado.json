@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 5
+  "2026-11-09": 6
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3699,8 +3699,10 @@
    "titulo": "Cama Elástica Pula Pula Trampolim JustFun 1,40m com Rede de Proteção e 36 Molas"
   },
   "MLB23581207": {
-   "preco": 211.94,
-   "quando": "2026-11-06T20:23-03:00"
+   "desconto": 0.528,
+   "preco": 188.91,
+   "quando": "2026-11-09T09:32-03:00",
+   "titulo": "Banheira Plástica Acqua Trio Branca Galzerano"
   },
   "MLB24156713": {
    "desconto": 0.428,
@@ -5235,6 +5237,10 @@
     [
      "2026-11-09",
      39.86
+    ],
+    [
+     "2026-11-09",
+     32.17
     ]
    ],
    "min": 32.17
@@ -5531,9 +5537,13 @@
     [
      "2026-11-06",
      29.5
+    ],
+    [
+     "2026-11-09",
+     24.65
     ]
    ],
-   "min": 29.5
+   "min": 24.65
   },
   "MLB26727193": {
    "historico": [
@@ -6100,9 +6110,13 @@
     [
      "2026-11-07",
      33.53
+    ],
+    [
+     "2026-11-09",
+     22.9
     ]
    ],
-   "min": 33.15
+   "min": 22.9
   },
   "MLB39369748": {
    "historico": [
@@ -6666,6 +6680,10 @@
     [
      "2026-11-09",
      239.0
+    ],
+    [
+     "2026-11-09",
+     224.57
     ]
    ],
    "min": 224.57
@@ -7393,6 +7411,10 @@
     [
      "2026-11-09",
      22.85
+    ],
+    [
+     "2026-11-09",
+     23.25
     ]
    ],
    "min": 20.38
@@ -8625,6 +8647,10 @@
     [
      "2026-11-09",
      79.99
+    ],
+    [
+     "2026-11-09",
+     70.58
     ]
    ],
    "min": 49.49
@@ -8814,6 +8840,10 @@
     [
      "2026-11-07",
      41.48
+    ],
+    [
+     "2026-11-09",
+     42.42
     ]
    ],
    "min": 41.48
@@ -8905,6 +8935,10 @@
     [
      "2026-11-09",
      81.9
+    ],
+    [
+     "2026-11-09",
+     114.89
     ]
    ],
    "min": 81.9
@@ -9623,28 +9657,8 @@
  },
  "tg_offset": 273517985,
  "vitrine": {
-  "em": "2026-11-09T09:12-03:00",
+  "em": "2026-11-09T09:32-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 179.9,
-    "desconto": 0.628,
-    "id": "MLB77186530",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_634024-MLA116065268517_082026-F.jpg",
-    "link": "https://meli.la/22fkRj4",
-    "preco": 67.0,
-    "titulo": "Maleta 48 Carrinhos + Tapete Pista 40x60 Estacionamento Brinquedo Infantil Presente Criança - Super Brasileiri"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 350.0,
-    "desconto": 0.54,
-    "id": "MLB44958164",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_627665-MLA113620705920_072026-F.jpg",
-    "link": "https://meli.la/1Ed1cyx",
-    "preco": 161.0,
-    "titulo": "Cadeira De Alimentação Bebê Portátil 3em1 Styll Baby Segura Cor Cinza Cor"
-   },
    {
     "categoria": "higiene",
     "de": 399.9,
@@ -9674,6 +9688,16 @@
     "link": "https://meli.la/2XrHALZ",
     "preco": 439.9,
     "titulo": "Conjunto Bebê Conforto Grid Rosa Com Base - Galzerano"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 129.99,
+    "desconto": 0.457,
+    "id": "MLB72656297",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_918081-MLA112807271193_062026-F.jpg",
+    "link": "https://meli.la/1dDaV1U",
+    "preco": 70.58,
+    "titulo": "Carro Hot Wheels Premium Chevrolet K5 Blazer Stranger Things"
    },
    {
     "categoria": "quarto",
