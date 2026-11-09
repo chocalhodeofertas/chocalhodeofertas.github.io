@@ -1564,6 +1564,24 @@
    "status": "encerrado",
    "validade": "2026-11-07T23:59-03:00"
   },
+  "MELIOFF22": {
+   "criado": "2026-11-09T13:47-03:00",
+   "post": 171,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
+  "MELIOFF25": {
+   "criado": "2026-11-09T13:47-03:00",
+   "post": 171,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
+  "MELIVIP20": {
+   "criado": "2026-11-09T13:47-03:00",
+   "post": 171,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
   "MODAAQUI": {
    "criado": "2026-11-07T09:04-03:00",
    "post": 47,
@@ -1581,9 +1599,15 @@
    "post": 168,
    "status": "ativo",
    "validade": "2026-11-12T23:59-03:00"
+  },
+  "PROMOFLASH25": {
+   "criado": "2026-11-09T13:47-03:00",
+   "post": 171,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
   }
  },
- "cupons_ml_ultimo": 6421,
+ "cupons_ml_ultimo": 6422,
  "descoberta_em": "2026-11-09T13:12-03:00",
  "descobertos": {
   "MLB10923645": {
@@ -4552,6 +4576,29 @@
     }
    ],
    "criado": "2026-11-09T13:36-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "171": {
+   "blocos": [
+    {
+     "codigo": "MELIOFF22",
+     "html": "<b>🎟️ MELIOFF22</b> 👉 <b>22% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/3WwOL8j\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "MELIOFF25",
+     "html": "<b>🎟️ MELIOFF25</b> 👉 <b>25% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4BOhXrz\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "PROMOFLASH25",
+     "html": "<b>🎟️ PROMOFLASH25</b> 👉 <b>25% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4kbvvqN\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "MELIVIP20",
+     "html": "<b>🎟️ MELIVIP20</b> 👉 <b>20% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4BS5QcQ\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-09T13:47-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
