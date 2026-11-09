@@ -1,5 +1,5 @@
 {
- "aguardando_link": 33,
+ "aguardando_link": 32,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1531,7 +1531,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 23
+  "2026-11-09": 25
  },
  "cupons": {
   "AUTO70OFF": {
@@ -3768,6 +3768,12 @@
    "quando": "2026-11-07T21:02-03:00",
    "titulo": "Cama Elástica Pula Pula Trampolim JustFun 1,40m com Rede de Proteção e 36 Molas"
   },
+  "MLB20611931": {
+   "desconto": 0.346,
+   "preco": 85.02,
+   "quando": "2026-11-09T14:42-03:00",
+   "titulo": "Sunny Boneco Patrulha Canina 1342 Skye Focos"
+  },
   "MLB20618866": {
    "desconto": 0.497,
    "preco": 439.9,
@@ -3883,8 +3889,10 @@
    "titulo": "Cozinha De Brinquedo Infantil Completa Princess Replay Kids"
   },
   "MLB28717101": {
-   "preco": 269.9,
-   "quando": "2026-11-06T14:34-03:00"
+   "desconto": 0.605,
+   "preco": 259.98,
+   "quando": "2026-11-09T14:42-03:00",
+   "titulo": "Cama Elástica Pula Pula Infantil Trampolim 1,4 Metros Atentu"
   },
   "MLB29573091": {
    "preco": 52.49,
@@ -5021,6 +5029,10 @@
     [
      "2026-11-07",
      38.85
+    ],
+    [
+     "2026-11-09",
+     38.9
     ]
    ],
    "min": 38.85
@@ -5214,9 +5226,13 @@
     [
      "2026-11-06",
      72.44
+    ],
+    [
+     "2026-11-09",
+     71.61
     ]
    ],
-   "min": 72.44
+   "min": 71.61
   },
   "MLB23581207": {
    "historico": [
@@ -9028,9 +9044,13 @@
     [
      "2026-11-07",
      133.9
+    ],
+    [
+     "2026-11-09",
+     122.0
     ]
    ],
-   "min": 133.9
+   "min": 122.0
   },
   "MLB69621080": {
    "historico": [
@@ -9457,9 +9477,13 @@
     [
      "2026-11-07",
      350.55
+    ],
+    [
+     "2026-11-09",
+     340.03
     ]
    ],
-   "min": 350.55
+   "min": 340.03
   },
   "MLB74222754": {
    "historico": [
@@ -10388,6 +10412,10 @@
     [
      "2026-11-09",
      252.99
+    ],
+    [
+     "2026-11-09",
+     317.0
     ]
    ],
    "min": 252.99
@@ -10462,17 +10490,17 @@
  },
  "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T14:22-03:00",
+  "em": "2026-11-09T14:42-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
-    "de": 197.79,
-    "desconto": 0.601,
-    "id": "MLB41517901",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_719969-MLA99465165518_112025-F.jpg",
-    "link": "https://meli.la/19SRyJD",
-    "preco": 78.9,
-    "titulo": "Guitarra E Microfone Infantil Instrumento Brinquedo Musical Cor Azul"
+    "de": 659.0,
+    "desconto": 0.605,
+    "id": "MLB28717101",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_917104-MLA96155675715_102025-F.jpg",
+    "link": "https://meli.la/182h9X2",
+    "preco": 259.98,
+    "titulo": "Cama Elástica Pula Pula Infantil Trampolim 1,4 Metros Atentu"
    },
    {
     "categoria": "brinquedo",
@@ -10623,16 +10651,6 @@
     "link": "https://meli.la/2ShKRwP",
     "preco": 57.8,
     "titulo": "Urso De Pelúcia Teddy Bear Grande Com Laço 50cm Antialérgico Cor Baunilha com Azul Bebe"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 99.99,
-    "desconto": 0.276,
-    "id": "MLB23535413",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_852508-MLU73117589489_112023-F.jpg",
-    "link": "https://meli.la/2TTsbgY",
-    "preco": 72.44,
-    "titulo": "Laptop Infantil Educativo Frozen 8303 Português E Inglês Candide"
    },
    {
     "categoria": "brinquedo",
