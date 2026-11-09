@@ -1,5 +1,5 @@
 {
- "aguardando_link": 32,
+ "aguardando_link": 33,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1531,7 +1531,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 33
+  "2026-11-09": 35
  },
  "cupons": {
   "AUTO70OFF": {
@@ -4511,8 +4511,10 @@
    "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco 127"
   },
   "MLB79313725": {
+   "desconto": 0.52,
    "preco": 48.0,
-   "quando": "2026-11-06T17:15-03:00"
+   "quando": "2026-11-09T18:02-03:00",
+   "titulo": "Celular Brinquedo Recarregável Bebê | Educativo com Sons e Luzes, Substitui o Ce"
   },
   "MLB79381515": {
    "desconto": 0.54,
@@ -4525,6 +4527,12 @@
    "preco": 70.98,
    "quando": "2026-11-07T11:02-03:00",
    "titulo": "Barraca Infantil Ônibus da Patrulha Canina Dobrável, Pop-Up, para Meninos e Meni"
+  },
+  "MLB79736952": {
+   "desconto": 0.301,
+   "preco": 20.9,
+   "quando": "2026-11-09T18:02-03:00",
+   "titulo": "1 Seringa Lavagem Nariz + 1 Aspirador Sugador Catarro Bebê A Rosa-claro"
   },
   "MLB79738780": {
    "desconto": 0.548,
@@ -10181,9 +10189,13 @@
     [
      "2026-11-07",
      134.9
+    ],
+    [
+     "2026-11-09",
+     107.0
     ]
    ],
-   "min": 134.9
+   "min": 107.0
   },
   "MLB78828696": {
    "historico": [
@@ -10623,9 +10635,9 @@
   "brinquedos": "2026-11-08",
   "passeio": "2026-11-09"
  },
- "tg_offset": 273517992,
+ "tg_offset": 273517993,
  "vitrine": {
-  "em": "2026-11-09T17:42-03:00",
+  "em": "2026-11-09T18:02-03:00",
   "itens": [
    {
     "categoria": "outros",
@@ -11019,6 +11031,6 @@
    }
   ]
  },
- "vitrine_assinatura": "009e67ed3d95a5b6afe136206e4ad158fea7c8d5",
- "vitrine_publicada_em": "2026-11-09T17:02-03:00"
+ "vitrine_assinatura": "0c8cc78f2786219233e71475674d98b4f8e1f39a",
+ "vitrine_publicada_em": "2026-11-09T18:02-03:00"
 }
