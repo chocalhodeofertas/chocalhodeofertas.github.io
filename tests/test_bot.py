@@ -944,3 +944,34 @@ def test_areas_novas_filtros_e_comando():
     assert {"roupa", "game", "livro", "escola", "esporte", "casa", "festa"} <= cats
     assert fora_da_faixa("Headset Gamer RGB Nintendo Switch", "game")
     assert fora_da_faixa("Lanterna Tática LED Recarregável", "roupa", "infantil")
+
+
+def test_buscar_pegar_e_vigiar():
+    from bot import busca, lote
+
+    class MLBusca:
+        def categoria_da_busca(self, termo):
+            return "MLB1387", "Cadeiras de Bebê para Carro"
+
+        def mais_vendidos(self, c):
+            return [("catalogo", "MLB2"), ("catalogo", "MLB9")]
+
+        def buscar_produtos(self, termo, limite=10):
+            return [("MLB1", "Cadeirinha A"), ("MLB2", "Cadeirinha B")]
+
+        def catalogo(self, pid, titulo=None, imagem=None):
+            nomes = {"MLB1": "Cadeirinha Isofix A", "MLB2": "Cadeirinha Isofix B", "MLB9": "Cadeirinha Isofix C"}
+            return InfoProduto(pid, nomes[pid], 100, 150 if pid == "MLB2" else None, None, True, item_id=pid + "0")
+
+    e = est.novo()
+    txt = busca.buscar("cadeirinha isofix", MLBusca(), e)
+    assert "1. Cadeirinha Isofix B" in txt and "top 1 mais vendidos" in txt
+    tg = TGFalso()
+    assert busca.pegar("1 2", tg, e, cfg_cmd(), AGORA) is None
+    assert len(e["lote_extra"]["ids"]) == 2 and e["manuais"]["MLB2"]["pedido"]
+    ok, msg = lote.aplicar_resposta(e, "https://meli.la/aaa https://meli.la/bbb")
+    assert ok and e["links"]["MLB2"] == "https://meli.la/aaa"
+    assert "Vigiando" in busca.vigiar("Carrinho Travel System", e)
+    busca.atualizar_vigias(MLBusca(), e, AGORA)
+    assert e["manuais"]["MLB1"]["vigia"] == "carrinho travel system"
+    assert "Parei" in busca.parar("carrinho travel system", e)

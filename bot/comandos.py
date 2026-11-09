@@ -35,6 +35,8 @@ AJUDA = (
     "(com a data, eu marco como encerrado sozinho quando vencer)\n\n"
     "❌ <b>esgotou</b> + código → aviso no canal que o cupom acabou\n\n"
     "📊 <b>resumo</b> → números do canal agora\n\n"
+    "🔎 <b>buscar</b> + produto → melhores ofertas agora · <b>pegar 1 3</b> → manda para o Linkbuilder\n"
+    "👀 <b>vigiar</b> + produto → aviso quando entrar em promoção · <b>vigias</b> · <b>parar</b> + produto\n"
     "🗂️ <b>categorias</b> → prévia das categorias novas (roupas, games, livros...) · <b>aprovar categorias</b>\n"
     "🎯 <b>temas</b> → quantas promoções cada tema tem agora\n"
     "🎠 <b>carrossel brinquedos</b> / 🎬 <b>reel brinquedos</b> → temático do tema que você escolher\n"
@@ -387,6 +389,21 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
         from . import conteudo
         conteudo.montar_e_enviar(tg, cfg.admin_chat, estado, agora, rng=rng, session=session)
         return None
+    if n.startswith(("buscar ", "/buscar ")):
+        from . import busca
+        return busca.buscar(t.split(" ", 1)[1], ml, estado)
+    if n.startswith(("pegar", "/pegar")):
+        from . import busca
+        return busca.pegar(t.split(" ", 1)[1] if " " in t else "", tg, estado, cfg, agora)
+    if n.startswith(("vigiar ", "/vigiar ")):
+        from . import busca
+        return busca.vigiar(t.split(" ", 1)[1], estado)
+    if n in ("vigias", "/vigias"):
+        from . import busca
+        return busca.listar_vigias(estado)
+    if n.startswith(("parar ", "/parar ")):
+        from . import busca
+        return busca.parar(t.split(" ", 1)[1], estado)
     if n in ("categorias", "/categorias"):
         return relatorio_areas(tg, ml, cfg, log=lambda m: None)
     if n in ("aprovar categorias", "/aprovar_categorias"):
@@ -413,7 +430,8 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
     links = lote.RE_MELI.findall(t)
     if links:
         pendente = estado.get("lote")
-        if pendente and len(links) == len(pendente["ids"]):
+        extra = estado.get("lote_extra")
+        if (pendente and len(links) == len(pendente["ids"])) or (extra and len(links) == len(extra["ids"])):
             return lote.aplicar_resposta(estado, t)[1]
         if len(links) <= MAX_AVULSOS:
             respostas = [postar_link(l, tg, ml, estado, cfg, agora, session, rng)

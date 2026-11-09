@@ -150,6 +150,16 @@ class MercadoLivre:
             if c.get("type") in tipos
         ]
 
+    def buscar_produtos(self, termo, limite=10):
+        """Busca no catálogo do ML (a busca de anúncios é bloqueada para o token do app)."""
+        dados = self._get("/products/search", {"status": "active", "site_id": "MLB", "q": termo, "limit": limite})
+        return [(r["id"], r.get("name") or "") for r in dados.get("results") or [] if r.get("id")]
+
+    def categoria_da_busca(self, termo):
+        """Categoria do ML que mais combina com o termo (ex.: 'cadeirinha' → Cadeiras de Bebê para Carro)."""
+        dados = self._get("/sites/MLB/domain_discovery/search", {"q": termo, "limit": 1})
+        return (dados[0].get("category_id"), dados[0].get("category_name")) if dados else (None, None)
+
     def categorias_raiz(self):
         dados = self._get("/sites/MLB/categories")
         return [(c["id"], c["name"]) for c in dados or []]

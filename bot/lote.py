@@ -65,8 +65,14 @@ def aplicar_resposta(estado, texto):
     """Associa os meli.la do texto ao lote pendente. Retorna (ok, mensagem)."""
     links = RE_MELI.findall(texto or "")
     lote = estado.get("lote")
+    extra = estado.get("lote_extra")
     if not links:
         return False, None
+    if extra and len(links) == len(extra["ids"]) and not (lote and len(links) == len(lote["ids"])):
+        for pid, link in zip(extra["ids"], links):
+            estado["links"][pid] = link
+        estado["lote_extra"] = None
+        return True, f"✅ {len(links)} links da sua busca salvos! Entram no canal nas próximas rodadas."
     if not lote:
         return False, "Recebi links, mas não há nenhum lote pendente."
     if len(links) != len(lote["ids"]):

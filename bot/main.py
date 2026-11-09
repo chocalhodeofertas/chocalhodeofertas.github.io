@@ -205,6 +205,9 @@ def montar_lista(cfg: Config, da_planilha, estado):
 
 
 def atualizar_descoberta(cfg: Config, ml, estado, agora, forcar=False):
+    from .busca import atualizar_vigias
+
+    atualizar_vigias(ml, estado, agora, log)
     ultima = estado.get("descoberta_em")
     if not forcar and ultima:
         horas = (agora - datetime.fromisoformat(ultima)).total_seconds() / 3600
@@ -308,7 +311,24 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
             candidatas.append(oferta)
 
     posicoes = {pid: d.get("pos") for pid, d in estado.get("descobertos", {}).items()}
-    candidatas.sort(key=lambda o: pontuacao(o, posicoes.get(o.id)), reverse=True)
+    manuais = estado.get("manuais", {})
+    # Pedidos seus (busca/vigia) passam na frente
+    candidatas.sort(key=lambda o: pontuacao(o, posicoes.get(o.id))
+                    * (2.0 if (manuais.get(o.id) or {}).get("pedido") or (manuais.get(o.id) or {}).get("vigia") else 1.0),
+                    reverse=True)
+    if modo == "normal" and cfg.admin_chat:
+        avisados = estado.setdefault("vigias_avisados", {})
+        hoje = agora.date().isoformat()
+        for o in candidatas:
+            termo = (manuais.get(o.id) or {}).get("vigia")
+            if termo and avisados.get(o.id) != hoje:
+                avisados[o.id] = hoje
+                try:
+                    tg.enviar_texto(cfg.admin_chat, f"🔔 Promoção de <b>{html.escape(termo)}</b>: "
+                                    f"{html.escape(o.titulo[:70])} por {mensagens.brl(o.preco)} "
+                                    f"(-{round(o.desconto * 100)}%)\nhttps://www.mercadolivre.com.br/p/{o.id}", html=True)
+                except TelegramErro:
+                    pass
     log(f"{len(produtos)} produtos verificados, {len(candidatas)} ofertas encontradas.")
 
     if modo == "normal" and cfg.link_modo == "oficial":
