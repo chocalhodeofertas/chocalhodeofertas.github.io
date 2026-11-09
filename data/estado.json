@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 3
+  "2026-11-09": 5
  },
  "cupons": {
   "MELIOFERTAS": {
@@ -3899,9 +3899,9 @@
    "titulo": "LEGO Marvel - Robô do Homem-Aranha vs Anti-Venom - 107 Peças - 76308"
   },
   "MLB44958164": {
-   "desconto": 0.486,
-   "preco": 180.0,
-   "quando": "2026-11-08T12:33-03:00",
+   "desconto": 0.54,
+   "preco": 161.0,
+   "quando": "2026-11-09T09:12-03:00",
    "titulo": "Cadeira De Alimentação Bebê Portátil 3em1 Styll Baby Segura Cor Cinza Cor"
   },
   "MLB45286830": {
@@ -4317,8 +4317,10 @@
    "titulo": "Tapete De Atividades Para Bebes Almofada De Água Inflável Interativo Aquário Sen"
   },
   "MLB77186530": {
-   "preco": 72.0,
-   "quando": "2026-11-06T14:34-03:00"
+   "desconto": 0.628,
+   "preco": 67.0,
+   "quando": "2026-11-09T09:12-03:00",
+   "titulo": "Maleta 48 Carrinhos + Tapete Pista 40x60 Estacionamento Brinquedo Infantil Prese"
   },
   "MLB77329018": {
    "desconto": 0.516,
@@ -5651,6 +5653,10 @@
     [
      "2026-11-09",
      359.9
+    ],
+    [
+     "2026-11-09",
+     299.9
     ]
    ],
    "min": 299.9
@@ -7599,6 +7605,10 @@
     [
      "2026-11-09",
      79.99
+    ],
+    [
+     "2026-11-09",
+     129.44
     ]
    ],
    "min": 56.89
@@ -8434,9 +8444,13 @@
     [
      "2026-11-06",
      34.9
+    ],
+    [
+     "2026-11-09",
+     33.33
     ]
    ],
-   "min": 33.9
+   "min": 33.33
   },
   "MLB69818712": {
    "historico": [
@@ -8607,6 +8621,10 @@
     [
      "2026-11-09",
      75.61
+    ],
+    [
+     "2026-11-09",
+     79.99
     ]
    ],
    "min": 49.49
@@ -9605,7 +9623,7 @@
  },
  "tg_offset": 273517985,
  "vitrine": {
-  "em": "2026-11-09T08:52-03:00",
+  "em": "2026-11-09T09:12-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -10189,6 +10207,6 @@
    }
   ]
  },
- "vitrine_assinatura": "f3347a5692a76d5dd12507fb1938d59852ede06e",
- "vitrine_publicada_em": "2026-11-09T08:02-03:00"
+ "vitrine_assinatura": "0617e79cb5a39158ca9756e20efff2eefba0e99b",
+ "vitrine_publicada_em": "2026-11-09T09:12-03:00"
 }
