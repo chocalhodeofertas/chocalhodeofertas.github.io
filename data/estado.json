@@ -1,5 +1,5 @@
 {
- "aguardando_link": 18,
+ "aguardando_link": 20,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 9
+  "2026-11-09": 11
  },
  "cupons": {
   "HOJEMESMO": {
@@ -3710,6 +3710,12 @@
    "quando": "2026-11-07T21:02-03:00",
    "titulo": "Cama Elástica Pula Pula Trampolim JustFun 1,40m com Rede de Proteção e 36 Molas"
   },
+  "MLB20618866": {
+   "desconto": 0.497,
+   "preco": 439.9,
+   "quando": "2026-11-09T11:12-03:00",
+   "titulo": "Conjunto Bebê Conforto Grid Rosa Com Base - Galzerano"
+  },
   "MLB23581207": {
    "desconto": 0.528,
    "preco": 188.91,
@@ -4141,6 +4147,12 @@
   "MLB63152047": {
    "preco": 54.9,
    "quando": "2026-11-06T12:32-03:00"
+  },
+  "MLB63158085": {
+   "desconto": 0.5,
+   "preco": 115.0,
+   "quando": "2026-11-09T11:12-03:00",
+   "titulo": "Mobile Musical Berço Bebê Projetor Estrelas Controle Remoto Rotação 360"
   },
   "MLB63830721": {
    "desconto": 0.342,
@@ -5361,9 +5373,13 @@
     [
      "2026-11-08",
      155.9
+    ],
+    [
+     "2026-11-09",
+     134.1
     ]
    ],
-   "min": 139.9
+   "min": 134.1
   },
   "MLB24679082": {
    "historico": [
@@ -6794,6 +6810,10 @@
     [
      "2026-11-08",
      143.99
+    ],
+    [
+     "2026-11-09",
+     199.0
     ]
    ],
    "min": 143.99
@@ -7078,6 +7098,10 @@
     [
      "2026-11-07",
      215.64
+    ],
+    [
+     "2026-11-09",
+     218.9
     ]
    ],
    "min": 215.64
@@ -8200,6 +8224,10 @@
     [
      "2026-11-06",
      59.9
+    ],
+    [
+     "2026-11-09",
+     69.99
     ]
    ],
    "min": 59.9
@@ -8367,6 +8395,10 @@
     [
      "2026-11-08",
      44.99
+    ],
+    [
+     "2026-11-09",
+     39.99
     ]
    ],
    "min": 39.95
@@ -8936,9 +8968,13 @@
     [
      "2026-11-09",
      183.02
+    ],
+    [
+     "2026-11-09",
+     180.41
     ]
    ],
-   "min": 183.02
+   "min": 180.41
   },
   "MLB74913640": {
    "historico": [
@@ -9735,7 +9771,7 @@
  },
  "tg_offset": 273517986,
  "vitrine": {
-  "em": "2026-11-09T10:52-03:00",
+  "em": "2026-11-09T11:12-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -10238,16 +10274,6 @@
     "titulo": "Jogo Stop Eletrônico Trava Letras Leeboom Com Temporizador Educativo 10 Segundos Em Português Cor Vermelho"
    },
    {
-    "categoria": "brinquedo",
-    "de": 280.0,
-    "desconto": 0.23,
-    "id": "MLB56415193",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_837115-MLA99440131532_112025-F.jpg",
-    "link": "https://meli.la/2DVXn4S",
-    "preco": 215.64,
-    "titulo": "Patins Inline Ajustável Para Crianças com Rodas de Gel e LED"
-   },
-   {
     "categoria": "passeio",
     "de": 439.0,
     "desconto": 0.244,
@@ -10299,6 +10325,6 @@
    }
   ]
  },
- "vitrine_assinatura": "e7a284eec24391ded3b395c23f6d386b929a43a3",
- "vitrine_publicada_em": "2026-11-09T10:12-03:00"
+ "vitrine_assinatura": "c6676d0f570904c1b983025fdacdebbdb48bd1d5",
+ "vitrine_publicada_em": "2026-11-09T11:12-03:00"
 }
