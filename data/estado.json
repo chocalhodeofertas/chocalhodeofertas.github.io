@@ -1,5 +1,5 @@
 {
- "aguardando_link": 31,
+ "aguardando_link": 32,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1531,7 +1531,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 26
+  "2026-11-09": 27
  },
  "cupons": {
   "AUTO70OFF": {
@@ -3901,8 +3901,10 @@
    "titulo": "Cama Elástica Pula Pula Infantil Trampolim 1,4 Metros Atentu"
   },
   "MLB29573091": {
-   "preco": 52.49,
-   "quando": "2026-11-06T15:14-03:00"
+   "desconto": 0.58,
+   "preco": 50.41,
+   "quando": "2026-11-09T15:22-03:00",
+   "titulo": "Kit Brinquedo Comidinha Infantil Frutas Velcro Frigideira 30 peças"
   },
   "MLB29756545": {
    "desconto": 0.351,
@@ -7865,6 +7867,10 @@
     [
      "2026-11-09",
      89.51
+    ],
+    [
+     "2026-11-09",
+     88.11
     ]
    ],
    "min": 69.25
@@ -9092,6 +9098,10 @@
     [
      "2026-11-08",
      154.9
+    ],
+    [
+     "2026-11-09",
+     179.9
     ]
    ],
    "min": 108.52
@@ -10500,17 +10510,17 @@
  },
  "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T15:02-03:00",
+  "em": "2026-11-09T15:22-03:00",
   "itens": [
    {
-    "categoria": "jogo",
-    "de": 189.9,
-    "desconto": 0.319,
-    "id": "MLB19807041",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_760358-MLA114604635979_072026-F.jpg",
-    "link": "https://meli.la/1D7g9GT",
-    "preco": 129.4,
-    "titulo": "Taco De Sinuca Bilhar Maxxi Cruz De Malta Profissional Preto Peso 480 g"
+    "categoria": "brinquedo",
+    "de": 119.95,
+    "desconto": 0.58,
+    "id": "MLB29573091",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_946445-MLA116669294560_092026-F.jpg",
+    "link": "https://meli.la/1dhm1rT",
+    "preco": 50.41,
+    "titulo": "Kit Brinquedo Comidinha Infantil Frutas Velcro Frigideira 30 peças"
    },
    {
     "categoria": "brinquedo",
