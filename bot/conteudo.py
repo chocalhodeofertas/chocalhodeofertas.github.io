@@ -170,16 +170,11 @@ LEGENDAS_FIXADOS = {
         "🔗 Entre no grupo gratuito pelo link da bio (WhatsApp ou Telegram).",
         "#publi"]),
     "perguntas": "\n".join([
-        "Perguntas que sempre chegam pra gente 💬",
+        "Separamos as dúvidas que mais chegam pra gente 💬",
         "",
-        "É de graça? Sim, o grupo e o canal são gratuitos.",
-        "Vocês vendem? Não: a compra é direto na loja oficial.",
-        "Como vocês ganham? Com links de afiliado, sem custo extra pra você.",
-        "Posso sair quando quiser? Claro, a qualquer momento.",
-        "",
-        "Ficou alguma dúvida? Manda aqui nos comentários!",
+        "Ficou com alguma outra? Manda aqui nos comentários!",
         "🔗 Link do grupo na bio.",
-        "#publi"]),
+        "Contém links de afiliado. #publi"]),
 }
 
 
@@ -346,3 +341,63 @@ def talvez_enviar(tg, cfg, estado, agora, hora=10, log=print):
         montar_e_enviar(tg, cfg.admin_chat, estado, agora, log=log)
     except TelegramErro as e:
         log(f"Aviso: não consegui mandar o pacote do dia: {e}")
+
+
+# ---------- Peças sob demanda (você escolhe no dia) ----------
+
+NOMES_TEMA = {t.nome: t for t in TEMAS}
+
+
+def listar_temas(estado, agora):
+    """Quantas promoções cada tema tem agora, para você escolher o do dia."""
+    itens = _itens(estado)
+    linhas = ["🎯 <b>Temas com promoções agora</b>", ""]
+    for t in TEMAS:
+        cand = _candidatos(t, itens, set())
+        if cand:
+            top = ", ".join(_curto(i["titulo"], 28) for i in cand[:3])
+            linhas.append(f"• <b>{t.nome}</b> — {len(cand)} ofertas (ex.: {top})")
+    linhas += ["", "Para gerar: <b>carrossel brinquedos</b> ou <b>reel brinquedos</b> (troque pelo tema).",
+               "Para o post de um produto: <b>insta</b> + o link meli.la dele."]
+    return "\n".join(linhas)
+
+
+def enviar_tema(tg, chat, estado, agora, nome, formato="carrossel", rng=random, session=None):
+    tema = NOMES_TEMA.get(nome)
+    if not tema:
+        return f"Não conheço o tema “{nome}”. Opções: {', '.join(NOMES_TEMA)}."
+    cand = _candidatos(tema, _itens(estado), set())
+    if len(cand) < 3:
+        return f"O tema <b>{nome}</b> tem só {len(cand)} oferta(s) agora; preciso de pelo menos 3."
+    capa_foto = arte.foto_de_capa(tema.fotos, rng)
+    if capa_foto is None:
+        return f"Faltam fotos de capa para o tema <b>{nome}</b>."
+    carr = cand[:4]
+    ofs = [_oferta(i) for i in carr]
+    fotos = [arte.baixar_foto(o.imagem, session) for o in ofs]
+    titulo = rng.choice(tema.titulos)
+    estilo = rng.choice(["grande", "faixas"])
+    if formato == "reel":
+        mp4 = arte.reel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
+        if not mp4:
+            return "⚠️ Não consegui montar o vídeo agora. Tente o carrossel."
+        tg.enviar_video(chat, mp4, "🎬 Reel temático (escolha a música no Instagram)")
+        capa_916 = arte.capa(capa_foto, titulo, tema.destaque, estilo, L=1080, A=1920)
+        tg.enviar_documento(chat, arte.png(capa_916), "capa_reel.png",
+                            "🖼️ Capa do Reel: em 'Editar capa', escolha 'Adicionar da galeria'", "image/png")
+    else:
+        slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
+        tg.enviar_album(chat, [arte.png(s) for s in slides], "🎠 Carrossel temático (na ordem)")
+    tg.enviar_texto(chat, legenda_carrossel(tema, ofs, rng))
+    for o, f in zip(ofs, fotos):
+        tg.enviar_foto(chat, arte.png(arte.story(o, f, session=session)), f"📱 Story — link para o adesivo:\n{o.link}")
+    _registrar_tema(estado, agora, tema)
+    return None
+
+
+def enviar_post_produto(tg, chat, oferta, rng=random, session=None):
+    """Post único do Instagram (com 'Link na bio'), legenda e story de um produto que você escolheu."""
+    tg.enviar_foto(chat, arte.gerar(oferta, session=session, cta="Link na bio"), "🖼️ Post do produto")
+    tg.enviar_texto(chat, legenda_post(oferta, rng))
+    tg.enviar_foto(chat, arte.png(arte.story(oferta, None, session=session)),
+                   f"📱 Story — link para o adesivo:\n{oferta.link}")

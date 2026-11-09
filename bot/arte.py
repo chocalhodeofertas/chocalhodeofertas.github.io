@@ -499,27 +499,87 @@ INSTITUCIONAIS = {
         ],
     },
     "perguntas": {
-        "capa": ("Perguntas frequentes", "grande", ["familia", "gestante"]),
+        "capa": ("Perguntas frequentes", "grande", []),
         "slides": [
-            (None, "É de graça?", "Sim. O grupo e o canal são gratuitos.\n"
-                                  "E você não paga nada a mais pelos produtos."),
+            (None, "É de graça?", "Sim, entrar no grupo e no canal é gratuito.\n"
+                                  "Você só paga pelo produto, se decidir comprar, e direto na loja."),
             (None, "Vocês vendem os produtos?", "Não. A compra é feita direto na loja oficial.\n"
                                                 "Entrega, troca e garantia são com a loja."),
-            (None, "Como vocês ganham?", "Com links de afiliado: quando alguém compra pelo link, "
-                                         "a loja nos paga uma pequena comissão."),
-            (None, "Posso sair quando quiser?", "Claro, a qualquer momento.\n"
-                                                "No grupo, só os administradores postam: nada de spam."),
+            (None, "É seguro comprar pelo link?", "Sim. O link leva para a página oficial do produto na loja, "
+                                                  "e o pagamento é feito lá, como numa compra normal."),
+            (None, "Como me proteger de golpes?", "A gente nunca pede Pix, senha ou dados pessoais, e não cobra "
+                                                  "nada para entrar no grupo.\nDesconfie de perfis parecidos com o "
+                                                  "nosso: o oficial é o @chocalhodeofertas.\nE finalize a compra "
+                                                  "sempre na página oficial da loja."),
+            (None, "Os produtos são originais?", "Quem vende é a loja. Antes de comprar, vale conferir a reputação "
+                                                 "do vendedor e as avaliações de quem já comprou."),
+            (None, "Por que o preço mudou quando abri o link?", "Algumas promoções duram poucas horas ou acabam "
+                                                                "quando o estoque termina.\nPor isso a gente posta "
+                                                                "assim que encontra."),
+            (None, "Posso pedir um produto específico?", "Pode! Manda no direct o que você está procurando, e a "
+                                                         "gente fica de olho nas promoções dele."),
         ],
     },
 }
 
 
+def _balao(d, x, y, w, h, cor, cor_txt, texto="?"):
+    d.rounded_rectangle([x, y, x + w, y + h], radius=h // 3, fill=cor)
+    d.polygon([(x + w * 0.22, y + h - 2), (x + w * 0.22, y + h + h * 0.32), (x + w * 0.42, y + h - 2)], fill=cor)
+    d.text((x + w / 2, y + h / 2), texto, font=_fredoka(int(h * 0.62)), fill=cor_txt, anchor="mm")
+
+
+def capa_marca(nome, L=1080, A=1350):
+    """Capas dos posts da marca: identidade visual, sem foto."""
+    if nome == "o_que_e":
+        img = _fundo(L, A)
+        d = ImageDraw.Draw(img)
+        ic = _icone(640)
+        img.paste(ic, ((L - ic.width) // 2, 110), ic)
+        f = _fredoka(92)
+        d.text((L // 2, 900), "Prazer,", font=f, fill=UVA, anchor="ms")
+        d.text((L // 2, 1010), "Chocalho de Ofertas", font=f, fill=PINK, anchor="ms")
+        _pilula(d, ((L - d.textlength("para famílias que amam economizar", font=_poppins(34, "SemiBold")) - 68) / 2, 1070),
+                "para famílias que amam economizar", _poppins(34, "SemiBold"), UVA, BRANCO, pad=(34, 14))
+    elif nome == "como_funciona":
+        img = Image.new("RGB", (L, A), UVA)
+        d = ImageDraw.Draw(img)
+        f = _fredoka(140)
+        d.text((L // 2, 430), "Como", font=f, fill=BRANCO, anchor="ms")
+        d.text((L // 2, 580), "funciona", font=f, fill=BRANCO, anchor="ms")
+        fp = _fredoka(48)
+        t = "em 4 passos"
+        w = d.textlength(t, font=fp) + 90
+        d.rounded_rectangle([(L - w) / 2, 640, (L + w) / 2, 730], radius=45, fill=PINK)
+        d.text((L // 2, 685), t, font=fp, fill=BRANCO, anchor="mm")
+        for k in range(4):
+            cx = L // 2 + (k - 1.5) * 150
+            d.ellipse([cx - 52, 800, cx + 52, 904], outline=LAVANDA_2, width=6)
+            d.text((cx, 852), str(k + 1), font=_fredoka(60), fill=LAVANDA_2, anchor="mm")
+        ic = _icone(300)
+        img.paste(ic, ((L - ic.width) // 2, 980), ic)
+    else:  # perguntas
+        img = Image.new("RGB", (L, A), PINK)
+        d = ImageDraw.Draw(img)
+        _balao(d, 120, 150, 220, 160, BRANCO, PINK)
+        _balao(d, 700, 110, 260, 190, UVA, BRANCO)
+        _balao(d, 820, 980, 170, 130, BRANCO, PINK)
+        f = _fredoka(130)
+        d.text((L // 2, 560), "Perguntas", font=f, fill=BRANCO, anchor="ms")
+        d.text((L // 2, 700), "frequentes", font=f, fill=BRANCO, anchor="ms")
+        d.text((L // 2, 790), "as dúvidas que mais chegam pra gente", font=_poppins(36, "SemiBold"), fill=UVA, anchor="ms")
+        ic = _icone(340)
+        img.paste(ic, ((L - ic.width) // 2 - 80, 900), ic)
+    d.text((L // 2, A - 50), ARROBA, font=_poppins(26, "SemiBold"), fill=SUAVE if nome == "o_que_e" else LAVANDA_2,
+           anchor="mm")
+    return img
+
+
 def institucional(nome, rng=random):
     """Slides de um post fixado (capa com foto + explicação + como entrar no grupo)."""
     cfg = INSTITUCIONAIS[nome]
-    titulo, estilo, temas = cfg["capa"]
     n = len(cfg["slides"])
-    return ([capa(foto_de_capa(temas, rng), titulo, None, estilo)]
+    return ([capa_marca(nome)]
             + [slide_texto(num, t, txt, indice=f"{k}/{n}") for k, (num, t, txt) in enumerate(cfg["slides"], 1)]
             + [final_grupo()])
 

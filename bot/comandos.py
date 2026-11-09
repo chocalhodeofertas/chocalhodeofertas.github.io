@@ -35,7 +35,9 @@ AJUDA = (
     "(com a data, eu marco como encerrado sozinho quando vencer)\n\n"
     "❌ <b>esgotou</b> + código → aviso no canal que o cupom acabou\n\n"
     "📊 <b>resumo</b> → números do canal agora\n\n"
-    "📦 <b>pacote</b> → artes do dia para o Instagram (carrossel, Reel, posts e stories)\n\n"
+    "🎯 <b>temas</b> → quantas promoções cada tema tem agora\n"
+    "🎠 <b>carrossel brinquedos</b> / 🎬 <b>reel brinquedos</b> → temático do tema que você escolher\n"
+    "🖼️ <b>insta</b> + link meli.la → post, legenda e story do produto escolhido\n\n"
     "📦 Para os lotes do Linkbuilder, cole todos os links gerados numa mensagem só.\n\n"
     "<i>Eu leio as mensagens a cada 20 min, das 8h às 22h.</i>"
 )
@@ -124,6 +126,41 @@ def postar_link(link, tg, ml, estado, cfg, agora, session=None, rng=random):
         pass
     desc = f" (-{round(oferta.desconto * 100)}%)" if de else ""
     return f"✅ Postado: {info.titulo[:70]} — {mensagens.brl(preco)}{desc}"
+
+
+def _oferta_do_link(link, ml, estado, session=None):
+    """Acha a oferta de um link meli.la: primeiro na vitrine, senão consulta o Mercado Livre."""
+    for i in (estado.get("vitrine") or {}).get("itens", []):
+        if i.get("link") == link:
+            return Oferta(i["id"], i["titulo"], i["preco"], i.get("de"), i.get("desconto") or 0.0,
+                          None, False, link, i.get("imagem"), i.get("categoria", "outros")), None
+    achado = resolver_meli(link, session)
+    if not achado:
+        return None, f"⚠️ Não consegui descobrir o produto de {link}."
+    tipo, pid = achado
+    try:
+        info = ml.catalogo(pid) if tipo == "catalogo" else ml.itens([pid]).get(pid)
+    except (ErroML, AcessoNegado) as e:
+        return None, f"⚠️ Não consegui consultar o produto {pid} ({e})."
+    if not info or not info.preco or not info.disponivel:
+        return None, f"⚠️ O produto {pid} está sem preço ou sem estoque agora."
+    preco = float(info.preco)
+    de = float(info.preco_original) if (info.preco_original or 0) > preco else None
+    return Oferta(pid, info.titulo, preco, de, (1 - preco / de) if de else 0.0,
+                  None, False, link, info.imagem, "outros"), None
+
+
+def postar_insta(link, tg, ml, estado, cfg, session=None, rng=random):
+    """Gera o post do Instagram de um produto escolhido por você (não posta no canal)."""
+    oferta, erro = _oferta_do_link(link, ml, estado, session)
+    if erro:
+        return erro
+    motivo = motivo_bloqueio(oferta.titulo)
+    if motivo:
+        return f"🚫 Não posso usar “{oferta.titulo[:60]}”: {motivo}."
+    from . import conteudo
+    conteudo.enviar_post_produto(tg, cfg.admin_chat, oferta, rng, session)
+    return None
 
 
 RE_CODIGO = re.compile(r"c[oó]digo\s*[:\-]?\s*([A-Za-z0-9_\-]{3,})", re.I)
@@ -306,6 +343,18 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
         from . import conteudo
         conteudo.montar_e_enviar(tg, cfg.admin_chat, estado, agora, rng=rng, session=session)
         return None
+    if n in ("temas", "/temas"):
+        from . import conteudo
+        return conteudo.listar_temas(estado, agora)
+    partes = n.split()
+    if partes and partes[0] in ("carrossel", "reel") and len(partes) >= 2:
+        from . import conteudo
+        return conteudo.enviar_tema(tg, cfg.admin_chat, estado, agora, partes[1], partes[0], rng, session)
+    if partes and partes[0] in ("insta", "/insta"):
+        achados = lote.RE_MELI.findall(t)
+        if not achados:
+            return "Mande <b>insta</b> + o link meli.la do produto."
+        return postar_insta(achados[0], tg, ml, estado, cfg, session, rng)
     links = lote.RE_MELI.findall(t)
     if links:
         pendente = estado.get("lote")
