@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 6
+  "2026-11-09": 8
  },
  "cupons": {
   "HOJEMESMO": {
@@ -3929,9 +3929,9 @@
    "titulo": "Pistola Lança Bolhas de Sabão Vermelha com Luz LED Inclui Líquido"
   },
   "MLB45801082": {
-   "desconto": 0.534,
-   "preco": 69.9,
-   "quando": "2026-11-07T13:32-03:00",
+   "desconto": 0.568,
+   "preco": 64.8,
+   "quando": "2026-11-09T10:12-03:00",
    "titulo": "Tapete De Atividades Musical Bebê Piano Interativo Ginásio Cor Rosa"
   },
   "MLB46681505": {
@@ -4085,9 +4085,9 @@
    "titulo": "Bicicleta De Equilíbrio Infantil Andador Sem Pedal 4 Rodas Amarelo"
   },
   "MLB62416353": {
-   "desconto": 0.435,
-   "preco": 33.9,
-   "quando": "2026-11-07T19:02-03:00",
+   "desconto": 0.483,
+   "preco": 31.0,
+   "quando": "2026-11-09T10:12-03:00",
    "titulo": "Bola Vinil Inflável Kit Com 10 Bolas Infláveis Cores Sortidas 23cm Praia Piscina"
   },
   "MLB62445069": {
@@ -4610,9 +4610,13 @@
     [
      "2026-11-07",
      39.99
+    ],
+    [
+     "2026-11-09",
+     38.99
     ]
    ],
-   "min": 39.99
+   "min": 38.99
   },
   "MLB18392841": {
    "historico": [
@@ -5658,9 +5662,13 @@
     [
      "2026-11-07",
      96.61
+    ],
+    [
+     "2026-11-09",
+     95.99
     ]
    ],
-   "min": 96.61
+   "min": 95.99
   },
   "MLB27411314": {
    "historico": [
@@ -5818,9 +5826,13 @@
     [
      "2026-11-07",
      190.56
+    ],
+    [
+     "2026-11-09",
+     189.99
     ]
    ],
-   "min": 190.56
+   "min": 189.99
   },
   "MLB29261812": {
    "historico": [
@@ -7739,6 +7751,10 @@
     [
      "2026-11-07",
      111.0
+    ],
+    [
+     "2026-11-09",
+     115.0
     ]
    ],
    "min": 111.0
@@ -9690,7 +9706,7 @@
  },
  "tg_offset": 273517986,
  "vitrine": {
-  "em": "2026-11-09T09:52-03:00",
+  "em": "2026-11-09T10:12-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -9721,6 +9737,16 @@
     "link": "https://meli.la/1jDpjpK",
     "preco": 349.8,
     "titulo": "Cadeirinha Automotiva Atentu BS05 para Bebê e Criança de 9 a 36 kg Vermelha"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 229.95,
+    "desconto": 0.5,
+    "id": "MLB63158085",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_630465-MLA119888186361_102026-F.jpg",
+    "link": "https://meli.la/1NqNEGq",
+    "preco": 115.0,
+    "titulo": "Mobile Musical Berço Bebê Projetor Estrelas Controle Remoto Rotação 360"
    },
    {
     "categoria": "passeio",
@@ -10064,16 +10090,6 @@
    },
    {
     "categoria": "brinquedo",
-    "de": 155.98,
-    "desconto": 0.288,
-    "id": "MLB63158085",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_630465-MLA119888186361_102026-F.jpg",
-    "link": "https://meli.la/1NqNEGq",
-    "preco": 111.0,
-    "titulo": "Mobile Musical Berço Bebê Projetor Estrelas Controle Remoto Rotação 360"
-   },
-   {
-    "categoria": "brinquedo",
     "de": 269.9,
     "desconto": 0.26,
     "id": "MLB56421479",
@@ -10124,6 +10140,16 @@
    },
    {
     "categoria": "brinquedo",
+    "de": 259.9,
+    "desconto": 0.269,
+    "id": "MLB29003787",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_912244-MLA99606170153_112025-F.jpg",
+    "link": "https://meli.la/1sJpwuc",
+    "preco": 189.99,
+    "titulo": "Patinete Infantil Rosa 4 Rodas Luz LED Reforçado Altura Ajustável 70kg Desmontável Menina"
+   },
+   {
+    "categoria": "brinquedo",
     "de": 1099.0,
     "desconto": 0.248,
     "id": "MLB81565711",
@@ -10131,16 +10157,6 @@
     "link": "https://meli.la/1C8TRy9",
     "preco": 826.99,
     "titulo": "Patinete Elétrico Infantil Triciclo PARES Drift Bluetooth 3 Rodas Vermelho Diversão e Lazer + Kit de segurança"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 259.9,
-    "desconto": 0.267,
-    "id": "MLB29003787",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_912244-MLA99606170153_112025-F.jpg",
-    "link": "https://meli.la/1sJpwuc",
-    "preco": 190.56,
-    "titulo": "Patinete Infantil Rosa 4 Rodas Luz LED Reforçado Altura Ajustável 70kg Desmontável Menina"
    },
    {
     "categoria": "outros",
@@ -10284,6 +10300,6 @@
    }
   ]
  },
- "vitrine_assinatura": "0617e79cb5a39158ca9756e20efff2eefba0e99b",
- "vitrine_publicada_em": "2026-11-09T09:12-03:00"
+ "vitrine_assinatura": "e7a284eec24391ded3b395c23f6d386b929a43a3",
+ "vitrine_publicada_em": "2026-11-09T10:12-03:00"
 }
