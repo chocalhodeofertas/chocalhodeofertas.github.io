@@ -1,5 +1,5 @@
 {
- "aguardando_link": 334,
+ "aguardando_link": 335,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 43
+  "2026-11-09": 45
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12234,6 +12234,12 @@
    "quando": "2026-11-08T19:35-03:00",
    "titulo": "Cadeira de Carro Infantil 0 a 36Kg Elite 4 em 1 - Maxi Baby - Preto"
   },
+  "MLB30522365": {
+   "desconto": 0.312,
+   "preco": 330.0,
+   "quando": "2026-11-09T20:32-03:00",
+   "titulo": "Carrinho Guarda Chuva De passeio Maxi Baby Até 15kgs cor Preto"
+  },
   "MLB30890350": {
    "preco": 69.9,
    "quando": "2026-11-06T18:43-03:00"
@@ -12569,6 +12575,12 @@
    "preco": 183.0,
    "quando": "2026-11-09T12:12-03:00",
    "titulo": "Babá Eletrônica Monitor 2.4 Sem Fio Zoom Baby On Maxi Baby"
+  },
+  "MLB62978394": {
+   "desconto": 0.31,
+   "preco": 54.44,
+   "quando": "2026-11-09T20:32-03:00",
+   "titulo": "Kit Bolha de Sabão Babuu com 24 Unidades Para Crianças Brincarem"
   },
   "MLB62978763": {
    "preco": 32.0,
@@ -13235,6 +13247,10 @@
     [
      "2026-11-09",
      10.99
+    ],
+    [
+     "2026-11-09",
+     14.49
     ]
    ],
    "min": 10.99
@@ -13432,6 +13448,10 @@
     [
      "2026-11-09",
      38.99
+    ],
+    [
+     "2026-11-09",
+     39.99
     ]
    ],
    "min": 38.99
@@ -14633,6 +14653,10 @@
     [
      "2026-11-09",
      323.48
+    ],
+    [
+     "2026-11-09",
+     309.0
     ]
    ],
    "min": 309.0
@@ -15066,9 +15090,13 @@
     [
      "2026-11-09",
      62.89
+    ],
+    [
+     "2026-11-09",
+     59.9
     ]
    ],
-   "min": 62.89
+   "min": 59.9
   },
   "MLB24649436": {
    "historico": [
@@ -18488,6 +18516,10 @@
     [
      "2026-11-09",
      28.99
+    ],
+    [
+     "2026-11-09",
+     26.58
     ]
    ],
    "min": 26.58
@@ -19021,9 +19053,13 @@
     [
      "2026-11-09",
      29.67
+    ],
+    [
+     "2026-11-09",
+     29.6
     ]
    ],
-   "min": 29.67
+   "min": 29.6
   },
   "MLB50836898": {
    "historico": [
@@ -21754,9 +21790,13 @@
     [
      "2026-11-07",
      97.99
+    ],
+    [
+     "2026-11-09",
+     92.81
     ]
    ],
-   "min": 97.99
+   "min": 92.81
   },
   "MLB66619941": {
    "historico": [
@@ -22565,6 +22605,10 @@
     [
      "2026-11-09",
      132.0
+    ],
+    [
+     "2026-11-09",
+     133.9
     ]
    ],
    "min": 122.0
@@ -25475,7 +25519,7 @@
  "tg_offset": 273517995,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-09T20:12-03:00",
+  "em": "2026-11-09T20:32-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -25526,6 +25570,16 @@
     "link": "https://meli.la/13aW58Y",
     "preco": 64.9,
     "titulo": "Tapete Infantil De Atividades Piano Musical Com Luz E Som"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 149.9,
+    "desconto": 0.474,
+    "id": "MLB66548761",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_600096-MLA108936306687_032026-F.jpg",
+    "link": "https://meli.la/2VzY1Mf",
+    "preco": 78.9,
+    "titulo": "Cozinha Infantil Completa Com Luz E Som Acessórios Sai Água Rosa"
    },
    {
     "categoria": "outros",
@@ -25626,26 +25680,6 @@
     "link": "https://meli.la/24NuhJE",
     "preco": 99.9,
     "titulo": "Cercadinho Infantil Cercado Bebê Criança Chiqueirinho Seguro Hexagonal JustFun Brinquedos Cinza Rosa Azul"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 98.84,
-    "desconto": 0.318,
-    "id": "MLB81142365",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_644449-MLA118688058770_102026-F.jpg",
-    "link": "https://meli.la/2Lcg3Q4",
-    "preco": 67.39,
-    "titulo": "Kit 9 Carrinhos de Fricção Patrulha Canina Com Personagens Removíveis"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 78.9,
-    "desconto": 0.267,
-    "id": "MLB73156948",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_647260-MLA113092149523_062026-F.jpg",
-    "link": "https://meli.la/2ShKRwP",
-    "preco": 57.8,
-    "titulo": "Urso De Pelúcia Teddy Bear Grande Com Laço 50cm Antialérgico Cor Baunilha com Azul Bebe"
    },
    {
     "categoria": "passeio",
@@ -25776,16 +25810,6 @@
     "link": "https://meli.la/1RGvMdG",
     "preco": 37.49,
     "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": null,
-    "desconto": 0.0,
-    "id": "MLB17489277",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_678645-MLA99447823800_112025-F.jpg",
-    "link": "https://meli.la/1HtwReq",
-    "preco": 104.0,
-    "titulo": "LEGO Classic Maleta Criativa com 213 Peças, Brinquedo de Montar para Crianças"
    }
   ]
  },
