@@ -1,5 +1,5 @@
 {
- "aguardando_link": 21,
+ "aguardando_link": 24,
  "cache": {
   "MLB10923645": [
    "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor",
@@ -1507,7 +1507,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 12
+  "2026-11-09": 14
  },
  "cupons": {
   "HOJEMESMO": {
@@ -3965,8 +3965,10 @@
    "titulo": "Boia Bote Bebê Infantil Inflável Piscina Com Cobertura De Proteção UV Cor Azul/a"
   },
   "MLB50368079": {
-   "preco": 178.38,
-   "quando": "2026-11-06T14:13-03:00"
+   "desconto": 0.646,
+   "preco": 152.98,
+   "quando": "2026-11-09T12:12-03:00",
+   "titulo": "Mesinha Infantil Com 2 Cadeiras Educativa Alfabeto Completo Atacarejo Kids"
   },
   "MLB50967900": {
    "desconto": 0.401,
@@ -4137,8 +4139,10 @@
    "titulo": "Dinossauro Rex de Controle Remoto que Anda e Solta Fumaça com Som Tiranossauro R"
   },
   "MLB62933980": {
-   "preco": 205.99,
-   "quando": "2026-11-06T16:35-03:00"
+   "desconto": 0.634,
+   "preco": 183.0,
+   "quando": "2026-11-09T12:12-03:00",
+   "titulo": "Babá Eletrônica Monitor 2.4 Sem Fio Zoom Baby On Maxi Baby"
   },
   "MLB62978763": {
    "preco": 32.0,
@@ -4508,9 +4512,13 @@
     [
      "2026-11-09",
      159.0
+    ],
+    [
+     "2026-11-09",
+     139.0
     ]
    ],
-   "min": 139.9
+   "min": 139.0
   },
   "MLB17335831": {
    "historico": [
@@ -4781,9 +4789,13 @@
     [
      "2026-11-06",
      319.13
+    ],
+    [
+     "2026-11-09",
+     296.01
     ]
    ],
-   "min": 319.13
+   "min": 296.01
   },
   "MLB19807041": {
    "historico": [
@@ -4999,6 +5011,10 @@
     [
      "2026-11-09",
      699.9
+    ],
+    [
+     "2026-11-09",
+     779.9
     ]
    ],
    "min": 699.9
@@ -5082,6 +5098,10 @@
     [
      "2026-11-09",
      152.56
+    ],
+    [
+     "2026-11-09",
+     168.9
     ]
    ],
    "min": 152.56
@@ -5479,9 +5499,13 @@
     [
      "2026-11-08",
      899.9
+    ],
+    [
+     "2026-11-09",
+     630.62
     ]
    ],
-   "min": 872.9
+   "min": 630.62
   },
   "MLB24812026": {
    "historico": [
@@ -5553,6 +5577,10 @@
     [
      "2026-11-09",
      118.8
+    ],
+    [
+     "2026-11-09",
+     123.5
     ]
    ],
    "min": 118.8
@@ -5611,9 +5639,13 @@
     [
      "2026-11-08",
      799.9
+    ],
+    [
+     "2026-11-09",
+     791.9
     ]
    ],
-   "min": 799.9
+   "min": 791.9
   },
   "MLB26712966": {
    "historico": [
@@ -5839,6 +5871,10 @@
     [
      "2026-11-08",
      22.42
+    ],
+    [
+     "2026-11-09",
+     22.0
     ]
    ],
    "min": 18.43
@@ -5919,9 +5955,13 @@
     [
      "2026-11-06",
      52.49
+    ],
+    [
+     "2026-11-09",
+     50.41
     ]
    ],
-   "min": 52.49
+   "min": 50.41
   },
   "MLB29756545": {
    "historico": [
@@ -5936,18 +5976,26 @@
     [
      "2026-11-08",
      434.99
+    ],
+    [
+     "2026-11-09",
+     368.28
     ]
    ],
-   "min": 434.99
+   "min": 368.28
   },
   "MLB30522365": {
    "historico": [
     [
      "2026-11-07",
      330.0
+    ],
+    [
+     "2026-11-09",
+     319.0
     ]
    ],
-   "min": 330.0
+   "min": 319.0
   },
   "MLB30890350": {
    "historico": [
@@ -6218,9 +6266,13 @@
     [
      "2026-11-09",
      22.9
+    ],
+    [
+     "2026-11-09",
+     22.69
     ]
    ],
-   "min": 22.9
+   "min": 22.69
   },
   "MLB39369748": {
    "historico": [
@@ -6869,9 +6921,13 @@
     [
      "2026-11-09",
      172.56
+    ],
+    [
+     "2026-11-09",
+     152.98
     ]
    ],
-   "min": 172.56
+   "min": 152.98
   },
   "MLB50869637": {
    "historico": [
@@ -6891,6 +6947,10 @@
     [
      "2026-11-09",
      89.2
+    ],
+    [
+     "2026-11-09",
+     89.3
     ]
    ],
    "min": 89.2
@@ -6970,9 +7030,13 @@
     [
      "2026-11-07",
      268.98
+    ],
+    [
+     "2026-11-09",
+     257.0
     ]
    ],
-   "min": 268.98
+   "min": 257.0
   },
   "MLB53308919": {
    "historico": [
@@ -6992,9 +7056,13 @@
     [
      "2026-11-06",
      419.99
+    ],
+    [
+     "2026-11-09",
+     372.24
     ]
    ],
-   "min": 419.99
+   "min": 372.24
   },
   "MLB54068547": {
    "historico": [
@@ -7065,9 +7133,13 @@
     [
      "2026-11-09",
      321.0
+    ],
+    [
+     "2026-11-09",
+     283.0
     ]
    ],
-   "min": 321.0
+   "min": 283.0
   },
   "MLB54357048": {
    "historico": [
@@ -7078,9 +7150,13 @@
     [
      "2026-11-08",
      298.8
+    ],
+    [
+     "2026-11-09",
+     283.0
     ]
    ],
-   "min": 298.79
+   "min": 283.0
   },
   "MLB54746525": {
    "historico": [
@@ -7140,9 +7216,13 @@
     [
      "2026-11-09",
      218.9
+    ],
+    [
+     "2026-11-09",
+     199.99
     ]
    ],
-   "min": 215.64
+   "min": 199.99
   },
   "MLB56421479": {
    "historico": [
@@ -7298,6 +7378,10 @@
     [
      "2026-11-09",
      209.89
+    ],
+    [
+     "2026-11-09",
+     200.0
     ]
    ],
    "min": 199.99
@@ -7429,9 +7513,13 @@
     [
      "2026-11-07",
      128.14
+    ],
+    [
+     "2026-11-09",
+     116.72
     ]
    ],
-   "min": 128.14
+   "min": 116.72
   },
   "MLB61715651": {
    "historico": [
@@ -7456,9 +7544,13 @@
     [
      "2026-11-06",
      436.4
+    ],
+    [
+     "2026-11-09",
+     354.42
     ]
    ],
-   "min": 436.4
+   "min": 354.42
   },
   "MLB61874839": {
    "historico": [
@@ -7780,9 +7872,13 @@
     [
      "2026-11-08",
      205.99
+    ],
+    [
+     "2026-11-09",
+     183.0
     ]
    ],
-   "min": 199.0
+   "min": 183.0
   },
   "MLB62978394": {
    "historico": [
@@ -7833,9 +7929,13 @@
     [
      "2026-11-06",
      54.9
+    ],
+    [
+     "2026-11-09",
+     46.69
     ]
    ],
-   "min": 54.9
+   "min": 46.69
   },
   "MLB63158085": {
    "historico": [
@@ -8688,9 +8788,13 @@
     [
      "2026-11-08",
      76.62
+    ],
+    [
+     "2026-11-09",
+     72.99
     ]
    ],
-   "min": 75.7
+   "min": 72.99
   },
   "MLB70382962": {
    "historico": [
@@ -8877,6 +8981,10 @@
     [
      "2026-11-09",
      359.8
+    ],
+    [
+     "2026-11-09",
+     389.9
     ]
    ],
    "min": 359.8
@@ -8899,6 +9007,10 @@
     [
      "2026-11-07",
      32.94
+    ],
+    [
+     "2026-11-09",
+     23.99
     ]
    ],
    "min": 23.99
@@ -8992,9 +9104,13 @@
     [
      "2026-11-09",
      42.42
+    ],
+    [
+     "2026-11-09",
+     36.5
     ]
    ],
-   "min": 41.48
+   "min": 36.5
   },
   "MLB74743819": {
    "historico": [
@@ -9125,6 +9241,10 @@
     [
      "2026-11-09",
      423.0
+    ],
+    [
+     "2026-11-09",
+     387.43
     ]
    ],
    "min": 387.33
@@ -9169,6 +9289,10 @@
     [
      "2026-11-09",
      26.0
+    ],
+    [
+     "2026-11-09",
+     23.41
     ]
    ],
    "min": 23.41
@@ -9187,9 +9311,13 @@
     [
      "2026-11-06",
      37.0
+    ],
+    [
+     "2026-11-09",
+     36.0
     ]
    ],
-   "min": 37.0
+   "min": 36.0
   },
   "MLB76397729": {
    "historico": [
@@ -9584,6 +9712,10 @@
     [
      "2026-11-09",
      39.79
+    ],
+    [
+     "2026-11-09",
+     44.99
     ]
    ],
    "min": 39.79
@@ -9815,19 +9947,109 @@
   "brinquedos": "2026-11-08",
   "passeio": "2026-11-09"
  },
- "tg_offset": 273517986,
+ "tg_offset": 273517987,
  "vitrine": {
-  "em": "2026-11-09T11:52-03:00",
+  "em": "2026-11-09T12:12-03:00",
   "itens": [
    {
-    "categoria": "quarto",
+    "categoria": "brinquedo",
+    "de": 431.9,
+    "desconto": 0.646,
+    "id": "MLB50368079",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_675755-MLA116320253672_092026-F.jpg",
+    "link": "https://meli.la/1xWzJ9R",
+    "preco": 152.98,
+    "titulo": "Mesinha Infantil Com 2 Cadeiras Educativa Alfabeto Completo Atacarejo Kids"
+   },
+   {
+    "categoria": "outros",
     "de": 499.9,
-    "desconto": 0.358,
+    "desconto": 0.634,
+    "id": "MLB62933980",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_900181-MLA100655071871_122025-F.jpg",
+    "link": "https://meli.la/1oUxMqd",
+    "preco": 183.0,
+    "titulo": "Babá Eletrônica Monitor 2.4 Sem Fio Zoom Baby On Maxi Baby"
+   },
+   {
+    "categoria": "passeio",
+    "de": 779.0,
+    "desconto": 0.527,
+    "id": "MLB29756545",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_786782-MLA99523938502_122025-F.jpg",
+    "link": "https://meli.la/1XmiRWF",
+    "preco": 368.28,
+    "titulo": "Cadeira de Carro Infantil 0 a 36Kg Elite 4 em 1 - Maxi Baby - Preto"
+   },
+   {
+    "categoria": "quarto",
+    "de": 799.9,
+    "desconto": 0.557,
+    "id": "MLB61794290",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_666205-MLA109881359403_032026-F.jpg",
+    "link": "https://meli.la/17iYotp",
+    "preco": 354.42,
+    "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi Baby - CINZA"
+   },
+   {
+    "categoria": "passeio",
+    "de": 1199.0,
+    "desconto": 0.474,
+    "id": "MLB24768816",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_995649-MLA109737919053_032026-F.jpg",
+    "link": "https://meli.la/2G475xk",
+    "preco": 630.62,
+    "titulo": "Cadeira De Carro All Stages 2.0 Isofix 0-36kgs Cinza Litet"
+   },
+   {
+    "categoria": "quarto",
+    "de": 549.9,
+    "desconto": 0.485,
     "id": "MLB54207427",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_865878-MLA95693182272_102025-F.jpg",
     "link": "https://meli.la/2zi74ho",
-    "preco": 321.0,
+    "preco": 283.0,
     "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
+   },
+   {
+    "categoria": "quarto",
+    "de": 549.9,
+    "desconto": 0.485,
+    "id": "MLB54357048",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_903019-MLA100032407355_122025-F.jpg",
+    "link": "https://meli.la/2ybULdP",
+    "preco": 283.0,
+    "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
+   },
+   {
+    "categoria": "jogo",
+    "de": 64.9,
+    "desconto": 0.438,
+    "id": "MLB74454821",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_917866-MLA114013158499_072026-F.jpg",
+    "link": "https://meli.la/1Vfqa7f",
+    "preco": 36.5,
+    "titulo": "Booster Quádruplo Escuridão Absoluta Português"
+   },
+   {
+    "categoria": "outros",
+    "de": 219.9,
+    "desconto": 0.469,
+    "id": "MLB61713566",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_766581-MLA97341274561_112025-F.jpg",
+    "link": "https://meli.la/2wEAaHE",
+    "preco": 116.72,
+    "titulo": "Andador De Empurrar Infantil Com Atividades Azul - Maxi Baby"
+   },
+   {
+    "categoria": "outros",
+    "de": 599.9,
+    "desconto": 0.379,
+    "id": "MLB54018368",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_838150-MLA96150683103_102025-F.jpg",
+    "link": "https://meli.la/21gqDeR",
+    "preco": 372.24,
+    "titulo": "Berço Portátil Infantil Cercado 0-15kg Lazy Maxi baby - Cinza"
    },
    {
     "categoria": "outros",
@@ -9860,14 +10082,14 @@
     "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
    },
    {
-    "categoria": "brinquedo",
-    "de": 59.99,
-    "desconto": 0.337,
-    "id": "MLB80107133",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_678339-MLA116948967176_092026-F.jpg",
-    "link": "https://meli.la/1PDozfs",
-    "preco": 39.79,
-    "titulo": "Boneco Pelúcia Sonic 50cm Grande Envio Imediato Infantil Top Azul"
+    "categoria": "outros",
+    "de": 289.9,
+    "desconto": 0.31,
+    "id": "MLB58625474",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_681698-MLA110226819701_042026-F.jpg",
+    "link": "https://meli.la/1qdfoDe",
+    "preco": 200.0,
+    "titulo": "Andador Infantil Musical Para Bebê Quick Maxi Baby AZUL"
    },
    {
     "categoria": "brinquedo",
@@ -9950,6 +10172,16 @@
     "titulo": "Rosquinha Para Amamentação Cor Branco Kit 6 Yulababy"
    },
    {
+    "categoria": "passeio",
+    "de": 479.9,
+    "desconto": 0.335,
+    "id": "MLB30522365",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_935560-MLA100005231121_122025-F.jpg",
+    "link": "https://meli.la/1yZaTvp",
+    "preco": 319.0,
+    "titulo": "Carrinho Guarda Chuva De passeio Maxi Baby Até 15kgs cor Preto"
+   },
+   {
     "categoria": "brinquedo",
     "de": 78.9,
     "desconto": 0.31,
@@ -9988,16 +10220,6 @@
     "link": "https://meli.la/1Y4uD27",
     "preco": 23.8,
     "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
-   },
-   {
-    "categoria": "passeio",
-    "de": 999.0,
-    "desconto": 0.299,
-    "id": "MLB22974681",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_687710-MLA99456623672_112025-F.jpg",
-    "link": "https://meli.la/25dF8SA",
-    "preco": 699.9,
-    "titulo": "Travel System Duo, Cosco Kids, Reverse, 0 a 15kg, Preto Rajado"
    },
    {
     "categoria": "brinquedo",
@@ -10040,16 +10262,6 @@
     "titulo": "Jogo Stop De Palavras Adedonha Educativo Infantil Interativo Familia Adultos E Crianças Babuu Brinquedos Educa"
    },
    {
-    "categoria": "passeio",
-    "de": 479.9,
-    "desconto": 0.312,
-    "id": "MLB30522365",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_935560-MLA100005231121_122025-F.jpg",
-    "link": "https://meli.la/1yZaTvp",
-    "preco": 330.0,
-    "titulo": "Carrinho Guarda Chuva De passeio Maxi Baby Até 15kgs cor Preto"
-   },
-   {
     "categoria": "higiene",
     "de": 142.59,
     "desconto": 0.271,
@@ -10078,16 +10290,6 @@
     "link": "https://meli.la/2ShKRwP",
     "preco": 57.8,
     "titulo": "Urso De Pelúcia Teddy Bear Grande Com Laço 50cm Antialérgico Cor Baunilha com Azul Bebe"
-   },
-   {
-    "categoria": "higiene",
-    "de": 499.9,
-    "desconto": 0.28,
-    "id": "MLB73425165",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_704974-MLA112019273416_062026-F.jpg",
-    "link": "https://meli.la/1wjZL9H",
-    "preco": 359.8,
-    "titulo": "Banheira Bebê Dobrável Com Suporte Redutor Assento E Termômetro Embutido Até 20kg Melon Maxi Baby - Azul"
    },
    {
     "categoria": "jogo",
@@ -10150,6 +10352,16 @@
     "titulo": "Pelúcia Banguela Fúria da Noite 100cm de Satin Preto para Abraçar"
    },
    {
+    "categoria": "quarto",
+    "de": 529.9,
+    "desconto": 0.269,
+    "id": "MLB75481308",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_889881-MLA114552950567_072026-F.jpg",
+    "link": "https://meli.la/2qpr2WC",
+    "preco": 387.43,
+    "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
+   },
+   {
     "categoria": "brinquedo",
     "de": 269.9,
     "desconto": 0.26,
@@ -10200,14 +10412,14 @@
     "titulo": "Kit Berço Menina Menino Protetor Trança Com Saia 6 Peças Cor Elefantinho Rosa"
    },
    {
-    "categoria": "passeio",
-    "de": 1199.0,
-    "desconto": 0.249,
-    "id": "MLB24768816",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_995649-MLA109737919053_032026-F.jpg",
-    "link": "https://meli.la/2G475xk",
-    "preco": 899.9,
-    "titulo": "Cadeira De Carro All Stages 2.0 Isofix 0-36kgs Cinza Litet"
+    "categoria": "brinquedo",
+    "de": 59.99,
+    "desconto": 0.25,
+    "id": "MLB80107133",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_678339-MLA116948967176_092026-F.jpg",
+    "link": "https://meli.la/1PDozfs",
+    "preco": 44.99,
+    "titulo": "Boneco Pelúcia Sonic 50cm Grande Envio Imediato Infantil Top Azul"
    },
    {
     "categoria": "brinquedo",
@@ -10260,26 +10472,6 @@
     "titulo": "Dinossauro Interativo Tiranossauro T-Rex com Fumaça, Luz e Som para Crianças"
    },
    {
-    "categoria": "outros",
-    "de": 541.2,
-    "desconto": 0.224,
-    "id": "MLB54018368",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_838150-MLA96150683103_102025-F.jpg",
-    "link": "https://meli.la/21gqDeR",
-    "preco": 419.99,
-    "titulo": "Berço Portátil Infantil Cercado 0-15kg Lazy Maxi baby - Cinza"
-   },
-   {
-    "categoria": "outros",
-    "de": 269.9,
-    "desconto": 0.222,
-    "id": "MLB58625474",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_681698-MLA110226819701_042026-F.jpg",
-    "link": "https://meli.la/1qdfoDe",
-    "preco": 209.89,
-    "titulo": "Andador Infantil Musical Para Bebê Quick Maxi Baby AZUL"
-   },
-   {
     "categoria": "brinquedo",
     "de": 48.99,
     "desconto": 0.235,
@@ -10330,6 +10522,26 @@
     "titulo": "Carrinho de Controle Remoto Homem Aranha c/ Fumaça e Luz LED"
    },
    {
+    "categoria": "higiene",
+    "de": 499.9,
+    "desconto": 0.22,
+    "id": "MLB73425165",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_704974-MLA112019273416_062026-F.jpg",
+    "link": "https://meli.la/1wjZL9H",
+    "preco": 389.9,
+    "titulo": "Banheira Bebê Dobrável Com Suporte Redutor Assento E Termômetro Embutido Até 20kg Melon Maxi Baby - Azul"
+   },
+   {
+    "categoria": "passeio",
+    "de": 999.0,
+    "desconto": 0.219,
+    "id": "MLB22974681",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_687710-MLA99456623672_112025-F.jpg",
+    "link": "https://meli.la/25dF8SA",
+    "preco": 779.9,
+    "titulo": "Travel System Duo, Cosco Kids, Reverse, 0 a 15kg, Preto Rajado"
+   },
+   {
     "categoria": "brinquedo",
     "de": 69.9,
     "desconto": 0.215,
@@ -10338,19 +10550,9 @@
     "link": "https://meli.la/1hvxeRf",
     "preco": 54.9,
     "titulo": "Teclado Infantil 32 Teclas com Microfone Karaokê Piano de Brinquedo Musical Educativo com Sons de Demonstração"
-   },
-   {
-    "categoria": "quarto",
-    "de": 529.9,
-    "desconto": 0.202,
-    "id": "MLB75481308",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_889881-MLA114552950567_072026-F.jpg",
-    "link": "https://meli.la/2qpr2WC",
-    "preco": 423.0,
-    "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
    }
   ]
  },
- "vitrine_assinatura": "c6676d0f570904c1b983025fdacdebbdb48bd1d5",
- "vitrine_publicada_em": "2026-11-09T11:12-03:00"
+ "vitrine_assinatura": "c6e46b6c178fe3462c099f4383f7f80081d67fe7",
+ "vitrine_publicada_em": "2026-11-09T12:12-03:00"
 }
