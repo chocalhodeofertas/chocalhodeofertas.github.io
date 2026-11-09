@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 36
+  "2026-11-09": 38
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12818,6 +12818,12 @@
    "quando": "2026-11-07T21:22-03:00",
    "titulo": "Splash Sprinkler Pad 170cm Piscina Inflável Chafariz Infantil Redonda Rosa"
   },
+  "MLB78625949": {
+   "desconto": 0.279,
+   "preco": 25.9,
+   "quando": "2026-11-09T19:02-03:00",
+   "titulo": "Mordedor Bebê Estilo Luva de Silicone Macio Massageador Gengiva Dentição - Cores"
+  },
   "MLB78828696": {
    "preco": 23.86,
    "quando": "2026-11-06T20:43-03:00"
@@ -12827,6 +12833,12 @@
    "preco": 218.0,
    "quando": "2026-11-08T20:15-03:00",
    "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco 127"
+  },
+  "MLB79182251": {
+   "desconto": 0.31,
+   "preco": 26.9,
+   "quando": "2026-11-09T19:02-03:00",
+   "titulo": "Kit Chocalhos e Mordedores Sensoriais para Bebê com 8 Peças de Silicone e Plásti"
   },
   "MLB79313725": {
    "desconto": 0.52,
@@ -13976,6 +13988,10 @@
     [
      "2026-11-09",
      19.42
+    ],
+    [
+     "2026-11-09",
+     23.8
     ]
    ],
    "min": 19.42
@@ -14539,9 +14555,13 @@
     [
      "2026-11-09",
      323.48
+    ],
+    [
+     "2026-11-09",
+     309.0
     ]
    ],
-   "min": 323.48
+   "min": 309.0
   },
   "MLB24064445": {
    "historico": [
@@ -15342,6 +15362,10 @@
     [
      "2026-11-09",
      49.0
+    ],
+    [
+     "2026-11-09",
+     59.9
     ]
    ],
    "min": 49.0
@@ -18358,9 +18382,13 @@
     [
      "2026-11-09",
      28.99
+    ],
+    [
+     "2026-11-09",
+     26.58
     ]
    ],
-   "min": 28.99
+   "min": 26.58
   },
   "MLB45906189": {
    "historico": [
@@ -18755,9 +18783,13 @@
     [
      "2026-11-09",
      45.99
+    ],
+    [
+     "2026-11-09",
+     44.19
     ]
    ],
-   "min": 45.99
+   "min": 44.19
   },
   "MLB49562979": {
    "historico": [
@@ -19065,6 +19097,10 @@
     [
      "2026-11-09",
      252.97
+    ],
+    [
+     "2026-11-09",
+     259.0
     ]
    ],
    "min": 252.97
@@ -22391,6 +22427,10 @@
     [
      "2026-11-09",
      133.9
+    ],
+    [
+     "2026-11-09",
+     132.0
     ]
    ],
    "min": 122.0
@@ -25283,8 +25323,9 @@
   "passeio": "2026-11-09"
  },
  "tg_offset": 273517995,
+ "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-09T18:42-03:00",
+  "em": "2026-11-09T19:02-03:00",
   "itens": [
    {
     "categoria": "passeio",
@@ -25527,6 +25568,16 @@
     "titulo": "Pelúcia Banguela Fúria da Noite 100cm de Satin Preto para Abraçar"
    },
    {
+    "categoria": "brinquedo",
+    "de": 34.0,
+    "desconto": 0.3,
+    "id": "MLB21843844",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_674475-MLA99598648876_122025-F.jpg",
+    "link": "https://meli.la/1Y4uD27",
+    "preco": 23.8,
+    "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
+   },
+   {
     "categoria": "roupa",
     "de": 64.9,
     "desconto": 0.214,
@@ -25608,6 +25659,6 @@
    }
   ]
  },
- "vitrine_assinatura": "0c8cc78f2786219233e71475674d98b4f8e1f39a",
- "vitrine_publicada_em": "2026-11-09T18:02-03:00"
+ "vitrine_assinatura": "fc30b52aa241cea22accf5fe17c772dace7adb2b",
+ "vitrine_publicada_em": "2026-11-09T19:02-03:00"
 }
