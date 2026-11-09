@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 40
+  "2026-11-09": 41
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12117,8 +12117,10 @@
    "titulo": "Mesa Infantil De Atividades Tramontina Playground Pic-nic Cor Colorido"
   },
   "MLB24208936": {
-   "preco": 32.17,
-   "quando": "2026-11-06T19:23-03:00"
+   "desconto": 0.492,
+   "preco": 31.99,
+   "quando": "2026-11-09T19:32-03:00",
+   "titulo": "Shampoo Johnson's Baby Glicerina Hipoalergênico 750ml"
   },
   "MLB24626810": {
    "preco": 29.85,
@@ -13047,6 +13049,10 @@
     [
      "2026-11-09",
      13.03
+    ],
+    [
+     "2026-11-09",
+     13.9
     ]
    ],
    "min": 13.03
@@ -13101,9 +13107,13 @@
     [
      "2026-11-09",
      59.99
+    ],
+    [
+     "2026-11-09",
+     48.0
     ]
    ],
-   "min": 59.99
+   "min": 48.0
   },
   "MLB16600917": {
    "historico": [
@@ -13324,9 +13334,13 @@
     [
      "2026-11-09",
      10.9
+    ],
+    [
+     "2026-11-09",
+     5.49
     ]
    ],
-   "min": 10.9
+   "min": 5.49
   },
   "MLB18392608": {
    "historico": [
@@ -14575,6 +14589,10 @@
     [
      "2026-11-09",
      309.0
+    ],
+    [
+     "2026-11-09",
+     323.48
     ]
    ],
    "min": 309.0
@@ -16828,9 +16846,13 @@
     [
      "2026-11-07",
      70.8
+    ],
+    [
+     "2026-11-09",
+     63.74
     ]
    ],
-   "min": 70.8
+   "min": 63.74
   },
   "MLB35763090": {
    "historico": [
@@ -17555,9 +17577,13 @@
     [
      "2026-11-09",
      114.98
+    ],
+    [
+     "2026-11-09",
+     69.99
     ]
    ],
-   "min": 114.98
+   "min": 69.99
   },
   "MLB40921252": {
    "historico": [
@@ -18402,6 +18428,10 @@
     [
      "2026-11-09",
      26.58
+    ],
+    [
+     "2026-11-09",
+     28.99
     ]
    ],
    "min": 26.58
@@ -18424,9 +18454,13 @@
     [
      "2026-11-09",
      279.0
+    ],
+    [
+     "2026-11-09",
+     241.0
     ]
    ],
-   "min": 279.0
+   "min": 241.0
   },
   "MLB46104950": {
    "historico": [
@@ -19535,6 +19569,10 @@
     [
      "2026-11-09",
      4084.0
+    ],
+    [
+     "2026-11-09",
+     4249.0
     ]
    ],
    "min": 4084.0
@@ -22354,6 +22392,10 @@
     [
      "2026-11-09",
      165.87
+    ],
+    [
+     "2026-11-09",
+     182.0
     ]
    ],
    "min": 163.29
@@ -23532,9 +23574,13 @@
     [
      "2026-11-09",
      319.0
+    ],
+    [
+     "2026-11-09",
+     307.0
     ]
    ],
-   "min": 319.0
+   "min": 307.0
   },
   "MLB74691773": {
    "historico": [
@@ -24545,6 +24591,10 @@
     [
      "2026-11-09",
      351.0
+    ],
+    [
+     "2026-11-09",
+     369.9
     ]
    ],
    "min": 351.0
@@ -25345,8 +25395,18 @@
  "tg_offset": 273517995,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-09T19:12-03:00",
+  "em": "2026-11-09T19:32-03:00",
   "itens": [
+   {
+    "categoria": "outros",
+    "de": 62.99,
+    "desconto": 0.492,
+    "id": "MLB24208936",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_973923-MLA99918118901_112025-F.jpg",
+    "link": "https://meli.la/28xGnDR",
+    "preco": 31.99,
+    "titulo": "Shampoo Johnson's Baby Glicerina Hipoalergênico 750ml"
+   },
    {
     "categoria": "passeio",
     "de": 39.9,
@@ -25478,16 +25538,6 @@
     "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
    },
    {
-    "categoria": "brinquedo",
-    "de": 69.99,
-    "desconto": 0.273,
-    "id": "MLB22501041",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_709652-MLA99593588108_122025-F.jpg",
-    "link": "https://meli.la/2gWN9oe",
-    "preco": 50.91,
-    "titulo": "Balde Primeiros Blocos Fisher-price - Mattel Ffc84 Multicolor"
-   },
-   {
     "categoria": "outros",
     "de": 129.9,
     "desconto": 0.231,
@@ -25496,16 +25546,6 @@
     "link": "https://meli.la/24NuhJE",
     "preco": 99.9,
     "titulo": "Cercadinho Infantil Cercado Bebê Criança Chiqueirinho Seguro Hexagonal JustFun Brinquedos Cinza Rosa Azul"
-   },
-   {
-    "categoria": "higiene",
-    "de": 142.59,
-    "desconto": 0.271,
-    "id": "MLB66463370",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_985616-MLA99826484365_112025-F.jpg",
-    "link": "https://meli.la/2muow7h",
-    "preco": 103.89,
-    "titulo": "Loção Corporal Hydrabebe Mustela Para Pele Normal, 500ml"
    },
    {
     "categoria": "brinquedo",
