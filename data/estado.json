@@ -4807,6 +4807,10 @@
     [
      "2026-11-09",
      529.99
+    ],
+    [
+     "2026-11-09",
+     510.47
     ]
    ],
    "min": 499.9
@@ -4978,18 +4982,26 @@
     [
      "2026-11-08",
      226.0
+    ],
+    [
+     "2026-11-09",
+     169.0
     ]
    ],
-   "min": 226.0
+   "min": 169.0
   },
   "MLB22974681": {
    "historico": [
     [
      "2026-11-06",
      779.9
+    ],
+    [
+     "2026-11-09",
+     699.9
     ]
    ],
-   "min": 779.9
+   "min": 699.9
   },
   "MLB23325706": {
    "historico": [
@@ -5395,6 +5407,10 @@
     [
      "2026-11-09",
      134.1
+    ],
+    [
+     "2026-11-09",
+     155.9
     ]
    ],
    "min": 134.1
@@ -7190,6 +7206,10 @@
     [
      "2026-11-09",
      199.39
+    ],
+    [
+     "2026-11-09",
+     227.05
     ]
    ],
    "min": 199.39
@@ -9797,18 +9817,8 @@
  },
  "tg_offset": 273517986,
  "vitrine": {
-  "em": "2026-11-09T11:32-03:00",
+  "em": "2026-11-09T11:52-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 129.99,
-    "desconto": 0.457,
-    "id": "MLB72656297",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_918081-MLA112807271193_062026-F.jpg",
-    "link": "https://meli.la/1dDaV1U",
-    "preco": 70.58,
-    "titulo": "Carro Hot Wheels Premium Chevrolet K5 Blazer Stranger Things"
-   },
    {
     "categoria": "quarto",
     "de": 499.9,
@@ -9838,6 +9848,16 @@
     "link": "https://meli.la/1xWdLwa",
     "preco": 43.0,
     "titulo": "Cavalinho Upa Upa Rosa com LED e Música para Bebê"
+   },
+   {
+    "categoria": "outros",
+    "de": 356.9,
+    "desconto": 0.364,
+    "id": "MLB57083030",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_741342-MLA92558466166_092025-F.jpg",
+    "link": "https://meli.la/168F5Rm",
+    "preco": 227.05,
+    "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
    },
    {
     "categoria": "brinquedo",
@@ -9970,6 +9990,16 @@
     "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
    },
    {
+    "categoria": "passeio",
+    "de": 999.0,
+    "desconto": 0.299,
+    "id": "MLB22974681",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_687710-MLA99456623672_112025-F.jpg",
+    "link": "https://meli.la/25dF8SA",
+    "preco": 699.9,
+    "titulo": "Travel System Duo, Cosco Kids, Reverse, 0 a 15kg, Preto Rajado"
+   },
+   {
     "categoria": "brinquedo",
     "de": 167.99,
     "desconto": 0.321,
@@ -9988,16 +10018,6 @@
     "link": "https://meli.la/1VMFgJB",
     "preco": 51.0,
     "titulo": "Maiô Natação Infantil Biquíni Manga Longa Proteção Solar Uv Cor Água Tamanho 4"
-   },
-   {
-    "categoria": "outros",
-    "de": 292.0,
-    "desconto": 0.317,
-    "id": "MLB57083030",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_741342-MLA92558466166_092025-F.jpg",
-    "link": "https://meli.la/168F5Rm",
-    "preco": 199.39,
-    "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
    },
    {
     "categoria": "outros",
@@ -10140,6 +10160,16 @@
     "titulo": "Patins Inline Infantil DM Toys Ajustável 34-37 Rosa com Kit Proteção"
    },
    {
+    "categoria": "passeio",
+    "de": 709.0,
+    "desconto": 0.28,
+    "id": "MLB19970137",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_928226-MLA99462528060_112025-F.jpg",
+    "link": "https://meli.la/2PJCTUP",
+    "preco": 510.47,
+    "titulo": "Cadeirinha Cosco Kids, Progress, 0 a 36kg, Preto"
+   },
+   {
     "categoria": "outros",
     "de": 35.9,
     "desconto": 0.279,
@@ -10260,16 +10290,6 @@
     "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
    },
    {
-    "categoria": "passeio",
-    "de": 709.0,
-    "desconto": 0.252,
-    "id": "MLB19970137",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_928226-MLA99462528060_112025-F.jpg",
-    "link": "https://meli.la/2PJCTUP",
-    "preco": 529.99,
-    "titulo": "Cadeirinha Cosco Kids, Progress, 0 a 36kg, Preto"
-   },
-   {
     "categoria": "brinquedo",
     "de": 179.86,
     "desconto": 0.25,
@@ -10308,16 +10328,6 @@
     "link": "https://meli.la/2tea1GZ",
     "preco": 96.52,
     "titulo": "Carrinho de Controle Remoto Homem Aranha c/ Fumaça e Luz LED"
-   },
-   {
-    "categoria": "passeio",
-    "de": 999.0,
-    "desconto": 0.219,
-    "id": "MLB22974681",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_687710-MLA99456623672_112025-F.jpg",
-    "link": "https://meli.la/25dF8SA",
-    "preco": 779.9,
-    "titulo": "Travel System Duo, Cosco Kids, Reverse, 0 a 15kg, Preto Rajado"
    },
    {
     "categoria": "brinquedo",
