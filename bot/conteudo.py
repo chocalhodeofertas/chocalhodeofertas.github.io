@@ -165,7 +165,6 @@ LEGENDAS_FIXADOS = {
         "",
         "✨ Promoções do dia com desconto de verdade",
         "🎟️ Cupons das lojas assim que saem",
-        "⏰ Aviso quando uma promoção acaba",
         "",
         "🔗 Entre no grupo gratuito pelo link da bio (WhatsApp ou Telegram).",
         "#publi"]),

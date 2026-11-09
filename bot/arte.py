@@ -419,6 +419,23 @@ def final(chamada="Comenta GRUPO que eu te mando o link", L=1080, A=1350, y0=0):
 
 # ---------- posts institucionais (fixados no perfil) ----------
 
+def _linha_justificada(d, x, y, linha, fonte, largura, cor, ultima=False):
+    """Desenha a linha justificada (espaços distribuídos). A última linha do parágrafo fica à esquerda."""
+    palavras = linha.split(" ")
+    if ultima or len(palavras) < 2:
+        d.text((x, y), linha, font=fonte, fill=cor, anchor="ls")
+        return
+    ocupado = sum(d.textlength(p, font=fonte) for p in palavras)
+    espaco = (largura - ocupado) / (len(palavras) - 1)
+    if espaco > d.textlength(" ", font=fonte) * 3:  # linha curta demais: não estica
+        d.text((x, y), linha, font=fonte, fill=cor, anchor="ls")
+        return
+    cx = x
+    for p in palavras:
+        d.text((cx, y), p, font=fonte, fill=cor, anchor="ls")
+        cx += d.textlength(p, font=fonte) + espaco
+
+
 def slide_texto(numero, titulo, texto, indice=None, L=1080, A=1350):
     """Slide explicativo: número grande, título e texto curto."""
     img = _fundo(L, A)
@@ -444,8 +461,8 @@ def slide_texto(numero, titulo, texto, indice=None, L=1080, A=1350):
         y += int(cap * 1.45)
     y += 50
     for c in corpo:
-        for ln in c:
-            d.text((72, y + 46), ln, font=fb, fill=SUAVE, anchor="ls")
+        for k, ln in enumerate(c):
+            _linha_justificada(d, 72, y + 46, ln, fb, L - 150, SUAVE, ultima=(k == len(c) - 1))
             y += 64
         y += 30
     return img
@@ -492,8 +509,7 @@ INSTITUCIONAIS = {
         "slides": [
             (None, "Pra famílias que amam economizar", "Somos um canal de ofertas de produtos para bebês e "
                                                        "crianças, do enxoval aos brinquedos."),
-            (None, "O que você encontra", "Promoções do dia com desconto de verdade.\nCupons das lojas assim que saem.\n"
-                                          "Avisos quando uma promoção acaba."),
+            (None, "O que você encontra", "Promoções do dia com desconto de verdade.\nCupons das lojas assim que saem."),
             (None, "Onde acompanhar", "No grupo gratuito do WhatsApp, no canal do Telegram e aqui no perfil.\n"
                                       "Você entra e sai quando quiser."),
         ],
@@ -545,32 +561,35 @@ def capa_marca(nome, L=1080, A=1350):
         img = Image.new("RGB", (L, A), UVA)
         d = ImageDraw.Draw(img)
         f = _fredoka(140)
-        d.text((L // 2, 430), "Como", font=f, fill=BRANCO, anchor="ms")
-        d.text((L // 2, 580), "funciona", font=f, fill=BRANCO, anchor="ms")
+        d.text((L // 2, 470), "Como", font=f, fill=BRANCO, anchor="ms")
+        w2 = d.textlength("funciona?", font=f)
+        ic = _icone(190)
+        total = w2 + 30 + ic.width
+        x0 = (L - total) / 2
+        d.text((x0, 640), "funciona?", font=f, fill=BRANCO, anchor="ls")
+        img.paste(ic, (int(x0 + w2 + 30), 640 - ic.height + 20), ic)
         fp = _fredoka(48)
         t = "em 4 passos"
         w = d.textlength(t, font=fp) + 90
-        d.rounded_rectangle([(L - w) / 2, 640, (L + w) / 2, 730], radius=45, fill=PINK)
-        d.text((L // 2, 685), t, font=fp, fill=BRANCO, anchor="mm")
+        d.rounded_rectangle([(L - w) / 2, 780, (L + w) / 2, 870], radius=45, fill=PINK)
+        d.text((L // 2, 825), t, font=fp, fill=BRANCO, anchor="mm")
         for k in range(4):
             cx = L // 2 + (k - 1.5) * 150
-            d.ellipse([cx - 52, 800, cx + 52, 904], outline=LAVANDA_2, width=6)
-            d.text((cx, 852), str(k + 1), font=_fredoka(60), fill=LAVANDA_2, anchor="mm")
-        ic = _icone(300)
-        img.paste(ic, ((L - ic.width) // 2, 980), ic)
-    else:  # perguntas
-        img = Image.new("RGB", (L, A), PINK)
+            d.ellipse([cx - 52, 960, cx + 52, 1064], outline=LAVANDA_2, width=6)
+            d.text((cx, 1012), str(k + 1), font=_fredoka(60), fill=LAVANDA_2, anchor="mm")
+    else:  # perguntas — mesmo fundo lilás da primeira capa
+        img = _fundo(L, A)
         d = ImageDraw.Draw(img)
-        _balao(d, 120, 150, 220, 160, BRANCO, PINK)
+        _balao(d, 120, 150, 220, 160, PINK, BRANCO)
         _balao(d, 700, 110, 260, 190, UVA, BRANCO)
-        _balao(d, 820, 980, 170, 130, BRANCO, PINK)
+        _balao(d, 820, 980, 170, 130, PINK, BRANCO)
         f = _fredoka(130)
-        d.text((L // 2, 560), "Perguntas", font=f, fill=BRANCO, anchor="ms")
-        d.text((L // 2, 700), "frequentes", font=f, fill=BRANCO, anchor="ms")
-        d.text((L // 2, 790), "as dúvidas que mais chegam pra gente", font=_poppins(36, "SemiBold"), fill=UVA, anchor="ms")
+        d.text((L // 2, 560), "Perguntas", font=f, fill=UVA, anchor="ms")
+        d.text((L // 2, 700), "frequentes", font=f, fill=PINK, anchor="ms")
+        d.text((L // 2, 790), "as dúvidas que mais chegam pra gente", font=_poppins(36, "SemiBold"), fill=SUAVE, anchor="ms")
         ic = _icone(340)
         img.paste(ic, ((L - ic.width) // 2 - 80, 900), ic)
-    d.text((L // 2, A - 50), ARROBA, font=_poppins(26, "SemiBold"), fill=SUAVE if nome == "o_que_e" else LAVANDA_2,
+    d.text((L // 2, A - 50), ARROBA, font=_poppins(26, "SemiBold"), fill=LAVANDA_2 if nome == "como_funciona" else SUAVE,
            anchor="mm")
     return img
 
