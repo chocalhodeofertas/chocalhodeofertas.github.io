@@ -1,5 +1,5 @@
 {
- "aguardando_link": 256,
+ "aguardando_link": 257,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 23
+  "2026-11-10": 25
  },
  "cupons": {
   "AUTO70OFF": {
@@ -5316,8 +5316,8 @@
    "validade": "2026-11-10T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5499,
- "cupons_ml_ultimo": 6439,
+ "cupons_extra_ultimo:cupombr": 5500,
+ "cupons_ml_ultimo": 6440,
  "descoberta_em": "2026-11-10T11:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -11758,7 +11758,8 @@
  },
  "hist_dia": {
   "2026-11-10": {
-   "posts": 1
+   "com_cupom": 1,
+   "posts": 3
   }
  },
  "links": {
@@ -12077,7 +12078,7 @@
   "2026-11-10": 2
  },
  "membros_lido_em": "2026-11-10T14",
- "numeros_em": "2026-11-10T14:03-03:00",
+ "numeros_em": "2026-11-10T14:23-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12515,8 +12516,10 @@
    "titulo": "Taco De Sinuca Bilhar Profissional Com Capa Giz Sola Brindes Snooker Bilhares Mg"
   },
   "MLB51652593": {
+   "desconto": 0.677,
    "preco": 99.9,
-   "quando": "2026-11-06T12:12-03:00"
+   "quando": "2026-11-10T14:23-03:00",
+   "titulo": "Caminhão Dinossauro Pista Com Carrinhos Maleta Transporte Cor Roxo"
   },
   "MLB51668028": {
    "desconto": 0.345,
@@ -12731,8 +12734,10 @@
    "quando": "2026-11-06T13:13-03:00"
   },
   "MLB63152047": {
+   "desconto": 0.657,
    "preco": 54.9,
-   "quando": "2026-11-06T12:32-03:00"
+   "quando": "2026-11-10T14:23-03:00",
+   "titulo": "Patinete Infantil 3 Rodas Led Dobrável Luppy Azul Maxi Toys"
   },
   "MLB63158085": {
    "desconto": 0.5,
@@ -13908,9 +13913,13 @@
     [
      "2026-11-09",
      33.38
+    ],
+    [
+     "2026-11-10",
+     29.99
     ]
    ],
-   "min": 33.38
+   "min": 29.99
   },
   "MLB18397481": {
    "historico": [
@@ -15984,9 +15993,13 @@
     [
      "2026-11-10",
      49.76
+    ],
+    [
+     "2026-11-10",
+     37.61
     ]
    ],
-   "min": 47.38
+   "min": 37.61
   },
   "MLB25255598": {
    "historico": [
@@ -16651,9 +16664,13 @@
     [
      "2026-11-10",
      125.21
+    ],
+    [
+     "2026-11-10",
+     114.9
     ]
    ],
-   "min": 125.21
+   "min": 114.9
   },
   "MLB27572024": {
    "historico": [
@@ -18739,9 +18756,13 @@
     [
      "2026-11-10",
      7699.0
+    ],
+    [
+     "2026-11-10",
+     7399.0
     ]
    ],
-   "min": 7599.0
+   "min": 7399.0
   },
   "MLB42082195": {
    "historico": [
@@ -20090,9 +20111,13 @@
     [
      "2026-11-10",
      45.99
+    ],
+    [
+     "2026-11-10",
+     42.35
     ]
    ],
-   "min": 44.19
+   "min": 42.35
   },
   "MLB49562979": {
    "historico": [
@@ -20613,6 +20638,10 @@
     [
      "2026-11-10",
      436.4
+    ],
+    [
+     "2026-11-10",
+     419.99
     ]
    ],
    "min": 372.24
@@ -26524,6 +26553,10 @@
     [
      "2026-11-10",
      409.0
+    ],
+    [
+     "2026-11-10",
+     351.0
     ]
    ],
    "min": 351.0
@@ -26676,6 +26709,10 @@
     [
      "2026-11-06",
      218.0
+    ],
+    [
+     "2026-11-10",
+     235.0
     ]
    ],
    "min": 218.0
@@ -27247,6 +27284,10 @@
     [
      "2026-11-10",
      320.0
+    ],
+    [
+     "2026-11-10",
+     299.9
     ]
    ],
    "min": 252.99
@@ -27393,7 +27434,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T14:03-03:00",
+  "em": "2026-11-10T14:23-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -27464,16 +27505,6 @@
     "link": "https://meli.la/33nrT9Z",
     "preco": 28.0,
     "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho com Sons Multisensorial 1ª Infância Bebê Co"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 206.9,
-    "desconto": 0.686,
-    "id": "MLB68032214",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_743529-MLA116992831764_102026-F.jpg",
-    "link": "https://meli.la/2iMHs2A",
-    "preco": 64.89,
-    "titulo": "Brinquedo Cubo Didático Madeira Montessori Infantil 5 Em 1 Atacarejo Kids"
    },
    {
     "categoria": "higiene",
@@ -27594,6 +27625,16 @@
     "link": "https://meli.la/2NtvAXr",
     "preco": 106.0,
     "titulo": "Buba Ursinho que reza anjinho da guarda para bebê e criança pelúcia azul"
+   },
+   {
+    "categoria": "passeio",
+    "de": 74.9,
+    "desconto": 0.498,
+    "id": "MLB25163760",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_850532-MLA113041435885_062026-F.jpg",
+    "link": "https://meli.la/31NAgHm",
+    "preco": 37.61,
+    "titulo": "Booster Cosco Kids, Clippy, até 36kg, Preto"
    },
    {
     "categoria": "brinquedo",
