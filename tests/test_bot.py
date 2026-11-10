@@ -1022,3 +1022,23 @@ def test_cupom_de_terceiros_postado_sem_link():
     assert n == 5 and "BEBESPETS0511" in canal and "CUPOMTECH" not in canal
     assert "mercadolivre.com.br/sec" not in canal and "whatsapp" not in canal
     assert "Exclusivo Meli+" in canal
+
+
+def test_fila_whatsapp(tmp_path, monkeypatch):
+    import json
+    from bot import whatsapp
+    monkeypatch.delenv("WA_FILA", raising=False)
+    assert whatsapp.enfileirar("oi") is False  # sem fila configurada, não faz nada
+    monkeypatch.setenv("WA_FILA", str(tmp_path / "fila"))
+    assert whatsapp.enfileirar("*Oferta*", "https://img/x.jpg", AGORA)
+    itens = [json.loads(p.read_text()) for p in (tmp_path / "fila").glob("*.json")]
+    assert itens == [{"texto": "*Oferta*", "imagem": "https://img/x.jpg", "criado": AGORA.isoformat()}]
+
+
+def test_cupons_vao_para_fila_do_whatsapp(tmp_path, monkeypatch):
+    from bot import cupons_ml
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    e, tg = est.novo(), TGCmd()
+    cupons_ml.tratar_mensagem(POST_LISTA, tg, cfg_cmd(), e, AGORA, log=lambda m: None, parser=cupons_ml.parse_lista)
+    textos = [p.read_text() for p in tmp_path.glob("*.json")]
+    assert len(textos) == 1 and "BEBESPETS0511" in textos[0] and "mercadolivre.com.br/sec" not in textos[0]

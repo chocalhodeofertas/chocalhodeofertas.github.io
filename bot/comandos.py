@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 import requests
 
 from . import estado as est
-from . import cupons, lote, mensagens
+from . import cupons, lote, mensagens, whatsapp
 from .filtros import motivo_bloqueio
 from .mercadolivre import AcessoNegado, ErroML
 from .ofertas import Oferta
@@ -122,6 +122,7 @@ def postar_link(link, tg, ml, estado, cfg, agora, session=None, rng=random):
         tg.enviar_oferta(cfg.canal, mensagens.montar_telegram(oferta, rng), oferta.imagem)
     except TelegramErro as e:
         return f"⚠️ Não consegui postar no canal: {e}"
+    whatsapp.enfileirar(mensagens.montar_whatsapp(oferta, rng), oferta.imagem, agora)
     est.registrar_post(estado, pid, preco, agora, info.titulo, oferta.desconto)
     try:
         enviar_copias(tg, cfg.admin_chat, oferta, rng)

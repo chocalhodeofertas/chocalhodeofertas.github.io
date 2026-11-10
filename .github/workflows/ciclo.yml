@@ -30,12 +30,34 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: wa/package-lock.json
+
+      - run: npm ci --prefix wa --no-audit --no-fund
+
       - name: Rodar em ciclo
         run: |
           git config user.name "chocalho-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          python -m bot.ciclo --horas 5.5
+          # WhatsApp: roda em paralelo e posta no grupo o que o bot deixar na fila
+          node wa/servico.mjs &
+          WA_PID=$!
+          python -m bot.ciclo --horas 5.5 || STATUS=$?
+          kill -TERM "$WA_PID" 2>/dev/null && wait "$WA_PID" 2>/dev/null
+          for arq in data/wa_sessao.enc data/wa_estado.json; do git add -A "$arq" 2>/dev/null; done
+          if ! git diff --cached --quiet; then
+            git commit -q -m "Sessão do WhatsApp [skip ci]"
+            for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 5; done
+          fi
+          exit ${STATUS:-0}
         env:
+          WA_FILA: fila_wa
+          WA_HORAS: "5.6"
+          WA_MAX_DIA: ${{ vars.WA_MAX_DIA || '4' }}
+          WA_INTERVALO_MIN: ${{ vars.WA_INTERVALO_MIN || '40' }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CANAL: ${{ secrets.TELEGRAM_CANAL }}
           TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID || '787296152' }}

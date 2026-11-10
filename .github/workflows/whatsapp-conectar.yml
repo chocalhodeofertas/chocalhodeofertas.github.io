@@ -1,0 +1,47 @@
+name: Conectar WhatsApp
+
+# Conecta o WhatsApp do Chocalho como "aparelho conectado".
+# Antes: crie o segredo WA_NUMERO (número do Chocalho com DDI e DDD, só dígitos).
+# Rode, aguarde o código chegar no Telegram e digite no celular em
+# Aparelhos conectados → Conectar com número de telefone.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chocalho-whatsapp-conectar
+  cancel-in-progress: true
+
+jobs:
+  conectar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: wa/package-lock.json
+
+      - run: npm ci --prefix wa --no-audit --no-fund
+
+      - name: Parear
+        run: node wa/conectar.mjs
+        env:
+          WA_NUMERO: ${{ secrets.WA_NUMERO }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID || '787296152' }}
+          WHATSAPP_GRUPO: ${{ vars.WHATSAPP_GRUPO || 'https://chat.whatsapp.com/FOwEWWIjfKoFWmD8Xsv5lq' }}
+
+      - name: Guardar a sessão (criptografada)
+        run: |
+          git config user.name "chocalho-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/wa_sessao.enc
+          git commit -q -m "Conecta o WhatsApp [skip ci]"
+          for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 5; done

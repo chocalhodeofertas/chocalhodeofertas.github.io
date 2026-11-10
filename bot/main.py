@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
-from . import afiliado, cofre, comandos, cupons_ml, lote, vitrine
+from . import afiliado, cofre, comandos, cupons_ml, lote, vitrine, whatsapp
 from . import estado as est
 from . import mensagens
 from .descoberta import descobrir, descobrir_areas
@@ -397,6 +397,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
             log(f"Erro ao postar {o.id} no canal: {e}")
             continue
         esperar_antes = True
+        whatsapp.enfileirar(mensagens.montar_whatsapp(o, rng), o.imagem, agora)
         est.registrar_post(estado, o.id, o.preco, agora, o.titulo, o.desconto)
         tipos_hoje.add(tp)
         enviadas.append(o)

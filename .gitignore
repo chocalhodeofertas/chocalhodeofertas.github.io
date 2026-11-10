@@ -3,3 +3,6 @@ __pycache__/
 .pytest_cache/
 .env
 .venv/
+wa/node_modules/
+.wa_auth/
+fila_wa/

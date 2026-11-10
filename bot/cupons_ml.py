@@ -23,7 +23,7 @@ import unicodedata
 from datetime import timedelta
 from pathlib import Path
 
-from . import cupons, mensagens
+from . import cupons, mensagens, whatsapp
 from .cofre import _fernet
 from .telegram import TelegramErro
 
@@ -255,6 +255,7 @@ def tratar_mensagem(texto, tg, cfg, estado, agora, categorias=None, log=print, p
     titulo = "🎟️ <b>Cupom do Mercado Livre</b>" if len(novos) == 1 else "🎟️ <b>Cupons do Mercado Livre</b>"
     cupons.publicar(tg, cfg, estado, titulo, [(c["codigo"], bloco_html(c), c["validade"]) for c in novos], agora)
     log(f"Cupons postados: {', '.join(c['codigo'] for c in novos)}.")
+    whatsapp.enfileirar(texto_whatsapp(novos), None, agora)
     if cfg.admin_chat:
         wa = texto_whatsapp(novos)
         try:

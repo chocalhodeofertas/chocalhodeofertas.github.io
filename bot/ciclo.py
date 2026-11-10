@@ -49,6 +49,8 @@ def sincronizar_antes():
 def salvar_estado():
     git("add", "data/estado.json")
     git("add", "docs")  # separado: se a pasta não existir, não atrapalha o resto
+    for arq in ("data/wa_sessao.enc", "data/wa_estado.json"):  # sessão do WhatsApp (criptografada)
+        git("add", "-A", arq)
     if git("diff", "--cached", "--quiet").returncode == 0:
         return
     git("commit", "-q", "-m", "Atualiza histórico de preços e página [skip ci]")
