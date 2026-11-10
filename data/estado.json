@@ -5177,6 +5177,12 @@
    "status": "ativo",
    "validade": "2026-11-12T23:59-03:00"
   },
+  "CHEGOUCUPOM30": {
+   "criado": "2026-11-10T12:02-03:00",
+   "post": 214,
+   "status": "ativo",
+   "validade": "2026-12-10T23:59-03:00"
+  },
   "CUPOMPRAMODA": {
    "criado": "2026-11-10T10:02-03:00",
    "post": 206,
@@ -5189,6 +5195,18 @@
    "status": "encerrado",
    "validade": "2026-11-09T23:59-03:00"
   },
+  "LEVEAGORA25": {
+   "criado": "2026-11-10T12:02-03:00",
+   "post": 214,
+   "status": "ativo",
+   "validade": "2026-12-10T23:59-03:00"
+  },
+  "LEVEAGORA30": {
+   "criado": "2026-11-10T12:02-03:00",
+   "post": 214,
+   "status": "ativo",
+   "validade": "2026-12-10T23:59-03:00"
+  },
   "MAISCUPONS25": {
    "criado": "2026-11-09T13:36-03:00",
    "post": 168,
@@ -5200,6 +5218,12 @@
    "post": 168,
    "status": "encerrado",
    "validade": "2026-11-09T23:59-03:00"
+  },
+  "MELIMAISPREDD": {
+   "criado": "2026-11-10T12:02-03:00",
+   "post": 215,
+   "status": "ativo",
+   "validade": "2026-11-11T23:59-03:00"
   },
   "MELIOFERTAS": {
    "criado": "2026-11-07T13:02-03:00",
@@ -5231,6 +5255,12 @@
    "status": "encerrado",
    "validade": "2026-11-07T23:59-03:00"
   },
+  "OFERTAJA30": {
+   "criado": "2026-11-10T12:02-03:00",
+   "post": 214,
+   "status": "ativo",
+   "validade": "2026-12-10T23:59-03:00"
+  },
   "OFFNAMODA": {
    "criado": "2026-11-09T10:22-03:00",
    "post": 155,
@@ -5243,11 +5273,35 @@
    "status": "ativo",
    "validade": "2026-11-12T23:59-03:00"
   },
+  "POUPAAGORA30": {
+   "criado": "2026-11-10T12:02-03:00",
+   "post": 214,
+   "status": "ativo",
+   "validade": "2026-12-10T23:59-03:00"
+  },
   "PROMOFLASH25": {
    "criado": "2026-11-09T13:47-03:00",
    "post": 171,
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
+  },
+  "SITETODO1011": {
+   "criado": "2026-11-10T12:02-03:00",
+   "post": 215,
+   "status": "ativo",
+   "validade": "2026-11-10T23:59-03:00"
+  },
+  "TODO1011SITE": {
+   "criado": "2026-11-10T12:02-03:00",
+   "post": 215,
+   "status": "ativo",
+   "validade": "2026-11-11T23:59-03:00"
+  },
+  "TODOSITE1011": {
+   "criado": "2026-11-10T12:02-03:00",
+   "post": 215,
+   "status": "ativo",
+   "validade": "2026-11-10T23:59-03:00"
   },
   "ULTIMASCHANCES": {
    "criado": "2026-11-10T11:04-03:00",
@@ -5256,8 +5310,8 @@
    "validade": "2026-11-10T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5493,
- "cupons_ml_ultimo": 6435,
+ "cupons_extra_ultimo:cupombr": 5496,
+ "cupons_ml_ultimo": 6437,
  "descoberta_em": "2026-11-10T11:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -13107,6 +13161,56 @@
    "criado": "2026-11-10T11:04-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "214": {
+   "blocos": [
+    {
+     "codigo": "OFERTAJA30",
+     "html": "<b>🎟️ OFERTAJA30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 10/12\n👉 <a href=\"https://bit.ly/4zeYopz\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "LEVEAGORA25",
+     "html": "<b>🎟️ LEVEAGORA25</b> 👉 <b>25% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 10/12\n👉 <a href=\"https://bit.ly/48aQKla\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "LEVEAGORA30",
+     "html": "<b>🎟️ LEVEAGORA30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 10/12\n👉 <a href=\"https://bit.ly/48IyWhv\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "POUPAAGORA30",
+     "html": "<b>🎟️ POUPAAGORA30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 10/12\n👉 <a href=\"https://bit.ly/4etL0GJ\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "CHEGOUCUPOM30",
+     "html": "<b>🎟️ CHEGOUCUPOM30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 10/12\n👉 <a href=\"https://bit.ly/3UkxnTC\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-10T12:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "215": {
+   "blocos": [
+    {
+     "codigo": "TODOSITE1011",
+     "html": "<b>🎟️ TODOSITE1011</b> 👉 <b>R$10 OFF</b>\nCompra mín.: R$79\n⏰ Válido até 10/11"
+    },
+    {
+     "codigo": "TODO1011SITE",
+     "html": "<b>🎟️ TODO1011SITE</b> 👉 <b>R$100 OFF</b>\nCompra mín.: R$999\n⏰ Válido até 11/11"
+    },
+    {
+     "codigo": "SITETODO1011",
+     "html": "<b>🎟️ SITETODO1011</b> 👉 <b>R$50 OFF</b>\nCompra mín.: R$399\n⏰ Válido até 10/11"
+    },
+    {
+     "codigo": "MELIMAISPREDD",
+     "html": "<b>🎟️ MELIMAISPREDD</b> 👉 <b>R$70 OFF</b>\n⭐ Exclusivo Meli+\nCompra mín.: R$349\n⏰ Válido até 11/11"
+    }
+   ],
+   "criado": "2026-11-10T12:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
