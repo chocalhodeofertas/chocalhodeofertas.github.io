@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 16
+  "2026-11-10": 17
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12528,6 +12528,12 @@
    "quando": "2026-11-09T16:02-03:00",
    "titulo": "Babá Eletrônica Video Baby Noturna Sem Fio Recarregável Branco Estary Shop"
   },
+  "MLB54191616": {
+   "desconto": 0.609,
+   "preco": 8.96,
+   "quando": "2026-11-10T12:43-03:00",
+   "titulo": "Extensor de Torneira Cromado e Inox com Mangueira Flexível de 15 cm Para Pia"
+  },
   "MLB54207427": {
    "desconto": 0.358,
    "preco": 321.0,
@@ -16488,6 +16494,10 @@
     [
      "2026-11-10",
      99.43
+    ],
+    [
+     "2026-11-10",
+     134.9
     ]
    ],
    "min": 99.43
@@ -17518,6 +17528,10 @@
     [
      "2026-11-10",
      23.39
+    ],
+    [
+     "2026-11-10",
+     22.99
     ]
    ],
    "min": 22.89
@@ -18608,6 +18622,10 @@
     [
      "2026-11-10",
      7599.0
+    ],
+    [
+     "2026-11-10",
+     7699.0
     ]
    ],
    "min": 7599.0
@@ -19483,6 +19501,10 @@
     [
      "2026-11-10",
      26.58
+    ],
+    [
+     "2026-11-10",
+     28.99
     ]
    ],
    "min": 26.58
@@ -23683,6 +23705,10 @@
     [
      "2026-11-09",
      373.0
+    ],
+    [
+     "2026-11-10",
+     399.99
     ]
    ],
    "min": 373.0
@@ -24180,6 +24206,10 @@
     [
      "2026-11-09",
      289.9
+    ],
+    [
+     "2026-11-10",
+     405.0
     ]
    ],
    "min": 289.9
@@ -24417,9 +24447,13 @@
     [
      "2026-11-09",
      59.9
+    ],
+    [
+     "2026-11-10",
+     57.9
     ]
    ],
-   "min": 59.9
+   "min": 57.9
   },
   "MLB72397083": {
    "historico": [
@@ -27174,7 +27208,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T12:23-03:00",
+  "em": "2026-11-10T12:43-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -27215,26 +27249,6 @@
     "link": "https://meli.la/2Jjrc85",
     "preco": 36.5,
     "titulo": "Almofada De Banho Para Bebê Banheira Flutuante Boia Com Alça Cor Verde-água"
-   },
-   {
-    "categoria": "escola",
-    "de": 149.9,
-    "desconto": 0.734,
-    "id": "MLB68310966",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_787295-MLA109864640470_042026-F.jpg",
-    "link": "https://meli.la/1W5NjJc",
-    "preco": 39.9,
-    "titulo": "Caneta Marcadora Acrílica 36 Cores Canetinha Ponta Pincel Profissional Para Desenho Pintura Colorir Artesanato"
-   },
-   {
-    "categoria": "higiene",
-    "de": 29.9,
-    "desconto": 0.438,
-    "id": "MLB26097077",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_756805-MLA99415027760_112025-F.jpg",
-    "link": "https://meli.la/2SeXuYe",
-    "preco": 16.79,
-    "titulo": "1 Esponja Silicone Banho Com Dispenser 80ml Shampoo Sabonete Esfoliação Massagem Skincare"
    },
    {
     "categoria": "alimentacao",
@@ -27597,6 +27611,16 @@
     "titulo": "Carrinho De Bebê Cosco Kids, Toffy, Rosa Noite"
    },
    {
+    "categoria": "outros",
+    "de": 999.0,
+    "desconto": 0.595,
+    "id": "MLB70200075",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_891340-MLA112156407295_052026-F.jpg",
+    "link": "https://meli.la/2CRvDS6",
+    "preco": 405.0,
+    "titulo": "Triciclo Passeio Moto Trail Ate 30kg 2 Em 1 Pedal Empurrador Laranja"
+   },
+   {
     "categoria": "casa",
     "de": 139.9,
     "desconto": 0.5,
@@ -27775,6 +27799,16 @@
     "link": "https://meli.la/2sf2b9e",
     "preco": 145.5,
     "titulo": "Espelho HD 1080P e câmera para bebê no carro com visão noturna"
+   },
+   {
+    "categoria": "gestante",
+    "de": 177.23,
+    "desconto": 0.385,
+    "id": "MLB43646204",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_778686-MLA99447794164_112025-F.jpg",
+    "link": "https://meli.la/34dnmxD",
+    "preco": 109.0,
+    "titulo": "Kit Bolsa Maternidade Bambinelli Mommy Rosa-claro C/ Trocador"
    }
   ]
  },
