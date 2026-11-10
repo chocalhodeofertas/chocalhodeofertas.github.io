@@ -1,5 +1,5 @@
 {
- "aguardando_link": 258,
+ "aguardando_link": 257,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 14
+  "2026-11-10": 16
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12244,6 +12244,12 @@
    "quando": "2026-11-08T18:15-03:00",
    "titulo": "Patinete Infantil 3 Rodas com Led/Dobrável Menino/Menina"
   },
+  "MLB26097077": {
+   "desconto": 0.438,
+   "preco": 16.79,
+   "quando": "2026-11-10T12:23-03:00",
+   "titulo": "1 Esponja Silicone Banho Com Dispenser 80ml Shampoo Sabonete Esfoliação Massagem"
+  },
   "MLB26727193": {
    "desconto": 0.378,
    "preco": 469.99,
@@ -12799,6 +12805,12 @@
    "preco": 76.53,
    "quando": "2026-11-07T10:22-03:00",
    "titulo": "Boneca Bebê Reborn Menino Recém Nascido Pode Dar Banho"
+  },
+  "MLB68310966": {
+   "desconto": 0.734,
+   "preco": 39.9,
+   "quando": "2026-11-10T12:23-03:00",
+   "titulo": "Caneta Marcadora Acrílica 36 Cores Canetinha Ponta Pincel Profissional Para Dese"
   },
   "MLB68934417": {
    "desconto": 0.289,
@@ -14493,6 +14505,10 @@
     [
      "2026-11-09",
      337.16
+    ],
+    [
+     "2026-11-10",
+     341.42
     ]
    ],
    "min": 337.16
@@ -14706,6 +14722,10 @@
     [
      "2026-11-09",
      779.9
+    ],
+    [
+     "2026-11-10",
+     759.0
     ]
    ],
    "min": 699.9
@@ -15112,6 +15132,10 @@
     [
      "2026-11-10",
      323.47
+    ],
+    [
+     "2026-11-10",
+     309.0
     ]
    ],
    "min": 309.0
@@ -16894,6 +16918,10 @@
     [
      "2026-11-10",
      20.89
+    ],
+    [
+     "2026-11-10",
+     21.28
     ]
    ],
    "min": 20.89
@@ -17350,6 +17378,10 @@
     [
      "2026-11-10",
      794.96
+    ],
+    [
+     "2026-11-10",
+     1640.72
     ]
    ],
    "min": 557.0
@@ -17386,6 +17418,10 @@
     [
      "2026-11-09",
      440.39
+    ],
+    [
+     "2026-11-10",
+     445.95
     ]
    ],
    "min": 440.39
@@ -18568,9 +18604,13 @@
     [
      "2026-11-09",
      7699.0
+    ],
+    [
+     "2026-11-10",
+     7599.0
     ]
    ],
-   "min": 7699.0
+   "min": 7599.0
   },
   "MLB42082195": {
    "historico": [
@@ -18703,6 +18743,10 @@
     [
      "2026-11-10",
      67.37
+    ],
+    [
+     "2026-11-10",
+     58.77
     ]
    ],
    "min": 30.99
@@ -19361,6 +19405,10 @@
     [
      "2026-11-09",
      106.7
+    ],
+    [
+     "2026-11-10",
+     114.9
     ]
    ],
    "min": 106.7
@@ -19431,6 +19479,10 @@
     [
      "2026-11-10",
      28.99
+    ],
+    [
+     "2026-11-10",
+     26.58
     ]
    ],
    "min": 26.58
@@ -19844,6 +19896,10 @@
     [
      "2026-11-09",
      3118.21
+    ],
+    [
+     "2026-11-10",
+     3157.54
     ]
    ],
    "min": 3118.21
@@ -20483,9 +20539,13 @@
     [
      "2026-11-10",
      76.53
+    ],
+    [
+     "2026-11-10",
+     37.45
     ]
    ],
-   "min": 41.61
+   "min": 37.45
   },
   "MLB54152915": {
    "historico": [
@@ -25067,6 +25127,10 @@
     [
      "2026-11-06",
      29.9
+    ],
+    [
+     "2026-11-10",
+     32.58
     ]
    ],
    "min": 29.9
@@ -25570,6 +25634,10 @@
     [
      "2026-11-10",
      23.41
+    ],
+    [
+     "2026-11-10",
+     25.18
     ]
    ],
    "min": 23.41
@@ -26056,6 +26124,10 @@
     [
      "2026-11-10",
      283.27
+    ],
+    [
+     "2026-11-10",
+     289.0
     ]
    ],
    "min": 283.27
@@ -27102,7 +27174,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T12:03-03:00",
+  "em": "2026-11-10T12:23-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -27125,6 +27197,16 @@
     "titulo": "Gazin Supreme Cor Branco Colchão Espuma Para Berço Baby D18"
    },
    {
+    "categoria": "quarto",
+    "de": 1299.9,
+    "desconto": 0.578,
+    "id": "MLB72720626",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_642241-MLA115658811869_082026-F.jpg",
+    "link": "https://meli.la/1DnYqLQ",
+    "preco": 549.0,
+    "titulo": "Berço Portátil PipDip Co-Sleeper, Com Balanço e Colchão Extra Grosso"
+   },
+   {
     "categoria": "higiene",
     "de": 78.9,
     "desconto": 0.537,
@@ -27133,26 +27215,6 @@
     "link": "https://meli.la/2Jjrc85",
     "preco": 36.5,
     "titulo": "Almofada De Banho Para Bebê Banheira Flutuante Boia Com Alça Cor Verde-água"
-   },
-   {
-    "categoria": "game",
-    "de": 379.61,
-    "desconto": 0.623,
-    "id": "MLB54245130",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_764530-MLA99474073298_112025-F.jpg",
-    "link": "https://meli.la/2ZeJEhn",
-    "preco": 143.0,
-    "titulo": "Jogo Sonic Racing Crossworlds Launch Edition Switch Fisico"
-   },
-   {
-    "categoria": "higiene",
-    "de": 34.99,
-    "desconto": 0.443,
-    "id": "MLB19160770",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_631466-MLA109737821200_042026-F.jpg",
-    "link": "https://meli.la/26x2CFm",
-    "preco": 19.49,
-    "titulo": "Shampoo Para Bebê Johnson's Baby De Glicerina, 400ml"
    },
    {
     "categoria": "escola",
@@ -27673,6 +27735,16 @@
     "link": "https://meli.la/2oFgpa5",
     "preco": 41.78,
     "titulo": "Hipoglós Creme Preventivo de Assaduras, 120g"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 129.99,
+    "desconto": 0.546,
+    "id": "MLB44672426",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_700384-MLA99379664790_112025-F.jpg",
+    "link": "https://meli.la/2ppVzCP",
+    "preco": 58.99,
+    "titulo": "Tapete Educativo Interativo Teclado Musical - Verde"
    },
    {
     "categoria": "brinquedo",
