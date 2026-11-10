@@ -21,6 +21,11 @@ const RAMPA = [ // [a partir do dia, posts por dia, minutos entre posts]
 ];
 const VALIDADE_ITEM = 3 * 60 * 60 * 1000; // oferta parada há mais de 3h na fila não sai
 const FIM = Date.now() + Number(process.env.WA_HORAS || 5.6) * 3600 * 1000;
+const HORA_INICIO = Number(process.env.WA_HORA_INICIO || 7);
+const HORA_FIM = Number(process.env.WA_HORA_FIM || 23);
+const horaLocal = () => Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/Sao_Paulo", hour: "numeric",
+  hourCycle: "h23" }).format(new Date()));
+const deDia = () => horaLocal() >= HORA_INICIO && horaLocal() < HORA_FIM;
 const RE_LINK = /(https?:\/\/|www\.|chat\.whatsapp\.com|\b[\w-]+\.(com|com\.br|net|ly|me)\/)/i;
 
 let temSessao = false;
@@ -47,7 +52,7 @@ console.log(`WhatsApp: dia ${diasConectado + 1} conectado; até ${MAX_DIA} posts
 const hoje = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo" }).format(new Date());
 const { state, saveCreds } = await useMultiFileAuthState(PASTA_AUTH);
 const logger = pino({ level: "silent" });
-let sock = null, aberto = false, encerrando = false, tentativas = 0;
+let sock = null, aberto = false, encerrando = false, tentativas = 0, dormindo = false;
 let grupo = estado.grupo || null;
 const admins = { quando: 0, lista: new Set() };
 
@@ -95,7 +100,7 @@ function conectar() {
     }
     if (u.connection === "close") {
       aberto = false;
-      if (encerrando) return;
+      if (encerrando || dormindo) return;
       const motivo = u.lastDisconnect?.error?.output?.statusCode;
       if (motivo === DisconnectReason.loggedOut) {
         console.log("WhatsApp desconectado pelo celular.");
@@ -169,6 +174,10 @@ async function cuidarDaFila() {
       continue;
     }
     if (estado.ultimo && Date.now() - Date.parse(estado.ultimo) < INTERVALO) return; // espera o intervalo
+    if (estado.pausado_ate && Date.now() < Date.parse(estado.pausado_ate)) {
+      fs.rmSync(caminho, { force: true }); // em pausa de segurança: não posta
+      continue;
+    }
     try {
       await postar(item);
       estado.enviados += 1;
@@ -176,6 +185,11 @@ async function cuidarDaFila() {
       console.log(`Postado no grupo do WhatsApp (${estado.enviados}/${MAX_DIA} hoje).`);
     } catch (e) {
       console.log("Aviso: não consegui postar no WhatsApp:", e?.message);
+      if (/463|timelock|restrict|forbidden|403/i.test(String(e?.message) + String(e?.output?.statusCode))) {
+        estado.pausado_ate = new Date(Date.now() + 48 * 3600 * 1000).toISOString();
+        await avisar("🛑 O WhatsApp sinalizou uma <b>restrição</b> no número do Chocalho. Pausei os posts no grupo " +
+          "por 48h por segurança. Não use automação nem mande muitas mensagens nesse número enquanto isso.");
+      }
     }
     fs.rmSync(caminho, { force: true });
     salvarTudo();
@@ -202,9 +216,28 @@ async function encerrar() {
 process.on("SIGTERM", encerrar);
 process.on("SIGINT", encerrar);
 
-conectar();
+if (deDia()) conectar();
+else dormindo = true;
 let ultimoSalvo = Date.now();
 while (Date.now() < FIM && !fs.existsSync(path.join(FILA, "PARAR"))) {
+  if (!deDia() && !dormindo) {
+    dormindo = true;
+    salvarTudo();
+    try {
+      sock?.end(undefined);
+    } catch {
+      /* segue */
+    }
+    console.log("WhatsApp: desconectado durante a noite.");
+  } else if (deDia() && dormindo) {
+    dormindo = false;
+    conectar();
+  }
+  if (dormindo) {
+    for (const n of fs.readdirSync(FILA)) if (n.endsWith(".json")) fs.rmSync(path.join(FILA, n), { force: true });
+    await dormir(60000);
+    continue;
+  }
   await cuidarDaFila().catch((e) => console.log("Aviso:", e?.message));
   if (Date.now() - ultimoSalvo > 5 * 60 * 1000) {
     salvarTudo();
