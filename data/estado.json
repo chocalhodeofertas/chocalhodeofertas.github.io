@@ -12097,7 +12097,7 @@
   "2026-11-10": 2
  },
  "membros_lido_em": "2026-11-10T16",
- "numeros_em": "2026-11-10T16:03-03:00",
+ "numeros_em": "2026-11-10T16:23-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -13944,6 +13944,10 @@
     [
      "2026-11-10",
      41.79
+    ],
+    [
+     "2026-11-10",
+     34.02
     ]
    ],
    "min": 34.02
@@ -13983,6 +13987,10 @@
     [
      "2026-11-10",
      57.5
+    ],
+    [
+     "2026-11-10",
+     57.88
     ]
    ],
    "min": 39.9
@@ -19810,6 +19818,10 @@
     [
      "2026-11-10",
      28.99
+    ],
+    [
+     "2026-11-10",
+     27.06
     ]
    ],
    "min": 26.58
@@ -25574,6 +25586,10 @@
     [
      "2026-11-10",
      33.61
+    ],
+    [
+     "2026-11-10",
+     31.57
     ]
    ],
    "min": 29.9
@@ -27649,7 +27665,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T16:03-03:00",
+  "em": "2026-11-10T16:23-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -27783,16 +27799,6 @@
    },
    {
     "categoria": "brinquedo",
-    "de": 299.99,
-    "desconto": 0.647,
-    "id": "MLB26841539",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_677594-MLU75692537470_042024-F.jpg",
-    "link": "https://meli.la/2NtvAXr",
-    "preco": 106.0,
-    "titulo": "Buba Ursinho que reza anjinho da guarda para bebê e criança pelúcia azul"
-   },
-   {
-    "categoria": "brinquedo",
     "de": 149.9,
     "desconto": 0.533,
     "id": "MLB61922175",
@@ -27810,16 +27816,6 @@
     "link": "https://meli.la/2FcodwC",
     "preco": 328.0,
     "titulo": "Banheira com Suporte Dobrável para Bebê Mini Assento Válvula de Esvaziamento 45 Litros Lisa Plástico Rígido At"
-   },
-   {
-    "categoria": "higiene",
-    "de": 64.15,
-    "desconto": 0.534,
-    "id": "MLB38804864",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_808507-MLA111239213148_052026-F.jpg",
-    "link": "https://meli.la/2KcUxXo",
-    "preco": 29.9,
-    "titulo": "Rede de Proteção para Banho Bebê Toki Baby Azul Adaptável 20kg"
    },
    {
     "categoria": "quarto",
@@ -28250,6 +28246,26 @@
     "link": "https://meli.la/1dQR2q4",
     "preco": 34.9,
     "titulo": "Labirinto Magnético Coordenação Motora Pedagógico Imã Montessori Madeira Brinquedo Infantil Educativo Colorido"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 129.9,
+    "desconto": 0.5,
+    "id": "MLB36436855",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_944229-MLA119175436700_112026-F.jpg",
+    "link": "https://meli.la/2w1vR4r",
+    "preco": 64.9,
+    "titulo": "Tapete De Atividades Para Bebê Piano Musical Móbile Interativo 5 Brinquedos Sensoriais Funny Dino Maxi Baby"
+   },
+   {
+    "categoria": "gestante",
+    "de": 247.9,
+    "desconto": 0.359,
+    "id": "MLB35738935",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_926579-MLA115342374153_072026-F.jpg",
+    "link": "https://meli.la/26jKKnv",
+    "preco": 158.9,
+    "titulo": "Trocador Anatômico Bebê Batistela Baby Linho Jeans Azul 69x46cm"
    }
   ]
  },
