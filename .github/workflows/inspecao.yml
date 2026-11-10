@@ -20,6 +20,7 @@ jobs:
       - run: python -m tools.${{ inputs.script || 'inspecionar_categorias' }} "${{ inputs.args }}"
         env:
           ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
           ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID }}
