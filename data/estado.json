@@ -1,5 +1,5 @@
 {
- "aguardando_link": 336,
+ "aguardando_link": 340,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 50
+  "2026-11-10": 2
  },
  "cupons": {
   "AUTO70OFF": {
@@ -5272,7 +5272,7 @@
    "validade": "2026-12-31T23:59-03:00"
   }
  },
- "cupons_ml_ultimo": 6431,
+ "cupons_ml_ultimo": 6432,
  "descoberta_em": "2026-11-09T18:42-03:00",
  "descobertos": {
   "MLB10683785": {
@@ -11968,45 +11968,75 @@
   "MLB81565711": "https://meli.la/1C8TRy9"
  },
  "lote": {
-  "dia": "2026-11-09",
+  "dia": "2026-11-10",
   "ids": [
-   "MLB67928702",
-   "MLB22621352",
-   "MLB65019163",
-   "MLB80273141",
-   "MLB67760284",
+   "MLB80257465",
+   "MLB65812073",
+   "MLB24853515",
+   "MLB36933476",
+   "MLB75659709",
+   "MLB77496641",
+   "MLB74444759",
+   "MLB29770692",
+   "MLB27590860",
+   "MLB67464018",
+   "MLB46247976",
+   "MLB54245130",
    "MLB19160770",
-   "MLB23776718",
-   "MLB26415897",
-   "MLB66793235",
-   "MLB78182436",
-   "MLB27044593",
-   "MLB65346451",
-   "MLB24008919",
-   "MLB23681383",
-   "MLB75383683"
+   "MLB68310966",
+   "MLB26097077",
+   "MLB24696459",
+   "MLB27044594",
+   "MLB54191616",
+   "MLB79494514",
+   "MLB80859688",
+   "MLB49357605",
+   "MLB24331807",
+   "MLB24446865",
+   "MLB66116474",
+   "MLB38429999",
+   "MLB78748750",
+   "MLB68032214",
+   "MLB80565002",
+   "MLB51652593",
+   "MLB68365637"
   ],
   "urls": [
-   "https://produto.mercadolivre.com.br/MLB-4872120669-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-5453567171-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-7821596234-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-7764400620-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4681719141-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4516161195-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6415079856-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4664215515-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4690058152-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7316879804-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5075775519-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7034614536-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5806766584-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5233765958-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5315450435-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3983938259-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5742508852-produto-_JM",
    "https://produto.mercadolivre.com.br/MLB-2777345363-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-6184748268-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4037921250-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-6508332078-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-7497830412-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-6652796414-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-5357944593-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-6182549292-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-3555044831-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-4999065603-produto-_JM"
+   "https://produto.mercadolivre.com.br/MLB-4619145415-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4323444147-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4610159397-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3535105357-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5239484497-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4136170035-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4894796223-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5400899886-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3821447905-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5026965164-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5035306993-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6803415430-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7572667994-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6716834796-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5400412927-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5461309698-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4795056095-produto-_JM"
   ]
  },
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-09": 1
+  "2026-11-10": 1
  },
  "membros_hist": {
   "2026-11-07": 2,
@@ -12252,8 +12282,10 @@
    "quando": "2026-11-06T18:43-03:00"
   },
   "MLB35340738": {
+   "desconto": 0.485,
    "preco": 179.9,
-   "quando": "2026-11-06T19:43-03:00"
+   "quando": "2026-11-10T08:02-03:00",
+   "titulo": "Cadeirinha Descanso Bebe Musical Maxi Baby Até 18kgs Azul"
   },
   "MLB36436855": {
    "preco": 64.9,
@@ -12492,8 +12524,10 @@
    "titulo": "Xô Febre: Compressas Refrescantes para Aliviar a Febre do Bebê – Kit com 4"
   },
   "MLB61118769": {
+   "desconto": 0.464,
    "preco": 429.0,
-   "quando": "2026-11-06T21:24-03:00"
+   "quando": "2026-11-10T08:02-03:00",
+   "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi baby - GRAFITE"
   },
   "MLB61700105": {
    "desconto": 0.648,
@@ -13091,6 +13125,10 @@
     [
      "2026-11-09",
      159.0
+    ],
+    [
+     "2026-11-10",
+     139.0
     ]
    ],
    "min": 139.0
@@ -13104,6 +13142,10 @@
     [
      "2026-11-09",
      13.9
+    ],
+    [
+     "2026-11-10",
+     13.03
     ]
    ],
    "min": 13.03
@@ -13286,6 +13328,10 @@
     [
      "2026-11-09",
      13.08
+    ],
+    [
+     "2026-11-10",
+     14.06
     ]
    ],
    "min": 10.99
@@ -13723,9 +13769,13 @@
     [
      "2026-11-09",
      170.3
+    ],
+    [
+     "2026-11-10",
+     167.0
     ]
    ],
-   "min": 170.3
+   "min": 167.0
   },
   "MLB19538172": {
    "historico": [
@@ -13784,9 +13834,13 @@
     [
      "2026-11-09",
      42.32
+    ],
+    [
+     "2026-11-10",
+     39.95
     ]
    ],
-   "min": 42.32
+   "min": 39.95
   },
   "MLB19694274": {
    "historico": [
@@ -13846,6 +13900,10 @@
     [
      "2026-11-09",
      296.01
+    ],
+    [
+     "2026-11-10",
+     319.13
     ]
    ],
    "min": 296.01
@@ -14000,6 +14058,10 @@
     [
      "2026-11-09",
      186.0
+    ],
+    [
+     "2026-11-10",
+     215.55
     ]
    ],
    "min": 186.0
@@ -14140,9 +14202,13 @@
     [
      "2026-11-09",
      29.9
+    ],
+    [
+     "2026-11-10",
+     29.0
     ]
    ],
-   "min": 29.9
+   "min": 29.0
   },
   "MLB22191149": {
    "historico": [
@@ -14326,9 +14392,13 @@
     [
      "2026-11-09",
      299.9
+    ],
+    [
+     "2026-11-10",
+     289.9
     ]
    ],
-   "min": 299.9
+   "min": 289.9
   },
   "MLB22900049": {
    "historico": [
@@ -14415,9 +14485,13 @@
     [
      "2026-11-06",
      98.59
+    ],
+    [
+     "2026-11-10",
+     94.99
     ]
    ],
-   "min": 98.59
+   "min": 94.99
   },
   "MLB23530643": {
    "historico": [
@@ -14554,6 +14628,10 @@
     [
      "2026-11-08",
      230.99
+    ],
+    [
+     "2026-11-10",
+     214.82
     ]
    ],
    "min": 209.0
@@ -14704,6 +14782,10 @@
     [
      "2026-11-09",
      323.48
+    ],
+    [
+     "2026-11-10",
+     309.0
     ]
    ],
    "min": 309.0
@@ -15223,6 +15305,10 @@
     [
      "2026-11-09",
      21.26
+    ],
+    [
+     "2026-11-10",
+     21.99
     ]
    ],
    "min": 18.2
@@ -15241,9 +15327,13 @@
     [
      "2026-11-07",
      27.0
+    ],
+    [
+     "2026-11-10",
+     19.3
     ]
    ],
-   "min": 27.0
+   "min": 19.3
   },
   "MLB24708509": {
    "historico": [
@@ -15315,6 +15405,10 @@
     [
      "2026-11-09",
      899.9
+    ],
+    [
+     "2026-11-10",
+     846.21
     ]
    ],
    "min": 630.62
@@ -15360,9 +15454,13 @@
     [
      "2026-11-09",
      45.84
+    ],
+    [
+     "2026-11-10",
+     43.99
     ]
    ],
-   "min": 45.84
+   "min": 43.99
   },
   "MLB24853515": {
    "historico": [
@@ -15558,9 +15656,13 @@
     [
      "2026-11-09",
      31.25
+    ],
+    [
+     "2026-11-10",
+     19.0
     ]
    ],
-   "min": 31.25
+   "min": 19.0
   },
   "MLB25840836": {
    "historico": [
@@ -15630,6 +15732,10 @@
     [
      "2026-11-09",
      13.9
+    ],
+    [
+     "2026-11-10",
+     16.79
     ]
    ],
    "min": 13.9
@@ -15679,6 +15785,10 @@
     [
      "2026-11-09",
      341.0
+    ],
+    [
+     "2026-11-10",
+     350.0
     ]
    ],
    "min": 341.0
@@ -15708,6 +15818,10 @@
     [
      "2026-11-09",
      920.53
+    ],
+    [
+     "2026-11-10",
+     799.0
     ]
    ],
    "min": 791.9
@@ -15756,6 +15870,10 @@
     [
      "2026-11-09",
      37.49
+    ],
+    [
+     "2026-11-10",
+     37.5
     ]
    ],
    "min": 37.49
@@ -15914,6 +16032,10 @@
     [
      "2026-11-09",
      133.99
+    ],
+    [
+     "2026-11-10",
+     137.13
     ]
    ],
    "min": 133.99
@@ -15981,9 +16103,13 @@
     [
      "2026-11-09",
      199.43
+    ],
+    [
+     "2026-11-10",
+     178.88
     ]
    ],
-   "min": 199.43
+   "min": 178.88
   },
   "MLB27411314": {
    "historico": [
@@ -15999,6 +16125,10 @@
     [
      "2026-11-09",
      125.21
+    ],
+    [
+     "2026-11-10",
+     149.9
     ]
    ],
    "min": 125.21
@@ -16051,6 +16181,10 @@
     [
      "2026-11-09",
      349.1
+    ],
+    [
+     "2026-11-10",
+     325.99
     ]
    ],
    "min": 299.9
@@ -16152,6 +16286,10 @@
     [
      "2026-11-09",
      230.0
+    ],
+    [
+     "2026-11-10",
+     237.41
     ]
    ],
    "min": 230.0
@@ -16256,9 +16394,13 @@
     [
      "2026-11-09",
      94.99
+    ],
+    [
+     "2026-11-10",
+     78.9
     ]
    ],
-   "min": 94.99
+   "min": 78.9
   },
   "MLB28368344": {
    "historico": [
@@ -16474,9 +16616,13 @@
     [
      "2026-11-09",
      471.9
+    ],
+    [
+     "2026-11-10",
+     283.47
     ]
    ],
-   "min": 471.9
+   "min": 283.47
   },
   "MLB29632495": {
    "historico": [
@@ -16517,6 +16663,10 @@
     [
      "2026-11-09",
      434.99
+    ],
+    [
+     "2026-11-10",
+     447.28
     ]
    ],
    "min": 368.28
@@ -16713,6 +16863,10 @@
     [
      "2026-11-09",
      794.96
+    ],
+    [
+     "2026-11-10",
+     557.0
     ]
    ],
    "min": 557.0
@@ -16829,6 +16983,10 @@
     [
      "2026-11-09",
      22.89
+    ],
+    [
+     "2026-11-10",
+     22.99
     ]
    ],
    "min": 22.89
@@ -16856,9 +17014,13 @@
     [
      "2026-11-09",
      75.9
+    ],
+    [
+     "2026-11-10",
+     64.8
     ]
    ],
-   "min": 75.9
+   "min": 64.8
   },
   "MLB34813250": {
    "historico": [
@@ -16901,6 +17063,10 @@
     [
      "2026-11-09",
      484.99
+    ],
+    [
+     "2026-11-10",
+     529.9
     ]
    ],
    "min": 484.99
@@ -16954,6 +17120,10 @@
     [
      "2026-11-09",
      1521.0
+    ],
+    [
+     "2026-11-10",
+     1559.99
     ]
    ],
    "min": 1521.0
@@ -16971,9 +17141,13 @@
     [
      "2026-11-07",
      103.9
+    ],
+    [
+     "2026-11-10",
+     76.29
     ]
    ],
-   "min": 78.99
+   "min": 76.29
   },
   "MLB35738935": {
    "historico": [
@@ -16997,9 +17171,13 @@
     [
      "2026-11-09",
      63.74
+    ],
+    [
+     "2026-11-10",
+     60.55
     ]
    ],
-   "min": 63.74
+   "min": 60.55
   },
   "MLB35763090": {
    "historico": [
@@ -17015,6 +17193,10 @@
     [
      "2026-11-09",
      18.99
+    ],
+    [
+     "2026-11-10",
+     19.0
     ]
    ],
    "min": 18.99
@@ -17260,6 +17442,10 @@
     [
      "2026-11-07",
      274.99
+    ],
+    [
+     "2026-11-10",
+     347.02
     ]
    ],
    "min": 263.14
@@ -17492,6 +17678,10 @@
     [
      "2026-11-09",
      22.69
+    ],
+    [
+     "2026-11-10",
+     22.9
     ]
    ],
    "min": 22.69
@@ -18171,6 +18361,10 @@
     [
      "2026-11-09",
      41.0
+    ],
+    [
+     "2026-11-10",
+     47.4
     ]
    ],
    "min": 41.0
@@ -18198,6 +18392,10 @@
     [
      "2026-11-09",
      248.89
+    ],
+    [
+     "2026-11-10",
+     260.0
     ]
    ],
    "min": 248.89
@@ -18480,6 +18678,10 @@
     [
      "2026-11-09",
      29.9
+    ],
+    [
+     "2026-11-10",
+     31.5
     ]
    ],
    "min": 29.9
@@ -18633,6 +18835,10 @@
     [
      "2026-11-09",
      241.0
+    ],
+    [
+     "2026-11-10",
+     279.0
     ]
    ],
    "min": 241.0
@@ -18942,6 +19148,10 @@
     [
      "2026-11-09",
      186.0
+    ],
+    [
+     "2026-11-10",
+     224.57
     ]
    ],
    "min": 186.0
@@ -19020,6 +19230,10 @@
     [
      "2026-11-09",
      45.99
+    ],
+    [
+     "2026-11-10",
+     44.19
     ]
    ],
    "min": 44.19
@@ -19099,6 +19313,10 @@
     [
      "2026-11-09",
      152.98
+    ],
+    [
+     "2026-11-10",
+     218.41
     ]
    ],
    "min": 152.98
@@ -19156,6 +19374,10 @@
     [
      "2026-11-09",
      29.6
+    ],
+    [
+     "2026-11-10",
+     29.67
     ]
    ],
    "min": 28.26
@@ -19431,6 +19653,10 @@
     [
      "2026-11-09",
      257.0
+    ],
+    [
+     "2026-11-10",
+     268.98
     ]
    ],
    "min": 257.0
@@ -19440,9 +19666,13 @@
     [
      "2026-11-09",
      65.17
+    ],
+    [
+     "2026-11-10",
+     61.14
     ]
    ],
-   "min": 65.17
+   "min": 61.14
   },
   "MLB53308919": {
    "historico": [
@@ -19506,6 +19736,10 @@
     [
      "2026-11-09",
      419.99
+    ],
+    [
+     "2026-11-10",
+     436.4
     ]
    ],
    "min": 372.24
@@ -19666,6 +19900,10 @@
     [
      "2026-11-09",
      287.65
+    ],
+    [
+     "2026-11-10",
+     318.0
     ]
    ],
    "min": 287.65
@@ -19792,6 +20030,10 @@
     [
      "2026-11-09",
      4249.0
+    ],
+    [
+     "2026-11-10",
+     4084.0
     ]
    ],
    "min": 4084.0
@@ -20023,6 +20265,10 @@
     [
      "2026-11-09",
      4550.0
+    ],
+    [
+     "2026-11-10",
+     4559.0
     ]
    ],
    "min": 4550.0
@@ -20593,6 +20839,10 @@
     [
      "2026-11-09",
      153.22
+    ],
+    [
+     "2026-11-10",
+     163.16
     ]
    ],
    "min": 153.22
@@ -21006,6 +21256,10 @@
     [
      "2026-11-09",
      205.99
+    ],
+    [
+     "2026-11-10",
+     199.0
     ]
    ],
    "min": 183.0
@@ -21015,9 +21269,13 @@
     [
      "2026-11-09",
      59.9
+    ],
+    [
+     "2026-11-10",
+     57.0
     ]
    ],
-   "min": 59.9
+   "min": 57.0
   },
   "MLB62978394": {
    "historico": [
@@ -21082,9 +21340,13 @@
     [
      "2026-11-09",
      524.92
+    ],
+    [
+     "2026-11-10",
+     514.99
     ]
    ],
-   "min": 524.92
+   "min": 514.99
   },
   "MLB63081358": {
    "historico": [
@@ -21122,9 +21384,13 @@
     [
      "2026-11-09",
      951.0
+    ],
+    [
+     "2026-11-10",
+     939.99
     ]
    ],
-   "min": 951.0
+   "min": 939.99
   },
   "MLB63152047": {
    "historico": [
@@ -21285,9 +21551,13 @@
     [
      "2026-11-06",
      129.99
+    ],
+    [
+     "2026-11-10",
+     126.09
     ]
    ],
-   "min": 129.99
+   "min": 126.09
   },
   "MLB63854956": {
    "historico": [
@@ -21538,6 +21808,10 @@
     [
      "2026-11-09",
      107.99
+    ],
+    [
+     "2026-11-10",
+     91.94
     ]
    ],
    "min": 91.94
@@ -21556,9 +21830,13 @@
     [
      "2026-11-09",
      66.0
+    ],
+    [
+     "2026-11-10",
+     64.0
     ]
    ],
-   "min": 66.0
+   "min": 64.0
   },
   "MLB65216393": {
    "historico": [
@@ -21738,6 +22016,10 @@
     [
      "2026-11-09",
      264.0
+    ],
+    [
+     "2026-11-10",
+     273.99
     ]
    ],
    "min": 264.0
@@ -21991,9 +22273,13 @@
     [
      "2026-11-09",
      862.41
+    ],
+    [
+     "2026-11-10",
+     845.99
     ]
    ],
-   "min": 862.41
+   "min": 845.99
   },
   "MLB66784003": {
    "historico": [
@@ -22714,6 +23000,10 @@
     [
      "2026-11-09",
      21.98
+    ],
+    [
+     "2026-11-10",
+     23.64
     ]
    ],
    "min": 21.98
@@ -22847,6 +23137,10 @@
     [
      "2026-11-09",
      33.33
+    ],
+    [
+     "2026-11-10",
+     34.9
     ]
    ],
    "min": 33.33
@@ -22927,18 +23221,26 @@
     [
      "2026-11-06",
      23.79
+    ],
+    [
+     "2026-11-10",
+     21.88
     ]
    ],
-   "min": 23.79
+   "min": 21.88
   },
   "MLB70032471": {
    "historico": [
     [
      "2026-11-09",
      254.99
+    ],
+    [
+     "2026-11-10",
+     229.0
     ]
    ],
-   "min": 254.99
+   "min": 229.0
   },
   "MLB70042630": {
    "historico": [
@@ -22949,9 +23251,13 @@
     [
      "2026-11-09",
      5215.0
+    ],
+    [
+     "2026-11-10",
+     2599.0
     ]
    ],
-   "min": 5099.0
+   "min": 2599.0
   },
   "MLB70042938": {
    "historico": [
@@ -23278,6 +23584,10 @@
     [
      "2026-11-09",
      70.58
+    ],
+    [
+     "2026-11-10",
+     79.99
     ]
    ],
    "min": 49.49
@@ -23534,6 +23844,10 @@
     [
      "2026-11-09",
      519.0
+    ],
+    [
+     "2026-11-10",
+     699.9
     ]
    ],
    "min": 519.0
@@ -23735,9 +24049,13 @@
     [
      "2026-11-08",
      45.99
+    ],
+    [
+     "2026-11-10",
+     43.07
     ]
    ],
-   "min": 45.99
+   "min": 43.07
   },
   "MLB74242291": {
    "historico": [
@@ -23881,9 +24199,13 @@
     [
      "2026-11-09",
      389.9
+    ],
+    [
+     "2026-11-10",
+     379.99
     ]
    ],
-   "min": 389.9
+   "min": 379.99
   },
   "MLB74813550": {
    "historico": [
@@ -24094,6 +24416,10 @@
     [
      "2026-11-09",
      423.0
+    ],
+    [
+     "2026-11-10",
+     387.33
     ]
    ],
    "min": 387.33
@@ -24157,6 +24483,10 @@
     [
      "2026-11-09",
      32.14
+    ],
+    [
+     "2026-11-10",
+     38.26
     ]
    ],
    "min": 32.14
@@ -24184,6 +24514,10 @@
     [
      "2026-11-09",
      39.2
+    ],
+    [
+     "2026-11-10",
+     39.99
     ]
    ],
    "min": 39.2
@@ -24247,6 +24581,10 @@
     [
      "2026-11-09",
      24.15
+    ],
+    [
+     "2026-11-10",
+     29.9
     ]
    ],
    "min": 24.15
@@ -24304,6 +24642,10 @@
     [
      "2026-11-09",
      23.41
+    ],
+    [
+     "2026-11-10",
+     25.18
     ]
    ],
    "min": 23.41
@@ -24429,9 +24771,13 @@
     [
      "2026-11-09",
      148.18
+    ],
+    [
+     "2026-11-10",
+     148.0
     ]
    ],
-   "min": 148.18
+   "min": 148.0
   },
   "MLB76571540": {
    "historico": [
@@ -24709,6 +25055,10 @@
     [
      "2026-11-09",
      109.9
+    ],
+    [
+     "2026-11-10",
+     107.99
     ]
    ],
    "min": 69.99
@@ -24718,9 +25068,13 @@
     [
      "2026-11-06",
      62.0
+    ],
+    [
+     "2026-11-10",
+     59.99
     ]
    ],
-   "min": 62.0
+   "min": 59.99
   },
   "MLB77824951": {
    "historico": [
@@ -24736,6 +25090,10 @@
     [
      "2026-11-09",
      244.99
+    ],
+    [
+     "2026-11-10",
+     589.9
     ]
    ],
    "min": 244.99
@@ -24844,9 +25202,13 @@
     [
      "2026-11-09",
      37.09
+    ],
+    [
+     "2026-11-10",
+     31.59
     ]
    ],
-   "min": 37.09
+   "min": 31.59
   },
   "MLB78452515": {
    "historico": [
@@ -24866,6 +25228,10 @@
     [
      "2026-11-09",
      369.9
+    ],
+    [
+     "2026-11-10",
+     409.0
     ]
    ],
    "min": 351.0
@@ -25647,9 +26013,13 @@
     [
      "2026-11-09",
      24.99
+    ],
+    [
+     "2026-11-10",
+     23.99
     ]
    ],
-   "min": 24.99
+   "min": 23.99
   },
   "MLB9412100": {
    "historico": [
@@ -25660,6 +26030,10 @@
     [
      "2026-11-09",
      60.0
+    ],
+    [
+     "2026-11-10",
+     64.58
     ]
    ],
    "min": 60.0
@@ -25674,7 +26048,7 @@
  "tg_offset": 273517995,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-09T21:52-03:00",
+  "em": "2026-11-10T08:02-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -25767,6 +26141,16 @@
     "titulo": "Cercadinho Grande Para Bebe Infantil Vário Tamanho Acessório 127×127cm Cinza"
    },
    {
+    "categoria": "outros",
+    "de": 599.9,
+    "desconto": 0.273,
+    "id": "MLB54018368",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_838150-MLA96150683103_102025-F.jpg",
+    "link": "https://meli.la/21gqDeR",
+    "preco": 436.4,
+    "titulo": "Berço Portátil Infantil Cercado 0-15kg Lazy Maxi baby - Cinza"
+   },
+   {
     "categoria": "brinquedo",
     "de": 149.9,
     "desconto": 0.474,
@@ -25797,14 +26181,14 @@
     "titulo": "Kit Berço Menina Menino Protetor Trança Com Saia 6 Peças Cor Elefantinho Rosa"
    },
    {
-    "categoria": "outros",
-    "de": 541.2,
-    "desconto": 0.224,
-    "id": "MLB54018368",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_838150-MLA96150683103_102025-F.jpg",
-    "link": "https://meli.la/21gqDeR",
-    "preco": 419.99,
-    "titulo": "Berço Portátil Infantil Cercado 0-15kg Lazy Maxi baby - Cinza"
+    "categoria": "quarto",
+    "de": 529.9,
+    "desconto": 0.269,
+    "id": "MLB75481308",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_889881-MLA114552950567_072026-F.jpg",
+    "link": "https://meli.la/2qpr2WC",
+    "preco": 387.33,
+    "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
    },
    {
     "categoria": "outros",
@@ -25855,16 +26239,6 @@
     "link": "https://meli.la/2yRNUqX",
     "preco": 20.9,
     "titulo": "Kit 1 Seringa Lavagem Nariz + 1 Aspirador Sugador Catarro Bebê Lider Comercios Cor Azul-celeste"
-   },
-   {
-    "categoria": "quarto",
-    "de": 529.9,
-    "desconto": 0.202,
-    "id": "MLB75481308",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_889881-MLA114552950567_072026-F.jpg",
-    "link": "https://meli.la/2qpr2WC",
-    "preco": 423.0,
-    "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
    },
    {
     "categoria": "outros",
@@ -25937,27 +26311,17 @@
     "titulo": "Jogo Stop Eletrônico Trava Letras Leeboom Com Temporizador Educativo 10 Segundos Em Português Cor Vermelho"
    },
    {
-    "categoria": "brinquedo",
-    "de": 48.99,
-    "desconto": 0.235,
-    "id": "MLB26712966",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_935402-MLA99602357854_122025-F.jpg",
-    "link": "https://meli.la/1RGvMdG",
-    "preco": 37.49,
-    "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
-   },
-   {
     "categoria": "outros",
-    "de": null,
-    "desconto": 0.0,
-    "id": "MLB47899174",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_775995-MLA120917880437_112026-F.jpg",
-    "link": "https://meli.la/1mbZ5jZ",
-    "preco": 186.0,
-    "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco Estary Shop"
+    "de": 299.9,
+    "desconto": 0.208,
+    "id": "MLB28001568",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_867600-MLA99504966812_112025-F.jpg",
+    "link": "https://meli.la/18u34ak",
+    "preco": 237.41,
+    "titulo": "Andador Infantil Musical Para Bebê Empurrador Compacto 3 Ajustes de Altura La Bamba Maxi Baby - azul"
    }
   ]
  },
- "vitrine_assinatura": "d26e836afe8931ce201c4d3fa879c48d620f1674",
- "vitrine_publicada_em": "2026-11-09T21:12-03:00"
+ "vitrine_assinatura": "ccad8d6b8d068df4dd9284da9ed4415185aaef3a",
+ "vitrine_publicada_em": "2026-11-10T08:02-03:00"
 }
