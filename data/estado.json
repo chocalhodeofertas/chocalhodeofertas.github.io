@@ -1,5 +1,5 @@
 {
- "aguardando_link": 250,
+ "aguardando_link": 251,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 8
+  "2026-11-10": 9
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12883,6 +12883,12 @@
    "quando": "2026-11-09T21:32-03:00",
    "titulo": "Maiô Natação Infantil Biquíni Manga Longa Proteção Solar Uv Cor Água Tamanho 4"
   },
+  "MLB74444759": {
+   "desconto": 0.52,
+   "preco": 65.28,
+   "quando": "2026-11-10T10:22-03:00",
+   "titulo": "Trocador Americano Cômoda Bebe Impermeável Anatômico C/ Abas Cor Xadrez Lilás Es"
+  },
   "MLB74454821": {
    "desconto": 0.407,
    "preco": 41.48,
@@ -13219,6 +13225,10 @@
     [
      "2026-11-10",
      13.9
+    ],
+    [
+     "2026-11-10",
+     13.03
     ]
    ],
    "min": 13.03
@@ -13866,6 +13876,10 @@
     [
      "2026-11-10",
      188.75
+    ],
+    [
+     "2026-11-10",
+     168.0
     ]
    ],
    "min": 167.0
@@ -14010,6 +14024,10 @@
     [
      "2026-11-09",
      14.3
+    ],
+    [
+     "2026-11-10",
+     14.95
     ]
    ],
    "min": 14.3
@@ -14062,6 +14080,10 @@
     [
      "2026-11-09",
      510.47
+    ],
+    [
+     "2026-11-10",
+     629.0
     ]
    ],
    "min": 499.9
@@ -14441,9 +14463,13 @@
     [
      "2026-11-09",
      29.93
+    ],
+    [
+     "2026-11-10",
+     26.69
     ]
    ],
-   "min": 29.93
+   "min": 26.69
   },
   "MLB22621352": {
    "historico": [
@@ -14749,6 +14775,10 @@
     [
      "2026-11-10",
      214.82
+    ],
+    [
+     "2026-11-10",
+     230.98
     ]
    ],
    "min": 209.0
@@ -14923,6 +14953,10 @@
     [
      "2026-11-10",
      309.0
+    ],
+    [
+     "2026-11-10",
+     323.47
     ]
    ],
    "min": 309.0
@@ -16234,9 +16268,13 @@
     [
      "2026-11-09",
      134.9
+    ],
+    [
+     "2026-11-10",
+     99.43
     ]
    ],
-   "min": 134.9
+   "min": 99.43
   },
   "MLB27267704": {
    "historico": [
@@ -17774,6 +17812,10 @@
     [
      "2026-11-06",
      64.9
+    ],
+    [
+     "2026-11-10",
+     69.9
     ]
    ],
    "min": 64.9
@@ -18566,6 +18608,10 @@
     [
      "2026-11-10",
      47.4
+    ],
+    [
+     "2026-11-10",
+     41.0
     ]
    ],
    "min": 41.0
@@ -21081,6 +21127,10 @@
     [
      "2026-11-09",
      111.2
+    ],
+    [
+     "2026-11-10",
+     116.3
     ]
    ],
    "min": 111.2
@@ -24472,6 +24522,10 @@
     [
      "2026-11-10",
      399.9
+    ],
+    [
+     "2026-11-10",
+     408.7
     ]
    ],
    "min": 379.99
@@ -26207,6 +26261,10 @@
     [
      "2026-11-10",
      320.0
+    ],
+    [
+     "2026-11-10",
+     299.9
     ]
    ],
    "min": 252.99
@@ -26349,7 +26407,7 @@
  "tg_offset": 273517998,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T10:02-03:00",
+  "em": "2026-11-10T10:22-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -26360,26 +26418,6 @@
     "link": "https://meli.la/2LZcamX",
     "preco": 99.0,
     "titulo": "Gazin Supreme Cor Branco Colchão Espuma Para Berço Baby D18"
-   },
-   {
-    "categoria": "quarto",
-    "de": 99.99,
-    "desconto": 0.747,
-    "id": "MLB75659709",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_720591-MLA114256837796_082026-F.jpg",
-    "link": "https://meli.la/2byg2Vo",
-    "preco": 25.29,
-    "titulo": "Naninha Para Bebê Macia Antialérgica Ursinho Cabeça Poá Marrom Menina E Menino Algodão Poliéster 30cm Lenço 35"
-   },
-   {
-    "categoria": "outros",
-    "de": 74.9,
-    "desconto": 0.741,
-    "id": "MLB77496641",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_602931-MLA114903892846_082026-F.jpg",
-    "link": "https://meli.la/13iBu8Y",
-    "preco": 19.37,
-    "titulo": "Kit 4 Travas de Segurança Para Geladeira e Gaveta Adesiva Infantil Branca PazPort"
    },
    {
     "categoria": "quarto",
@@ -26950,6 +26988,26 @@
     "link": "https://meli.la/2Qzmidz",
     "preco": 69.99,
     "titulo": "Copa Do Mundo 2026 Box Mini Estádio C/ 30 Envelopes De Figurinhas Fifa World Cup 2026"
+   },
+   {
+    "categoria": "higiene",
+    "de": 45.0,
+    "desconto": 0.475,
+    "id": "MLB69332647",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_782009-MLA111395494951_052026-F.jpg",
+    "link": "https://meli.la/25eSjCW",
+    "preco": 23.64,
+    "titulo": "Toalha De Bebe Infantil Macia Com Capuz Grande Forrada Cor Azul-aço"
+   },
+   {
+    "categoria": "alimentacao",
+    "de": 44.9,
+    "desconto": 0.402,
+    "id": "MLB27978602",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_652078-MLA99600405536_122025-F.jpg",
+    "link": "https://meli.la/1RrxuGb",
+    "preco": 26.87,
+    "titulo": "Babador De Silicone Com Pega Migalhas Verde 15641 - Buba"
    }
   ]
  },
