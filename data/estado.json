@@ -1,5 +1,5 @@
 {
- "aguardando_link": 335,
+ "aguardando_link": 334,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 46
+  "2026-11-09": 48
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12010,7 +12010,8 @@
  },
  "membros_hist": {
   "2026-11-07": 2,
-  "2026-11-08": 2
+  "2026-11-08": 2,
+  "2026-11-09": 2
  },
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
@@ -12097,6 +12098,12 @@
    "preco": 439.9,
    "quando": "2026-11-09T11:12-03:00",
    "titulo": "Conjunto Bebê Conforto Grid Rosa Com Base - Galzerano"
+  },
+  "MLB21843844": {
+   "desconto": 0.3,
+   "preco": 23.8,
+   "quando": "2026-11-09T21:12-03:00",
+   "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
   },
   "MLB22501041": {
    "desconto": 0.273,
@@ -12541,6 +12548,12 @@
    "preco": 349.8,
    "quando": "2026-11-09T10:32-03:00",
    "titulo": "Cadeirinha Automotiva Atentu BS05 para Bebê e Criança de 9 a 36 kg Vermelha"
+  },
+  "MLB62572381": {
+   "desconto": 0.255,
+   "preco": 119.21,
+   "quando": "2026-11-09T21:12-03:00",
+   "titulo": "Pelúcia Banguela Fúria da Noite 100cm de Satin Preto para Abraçar"
   },
   "MLB62645299": {
    "desconto": 0.481,
@@ -13539,6 +13552,10 @@
     [
      "2026-11-09",
      39.9
+    ],
+    [
+     "2026-11-09",
+     49.97
     ]
    ],
    "min": 39.9
@@ -13695,9 +13712,13 @@
     [
      "2026-11-09",
      43.99
+    ],
+    [
+     "2026-11-09",
+     43.5
     ]
    ],
-   "min": 43.99
+   "min": 43.5
   },
   "MLB19569079": {
    "historico": [
@@ -18110,6 +18131,10 @@
     [
      "2026-11-09",
      47.4
+    ],
+    [
+     "2026-11-09",
+     41.0
     ]
    ],
    "min": 41.0
@@ -18538,6 +18563,10 @@
     [
      "2026-11-09",
      28.99
+    ],
+    [
+     "2026-11-09",
+     26.58
     ]
    ],
    "min": 26.58
@@ -19075,9 +19104,13 @@
     [
      "2026-11-09",
      29.6
+    ],
+    [
+     "2026-11-09",
+     28.26
     ]
    ],
-   "min": 29.6
+   "min": 28.26
   },
   "MLB50836898": {
    "historico": [
@@ -19577,6 +19610,10 @@
     [
      "2026-11-09",
      318.0
+    ],
+    [
+     "2026-11-09",
+     326.0
     ]
    ],
    "min": 318.0
@@ -21869,6 +21906,10 @@
     [
      "2026-11-07",
      45.9
+    ],
+    [
+     "2026-11-09",
+     49.9
     ]
    ],
    "min": 29.99
@@ -22828,6 +22869,10 @@
     [
      "2026-11-09",
      5099.0
+    ],
+    [
+     "2026-11-09",
+     5215.0
     ]
    ],
    "min": 5099.0
@@ -22900,9 +22945,13 @@
     [
      "2026-11-09",
      25.4
+    ],
+    [
+     "2026-11-09",
+     24.93
     ]
    ],
-   "min": 25.4
+   "min": 24.93
   },
   "MLB70334862": {
    "historico": [
@@ -24580,6 +24629,10 @@
     [
      "2026-11-09",
      109.0
+    ],
+    [
+     "2026-11-09",
+     109.9
     ]
    ],
    "min": 69.99
@@ -24773,9 +24826,13 @@
     [
      "2026-11-09",
      144.9
+    ],
+    [
+     "2026-11-09",
+     136.9
     ]
    ],
-   "min": 144.9
+   "min": 136.9
   },
   "MLB78714478": {
    "historico": [
@@ -25532,7 +25589,7 @@
    "min": 60.0
   }
  },
- "resumo_enviado": "2026-11-08",
+ "resumo_enviado": "2026-11-09",
  "temas_recentes": {
   "ate50": "2026-11-09",
   "brinquedos": "2026-11-08",
@@ -25541,7 +25598,7 @@
  "tg_offset": 273517995,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-09T20:52-03:00",
+  "em": "2026-11-09T21:12-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -25592,16 +25649,6 @@
     "link": "https://meli.la/13aW58Y",
     "preco": 64.9,
     "titulo": "Tapete Infantil De Atividades Piano Musical Com Luz E Som"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 44.9,
-    "desconto": 0.469,
-    "id": "MLB78828696",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_813471-MLA115636214620_092026-F.jpg",
-    "link": "https://meli.la/2iWG7Fy",
-    "preco": 23.86,
-    "titulo": "Pistola Lança Bolhas de Sabão Automática Redfin Azul Com Luz Para Crianças"
    },
    {
     "categoria": "brinquedo",
@@ -25825,6 +25872,6 @@
    }
   ]
  },
- "vitrine_assinatura": "6489ca8dc4511a21377601922aee6457efad8256",
- "vitrine_publicada_em": "2026-11-09T20:12-03:00"
+ "vitrine_assinatura": "d26e836afe8931ce201c4d3fa879c48d620f1674",
+ "vitrine_publicada_em": "2026-11-09T21:12-03:00"
 }
