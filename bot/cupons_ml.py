@@ -327,7 +327,7 @@ def canais_configurados():
         lista.append((os.environ["TG_CANAL_CUPONS"], "cupons_ml_ultimo", parse))
     for nome in re.split(r"[,\s]+", os.environ.get("CUPONS_CANAIS_EXTRA") or ""):
         nome = nome.strip().rsplit("/", 1)[-1].lstrip("@")
-        if nome:
+        if nome and nome.lower() not in ("nenhum", "off", "0"):
             lista.append((nome, f"cupons_extra_ultimo:{nome}", parse_lista))
     return lista
 
