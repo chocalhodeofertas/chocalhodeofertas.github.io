@@ -1,5 +1,5 @@
 {
- "aguardando_link": 340,
+ "aguardando_link": 341,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 2
+  "2026-11-10": 3
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12502,8 +12502,10 @@
    "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
   },
   "MLB58047533": {
+   "desconto": 0.456,
    "preco": 68.0,
-   "quando": "2026-11-06T21:44-03:00"
+   "quando": "2026-11-10T08:22-03:00",
+   "titulo": "Troninho Privadinha Assento Redutor Pinico Para Desfralde Cinza"
   },
   "MLB58664244": {
    "desconto": 0.545,
@@ -13341,9 +13343,13 @@
     [
      "2026-11-06",
      10.24
+    ],
+    [
+     "2026-11-10",
+     8.6
     ]
    ],
-   "min": 10.24
+   "min": 8.6
   },
   "MLB17875756": {
    "historico": [
@@ -16129,6 +16135,10 @@
     [
      "2026-11-10",
      149.9
+    ],
+    [
+     "2026-11-10",
+     125.21
     ]
    ],
    "min": 125.21
@@ -16974,6 +16984,10 @@
     [
      "2026-11-06",
      139.9
+    ],
+    [
+     "2026-11-10",
+     130.0
     ]
    ],
    "min": 118.56
@@ -19234,6 +19248,10 @@
     [
      "2026-11-10",
      44.19
+    ],
+    [
+     "2026-11-10",
+     45.99
     ]
    ],
    "min": 44.19
@@ -21738,6 +21756,10 @@
     [
      "2026-11-09",
      27.0
+    ],
+    [
+     "2026-11-10",
+     27.11
     ]
    ],
    "min": 27.0
@@ -25545,9 +25567,13 @@
     [
      "2026-11-09",
      164.99
+    ],
+    [
+     "2026-11-10",
+     159.0
     ]
    ],
-   "min": 164.99
+   "min": 159.0
   },
   "MLB79736952": {
    "historico": [
@@ -26048,18 +26074,8 @@
  "tg_offset": 273517995,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T08:02-03:00",
+  "em": "2026-11-10T08:22-03:00",
   "itens": [
-   {
-    "categoria": "brinquedo",
-    "de": 349.0,
-    "desconto": 0.485,
-    "id": "MLB35340738",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_604756-MLA96100314723_102025-F.jpg",
-    "link": "https://meli.la/1Rug6so",
-    "preco": 179.9,
-    "titulo": "Cadeirinha Descanso Bebe Musical Maxi Baby Até 18kgs Azul"
-   },
    {
     "categoria": "passeio",
     "de": 39.9,
@@ -26069,16 +26085,6 @@
     "link": "https://meli.la/2wv2B2q",
     "preco": 23.99,
     "titulo": "Mosquiteiro Para Carrinho Bebê Conforto Portátil Universal Branco"
-   },
-   {
-    "categoria": "outros",
-    "de": 799.9,
-    "desconto": 0.464,
-    "id": "MLB61118769",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_967447-MLA109050296314_032026-F.jpg",
-    "link": "https://meli.la/2qfyL4H",
-    "preco": 429.0,
-    "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi baby - GRAFITE"
    },
    {
     "categoria": "higiene",
@@ -26099,6 +26105,16 @@
     "link": "https://meli.la/2bAX86M",
     "preco": 90.0,
     "titulo": "Andador Empurrador Infantil Musical Educativo Rosa Yuupi YPHE0811"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 78.99,
+    "desconto": 0.707,
+    "id": "MLB76574611",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_815293-MLA115438222718_082026-F.jpg",
+    "link": "https://meli.la/1c7EjFK",
+    "preco": 23.18,
+    "titulo": "Tapete De Atividades Para Bebes Almofada De Água Inflável Interativo Aquário Sensorial Fundo Do Mar Rosa Tsc S"
    },
    {
     "categoria": "brinquedo",
