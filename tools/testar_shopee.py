@@ -24,13 +24,14 @@ def brl(v):
 def main():
     termos = [t.strip() for t in (sys.argv[1] if len(sys.argv) > 1 else "").split(",") if t.strip()] or TERMOS
     shp = Shopee(os.environ.get("SHOPEE_APP_ID"), os.environ.get("SHOPEE_SECRET"))
-    vistos, bons, fora = {}, [], {}
+    vistos, bons, fora, erros = {}, [], {}, []
     for termo in termos:
         try:
             achados = shp.buscar(termo, ordem=MAIS_VENDIDOS, limite=50)
         except ShopeeErro as e:
             print("ERRO", termo, e)
-            return str(e)
+            erros.append(termo)
+            continue
         print(f"TERMO {termo}: {len(achados)} produtos")
         for p in achados:
             if p.id in vistos:
@@ -41,11 +42,15 @@ def main():
                 fora[motivo] = fora.get(motivo, 0) + 1
                 continue
             bons.append(p)
+    if not vistos:
+        return "a API não respondeu em nenhuma busca (" + ", ".join(erros) + ")"
     bons.sort(key=lambda p: (p.desconto, p.vendas), reverse=True)
     Path("saida").mkdir(exist_ok=True)
     Path("saida/shopee.json").write_text(json.dumps([p.__dict__ for p in bons], ensure_ascii=False, indent=1))
     linhas = [f"🛍️ <b>Teste da API da Shopee</b> (nada foi postado)",
               f"{len(vistos)} produtos encontrados · {len(bons)} passaram nos filtros"]
+    if erros:
+        linhas.append("• a API falhou em: " + html.escape(", ".join(erros)))
     for motivo, n in sorted(fora.items(), key=lambda x: -x[1]):
         linhas.append(f"• {n} barrados: {html.escape(motivo)}")
     linhas.append("\n<b>Maiores descontos</b>")

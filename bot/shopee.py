@@ -81,7 +81,17 @@ class Shopee:
         self.app_id, self.segredo, self.url = str(app_id), segredo, url
         self.s = session or requests.Session()
 
-    def _chamar(self, consulta):
+    def _chamar(self, consulta, tentativas=6, espera=2.0):
+        """A API às vezes devolve "System Error" (10000) ou limite (10030) à toa: tenta de novo."""
+        for k in range(tentativas):
+            try:
+                return self._chamar_uma(consulta)
+            except ShopeeErro as e:
+                if k == tentativas - 1 or not any(c in str(e) for c in ("(10000)", "(10030)", "conexão")):
+                    raise
+                time.sleep(espera * (k + 1))
+
+    def _chamar_uma(self, consulta):
         carga = json.dumps({"query": consulta}, ensure_ascii=False)
         ts = int(time.time())
         cab = {
