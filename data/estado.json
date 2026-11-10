@@ -1,5 +1,5 @@
 {
- "aguardando_link": 257,
+ "aguardando_link": 258,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -14075,6 +14075,10 @@
     [
      "2026-11-09",
      519.9
+    ],
+    [
+     "2026-11-10",
+     646.1
     ]
    ],
    "min": 519.9
@@ -14661,9 +14665,13 @@
     [
      "2026-11-09",
      188.91
+    ],
+    [
+     "2026-11-10",
+     70.0
     ]
    ],
-   "min": 188.91
+   "min": 70.0
   },
   "MLB23590696": {
    "historico": [
@@ -14959,6 +14967,10 @@
     [
      "2026-11-10",
      309.0
+    ],
+    [
+     "2026-11-10",
+     323.47
     ]
    ],
    "min": 309.0
@@ -15423,9 +15435,13 @@
     [
      "2026-11-09",
      458.9
+    ],
+    [
+     "2026-11-10",
+     419.0
     ]
    ],
-   "min": 458.9
+   "min": 419.0
   },
   "MLB24659861": {
    "historico": [
@@ -16142,9 +16158,13 @@
     [
      "2026-11-09",
      106.0
+    ],
+    [
+     "2026-11-10",
+     97.37
     ]
    ],
-   "min": 106.0
+   "min": 97.37
   },
   "MLB26851070": {
    "historico": [
@@ -17953,6 +17973,10 @@
     [
      "2026-11-10",
      80.48
+    ],
+    [
+     "2026-11-10",
+     98.78
     ]
    ],
    "min": 80.48
@@ -18329,9 +18353,13 @@
     [
      "2026-11-09",
      48.9
+    ],
+    [
+     "2026-11-10",
+     45.0
     ]
    ],
-   "min": 48.9
+   "min": 45.0
   },
   "MLB41302121": {
    "historico": [
@@ -19029,6 +19057,10 @@
     [
      "2026-11-09",
      39.99
+    ],
+    [
+     "2026-11-10",
+     48.45
     ]
    ],
    "min": 39.99
@@ -19230,6 +19262,10 @@
     [
      "2026-11-10",
      28.99
+    ],
+    [
+     "2026-11-10",
+     26.58
     ]
    ],
    "min": 26.58
@@ -20742,9 +20778,13 @@
     [
      "2026-11-10",
      4559.0
+    ],
+    [
+     "2026-11-10",
+     4299.0
     ]
    ],
-   "min": 4550.0
+   "min": 4299.0
   },
   "MLB57083030": {
    "historico": [
@@ -21275,9 +21315,13 @@
     [
      "2026-11-10",
      309.0
+    ],
+    [
+     "2026-11-10",
+     269.0
     ]
    ],
-   "min": 295.75
+   "min": 269.0
   },
   "MLB62020136": {
    "historico": [
@@ -26679,6 +26723,10 @@
     [
      "2026-11-10",
      299.9
+    ],
+    [
+     "2026-11-10",
+     320.0
     ]
    ],
    "min": 252.99
@@ -26821,7 +26869,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T11:22-03:00",
+  "em": "2026-11-10T11:42-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -26842,16 +26890,6 @@
     "link": "https://meli.la/2LZcamX",
     "preco": 99.0,
     "titulo": "Gazin Supreme Cor Branco Colchão Espuma Para Berço Baby D18"
-   },
-   {
-    "categoria": "passeio",
-    "de": 80.0,
-    "desconto": 0.769,
-    "id": "MLB67464018",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_770880-MLA109048003996_032026-F.jpg",
-    "link": "https://meli.la/1E9XdYy",
-    "preco": 18.49,
-    "titulo": "Organizador De Carro Encosto Banco Porta Trecos E Tablet"
    },
    {
     "categoria": "higiene",
@@ -27122,16 +27160,6 @@
     "link": "https://meli.la/2ffNJy8",
     "preco": 31.44,
     "titulo": "Kit Travesseiro Bebê Anti Sufocante com Fronha e Almofada Anatômica para Plagiocefalia"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 299.99,
-    "desconto": 0.647,
-    "id": "MLB26841539",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_677594-MLU75692537470_042024-F.jpg",
-    "link": "https://meli.la/2NtvAXr",
-    "preco": 106.0,
-    "titulo": "Buba Ursinho que reza anjinho da guarda para bebê e criança pelúcia azul"
    },
    {
     "categoria": "brinquedo",
@@ -27422,6 +27450,26 @@
     "link": "https://meli.la/2297YSi",
     "preco": 164.08,
     "titulo": "Cadeira de Descanso Balanço Bebe AMR-7315 Musical L'AMOR Cor Azul"
+   },
+   {
+    "categoria": "escola",
+    "de": 296.1,
+    "desconto": 0.46,
+    "id": "MLB74813550",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_832256-MLA114015834837_072026-F.jpg",
+    "link": "https://meli.la/2T8poHe",
+    "preco": 159.89,
+    "titulo": "Kit Mochila Infantil Disney Frozen Azul com Lancheira"
+   },
+   {
+    "categoria": "outros",
+    "de": 399.0,
+    "desconto": 0.635,
+    "id": "MLB50940710",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_833513-MLA85363078704_062025-F.jpg",
+    "link": "https://meli.la/2sf2b9e",
+    "preco": 145.5,
+    "titulo": "Espelho HD 1080P e câmera para bebê no carro com visão noturna"
    }
   ]
  },
