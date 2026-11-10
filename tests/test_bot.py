@@ -1155,3 +1155,32 @@ def test_pagina_de_numeros(tmp_path):
     assert "▲ +3 desde ontem" in h and "Conectado" in h and "polyline" in h
     assert not numeros.talvez_publicar(e, AGORA, arquivo=arq, arquivo_wa=wa)  # menos de 10 min depois
     assert e["hist_dia"][hoje]["posts"] == 1
+
+
+def test_shopee_assina_e_converte():
+    import hashlib, json
+    from bot import shopee
+
+    class R:
+        def __init__(self, j): self._j = j
+        def json(self): return self._j
+
+    class S:
+        def post(self, url, data, headers, timeout):
+            self.url, self.data, self.headers = url, data, headers
+            return R({"data": {"productOfferV2": {"nodes": [
+                {"itemId": 123, "productName": "Body Bebê Algodão", "priceMin": "35.00",
+                 "priceDiscountRate": 30, "commissionRate": "0.08", "sales": 1500, "ratingStar": "4.8",
+                 "imageUrl": "https://x/img.jpg", "offerLink": "https://s.shopee.com.br/abc", "shopType": [1]},
+                {"itemId": 9, "productName": "Sem link", "priceMin": "10"}]}}})
+
+    s = S()
+    cli = shopee.Shopee("111", "segredo", session=s)
+    ps = cli.buscar('body "bebê"')
+    assert len(ps) == 1 and ps[0].id == "SHP123" and ps[0].preco_de == 50.0 and ps[0].loja_oficial
+    assert ps[0].link == "https://s.shopee.com.br/abc"  # link da Shopee intacto
+    cab = s.headers["Authorization"]
+    ts = cab.split("Timestamp=")[1].split(",")[0]
+    esperado = hashlib.sha256(f"111{ts}{s.data.decode()}segredo".encode()).hexdigest()
+    assert cab.startswith("SHA256 Credential=111, ") and cab.endswith(f"Signature={esperado}")
+    assert '\\"bebê\\"' in json.loads(s.data)["query"] or 'bebê' in json.loads(s.data)["query"]
