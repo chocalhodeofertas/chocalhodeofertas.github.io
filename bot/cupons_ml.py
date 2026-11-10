@@ -1,4 +1,5 @@
-"""Cupons do canal oficial "Afiliados e Criadores Mercado Livre" no Telegram.
+"""Cupons do canal oficial "Afiliados e Criadores Mercado Livre" no Telegram
+(e de canais extras confiáveis, em CUPONS_CANAIS_EXTRA).
 
 A cada rodada, lê as mensagens novas do canal com a sua conta do Telegram
 (API oficial para usuários, via Telethon), separa os cupons e posta no
@@ -106,6 +107,70 @@ def parse(texto, agora):
     return achados
 
 
+# ---------- canais de terceiros (formato em lista) ----------
+# Ex.: "12% OFF, limite de R$200 (Tecnologia e Eletrodom): PRESENTE ou OFFSEMPRE"
+#      "25% OFF em R$119 Limitado a R$40 - FULL1011"
+#      "R$ 50 OFF em R$ 349: MELIMAISPREDD (Exclusivo Meli+)"
+RE_LINHA = re.compile(
+    r"^(?P<desc>.*?\bOFF\b.*?)\s*(?:\((?P<cat>[^)]*)\))?\s*(?::|\s-\s)\s*"
+    r"(?P<codigos>[A-Z][A-Z0-9]{3,}(?:\s+(?:ou\s+)?[A-Z][A-Z0-9]{3,})*)\s*(?P<resto>.*)$",
+    re.I,
+)
+RE_CODIGO = re.compile(r"\b[A-Z][A-Z0-9]{3,}\b")
+_SO_QUEM = re.compile(r"quem resgatou|s[oó] pra quem|resgatou ontem|na live|sacola live", re.I)
+
+
+def _dinheiro(t):
+    m = re.search(r"R\$\s*(\d[\d.,]*\d|\d)", t)
+    return f"R${m.group(1)}" if m else None
+
+
+def parse_lista(texto, agora):
+    """Cupons de um post em lista. Links do canal de origem são descartados
+    (costumam ser links de afiliado de quem postou)."""
+    achados = []
+    for linha in (l.strip() for l in (texto or "").splitlines()):
+        if not linha or "http" in linha or _SO_QUEM.search(linha):
+            continue
+        m = RE_LINHA.match(linha)
+        if not m or not re.search(r"\d", m.group("desc")):
+            continue
+        desc_bruta = m.group("desc").strip(" ,-")
+        desconto = re.search(r"(R\$\s*[\d.,]+|\d+\s*%)\s*OFF", desc_bruta, re.I)
+        if not desconto:
+            continue
+        cat = (m.group("cat") or "").strip()
+        nota = None
+        if re.search(r"meli\s*\+", cat + " " + m.group("resto"), re.I):
+            nota = "Exclusivo Meli+"
+        if re.search(r"site todo|exclusivo|^full$", cat, re.I):
+            cat = ""
+        minimo = re.search(r"(?:\bem\b|acima de)\s*(R\$\s*[\d.,]+)", desc_bruta, re.I)
+        maximo = re.search(r"(?:limitado a|limite de)\s*(R\$\s*[\d.,]+)", desc_bruta, re.I)
+        validade = None
+        for cod in RE_CODIGO.findall(m.group("codigos")):
+            if cod.upper() == "OU":
+                continue
+            v = None
+            d = re.search(r"(\d{2})(\d{2})$", cod)
+            if d:
+                try:
+                    v = agora.replace(day=int(d.group(1)), month=int(d.group(2)), hour=23, minute=59,
+                                      second=0, microsecond=0)
+                except ValueError:
+                    v = None
+            # sem data no código: listas são diárias, vale até o fim do dia seguinte
+            validade = v or (agora + timedelta(days=1)).replace(hour=23, minute=59, second=0, microsecond=0)
+            achados.append({
+                "codigo": cod, "desconto": desconto.group(0).replace("%OFF", "% OFF").upper().replace("R$ ", "R$"),
+                "antes": None, "categoria": _limpa(cat) or None,
+                "minimo": _dinheiro(minimo.group(1)) if minimo else None,
+                "maximo": _dinheiro(maximo.group(1)) if maximo else None,
+                "validade": validade, "link": None, "nota": nota,
+            })
+    return achados
+
+
 def relevante(cupom, categorias=None):
     """Cupom geral (sem categoria) ou de uma categoria do nicho."""
     if (categorias or "").strip().lower() == "todas":
@@ -122,6 +187,8 @@ def bloco_html(c):
     linhas = [f"<b>🎟️ {e(c['codigo'])}</b> 👉 <b>{e(c['desconto'])}</b>"]
     if c.get("categoria"):
         linhas.append(f"📂 {e(c['categoria'])}")
+    if c.get("nota"):
+        linhas.append(f"⭐ {e(c['nota'])}")
     regras = [x for x in (f"Compra mín.: {e(c['minimo'])}" if c.get("minimo") else "",
                           f"Desconto máx.: {e(c['maximo'])}" if c.get("maximo") else "") if x]
     if regras:
@@ -164,10 +231,10 @@ def _novo_desconto(estado, c):
     return novo
 
 
-def tratar_mensagem(texto, tg, cfg, estado, agora, categorias=None, log=print):
+def tratar_mensagem(texto, tg, cfg, estado, agora, categorias=None, log=print, parser=None):
     """Posta os cupons novos e avisa das atualizações. Retorna quantos cupons postou."""
     novos, ja = [], cupons.ativos(estado)
-    for c in parse(texto, agora):
+    for c in (parser or parse)(texto, agora):
         if c["codigo"] in ja:
             if c["antes"]:
                 cupons.atualizar_bloco(tg, cfg, estado, c["codigo"], _novo_desconto(estado, c),
@@ -228,7 +295,8 @@ async def _resolver(client, convite):
     return await client.get_entity(convite.rsplit("/", 1)[-1].lstrip("@"))
 
 
-async def _buscar(api_id, api_hash, sessao, convite, desde):
+async def _buscar(api_id, api_hash, sessao, canais):
+    """canais: [(convite, desde)] -> [[(id, texto)], ...] na mesma ordem."""
     from telethon import TelegramClient
     from telethon.sessions import StringSession
 
@@ -237,44 +305,66 @@ async def _buscar(api_id, api_hash, sessao, convite, desde):
     try:
         if not await client.is_user_authorized():
             raise RuntimeError("o login do Telegram expirou; rode de novo o 'Conectar Telegram'")
-        chat = await _resolver(client, convite)
-        msgs = []
-        async for m in client.iter_messages(chat, min_id=desde or 0, limit=1 if not desde else 40):
-            msgs.append((m.id, m.message or ""))
-        return sorted(msgs)
+        saida = []
+        for convite, desde in canais:
+            try:
+                chat = await _resolver(client, convite)
+                msgs = []
+                async for m in client.iter_messages(chat, min_id=desde or 0, limit=1 if not desde else 40):
+                    msgs.append((m.id, m.message or ""))
+                saida.append(sorted(msgs))
+            except Exception as e:  # noqa: BLE001
+                saida.append(e)
+        return saida
     finally:
         await client.disconnect()
 
 
+def canais_configurados():
+    """[(convite, chave_no_estado, parser)] — o oficial do ML e os extras (CUPONS_CANAIS_EXTRA)."""
+    lista = []
+    if os.environ.get("TG_CANAL_CUPONS"):
+        lista.append((os.environ["TG_CANAL_CUPONS"], "cupons_ml_ultimo", parse))
+    for nome in re.split(r"[,\s]+", os.environ.get("CUPONS_CANAIS_EXTRA") or ""):
+        nome = nome.strip().rsplit("/", 1)[-1].lstrip("@")
+        if nome:
+            lista.append((nome, f"cupons_extra_ultimo:{nome}", parse_lista))
+    return lista
+
+
 def processar(tg, cfg, estado, agora, log=print):
-    """Lê o canal de cupons e posta o que for novo. Sem configuração, não faz nada."""
+    """Lê os canais de cupons e posta o que for novo. Sem configuração, não faz nada."""
     api_id, api_hash = os.environ.get("TG_API_ID"), os.environ.get("TG_API_HASH")
-    convite = os.environ.get("TG_CANAL_CUPONS")
-    if not (api_id and api_hash and convite and ARQ_SESSAO.exists()):
+    canais = canais_configurados()
+    if not (api_id and api_hash and canais and ARQ_SESSAO.exists()):
         return
     try:
         sessao = ler_seguro(api_hash, ARQ_SESSAO)["sessao"]
-        desde = estado.get("cupons_ml_ultimo")
-        msgs = asyncio.run(_buscar(api_id, api_hash, sessao, convite, desde))
+        resultados = asyncio.run(_buscar(api_id, api_hash, sessao, [(c, estado.get(k)) for c, k, _ in canais]))
     except Exception as e:  # noqa: BLE001
-        log(f"Aviso: não consegui ler o canal de cupons: {e}")
-        if estado.get("cupons_ml_erro_dia") != agora.date().isoformat() and cfg.admin_chat:
-            estado["cupons_ml_erro_dia"] = agora.date().isoformat()
+        resultados = [e] * len(canais)
+    for (convite, chave, parser), msgs in zip(canais, resultados):
+        if isinstance(msgs, Exception):
+            log(f"Aviso: não consegui ler o canal de cupons {convite[-20:]}: {msgs}")
+            marca = f"{chave}:erro_dia"
+            if estado.get(marca) != agora.date().isoformat() and cfg.admin_chat:
+                estado[marca] = agora.date().isoformat()
+                try:
+                    tg.enviar_texto(cfg.admin_chat, f"⚠️ Não consegui ler um canal de cupons: {msgs}")
+                except TelegramErro:
+                    pass
+            continue
+        if not msgs:
+            continue
+        desde = estado.get(chave)
+        if not desde:
+            # Primeira vez: só marca a posição, para não postar cupons antigos
+            estado[chave] = msgs[-1][0]
+            log("Canal de cupons conectado. A partir de agora posto os cupons novos.")
+            continue
+        for mid, texto in msgs:
             try:
-                tg.enviar_texto(cfg.admin_chat, f"⚠️ Não consegui ler o canal de cupons do Mercado Livre: {e}")
-            except TelegramErro:
-                pass
-        return
-    if not msgs:
-        return
-    if not desde:
-        # Primeira vez: só marca a posição, para não postar cupons antigos
-        estado["cupons_ml_ultimo"] = msgs[-1][0]
-        log("Canal de cupons conectado. A partir de agora posto os cupons novos.")
-        return
-    for mid, texto in msgs:
-        try:
-            tratar_mensagem(texto, tg, cfg, estado, agora, os.environ.get("CUPONS_CATEGORIAS"), log)
-        except TelegramErro as e:
-            log(f"Aviso: erro ao postar cupom: {e}")
-        estado["cupons_ml_ultimo"] = mid
+                tratar_mensagem(texto, tg, cfg, estado, agora, os.environ.get("CUPONS_CATEGORIAS"), log, parser)
+            except TelegramErro as e:
+                log(f"Aviso: erro ao postar cupom: {e}")
+            estado[chave] = mid

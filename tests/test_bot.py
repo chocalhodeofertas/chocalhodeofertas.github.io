@@ -975,3 +975,50 @@ def test_buscar_pegar_e_vigiar():
     busca.atualizar_vigias(MLBusca(), e, AGORA)
     assert e["manuais"]["MLB1"]["vigia"] == "carrinho travel system"
     assert "Parei" in busca.parar("carrinho travel system", e)
+
+
+POST_LISTA = """Listão Cupom Mercado Livre #anúncio
+
+R$ 50 OFF em R$ 349: MELIMAISPREDD (Exclusivo Meli+)
+✅ Ative aqui para ajudar o grupo: https://mercadolivre.com.br/sec/31qRqvp
+
+10% OFF em R$79, Limitado a R$100: HOJEMESMO
+12% OFF, limite de R$200 (Tecnologia): CUPOMTECH
+20%OFF (Móveis e Bebês e Pets): MOVEIS0511 BEBESPETS0511
+15%OFF (Moda e Beleza): MODABELEZA0511
+25% OFF Limitado a R$40 (Full) - FULL0411 (quem resgatou ontem)
+👇Grupo só com cupom Mercado Livre: https://chat.whatsapp.com/XYZ"""
+
+
+def test_parse_lista_de_terceiros():
+    from bot import cupons_ml
+    c = {x["codigo"]: x for x in cupons_ml.parse_lista(POST_LISTA, AGORA)}
+    assert set(c) == {"MELIMAISPREDD", "HOJEMESMO", "CUPOMTECH", "MOVEIS0511", "BEBESPETS0511", "MODABELEZA0511"}
+    assert c["MELIMAISPREDD"]["desconto"] == "R$50 OFF" and c["MELIMAISPREDD"]["minimo"] == "R$349"
+    assert c["MELIMAISPREDD"]["nota"] == "Exclusivo Meli+"
+    assert c["HOJEMESMO"]["minimo"] == "R$79" and c["HOJEMESMO"]["maximo"] == "R$100"
+    assert c["BEBESPETS0511"]["validade"] == AGORA.replace(hour=23, minute=59, second=0)
+    assert all(x["link"] is None for x in c.values())  # nunca repassa o link de quem postou
+    assert cupons_ml.relevante(c["BEBESPETS0511"]) and not cupons_ml.relevante(c["CUPOMTECH"])
+
+
+def test_canais_configurados(monkeypatch):
+    from bot import cupons_ml
+    monkeypatch.setenv("TG_CANAL_CUPONS", "https://t.me/+abc")
+    monkeypatch.setenv("CUPONS_CANAIS_EXTRA", "https://t.me/cupombr, @outro")
+    cs = cupons_ml.canais_configurados()
+    assert [(c, k) for c, k, _ in cs] == [("https://t.me/+abc", "cupons_ml_ultimo"),
+                                          ("cupombr", "cupons_extra_ultimo:cupombr"),
+                                          ("outro", "cupons_extra_ultimo:outro")]
+    assert cs[1][2] is cupons_ml.parse_lista
+
+
+def test_cupom_de_terceiros_postado_sem_link():
+    from bot import cupons_ml
+    e, tg = est.novo(), TGCmd()
+    n = cupons_ml.tratar_mensagem(POST_LISTA, tg, cfg_cmd(), e, AGORA, log=lambda m: None,
+                                  parser=cupons_ml.parse_lista)
+    canal = [t for c, t in tg.textos if c == "@canal"][0]
+    assert n == 5 and "BEBESPETS0511" in canal and "CUPOMTECH" not in canal
+    assert "mercadolivre.com.br/sec" not in canal and "whatsapp" not in canal
+    assert "Exclusivo Meli+" in canal
