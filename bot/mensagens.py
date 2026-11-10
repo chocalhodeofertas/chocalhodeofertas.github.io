@@ -209,13 +209,16 @@ def _abertura(oferta, rng):
     return rng.choice(marca)
 
 
-def _linhas_preco(oferta, negrito, riscado):
+def _linhas_preco(oferta, negrito, riscado, codigo=lambda t: t):
     linhas = []
     if oferta.preco_de:
         pct = round(oferta.desconto * 100)
         linhas.append(f"De {riscado(brl(oferta.preco_de))} por {negrito(brl(oferta.preco))} (-{pct}%)")
     else:
         linhas.append(f"Por {negrito(brl(oferta.preco))}")
+    cp = getattr(oferta, "cupom", None)
+    if cp:
+        linhas.append(f"🎟️ Com o cupom {codigo(cp['codigo'])}: {negrito(brl(cp['preco']))}*")
     return linhas
 
 
@@ -227,10 +230,12 @@ def montar_telegram(oferta, rng=random):
         "",
         f"{emoji} {html.escape(_titulo_curto(oferta.titulo))}",
         "",
-        *_linhas_preco(oferta, lambda t: f"<b>{t}</b>", lambda t: f"<s>{t}</s>"),
+        *_linhas_preco(oferta, lambda t: f"<b>{t}</b>", lambda t: f"<s>{t}</s>", lambda t: f"<code>{t}</code>"),
         "",
         f'👉 <a href="{html.escape(oferta.link, quote=True)}">Ver oferta no Mercado Livre</a>',
         "",
+        *(["<i>*Se o produto for elegível ao cupom. Confira no carrinho antes de pagar.</i>"]
+          if getattr(oferta, "cupom", None) else []),
         "<i>Preço e estoque podem mudar a qualquer momento. #publi · link de afiliado</i>",
     ]
     return "\n".join(partes)[:1024]
@@ -248,6 +253,8 @@ def montar_whatsapp(oferta, rng=random):
         "",
         f"👉 {oferta.link}",
         "",
+        *(["_*Se o produto for elegível ao cupom. Confira no carrinho antes de pagar._"]
+          if getattr(oferta, "cupom", None) else []),
         "_Preço e estoque podem mudar a qualquer momento. #publi · link de afiliado_",
     ]
     return "\n".join(partes)

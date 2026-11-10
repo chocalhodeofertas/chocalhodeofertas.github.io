@@ -143,6 +143,8 @@ def parse_lista(texto, agora):
         nota = None
         if re.search(r"meli\s*\+", cat + " " + m.group("resto"), re.I):
             nota = "Exclusivo Meli+"
+        if re.search(r"site todo|todo o site", cat + " " + m.group("resto"), re.I) and not nota:
+            nota = "Vale para o site todo"
         if re.search(r"site todo|exclusivo|^full$", cat, re.I):
             cat = ""
         minimo = re.search(r"(?:\bem\b|acima de)\s*(R\$\s*[\d.,]+)", desc_bruta, re.I)

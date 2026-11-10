@@ -1098,3 +1098,27 @@ def test_itens_de_casa_que_vazam_das_categorias_de_bebe():
               "Jogo Banco Imobiliário Grande Estrela"]
     for t in dentro:
         assert fora_da_faixa(t, "higiene") is None, t
+
+
+def test_cupom_na_oferta_so_quando_faz_sentido():
+    from types import SimpleNamespace as N
+    from bot import cupom_oferta as co, cupons, mensagens
+    e = est.novo()
+    blocos = [
+        ("GERAL30", "<b>🎟️ GERAL30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500", None),
+        ("AUTO70", "<b>🎟️ AUTO70</b> 👉 <b>R$70 OFF</b>\n📂 Automotivo", None),
+        ("BEBES20", "<b>🎟️ BEBES20</b> 👉 <b>20% OFF</b>\n📂 Móveis e Bebês e Pets\nCompra mín.: R$79 · Desconto máx.: R$60", None),
+        ("SITETODO10", "<b>🎟️ SITETODO10</b> 👉 <b>R$10 OFF</b>\nCompra mín.: R$79", None),
+        ("MELI50", "<b>🎟️ MELI50</b> 👉 <b>R$50 OFF</b>\n⭐ Exclusivo Meli+\nCompra mín.: R$100", None),
+    ]
+    cupons.publicar(TGCmd(), cfg_cmd(), e, "t", blocos, AGORA)
+    banheira = N(titulo="Banheira", preco=389.9, preco_de=499.9, categoria="higiene", link="x", desconto=.2)
+    cp = co.melhor_cupom(e, banheira, AGORA)
+    assert cp["codigo"] == "BEBES20" and cp["economia"] == 60 and cp["preco"] == 329.9  # 20% limitado a R$60
+    barato = N(titulo="Babador", preco=21.6, preco_de=30, categoria="alimentacao", link="x", desconto=.2)
+    assert co.melhor_cupom(e, barato, AGORA) is None  # abaixo do mínimo de todos
+    lego = N(titulo="LEGO", preco=99.0, preco_de=120, categoria="brinquedo", link="x", desconto=.2)
+    assert co.melhor_cupom(e, lego, AGORA)["codigo"] == "SITETODO10"  # só o do site todo vale
+    banheira.cupom = cp
+    texto = mensagens.montar_whatsapp(banheira)
+    assert "BEBES20" in texto and "R$ 329,90" in texto and "elegível" in texto

@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
-from . import afiliado, cofre, comandos, cupons_ml, lote, vitrine, whatsapp
+from . import afiliado, cofre, comandos, cupom_oferta, cupons_ml, lote, vitrine, whatsapp
 from . import estado as est
 from . import mensagens
 from .descoberta import descobrir, descobrir_areas
@@ -391,6 +391,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         o = _reconferir(ml, por_id.get(o.id), o, estado, cfg, agora)
         if o is None:
             continue  # tenta a próxima da fila, sem esperar de novo
+        o.cupom = cupom_oferta.melhor_cupom(estado, o, agora)
         try:
             tg.enviar_oferta(cfg.canal, mensagens.montar_telegram(o, rng), o.imagem)
         except TelegramErro as e:
