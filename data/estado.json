@@ -1,5 +1,5 @@
 {
- "aguardando_link": 259,
+ "aguardando_link": 257,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 11
+  "2026-11-10": 12
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12691,6 +12691,12 @@
    "quando": "2026-11-07T18:22-03:00",
    "titulo": "Bola Mágica Disco Voador Brinquedo Ao Ar Livre Bola Maluca Cor Rosa"
   },
+  "MLB67464018": {
+   "desconto": 0.769,
+   "preco": 18.49,
+   "quando": "2026-11-10T11:22-03:00",
+   "titulo": "Organizador De Carro Encosto Banco Porta Trecos E Tablet"
+  },
   "MLB67648307": {
    "desconto": 0.501,
    "preco": 59.89,
@@ -14523,6 +14529,10 @@
     [
      "2026-11-10",
      284.1
+    ],
+    [
+     "2026-11-10",
+     289.9
     ]
    ],
    "min": 284.1
@@ -16084,9 +16094,13 @@
     [
      "2026-11-07",
      469.99
+    ],
+    [
+     "2026-11-10",
+     459.0
     ]
    ],
-   "min": 469.99
+   "min": 459.0
   },
   "MLB26758013": {
    "historico": [
@@ -16157,9 +16171,13 @@
     [
      "2026-11-10",
      223.09
+    ],
+    [
+     "2026-11-10",
+     188.99
     ]
    ],
-   "min": 223.09
+   "min": 188.99
   },
   "MLB26941741": {
    "historico": [
@@ -16338,9 +16356,13 @@
     [
      "2026-11-09",
      37.9
+    ],
+    [
+     "2026-11-10",
+     37.21
     ]
    ],
-   "min": 37.9
+   "min": 37.21
   },
   "MLB27590860": {
    "historico": [
@@ -16521,9 +16543,13 @@
     [
      "2026-11-09",
      674.0
+    ],
+    [
+     "2026-11-10",
+     575.0
     ]
    ],
-   "min": 575.13
+   "min": 575.0
   },
   "MLB28299159": {
    "historico": [
@@ -16664,9 +16690,13 @@
     [
      "2026-11-10",
      59.99
+    ],
+    [
+     "2026-11-10",
+     52.99
     ]
    ],
-   "min": 59.99
+   "min": 52.99
   },
   "MLB28717101": {
    "historico": [
@@ -17019,6 +17049,10 @@
     [
      "2026-11-10",
      463.34
+    ],
+    [
+     "2026-11-10",
+     339.0
     ]
    ],
    "min": 332.0
@@ -17139,6 +17173,10 @@
     [
      "2026-11-10",
      557.0
+    ],
+    [
+     "2026-11-10",
+     794.96
     ]
    ],
    "min": 557.0
@@ -17267,6 +17305,10 @@
     [
      "2026-11-10",
      24.9
+    ],
+    [
+     "2026-11-10",
+     23.39
     ]
    ],
    "min": 22.89
@@ -26633,6 +26675,10 @@
     [
      "2026-11-10",
      320.0
+    ],
+    [
+     "2026-11-10",
+     299.9
     ]
    ],
    "min": 252.99
@@ -26775,8 +26821,18 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T11:02-03:00",
+  "em": "2026-11-10T11:22-03:00",
   "itens": [
+   {
+    "categoria": "higiene",
+    "de": 510.0,
+    "desconto": 0.629,
+    "id": "MLB26851070",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_751805-MLA96144598793_102025-F.jpg",
+    "link": "https://meli.la/2C4ZDFq",
+    "preco": 188.99,
+    "titulo": "Burigotto Kit Banho Branco"
+   },
    {
     "categoria": "quarto",
     "de": 299.9,
@@ -26786,26 +26842,6 @@
     "link": "https://meli.la/2LZcamX",
     "preco": 99.0,
     "titulo": "Gazin Supreme Cor Branco Colchão Espuma Para Berço Baby D18"
-   },
-   {
-    "categoria": "quarto",
-    "de": 58.8,
-    "desconto": 0.509,
-    "id": "MLB29770692",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_982900-MLA100082607605_122025-F.jpg",
-    "link": "https://meli.la/31JeBnv",
-    "preco": 28.9,
-    "titulo": "Jogo De Lençol Queen 3 Peças 400 Fios Com Elástico Hotel Cor Verde Desenho Do Tecido Ponto Palito Casa Laura"
-   },
-   {
-    "categoria": "alimentacao",
-    "de": 39.9,
-    "desconto": 0.506,
-    "id": "MLB27590860",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_831978-MLA100084513681_122025-F.jpg",
-    "link": "https://meli.la/2fXeJM4",
-    "preco": 19.7,
-    "titulo": "Babador De Silicone Pega Migalhas Menina 09724 - Buba"
    },
    {
     "categoria": "passeio",
@@ -27376,6 +27412,16 @@
     "link": "https://meli.la/2oFgpa5",
     "preco": 41.78,
     "titulo": "Hipoglós Creme Preventivo de Assaduras, 120g"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 359.9,
+    "desconto": 0.544,
+    "id": "MLB80306438",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_993575-MLA117363968210_102026-F.jpg",
+    "link": "https://meli.la/2297YSi",
+    "preco": 164.08,
+    "titulo": "Cadeira de Descanso Balanço Bebe AMR-7315 Musical L'AMOR Cor Azul"
    }
   ]
  },
