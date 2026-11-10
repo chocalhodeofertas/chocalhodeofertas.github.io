@@ -1,5 +1,5 @@
 {
- "aguardando_link": 312,
+ "aguardando_link": 282,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 5
+  "2026-11-10": 6
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12027,10 +12027,76 @@
   "MLB81142365": "https://meli.la/2Lcg3Q4",
   "MLB81565711": "https://meli.la/1C8TRy9"
  },
- "lote": null,
+ "lote": {
+  "dia": "2026-11-10",
+  "ids": [
+   "MLB61922175",
+   "MLB68579627",
+   "MLB62349726",
+   "MLB24027382",
+   "MLB68254657",
+   "MLB39327700",
+   "MLB24709793",
+   "MLB30018475",
+   "MLB80306438",
+   "MLB74813550",
+   "MLB50940710",
+   "MLB43646204",
+   "MLB76495389",
+   "MLB24647478",
+   "MLB51764695",
+   "MLB78704873",
+   "MLB25863440",
+   "MLB37622470",
+   "MLB24838553",
+   "MLB62020136",
+   "MLB70200075",
+   "MLB62926546",
+   "MLB24762578",
+   "MLB65558091",
+   "MLB62979086",
+   "MLB70448723",
+   "MLB62719788",
+   "MLB35738935",
+   "MLB75373452",
+   "MLB22621352"
+  ],
+  "urls": [
+   "https://produto.mercadolivre.com.br/MLB-4297654881-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6669903920-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4699103869-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4199278778-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6636149344-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3844958045-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4265538553-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4631750868-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5359561027-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4841544689-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7753742620-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3916537727-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7367245650-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4201138225-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4112391715-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7739717400-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3611912291-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3732199247-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7967339608-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6970007440-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4706735215-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4671092313-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3389803551-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7644966372-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6026153476-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6864922674-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6008595586-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5829700834-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7147439680-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5453567171-produto-_JM"
+  ]
+ },
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-10": 2
+  "2026-11-10": 3
  },
  "membros_hist": {
   "2026-11-07": 2,
@@ -12284,6 +12350,12 @@
   "MLB36436855": {
    "preco": 64.9,
    "quando": "2026-11-06T18:23-03:00"
+  },
+  "MLB36933476": {
+   "desconto": 0.55,
+   "preco": 16.03,
+   "quando": "2026-11-10T09:22-03:00",
+   "titulo": "Capa Transparente Trocador Anatômico Bebê 71x57cm Polipropileno"
   },
   "MLB37887504": {
    "desconto": 0.38,
@@ -13638,6 +13710,10 @@
     [
      "2026-11-09",
      49.97
+    ],
+    [
+     "2026-11-10",
+     57.5
     ]
    ],
    "min": 39.9
@@ -14822,6 +14898,10 @@
     [
      "2026-11-10",
      309.0
+    ],
+    [
+     "2026-11-10",
+     323.48
     ]
    ],
    "min": 309.0
@@ -15389,9 +15469,13 @@
     [
      "2026-11-09",
      61.2
+    ],
+    [
+     "2026-11-10",
+     59.99
     ]
    ],
-   "min": 61.2
+   "min": 59.99
   },
   "MLB24729120": {
    "historico": [
@@ -15652,6 +15736,10 @@
     [
      "2026-11-09",
      49.9
+    ],
+    [
+     "2026-11-10",
+     51.9
     ]
    ],
    "min": 49.9
@@ -16715,6 +16803,10 @@
     [
      "2026-11-10",
      447.28
+    ],
+    [
+     "2026-11-10",
+     434.99
     ]
    ],
    "min": 368.28
@@ -17498,6 +17590,10 @@
     [
      "2026-11-10",
      347.02
+    ],
+    [
+     "2026-11-10",
+     328.3
     ]
    ],
    "min": 263.14
@@ -18542,6 +18638,10 @@
     [
      "2026-11-09",
      819.18
+    ],
+    [
+     "2026-11-10",
+     934.29
     ]
    ],
    "min": 819.18
@@ -20098,6 +20198,10 @@
     [
      "2026-11-10",
      4084.0
+    ],
+    [
+     "2026-11-10",
+     4249.0
     ]
    ],
    "min": 4084.0
@@ -23314,9 +23418,13 @@
     [
      "2026-11-10",
      229.0
+    ],
+    [
+     "2026-11-10",
+     228.99
     ]
    ],
-   "min": 229.0
+   "min": 228.99
   },
   "MLB70042630": {
    "historico": [
@@ -25320,6 +25428,10 @@
     [
      "2026-11-10",
      351.0
+    ],
+    [
+     "2026-11-10",
+     409.0
     ]
    ],
    "min": 351.0
@@ -26144,28 +26256,8 @@
  "tg_offset": 273517997,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T09:02-03:00",
+  "em": "2026-11-10T09:22-03:00",
   "itens": [
-   {
-    "categoria": "higiene",
-    "de": 78.9,
-    "desconto": 0.583,
-    "id": "MLB80257465",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_717845-MLA117216264010_102026-F.jpg",
-    "link": "https://meli.la/2mobEBr",
-    "preco": 32.9,
-    "titulo": "Kit Higiene Cuidados Bebê Rosa Recém Nascido Completo 13 Peças Bolsa Maternidade Termômetro Digital Aspirador "
-   },
-   {
-    "categoria": "higiene",
-    "de": 99.99,
-    "desconto": 0.67,
-    "id": "MLB65812073",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_654536-MLA106779354202_022026-F.jpg",
-    "link": "https://meli.la/1xU2p8g",
-    "preco": 32.95,
-    "titulo": "Almofada De Banheira Ergonômica Conforto E Relaxamento Branco"
-   },
    {
     "categoria": "quarto",
     "de": 299.9,
@@ -26255,6 +26347,16 @@
     "link": "https://meli.la/2Jjrc85",
     "preco": 36.5,
     "titulo": "Almofada De Banho Para Bebê Banheira Flutuante Boia Com Alça Cor Verde-água"
+   },
+   {
+    "categoria": "quarto",
+    "de": 59.9,
+    "desconto": 0.45,
+    "id": "MLB73604609",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_615687-MLA120304135779_102026-F.jpg",
+    "link": "https://meli.la/2nnzRT6",
+    "preco": 32.94,
+    "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
    },
    {
     "categoria": "game",
@@ -26407,6 +26509,16 @@
     "titulo": "Brinquedo Cubo Didático Madeira Montessori Infantil 5 Em 1 Atacarejo Kids"
    },
    {
+    "categoria": "higiene",
+    "de": 760.0,
+    "desconto": 0.574,
+    "id": "MLB79107882",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_816294-MLA115945869746_092026-F.jpg",
+    "link": "https://meli.la/2APPvJm",
+    "preco": 324.0,
+    "titulo": "Banheira Dobrável Com Suporte e Porta Acessórios YPB888 Cinza Yuupi"
+   },
+   {
     "categoria": "quarto",
     "de": 59.99,
     "desconto": 0.683,
@@ -26427,6 +26539,16 @@
     "titulo": "Caminhão Dinossauro Pista Com Carrinhos Maleta Transporte Cor Roxo"
    },
    {
+    "categoria": "gestante",
+    "de": 144.9,
+    "desconto": 0.485,
+    "id": "MLB29038720",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_917033-MLA95394434468_102025-F.jpg",
+    "link": "https://meli.la/1HfRzJP",
+    "preco": 74.61,
+    "titulo": "Bolsa Mochila Maternidade Vira Berço Troca Bebê Porta Frauda Cor Cinza Desenho do tecido Liso"
+   },
+   {
     "categoria": "quarto",
     "de": 109.0,
     "desconto": 0.484,
@@ -26435,6 +26557,16 @@
     "link": "https://meli.la/33HWc6a",
     "preco": 56.29,
     "titulo": "Cesto Para Bebes Porta Roupa Fraldas Organizador De Banho Cor Bege"
+   },
+   {
+    "categoria": "quarto",
+    "de": 1100.0,
+    "desconto": 0.564,
+    "id": "MLB79495523",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_866011-MLA117838148765_092026-F.jpg",
+    "link": "https://meli.la/2SLddHn",
+    "preco": 480.15,
+    "titulo": "Berço Co-sleeper Multifuncional Portátil Com Mosquiteiro"
    },
    {
     "categoria": "passeio",
@@ -26447,6 +26579,276 @@
     "titulo": "Mosquiteiro Para Carrinho Bebê Conforto Portátil Universal Branco"
    },
    {
+    "categoria": "brinquedo",
+    "de": 159.9,
+    "desconto": 0.657,
+    "id": "MLB63152047",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_702576-MLA110388417253_042026-F.jpg",
+    "link": "https://meli.la/1pvdXCc",
+    "preco": 54.9,
+    "titulo": "Patinete Infantil 3 Rodas Led Dobrável Luppy Azul Maxi Toys"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 145.68,
+    "desconto": 0.555,
+    "id": "MLB34803603",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_869786-MLA96103846233_102025-F.jpg",
+    "link": "https://meli.la/23hVpnA",
+    "preco": 64.8,
+    "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Ocean"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 109.9,
+    "desconto": 0.654,
+    "id": "MLB80142080",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_954571-MLA118969946235_102026-F.jpg",
+    "link": "https://meli.la/27UXmEV",
+    "preco": 38.0,
+    "titulo": "Kit 3 Bolas Surpresa Cápsula Mini Brands Hc-3006 Azul Colecionável Miniatura Realista Brinquedo Infantil"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 219.8,
+    "desconto": 0.652,
+    "id": "MLB73212051",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_707116-MLA116059439054_092026-F.jpg",
+    "link": "https://meli.la/1DAz6PC",
+    "preco": 76.53,
+    "titulo": "Boneca Reborn Bebê Realista Vinil Siliconado Récem-nascida"
+   },
+   {
+    "categoria": "quarto",
+    "de": 69.99,
+    "desconto": 0.551,
+    "id": "MLB65600099",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_699219-MLA118046889266_102026-F.jpg",
+    "link": "https://meli.la/2ffNJy8",
+    "preco": 31.44,
+    "titulo": "Kit Travesseiro Bebê Anti Sufocante com Fronha e Almofada Anatômica para Plagiocefalia"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 299.99,
+    "desconto": 0.647,
+    "id": "MLB26841539",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_677594-MLU75692537470_042024-F.jpg",
+    "link": "https://meli.la/2NtvAXr",
+    "preco": 106.0,
+    "titulo": "Buba Ursinho que reza anjinho da guarda para bebê e criança pelúcia azul"
+   },
+   {
+    "categoria": "higiene",
+    "de": 699.9,
+    "desconto": 0.531,
+    "id": "MLB72901008",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_847840-MLA116500118433_082026-F.jpg",
+    "link": "https://meli.la/2FcodwC",
+    "preco": 328.0,
+    "titulo": "Banheira com Suporte Dobrável para Bebê Mini Assento Válvula de Esvaziamento 45 Litros Lisa Plástico Rígido At"
+   },
+   {
+    "categoria": "higiene",
+    "de": 64.15,
+    "desconto": 0.534,
+    "id": "MLB38804864",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_808507-MLA111239213148_052026-F.jpg",
+    "link": "https://meli.la/2KcUxXo",
+    "preco": 29.9,
+    "titulo": "Rede de Proteção para Banho Bebê Toki Baby Azul Adaptável 20kg"
+   },
+   {
+    "categoria": "passeio",
+    "de": 158.0,
+    "desconto": 0.63,
+    "id": "MLB45722794",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_928392-MLA95167024708_102025-F.jpg",
+    "link": "https://meli.la/1mPuRpP",
+    "preco": 58.46,
+    "titulo": "Criança Mochila Segurança Anti Perda Com Bracelete Cor Rosa"
+   },
+   {
+    "categoria": "outros",
+    "de": 350.44,
+    "desconto": 0.627,
+    "id": "MLB79900942",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_830744-MLA120793716697_112026-F.jpg",
+    "link": "https://meli.la/2Q1kt8Y",
+    "preco": 130.85,
+    "titulo": "Bicicleta De Equilíbrio Infantil Sem Pedal 4 Rodas Bebê Menino Menina Gato Panda"
+   },
+   {
+    "categoria": "outros",
+    "de": 39.99,
+    "desconto": 0.525,
+    "id": "MLB67009348",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_648860-MLA111993607015_052026-F.jpg",
+    "link": "https://meli.la/2V6BzoT",
+    "preco": 19.0,
+    "titulo": "Kit 3 Travas De Geladeira E Gavetas Para Segurança Infantil Não Abre A Porta Adesivo Ultra Resistente Fácil De"
+   },
+   {
+    "categoria": "passeio",
+    "de": 149.0,
+    "desconto": 0.617,
+    "id": "MLB68709605",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_658886-MLA111822239916_062026-F.jpg",
+    "link": "https://meli.la/2cXyZqP",
+    "preco": 57.0,
+    "titulo": "Guia Cinto De Segurança Anti Perda De Criança Pais E Filhos Cor Azul-celeste"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 89.9,
+    "desconto": 0.605,
+    "id": "MLB62978763",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_743608-MLA113038995686_072026-F.jpg",
+    "link": "https://meli.la/18MVNJL",
+    "preco": 35.55,
+    "titulo": "Jogo Stop 3.0 Eletrônico Educativo para Família Com Teclado Digital em Português"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 44.1,
+    "desconto": 0.596,
+    "id": "MLB67928702",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_910349-MLA110350674713_042026-F.jpg",
+    "link": "https://meli.la/2ZByxUP",
+    "preco": 17.81,
+    "titulo": "Kit 5 Envelopes Pacotinhos Figurinhas Copa do Mundo 2026 Fifa World Cup Futebol"
+   },
+   {
+    "categoria": "higiene",
+    "de": 34.99,
+    "desconto": 0.429,
+    "id": "MLB46534809",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_869741-MLA105412578708_012026-F.jpg",
+    "link": "https://meli.la/2XZCMTq",
+    "preco": 19.99,
+    "titulo": "2 em 1 Shampoo e Condicionador Infantil JOHNSON’S 400ml"
+   },
+   {
+    "categoria": "passeio",
+    "de": 599.0,
+    "desconto": 0.36,
+    "id": "MLB62060798",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_734729-MLA98091343937_112025-F.jpg",
+    "link": "https://meli.la/1Hr5qZ4",
+    "preco": 383.23,
+    "titulo": "Carrinho De Bebê Cosco Kids, Toffy, Rosa Noite"
+   },
+   {
+    "categoria": "casa",
+    "de": 139.9,
+    "desconto": 0.5,
+    "id": "MLB70587098",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_941133-MLA112532672749_052026-F.jpg",
+    "link": "https://meli.la/1AZysjp",
+    "preco": 69.9,
+    "titulo": "Kit 2 Redes Nylon Resistente Proteção Pássaros Morcegos 4x2m"
+   },
+   {
+    "categoria": "outros",
+    "de": 30.0,
+    "desconto": 0.5,
+    "id": "MLB44349733",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_811340-MLA113247299708_072026-F.jpg",
+    "link": "https://meli.la/1wDFkkf",
+    "preco": 15.0,
+    "titulo": "Kit Adesivo Repelente para Bebê e Crianças com Óleo de Citronela"
+   },
+   {
+    "categoria": "alimentacao",
+    "de": 19.98,
+    "desconto": 0.355,
+    "id": "MLB43429640",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_754478-MLA80821616009_112024-F.jpg",
+    "link": "https://meli.la/2FdYem6",
+    "preco": 12.89,
+    "titulo": "Babador De Silicone Gumy Com Pega Migalhas Cor Rosa-pálido Morango Tamanho Cm"
+   },
+   {
+    "categoria": "casa",
+    "de": 129.9,
+    "desconto": 0.491,
+    "id": "MLB79338031",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_832471-MLA116186912686_092026-F.jpg",
+    "link": "https://meli.la/2XATFqp",
+    "preco": 66.08,
+    "titulo": "Tenda Mosquiteiro Dobrável Para Cama Casal Solteiro Portátil Azul 180x200cm"
+   },
+   {
+    "categoria": "passeio",
+    "de": 499.0,
+    "desconto": 0.483,
+    "id": "MLB22953629",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_656773-MLA111501698323_052026-F.jpg",
+    "link": "https://meli.la/1BBUNsA",
+    "preco": 258.16,
+    "titulo": "Bebê conforto grid 0 a 13kg Galzerano cor preto"
+   },
+   {
+    "categoria": "passeio",
+    "de": 250.0,
+    "desconto": 0.484,
+    "id": "MLB16091843",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_665735-MLA100006870577_122025-F.jpg",
+    "link": "https://meli.la/2VSM8sU",
+    "preco": 129.0,
+    "titulo": "Assento Booster Burigotto Protege para Carro, Preto, de 15 a 36 kg"
+   },
+   {
+    "categoria": "escola",
+    "de": 78.9,
+    "desconto": 0.672,
+    "id": "MLB68310961",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_849398-MLA110761805467_042026-F.jpg",
+    "link": "https://meli.la/278EP9y",
+    "preco": 25.9,
+    "titulo": "Caneta Marcadora Acrílica 24 Cores Canetinha Ponta Pincel Profissional Para Desenho Pintura Colorir Artesanato"
+   },
+   {
+    "categoria": "escola",
+    "de": 299.0,
+    "desconto": 0.669,
+    "id": "MLB75482850",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_777452-MLA118782469478_102026-F.jpg",
+    "link": "https://meli.la/2cTMBUw",
+    "preco": 99.0,
+    "titulo": "Kit Mochila Infantil NTESX com Lancheira e Estojo – Astronauta Preto e Impermeável"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 210.0,
+    "desconto": 0.667,
+    "id": "MLB67655094",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_806573-MLA109269854390_042026-F.jpg",
+    "link": "https://meli.la/2Qzmidz",
+    "preco": 69.99,
+    "titulo": "Copa Do Mundo 2026 Box Mini Estádio C/ 30 Envelopes De Figurinhas Fifa World Cup 2026"
+   },
+   {
+    "categoria": "higiene",
+    "de": 45.0,
+    "desconto": 0.475,
+    "id": "MLB69332647",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_782009-MLA111395494951_052026-F.jpg",
+    "link": "https://meli.la/25eSjCW",
+    "preco": 23.64,
+    "titulo": "Toalha De Bebe Infantil Macia Com Capuz Grande Forrada Cor Azul-aço"
+   },
+   {
+    "categoria": "alimentacao",
+    "de": 44.9,
+    "desconto": 0.402,
+    "id": "MLB27978602",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_652078-MLA99600405536_122025-F.jpg",
+    "link": "https://meli.la/1RrxuGb",
+    "preco": 26.87,
+    "titulo": "Babador De Silicone Com Pega Migalhas Verde 15641 - Buba"
+   },
+   {
     "categoria": "outros",
     "de": 185.9,
     "desconto": 0.516,
@@ -26455,246 +26857,6 @@
     "link": "https://meli.la/2bAX86M",
     "preco": 90.0,
     "titulo": "Andador Empurrador Infantil Musical Educativo Rosa Yuupi YPHE0811"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 78.99,
-    "desconto": 0.707,
-    "id": "MLB76574611",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_815293-MLA115438222718_082026-F.jpg",
-    "link": "https://meli.la/1c7EjFK",
-    "preco": 23.18,
-    "titulo": "Tapete De Atividades Para Bebes Almofada De Água Inflável Interativo Aquário Sensorial Fundo Do Mar Rosa Tsc S"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 129.9,
-    "desconto": 0.5,
-    "id": "MLB36436855",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_944229-MLA119175436700_112026-F.jpg",
-    "link": "https://meli.la/2w1vR4r",
-    "preco": 64.9,
-    "titulo": "Tapete De Atividades Para Bebê Piano Musical Móbile Interativo 5 Brinquedos Sensoriais Funny Dino Maxi Baby"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 129.9,
-    "desconto": 0.5,
-    "id": "MLB38654615",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_920445-MLU77974913915_072024-F.jpg",
-    "link": "https://meli.la/13aW58Y",
-    "preco": 64.9,
-    "titulo": "Tapete Infantil De Atividades Piano Musical Com Luz E Som"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 119.9,
-    "desconto": 0.459,
-    "id": "MLB67746701",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_676065-MLA110243997819_042026-F.jpg",
-    "link": "https://meli.la/1p4ugad",
-    "preco": 64.9,
-    "titulo": "Cozinha Infantil Brinquedo Com Luz 33 Acessórios Sai Água Rosa"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 439.9,
-    "desconto": 0.489,
-    "id": "MLB19569079",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_691563-MLA118345386152_102026-F.jpg",
-    "link": "https://meli.la/2nSqsJA",
-    "preco": 224.9,
-    "titulo": "Cama Elástica Pula Pula Trampolim JustFun 1,40m com Rede de Proteção e 36 Molas"
-   },
-   {
-    "categoria": "outros",
-    "de": 338.88,
-    "desconto": 0.457,
-    "id": "MLB67741951",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_821539-MLA110242313195_042026-F.jpg",
-    "link": "https://meli.la/13LaFFE",
-    "preco": 184.0,
-    "titulo": "Cercadinho Grande Para Bebe Infantil Vário Tamanho Acessório 127×127cm Cinza"
-   },
-   {
-    "categoria": "outros",
-    "de": 599.9,
-    "desconto": 0.273,
-    "id": "MLB54018368",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_838150-MLA96150683103_102025-F.jpg",
-    "link": "https://meli.la/21gqDeR",
-    "preco": 436.4,
-    "titulo": "Berço Portátil Infantil Cercado 0-15kg Lazy Maxi baby - Cinza"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 149.9,
-    "desconto": 0.474,
-    "id": "MLB66548761",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_600096-MLA108936306687_032026-F.jpg",
-    "link": "https://meli.la/2VzY1Mf",
-    "preco": 78.9,
-    "titulo": "Cozinha Infantil Completa Com Luz E Som Acessórios Sai Água Rosa"
-   },
-   {
-    "categoria": "outros",
-    "de": 51.04,
-    "desconto": 0.332,
-    "id": "MLB18392677",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_990051-MLA110123026010_042026-F.jpg",
-    "link": "https://meli.la/2pHZDtK",
-    "preco": 34.12,
-    "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
-   },
-   {
-    "categoria": "quarto",
-    "de": 126.26,
-    "desconto": 0.27,
-    "id": "MLB43756367",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_945377-MLA95395151234_102025-F.jpg",
-    "link": "https://meli.la/1EZ8jWW",
-    "preco": 92.14,
-    "titulo": "Kit Berço Menina Menino Protetor Trança Com Saia 6 Peças Cor Elefantinho Rosa"
-   },
-   {
-    "categoria": "quarto",
-    "de": 529.9,
-    "desconto": 0.269,
-    "id": "MLB75481308",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_889881-MLA114552950567_072026-F.jpg",
-    "link": "https://meli.la/2qpr2WC",
-    "preco": 387.33,
-    "titulo": "Berço Cercado Portátil Bebê Co-bed Acoplado Desmontável 2 Alturas Buddy Maxi Baby - Bege"
-   },
-   {
-    "categoria": "outros",
-    "de": 249.9,
-    "desconto": 0.312,
-    "id": "MLB39456030",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_957293-MLA99458185276_112025-F.jpg",
-    "link": "https://meli.la/24rKWBQ",
-    "preco": 172.0,
-    "titulo": "Bicicleta De Equilibrio Rosa Com Som Sem Pedal 18824 - Buba"
-   },
-   {
-    "categoria": "higiene",
-    "de": 499.9,
-    "desconto": 0.22,
-    "id": "MLB73425165",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_704974-MLA112019273416_062026-F.jpg",
-    "link": "https://meli.la/1wjZL9H",
-    "preco": 389.9,
-    "titulo": "Banheira Bebê Dobrável Com Suporte Redutor Assento E Termômetro Embutido Até 20kg Melon Maxi Baby - Azul"
-   },
-   {
-    "categoria": "higiene",
-    "de": 51.04,
-    "desconto": 0.3,
-    "id": "MLB18392608",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_738296-MLA110297780960_052026-F.jpg",
-    "link": "https://meli.la/1wYBGNu",
-    "preco": 35.74,
-    "titulo": "Fralda Descartável Turma da Mônica Baby M 50 Unidades 12 h"
-   },
-   {
-    "categoria": "passeio",
-    "de": 709.0,
-    "desconto": 0.28,
-    "id": "MLB19970137",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_928226-MLA99462528060_112025-F.jpg",
-    "link": "https://meli.la/2PJCTUP",
-    "preco": 510.47,
-    "titulo": "Cadeirinha Cosco Kids, Progress, 0 a 36kg, Preto"
-   },
-   {
-    "categoria": "outros",
-    "de": 29.9,
-    "desconto": 0.301,
-    "id": "MLB69818712",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_957757-MLA117555667129_092026-F.jpg",
-    "link": "https://meli.la/2yRNUqX",
-    "preco": 20.9,
-    "titulo": "Kit 1 Seringa Lavagem Nariz + 1 Aspirador Sugador Catarro Bebê Lider Comercios Cor Azul-celeste"
-   },
-   {
-    "categoria": "outros",
-    "de": 129.9,
-    "desconto": 0.231,
-    "id": "MLB57071349",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_608811-MLA118679567818_102026-F.jpg",
-    "link": "https://meli.la/24NuhJE",
-    "preco": 99.9,
-    "titulo": "Cercadinho Infantil Cercado Bebê Criança Chiqueirinho Seguro Hexagonal JustFun Brinquedos Cinza Rosa Azul"
-   },
-   {
-    "categoria": "outros",
-    "de": 269.9,
-    "desconto": 0.222,
-    "id": "MLB58625474",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_681698-MLA110226819701_042026-F.jpg",
-    "link": "https://meli.la/1qdfoDe",
-    "preco": 209.89,
-    "titulo": "Andador Infantil Musical Para Bebê Quick Maxi Baby AZUL"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 99.99,
-    "desconto": 0.23,
-    "id": "MLB69251241",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_948699-MLA110358966152_052026-F.jpg",
-    "link": "https://meli.la/2tSYegn",
-    "preco": 76.99,
-    "titulo": "Barraca Infantil Cabana Tenda Festa Do Pijama Menino Criança Bebê Iglu Portátil Circus Azul"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 78.9,
-    "desconto": 0.228,
-    "id": "MLB75712282",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_612686-MLA113900078918_072026-F.jpg",
-    "link": "https://meli.la/2u8EHXu",
-    "preco": 60.89,
-    "titulo": "Dinossauro Interativo Tiranossauro T-Rex com Fumaça, Luz e Som para Crianças"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 79.99,
-    "desconto": 0.264,
-    "id": "MLB62786325",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_622319-MLA100243079561_122025-F.jpg",
-    "link": "https://meli.la/29mX98u",
-    "preco": 58.9,
-    "titulo": "LEGO® Minecraft® A aventura de Steve na Taiga 21583"
-   },
-   {
-    "categoria": "passeio",
-    "de": 999.0,
-    "desconto": 0.219,
-    "id": "MLB22974681",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_687710-MLA99456623672_112025-F.jpg",
-    "link": "https://meli.la/25dF8SA",
-    "preco": 779.9,
-    "titulo": "Travel System Duo, Cosco Kids, Reverse, 0 a 15kg, Preto Rajado"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 79.99,
-    "desconto": 0.25,
-    "id": "MLB61211409",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_680820-MLA105595010945_012026-F.jpg",
-    "link": "https://meli.la/1NSaJZf",
-    "preco": 59.99,
-    "titulo": "Jogo Stop Eletrônico Trava Letras Leeboom Com Temporizador Educativo 10 Segundos Em Português Cor Vermelho"
-   },
-   {
-    "categoria": "outros",
-    "de": 299.9,
-    "desconto": 0.208,
-    "id": "MLB28001568",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_867600-MLA99504966812_112025-F.jpg",
-    "link": "https://meli.la/18u34ak",
-    "preco": 237.41,
-    "titulo": "Andador Infantil Musical Para Bebê Empurrador Compacto 3 Ajustes de Altura La Bamba Maxi Baby - azul"
    }
   ]
  },
