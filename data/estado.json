@@ -1,5 +1,5 @@
 {
- "aguardando_link": 335,
+ "aguardando_link": 336,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -15311,6 +15311,10 @@
     [
      "2026-11-09",
      782.0
+    ],
+    [
+     "2026-11-09",
+     899.9
     ]
    ],
    "min": 630.62
@@ -16377,6 +16381,10 @@
     [
      "2026-11-09",
      4199.0
+    ],
+    [
+     "2026-11-09",
+     4349.0
     ]
    ],
    "min": 4199.0
@@ -17208,6 +17216,10 @@
     [
      "2026-11-09",
      800.0
+    ],
+    [
+     "2026-11-09",
+     1055.0
     ]
    ],
    "min": 800.0
@@ -18926,9 +18938,13 @@
     [
      "2026-11-09",
      224.57
+    ],
+    [
+     "2026-11-09",
+     186.0
     ]
    ],
-   "min": 224.57
+   "min": 186.0
   },
   "MLB48924402": {
    "historico": [
@@ -19772,6 +19788,10 @@
     [
      "2026-11-09",
      4199.0
+    ],
+    [
+     "2026-11-09",
+     4249.0
     ]
    ],
    "min": 4084.0
@@ -21901,6 +21921,10 @@
     [
      "2026-11-09",
      92.81
+    ],
+    [
+     "2026-11-09",
+     97.99
     ]
    ],
    "min": 92.81
@@ -25650,7 +25674,7 @@
  "tg_offset": 273517995,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-09T21:32-03:00",
+  "em": "2026-11-09T21:52-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -25683,6 +25707,16 @@
     "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi baby - GRAFITE"
    },
    {
+    "categoria": "higiene",
+    "de": 125.0,
+    "desconto": 0.456,
+    "id": "MLB58047533",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_889606-MLA96073229271_102025-F.jpg",
+    "link": "https://meli.la/2sbeEWw",
+    "preco": 68.0,
+    "titulo": "Troninho Privadinha Assento Redutor Pinico Para Desfralde Cinza"
+   },
+   {
     "categoria": "outros",
     "de": 185.9,
     "desconto": 0.516,
@@ -25711,6 +25745,16 @@
     "link": "https://meli.la/13aW58Y",
     "preco": 64.9,
     "titulo": "Tapete Infantil De Atividades Piano Musical Com Luz E Som"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 119.9,
+    "desconto": 0.459,
+    "id": "MLB67746701",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_676065-MLA110243997819_042026-F.jpg",
+    "link": "https://meli.la/1p4ugad",
+    "preco": 64.9,
+    "titulo": "Cozinha Infantil Brinquedo Com Luz 33 Acessórios Sai Água Rosa"
    },
    {
     "categoria": "outros",
@@ -25843,26 +25887,6 @@
     "titulo": "Andador Infantil Musical Para Bebê Quick Maxi Baby AZUL"
    },
    {
-    "categoria": "roupa",
-    "de": 64.9,
-    "desconto": 0.214,
-    "id": "MLB74331737",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_719686-MLA112427993532_062026-F.jpg",
-    "link": "https://meli.la/1VMFgJB",
-    "preco": 51.0,
-    "titulo": "Maiô Natação Infantil Biquíni Manga Longa Proteção Solar Uv Cor Água Tamanho 4"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 24.99,
-    "desconto": 0.274,
-    "id": "MLB70063063",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_603654-MLA111017090760_052026-F.jpg",
-    "link": "https://meli.la/1QVLyMa",
-    "preco": 18.15,
-    "titulo": "Tapete Sensorial Inflável De Agua Atividades Tummy Time Bebê"
-   },
-   {
     "categoria": "brinquedo",
     "de": 99.99,
     "desconto": 0.23,
@@ -25921,6 +25945,16 @@
     "link": "https://meli.la/1RGvMdG",
     "preco": 37.49,
     "titulo": "Skate De Dedo Tech Deck Com 4 Skates E Acessórios Sortidos - Sunny 2891"
+   },
+   {
+    "categoria": "outros",
+    "de": null,
+    "desconto": 0.0,
+    "id": "MLB47899174",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_775995-MLA120917880437_112026-F.jpg",
+    "link": "https://meli.la/1mbZ5jZ",
+    "preco": 186.0,
+    "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco Estary Shop"
    }
   ]
  },
