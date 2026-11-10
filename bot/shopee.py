@@ -39,6 +39,8 @@ class ProdutoShopee:
     link: str  # link de afiliado da própria Shopee
     loja: str
     loja_oficial: bool
+    preco_max: float = 0.0
+    link_produto: str = ""
 
 
 def assinatura(app_id, segredo, carga, ts):
@@ -71,6 +73,8 @@ def converter(no):
         link=no.get("offerLink") or "",
         loja=no.get("shopName") or "",
         loja_oficial=1 in tipos or 2 in tipos,  # 1 = Shopee Mall, 2 = loja indicada
+        preco_max=_num(no.get("priceMax")),
+        link_produto=no.get("productLink") or "",
     )
 
 

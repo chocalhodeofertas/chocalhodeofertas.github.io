@@ -174,7 +174,17 @@ async function postar(item) {
 
 async function cuidarDaFila() {
   if (!aberto) return;
-  const arquivos = fs.readdirSync(FILA).filter((n) => n.endsWith(".json")).sort();
+  let arquivos = fs.readdirSync(FILA).filter((n) => n.endsWith(".json")).sort();
+  // Alterna as lojas (Mercado Livre / Shopee): a mais antiga da outra loja passa na frente
+  const lojaDe = (n) => {
+    try {
+      return JSON.parse(fs.readFileSync(path.join(FILA, n), "utf8")).loja || "ml";
+    } catch {
+      return "ml";
+    }
+  };
+  const outra = arquivos.find((n) => lojaDe(n) !== (estado.ultima_loja || "ml"));
+  if (outra) arquivos = [outra, ...arquivos.filter((n) => n !== outra)];
   for (const nome of arquivos) {
     const caminho = path.join(FILA, nome);
     let item;
@@ -201,6 +211,7 @@ async function cuidarDaFila() {
       await postar(item);
       estado.enviados += 1;
       estado.ultimo = new Date().toISOString();
+      estado.ultima_loja = item.loja || "ml";
       console.log(`Postado no grupo do WhatsApp (${estado.enviados}/${MAX_DIA} hoje).`);
     } catch (e) {
       console.log("Aviso: não consegui postar no WhatsApp:", e?.message);

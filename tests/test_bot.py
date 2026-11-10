@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
+import random
+
 import pytest
 
 from bot import estado as est
@@ -1054,7 +1056,7 @@ def test_fila_whatsapp(tmp_path, monkeypatch):
     monkeypatch.setenv("WA_FILA", str(tmp_path / "fila"))
     assert whatsapp.enfileirar("*Oferta*", "https://img/x.jpg", AGORA)
     itens = [json.loads(p.read_text()) for p in (tmp_path / "fila").glob("*.json")]
-    assert itens == [{"texto": "*Oferta*", "imagem": "https://img/x.jpg", "criado": AGORA.isoformat()}]
+    assert itens == [{"texto": "*Oferta*", "imagem": "https://img/x.jpg", "criado": AGORA.isoformat(), "loja": "ml"}]
 
 
 def test_cupons_vao_para_fila_do_whatsapp(tmp_path, monkeypatch):
@@ -1184,3 +1186,65 @@ def test_shopee_assina_e_converte():
     esperado = hashlib.sha256(f"111{ts}{s.data.decode()}segredo".encode()).hexdigest()
     assert cab.startswith("SHA256 Credential=111, ") and cab.endswith(f"Signature={esperado}")
     assert '\\"bebê\\"' in json.loads(s.data)["query"] or 'bebê' in json.loads(s.data)["query"]
+
+
+def _produto_shopee(**k):
+    from bot.shopee import ProdutoShopee
+    base = dict(id="SHP1", titulo="Brinquedo Educativo Montessori Infantil", preco=34.99, preco_de=99.0,
+                desconto=0.65, comissao=0.08, vendas=7733, nota=4.9, imagem="https://x/i.jpg",
+                link="https://s.shopee.com.br/a", loja="Loja", loja_oficial=True, preco_max=49.9,
+                link_produto="https://shopee.com.br/product/1/2")
+    base.update(k)
+    return ProdutoShopee(**base)
+
+
+def test_shopee_regras_e_post():
+    from bot import shopee_ofertas as so
+    assert so.aprovado(_produto_shopee()) is None
+    assert so.aprovado(_produto_shopee(nota=4.5)) == "nota baixa"
+    assert so.aprovado(_produto_shopee(vendas=300)) == "poucas vendas"
+    assert so.aprovado(_produto_shopee(comissao=0.03)) == "comissão baixa"
+    assert so.aprovado(_produto_shopee(titulo="Mamadeira Anticólica Infantil"))  # NBCAL
+    e = est.novo()
+    o = so.para_oferta(_produto_shopee(), e, AGORA, "https://s.shopee.com.br/tg", "https://s.shopee.com.br/wa")
+    t = mensagens.montar_telegram(o, random.Random(1))
+    w = mensagens.montar_whatsapp(o, random.Random(1))
+    assert "A partir de <b>R$ 34,99</b>" in t and "De " not in t  # sem o "de" inflado da Shopee
+    assert "Ver oferta na Shopee" in t and "s.shopee.com.br/tg" in t
+    assert "s.shopee.com.br/wa" in w and "+7 mil vendidos" in w and "⭐ 4,9" in w
+    # "de/por" só com queda vista pelo próprio bot
+    est.registrar_preco(e, "SHP1", 50.0, AGORA - timedelta(days=5))
+    o2 = so.para_oferta(_produto_shopee(preco_max=0), e, AGORA)
+    assert o2.preco_de == 50.0 and "De <s>R$ 50,00</s>" in mensagens.montar_telegram(o2, random.Random(1))
+
+
+def test_shopee_rodar_posta_por_cima(monkeypatch, tmp_path):
+    from bot import shopee_ofertas as so
+    monkeypatch.setenv("SHOPEE_ATIVO", "1")
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+
+    class Shp:
+        def buscar(self, termo, **k):
+            return [_produto_shopee(id="SHP1"), _produto_shopee(id="SHP2", titulo="Body Bebê Algodão Kit 3"),
+                    _produto_shopee(id="SHP3", titulo="Fralda Descartável Infantil", nota=4.2)]
+
+        def link_curto(self, url, subs):
+            return f"https://s.shopee.com.br/{subs[0]}"
+
+    class Tg:
+        def __init__(self): self.posts = []
+        def enviar_oferta(self, chat, legenda, imagem=None): self.posts.append(legenda)
+
+    class Cfg:
+        hora_inicio, hora_fim, repost_dias, intervalo_min, intervalo_max, canal = 8, 22, 3, 0, 0, "@c"
+
+    e, tg = est.novo(), Tg()
+    agora = AGORA.replace(hour=20)
+    feitas = so.rodar(Cfg, tg, e, agora, rng=random.Random(1), shp=Shp(), log=lambda m: None)
+    assert [o.id for o in feitas] == ["SHP1", "SHP2"] and len(tg.posts) == 2  # SHP3: nota baixa
+    assert e["contagem_dia"] == {}  # não gasta o limite do Mercado Livre
+    assert e["hist_dia"][agora.date().isoformat()]["shopee"] == 2
+    import json
+    itens = [json.loads(p.read_text()) for p in tmp_path.glob("*.json")]
+    assert {i["loja"] for i in itens} == {"shopee"} and all("s.shopee.com.br/whatsapp" in i["texto"] for i in itens)
+    assert so.rodar(Cfg, tg, e, agora, rng=random.Random(1), shp=Shp(), log=lambda m: None) == []  # sem repetir

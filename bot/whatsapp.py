@@ -11,14 +11,14 @@ from datetime import datetime
 from pathlib import Path
 
 
-def enfileirar(texto, imagem=None, agora=None):
+def enfileirar(texto, imagem=None, agora=None, loja="ml"):
     pasta = os.environ.get("WA_FILA")
     if not pasta or not texto:
         return False
     p = Path(pasta)
     p.mkdir(parents=True, exist_ok=True)
     quando = agora or datetime.now().astimezone()
-    item = {"texto": texto, "imagem": imagem or None, "criado": quando.isoformat()}
+    item = {"texto": texto, "imagem": imagem or None, "criado": quando.isoformat(), "loja": loja}
     nome = p / f"{time.time_ns()}.json"
     tmp = nome.with_suffix(".tmp")
     tmp.write_text(json.dumps(item, ensure_ascii=False), encoding="utf-8")

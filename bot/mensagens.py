@@ -214,12 +214,27 @@ def _linhas_preco(oferta, negrito, riscado, codigo=lambda t: t):
     if oferta.preco_de:
         pct = round(oferta.desconto * 100)
         linhas.append(f"De {riscado(brl(oferta.preco_de))} por {negrito(brl(oferta.preco))} (-{pct}%)")
+    elif getattr(oferta, "a_partir", False):
+        linhas.append(f"A partir de {negrito(brl(oferta.preco))}")
     else:
         linhas.append(f"Por {negrito(brl(oferta.preco))}")
+    if getattr(oferta, "loja", "") == "shopee" and getattr(oferta, "vendas", 0):
+        linhas.append(f"⭐ {str(round(oferta.nota, 1)).replace('.', ',')} · {_vendidos(oferta.vendas)}")
     cp = getattr(oferta, "cupom", None)
     if cp:
         linhas.append(f"🎟️ Com o cupom {codigo(cp['codigo'])}: {negrito(brl(cp['preco']))}*")
     return linhas
+
+
+def _vendidos(n):
+    if n >= 1000:
+        mil = n // 1000
+        return f"+{mil} mil vendidos"
+    return f"+{(n // 100) * 100} vendidos"
+
+
+def _nome_loja(oferta):
+    return "na Shopee" if getattr(oferta, "loja", "") == "shopee" else "no Mercado Livre"
 
 
 def montar_telegram(oferta, rng=random):
@@ -232,7 +247,7 @@ def montar_telegram(oferta, rng=random):
         "",
         *_linhas_preco(oferta, lambda t: f"<b>{t}</b>", lambda t: f"<s>{t}</s>", lambda t: f"<code>{t}</code>"),
         "",
-        f'👉 <a href="{html.escape(oferta.link, quote=True)}">Ver oferta no Mercado Livre</a>',
+        f'👉 <a href="{html.escape(oferta.link, quote=True)}">Ver oferta {_nome_loja(oferta)}</a>',
         "",
         *(["<i>*Se o produto for elegível ao cupom. Confira no carrinho antes de pagar.</i>"]
           if getattr(oferta, "cupom", None) else []),
@@ -251,7 +266,7 @@ def montar_whatsapp(oferta, rng=random):
         "",
         *_linhas_preco(oferta, lambda t: f"*{t}*", lambda t: f"~{t}~"),
         "",
-        f"👉 {oferta.link}",
+        f"👉 {getattr(oferta, 'link_wa', None) or oferta.link}",
         "",
         *(["_*Se o produto for elegível ao cupom. Confira no carrinho antes de pagar._"]
           if getattr(oferta, "cupom", None) else []),

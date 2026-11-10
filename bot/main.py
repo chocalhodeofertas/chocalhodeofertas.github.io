@@ -615,6 +615,12 @@ def main(argv=None):
         tarefa = (lambda: tarefas_rapidas(cfg, ml, tg, estado)) if args.modo == "normal" else None
         rodar(args.modo, cfg, ml, tg, estado, lista, agora=agora, tarefa=tarefa)
         if args.modo == "normal":
+            from . import shopee_ofertas
+            try:
+                shopee_ofertas.rodar(cfg, tg, estado, datetime.now(FUSO), log=log,
+                                     esperar=lambda s: _esperar(s, tarefa))
+            except Exception as e:  # a Shopee nunca derruba o ciclo do Mercado Livre
+                log(f"Aviso: Shopee falhou nesta rodada: {type(e).__name__}: {e}")
             if cfg.hora_inicio <= agora.hour < cfg.hora_fim:
                 cupons_ml.processar(tg, cfg, estado, agora, log)
             comandos.verificar_cupons(tg, cfg, estado, agora, log)
