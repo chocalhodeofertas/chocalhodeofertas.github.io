@@ -12,10 +12,11 @@ import csv
 import math
 import os
 import sys
+import time
 from pathlib import Path
 
 from bot import filtros
-from bot.shopee import MAIS_VENDIDOS, MAIOR_COMISSAO, Shopee, ShopeeErro
+from bot.shopee import MAIS_VENDIDOS, Shopee, ShopeeErro
 from bot.shopee_ofertas import TERMOS, categoria_do_titulo
 
 # Termos extras de produtos que rendem bem em vídeo sem mostrar criança.
@@ -29,6 +30,7 @@ TERMOS_VIDEO = [
 NOTA_MIN, COMISSAO_MIN = 4.7, 0.05
 VENDAS_MIN, VENDAS_MAX = 500, 10000
 QUANTOS = 25
+ORCAMENTO_S = 10 * 60  # o workflow corta em 15 min: para de buscar antes e salva o que achou
 
 
 def pontos(p):
@@ -50,16 +52,21 @@ def apto(p):
 
 def main():
     arg = sys.argv[1] if len(sys.argv) > 1 else ""
-    termos = [t.strip() for t in arg.split(",") if t.strip()] or (TERMOS + TERMOS_VIDEO)
+    termos = [t.strip() for t in arg.split(",") if t.strip()] or (TERMOS_VIDEO + TERMOS)
     shp = Shopee(os.environ.get("SHOPEE_APP_ID"), os.environ.get("SHOPEE_SECRET"))
-    vistos, erros = {}, []
+    vistos, erros, feitos = {}, [], 0
+    inicio = time.monotonic()
     for termo in termos:
-        for ordem in (MAIS_VENDIDOS, MAIOR_COMISSAO):
-            try:
-                for p in shp.buscar(termo, ordem=ordem, limite=50):
-                    vistos.setdefault(p.id, p)
-            except ShopeeErro as e:
-                erros.append(f"{termo}: {e}")
+        if time.monotonic() - inicio > ORCAMENTO_S:
+            print(f"Tempo esgotado: parei em {feitos} de {len(termos)} termos.", flush=True)
+            break
+        try:
+            for p in shp.buscar(termo, ordem=MAIS_VENDIDOS, limite=50):
+                vistos.setdefault(p.id, p)
+        except ShopeeErro as e:
+            erros.append(f"{termo}: {e}")
+        feitos += 1
+        print(f"{feitos}/{len(termos)} {termo}: {len(vistos)} vistos", flush=True)
     if not vistos:
         print("A API não respondeu:", "; ".join(erros[:5]))
         return 1
