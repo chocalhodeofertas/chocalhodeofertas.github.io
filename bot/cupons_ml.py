@@ -231,10 +231,25 @@ def _novo_desconto(estado, c):
     return novo
 
 
+def _desconto_postado(estado, codigo):
+    """Desconto que está no bloco já postado desse cupom (ex.: "R$50 OFF")."""
+    c = (estado.get("cupons") or {}).get(codigo) or {}
+    post = (estado.get("posts_cupom") or {}).get(str(c.get("post"))) or {}
+    for b in post.get("blocos", []):
+        if b.get("codigo") == codigo:
+            m = re.search(r"👉 <b>([^<]*)</b>", b.get("html", ""))
+            return html.unescape(m.group(1)).strip() if m else None
+    return None
+
+
 def tratar_mensagem(texto, tg, cfg, estado, agora, categorias=None, log=print, parser=None):
     """Posta os cupons novos e avisa das atualizações. Retorna quantos cupons postou."""
     novos, ja = [], cupons.ativos(estado)
     for c in (parser or parse)(texto, agora):
+        if c["codigo"] in ja and not c["antes"]:
+            postado = _desconto_postado(estado, c["codigo"])
+            if postado and _norm(postado).replace(" ", "") != _norm(c["desconto"]).replace(" ", ""):
+                c["antes"] = postado  # canal em lista não marca "→": compara com o que já postamos
         if c["codigo"] in ja:
             if c["antes"]:
                 cupons.atualizar_bloco(tg, cfg, estado, c["codigo"], _novo_desconto(estado, c),

@@ -1042,3 +1042,18 @@ def test_cupons_vao_para_fila_do_whatsapp(tmp_path, monkeypatch):
     cupons_ml.tratar_mensagem(POST_LISTA, tg, cfg_cmd(), e, AGORA, log=lambda m: None, parser=cupons_ml.parse_lista)
     textos = [p.read_text() for p in tmp_path.glob("*.json")]
     assert len(textos) == 1 and "BEBESPETS0511" in textos[0] and "mercadolivre.com.br/sec" not in textos[0]
+
+
+def test_cupom_de_lista_que_melhorou_atualiza_o_post():
+    from bot import cupons_ml
+    e, tg = est.novo(), TGCmd()
+    cupons_ml.tratar_mensagem(POST_LISTA, tg, cfg_cmd(), e, AGORA, log=lambda m: None, parser=cupons_ml.parse_lista)
+    novo = POST_LISTA.replace("R$ 50 OFF em R$ 349", "R$70 OFF em R$ 349")
+    n = cupons_ml.tratar_mensagem(novo, tg, cfg_cmd(), e, AGORA, log=lambda m: None, parser=cupons_ml.parse_lista)
+    assert n == 0  # não posta de novo, só atualiza
+    avisos = [t for c, t in tg.textos if c == "@canal" and "Melhorou" in t]
+    assert avisos and "R$70 OFF" in avisos[-1]
+    # Repetido sem mudança: nada acontece
+    antes = len(tg.textos)
+    cupons_ml.tratar_mensagem(novo, tg, cfg_cmd(), e, AGORA, log=lambda m: None, parser=cupons_ml.parse_lista)
+    assert len(tg.textos) == antes
