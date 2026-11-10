@@ -5208,7 +5208,7 @@
   "HOJEMESMO": {
    "criado": "2026-11-09T10:01-03:00",
    "post": 152,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-09T23:59-03:00"
   },
   "MAISCUPONS25": {
@@ -5220,7 +5220,7 @@
   "MELHORDOML": {
    "criado": "2026-11-09T13:36-03:00",
    "post": 168,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-09T23:59-03:00"
   },
   "MELIOFERTAS": {
@@ -5256,7 +5256,7 @@
   "OFFNAMODA": {
    "criado": "2026-11-09T10:22-03:00",
    "post": 155,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-09T23:59-03:00"
   },
   "OLHAOARABE20": {
@@ -5272,7 +5272,7 @@
    "validade": "2026-12-31T23:59-03:00"
   }
  },
- "cupons_ml_ultimo": 6428,
+ "cupons_ml_ultimo": 6431,
  "descoberta_em": "2026-11-09T18:42-03:00",
  "descobertos": {
   "MLB10683785": {
