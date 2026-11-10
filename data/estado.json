@@ -1,5 +1,5 @@
 {
- "aguardando_link": 334,
+ "aguardando_link": 335,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-09": 48
+  "2026-11-09": 50
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12719,6 +12719,12 @@
    "quando": "2026-11-07T15:12-03:00",
    "titulo": "Tablet Educativo Infantil Bilíngue 54 Funções Azul Interativo Português Inglês L"
   },
+  "MLB70063063": {
+   "desconto": 0.274,
+   "preco": 18.15,
+   "quando": "2026-11-09T21:32-03:00",
+   "titulo": "Tapete Sensorial Inflável De Agua Atividades Tummy Time Bebê"
+  },
   "MLB70334862": {
    "desconto": 0.445,
    "preco": 76.62,
@@ -12792,6 +12798,12 @@
    "preco": 115.33,
    "quando": "2026-11-08T13:33-03:00",
    "titulo": "Cercadinho Bebê Rister Baby Portátil Grande + Tapete Rosa"
+  },
+  "MLB74331737": {
+   "desconto": 0.214,
+   "preco": 51.0,
+   "quando": "2026-11-09T21:32-03:00",
+   "titulo": "Maiô Natação Infantil Biquíni Manga Longa Proteção Solar Uv Cor Água Tamanho 4"
   },
   "MLB74454821": {
    "desconto": 0.407,
@@ -13249,6 +13261,10 @@
     [
      "2026-11-09",
      104.0
+    ],
+    [
+     "2026-11-09",
+     111.92
     ]
    ],
    "min": 104.0
@@ -13266,6 +13282,10 @@
     [
      "2026-11-09",
      14.49
+    ],
+    [
+     "2026-11-09",
+     13.08
     ]
    ],
    "min": 10.99
@@ -14680,6 +14700,10 @@
     [
      "2026-11-09",
      309.0
+    ],
+    [
+     "2026-11-09",
+     323.48
     ]
    ],
    "min": 309.0
@@ -18567,6 +18591,10 @@
     [
      "2026-11-09",
      26.58
+    ],
+    [
+     "2026-11-09",
+     28.99
     ]
    ],
    "min": 26.58
@@ -19108,6 +19136,10 @@
     [
      "2026-11-09",
      28.26
+    ],
+    [
+     "2026-11-09",
+     29.6
     ]
    ],
    "min": 28.26
@@ -19614,9 +19646,13 @@
     [
      "2026-11-09",
      326.0
+    ],
+    [
+     "2026-11-09",
+     287.65
     ]
    ],
-   "min": 318.0
+   "min": 287.65
   },
   "MLB54287362": {
    "historico": [
@@ -19732,6 +19768,10 @@
     [
      "2026-11-09",
      4249.0
+    ],
+    [
+     "2026-11-09",
+     4199.0
     ]
    ],
    "min": 4084.0
@@ -20165,9 +20205,13 @@
     [
      "2026-11-09",
      40.95
+    ],
+    [
+     "2026-11-09",
+     39.99
     ]
    ],
-   "min": 40.95
+   "min": 39.99
   },
   "MLB58831995": {
    "historico": [
@@ -21230,6 +21274,10 @@
     [
      "2026-11-09",
      114.5
+    ],
+    [
+     "2026-11-09",
+     121.99
     ]
    ],
    "min": 114.5
@@ -22517,6 +22565,10 @@
     [
      "2026-11-06",
      56.16
+    ],
+    [
+     "2026-11-09",
+     59.9
     ]
    ],
    "min": 56.16
@@ -25598,7 +25650,7 @@
  "tg_offset": 273517995,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-09T21:12-03:00",
+  "em": "2026-11-09T21:32-03:00",
   "itens": [
    {
     "categoria": "brinquedo",
@@ -25619,6 +25671,16 @@
     "link": "https://meli.la/2wv2B2q",
     "preco": 23.99,
     "titulo": "Mosquiteiro Para Carrinho Bebê Conforto Portátil Universal Branco"
+   },
+   {
+    "categoria": "outros",
+    "de": 799.9,
+    "desconto": 0.464,
+    "id": "MLB61118769",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_967447-MLA109050296314_032026-F.jpg",
+    "link": "https://meli.la/2qfyL4H",
+    "preco": 429.0,
+    "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi baby - GRAFITE"
    },
    {
     "categoria": "outros",
@@ -25649,6 +25711,16 @@
     "link": "https://meli.la/13aW58Y",
     "preco": 64.9,
     "titulo": "Tapete Infantil De Atividades Piano Musical Com Luz E Som"
+   },
+   {
+    "categoria": "outros",
+    "de": 338.88,
+    "desconto": 0.457,
+    "id": "MLB67741951",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_821539-MLA110242313195_042026-F.jpg",
+    "link": "https://meli.la/13LaFFE",
+    "preco": 184.0,
+    "titulo": "Cercadinho Grande Para Bebe Infantil Vário Tamanho Acessório 127×127cm Cinza"
    },
    {
     "categoria": "brinquedo",
@@ -25769,26 +25841,6 @@
     "link": "https://meli.la/1qdfoDe",
     "preco": 209.89,
     "titulo": "Andador Infantil Musical Para Bebê Quick Maxi Baby AZUL"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 160.0,
-    "desconto": 0.255,
-    "id": "MLB62572381",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_631284-MLA110432757997_042026-F.jpg",
-    "link": "https://meli.la/2VM2tsW",
-    "preco": 119.21,
-    "titulo": "Pelúcia Banguela Fúria da Noite 100cm de Satin Preto para Abraçar"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 34.0,
-    "desconto": 0.3,
-    "id": "MLB21843844",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_674475-MLA99598648876_122025-F.jpg",
-    "link": "https://meli.la/1Y4uD27",
-    "preco": 23.8,
-    "titulo": "Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos"
    },
    {
     "categoria": "roupa",
