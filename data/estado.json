@@ -1,5 +1,5 @@
 {
- "aguardando_link": 260,
+ "aguardando_link": 259,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 19
+  "2026-11-10": 21
  },
  "cupons": {
   "AUTO70OFF": {
@@ -5261,6 +5261,12 @@
    "status": "ativo",
    "validade": "2026-12-10T23:59-03:00"
   },
+  "OFFAGORA": {
+   "criado": "2026-11-10T13:30-03:00",
+   "post": 224,
+   "status": "ativo",
+   "validade": "2026-11-10T23:59-03:00"
+  },
   "OFFNAMODA": {
    "criado": "2026-11-09T10:22-03:00",
    "post": 155,
@@ -5310,8 +5316,8 @@
    "validade": "2026-11-10T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5497,
- "cupons_ml_ultimo": 6437,
+ "cupons_extra_ultimo:cupombr": 5498,
+ "cupons_ml_ultimo": 6439,
  "descoberta_em": "2026-11-10T11:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -12360,6 +12366,12 @@
    "quando": "2026-11-08T11:33-03:00",
    "titulo": "Bolinhas Para Piscina Coloridas Braskit 500 Unidades Plástico"
   },
+  "MLB38429999": {
+   "desconto": 0.7,
+   "preco": 5.71,
+   "quando": "2026-11-10T13:23-03:00",
+   "titulo": "Kit 36 Adesivos Ronzan Repelente Infantil Óleo Citronela Multicolor Mosquitos"
+  },
   "MLB38654615": {
    "preco": 64.9,
    "quando": "2026-11-06T18:23-03:00"
@@ -12755,6 +12767,12 @@
    "preco": 32.95,
    "quando": "2026-11-10T09:02-03:00",
    "titulo": "Almofada De Banheira Ergonômica Conforto E Relaxamento Branco"
+  },
+  "MLB66116474": {
+   "desconto": 0.702,
+   "preco": 417.0,
+   "quando": "2026-11-10T13:23-03:00",
+   "titulo": "Kit Escolar Homem-Aranha Marvel com Mochila de Rodinhas, Estojo e Lancheira para"
   },
   "MLB66463370": {
    "desconto": 0.271,
@@ -13253,6 +13271,17 @@
    "criado": "2026-11-10T12:02-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "224": {
+   "blocos": [
+    {
+     "codigo": "OFFAGORA",
+     "html": "<b>🎟️ OFFAGORA</b> 👉 <b>18% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 10/11\n👉 <a href=\"https://bit.ly/4iPhigP\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-10T13:30-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
@@ -15846,6 +15875,10 @@
     [
      "2026-11-09",
      626.28
+    ],
+    [
+     "2026-11-10",
+     809.0
     ]
    ],
    "min": 626.28
@@ -15925,9 +15958,13 @@
     [
      "2026-11-09",
      109.9
+    ],
+    [
+     "2026-11-10",
+     78.0
     ]
    ],
-   "min": 109.9
+   "min": 78.0
   },
   "MLB25366146": {
    "historico": [
@@ -19529,6 +19566,10 @@
     [
      "2026-11-10",
      28.99
+    ],
+    [
+     "2026-11-10",
+     26.58
     ]
    ],
    "min": 26.58
@@ -20002,6 +20043,10 @@
     [
      "2026-11-09",
      158.23
+    ],
+    [
+     "2026-11-10",
+     169.99
     ]
    ],
    "min": 158.23
@@ -21636,6 +21681,10 @@
     [
      "2026-11-09",
      383.23
+    ],
+    [
+     "2026-11-10",
+     413.69
     ]
    ],
    "min": 383.23
@@ -25238,6 +25287,10 @@
     [
      "2026-11-10",
      408.7
+    ],
+    [
+     "2026-11-10",
+     379.99
     ]
    ],
    "min": 379.99
@@ -27127,6 +27180,10 @@
     [
      "2026-11-09",
      19.0
+    ],
+    [
+     "2026-11-10",
+     20.99
     ]
    ],
    "min": 19.0
@@ -27260,7 +27317,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T13:03-03:00",
+  "em": "2026-11-10T13:23-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -27333,26 +27390,6 @@
     "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho com Sons Multisensorial 1ª Infância Bebê Co"
    },
    {
-    "categoria": "gestante",
-    "de": 49.0,
-    "desconto": 0.51,
-    "id": "MLB49357605",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_978472-MLA100067070359_122025-F.jpg",
-    "link": "https://meli.la/1heeSkf",
-    "preco": 24.0,
-    "titulo": "Trocador De Fraldas Portátil Impermeavel Com Bolso Cor Savana"
-   },
-   {
-    "categoria": "quarto",
-    "de": 70.0,
-    "desconto": 0.43,
-    "id": "MLB24331807",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_891933-MLA105469034825_012026-F.jpg",
-    "link": "https://meli.la/2sHerzw",
-    "preco": 39.9,
-    "titulo": "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampada Cor Menino"
-   },
-   {
     "categoria": "escola",
     "de": 1398.0,
     "desconto": 0.702,
@@ -27401,16 +27438,6 @@
     "link": "https://meli.la/2APPvJm",
     "preco": 324.0,
     "titulo": "Banheira Dobrável Com Suporte e Porta Acessórios YPB888 Cinza Yuupi"
-   },
-   {
-    "categoria": "quarto",
-    "de": 59.99,
-    "desconto": 0.683,
-    "id": "MLB80565002",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_733422-MLA119469475931_102026-F.jpg",
-    "link": "https://meli.la/2zMrC7S",
-    "preco": 19.0,
-    "titulo": "Travesseiro Anti-refluxo para Bebê Com 2 Fronhas Removíveis Laváveis"
    },
    {
     "categoria": "brinquedo",
@@ -27523,6 +27550,16 @@
     "titulo": "Buba Ursinho que reza anjinho da guarda para bebê e criança pelúcia azul"
    },
    {
+    "categoria": "quarto",
+    "de": 59.99,
+    "desconto": 0.65,
+    "id": "MLB80565002",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_733422-MLA119469475931_102026-F.jpg",
+    "link": "https://meli.la/2zMrC7S",
+    "preco": 20.99,
+    "titulo": "Travesseiro Anti-refluxo para Bebê Com 2 Fronhas Removíveis Laváveis"
+   },
+   {
     "categoria": "brinquedo",
     "de": 149.9,
     "desconto": 0.533,
@@ -27613,16 +27650,6 @@
     "titulo": "Guia Cinto De Segurança Anti Perda De Criança Pais E Filhos Cor Azul-celeste"
    },
    {
-    "categoria": "higiene",
-    "de": 149.99,
-    "desconto": 0.436,
-    "id": "MLB62349726",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_926675-MLA98901684651_112025-F.jpg",
-    "link": "https://meli.la/2Gp77JG",
-    "preco": 84.59,
-    "titulo": "Banheira Portátil Dobrável para Spa e Gelo de Alta Qualidade Branca"
-   },
-   {
     "categoria": "brinquedo",
     "de": 44.1,
     "desconto": 0.596,
@@ -27643,16 +27670,6 @@
     "titulo": "2 em 1 Shampoo e Condicionador Infantil JOHNSON’S 400ml"
    },
    {
-    "categoria": "passeio",
-    "de": 599.0,
-    "desconto": 0.36,
-    "id": "MLB62060798",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_734729-MLA98091343937_112025-F.jpg",
-    "link": "https://meli.la/1Hr5qZ4",
-    "preco": 383.23,
-    "titulo": "Carrinho De Bebê Cosco Kids, Toffy, Rosa Noite"
-   },
-   {
     "categoria": "outros",
     "de": 999.0,
     "desconto": 0.595,
@@ -27661,16 +27678,6 @@
     "link": "https://meli.la/2CRvDS6",
     "preco": 405.0,
     "titulo": "Triciclo Passeio Moto Trail Ate 30kg 2 Em 1 Pedal Empurrador Laranja"
-   },
-   {
-    "categoria": "casa",
-    "de": 139.9,
-    "desconto": 0.5,
-    "id": "MLB70587098",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_941133-MLA112532672749_052026-F.jpg",
-    "link": "https://meli.la/1AZysjp",
-    "preco": 69.9,
-    "titulo": "Kit 2 Redes Nylon Resistente Proteção Pássaros Morcegos 4x2m"
    },
    {
     "categoria": "outros",
@@ -27691,16 +27698,6 @@
     "link": "https://meli.la/2FdYem6",
     "preco": 12.89,
     "titulo": "Babador De Silicone Gumy Com Pega Migalhas Cor Rosa-pálido Morango Tamanho Cm"
-   },
-   {
-    "categoria": "casa",
-    "de": 129.9,
-    "desconto": 0.491,
-    "id": "MLB79338031",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_832471-MLA116186912686_092026-F.jpg",
-    "link": "https://meli.la/2XATFqp",
-    "preco": 66.08,
-    "titulo": "Tenda Mosquiteiro Dobrável Para Cama Casal Solteiro Portátil Azul 180x200cm"
    },
    {
     "categoria": "passeio",
@@ -27861,6 +27858,66 @@
     "link": "https://meli.la/2PWFurq",
     "preco": 59.9,
     "titulo": "Andador Bebe Carrinho Infantil Treina Equilíbrio Zippy Toys Cor Vermelho"
+   },
+   {
+    "categoria": "escola",
+    "de": 41.9,
+    "desconto": 0.449,
+    "id": "MLB51764695",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_670612-MLA99639033325_112025-F.jpg",
+    "link": "https://meli.la/24Z7AFf",
+    "preco": 23.09,
+    "titulo": "Estojo Box Organizador Escolar Com Divisórias Multifuncional 24 Elásticos Lápis Caneta 100 Pens Masculino Femi"
+   },
+   {
+    "categoria": "quarto",
+    "de": 199.9,
+    "desconto": 0.315,
+    "id": "MLB78704873",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_673552-MLA115596034822_092026-F.jpg",
+    "link": "https://meli.la/2UvWs2P",
+    "preco": 136.9,
+    "titulo": "Lixeira Para Fraldas Rister Baby 10l Anti-odor Com Tampa Branco"
+   },
+   {
+    "categoria": "higiene",
+    "de": 147.9,
+    "desconto": 0.441,
+    "id": "MLB25863440",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_807543-MLA99445819066_112025-F.jpg",
+    "link": "https://meli.la/14rfQiv",
+    "preco": 82.66,
+    "titulo": "Almofada De Banho Para O Bebê Ursinho Cinza 12752 - Buba Ursinhos"
+   },
+   {
+    "categoria": "higiene",
+    "de": 98.9,
+    "desconto": 0.373,
+    "id": "MLB37622470",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_658983-MLA114006492841_072026-F.jpg",
+    "link": "https://meli.la/1ZpWkxy",
+    "preco": 61.97,
+    "titulo": "Shampoo Anticaspa Cabelos Normais a Oleosos, Dercos DS Vichy, 125g"
+   },
+   {
+    "categoria": "escola",
+    "de": 91.68,
+    "desconto": 0.52,
+    "id": "MLB24838553",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_632249-MLA95500595854_102025-F.jpg",
+    "link": "https://meli.la/2m3gavU",
+    "preco": 43.99,
+    "titulo": "Caneta esferográfica Bic Azul - c/50"
+   },
+   {
+    "categoria": "passeio",
+    "de": 100.0,
+    "desconto": 0.438,
+    "id": "MLB62020136",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_701617-MLA116049031946_092026-F.jpg",
+    "link": "https://meli.la/2f7JZaE",
+    "preco": 56.16,
+    "titulo": "Canguru Sling De Bebe Carregar Recem Nascido Cinza G - Marca DE CORAZÓN"
    }
   ]
  },
