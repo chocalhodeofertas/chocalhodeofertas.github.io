@@ -1,5 +1,5 @@
 {
- "aguardando_link": 259,
+ "aguardando_link": 258,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 21
+  "2026-11-10": 22
  },
  "cupons": {
   "AUTO70OFF": {
@@ -13042,6 +13042,12 @@
    "quando": "2026-11-09T19:02-03:00",
    "titulo": "Mordedor Bebê Estilo Luva de Silicone Macio Massageador Gengiva Dentição - Cores"
   },
+  "MLB78748750": {
+   "desconto": 0.7,
+   "preco": 19.44,
+   "quando": "2026-11-10T13:43-03:00",
+   "titulo": "Capacete de protecao para bebe anti queda EPS-1319 cabeca Ajustável Cor Rosa"
+  },
   "MLB78828696": {
    "desconto": 0.469,
    "preco": 23.86,
@@ -15187,6 +15193,10 @@
     [
      "2026-11-10",
      309.0
+    ],
+    [
+     "2026-11-10",
+     323.47
     ]
    ],
    "min": 309.0
@@ -17883,6 +17893,10 @@
     [
      "2026-11-10",
      21.1
+    ],
+    [
+     "2026-11-10",
+     21.9
     ]
    ],
    "min": 21.1
@@ -24111,6 +24125,10 @@
     [
      "2026-11-06",
      199.9
+    ],
+    [
+     "2026-11-10",
+     208.95
     ]
    ],
    "min": 199.9
@@ -27317,7 +27335,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T13:23-03:00",
+  "em": "2026-11-10T13:43-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -27388,26 +27406,6 @@
     "link": "https://meli.la/33nrT9Z",
     "preco": 28.0,
     "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho com Sons Multisensorial 1ª Infância Bebê Co"
-   },
-   {
-    "categoria": "escola",
-    "de": 1398.0,
-    "desconto": 0.702,
-    "id": "MLB66116474",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_863292-MLA119528120831_102026-F.jpg",
-    "link": "https://meli.la/1g1eTCV",
-    "preco": 417.0,
-    "titulo": "Kit Escolar Homem-Aranha Marvel com Mochila de Rodinhas, Estojo e Lancheira para Meninos"
-   },
-   {
-    "categoria": "outros",
-    "de": 19.06,
-    "desconto": 0.7,
-    "id": "MLB38429999",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_671005-MLA100098031451_122025-F.jpg",
-    "link": "https://meli.la/28WaNDN",
-    "preco": 5.71,
-    "titulo": "Kit 36 Adesivos Ronzan Repelente Infantil Óleo Citronela Multicolor Mosquitos"
    },
    {
     "categoria": "outros",
@@ -27548,16 +27546,6 @@
     "link": "https://meli.la/2NtvAXr",
     "preco": 106.0,
     "titulo": "Buba Ursinho que reza anjinho da guarda para bebê e criança pelúcia azul"
-   },
-   {
-    "categoria": "quarto",
-    "de": 59.99,
-    "desconto": 0.65,
-    "id": "MLB80565002",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_733422-MLA119469475931_102026-F.jpg",
-    "link": "https://meli.la/2zMrC7S",
-    "preco": 20.99,
-    "titulo": "Travesseiro Anti-refluxo para Bebê Com 2 Fronhas Removíveis Laváveis"
    },
    {
     "categoria": "brinquedo",
@@ -27918,6 +27906,36 @@
     "link": "https://meli.la/2f7JZaE",
     "preco": 56.16,
     "titulo": "Canguru Sling De Bebe Carregar Recem Nascido Cinza G - Marca DE CORAZÓN"
+   },
+   {
+    "categoria": "outros",
+    "de": 185.9,
+    "desconto": 0.516,
+    "id": "MLB45286830",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_771489-MLA100039533847_122025-F.jpg",
+    "link": "https://meli.la/2bAX86M",
+    "preco": 90.0,
+    "titulo": "Andador Empurrador Infantil Musical Educativo Rosa Yuupi YPHE0811"
+   },
+   {
+    "categoria": "passeio",
+    "de": 599.0,
+    "desconto": 0.309,
+    "id": "MLB62060798",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_734729-MLA98091343937_112025-F.jpg",
+    "link": "https://meli.la/1Hr5qZ4",
+    "preco": 413.69,
+    "titulo": "Carrinho De Bebê Cosco Kids, Toffy, Rosa Noite"
+   },
+   {
+    "categoria": "passeio",
+    "de": 1799.9,
+    "desconto": 0.366,
+    "id": "MLB62926546",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_760834-MLA100113185128_122025-F.jpg",
+    "link": "https://meli.la/1HM1CU6",
+    "preco": 1141.0,
+    "titulo": "Carrinho de Bebê Travel System Maxi Baby Elysian Cinza e Dourado com Moisés e Bebê Conforto"
    }
   ]
  },
