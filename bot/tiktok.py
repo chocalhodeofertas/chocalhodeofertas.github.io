@@ -182,7 +182,7 @@ def produto(cena, titulo, preco, preco_de=None, foco_y=0.5, titulo_em=None):
     """Produto aplicado numa cena. Cartão creme 'de R$ X → R$ Y' centralizado
     na parte de baixo e o nome do produto, sem fundo, logo acima dele. Se o
     fundo ali não der leitura, o nome sobe para o topo (centralizado).
-    titulo_em: força 'cartao' ou 'topo'."""
+    titulo_em: 'cartao' (padrão), 'topo' ou 'auto'."""
     img = _cobrir(cena, foco_y=foco_y)
     d = ImageDraw.Draw(img)
 
@@ -211,12 +211,16 @@ def produto(cena, titulo, preco, preco_de=None, foco_y=0.5, titulo_em=None):
     alt_txt = passo * (len(linhas) - 1) + tam
     y_cartao = y0 - 34 - passo * (len(linhas) - 1)          # base da 1ª linha
     faixa = (MARGEM, y_cartao - tam - 20, L - MARGEM, y0 - 10)
-    onde = titulo_em or ("cartao" if _legivel(img, faixa) else "topo")
+    # padrão aprovado: nome logo acima do preço; o degradê garante a leitura.
+    # 'auto' sobe o nome para o topo quando o fundo ali é claro/agitado demais.
+    onde = titulo_em or "cartao"
+    if onde == "auto":
+        onde = "cartao" if _legivel(img, faixa) else "topo"
     if onde == "topo":
         img = _degrade(img, 0, 420, 125, de_cima=True)
         y_ini = 110 + tam
     else:
-        img = _degrade(img, y_cartao - tam - 160, A, 120)
+        img = _degrade(img, y_cartao - tam - 220, A, 150)
         y_ini = y_cartao
     pos = [(L // 2, y_ini + k * passo, ln) for k, ln in enumerate(linhas)]
 
