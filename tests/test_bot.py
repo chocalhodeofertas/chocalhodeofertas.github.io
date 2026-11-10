@@ -1122,3 +1122,16 @@ def test_cupom_na_oferta_so_quando_faz_sentido():
     banheira.cupom = cp
     texto = mensagens.montar_whatsapp(banheira)
     assert "BEBES20" in texto and "R$ 329,90" in texto and "elegível" in texto
+
+
+def test_resumo_traz_o_whatsapp(tmp_path):
+    import json
+    from bot import comandos
+    hoje, ontem = AGORA.date().isoformat(), (AGORA.date() - timedelta(days=1)).isoformat()
+    arq = tmp_path / "wa.json"
+    arq.write_text(json.dumps({"dia": hoje, "enviados": 3, "membros": {ontem: 40, hoje: 47},
+                               "apagados": {hoje: 2}, "conectado": True}))
+    txt = "\n".join(comandos._resumo_whatsapp(AGORA, arq))
+    assert "47" in txt and "+7 desde ontem" in txt and "Posts no grupo hoje: <b>3</b>" in txt
+    assert "apagados: 2" in txt and "Conectado" in txt
+    assert comandos._resumo_whatsapp(AGORA, tmp_path / "nao_existe.json") == []

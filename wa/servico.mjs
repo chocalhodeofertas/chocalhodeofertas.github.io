@@ -74,6 +74,20 @@ async function acharGrupo() {
   return grupo;
 }
 
+async function contarMembros() {
+  if (!grupo || !aberto) return;
+  try {
+    const meta = await sock.groupMetadata(grupo);
+    estado.membros = estado.membros || {};
+    estado.membros[hoje()] = meta.participants.length;
+    const dias = Object.keys(estado.membros).sort();
+    for (const d of dias.slice(0, -10)) delete estado.membros[d];
+    estado.membros_em = new Date().toISOString();
+  } catch (e) {
+    console.log("Aviso: não consegui contar os membros do grupo:", e?.message);
+  }
+}
+
 async function ehAdmin(jid) {
   if (Date.now() - admins.quando > 10 * 60 * 1000) {
     const meta = await sock.groupMetadata(grupo);
@@ -92,8 +106,10 @@ function conectar() {
       aberto = true;
       tentativas = 0;
       console.log("WhatsApp conectado.");
+      estado.conectado = true;
       try {
         await acharGrupo();
+        await contarMembros();
       } catch (e) {
         console.log("Aviso: não achei o grupo:", e?.message);
       }
@@ -104,6 +120,7 @@ function conectar() {
       const motivo = u.lastDisconnect?.error?.output?.statusCode;
       if (motivo === DisconnectReason.loggedOut) {
         console.log("WhatsApp desconectado pelo celular.");
+        estado.conectado = false;
         if (estado.avisou_desconexao !== hoje()) {
           estado.avisou_desconexao = hoje();
           await avisar("⚠️ O WhatsApp do Chocalho foi desconectado. Para voltar, rode o workflow “Conectar WhatsApp”.");
@@ -131,6 +148,8 @@ function conectar() {
       try {
         if (autor && !(await ehAdmin(autor))) {
           await sock.sendMessage(grupo, { delete: m.key });
+          estado.apagados = estado.apagados || {};
+          estado.apagados[hoje()] = (estado.apagados[hoje()] || 0) + 1;
           console.log("Link de participante apagado.");
         }
       } catch (e) {
@@ -240,6 +259,7 @@ while (Date.now() < FIM && !fs.existsSync(path.join(FILA, "PARAR"))) {
   }
   await cuidarDaFila().catch((e) => console.log("Aviso:", e?.message));
   if (Date.now() - ultimoSalvo > 5 * 60 * 1000) {
+    if (!estado.membros_em || Date.now() - Date.parse(estado.membros_em) > 60 * 60 * 1000) await contarMembros();
     salvarTudo();
     ultimoSalvo = Date.now();
   }

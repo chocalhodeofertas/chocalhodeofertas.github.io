@@ -312,6 +312,37 @@ def verificar_cupons(tg, cfg, estado, agora, log=print):
 
 # ---------- resumo ----------
 
+def _resumo_whatsapp(agora, arquivo=None):
+    """Linhas do WhatsApp para o resumo, lidas de data/wa_estado.json (escrito pelo wa/servico.mjs)."""
+    import json
+    from pathlib import Path
+
+    arq = Path(arquivo) if arquivo else Path(__file__).resolve().parent.parent / "data" / "wa_estado.json"
+    try:
+        wa = json.loads(arq.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+    hoje = agora.date().isoformat()
+    ontem = (agora.date() - timedelta(days=1)).isoformat()
+    linhas = ["", "💬 <b>WhatsApp</b>"]
+    membros = wa.get("membros") or {}
+    if hoje in membros:
+        dif = f" ({membros[hoje] - membros[ontem]:+d} desde ontem)" if ontem in membros else ""
+        linhas.append(f"👥 Membros no grupo: <b>{membros[hoje]}</b>{dif}")
+    enviados = wa.get("enviados", 0) if wa.get("dia") == hoje else 0
+    linhas.append(f"📣 Posts no grupo hoje: <b>{enviados}</b>")
+    apagados = (wa.get("apagados") or {}).get(hoje)
+    if apagados:
+        linhas.append(f"🧹 Links de outras pessoas apagados: {apagados}")
+    if wa.get("pausado_ate") and wa["pausado_ate"] > agora.isoformat():
+        linhas.append("🛑 Em pausa de segurança (restrição do WhatsApp)")
+    elif wa.get("conectado") is False:
+        linhas.append("⚠️ Desconectado: rode o “Conectar WhatsApp”")
+    else:
+        linhas.append("✅ Conectado")
+    return linhas + [""]
+
+
 def montar_resumo(estado, cfg, tg, agora):
     hoje = agora.date().isoformat()
     ontem = (agora.date() - timedelta(days=1)).isoformat()
@@ -331,6 +362,7 @@ def montar_resumo(estado, cfg, tg, agora):
     if mov:
         linhas.append(f"   ➕ {mov.get('entrou', 0)} entraram · ➖ {mov.get('saiu', 0)} saíram hoje")
 
+    linhas += _resumo_whatsapp(agora)
     linhas.append(f"📣 Posts hoje: <b>{est.posts_hoje(estado, agora)}</b> (limite {cfg.max_por_dia})")
     linhas.append(f"🔗 Produtos com link oficial: {len(estado.get('links', {}))}")
     if estado.get("aguardando_link"):
