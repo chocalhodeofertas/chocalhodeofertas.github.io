@@ -1,5 +1,5 @@
 {
- "aguardando_link": 251,
+ "aguardando_link": 250,
  "areas_novas": true,
  "cache": {
   "MLB10683785": [
@@ -5196,7 +5196,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 6
+  "2026-11-10": 8
  },
  "cupons": {
   "AUTO70OFF": {
@@ -5204,6 +5204,12 @@
    "post": 168,
    "status": "ativo",
    "validade": "2026-11-12T23:59-03:00"
+  },
+  "CUPOMPRAMODA": {
+   "criado": "2026-11-10T10:02-03:00",
+   "post": 206,
+   "status": "ativo",
+   "validade": "2026-11-10T23:59-03:00"
   },
   "HOJEMESMO": {
    "criado": "2026-11-09T10:01-03:00",
@@ -5272,7 +5278,7 @@
    "validade": "2026-12-31T23:59-03:00"
   }
  },
- "cupons_ml_ultimo": 6432,
+ "cupons_ml_ultimo": 6433,
  "descoberta_em": "2026-11-09T18:42-03:00",
  "descobertos": {
   "MLB10683785": {
@@ -12895,6 +12901,12 @@
    "quando": "2026-11-07T10:02-03:00",
    "titulo": "Naninha Ursinho Algodão Doce Bebê Antialérgica Azul Recém-Nascido 0 a 24 Meses T"
   },
+  "MLB75659709": {
+   "desconto": 0.747,
+   "preco": 25.29,
+   "quando": "2026-11-10T10:02-03:00",
+   "titulo": "Naninha Para Bebê Macia Antialérgica Ursinho Cabeça Poá Marrom Menina E Menino A"
+  },
   "MLB75846960": {
    "desconto": 0.415,
    "preco": 23.41,
@@ -12938,8 +12950,10 @@
    "titulo": "Boneca Bailarina Fada Princesa Articulada Ballet Com Asas Brilhantes Grande 30cm"
   },
   "MLB77496641": {
-   "preco": 19.97,
-   "quando": "2026-11-06T11:05-03:00"
+   "desconto": 0.741,
+   "preco": 19.37,
+   "quando": "2026-11-10T10:02-03:00",
+   "titulo": "Kit 4 Travas de Segurança Para Geladeira e Gaveta Adesiva Infantil Branca PazPor"
   },
   "MLB77687455": {
    "desconto": 0.404,
@@ -13110,6 +13124,17 @@
    "criado": "2026-11-09T13:47-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "206": {
+   "blocos": [
+    {
+     "codigo": "CUPOMPRAMODA",
+     "html": "<b>🎟️ CUPOMPRAMODA</b> 👉 <b>15% OFF</b>\n📂 Moda\nCompra mín.: R$79 · Desconto máx.: R$60\n⏰ Válido até 10/11\n👉 <a href=\"https://bit.ly/48HjGRZ\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-10T10:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
@@ -13411,9 +13436,13 @@
     [
      "2026-11-09",
      31.07
+    ],
+    [
+     "2026-11-10",
+     29.92
     ]
    ],
-   "min": 31.07
+   "min": 29.92
   },
   "MLB17876024": {
    "historico": [
@@ -14008,6 +14037,10 @@
     [
      "2026-11-09",
      275.55
+    ],
+    [
+     "2026-11-10",
+     289.0
     ]
    ],
    "min": 275.55
@@ -14886,6 +14919,10 @@
     [
      "2026-11-10",
      323.47
+    ],
+    [
+     "2026-11-10",
+     309.0
     ]
    ],
    "min": 309.0
@@ -16633,6 +16670,10 @@
     [
      "2026-11-10",
      295.0
+    ],
+    [
+     "2026-11-10",
+     272.08
     ]
    ],
    "min": 272.08
@@ -17755,9 +17796,13 @@
     [
      "2026-11-10",
      98.78
+    ],
+    [
+     "2026-11-10",
+     80.48
     ]
    ],
-   "min": 98.78
+   "min": 80.48
   },
   "MLB38753407": {
    "historico": [
@@ -21185,6 +21230,10 @@
     [
      "2026-11-09",
      119.21
+    ],
+    [
+     "2026-11-10",
+     115.99
     ]
    ],
    "min": 115.99
@@ -21457,6 +21506,10 @@
     [
      "2026-11-10",
      57.0
+    ],
+    [
+     "2026-11-10",
+     59.9
     ]
    ],
    "min": 57.0
@@ -21479,6 +21532,10 @@
     [
      "2026-11-06",
      35.55
+    ],
+    [
+     "2026-11-10",
+     36.65
     ]
    ],
    "min": 32.0
@@ -26146,6 +26203,10 @@
     [
      "2026-11-10",
      317.0
+    ],
+    [
+     "2026-11-10",
+     320.0
     ]
    ],
    "min": 252.99
@@ -26288,7 +26349,7 @@
  "tg_offset": 273517998,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T09:42-03:00",
+  "em": "2026-11-10T10:02-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -26751,14 +26812,14 @@
     "titulo": "Banheira Portátil Dobrável para Spa e Gelo de Alta Qualidade Branca"
    },
    {
-    "categoria": "brinquedo",
-    "de": 89.9,
-    "desconto": 0.605,
-    "id": "MLB62978763",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_743608-MLA113038995686_072026-F.jpg",
-    "link": "https://meli.la/18MVNJL",
-    "preco": 35.55,
-    "titulo": "Jogo Stop 3.0 Eletrônico Educativo para Família Com Teclado Digital em Português"
+    "categoria": "outros",
+    "de": 316.67,
+    "desconto": 0.508,
+    "id": "MLB24647472",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_739484-MLA99949712843_112025-F.jpg",
+    "link": "https://meli.la/349AkpG",
+    "preco": 155.9,
+    "titulo": "Bicicleta de Equilíbrio Infantil Sem Pedal Vermelho Buba"
    },
    {
     "categoria": "brinquedo",
@@ -26892,6 +26953,6 @@
    }
   ]
  },
- "vitrine_assinatura": "db3d1fed334444861ff7cbd80817ff442a184ddb",
- "vitrine_publicada_em": "2026-11-10T09:02-03:00"
+ "vitrine_assinatura": "bad7960cab5b7fec5b99851dc2511ce05341db32",
+ "vitrine_publicada_em": "2026-11-10T10:02-03:00"
 }
