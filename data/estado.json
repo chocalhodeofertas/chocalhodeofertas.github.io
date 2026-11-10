@@ -1,5 +1,5 @@
 {
- "aguardando_link": 258,
+ "aguardando_link": 256,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 28
+  "2026-11-10": 30
  },
  "cupons": {
   "AUTO70OFF": {
@@ -5188,6 +5188,18 @@
    "post": 206,
    "status": "ativo",
    "validade": "2026-11-10T23:59-03:00"
+  },
+  "ESPORTE1011": {
+   "criado": "2026-11-10T16:04-03:00",
+   "post": 236,
+   "status": "ativo",
+   "validade": "2026-11-10T23:59-03:00"
+  },
+  "FULL1011ENTREGAS": {
+   "criado": "2026-11-10T16:04-03:00",
+   "post": 236,
+   "status": "ativo",
+   "validade": "2026-11-11T23:59-03:00"
   },
   "HOJEMESMO": {
    "criado": "2026-11-09T10:01-03:00",
@@ -5322,8 +5334,8 @@
    "validade": "2026-11-10T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5505,
- "cupons_ml_ultimo": 6440,
+ "cupons_extra_ultimo:cupombr": 5506,
+ "cupons_ml_ultimo": 6441,
  "descoberta_em": "2026-11-10T11:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -11764,9 +11776,9 @@
  },
  "hist_dia": {
   "2026-11-10": {
-   "com_cupom": 1,
-   "cupons": 1,
-   "posts": 6
+   "com_cupom": 2,
+   "cupons": 3,
+   "posts": 8
   }
  },
  "links": {
@@ -12084,8 +12096,8 @@
   "2026-11-09": 2,
   "2026-11-10": 2
  },
- "membros_lido_em": "2026-11-10T15",
- "numeros_em": "2026-11-10T15:43-03:00",
+ "membros_lido_em": "2026-11-10T16",
+ "numeros_em": "2026-11-10T16:03-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12290,6 +12302,12 @@
    "quando": "2026-11-07T19:22-03:00",
    "titulo": "Massageador Mordedor De Gengiva Banana Bebê Buba Cor Amarelo"
   },
+  "MLB26841539": {
+   "desconto": 0.647,
+   "preco": 106.0,
+   "quando": "2026-11-10T16:03-03:00",
+   "titulo": "Buba Ursinho que reza anjinho da guarda para bebê e criança pelúcia azul"
+  },
   "MLB26851070": {
    "desconto": 0.562,
    "preco": 223.41,
@@ -12391,6 +12409,12 @@
   "MLB38654615": {
    "preco": 64.9,
    "quando": "2026-11-06T18:23-03:00"
+  },
+  "MLB38804864": {
+   "desconto": 0.534,
+   "preco": 29.9,
+   "quando": "2026-11-10T16:03-03:00",
+   "titulo": "Rede de Proteção para Banho Bebê Toki Baby Azul Adaptável 20kg"
   },
   "MLB41517901": {
    "desconto": 0.601,
@@ -13329,12 +13353,27 @@
    "blocos": [
     {
      "codigo": "OFERTAMELIMAIS1011",
-     "html": "<b>🎟️ OFERTAMELIMAIS1011</b> 👉 <b>R$100 OFF</b>\n⭐ Exclusivo Meli+\nCompra mín.: R$799\n⏰ Válido até 10/11"
+     "html": "<b>🎟️ OFERTAMELIMAIS1011</b> 👉 <b>R$100 OFF</b> ⬆️ ⬆️\n⭐ Exclusivo Meli+\nCompra mín.: R$799\n⏰ Válido até 10/11"
     }
    ],
    "criado": "2026-11-10T16:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "236": {
+   "blocos": [
+    {
+     "codigo": "FULL1011ENTREGAS",
+     "html": "<b>🎟️ FULL1011ENTREGAS</b> 👉 <b>15% OFF</b>\nDesconto máx.: R$20\n⏰ Válido até 11/11"
+    },
+    {
+     "codigo": "ESPORTE1011",
+     "html": "<b>🎟️ ESPORTE1011</b> 👉 <b>20% OFF</b>\nDesconto máx.: R$80\n⏰ Válido até 10/11"
+    }
+   ],
+   "criado": "2026-11-10T16:04-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
@@ -13914,6 +13953,10 @@
     [
      "2026-11-09",
      25.0
+    ],
+    [
+     "2026-11-10",
+     42.99
     ]
    ],
    "min": 25.0
@@ -17591,6 +17634,10 @@
     [
      "2026-11-10",
      302.0
+    ],
+    [
+     "2026-11-10",
+     313.73
     ]
    ],
    "min": 299.9
@@ -21532,6 +21579,10 @@
     [
      "2026-11-10",
      219.99
+    ],
+    [
+     "2026-11-10",
+     223.11
     ]
    ],
    "min": 199.99
@@ -22944,9 +22995,13 @@
     [
      "2026-11-09",
      19.08
+    ],
+    [
+     "2026-11-10",
+     18.99
     ]
    ],
-   "min": 19.08
+   "min": 18.99
   },
   "MLB65019704": {
    "historico": [
@@ -23929,6 +23984,10 @@
     [
      "2026-11-09",
      23.4
+    ],
+    [
+     "2026-11-10",
+     34.78
     ]
    ],
    "min": 23.4
@@ -27590,7 +27649,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T15:43-03:00",
+  "em": "2026-11-10T16:03-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -28194,6 +28253,6 @@
    }
   ]
  },
- "vitrine_assinatura": "0540ff5f993ae540831fae17f56f5d66d9ea454d",
- "vitrine_publicada_em": "2026-11-10T15:03-03:00"
+ "vitrine_assinatura": "16186480086d506cb8a54e66c5ced06c6814ef31",
+ "vitrine_publicada_em": "2026-11-10T16:03-03:00"
 }
