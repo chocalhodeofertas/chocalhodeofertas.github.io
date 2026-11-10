@@ -1,5 +1,5 @@
 {
- "aguardando_link": 256,
+ "aguardando_link": 254,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 27
+  "2026-11-10": 28
  },
  "cupons": {
   "AUTO70OFF": {
@@ -11759,7 +11759,7 @@
  "hist_dia": {
   "2026-11-10": {
    "com_cupom": 1,
-   "posts": 5
+   "posts": 6
   }
  },
  "links": {
@@ -12078,7 +12078,7 @@
   "2026-11-10": 2
  },
  "membros_lido_em": "2026-11-10T15",
- "numeros_em": "2026-11-10T15:03-03:00",
+ "numeros_em": "2026-11-10T15:23-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12774,6 +12774,12 @@
    "preco": 125.73,
    "quando": "2026-11-07T09:02-03:00",
    "titulo": "Adora Bebê Reborn Bonecas Realista De Silicone Menina 48 Cm"
+  },
+  "MLB65600099": {
+   "desconto": 0.551,
+   "preco": 31.44,
+   "quando": "2026-11-10T15:23-03:00",
+   "titulo": "Kit Travesseiro Bebê Anti Sufocante com Fronha e Almofada Anatômica para Plagioc"
   },
   "MLB65812073": {
    "desconto": 0.67,
@@ -13873,6 +13879,10 @@
     [
      "2026-11-10",
      34.02
+    ],
+    [
+     "2026-11-10",
+     41.79
     ]
    ],
    "min": 34.02
@@ -15248,6 +15258,10 @@
     [
      "2026-11-10",
      323.47
+    ],
+    [
+     "2026-11-10",
+     309.0
     ]
    ],
    "min": 309.0
@@ -17582,6 +17596,10 @@
     [
      "2026-11-10",
      409.0
+    ],
+    [
+     "2026-11-10",
+     445.95
     ]
    ],
    "min": 409.0
@@ -19707,6 +19725,10 @@
     [
      "2026-11-10",
      26.58
+    ],
+    [
+     "2026-11-10",
+     28.99
     ]
    ],
    "min": 26.58
@@ -23295,9 +23317,13 @@
     [
      "2026-11-06",
      103.89
+    ],
+    [
+     "2026-11-10",
+     101.65
     ]
    ],
-   "min": 103.89
+   "min": 101.65
   },
   "MLB66518269": {
    "historico": [
@@ -24199,6 +24225,10 @@
     [
      "2026-11-10",
      175.9
+    ],
+    [
+     "2026-11-10",
+     175.0
     ]
    ],
    "min": 159.9
@@ -27510,7 +27540,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T15:03-03:00",
+  "em": "2026-11-10T15:23-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -27641,26 +27671,6 @@
     "link": "https://meli.la/23hVpnA",
     "preco": 64.8,
     "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Ocean"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 109.9,
-    "desconto": 0.654,
-    "id": "MLB80142080",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_954571-MLA118969946235_102026-F.jpg",
-    "link": "https://meli.la/27UXmEV",
-    "preco": 38.0,
-    "titulo": "Kit 3 Bolas Surpresa Cápsula Mini Brands Hc-3006 Azul Colecionável Miniatura Realista Brinquedo Infantil"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 219.8,
-    "desconto": 0.652,
-    "id": "MLB73212051",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_707116-MLA116059439054_092026-F.jpg",
-    "link": "https://meli.la/1DAz6PC",
-    "preco": 76.53,
-    "titulo": "Boneca Reborn Bebê Realista Vinil Siliconado Récem-nascida"
    },
    {
     "categoria": "quarto",
@@ -28111,6 +28121,26 @@
     "link": "https://meli.la/1Z6CgKJ",
     "preco": 44.52,
     "titulo": "Trocador Absorvente Baby & Me 10 Unid"
+   },
+   {
+    "categoria": "quarto",
+    "de": 35.99,
+    "desconto": 0.361,
+    "id": "MLB62979086",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_756438-MLA100841050889_122025-F.jpg",
+    "link": "https://meli.la/1jqyq64",
+    "preco": 22.99,
+    "titulo": "Trocador de Fralda Portátil Impermeável Malipan Safari Dobrável Cáqui"
+   },
+   {
+    "categoria": "outros",
+    "de": 53.99,
+    "desconto": 0.593,
+    "id": "MLB70448723",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_844369-MLA113628435522_072026-F.jpg",
+    "link": "https://meli.la/2kKwg45",
+    "preco": 21.99,
+    "titulo": "Kit 10 Travas De Geladeira Gaveta Reparador Porta Segurança Infantil Contra Bebes Adesivo Resistente"
    }
   ]
  },
