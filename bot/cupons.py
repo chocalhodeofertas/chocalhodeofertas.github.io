@@ -54,6 +54,9 @@ def publicar(tg, cfg, estado, titulo, blocos, agora, rodape=RODAPE):
             "validade": validade.isoformat(timespec="minutes") if validade else None,
         }
     estado.setdefault("posts_cupom", {})[str(mid)] = post
+    from .estado import contar_dia
+
+    contar_dia(estado, agora, "cupons", len(blocos))
     return mid
 
 

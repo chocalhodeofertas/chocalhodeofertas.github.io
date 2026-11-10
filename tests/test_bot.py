@@ -1135,3 +1135,23 @@ def test_resumo_traz_o_whatsapp(tmp_path):
     assert "47" in txt and "+7 desde ontem" in txt and "Posts no grupo hoje: <b>3</b>" in txt
     assert "apagados: 2" in txt and "Conectado" in txt
     assert comandos._resumo_whatsapp(AGORA, tmp_path / "nao_existe.json") == []
+
+
+def test_pagina_de_numeros(tmp_path):
+    import json
+    from bot import numeros
+    e = est.novo()
+    for k in range(5):
+        dia = AGORA - timedelta(days=4 - k)
+        e.setdefault("membros_hist", {})[dia.date().isoformat()] = 100 + k * 3
+        est.registrar_post(e, f"MLB{k}", 50.0, dia, "Banheira Dobrável", 0.3)
+    wa = tmp_path / "wa.json"
+    hoje = AGORA.date().isoformat()
+    wa.write_text(json.dumps({"dia": hoje, "enviados": 2, "membros": {hoje: 15}, "conectado": True}))
+    arq = tmp_path / "docs" / "numeros.html"
+    assert numeros.talvez_publicar(e, AGORA, arquivo=arq, arquivo_wa=wa)
+    h = arq.read_text()
+    assert "noindex" in h and "Números do Chocalho" in h and ">112<" in h  # último total do Telegram
+    assert "▲ +3 desde ontem" in h and "Conectado" in h and "polyline" in h
+    assert not numeros.talvez_publicar(e, AGORA, arquivo=arq, arquivo_wa=wa)  # menos de 10 min depois
+    assert e["hist_dia"][hoje]["posts"] == 1

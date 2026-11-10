@@ -127,6 +127,8 @@ def postar_link(link, tg, ml, estado, cfg, agora, session=None, rng=random):
         return f"⚠️ Não consegui postar no canal: {e}"
     whatsapp.enfileirar(mensagens.montar_whatsapp(oferta, rng), oferta.imagem, agora)
     est.registrar_post(estado, pid, preco, agora, info.titulo, oferta.desconto)
+    if oferta.cupom:
+        est.contar_dia(estado, agora, "com_cupom")
     try:
         enviar_copias(tg, cfg.admin_chat, oferta, rng)
     except TelegramErro:
@@ -352,7 +354,7 @@ def montar_resumo(estado, cfg, tg, agora):
     try:
         total = tg.membros(cfg.canal)
         hist[hoje] = total
-        for dia in sorted(hist)[:-8]:
+        for dia in sorted(hist)[:-30]:
             del hist[dia]
         dif = f" ({total - hist[ontem]:+d} desde ontem)" if ontem in hist else ""
         linhas.append(f"👥 Membros: <b>{total}</b>{dif}")

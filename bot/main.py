@@ -400,6 +400,8 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         esperar_antes = True
         whatsapp.enfileirar(mensagens.montar_whatsapp(o, rng), o.imagem, agora)
         est.registrar_post(estado, o.id, o.preco, agora, o.titulo, o.desconto)
+        if o.cupom:
+            est.contar_dia(estado, agora, "com_cupom")
         tipos_hoje.add(tp)
         enviadas.append(o)
         log(f"Postado: {o.id} {mensagens.brl(o.preco)} (-{round(o.desconto * 100)}%)")
@@ -622,6 +624,8 @@ def main(argv=None):
                 conteudo.talvez_enviar(tg, cfg, estado, agora, hora=int(os.environ.get("PACOTE_HORA") or 10), log=log)
             vitrine.talvez_publicar(estado, cfg.canal, agora, log=log,
                                     grupo_wa=os.environ.get("WHATSAPP_GRUPO") or GRUPO_WHATSAPP)
+            from . import numeros
+            numeros.talvez_publicar(estado, agora, tg, cfg.canal, log=log)
     except AcessoNegado as e:
         log(f"Mercado Livre recusou o acesso: {e}\nRode o modo diagnostico para ver o que fazer.")
         return 1

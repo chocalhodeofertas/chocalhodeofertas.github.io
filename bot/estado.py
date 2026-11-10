@@ -44,6 +44,17 @@ def registrar_post(estado, pid, preco, agora, titulo=None, desconto=None):
     dia = agora.date().isoformat()
     # Só guarda a contagem de hoje
     estado["contagem_dia"] = {dia: estado["contagem_dia"].get(dia, 0) + 1}
+    contar_dia(estado, agora, "posts")
+
+
+def contar_dia(estado, agora, chave, n=1, dias=30):
+    """Histórico diário para a página de números (posts, cupons, com_cupom)."""
+    hist = estado.setdefault("hist_dia", {})
+    dia = agora.date().isoformat()
+    hist.setdefault(dia, {})
+    hist[dia][chave] = hist[dia].get(chave, 0) + n
+    for d in sorted(hist)[:-dias]:
+        del hist[d]
 
 
 def posts_hoje(estado, agora):
