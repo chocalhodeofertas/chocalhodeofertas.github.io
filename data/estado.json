@@ -1,5 +1,5 @@
 {
- "aguardando_link": 254,
+ "aguardando_link": 258,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -12078,7 +12078,7 @@
   "2026-11-10": 2
  },
  "membros_lido_em": "2026-11-10T15",
- "numeros_em": "2026-11-10T15:23-03:00",
+ "numeros_em": "2026-11-10T15:43-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -13595,6 +13595,10 @@
     [
      "2026-11-10",
      14.06
+    ],
+    [
+     "2026-11-10",
+     13.08
     ]
    ],
    "min": 10.99
@@ -16225,9 +16229,13 @@
     [
      "2026-11-09",
      82.66
+    ],
+    [
+     "2026-11-10",
+     81.01
     ]
    ],
-   "min": 82.66
+   "min": 81.01
   },
   "MLB25909744": {
    "historico": [
@@ -17561,6 +17569,10 @@
     [
      "2026-11-10",
      313.73
+    ],
+    [
+     "2026-11-10",
+     302.0
     ]
    ],
    "min": 299.9
@@ -18183,9 +18195,13 @@
     [
      "2026-11-10",
      263.01
+    ],
+    [
+     "2026-11-10",
+     238.9
     ]
    ],
-   "min": 263.01
+   "min": 238.9
   },
   "MLB37887504": {
    "historico": [
@@ -21307,6 +21323,10 @@
     [
      "2026-11-10",
      5099.9
+    ],
+    [
+     "2026-11-10",
+     5201.01
     ]
    ],
    "min": 5099.9
@@ -23585,9 +23605,13 @@
     [
      "2026-11-09",
      27.9
+    ],
+    [
+     "2026-11-10",
+     27.28
     ]
    ],
-   "min": 27.9
+   "min": 27.28
   },
   "MLB67205564": {
    "historico": [
@@ -24229,9 +24253,13 @@
     [
      "2026-11-10",
      175.0
+    ],
+    [
+     "2026-11-10",
+     148.89
     ]
    ],
-   "min": 159.9
+   "min": 148.89
   },
   "MLB69621632": {
    "historico": [
@@ -26586,9 +26614,13 @@
     [
      "2026-11-09",
      328.58
+    ],
+    [
+     "2026-11-10",
+     282.0
     ]
    ],
-   "min": 328.58
+   "min": 282.0
   },
   "MLB78296935": {
    "historico": [
@@ -27540,7 +27572,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T15:23-03:00",
+  "em": "2026-11-10T15:43-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -27671,16 +27703,6 @@
     "link": "https://meli.la/23hVpnA",
     "preco": 64.8,
     "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Ocean"
-   },
-   {
-    "categoria": "quarto",
-    "de": 69.99,
-    "desconto": 0.551,
-    "id": "MLB65600099",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_699219-MLA118046889266_102026-F.jpg",
-    "link": "https://meli.la/2ffNJy8",
-    "preco": 31.44,
-    "titulo": "Kit Travesseiro Bebê Anti Sufocante com Fronha e Almofada Anatômica para Plagiocefalia"
    },
    {
     "categoria": "brinquedo",
@@ -27993,6 +28015,16 @@
     "titulo": "Kit Bolsa Maternidade Bambinelli Mommy Rosa-claro C/ Trocador"
    },
    {
+    "categoria": "higiene",
+    "de": 147.9,
+    "desconto": 0.452,
+    "id": "MLB25863440",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_807543-MLA99445819066_112025-F.jpg",
+    "link": "https://meli.la/14rfQiv",
+    "preco": 81.01,
+    "titulo": "Almofada De Banho Para O Bebê Ursinho Cinza 12752 - Buba Ursinhos"
+   },
+   {
     "categoria": "outros",
     "de": 159.9,
     "desconto": 0.625,
@@ -28021,16 +28053,6 @@
     "link": "https://meli.la/2UvWs2P",
     "preco": 136.9,
     "titulo": "Lixeira Para Fraldas Rister Baby 10l Anti-odor Com Tampa Branco"
-   },
-   {
-    "categoria": "higiene",
-    "de": 147.9,
-    "desconto": 0.441,
-    "id": "MLB25863440",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_807543-MLA99445819066_112025-F.jpg",
-    "link": "https://meli.la/14rfQiv",
-    "preco": 82.66,
-    "titulo": "Almofada De Banho Para O Bebê Ursinho Cinza 12752 - Buba Ursinhos"
    },
    {
     "categoria": "higiene",
@@ -28141,6 +28163,16 @@
     "link": "https://meli.la/2kKwg45",
     "preco": 21.99,
     "titulo": "Kit 10 Travas De Geladeira Gaveta Reparador Porta Segurança Infantil Contra Bebes Adesivo Resistente"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 69.9,
+    "desconto": 0.501,
+    "id": "MLB62719788",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_923411-MLA114906766384_082026-F.jpg",
+    "link": "https://meli.la/1dQR2q4",
+    "preco": 34.9,
+    "titulo": "Labirinto Magnético Coordenação Motora Pedagógico Imã Montessori Madeira Brinquedo Infantil Educativo Colorido"
    }
   ]
  },
