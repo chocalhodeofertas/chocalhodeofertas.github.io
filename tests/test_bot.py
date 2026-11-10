@@ -606,9 +606,31 @@ def test_chamada_por_categoria():
     import random as _r
     o = avaliar(prod(), info(70, 100), est.novo(), AGORA)
     o.categoria = "fralda"
+    o.titulo = "Produto generico qualquer"
     textos = {mensagens._abertura(o, _r.Random(i)) for i in range(40)}
     assert any(t in mensagens.CHAMADAS["fralda"] for t in textos)
     assert any(t in mensagens.ABERTURAS for t in textos)
+
+
+def test_abertura_combina_com_o_produto():
+    import random as _r
+    o = avaliar(prod(), info(70, 100), est.novo(), AGORA)
+    o.titulo, o.categoria = "Banheira Bebê Dobrável Com Suporte", "higiene"
+    textos = {mensagens._abertura(o, _r.Random(i)) for i in range(80)}
+    _, frases = mensagens._frases_do_produto(o.titulo)
+    assert any(t in frases for t in textos)
+    assert "🪇 Chacoalhou o preço da banheira!" in textos or any("da banheira" in t for t in textos)
+    assert not any("fralda" in t.lower() for t in textos)  # nada de frase de outro produto
+    # Sem preço "de": nenhuma frase dizendo que o preço caiu
+    o.preco_de = None
+    sem_de = {mensagens._abertura(o, _r.Random(i)) for i in range(80)}
+    assert not any(t in mensagens.ABERTURAS_PRECO or "preço" in t for t in sem_de)
+    assert mensagens._frases_do_produto("Fralda Turma da Mônica M 50 un")[0] == "da fralda"
+    assert mensagens._frases_do_produto("Kit Berço Protetor Trança")[1][0].startswith("🛏️")
+    # Produto principal vem primeiro no título: berço com mosquiteiro é berço
+    assert mensagens._frases_do_produto("Berço Co-sleeper Com Mosquiteiro")[0] == "do berço"
+    assert mensagens._frases_do_produto("Cadeirinha De Descanso Musical")[0] == "da cadeirinha de descanso"
+    assert mensagens._frases_do_produto("Trocador De Fraldas Portátil")[0] == "do trocador"
 
 
 # ---------- página (vitrine) ----------
