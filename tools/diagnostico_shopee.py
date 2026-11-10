@@ -1,5 +1,6 @@
 """Diagnóstico da API da Shopee: testa consultas mínimas e mostra o que a API responde."""
 import os
+import time
 from bot.shopee import Shopee, ShopeeErro
 
 shp = Shopee(os.environ.get("SHOPEE_APP_ID"), os.environ.get("SHOPEE_SECRET"))
@@ -15,8 +16,18 @@ campos = ["priceMax", "priceDiscountRate", "commissionRate", "sales", "ratingSta
 for c in campos:
     testes["campo_" + c] = '{productOfferV2(keyword:"bebe",page:1,limit:1){nodes{itemId %s} pageInfo{hasNextPage}}}' % c
 for nome, q in testes.items():
+    time.sleep(3)
     try:
         r = shp._chamar(q)
         print("OK ", nome, str(r)[:300])
     except ShopeeErro as e:
         print("ERR", nome, e)
+
+print("--- repetindo a consulta completa 5x com 3s de intervalo")
+for k in range(5):
+    time.sleep(3)
+    try:
+        ps = shp.buscar("bebe", limite=5)
+        print("OK  completa", k, len(ps), ps[0] if ps else None)
+    except ShopeeErro as e:
+        print("ERR completa", k, e)
