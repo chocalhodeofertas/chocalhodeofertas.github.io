@@ -1,5 +1,5 @@
 {
- "aguardando_link": 257,
+ "aguardando_link": 255,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -12078,7 +12078,7 @@
   "2026-11-10": 2
  },
  "membros_lido_em": "2026-11-10T14",
- "numeros_em": "2026-11-10T14:23-03:00",
+ "numeros_em": "2026-11-10T14:43-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -15236,6 +15236,10 @@
     [
      "2026-11-10",
      323.47
+    ],
+    [
+     "2026-11-10",
+     309.0
     ]
    ],
    "min": 309.0
@@ -18314,6 +18318,10 @@
     [
      "2026-11-10",
      98.78
+    ],
+    [
+     "2026-11-10",
+     80.59
     ]
    ],
    "min": 80.48
@@ -18760,6 +18768,10 @@
     [
      "2026-11-10",
      7399.0
+    ],
+    [
+     "2026-11-10",
+     7699.0
     ]
    ],
    "min": 7399.0
@@ -19418,6 +19430,10 @@
     [
      "2026-11-10",
      48.45
+    ],
+    [
+     "2026-11-10",
+     39.99
     ]
    ],
    "min": 39.99
@@ -19647,6 +19663,10 @@
     [
      "2026-11-10",
      28.99
+    ],
+    [
+     "2026-11-10",
+     26.58
     ]
    ],
    "min": 26.58
@@ -25208,6 +25228,10 @@
     [
      "2026-11-10",
      43.07
+    ],
+    [
+     "2026-11-10",
+     45.99
     ]
    ],
    "min": 43.07
@@ -26557,6 +26581,10 @@
     [
      "2026-11-10",
      351.0
+    ],
+    [
+     "2026-11-10",
+     409.0
     ]
    ],
    "min": 351.0
@@ -27434,7 +27462,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T14:23-03:00",
+  "em": "2026-11-10T14:43-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -27517,16 +27545,6 @@
     "titulo": "Banheira Dobrável Com Suporte e Porta Acessórios YPB888 Cinza Yuupi"
    },
    {
-    "categoria": "brinquedo",
-    "de": 309.0,
-    "desconto": 0.677,
-    "id": "MLB51652593",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_845666-MLA99598112378_122025-F.jpg",
-    "link": "https://meli.la/26L2zKt",
-    "preco": 99.9,
-    "titulo": "Caminhão Dinossauro Pista Com Carrinhos Maleta Transporte Cor Roxo"
-   },
-   {
     "categoria": "gestante",
     "de": 144.9,
     "desconto": 0.485,
@@ -27565,16 +27583,6 @@
     "link": "https://meli.la/2wv2B2q",
     "preco": 23.99,
     "titulo": "Mosquiteiro Para Carrinho Bebê Conforto Portátil Universal Branco"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 159.9,
-    "desconto": 0.657,
-    "id": "MLB63152047",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_702576-MLA110388417253_042026-F.jpg",
-    "link": "https://meli.la/1pvdXCc",
-    "preco": 54.9,
-    "titulo": "Patinete Infantil 3 Rodas Led Dobrável Luppy Azul Maxi Toys"
    },
    {
     "categoria": "brinquedo",
@@ -27625,16 +27633,6 @@
     "link": "https://meli.la/2NtvAXr",
     "preco": 106.0,
     "titulo": "Buba Ursinho que reza anjinho da guarda para bebê e criança pelúcia azul"
-   },
-   {
-    "categoria": "passeio",
-    "de": 74.9,
-    "desconto": 0.498,
-    "id": "MLB25163760",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_850532-MLA113041435885_062026-F.jpg",
-    "link": "https://meli.la/31NAgHm",
-    "preco": 37.61,
-    "titulo": "Booster Cosco Kids, Clippy, até 36kg, Preto"
    },
    {
     "categoria": "brinquedo",
@@ -27765,6 +27763,16 @@
     "link": "https://meli.la/1wDFkkf",
     "preco": 15.0,
     "titulo": "Kit Adesivo Repelente para Bebê e Crianças com Óleo de Citronela"
+   },
+   {
+    "categoria": "passeio",
+    "de": 74.9,
+    "desconto": 0.498,
+    "id": "MLB25163760",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_850532-MLA113041435885_062026-F.jpg",
+    "link": "https://meli.la/31NAgHm",
+    "preco": 37.61,
+    "titulo": "Booster Cosco Kids, Clippy, até 36kg, Preto"
    },
    {
     "categoria": "alimentacao",
@@ -28035,6 +28043,26 @@
     "link": "https://meli.la/1c7EjFK",
     "preco": 23.18,
     "titulo": "Tapete De Atividades Para Bebes Almofada De Água Inflável Interativo Aquário Sensorial Fundo Do Mar Rosa Tsc S"
+   },
+   {
+    "categoria": "higiene",
+    "de": 124.9,
+    "desconto": 0.51,
+    "id": "MLB24762578",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_850864-MLA103491133458_012026-F.jpg",
+    "link": "https://meli.la/21cLMz2",
+    "preco": 61.21,
+    "titulo": "Assento Redutor Infantil Com Escada Para Vaso Sanitário"
+   },
+   {
+    "categoria": "gestante",
+    "de": 69.99,
+    "desconto": 0.364,
+    "id": "MLB65558091",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_637788-MLA107177132239_022026-F.jpg",
+    "link": "https://meli.la/1Z6CgKJ",
+    "preco": 44.52,
+    "titulo": "Trocador Absorvente Baby & Me 10 Unid"
    }
   ]
  },
