@@ -14,19 +14,36 @@ import { PASTA_AUTH, RAIZ, abrirSessao, avisar, codigoConvite, dormir, gravarEst
   lerEstado } from "./comum.mjs";
 
 const FILA = path.resolve(RAIZ, process.env.WA_FILA || "fila_wa");
-const MAX_DIA = Number(process.env.WA_MAX_DIA || 4);
-const INTERVALO = Number(process.env.WA_INTERVALO_MIN || 40) * 60 * 1000;
+// Aquecimento automático: o ritmo sobe sozinho conforme o número ganha
+// histórico. WA_MAX_DIA / WA_INTERVALO_MIN (variáveis do GitHub) travam um valor fixo.
+const RAMPA = [ // [a partir do dia, posts por dia, minutos entre posts]
+  [0, 4, 40], [7, 7, 30], [14, 10, 25], [21, 14, 20], [30, 20, 15],
+];
 const VALIDADE_ITEM = 3 * 60 * 60 * 1000; // oferta parada há mais de 3h na fila não sai
 const FIM = Date.now() + Number(process.env.WA_HORAS || 5.6) * 3600 * 1000;
 const RE_LINK = /(https?:\/\/|www\.|chat\.whatsapp\.com|\b[\w-]+\.(com|com\.br|net|ly|me)\/)/i;
 
-if (!abrirSessao()) {
+let temSessao = false;
+try {
+  temSessao = abrirSessao();
+} catch (e) {
+  console.log("WhatsApp: não consegui abrir a sessão salva (a chave mudou?). Rode o “Conectar WhatsApp” de novo.");
+  await avisar("⚠️ Não consegui abrir a sessão do WhatsApp. Rode o “Conectar WhatsApp” de novo.");
+  process.exit(0);
+}
+if (!temSessao) {
   console.log("WhatsApp: ainda não conectado (rode o workflow “Conectar WhatsApp”).");
   process.exit(0);
 }
 fs.mkdirSync(FILA, { recursive: true });
 
 const estado = lerEstado();
+estado.inicio = estado.inicio || new Date().toISOString();
+const diasConectado = Math.floor((Date.now() - Date.parse(estado.inicio)) / 86400000);
+const degrau = RAMPA.filter(([d]) => diasConectado >= d).pop();
+const MAX_DIA = Number(process.env.WA_MAX_DIA || degrau[1]);
+const INTERVALO = Number(process.env.WA_INTERVALO_MIN || degrau[2]) * 60 * 1000;
+console.log(`WhatsApp: dia ${diasConectado + 1} conectado; até ${MAX_DIA} posts hoje, ${INTERVALO / 60000} min entre eles.`);
 const hoje = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo" }).format(new Date());
 const { state, saveCreds } = await useMultiFileAuthState(PASTA_AUTH);
 const logger = pino({ level: "silent" });

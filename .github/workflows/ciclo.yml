@@ -56,8 +56,8 @@ jobs:
         env:
           WA_FILA: fila_wa
           WA_HORAS: "5.6"
-          WA_MAX_DIA: ${{ vars.WA_MAX_DIA || '4' }}
-          WA_INTERVALO_MIN: ${{ vars.WA_INTERVALO_MIN || '40' }}
+          WA_MAX_DIA: ${{ vars.WA_MAX_DIA }}
+          WA_INTERVALO_MIN: ${{ vars.WA_INTERVALO_MIN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CANAL: ${{ secrets.TELEGRAM_CANAL }}
           TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID || '787296152' }}
