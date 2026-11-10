@@ -1,5 +1,5 @@
 {
- "aguardando_link": 257,
+ "aguardando_link": 260,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 17
+  "2026-11-10": 19
  },
  "cupons": {
   "AUTO70OFF": {
@@ -12186,6 +12186,12 @@
    "quando": "2026-11-09T19:32-03:00",
    "titulo": "Shampoo Johnson's Baby Glicerina Hipoalergênico 750ml"
   },
+  "MLB24331807": {
+   "desconto": 0.43,
+   "preco": 39.9,
+   "quando": "2026-11-10T13:03-03:00",
+   "titulo": "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampada Cor Menino"
+  },
   "MLB24626810": {
    "preco": 29.85,
    "quando": "2026-11-06T17:35-03:00"
@@ -12463,6 +12469,12 @@
    "preco": 61.88,
    "quando": "2026-11-08T19:35-03:00",
    "titulo": "Boia Bote Bebê Infantil Inflável Piscina Com Cobertura De Proteção UV Cor Azul/a"
+  },
+  "MLB49357605": {
+   "desconto": 0.51,
+   "preco": 24.0,
+   "quando": "2026-11-10T13:03-03:00",
+   "titulo": "Trocador De Fraldas Portátil Impermeavel Com Bolso Cor Savana"
   },
   "MLB50368079": {
    "desconto": 0.646,
@@ -14180,6 +14192,10 @@
     [
      "2026-11-10",
      289.0
+    ],
+    [
+     "2026-11-10",
+     299.9
     ]
    ],
    "min": 275.55
@@ -15682,6 +15698,10 @@
     [
      "2026-11-10",
      22.89
+    ],
+    [
+     "2026-11-10",
+     19.0
     ]
    ],
    "min": 18.2
@@ -17401,6 +17421,10 @@
     [
      "2026-11-09",
      299.9
+    ],
+    [
+     "2026-11-10",
+     313.73
     ]
    ],
    "min": 299.9
@@ -20405,6 +20429,10 @@
     [
      "2026-11-10",
      61.14
+    ],
+    [
+     "2026-11-10",
+     63.21
     ]
    ],
    "min": 61.14
@@ -21072,9 +21100,13 @@
     [
      "2026-11-06",
      139.0
+    ],
+    [
+     "2026-11-10",
+     135.0
     ]
    ],
-   "min": 139.0
+   "min": 135.0
   },
   "MLB57269131": {
    "historico": [
@@ -21157,9 +21189,13 @@
     [
      "2026-11-07",
      22.9
+    ],
+    [
+     "2026-11-10",
+     22.21
     ]
    ],
-   "min": 22.9
+   "min": 22.21
   },
   "MLB58204350": {
    "historico": [
@@ -21175,9 +21211,13 @@
     [
      "2026-11-09",
      39.74
+    ],
+    [
+     "2026-11-10",
+     37.99
     ]
    ],
-   "min": 39.74
+   "min": 37.99
   },
   "MLB58538575": {
    "historico": [
@@ -22143,6 +22183,10 @@
     [
      "2026-11-09",
      23.99
+    ],
+    [
+     "2026-11-10",
+     25.5
     ]
    ],
    "min": 23.99
@@ -23941,6 +23985,10 @@
     [
      "2026-11-09",
      179.0
+    ],
+    [
+     "2026-11-10",
+     175.9
     ]
    ],
    "min": 159.9
@@ -23974,6 +24022,10 @@
     [
      "2026-11-09",
      179.0
+    ],
+    [
+     "2026-11-10",
+     175.9
     ]
    ],
    "min": 108.52
@@ -27208,7 +27260,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T12:43-03:00",
+  "em": "2026-11-10T13:03-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -27259,16 +27311,6 @@
     "link": "https://meli.la/27LUDxU",
     "preco": 21.6,
     "titulo": "Babador Em Silicone Com Pega-migalhas Verde Gumy Buba"
-   },
-   {
-    "categoria": "higiene",
-    "de": 22.9,
-    "desconto": 0.609,
-    "id": "MLB54191616",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_814164-MLA100063599077_122025-F.jpg",
-    "link": "https://meli.la/1QQB3e2",
-    "preco": 8.96,
-    "titulo": "Extensor de Torneira Cromado e Inox com Mangueira Flexível de 15 cm Para Pia"
    },
    {
     "categoria": "quarto",
@@ -27809,9 +27851,19 @@
     "link": "https://meli.la/34dnmxD",
     "preco": 109.0,
     "titulo": "Kit Bolsa Maternidade Bambinelli Mommy Rosa-claro C/ Trocador"
+   },
+   {
+    "categoria": "outros",
+    "de": 159.9,
+    "desconto": 0.625,
+    "id": "MLB24647478",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_950359-MLA99487901484_112025-F.jpg",
+    "link": "https://meli.la/2PWFurq",
+    "preco": 59.9,
+    "titulo": "Andador Bebe Carrinho Infantil Treina Equilíbrio Zippy Toys Cor Vermelho"
    }
   ]
  },
- "vitrine_assinatura": "9aed7975bac37b1b8ff3028fcd22eab4b4e182e4",
- "vitrine_publicada_em": "2026-11-10T12:03-03:00"
+ "vitrine_assinatura": "ebb8988e330b621a942bc43fa65c82b0b65f54ab",
+ "vitrine_publicada_em": "2026-11-10T13:03-03:00"
 }
