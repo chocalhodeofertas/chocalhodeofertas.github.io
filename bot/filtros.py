@@ -82,9 +82,27 @@ _GAMES_OK = re.compile(
 _GAMES_FORA = re.compile(r"\b(headset|fone|cadeira|microfone|mouse|teclado|monitor|gift ?card|cartao pre)")
 
 
+# Itens de casa/adulto que às vezes aparecem dentro das categorias de bebê
+# (ex.: extensor de torneira em "Higiene", lençol queen em "Quarto").
+_CASA_ADULTO = re.compile(
+    r"\b(torneira|pia|queen|king|hotel|spa|gelo|passaros|pombos|morcegos|mantimentos?|churrasqueira|"
+    r"furadeira|parafusadeira|ferramentas?|pneus?|notebook|smartphone|air ?fryer|cafeteira|"
+    r"panela de pressao|aspirador de po)\b"
+)
+# "Casal" só é problema quando o item não é de bebê (berço acoplado à cama de casal pode)
+_CASAL = re.compile(r"\bcasal\b")
+_ITEM_DE_BEBE = re.compile(r"\b(berco|co ?sleeper|moises|bebe conforto|carrinho|cadeirinha|trocador|fralda)")
+
+
 def fora_da_faixa(titulo, categoria, regra=None):
-    """Motivo para pular produtos das áreas novas que não são do universo infantil (ou None)."""
+    """Motivo para pular produtos que não são do universo infantil (ou None).
+
+    Vale para tudo (itens de casa/adulto que vazam das categorias de bebê) e,
+    nas áreas novas, exige sinal de produto infantil no título."""
     t = normalizar(titulo)
+    if not _INFANTIL.search(t):
+        if _CASA_ADULTO.search(t) or (_CASAL.search(t) and not _ITEM_DE_BEBE.search(t)):
+            return "item de casa/adulto (fora do nicho)"
     if regra == "game" or categoria == "game":
         if _GAMES_FORA.search(t) or not _GAMES_OK.search(t):
             return "game fora da lista infantil"

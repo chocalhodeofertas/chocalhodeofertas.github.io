@@ -1079,3 +1079,22 @@ def test_cupom_de_lista_que_melhorou_atualiza_o_post():
     antes = len(tg.textos)
     cupons_ml.tratar_mensagem(novo, tg, cfg_cmd(), e, AGORA, log=lambda m: None, parser=cupons_ml.parse_lista)
     assert len(tg.textos) == antes
+
+
+def test_itens_de_casa_que_vazam_das_categorias_de_bebe():
+    from bot.filtros import fora_da_faixa
+    fora = ["Extensor de Torneira Cromado e Inox com Mangueira Flexível de 15 cm Para Pia",
+            "Jogo De Lençol Queen 3 Peças 400 Fios Com Elástico Hotel",
+            "Banheira Portátil Dobrável para Spa e Gelo de Alta Qualidade",
+            "Kit 2 Redes Nylon Resistente Proteção Pássaros Morcegos",
+            "Tenda Mosquiteiro Dobrável Para Cama Casal Solteiro",
+            "Jogo De Mantimento 5 Potes Personalizado"]
+    for t in fora:
+        assert fora_da_faixa(t, "higiene"), t
+    dentro = ["Banheira De Bebê Dobrável Portátil Com Termômetro",
+              "Berço Co-sleeper Acoplado à Cama de Casal",
+              "Fralda Pampers Confort Sec M 80 Unidades",
+              "Rede de Proteção para Banho Bebê Toki Baby",
+              "Jogo Banco Imobiliário Grande Estrela"]
+    for t in dentro:
+        assert fora_da_faixa(t, "higiene") is None, t
