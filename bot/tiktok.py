@@ -141,8 +141,14 @@ def capa(foto, titulo="Se eu estivesse montando um enxoval",
     d = ImageDraw.Draw(img)
 
     largura = L - 2 * MARGEM
-    for tam in (112, 104, 96, 88, 80):
+    # "\n" no título força a quebra de linha (ex.: 2 linhas exatas)
+    for tam in (112, 104, 96, 88, 80, 72):
         f = _serif(tam, 500)
+        if "\n" in titulo:
+            linhas = titulo.split("\n")
+            if all(d.textlength(ln, font=f) <= largura for ln in linhas):
+                break
+            continue
         linhas = _quebrar(d, titulo, f, largura)
         if len(linhas) <= 3:
             break
