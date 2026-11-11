@@ -1,5 +1,5 @@
 {
- "aguardando_link": 208,
+ "aguardando_link": 210,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 12
+  "2026-11-11": 14
  },
  "cupons": {
   "AUTO70OFF": {
@@ -11875,8 +11875,8 @@
   "2026-11-11": {
    "com_cupom": 1,
    "cupons": 17,
-   "posts": 24,
-   "shopee": 12
+   "posts": 28,
+   "shopee": 14
   }
  },
  "links": {
@@ -12285,8 +12285,8 @@
   "2026-11-10": 2,
   "2026-11-11": 2
  },
- "membros_lido_em": "2026-11-11T11",
- "numeros_em": "2026-11-11T11:45-03:00",
+ "membros_lido_em": "2026-11-11T12",
+ "numeros_em": "2026-11-11T12:05-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -13371,6 +13371,12 @@
    "quando": "2026-11-08T19:15-03:00",
    "titulo": "Tapete De Atividades Para Bebê Piano Musical Ginásio Móbile 5 Brinquedos Piuí Ro"
   },
+  "MLB75488058": {
+   "desconto": 0.776,
+   "preco": 26.9,
+   "quando": "2026-11-11T12:05-03:00",
+   "titulo": "MoveBrinca Bola De Ar Flutuante Com LED Para Crianças 3 Velocidades E Proteção D"
+  },
   "MLB75537532": {
    "desconto": 0.599,
    "preco": 23.99,
@@ -13454,6 +13460,12 @@
    "preco": 23.86,
    "quando": "2026-11-09T20:52-03:00",
    "titulo": "Pistola Lança Bolhas de Sabão Automática Redfin Azul Com Luz Para Crianças"
+  },
+  "MLB79069896": {
+   "desconto": 0.79,
+   "preco": 27.27,
+   "quando": "2026-11-11T12:05-03:00",
+   "titulo": "Aspirador Nasal Elétrico Epsilon Recarregável Rosa para Bebês com 2 Bicos"
   },
   "MLB79143996": {
    "desconto": 0.377,
@@ -14440,18 +14452,26 @@
     [
      "2026-11-11",
      35.77
+    ],
+    [
+     "2026-11-11",
+     31.05
     ]
    ],
-   "min": 35.74
+   "min": 31.05
   },
   "MLB18392643": {
    "historico": [
     [
      "2026-11-09",
      19.89
+    ],
+    [
+     "2026-11-11",
+     19.09
     ]
    ],
-   "min": 19.89
+   "min": 19.09
   },
   "MLB18392647": {
    "historico": [
@@ -14471,9 +14491,13 @@
     [
      "2026-11-09",
      35.31
+    ],
+    [
+     "2026-11-11",
+     29.99
     ]
    ],
-   "min": 35.31
+   "min": 29.99
   },
   "MLB18392677": {
    "historico": [
@@ -15237,6 +15261,10 @@
     [
      "2026-11-10",
      198.0
+    ],
+    [
+     "2026-11-11",
+     215.53
     ]
    ],
    "min": 186.0
@@ -15858,6 +15886,10 @@
     [
      "2026-11-11",
      28.9
+    ],
+    [
+     "2026-11-11",
+     29.67
     ]
    ],
    "min": 28.9
@@ -16597,9 +16629,13 @@
     [
      "2026-11-11",
      32.59
+    ],
+    [
+     "2026-11-11",
+     32.26
     ]
    ],
-   "min": 32.59
+   "min": 32.26
   },
   "MLB24591080": {
    "historico": [
@@ -17926,6 +17962,10 @@
     [
      "2026-11-10",
      325.99
+    ],
+    [
+     "2026-11-11",
+     317.94
     ]
    ],
    "min": 299.9
@@ -18642,6 +18682,10 @@
     [
      "2026-11-11",
      98.36
+    ],
+    [
+     "2026-11-11",
+     103.54
     ]
    ],
    "min": 98.36
@@ -19124,9 +19168,13 @@
     [
      "2026-11-09",
      406.22
+    ],
+    [
+     "2026-11-11",
+     359.35
     ]
    ],
-   "min": 406.22
+   "min": 359.35
   },
   "MLB35064084": {
    "historico": [
@@ -19232,6 +19280,10 @@
     [
      "2026-11-10",
      1559.99
+    ],
+    [
+     "2026-11-11",
+     1521.0
     ]
    ],
    "min": 1521.0
@@ -19538,6 +19590,10 @@
     [
      "2026-11-11",
      58.87
+    ],
+    [
+     "2026-11-11",
+     61.97
     ]
    ],
    "min": 58.87
@@ -20207,9 +20263,13 @@
     [
      "2026-11-09",
      19.0
+    ],
+    [
+     "2026-11-11",
+     18.9
     ]
    ],
-   "min": 19.0
+   "min": 18.9
   },
   "MLB41239570": {
    "historico": [
@@ -20829,6 +20889,10 @@
     [
      "2026-11-10",
      116.0
+    ],
+    [
+     "2026-11-11",
+     114.89
     ]
    ],
    "min": 114.89
@@ -21023,6 +21087,10 @@
     [
      "2026-11-10",
      171.0
+    ],
+    [
+     "2026-11-11",
+     169.29
     ]
    ],
    "min": 161.0
@@ -21627,9 +21695,13 @@
     [
      "2026-11-07",
      24.0
+    ],
+    [
+     "2026-11-11",
+     21.0
     ]
    ],
-   "min": 24.0
+   "min": 21.0
   },
   "MLB47247005": {
    "historico": [
@@ -22605,6 +22677,10 @@
     [
      "2026-11-10",
      66.8
+    ],
+    [
+     "2026-11-11",
+     41.61
     ]
    ],
    "min": 37.45
@@ -22999,9 +23075,13 @@
     [
      "2026-11-07",
      227.0
+    ],
+    [
+     "2026-11-11",
+     214.99
     ]
    ],
-   "min": 227.0
+   "min": 214.99
   },
   "MLB56415193": {
    "historico": [
@@ -23465,6 +23545,10 @@
     [
      "2026-11-11",
      224.9
+    ],
+    [
+     "2026-11-11",
+     209.89
     ]
    ],
    "min": 199.99
@@ -24140,9 +24224,13 @@
     [
      "2026-11-09",
      1393.19
+    ],
+    [
+     "2026-11-11",
+     1379.07
     ]
    ],
-   "min": 1393.19
+   "min": 1379.07
   },
   "MLB62461361": {
    "historico": [
@@ -24234,6 +24322,10 @@
     [
      "2026-11-10",
      149.9
+    ],
+    [
+     "2026-11-11",
+     134.9
     ]
    ],
    "min": 134.9
@@ -24425,9 +24517,13 @@
     [
      "2026-11-10",
      42.9
+    ],
+    [
+     "2026-11-11",
+     23.99
     ]
    ],
-   "min": 42.9
+   "min": 23.99
   },
   "MLB62867807": {
    "historico": [
@@ -24636,9 +24732,13 @@
     [
      "2026-11-11",
      951.0
+    ],
+    [
+     "2026-11-11",
+     929.0
     ]
    ],
-   "min": 939.99
+   "min": 929.0
   },
   "MLB63152047": {
    "historico": [
@@ -24775,6 +24875,10 @@
     [
      "2026-11-11",
      818.73
+    ],
+    [
+     "2026-11-11",
+     899.0
     ]
    ],
    "min": 818.73
@@ -26457,9 +26561,13 @@
     [
      "2026-11-11",
      170.1
+    ],
+    [
+     "2026-11-11",
+     163.0
     ]
    ],
-   "min": 163.29
+   "min": 163.0
   },
   "MLB69086946": {
    "historico": [
@@ -26882,6 +26990,10 @@
     [
      "2026-11-11",
      21.5
+    ],
+    [
+     "2026-11-11",
+     22.9
     ]
    ],
    "min": 21.5
@@ -27078,6 +27190,10 @@
     [
      "2026-11-11",
      22.52
+    ],
+    [
+     "2026-11-11",
+     23.0
     ]
    ],
    "min": 22.52
@@ -27338,6 +27454,10 @@
     [
      "2026-11-11",
      15.9
+    ],
+    [
+     "2026-11-11",
+     19.16
     ]
    ],
    "min": 15.9
@@ -27706,6 +27826,10 @@
     [
      "2026-11-09",
      32.94
+    ],
+    [
+     "2026-11-11",
+     23.99
     ]
    ],
    "min": 23.99
@@ -28337,6 +28461,10 @@
     [
      "2026-11-11",
      396.89
+    ],
+    [
+     "2026-11-11",
+     387.33
     ]
    ],
    "min": 387.33
@@ -28346,9 +28474,13 @@
     [
      "2026-11-09",
      394.0
+    ],
+    [
+     "2026-11-11",
+     387.33
     ]
    ],
-   "min": 394.0
+   "min": 387.33
   },
   "MLB75482850": {
    "historico": [
@@ -28564,6 +28696,10 @@
     [
      "2026-11-11",
      54.0
+    ],
+    [
+     "2026-11-11",
+     58.1
     ]
    ],
    "min": 54.0
@@ -28582,9 +28718,13 @@
     [
      "2026-11-09",
      799.99
+    ],
+    [
+     "2026-11-11",
+     789.99
     ]
    ],
-   "min": 799.99
+   "min": 789.99
   },
   "MLB75846960": {
    "historico": [
@@ -29573,9 +29713,13 @@
     [
      "2026-11-06",
      48.0
+    ],
+    [
+     "2026-11-11",
+     35.63
     ]
    ],
-   "min": 48.0
+   "min": 35.63
   },
   "MLB79315264": {
    "historico": [
@@ -30614,6 +30758,15 @@
     ]
    ],
    "min": 29.6
+  },
+  "SHP14907891040": {
+   "historico": [
+    [
+     "2026-11-11",
+     9.98
+    ]
+   ],
+   "min": 9.98
   },
   "SHP14993873628": {
    "historico": [
@@ -33743,6 +33896,10 @@
     [
      "2026-11-11",
      99.8
+    ],
+    [
+     "2026-11-11",
+     99.9
     ]
    ],
    "min": 99.8
@@ -37009,6 +37166,15 @@
    ],
    "min": 80.26
   },
+  "SHP23298636653": {
+   "historico": [
+    [
+     "2026-11-11",
+     28.02
+    ]
+   ],
+   "min": 28.02
+  },
   "SHP23298817388": {
    "historico": [
     [
@@ -39364,6 +39530,15 @@
    ],
    "min": 34.98
   },
+  "SHP3171590231": {
+   "historico": [
+    [
+     "2026-11-11",
+     89.24
+    ]
+   ],
+   "min": 89.24
+  },
   "SHP3583616499": {
    "historico": [
     [
@@ -39692,6 +39867,10 @@
     [
      "2026-11-11",
      18.98
+    ],
+    [
+     "2026-11-11",
+     19.99
     ]
    ],
    "min": 17.98
@@ -40103,6 +40282,15 @@
     ]
    ],
    "min": 24.82
+  },
+  "SHP45269588050": {
+   "historico": [
+    [
+     "2026-11-11",
+     10.0
+    ]
+   ],
+   "min": 10.0
   },
   "SHP45465181028": {
    "historico": [
@@ -42978,6 +43166,15 @@
    ],
    "min": 26.99
   },
+  "SHP58218214707": {
+   "historico": [
+    [
+     "2026-11-11",
+     36.93
+    ]
+   ],
+   "min": 36.93
+  },
   "SHP58218218073": {
    "historico": [
     [
@@ -44093,6 +44290,15 @@
     ]
    ],
    "min": 42.21
+  },
+  "SHP58259177194": {
+   "historico": [
+    [
+     "2026-11-11",
+     38.99
+    ]
+   ],
+   "min": 38.99
   },
   "SHP58259310473": {
    "historico": [
@@ -45459,12 +45665,14 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-11T11:13-03:00",
    "2026-11-11T11:26-03:00",
-   "2026-11-11T11:26-03:00"
+   "2026-11-11T11:26-03:00",
+   "2026-11-11T12:13-03:00",
+   "2026-11-11T12:13-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
+   "SHP17424919389": "2026-11-11T12:13-03:00",
    "SHP18156372156": "2026-11-10T17:34-03:00",
    "SHP18198980244": "2026-11-10T18:21-03:00",
    "SHP19499073421": "2026-11-10T19:57-03:00",
@@ -45493,6 +45701,7 @@
    "SHP28620926406": "2026-11-10T19:57-03:00",
    "SHP44809598956": "2026-11-10T21:42-03:00",
    "SHP45004572291": "2026-11-10T18:21-03:00",
+   "SHP45005226257": "2026-11-11T12:13-03:00",
    "SHP45967606085": "2026-11-11T09:11-03:00",
    "SHP58204393424": "2026-11-10T21:54-03:00",
    "SHP58213273842": "2026-11-10T20:54-03:00",
@@ -45501,7 +45710,7 @@
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 14,
+  "termo": 17,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -45512,7 +45721,9 @@
     "higiene pecas",
     "lego/blocos",
     "lenco umedecido",
+    "mantas cobertor",
     "refeicao prato",
+    "saquinho organizador",
     "saquinhos maternidade",
     "tapete inflavel",
     "toalha banho"
@@ -45527,7 +45738,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T11:45-03:00",
+  "em": "2026-11-11T12:05-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -45558,6 +45769,16 @@
     "link": "https://meli.la/1t1WoDS",
     "preco": 235.99,
     "titulo": "Banheira Trocador Dobrável Termômetro Aloha Maxi Baby"
+   },
+   {
+    "categoria": "quarto",
+    "de": 59.9,
+    "desconto": 0.599,
+    "id": "MLB73604609",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_615687-MLA120304135779_102026-F.jpg",
+    "link": "https://meli.la/2nnzRT6",
+    "preco": 23.99,
+    "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
    },
    {
     "categoria": "quarto",
@@ -45720,16 +45941,6 @@
     "titulo": "Berço Portátil Bebe Moises Acoplado AMR-6272 Colchao com mosqueteiro L'AMOR Cor Cinza"
    },
    {
-    "categoria": "quarto",
-    "de": 59.9,
-    "desconto": 0.45,
-    "id": "MLB73604609",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_615687-MLA120304135779_102026-F.jpg",
-    "link": "https://meli.la/2nnzRT6",
-    "preco": 32.94,
-    "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
-   },
-   {
     "categoria": "brinquedo",
     "de": 49.0,
     "desconto": 0.447,
@@ -45768,6 +45979,16 @@
     "link": "https://meli.la/2Q1kt8Y",
     "preco": 130.85,
     "titulo": "Bicicleta De Equilíbrio Infantil Sem Pedal 4 Rodas Bebê Menino Menina Gato Panda"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 147.9,
+    "desconto": 0.719,
+    "id": "MLB54136862",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_612380-MLA117540353805_092026-F.jpg",
+    "link": "https://meli.la/2dtcNri",
+    "preco": 41.61,
+    "titulo": "Barraca Toca Infantil Menina Cabana Tenda Princesa Criança Princesa Judy Cabaninha"
    },
    {
     "categoria": "passeio",
@@ -45930,16 +46151,6 @@
     "titulo": "Kit Mochila Infantil NTESX com Lancheira e Estojo – Astronauta Preto e Impermeável"
    },
    {
-    "categoria": "higiene",
-    "de": 98.9,
-    "desconto": 0.405,
-    "id": "MLB37622470",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_658983-MLA114006492841_072026-F.jpg",
-    "link": "https://meli.la/1ZpWkxy",
-    "preco": 58.87,
-    "titulo": "Shampoo Anticaspa Cabelos Normais a Oleosos, Dercos DS Vichy, 125g"
-   },
-   {
     "categoria": "outros",
     "de": 90.14,
     "desconto": 0.334,
@@ -45978,6 +46189,16 @@
     "link": "https://meli.la/2hGmrQR",
     "preco": 483.0,
     "titulo": "Berço Americano 3 em 1 para Colchão 130x70cm Multimóveis 0527PA Branco"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 100.0,
+    "desconto": 0.644,
+    "id": "MLB79313725",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_915365-MLA117639458887_092026-F.jpg",
+    "link": "https://meli.la/224xLLB",
+    "preco": 35.63,
+    "titulo": "Celular Brinquedo Recarregável Bebê | Educativo com Sons e Luzes, Substitui o Celular Real"
    },
    {
     "categoria": "escola",
@@ -46050,6 +46271,16 @@
     "titulo": "Boné New Era A-frame New York Yankees Ajustável Cor Preto Tamanho U"
    },
    {
+    "categoria": "higiene",
+    "de": 51.04,
+    "desconto": 0.392,
+    "id": "MLB18392608",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_738296-MLA110297780960_052026-F.jpg",
+    "link": "https://meli.la/1wYBGNu",
+    "preco": 31.05,
+    "titulo": "Fralda Descartável Turma da Mônica Baby M 50 Unidades 12 h"
+   },
+   {
     "categoria": "quarto",
     "de": 199.9,
     "desconto": 0.315,
@@ -46108,29 +46339,9 @@
     "link": "https://meli.la/2bAX86M",
     "preco": 90.0,
     "titulo": "Andador Empurrador Infantil Musical Educativo Rosa Yuupi YPHE0811"
-   },
-   {
-    "categoria": "passeio",
-    "de": 1799.9,
-    "desconto": 0.366,
-    "id": "MLB62926546",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_760834-MLA100113185128_122025-F.jpg",
-    "link": "https://meli.la/1HM1CU6",
-    "preco": 1141.0,
-    "titulo": "Carrinho de Bebê Travel System Maxi Baby Elysian Cinza e Dourado com Moisés e Bebê Conforto"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 78.99,
-    "desconto": 0.707,
-    "id": "MLB76574611",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_815293-MLA115438222718_082026-F.jpg",
-    "link": "https://meli.la/1c7EjFK",
-    "preco": 23.18,
-    "titulo": "Tapete De Atividades Para Bebes Almofada De Água Inflável Interativo Aquário Sensorial Fundo Do Mar Rosa Tsc S"
    }
   ]
  },
- "vitrine_assinatura": "3ea235480311596b42de218dd641262d6fc015df",
- "vitrine_publicada_em": "2026-11-11T11:05-03:00"
+ "vitrine_assinatura": "84741e93c5fd0141f51930bf0326b2381fa27145",
+ "vitrine_publicada_em": "2026-11-11T12:05-03:00"
 }
