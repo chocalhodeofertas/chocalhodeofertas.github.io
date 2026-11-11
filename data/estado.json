@@ -1,5 +1,5 @@
 {
- "aguardando_link": 211,
+ "aguardando_link": 215,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 30
+  "2026-11-11": 32
  },
  "cupons": {
   "AGORAPROMO": {
@@ -5506,7 +5506,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5554,
+ "cupons_extra_ultimo:cupombr": 5555,
  "cupons_ml_ultimo": 6467,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
@@ -11927,10 +11927,10 @@
    "shopee": 24
   },
   "2026-11-11": {
-   "com_cupom": 2,
+   "com_cupom": 3,
    "cupons": 26,
-   "posts": 60,
-   "shopee": 30
+   "posts": 64,
+   "shopee": 32
   }
  },
  "links": {
@@ -12339,8 +12339,8 @@
   "2026-11-10": 2,
   "2026-11-11": 2
  },
- "membros_lido_em": "2026-11-11T16",
- "numeros_em": "2026-11-11T16:55-03:00",
+ "membros_lido_em": "2026-11-11T17",
+ "numeros_em": "2026-11-11T17:15-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -13007,6 +13007,12 @@
    "quando": "2026-11-08T15:13-03:00",
    "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinh"
   },
+  "MLB56574273": {
+   "desconto": 0.53,
+   "preco": 117.49,
+   "quando": "2026-11-11T17:15-03:00",
+   "titulo": "Boné New Era A-frame New York Yankees Ajustável Cor Preto Tamanho U"
+  },
   "MLB57075978": {
    "desconto": 0.445,
    "preco": 99.9,
@@ -13078,6 +13084,12 @@
    "preco": 58.0,
    "quando": "2026-11-09T08:02-03:00",
    "titulo": "Carrinho Controle Remoto Rally Jipe Max Carro Grande Bateria Recarregavel Off Ro"
+  },
+  "MLB62020136": {
+   "desconto": 0.438,
+   "preco": 56.16,
+   "quando": "2026-11-11T17:15-03:00",
+   "titulo": "Canguru Sling De Bebe Carregar Recem Nascido Cinza G - Marca DE CORAZÓN"
   },
   "MLB62060798": {
    "desconto": 0.386,
@@ -17042,6 +17054,10 @@
     [
      "2026-11-07",
      15.18
+    ],
+    [
+     "2026-11-11",
+     16.99
     ]
    ],
    "min": 15.18
@@ -18683,6 +18699,10 @@
     [
      "2026-11-09",
      35.08
+    ],
+    [
+     "2026-11-11",
+     32.0
     ]
    ],
    "min": 31.91
@@ -19313,9 +19333,13 @@
     [
      "2026-11-10",
      26.0
+    ],
+    [
+     "2026-11-11",
+     25.09
     ]
    ],
-   "min": 25.31
+   "min": 25.09
   },
   "MLB32469560": {
    "historico": [
@@ -19448,6 +19472,10 @@
     [
      "2026-11-11",
      313.73
+    ],
+    [
+     "2026-11-11",
+     297.59
     ]
    ],
    "min": 270.0
@@ -20436,6 +20464,10 @@
     [
      "2026-11-10",
      99.22
+    ],
+    [
+     "2026-11-11",
+     99.9
     ]
    ],
    "min": 79.97
@@ -20623,9 +20655,13 @@
     [
      "2026-11-11",
      172.0
+    ],
+    [
+     "2026-11-11",
+     141.77
     ]
    ],
-   "min": 166.51
+   "min": 141.77
   },
   "MLB39633199": {
    "historico": [
@@ -22876,9 +22912,13 @@
     [
      "2026-11-11",
      167.0
+    ],
+    [
+     "2026-11-11",
+     135.7
     ]
    ],
-   "min": 167.0
+   "min": 135.7
   },
   "MLB51300198": {
    "historico": [
@@ -23960,6 +24000,10 @@
     [
      "2026-11-11",
      5201.01
+    ],
+    [
+     "2026-11-11",
+     5099.9
     ]
    ],
    "min": 4694.0
@@ -27345,9 +27389,13 @@
     [
      "2026-11-11",
      163.0
+    ],
+    [
+     "2026-11-11",
+     144.0
     ]
    ],
-   "min": 162.88
+   "min": 144.0
   },
   "MLB69086946": {
    "historico": [
@@ -36466,6 +36514,15 @@
    ],
    "min": 62.28
   },
+  "SHP22604711214": {
+   "historico": [
+    [
+     "2026-11-11",
+     44.9
+    ]
+   ],
+   "min": 44.9
+  },
   "SHP22692564994": {
    "historico": [
     [
@@ -38515,6 +38572,10 @@
     [
      "2026-11-11",
      13.49
+    ],
+    [
+     "2026-11-11",
+     20.39
     ]
    ],
    "min": 13.49
@@ -47530,8 +47591,8 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-11T16:23-03:00",
-   "2026-11-11T16:23-03:00"
+   "2026-11-11T17:25-03:00",
+   "2026-11-11T17:25-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -47558,6 +47619,7 @@
    "SHP22494274076": "2026-11-11T12:32-03:00",
    "SHP22497914336": "2026-11-11T16:23-03:00",
    "SHP22498844695": "2026-11-10T17:15-03:00",
+   "SHP22593013707": "2026-11-11T17:25-03:00",
    "SHP22793967394": "2026-11-11T13:16-03:00",
    "SHP22994443307": "2026-11-10T19:24-03:00",
    "SHP23092250306": "2026-11-11T14:45-03:00",
@@ -47576,6 +47638,7 @@
    "SHP45005226257": "2026-11-11T12:13-03:00",
    "SHP45967606085": "2026-11-11T09:11-03:00",
    "SHP46303601591": "2026-11-11T15:56-03:00",
+   "SHP47603497389": "2026-11-11T17:25-03:00",
    "SHP55615214779": "2026-11-11T15:14-03:00",
    "SHP56215017523": "2026-11-11T13:34-03:00",
    "SHP57707127537": "2026-11-11T13:16-03:00",
@@ -47589,7 +47652,7 @@
    "SHP58258341439": "2026-11-11T15:38-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 27,
+  "termo": 30,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -47606,6 +47669,7 @@
     "higiene pecas",
     "jogo lencol",
     "jogos velha",
+    "lapis de cor",
     "lego/blocos",
     "lenco umedecido",
     "mantas cobertor",
@@ -47613,6 +47677,7 @@
     "mobile",
     "mochila",
     "pijama curto",
+    "piscina",
     "quebra cabecas",
     "refeicao prato",
     "sandalia feminina",
@@ -47633,7 +47698,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T16:55-03:00",
+  "em": "2026-11-11T17:15-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -47744,6 +47809,16 @@
     "link": "https://meli.la/33HWc6a",
     "preco": 56.29,
     "titulo": "Cesto Para Bebes Porta Roupa Fraldas Organizador De Banho Cor Bege"
+   },
+   {
+    "categoria": "outros",
+    "de": 290.9,
+    "desconto": 0.513,
+    "id": "MLB39456030",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_957293-MLA99458185276_112025-F.jpg",
+    "link": "https://meli.la/24rKWBQ",
+    "preco": 141.77,
+    "titulo": "Bicicleta De Equilibrio Rosa Com Som Sem Pedal 18824 - Buba"
    },
    {
     "categoria": "passeio",
@@ -48224,19 +48299,9 @@
     "link": "https://meli.la/1mbZ5jZ",
     "preco": 224.57,
     "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco Estary Shop"
-   },
-   {
-    "categoria": "roupa",
-    "de": 69.9,
-    "desconto": 0.29,
-    "id": "MLB66652186",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_850960-MLA108709184359_032026-F.jpg",
-    "link": "https://meli.la/2mdDu7j",
-    "preco": 49.62,
-    "titulo": "Kit Macacão + Chapéu Estampado Praia Verão Menino/meninauv50 Desenho Do Tecido Cereja Tamanho 12-18 M"
    }
   ]
  },
- "vitrine_assinatura": "4639113531b2b7dc7141cd6c6614059f7419e14f",
- "vitrine_publicada_em": "2026-11-11T16:15-03:00"
+ "vitrine_assinatura": "89ebc57a85550ca294edfe3633261c27c5fce4d4",
+ "vitrine_publicada_em": "2026-11-11T17:15-03:00"
 }
