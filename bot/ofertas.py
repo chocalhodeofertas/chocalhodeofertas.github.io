@@ -49,8 +49,8 @@ def avaliar(produto, info, estado, agora: datetime, min_desconto=0.15, repost_di
     postado = estado["postados"].get(produto.id)
     if postado:
         dias = (agora - datetime.fromisoformat(postado["quando"])).total_seconds() / 86400
-        # O mesmo produto só volta depois de alguns dias (mesmo que o preço caia)
-        if dias < repost_dias:
+        # Repete só depois de alguns dias, ou se o preço caiu mais 5%
+        if dias < repost_dias and preco > postado["preco"] * 0.95:
             return None
 
     return Oferta(

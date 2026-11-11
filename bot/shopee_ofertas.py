@@ -191,7 +191,7 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
         tp = tipo_produto(p.titulo)
         if tp in tipos_hoje:
             continue
-        if est.repetido(estado, p.titulo, agora, cfg.repost_dias):
+        if est.repetido(estado, p.titulo, agora, cfg.repost_dias, p.preco):
             continue  # mesmo produto (de outro vendedor ou do ML) já saiu nos últimos dias
         if enviadas and esperar:
             esperar(rng.uniform(cfg.intervalo_min, max(cfg.intervalo_max, cfg.intervalo_min)) * 60)
@@ -204,7 +204,7 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
             continue
         whatsapp.enfileirar(mensagens.montar_whatsapp(o, rng), o.imagem, agora, loja="shopee")
         s["postados"][o.id] = agora.isoformat(timespec="minutes")
-        s.setdefault("titulos", {})[o.id] = {"titulo": o.titulo[:80], "quando": agora.isoformat(timespec="minutes")}
+        s.setdefault("titulos", {})[o.id] = {"titulo": o.titulo[:80], "quando": agora.isoformat(timespec="minutes"), "preco": o.preco}
         s["hora"].append(agora.isoformat(timespec="minutes"))
         tipos_hoje.add(tp)
         tipos[hoje] = sorted(tipos_hoje)

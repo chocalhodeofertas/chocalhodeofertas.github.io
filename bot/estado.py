@@ -85,14 +85,18 @@ def titulos_recentes(estado, agora, dias=3):
     for v in fontes:
         try:
             if v.get("titulo") and datetime.fromisoformat(v["quando"]) > corte:
-                saida.append(v["titulo"])
+                saida.append((v["titulo"], v.get("preco")))
         except (KeyError, ValueError, TypeError, AttributeError):
             pass
     return saida
 
 
-def repetido(estado, titulo, agora, dias=3):
-    """True se um produto igual ou bem parecido já saiu nos últimos dias."""
+def repetido(estado, titulo, agora, dias=3, preco=None):
+    """True se um produto igual ou bem parecido já saiu nos últimos dias.
+    Volta antes do prazo só se o preço agora estiver 5% abaixo do que foi postado."""
     from .ofertas import parecido
 
-    return any(parecido(titulo, t) for t in titulos_recentes(estado, agora, dias))
+    for t, p in titulos_recentes(estado, agora, dias):
+        if parecido(titulo, t) and not (preco and p and preco <= p * 0.95):
+            return True
+    return False

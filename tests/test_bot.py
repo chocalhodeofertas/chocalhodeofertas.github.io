@@ -135,7 +135,7 @@ def test_nao_repete_logo():
     e = est.novo()
     est.registrar_post(e, "MLB1", 70, AGORA - timedelta(days=1))
     assert avaliar(prod(), info(70, 100), e, AGORA) is None
-    assert avaliar(prod(), info(60, 100), e, AGORA) is None  # mesmo caindo, espera os 3 dias
+    assert avaliar(prod(), info(60, 100), e, AGORA) is not None  # caiu mais
     assert avaliar(prod(), info(70, 100), e, AGORA + timedelta(days=3)) is not None
 
 
@@ -1354,12 +1354,15 @@ def test_mesmo_produto_outro_anuncio_nao_repete():
     fuso = timezone(timedelta(hours=-3))
     agora = datetime(2026, 11, 11, 15, 0, tzinfo=fuso)
     e = {"postados": {"MLB1": {"quando": (agora - timedelta(days=1)).isoformat(),
-                               "titulo": "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampado"}},
+                               "titulo": "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampado", "preco": 40.0}},
          "shopee": {"titulos": {"SHP9": {"quando": (agora - timedelta(days=2)).isoformat(),
                                          "titulo": "Babá Eletrônica Baby Monitor Vb603 Visão Noturna"}}}}
     assert est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampa Azul", agora)
     assert est.repetido(e, "Baba Eletronica Baby Monitor Vb603 Visao Noturna Dual Audio", agora)
     assert not est.repetido(e, "Mochila Escolar Infantil Dinossauro", agora)
+    # outro anúncio do mesmo produto pode sair se estiver 5% mais barato
+    assert est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora, preco=39.0)
+    assert not est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora, preco=37.0)
     # depois de 3 dias pode voltar
     assert not est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora + timedelta(days=3))
     assert not parecido("Patinete Infantil 3 Rodas Led", "Boneca Reborn Realista")
