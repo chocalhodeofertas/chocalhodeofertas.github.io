@@ -9,6 +9,8 @@ afirmamos o que o anúncio não diz). Regras usadas:
   entra: quase sempre vale só para produtos selecionados;
 - preço do produto >= compra mínima do cupom;
 - desconto limitado ao "desconto máx." do cupom;
+- cupom que o admin marcou com "geral CÓDIGO" (testou e vale para quase
+  tudo) entra mesmo sem categoria; mínimo e teto continuam valendo;
 - cupons exclusivos Meli+ ficam de fora (nem todo mundo é assinante);
 - só mostra quando economiza pelo menos R$ 2.
 """
@@ -116,7 +118,8 @@ def melhor_cupom(estado, oferta, agora):
         if not bloco:
             continue
         info = info_do_bloco(bloco)
-        if info["meli_mais"] or not (info["site_todo"] or _compativel(info["categoria"], oferta.categoria)):
+        amplo = info["site_todo"] or c.get("geral")
+        if info["meli_mais"] or not (amplo or _compativel(info["categoria"], oferta.categoria)):
             continue
         e = economia(oferta.preco, info)
         if e >= ECONOMIA_MIN and (melhor is None or e > melhor["economia"]):

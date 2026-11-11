@@ -1248,3 +1248,25 @@ def test_shopee_rodar_posta_por_cima(monkeypatch, tmp_path):
     itens = [json.loads(p.read_text()) for p in tmp_path.glob("*.json")]
     assert {i["loja"] for i in itens} == {"shopee"} and all("s.shopee.com.br/whatsapp" in i["texto"] for i in itens)
     assert so.rodar(Cfg, tg, e, agora, rng=random.Random(1), shp=Shp(), log=lambda m: None) == []  # sem repetir
+
+
+def test_cupom_marcado_como_geral_pelo_admin():
+    from types import SimpleNamespace as N
+    from bot import comandos, cupom_oferta as co, cupons
+    e = est.novo()
+    blocos = [
+        ("CORREHOJE", "<b>🎟️ CORREHOJE</b> 👉 <b>20% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$60", None),
+        ("SITETODO10", "<b>🎟️ SITETODO10</b> 👉 <b>R$10 OFF</b>\nCompra mín.: R$79", None),
+    ]
+    cupons.publicar(TGCmd(), cfg_cmd(), e, "t", blocos, AGORA)
+    almofada = N(titulo="Almofada de banho", preco=81.01, preco_de=147.9, categoria="higiene", link="x", desconto=.45)
+    assert co.melhor_cupom(e, almofada, AGORA)["codigo"] == "SITETODO10"  # sem a marca, o geral fica de fora
+    r = comandos.tratar_texto("geral correhoje", None, None, e, cfg_cmd(), AGORA)
+    assert "CORREHOJE" in r and e["cupons"]["CORREHOJE"]["geral"]
+    cp = co.melhor_cupom(e, almofada, AGORA)
+    assert cp["codigo"] == "CORREHOJE" and cp["economia"] == 16.2 and cp["preco"] == 64.81
+    barato = N(titulo="Babador", preco=40.0, preco_de=50, categoria="alimentacao", link="x", desconto=.2)
+    assert co.melhor_cupom(e, barato, AGORA) is None  # o mínimo de R$79 continua valendo
+    assert "Não achei" in comandos.tratar_texto("geral NAOEXISTE", None, None, e, cfg_cmd(), AGORA)
+    comandos.tratar_texto("restrito CORREHOJE", None, None, e, cfg_cmd(), AGORA)
+    assert co.melhor_cupom(e, almofada, AGORA)["codigo"] == "SITETODO10"

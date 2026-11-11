@@ -49,10 +49,13 @@ def publicar(tg, cfg, estado, titulo, blocos, agora, rodape=RODAPE):
     for b, (codigo, _, validade) in zip(post["blocos"], blocos):
         if not codigo:
             b["codigo"] = f"#{mid}"
+        geral = (cupons.get(b["codigo"]) or {}).get("geral")  # mantém a marca do admin se repostar
         cupons[b["codigo"]] = {
             "post": mid, "status": "ativo", "criado": post["criado"],
             "validade": validade.isoformat(timespec="minutes") if validade else None,
         }
+        if geral:
+            cupons[b["codigo"]]["geral"] = True
     estado.setdefault("posts_cupom", {})[str(mid)] = post
     from .estado import contar_dia
 
