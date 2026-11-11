@@ -5223,6 +5223,12 @@
    "status": "ativo",
    "validade": "2026-12-11T23:59-03:00"
   },
+  "DESCONTOJA": {
+   "criado": "2026-11-11T14:00-03:00",
+   "post": 342,
+   "status": "ativo",
+   "validade": "2026-11-12T23:59-03:00"
+  },
   "ESPORTE1011": {
    "criado": "2026-11-10T16:04-03:00",
    "post": 236,
@@ -5464,7 +5470,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5547,
+ "cupons_extra_ultimo:cupombr": 5548,
  "cupons_ml_ultimo": 6462,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
@@ -11886,7 +11892,7 @@
   },
   "2026-11-11": {
    "com_cupom": 2,
-   "cupons": 19,
+   "cupons": 20,
    "posts": 44,
    "shopee": 22
   }
@@ -13984,6 +13990,17 @@
     }
    ],
    "criado": "2026-11-11T13:31-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "342": {
+   "blocos": [
+    {
+     "codigo": "DESCONTOJA",
+     "html": "<b>🎟️ DESCONTOJA</b> 👉 <b>18% OFF</b>\nCompra mín.: R$99 · Desconto máx.: R$60\n⏰ Válido até 12/11"
+    }
+   ],
+   "criado": "2026-11-11T14:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
