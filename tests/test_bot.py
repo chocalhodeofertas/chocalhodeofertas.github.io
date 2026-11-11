@@ -1248,3 +1248,70 @@ def test_shopee_rodar_posta_por_cima(monkeypatch, tmp_path):
     itens = [json.loads(p.read_text()) for p in tmp_path.glob("*.json")]
     assert {i["loja"] for i in itens} == {"shopee"} and all("s.shopee.com.br/whatsapp" in i["texto"] for i in itens)
     assert so.rodar(Cfg, tg, e, agora, rng=random.Random(1), shp=Shp(), log=lambda m: None) == []  # sem repetir
+
+
+def _pagina_social(pid, preco, promocoes=None, rotulo=None, outro=False):
+    import json
+    price = {"current_price": {"value": preco}, "previous_price": {"value": preco * 2}}
+    if rotulo:
+        price["discount_label"] = {"text": rotulo}
+    comps = [{"type": "title", "title": {"text": "Produto"}}, {"type": "price", "price": price}]
+    if promocoes is not None:
+        comps.append({"type": "promotions", "promotions": promocoes})
+    card = {"metadata": {"id": "MLB999", "product_id": "MLB777" if outro else pid}, "components": comps}
+    return '<html><script>{"polycards":' + json.dumps([card]) + ',"x":1}</script></html>'
+
+
+def test_cupom_lido_da_pagina_do_anuncio():
+    from types import SimpleNamespace as N
+    from bot import cupom_oferta as co, mensagens
+    preco_cupom = [{"type": "coupon", "text": "{1} com Cupom",
+                    "values": [{"key": "1", "type": "price", "price": {"value": 127.08}}]}]
+    cp = co.ler_cupom_pagina(_pagina_social("MLB1", 138.13, preco_cupom), "MLB1", 138.13)
+    assert cp == {"origem": "pagina", "preco": 127.08, "economia": 11.05, "desconto": ""}
+    # card de outro produto: não usa
+    assert co.ler_cupom_pagina(_pagina_social("MLB1", 138.13, preco_cupom, outro=True), "MLB1", 138.13) is None
+    # só percentual
+    cp = co.ler_cupom_pagina(_pagina_social("MLB1", 62.89, [{"type": "coupon", "text": "8% OFF com Cupom"}]),
+                             "MLB1", 62.89)
+    assert cp["preco"] is None and cp["desconto"] == "8% OFF"
+    # preço do card já com cupom (rótulo "44% OFF com Cupom") e menor que o nosso
+    cp = co.ler_cupom_pagina(_pagina_social("MLB1", 72.66, rotulo="44% OFF com Cupom"), "MLB1", 80.0)
+    assert cp["preco"] == 72.66 and cp["economia"] == 7.34
+    # sem cupom / economia irrisória / página sem JSON
+    assert co.ler_cupom_pagina(_pagina_social("MLB1", 83.18, None, "51% OFF"), "MLB1", 83.18) is None
+    assert co.ler_cupom_pagina(_pagina_social("MLB1", 79.5, rotulo="com Cupom"), "MLB1", 80.0) is None
+    assert co.ler_cupom_pagina("<html>bloqueado</html>", "MLB1", 80.0) is None
+    # texto do post
+    o = N(titulo="Barraca", preco=138.13, preco_de=197.83, desconto=.3, categoria="brinquedo", link="https://meli.la/x",
+          cupom={"origem": "pagina", "preco": 127.08, "economia": 11.05, "desconto": ""})
+    t = mensagens.montar_telegram(o)
+    assert "Com cupom do anúncio: <b>R$ 127,08</b>" in t and "Ative o cupom na página" in t and "elegível" not in t
+    o.cupom = {"origem": "pagina", "preco": None, "economia": 0.0, "desconto": "8% OFF"}
+    assert "Tem cupom de *8% OFF* no anúncio" in mensagens.montar_whatsapp(o)
+
+
+def test_escolhe_entre_cupom_do_anuncio_e_do_canal():
+    from types import SimpleNamespace as N
+    from bot import cupom_oferta as co, cupons
+
+    class Sessao:
+        def __init__(self, texto):
+            self.texto = texto
+
+        def get(self, *a, **k):
+            return N(text=self.texto)
+
+    e = est.novo()
+    cupons.publicar(TGCmd(), cfg_cmd(), e, "t",
+                    [("SITETODO10", "<b>🎟️ SITETODO10</b> 👉 <b>R$10 OFF</b>\nCompra mín.: R$79", None)], AGORA)
+    o = N(id="MLB1", titulo="Barraca", preco=138.13, categoria="brinquedo", link="https://meli.la/x")
+    pag = _pagina_social("MLB1", 138.13, [{"type": "coupon", "text": "{1} com Cupom",
+                                           "values": [{"type": "price", "price": {"value": 120.0}}]}])
+    assert co.escolher_cupom(e, o, AGORA, Sessao(pag))["origem"] == "pagina"  # 18,13 > 10
+    pag = _pagina_social("MLB1", 138.13, [{"type": "coupon", "text": "{1} com Cupom",
+                                           "values": [{"type": "price", "price": {"value": 134.0}}]}])
+    assert co.escolher_cupom(e, o, AGORA, Sessao(pag))["codigo"] == "SITETODO10"  # canal economiza mais
+    assert co.escolher_cupom(e, o, AGORA, Sessao("<html></html>"))["codigo"] == "SITETODO10"
+    o.link = "https://produto.mercadolivre.com.br/x?matt_word=y"  # link direto: nem abre a página
+    assert co.escolher_cupom(e, o, AGORA, Sessao(pag))["codigo"] == "SITETODO10"

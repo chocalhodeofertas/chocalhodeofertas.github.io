@@ -118,9 +118,9 @@ def postar_link(link, tg, ml, estado, cfg, agora, session=None, rng=random):
     estado["links"][pid] = link
     if pid not in estado.get("descobertos", {}):
         estado.setdefault("manuais", {})[pid] = {"tipo": tipo, "categoria": categoria}
-    from .cupom_oferta import melhor_cupom
+    from .cupom_oferta import escolher_cupom
 
-    oferta.cupom = melhor_cupom(estado, oferta, agora)
+    oferta.cupom = escolher_cupom(estado, oferta, agora, session, log=lambda m: None)
     try:
         tg.enviar_oferta(cfg.canal, mensagens.montar_telegram(oferta, rng), oferta.imagem)
     except TelegramErro as e:
