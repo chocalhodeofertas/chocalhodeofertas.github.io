@@ -5506,7 +5506,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5555,
+ "cupons_extra_ultimo:cupombr": 5556,
  "cupons_ml_ultimo": 6467,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
@@ -11929,8 +11929,8 @@
   "2026-11-11": {
    "com_cupom": 3,
    "cupons": 26,
-   "posts": 65,
-   "shopee": 32
+   "posts": 66,
+   "shopee": 33
   }
  },
  "links": {
@@ -12340,7 +12340,7 @@
   "2026-11-11": 2
  },
  "membros_lido_em": "2026-11-11T17",
- "numeros_em": "2026-11-11T17:35-03:00",
+ "numeros_em": "2026-11-11T17:55-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -14856,6 +14856,10 @@
     [
      "2026-11-11",
      42.9
+    ],
+    [
+     "2026-11-11",
+     42.62
     ]
    ],
    "min": 27.87
@@ -17128,9 +17132,13 @@
     [
      "2026-11-11",
      120.8
+    ],
+    [
+     "2026-11-11",
+     119.0
     ]
    ],
-   "min": 120.8
+   "min": 119.0
   },
   "MLB24647478": {
    "historico": [
@@ -18670,6 +18678,10 @@
     [
      "2026-11-11",
      173.82
+    ],
+    [
+     "2026-11-11",
+     189.99
     ]
    ],
    "min": 159.99
@@ -20689,9 +20701,13 @@
     [
      "2026-11-11",
      141.77
+    ],
+    [
+     "2026-11-11",
+     139.0
     ]
    ],
-   "min": 141.77
+   "min": 139.0
   },
   "MLB39633199": {
    "historico": [
@@ -23163,9 +23179,13 @@
     [
      "2026-11-09",
      78.0
+    ],
+    [
+     "2026-11-11",
+     76.99
     ]
    ],
-   "min": 78.0
+   "min": 76.99
   },
   "MLB53205051": {
    "historico": [
@@ -23972,6 +23992,10 @@
     [
      "2026-11-11",
      4154.0
+    ],
+    [
+     "2026-11-11",
+     4559.0
     ]
    ],
    "min": 4154.0
@@ -25842,9 +25866,13 @@
     [
      "2026-11-09",
      23.9
+    ],
+    [
+     "2026-11-11",
+     23.83
     ]
    ],
-   "min": 23.9
+   "min": 23.83
   },
   "MLB64075831": {
    "historico": [
@@ -26079,6 +26107,10 @@
     [
      "2026-11-11",
      107.99
+    ],
+    [
+     "2026-11-11",
+     107.71
     ]
    ],
    "min": 91.94
@@ -30428,6 +30460,10 @@
     [
      "2026-11-11",
      379.9
+    ],
+    [
+     "2026-11-11",
+     399.0
     ]
    ],
    "min": 351.0
@@ -31827,6 +31863,10 @@
     [
      "2026-11-11",
      31.19
+    ],
+    [
+     "2026-11-11",
+     34.65
     ]
    ],
    "min": 31.19
@@ -32998,6 +33038,10 @@
     [
      "2026-11-10",
      47.98
+    ],
+    [
+     "2026-11-11",
+     49.98
     ]
    ],
    "min": 47.98
@@ -35673,6 +35717,10 @@
     [
      "2026-11-11",
      20.14
+    ],
+    [
+     "2026-11-11",
+     20.37
     ]
    ],
    "min": 20.14
@@ -38200,6 +38248,10 @@
     [
      "2026-11-11",
      15.9
+    ],
+    [
+     "2026-11-11",
+     14.89
     ]
    ],
    "min": 14.89
@@ -47658,10 +47710,12 @@
  "shopee": {
   "hora": [
    "2026-11-11T17:25-03:00",
-   "2026-11-11T17:25-03:00"
+   "2026-11-11T17:25-03:00",
+   "2026-11-11T17:56-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
+   "SHP15894161282": "2026-11-11T17:56-03:00",
    "SHP17424919389": "2026-11-11T12:13-03:00",
    "SHP18156372156": "2026-11-10T17:34-03:00",
    "SHP18198980244": "2026-11-10T18:21-03:00",
@@ -47718,7 +47772,7 @@
    "SHP58258341439": "2026-11-11T15:38-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 33,
+  "termo": 1,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -47731,6 +47785,7 @@
     "conjunto masculino",
     "conjunto pijama",
     "creme multifuncional",
+    "creme pentear",
     "fralda",
     "higiene pecas",
     "jogo lencol",
@@ -47754,6 +47809,12 @@
     "tenis meninos",
     "toalha banho"
    ]
+  },
+  "titulos": {
+   "SHP15894161282": {
+    "quando": "2026-11-11T17:56-03:00",
+    "titulo": "Creme para Pentear Multifuncional Hidra Multy Kids Salon Line 300ml"
+   }
   }
  },
  "temas_recentes": {
@@ -47764,7 +47825,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T17:35-03:00",
+  "em": "2026-11-11T17:55-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -47787,16 +47848,6 @@
     "titulo": "Banheira Trocador Dobrável Termômetro Aloha Maxi Baby"
    },
    {
-    "categoria": "outros",
-    "de": 346.9,
-    "desconto": 0.652,
-    "id": "MLB24647472",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_739484-MLA99949712843_112025-F.jpg",
-    "link": "https://meli.la/349AkpG",
-    "preco": 120.8,
-    "titulo": "Bicicleta de Equilíbrio Infantil Sem Pedal Vermelho Buba"
-   },
-   {
     "categoria": "quarto",
     "de": 799.9,
     "desconto": 0.5,
@@ -47815,6 +47866,16 @@
     "link": "https://meli.la/2yuRBNX",
     "preco": 359.0,
     "titulo": "Berço Compacto Confort Bebê Cercado Chiqueirinho Rosa Cor Cinza"
+   },
+   {
+    "categoria": "outros",
+    "de": 346.9,
+    "desconto": 0.657,
+    "id": "MLB24647472",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_739484-MLA99949712843_112025-F.jpg",
+    "link": "https://meli.la/349AkpG",
+    "preco": 119.0,
+    "titulo": "Bicicleta de Equilíbrio Infantil Sem Pedal Vermelho Buba"
    },
    {
     "categoria": "higiene",
@@ -47959,11 +48020,11 @@
    {
     "categoria": "outros",
     "de": 290.9,
-    "desconto": 0.513,
+    "desconto": 0.522,
     "id": "MLB39456030",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_957293-MLA99458185276_112025-F.jpg",
     "link": "https://meli.la/24rKWBQ",
-    "preco": 141.77,
+    "preco": 139.0,
     "titulo": "Bicicleta De Equilibrio Rosa Com Som Sem Pedal 18824 - Buba"
    },
    {
@@ -48125,16 +48186,6 @@
     "link": "https://meli.la/2UvWs2P",
     "preco": 136.9,
     "titulo": "Lixeira Para Fraldas Rister Baby 10l Anti-odor Com Tampa Branco"
-   },
-   {
-    "categoria": "higiene",
-    "de": 19.9,
-    "desconto": 0.438,
-    "id": "MLB47734236",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_859414-MLA89302556011_082025-F.jpg",
-    "link": "https://meli.la/1HdrmgD",
-    "preco": 11.19,
-    "titulo": "Escova De Dente Primeiro Dentinhos 0 A 2 Anos Mordedor Cor Azul"
    },
    {
     "categoria": "outros",
@@ -48365,6 +48416,16 @@
     "link": "https://meli.la/33HP11G",
     "preco": 779.9,
     "titulo": "Cadeira de Carro Infantil Max360 Isofix Rotação 360° Reclinável 3 Posições Top Tether 0-36kg Maxi Baby"
+   },
+   {
+    "categoria": "outros",
+    "de": 139.9,
+    "desconto": 0.476,
+    "id": "MLB42163798",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_774847-MLA116761361151_082026-F.jpg",
+    "link": "https://meli.la/1wX7Xqf",
+    "preco": 73.35,
+    "titulo": "Bicicleta Bebê 4 Rodas Sem Pedal MSP Kids Vermelha, Bicicleta de Equilíbrio Infantil com 4 Rodas Largas, Estru"
    }
   ]
  },
