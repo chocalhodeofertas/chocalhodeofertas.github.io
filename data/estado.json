@@ -1,5 +1,5 @@
 {
- "aguardando_link": 211,
+ "aguardando_link": 210,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 17
+  "2026-11-11": 19
  },
  "cupons": {
   "APROVEITAAGORA": {
@@ -11881,8 +11881,8 @@
   "2026-11-11": {
    "com_cupom": 2,
    "cupons": 18,
-   "posts": 34,
-   "shopee": 17
+   "posts": 38,
+   "shopee": 19
   }
  },
  "links": {
@@ -12291,8 +12291,8 @@
   "2026-11-10": 2,
   "2026-11-11": 2
  },
- "membros_lido_em": "2026-11-11T12",
- "numeros_em": "2026-11-11T12:45-03:00",
+ "membros_lido_em": "2026-11-11T13",
+ "numeros_em": "2026-11-11T13:05-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12946,9 +12946,9 @@
    "titulo": "Triciclo Infantil Rosa Maral 2 em 1 Passeio e Pedal com Buzina"
   },
   "MLB58047533": {
-   "desconto": 0.456,
-   "preco": 68.0,
-   "quando": "2026-11-10T08:22-03:00",
+   "desconto": 0.529,
+   "preco": 58.9,
+   "quando": "2026-11-11T13:05-03:00",
    "titulo": "Troninho Privadinha Assento Redutor Pinico Para Desfralde Cinza"
   },
   "MLB58664244": {
@@ -13532,6 +13532,12 @@
    "preco": 67.8,
    "quando": "2026-11-07T13:12-03:00",
    "titulo": "Kit 48 Carrinhos Miniatura Nanotoyzzz Metal Fricção 1:64 Container com 2 Pistas "
+  },
+  "MLB79900942": {
+   "desconto": 0.627,
+   "preco": 130.85,
+   "quando": "2026-11-11T13:05-03:00",
+   "titulo": "Bicicleta De Equilíbrio Infantil Sem Pedal 4 Rodas Bebê Menino Menina Gato Panda"
   },
   "MLB80142080": {
    "desconto": 0.654,
@@ -17631,6 +17637,10 @@
     [
      "2026-11-10",
      37.5
+    ],
+    [
+     "2026-11-11",
+     45.99
     ]
    ],
    "min": 37.49
@@ -18689,6 +18699,10 @@
     [
      "2026-11-10",
      434.99
+    ],
+    [
+     "2026-11-11",
+     549.0
     ]
    ],
    "min": 368.28
@@ -20621,6 +20635,10 @@
     [
      "2026-11-11",
      58.77
+    ],
+    [
+     "2026-11-11",
+     67.37
     ]
    ],
    "min": 30.99
@@ -24636,6 +24654,10 @@
     [
      "2026-11-11",
      23.99
+    ],
+    [
+     "2026-11-11",
+     42.9
     ]
    ],
    "min": 23.99
@@ -24725,9 +24747,13 @@
     [
      "2026-11-11",
      54.44
+    ],
+    [
+     "2026-11-11",
+     49.9
     ]
    ],
-   "min": 52.0
+   "min": 49.9
   },
   "MLB62978763": {
    "historico": [
@@ -25419,6 +25445,10 @@
     [
      "2026-11-11",
      22.61
+    ],
+    [
+     "2026-11-11",
+     23.95
     ]
    ],
    "min": 22.61
@@ -34287,6 +34317,15 @@
    ],
    "min": 20.86
   },
+  "SHP22198875601": {
+   "historico": [
+    [
+     "2026-11-11",
+     18.0
+    ]
+   ],
+   "min": 18.0
+  },
   "SHP22199189950": {
    "historico": [
     [
@@ -38188,6 +38227,10 @@
     [
      "2026-11-11",
      10.8
+    ],
+    [
+     "2026-11-11",
+     12.8
     ]
    ],
    "min": 10.8
@@ -39807,9 +39850,13 @@
     [
      "2026-11-10",
      24.9
+    ],
+    [
+     "2026-11-11",
+     23.49
     ]
    ],
-   "min": 24.9
+   "min": 23.49
   },
   "SHP40422625558": {
    "historico": [
@@ -40558,6 +40605,15 @@
     ]
    ],
    "min": 21.8
+  },
+  "SHP46068423808": {
+   "historico": [
+    [
+     "2026-11-11",
+     16.9
+    ]
+   ],
+   "min": 16.9
   },
   "SHP46303601591": {
    "historico": [
@@ -41604,6 +41660,10 @@
     [
      "2026-11-11",
      59.9
+    ],
+    [
+     "2026-11-11",
+     79.9
     ]
    ],
    "min": 59.9
@@ -45945,11 +46005,11 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-11T12:13-03:00",
-   "2026-11-11T12:13-03:00",
    "2026-11-11T12:32-03:00",
    "2026-11-11T12:32-03:00",
-   "2026-11-11T12:47-03:00"
+   "2026-11-11T12:47-03:00",
+   "2026-11-11T13:16-03:00",
+   "2026-11-11T13:16-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -45972,6 +46032,7 @@
    "SHP22393516179": "2026-11-10T21:24-03:00",
    "SHP22494274076": "2026-11-11T12:32-03:00",
    "SHP22498844695": "2026-11-10T17:15-03:00",
+   "SHP22793967394": "2026-11-11T13:16-03:00",
    "SHP22994443307": "2026-11-10T19:24-03:00",
    "SHP23098322636": "2026-11-11T12:32-03:00",
    "SHP23199132850": "2026-11-11T10:26-03:00",
@@ -45986,6 +46047,7 @@
    "SHP45004572291": "2026-11-10T18:21-03:00",
    "SHP45005226257": "2026-11-11T12:13-03:00",
    "SHP45967606085": "2026-11-11T09:11-03:00",
+   "SHP57707127537": "2026-11-11T13:16-03:00",
    "SHP58204393424": "2026-11-10T21:54-03:00",
    "SHP58210756198": "2026-11-11T12:47-03:00",
    "SHP58213273842": "2026-11-10T20:54-03:00",
@@ -45994,12 +46056,13 @@
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 23,
+  "termo": 26,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
     "babuche menina",
     "biblia meninas",
+    "boneca",
     "conjunto masculino",
     "conjunto pijama",
     "fralda",
@@ -46008,6 +46071,7 @@
     "lego/blocos",
     "lenco umedecido",
     "mantas cobertor",
+    "quebra cabecas",
     "refeicao prato",
     "saquinho organizador",
     "saquinhos maternidade",
@@ -46025,7 +46089,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T12:45-03:00",
+  "em": "2026-11-11T13:05-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -46196,16 +46260,6 @@
     "link": "https://meli.la/2G3kCUB",
     "preco": 27.11,
     "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensorial 1ª Infância Bebê Conforto Ma"
-   },
-   {
-    "categoria": "passeio",
-    "de": 158.0,
-    "desconto": 0.63,
-    "id": "MLB45722794",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_928392-MLA95167024708_102025-F.jpg",
-    "link": "https://meli.la/1mPuRpP",
-    "preco": 58.46,
-    "titulo": "Criança Mochila Segurança Anti Perda Com Bracelete Cor Rosa"
    },
    {
     "categoria": "higiene",
@@ -46626,9 +46680,19 @@
     "link": "https://meli.la/2mUjWfa",
     "preco": 114.89,
     "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Space"
+   },
+   {
+    "categoria": "outros",
+    "de": 53.99,
+    "desconto": 0.593,
+    "id": "MLB70448723",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_844369-MLA113628435522_072026-F.jpg",
+    "link": "https://meli.la/2kKwg45",
+    "preco": 21.99,
+    "titulo": "Kit 10 Travas De Geladeira Gaveta Reparador Porta Segurança Infantil Contra Bebes Adesivo Resistente"
    }
   ]
  },
- "vitrine_assinatura": "84741e93c5fd0141f51930bf0326b2381fa27145",
- "vitrine_publicada_em": "2026-11-11T12:05-03:00"
+ "vitrine_assinatura": "71a396d03478691b4a835357b49b898b0671183f",
+ "vitrine_publicada_em": "2026-11-11T13:05-03:00"
 }
