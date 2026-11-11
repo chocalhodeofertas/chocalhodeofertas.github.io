@@ -1,5 +1,5 @@
 {
- "aguardando_link": 213,
+ "aguardando_link": 211,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -12328,7 +12328,7 @@
   "2026-11-11": 2
  },
  "membros_lido_em": "2026-11-11T15",
- "numeros_em": "2026-11-11T15:05-03:00",
+ "numeros_em": "2026-11-11T15:15-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -14848,6 +14848,10 @@
     [
      "2026-11-11",
      19.99
+    ],
+    [
+     "2026-11-11",
+     11.88
     ]
    ],
    "min": 11.84
@@ -17036,6 +17040,10 @@
     [
      "2026-11-10",
      419.0
+    ],
+    [
+     "2026-11-11",
+     458.9
     ]
    ],
    "min": 419.0
@@ -18763,6 +18771,10 @@
     [
      "2026-11-11",
      4580.0
+    ],
+    [
+     "2026-11-11",
+     4349.0
     ]
    ],
    "min": 4199.0
@@ -19390,6 +19402,10 @@
     [
      "2026-11-11",
      429.9
+    ],
+    [
+     "2026-11-11",
+     447.0
     ]
    ],
    "min": 389.0
@@ -20176,6 +20192,10 @@
     [
      "2026-11-09",
      5.71
+    ],
+    [
+     "2026-11-11",
+     8.68
     ]
    ],
    "min": 5.71
@@ -23721,6 +23741,10 @@
     [
      "2026-11-11",
      4559.0
+    ],
+    [
+     "2026-11-11",
+     4154.0
     ]
    ],
    "min": 4154.0
@@ -23995,6 +24019,10 @@
     [
      "2026-11-11",
      1899.9
+    ],
+    [
+     "2026-11-11",
+     1999.0
     ]
    ],
    "min": 1899.9
@@ -26888,6 +26916,10 @@
     [
      "2026-11-11",
      34.78
+    ],
+    [
+     "2026-11-11",
+     23.4
     ]
    ],
    "min": 23.4
@@ -30093,6 +30125,10 @@
     [
      "2026-11-11",
      379.9
+    ],
+    [
+     "2026-11-11",
+     409.0
     ]
    ],
    "min": 351.0
@@ -30954,6 +30990,10 @@
     [
      "2026-11-11",
      287.99
+    ],
+    [
+     "2026-11-11",
+     324.99
     ]
    ],
    "min": 252.99
@@ -32133,6 +32173,10 @@
     [
      "2026-11-11",
      55.09
+    ],
+    [
+     "2026-11-11",
+     79.9
     ]
    ],
    "min": 52.49
@@ -35892,6 +35936,10 @@
     [
      "2026-11-11",
      27.8
+    ],
+    [
+     "2026-11-11",
+     27.9
     ]
    ],
    "min": 27.8
@@ -36210,6 +36258,10 @@
     [
      "2026-11-11",
      119.9
+    ],
+    [
+     "2026-11-11",
+     149.9
     ]
    ],
    "min": 119.9
@@ -38411,9 +38463,13 @@
     [
      "2026-11-10",
      42.9
+    ],
+    [
+     "2026-11-11",
+     38.61
     ]
    ],
-   "min": 42.9
+   "min": 38.61
   },
   "SHP23393093572": {
    "historico": [
@@ -40062,6 +40118,10 @@
     [
      "2026-11-11",
      25.19
+    ],
+    [
+     "2026-11-11",
+     27.99
     ]
    ],
    "min": 25.19
@@ -44200,6 +44260,10 @@
     [
      "2026-11-11",
      22.87
+    ],
+    [
+     "2026-11-11",
+     26.9
     ]
    ],
    "min": 22.87
@@ -46532,6 +46596,10 @@
     [
      "2026-11-10",
      20.99
+    ],
+    [
+     "2026-11-11",
+     21.99
     ]
    ],
    "min": 20.99
@@ -47232,7 +47300,7 @@
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 9,
+  "termo": 12,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -47272,7 +47340,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T15:05-03:00",
+  "em": "2026-11-11T15:15-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -47525,26 +47593,6 @@
     "titulo": "Bebê conforto grid 0 a 13kg Galzerano cor preto"
    },
    {
-    "categoria": "brinquedo",
-    "de": 129.9,
-    "desconto": 0.57,
-    "id": "MLB36436855",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_944229-MLA119175436700_112026-F.jpg",
-    "link": "https://meli.la/2w1vR4r",
-    "preco": 55.9,
-    "titulo": "Tapete De Atividades Para Bebê Piano Musical Móbile Interativo 5 Brinquedos Sensoriais Funny Dino Maxi Baby"
-   },
-   {
-    "categoria": "escola",
-    "de": 78.9,
-    "desconto": 0.672,
-    "id": "MLB68310961",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_849398-MLA110761805467_042026-F.jpg",
-    "link": "https://meli.la/278EP9y",
-    "preco": 25.9,
-    "titulo": "Caneta Marcadora Acrílica 24 Cores Canetinha Ponta Pincel Profissional Para Desenho Pintura Colorir Artesanato"
-   },
-   {
     "categoria": "escola",
     "de": 299.0,
     "desconto": 0.669,
@@ -47553,6 +47601,16 @@
     "link": "https://meli.la/2cTMBUw",
     "preco": 99.0,
     "titulo": "Kit Mochila Infantil NTESX com Lancheira e Estojo – Astronauta Preto e Impermeável"
+   },
+   {
+    "categoria": "quarto",
+    "de": 499.9,
+    "desconto": 0.402,
+    "id": "MLB54357048",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_903019-MLA100032407355_122025-F.jpg",
+    "link": "https://meli.la/2ybULdP",
+    "preco": 298.8,
+    "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
    },
    {
     "categoria": "outros",
@@ -47873,6 +47931,16 @@
     "link": "https://meli.la/2bByDKx",
     "preco": 29.0,
     "titulo": "Suporte Tablet Celular P/ Banco Carro Bebê Criança Organizador Encosto garrafa d'água brinquedo sacola viagem "
+   },
+   {
+    "categoria": "higiene",
+    "de": 30.25,
+    "desconto": 0.42,
+    "id": "MLB70352077",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_943435-MLA112301472297_052026-F.jpg",
+    "link": "https://meli.la/1F4nhGx",
+    "preco": 17.54,
+    "titulo": "2 Pente Infantil Cabelo Bebê Criança Menino Menina Colorido Cor Azul - Dinossauro"
    }
   ]
  },
