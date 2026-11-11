@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 16
+  "2026-11-11": 17
  },
  "cupons": {
   "AUTO70OFF": {
@@ -11875,8 +11875,8 @@
   "2026-11-11": {
    "com_cupom": 2,
    "cupons": 17,
-   "posts": 32,
-   "shopee": 16
+   "posts": 34,
+   "shopee": 17
   }
  },
  "links": {
@@ -12286,7 +12286,7 @@
   "2026-11-11": 2
  },
  "membros_lido_em": "2026-11-11T12",
- "numeros_em": "2026-11-11T12:25-03:00",
+ "numeros_em": "2026-11-11T12:45-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12782,6 +12782,12 @@
    "preco": 25.19,
    "quando": "2026-11-08T17:15-03:00",
    "titulo": "Pistola Lança Bolhas de Sabão Vermelha com Luz LED Inclui Líquido"
+  },
+  "MLB45722794": {
+   "desconto": 0.63,
+   "preco": 58.46,
+   "quando": "2026-11-11T12:45-03:00",
+   "titulo": "Criança Mochila Segurança Anti Perda Com Bracelete Cor Rosa"
   },
   "MLB45801082": {
    "desconto": 0.568,
@@ -14262,6 +14268,10 @@
     [
      "2026-11-11",
      13.99
+    ],
+    [
+     "2026-11-11",
+     14.06
     ]
    ],
    "min": 10.99
@@ -15167,6 +15177,10 @@
     [
      "2026-11-11",
      499.9
+    ],
+    [
+     "2026-11-11",
+     529.99
     ]
    ],
    "min": 499.9
@@ -15514,6 +15528,10 @@
     [
      "2026-11-10",
      341.42
+    ],
+    [
+     "2026-11-11",
+     339.59
     ]
    ],
    "min": 337.16
@@ -15620,9 +15638,13 @@
     [
      "2026-11-10",
      24.99
+    ],
+    [
+     "2026-11-11",
+     23.74
     ]
    ],
-   "min": 24.99
+   "min": 23.74
   },
   "MLB22621352": {
    "historico": [
@@ -16992,9 +17014,13 @@
     [
      "2026-11-09",
      61.21
+    ],
+    [
+     "2026-11-11",
+     59.79
     ]
    ],
-   "min": 61.21
+   "min": 59.79
   },
   "MLB24768816": {
    "historico": [
@@ -19043,6 +19069,10 @@
     [
      "2026-11-11",
      445.95
+    ],
+    [
+     "2026-11-11",
+     443.57
     ]
    ],
    "min": 389.0
@@ -20570,6 +20600,10 @@
     [
      "2026-11-11",
      32.99
+    ],
+    [
+     "2026-11-11",
+     58.77
     ]
    ],
    "min": 30.99
@@ -21751,6 +21785,10 @@
     [
      "2026-11-11",
      21.0
+    ],
+    [
+     "2026-11-11",
+     24.0
     ]
    ],
    "min": 21.0
@@ -21967,6 +22005,10 @@
     [
      "2026-11-10",
      3157.54
+    ],
+    [
+     "2026-11-11",
+     3140.69
     ]
    ],
    "min": 3118.21
@@ -27894,6 +27936,10 @@
     [
      "2026-11-11",
      23.99
+    ],
+    [
+     "2026-11-11",
+     32.94
     ]
    ],
    "min": 23.99
@@ -28605,9 +28651,13 @@
     [
      "2026-11-11",
      485.51
+    ],
+    [
+     "2026-11-11",
+     482.92
     ]
    ],
-   "min": 485.51
+   "min": 482.92
   },
   "MLB75537532": {
    "historico": [
@@ -30434,6 +30484,10 @@
     [
      "2026-11-11",
      162.53
+    ],
+    [
+     "2026-11-11",
+     164.99
     ]
    ],
    "min": 162.53
@@ -31643,9 +31697,13 @@
     [
      "2026-11-10",
      15.26
+    ],
+    [
+     "2026-11-11",
+     15.1
     ]
    ],
-   "min": 15.26
+   "min": 15.1
   },
   "SHP19175443586": {
    "historico": [
@@ -37952,6 +38010,15 @@
    ],
    "min": 32.99
   },
+  "SHP23592199606": {
+   "historico": [
+    [
+     "2026-11-11",
+     12.9
+    ]
+   ],
+   "min": 12.9
+  },
   "SHP23592957774": {
    "historico": [
     [
@@ -38949,9 +39016,13 @@
     [
      "2026-11-10",
      19.9
+    ],
+    [
+     "2026-11-11",
+     19.8
     ]
    ],
-   "min": 19.9
+   "min": 19.8
   },
   "SHP23991792698": {
    "historico": [
@@ -39199,6 +39270,15 @@
    ],
    "min": 56.9
   },
+  "SHP23999032249": {
+   "historico": [
+    [
+     "2026-11-11",
+     25.9
+    ]
+   ],
+   "min": 25.9
+  },
   "SHP23999107772": {
    "historico": [
     [
@@ -39341,6 +39421,15 @@
     ]
    ],
    "min": 37.99
+  },
+  "SHP26781091461": {
+   "historico": [
+    [
+     "2026-11-11",
+     9.63
+    ]
+   ],
+   "min": 9.63
   },
   "SHP27039187142": {
    "historico": [
@@ -40823,6 +40912,15 @@
    ],
    "min": 24.9
   },
+  "SHP49506514106": {
+   "historico": [
+    [
+     "2026-11-11",
+     18.31
+    ]
+   ],
+   "min": 18.31
+  },
   "SHP49601732757": {
    "historico": [
     [
@@ -41985,9 +42083,13 @@
     [
      "2026-11-10",
      49.39
+    ],
+    [
+     "2026-11-11",
+     42.99
     ]
    ],
-   "min": 49.39
+   "min": 42.99
   },
   "SHP58205353427": {
    "historico": [
@@ -45025,6 +45127,15 @@
    ],
    "min": 12.5
   },
+  "SHP58264428609": {
+   "historico": [
+    [
+     "2026-11-11",
+     37.9
+    ]
+   ],
+   "min": 37.9
+  },
   "SHP58264632380": {
    "historico": [
     [
@@ -45595,9 +45706,13 @@
     [
      "2026-11-10",
      27.99
+    ],
+    [
+     "2026-11-11",
+     27.49
     ]
    ],
-   "min": 27.99
+   "min": 27.49
   },
   "SHP58270222023": {
    "historico": [
@@ -45816,7 +45931,8 @@
    "2026-11-11T12:13-03:00",
    "2026-11-11T12:13-03:00",
    "2026-11-11T12:32-03:00",
-   "2026-11-11T12:32-03:00"
+   "2026-11-11T12:32-03:00",
+   "2026-11-11T12:47-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -45854,13 +45970,14 @@
    "SHP45005226257": "2026-11-11T12:13-03:00",
    "SHP45967606085": "2026-11-11T09:11-03:00",
    "SHP58204393424": "2026-11-10T21:54-03:00",
+   "SHP58210756198": "2026-11-11T12:47-03:00",
    "SHP58213273842": "2026-11-10T20:54-03:00",
    "SHP58213474889": "2026-11-10T20:40-03:00",
    "SHP58215304009": "2026-11-10T21:54-03:00",
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 20,
+  "termo": 23,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -45870,6 +45987,7 @@
     "conjunto pijama",
     "fralda",
     "higiene pecas",
+    "jogos velha",
     "lego/blocos",
     "lenco umedecido",
     "mantas cobertor",
@@ -45890,7 +46008,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T12:25-03:00",
+  "em": "2026-11-11T12:45-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -45921,16 +46039,6 @@
     "link": "https://meli.la/1t1WoDS",
     "preco": 235.99,
     "titulo": "Banheira Trocador Dobrável Termômetro Aloha Maxi Baby"
-   },
-   {
-    "categoria": "quarto",
-    "de": 59.9,
-    "desconto": 0.599,
-    "id": "MLB73604609",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_615687-MLA120304135779_102026-F.jpg",
-    "link": "https://meli.la/2nnzRT6",
-    "preco": 23.99,
-    "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
    },
    {
     "categoria": "quarto",
@@ -46023,26 +46131,6 @@
     "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Ocean"
    },
    {
-    "categoria": "brinquedo",
-    "de": 299.99,
-    "desconto": 0.643,
-    "id": "MLB37136700",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_934309-MLA95405210648_102025-F.jpg",
-    "link": "https://meli.la/23uUAuu",
-    "preco": 107.0,
-    "titulo": "Ursinho Que Reza Buba Pelúcia Oração Anjinho Da Guarda 24 Cm Cor Azul"
-   },
-   {
-    "categoria": "passeio",
-    "de": 599.0,
-    "desconto": 0.386,
-    "id": "MLB62060798",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_734729-MLA98091343937_112025-F.jpg",
-    "link": "https://meli.la/1Hr5qZ4",
-    "preco": 367.91,
-    "titulo": "Carrinho De Bebê Cosco Kids, Toffy, Rosa Noite"
-   },
-   {
     "categoria": "passeio",
     "de": 699.9,
     "desconto": 0.386,
@@ -46071,6 +46159,16 @@
     "link": "https://meli.la/1RwACtr",
     "preco": 422.95,
     "titulo": "Berço Portátil Bebe Moises Acoplado AMR-6272 Colchao com mosqueteiro L'AMOR Cor Cinza"
+   },
+   {
+    "categoria": "quarto",
+    "de": 59.9,
+    "desconto": 0.45,
+    "id": "MLB73604609",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_615687-MLA120304135779_102026-F.jpg",
+    "link": "https://meli.la/2nnzRT6",
+    "preco": 32.94,
+    "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
    },
    {
     "categoria": "brinquedo",
@@ -46233,16 +46331,6 @@
     "titulo": "Assento Redutor Infantil Escada Para Vaso Sanitário Troninho Cor Azul Lisa"
    },
    {
-    "categoria": "game",
-    "de": 507.92,
-    "desconto": 0.68,
-    "id": "MLB80770078",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_862848-MLA118441725014_102026-F.jpg",
-    "link": "https://meli.la/1RxjSQJ",
-    "preco": 162.53,
-    "titulo": "Pokémon Celebração 30 Anos Blister Triplo Com Adesivos Lucario - Copag"
-   },
-   {
     "categoria": "passeio",
     "de": 499.0,
     "desconto": 0.483,
@@ -46301,6 +46389,16 @@
     "link": "https://meli.la/1wzpeM6",
     "preco": 725.9,
     "titulo": "Cadeira de Carro Infantil All Stages 2.0 Isofix Preto Litet"
+   },
+   {
+    "categoria": "higiene",
+    "de": 49.99,
+    "desconto": 0.465,
+    "id": "MLB72024607",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_786352-MLA120947062033_112026-F.jpg",
+    "link": "https://meli.la/2Rr1je8",
+    "preco": 26.75,
+    "titulo": "Assento Redutor Sanitário Infantil Almofadado Acolchoado Desfralde Bebê Criança Menina Antiderrapante Antirres"
    },
    {
     "categoria": "brinquedo",
@@ -46491,6 +46589,26 @@
     "link": "https://meli.la/1Z6CgKJ",
     "preco": 44.52,
     "titulo": "Trocador Absorvente Baby & Me 10 Unid"
+   },
+   {
+    "categoria": "higiene",
+    "de": 78.99,
+    "desconto": 0.506,
+    "id": "MLB75214967",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_867433-MLA113064409082_072026-F.jpg",
+    "link": "https://meli.la/1KgtRkD",
+    "preco": 38.99,
+    "titulo": "Kit Escova e Pente Lilica Ripilica para Bebê Rosa com Cerdas Naturais"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 199.9,
+    "desconto": 0.425,
+    "id": "MLB44017218",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_827223-MLA96140311143_102025-F.jpg",
+    "link": "https://meli.la/2mUjWfa",
+    "preco": 114.89,
+    "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Space"
    }
   ]
  },
