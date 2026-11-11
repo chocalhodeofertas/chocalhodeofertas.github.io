@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 48
+  "2026-11-10": 50
  },
  "cupons": {
   "AUTO70OFF": {
@@ -11802,8 +11802,8 @@
   "2026-11-10": {
    "com_cupom": 7,
    "cupons": 7,
-   "posts": 46,
-   "shopee": 20
+   "posts": 50,
+   "shopee": 22
   }
  },
  "links": {
@@ -12122,7 +12122,7 @@
   "2026-11-10": 2
  },
  "membros_lido_em": "2026-11-10T21",
- "numeros_em": "2026-11-10T21:14-03:00",
+ "numeros_em": "2026-11-10T21:34-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12303,6 +12303,12 @@
    "quando": "2026-11-07T12:42-03:00",
    "titulo": "Patinho Amarelo Dançarino Musical Som Luz Marca REDFIN Brinquedo Interativo Cria"
   },
+  "MLB24838553": {
+   "desconto": 0.52,
+   "preco": 43.99,
+   "quando": "2026-11-10T21:34-03:00",
+   "titulo": "Caneta esferográfica Bic Azul - c/50"
+  },
   "MLB25163760": {
    "desconto": 0.498,
    "preco": 37.61,
@@ -12442,6 +12448,12 @@
    "preco": 16.03,
    "quando": "2026-11-10T09:22-03:00",
    "titulo": "Capa Transparente Trocador Anatômico Bebê 71x57cm Polipropileno"
+  },
+  "MLB37622470": {
+   "desconto": 0.373,
+   "preco": 61.97,
+   "quando": "2026-11-10T21:34-03:00",
+   "titulo": "Shampoo Anticaspa Cabelos Normais a Oleosos, Dercos DS Vichy, 125g"
   },
   "MLB37887504": {
    "desconto": 0.38,
@@ -14193,6 +14205,10 @@
     [
      "2026-11-10",
      58.43
+    ],
+    [
+     "2026-11-10",
+     49.97
     ]
    ],
    "min": 39.9
@@ -15393,6 +15409,10 @@
     [
      "2026-11-10",
      117.5
+    ],
+    [
+     "2026-11-10",
+     119.9
     ]
    ],
    "min": 117.5
@@ -20300,6 +20320,10 @@
     [
      "2026-11-10",
      27.06
+    ],
+    [
+     "2026-11-10",
+     26.58
     ]
    ],
    "min": 26.58
@@ -21645,6 +21669,10 @@
     [
      "2026-11-10",
      4084.0
+    ],
+    [
+     "2026-11-10",
+     4249.0
     ]
    ],
    "min": 4084.0
@@ -28257,6 +28285,10 @@
     [
      "2026-11-10",
      299.9
+    ],
+    [
+     "2026-11-10",
+     324.99
     ]
    ],
    "min": 252.99
@@ -31427,6 +31459,10 @@
     [
      "2026-11-10",
      47.42
+    ],
+    [
+     "2026-11-10",
+     47.9
     ]
    ],
    "min": 47.42
@@ -39606,9 +39642,13 @@
     [
      "2026-11-10",
      27.3
+    ],
+    [
+     "2026-11-10",
+     19.76
     ]
    ],
-   "min": 27.3
+   "min": 19.76
   },
   "SHP58254239657": {
    "historico": [
@@ -41189,12 +41229,12 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-10T20:40-03:00",
-   "2026-11-10T20:40-03:00",
    "2026-11-10T20:54-03:00",
    "2026-11-10T20:54-03:00",
    "2026-11-10T21:24-03:00",
-   "2026-11-10T21:24-03:00"
+   "2026-11-10T21:24-03:00",
+   "2026-11-10T21:42-03:00",
+   "2026-11-10T21:42-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -41207,22 +41247,26 @@
    "SHP22094723670": "2026-11-10T20:40-03:00",
    "SHP22197613491": "2026-11-10T19:43-03:00",
    "SHP22198012044": "2026-11-10T19:24-03:00",
+   "SHP22392476232": "2026-11-10T21:42-03:00",
    "SHP22393516179": "2026-11-10T21:24-03:00",
    "SHP22498844695": "2026-11-10T17:15-03:00",
    "SHP22994443307": "2026-11-10T19:24-03:00",
    "SHP23296759926": "2026-11-10T17:34-03:00",
    "SHP28620926406": "2026-11-10T19:57-03:00",
+   "SHP44809598956": "2026-11-10T21:42-03:00",
    "SHP45004572291": "2026-11-10T18:21-03:00",
    "SHP58213273842": "2026-11-10T20:54-03:00",
    "SHP58213474889": "2026-11-10T20:40-03:00",
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 4,
+  "termo": 7,
   "tipos": {
    "2026-11-10": [
     "agua book",
     "boneca",
+    "calcinha kids",
+    "calcinhas menina",
     "cesto roupa",
     "chocalho mordedor",
     "conjunto masculino",
@@ -41252,7 +41296,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T21:14-03:00",
+  "em": "2026-11-10T21:34-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -41555,26 +41599,6 @@
     "titulo": "Kit Mochila Infantil Disney Frozen Azul com Lancheira"
    },
    {
-    "categoria": "outros",
-    "de": 159.9,
-    "desconto": 0.625,
-    "id": "MLB24647478",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_950359-MLA99487901484_112025-F.jpg",
-    "link": "https://meli.la/2PWFurq",
-    "preco": 59.9,
-    "titulo": "Andador Bebe Carrinho Infantil Treina Equilíbrio Zippy Toys Cor Vermelho"
-   },
-   {
-    "categoria": "escola",
-    "de": 41.9,
-    "desconto": 0.449,
-    "id": "MLB51764695",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_670612-MLA99639033325_112025-F.jpg",
-    "link": "https://meli.la/24Z7AFf",
-    "preco": 23.09,
-    "titulo": "Estojo Box Organizador Escolar Com Divisórias Multifuncional 24 Elásticos Lápis Caneta 100 Pens Masculino Femi"
-   },
-   {
     "categoria": "quarto",
     "de": 199.9,
     "desconto": 0.315,
@@ -41853,6 +41877,26 @@
     "link": "https://meli.la/1p2LXfo",
     "preco": 17.37,
     "titulo": "Massageador Mordedor De Gengiva Banana Bebê Buba Cor Amarelo"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 169.9,
+    "desconto": 0.536,
+    "id": "MLB68086238",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_825513-MLA109629080834_042026-F.jpg",
+    "link": "https://meli.la/25BAUrc",
+    "preco": 78.9,
+    "titulo": "Boneca Bebê Reborn Menino Recém Nascido Pode Dar Banho"
+   },
+   {
+    "categoria": "outros",
+    "de": 59.9,
+    "desconto": 0.384,
+    "id": "MLB80328135",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_820161-MLA119031086759_102026-F.jpg",
+    "link": "https://meli.la/2HDXPjg",
+    "preco": 36.9,
+    "titulo": "Aspirador Nasal Rosa Elétrico Infantil Bebê Recarregável USB Sugador de Nariz Limpeza Nasal Portátil Removedor"
    }
   ]
  },
