@@ -5193,6 +5193,12 @@
    "status": "ativo",
    "validade": "2026-11-11T23:59-03:00"
   },
+  "CUPOMEXCLUSIVO": {
+   "criado": "2026-11-11T12:00-03:00",
+   "post": 319,
+   "status": "ativo",
+   "validade": "2026-11-11T23:59-03:00"
+  },
   "CUPOMPRAMODA": {
    "criado": "2026-11-10T10:02-03:00",
    "post": 206,
@@ -5446,8 +5452,8 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5542,
- "cupons_ml_ultimo": 6458,
+ "cupons_extra_ultimo:cupombr": 5543,
+ "cupons_ml_ultimo": 6459,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -11868,7 +11874,7 @@
   },
   "2026-11-11": {
    "com_cupom": 1,
-   "cupons": 16,
+   "cupons": 17,
    "posts": 24,
    "shopee": 12
   }
@@ -13885,6 +13891,17 @@
     }
    ],
    "criado": "2026-11-11T11:50-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "319": {
+   "blocos": [
+    {
+     "codigo": "CUPOMEXCLUSIVO",
+     "html": "<b>🎟️ CUPOMEXCLUSIVO</b> 👉 <b>20% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 11/11\n👉 <a href=\"https://bit.ly/4zdYzBL\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-11T12:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
