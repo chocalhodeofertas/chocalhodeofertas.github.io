@@ -1,5 +1,5 @@
 {
- "aguardando_link": 255,
+ "aguardando_link": 256,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5168,7 +5168,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-10": 46
+  "2026-11-10": 48
  },
  "cupons": {
   "AUTO70OFF": {
@@ -5248,6 +5248,12 @@
    "post": 168,
    "status": "encerrado",
    "validade": "2026-11-09T23:59-03:00"
+  },
+  "MELIHOJE": {
+   "criado": "2026-11-10T21:27-03:00",
+   "post": 278,
+   "status": "ativo",
+   "validade": "2026-11-11T23:59-03:00"
   },
   "MELIMAISPREDD": {
    "criado": "2026-11-10T12:02-03:00",
@@ -5352,7 +5358,7 @@
    "validade": "2026-11-10T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5513,
+ "cupons_extra_ultimo:cupombr": 5514,
  "cupons_ml_ultimo": 6447,
  "descoberta_em": "2026-11-10T11:02-03:00",
  "descobertos": {
@@ -11795,9 +11801,9 @@
  "hist_dia": {
   "2026-11-10": {
    "com_cupom": 7,
-   "cupons": 6,
-   "posts": 42,
-   "shopee": 18
+   "cupons": 7,
+   "posts": 46,
+   "shopee": 20
   }
  },
  "links": {
@@ -12115,8 +12121,8 @@
   "2026-11-09": 2,
   "2026-11-10": 2
  },
- "membros_lido_em": "2026-11-10T20",
- "numeros_em": "2026-11-10T20:54-03:00",
+ "membros_lido_em": "2026-11-10T21",
+ "numeros_em": "2026-11-10T21:14-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12272,6 +12278,12 @@
    "preco": 139.9,
    "quando": "2026-11-07T10:02-03:00",
    "titulo": "Bicicleta de Equilíbrio Infantil Sem Pedal Vermelho Buba"
+  },
+  "MLB24647478": {
+   "desconto": 0.625,
+   "preco": 59.9,
+   "quando": "2026-11-10T21:14-03:00",
+   "titulo": "Andador Bebe Carrinho Infantil Treina Equilíbrio Zippy Toys Cor Vermelho"
   },
   "MLB24679612": {
    "desconto": 0.391,
@@ -12630,6 +12642,12 @@
    "preco": 194.79,
    "quando": "2026-11-09T13:12-03:00",
    "titulo": "Cercadinho Bebê Infantil Chiqueirinho Grande Criança Baby Bear Rosa"
+  },
+  "MLB51764695": {
+   "desconto": 0.449,
+   "preco": 23.09,
+   "quando": "2026-11-10T21:14-03:00",
+   "titulo": "Estojo Box Organizador Escolar Com Divisórias Multifuncional 24 Elásticos Lápis "
   },
   "MLB51979690": {
    "desconto": 0.376,
@@ -13505,6 +13523,17 @@
     }
    ],
    "criado": "2026-11-10T20:33-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "278": {
+   "blocos": [
+    {
+     "codigo": "MELIHOJE",
+     "html": "<b>🎟️ MELIHOJE</b> 👉 <b>15% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 11/11"
+    }
+   ],
+   "criado": "2026-11-10T21:27-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
@@ -15556,6 +15585,10 @@
     [
      "2026-11-10",
      309.0
+    ],
+    [
+     "2026-11-10",
+     323.47
     ]
    ],
    "min": 309.0
@@ -15800,6 +15833,10 @@
     [
      "2026-11-10",
      169.0
+    ],
+    [
+     "2026-11-10",
+     179.0
     ]
    ],
    "min": 169.0
@@ -16120,6 +16157,10 @@
     [
      "2026-11-10",
      19.09
+    ],
+    [
+     "2026-11-10",
+     19.0
     ]
    ],
    "min": 18.2
@@ -17963,6 +18004,10 @@
     [
      "2026-11-10",
      313.73
+    ],
+    [
+     "2026-11-10",
+     302.0
     ]
    ],
    "min": 299.9
@@ -18010,6 +18055,10 @@
     [
      "2026-11-10",
      389.0
+    ],
+    [
+     "2026-11-10",
+     406.43
     ]
    ],
    "min": 389.0
@@ -18822,6 +18871,10 @@
     [
      "2026-11-10",
      98.78
+    ],
+    [
+     "2026-11-10",
+     99.22
     ]
    ],
    "min": 79.97
@@ -19502,9 +19555,13 @@
     [
      "2026-11-06",
      29.99
+    ],
+    [
+     "2026-11-10",
+     29.95
     ]
    ],
-   "min": 29.99
+   "min": 29.95
   },
   "MLB42883642": {
    "historico": [
@@ -21059,6 +21116,10 @@
     [
      "2026-11-06",
      306.52
+    ],
+    [
+     "2026-11-10",
+     316.0
     ]
    ],
    "min": 306.52
@@ -22356,6 +22417,10 @@
     [
      "2026-11-09",
      89.9
+    ],
+    [
+     "2026-11-10",
+     88.27
     ]
    ],
    "min": 69.25
@@ -27771,6 +27836,10 @@
     [
      "2026-11-10",
      164.9
+    ],
+    [
+     "2026-11-10",
+     164.99
     ]
    ],
    "min": 147.0
@@ -37517,9 +37586,13 @@
     [
      "2026-11-10",
      34.99
+    ],
+    [
+     "2026-11-10",
+     34.29
     ]
    ],
-   "min": 34.99
+   "min": 34.29
   },
   "SHP58200946878": {
    "historico": [
@@ -41113,15 +41186,15 @@
    "min": 66.0
   }
  },
- "resumo_enviado": "2026-11-09",
+ "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-10T19:57-03:00",
-   "2026-11-10T19:57-03:00",
    "2026-11-10T20:40-03:00",
    "2026-11-10T20:40-03:00",
    "2026-11-10T20:54-03:00",
-   "2026-11-10T20:54-03:00"
+   "2026-11-10T20:54-03:00",
+   "2026-11-10T21:24-03:00",
+   "2026-11-10T21:24-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -41134,6 +41207,7 @@
    "SHP22094723670": "2026-11-10T20:40-03:00",
    "SHP22197613491": "2026-11-10T19:43-03:00",
    "SHP22198012044": "2026-11-10T19:24-03:00",
+   "SHP22393516179": "2026-11-10T21:24-03:00",
    "SHP22498844695": "2026-11-10T17:15-03:00",
    "SHP22994443307": "2026-11-10T19:24-03:00",
    "SHP23296759926": "2026-11-10T17:34-03:00",
@@ -41141,18 +41215,21 @@
    "SHP45004572291": "2026-11-10T18:21-03:00",
    "SHP58213273842": "2026-11-10T20:54-03:00",
    "SHP58213474889": "2026-11-10T20:40-03:00",
-   "SHP58257299712": "2026-11-10T18:37-03:00"
+   "SHP58257299712": "2026-11-10T18:37-03:00",
+   "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 1,
+  "termo": 4,
   "tipos": {
    "2026-11-10": [
     "agua book",
     "boneca",
     "cesto roupa",
     "chocalho mordedor",
+    "conjunto masculino",
     "conjunto mini",
     "conjunto pcs",
     "creme multifuncional",
+    "fio dental",
     "fralda",
     "higiene pecas",
     "lanca bolhas",
@@ -41175,7 +41252,7 @@
  "tg_offset": 273518000,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-10T20:54-03:00",
+  "em": "2026-11-10T21:14-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -41478,16 +41555,6 @@
     "titulo": "Kit Mochila Infantil Disney Frozen Azul com Lancheira"
    },
    {
-    "categoria": "higiene",
-    "de": 147.9,
-    "desconto": 0.452,
-    "id": "MLB25863440",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_807543-MLA99445819066_112025-F.jpg",
-    "link": "https://meli.la/14rfQiv",
-    "preco": 81.01,
-    "titulo": "Almofada De Banho Para O Bebê Ursinho Cinza 12752 - Buba Ursinhos"
-   },
-   {
     "categoria": "outros",
     "de": 159.9,
     "desconto": 0.625,
@@ -41699,6 +41766,16 @@
    },
    {
     "categoria": "outros",
+    "de": 31.9,
+    "desconto": 0.404,
+    "id": "MLB24679612",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
+    "link": "https://meli.la/1hn9qT6",
+    "preco": 19.0,
+    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
+   },
+   {
+    "categoria": "outros",
     "de": 220.0,
     "desconto": 0.478,
     "id": "MLB43292361",
@@ -41706,16 +41783,6 @@
     "link": "https://meli.la/2xAyqfq",
     "preco": 114.9,
     "titulo": "Andador Educativo Empurrar Infantil Bebê Musical Brinquedo Atentu Rosa"
-   },
-   {
-    "categoria": "outros",
-    "de": 31.9,
-    "desconto": 0.402,
-    "id": "MLB24679612",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_842071-MLA100061053893_122025-F.jpg",
-    "link": "https://meli.la/1hn9qT6",
-    "preco": 19.09,
-    "titulo": "Kit Aspirador Nasal Manual Buba com Seringa e Filtro Sem BPA"
    },
    {
     "categoria": "brinquedo",
@@ -41776,9 +41843,19 @@
     "link": "https://meli.la/13LaFFE",
     "preco": 184.0,
     "titulo": "Cercadinho Grande Para Bebe Infantil Vário Tamanho Acessório 127×127cm Cinza"
+   },
+   {
+    "categoria": "outros",
+    "de": 31.9,
+    "desconto": 0.455,
+    "id": "MLB26816126",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_670798-MLA118562377212_102026-F.jpg",
+    "link": "https://meli.la/1p2LXfo",
+    "preco": 17.37,
+    "titulo": "Massageador Mordedor De Gengiva Banana Bebê Buba Cor Amarelo"
    }
   ]
  },
- "vitrine_assinatura": "88c7a7247123d45998eb4425705542f0b5547c0f",
- "vitrine_publicada_em": "2026-11-10T20:14-03:00"
+ "vitrine_assinatura": "a37ed6b14586ee3af6b99f6be229dc2539089a8b",
+ "vitrine_publicada_em": "2026-11-10T21:14-03:00"
 }
