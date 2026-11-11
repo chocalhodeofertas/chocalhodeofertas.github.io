@@ -5163,6 +5163,12 @@
   "2026-11-11": 17
  },
  "cupons": {
+  "APROVEITAAGORA": {
+   "criado": "2026-11-11T13:00-03:00",
+   "post": 330,
+   "status": "ativo",
+   "validade": "2026-11-12T23:59-03:00"
+  },
   "AUTO70OFF": {
    "criado": "2026-11-09T13:36-03:00",
    "post": 168,
@@ -5452,7 +5458,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5543,
+ "cupons_extra_ultimo:cupombr": 5545,
  "cupons_ml_ultimo": 6460,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
@@ -11874,7 +11880,7 @@
   },
   "2026-11-11": {
    "com_cupom": 2,
-   "cupons": 17,
+   "cupons": 18,
    "posts": 34,
    "shopee": 17
   }
@@ -13932,6 +13938,17 @@
     }
    ],
    "criado": "2026-11-11T12:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "330": {
+   "blocos": [
+    {
+     "codigo": "APROVEITAAGORA",
+     "html": "<b>🎟️ APROVEITAAGORA</b> 👉 <b>30% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$30\n⏰ Válido até 12/11"
+    }
+   ],
+   "criado": "2026-11-11T13:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
