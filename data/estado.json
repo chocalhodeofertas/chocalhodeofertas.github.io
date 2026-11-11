@@ -1,5 +1,5 @@
 {
- "aguardando_link": 238,
+ "aguardando_link": 206,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 9
+  "2026-11-11": 11
  },
  "cupons": {
   "AUTO70OFF": {
@@ -11861,9 +11861,10 @@
    "shopee": 24
   },
   "2026-11-11": {
+   "com_cupom": 1,
    "cupons": 15,
-   "posts": 18,
-   "shopee": 9
+   "posts": 21,
+   "shopee": 10
   }
  },
  "links": {
@@ -12272,8 +12273,8 @@
   "2026-11-10": 2,
   "2026-11-11": 2
  },
- "membros_lido_em": "2026-11-11T10",
- "numeros_em": "2026-11-11T10:45-03:00",
+ "membros_lido_em": "2026-11-11T11",
+ "numeros_em": "2026-11-11T11:05-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12323,6 +12324,12 @@
    "preco": 16.96,
    "quando": "2026-11-08T21:26-03:00",
    "titulo": "Sabonete Líquido Hora Do Sono 200ml Baby Johnson's"
+  },
+  "MLB17876092": {
+   "desconto": 0.457,
+   "preco": 22.78,
+   "quando": "2026-11-11T11:05-03:00",
+   "titulo": "Sabonete Líquido Glicerina Da Cabeça Aos Pés Johnson's Baby, 400ml"
   },
   "MLB18581975": {
    "desconto": 0.442,
@@ -12987,9 +12994,9 @@
    "titulo": "Bola Vinil Inflável Kit Com 10 Bolas Infláveis Cores Sortidas 23cm Praia Piscina"
   },
   "MLB62445069": {
-   "desconto": 0.436,
-   "preco": 349.8,
-   "quando": "2026-11-09T10:32-03:00",
+   "desconto": 0.492,
+   "preco": 314.79,
+   "quando": "2026-11-11T11:05-03:00",
    "titulo": "Cadeirinha Automotiva Atentu BS05 para Bebê e Criança de 9 a 36 kg Vermelha"
   },
   "MLB62572381": {
@@ -14695,6 +14702,10 @@
     [
      "2026-11-11",
      451.0
+    ],
+    [
+     "2026-11-11",
+     457.0
     ]
    ],
    "min": 419.0
@@ -20677,6 +20688,10 @@
     [
      "2026-11-11",
      46.72
+    ],
+    [
+     "2026-11-11",
+     41.0
     ]
    ],
    "min": 41.0
@@ -21287,9 +21302,13 @@
     [
      "2026-11-11",
      25.77
+    ],
+    [
+     "2026-11-11",
+     25.18
     ]
    ],
-   "min": 25.77
+   "min": 25.18
   },
   "MLB45822173": {
    "historico": [
@@ -23161,6 +23180,10 @@
     [
      "2026-11-06",
      19.99
+    ],
+    [
+     "2026-11-11",
+     25.5
     ]
    ],
    "min": 19.99
@@ -24003,9 +24026,13 @@
     [
      "2026-11-09",
      349.8
+    ],
+    [
+     "2026-11-11",
+     314.79
     ]
    ],
-   "min": 349.8
+   "min": 314.79
   },
   "MLB62448507": {
    "historico": [
@@ -25894,6 +25921,10 @@
     [
      "2026-11-11",
      183.0
+    ],
+    [
+     "2026-11-11",
+     184.0
     ]
    ],
    "min": 183.0
@@ -26326,6 +26357,10 @@
     [
      "2026-11-11",
      180.9
+    ],
+    [
+     "2026-11-11",
+     179.9
     ]
    ],
    "min": 163.29
@@ -27896,6 +27931,10 @@
     [
      "2026-11-10",
      33.61
+    ],
+    [
+     "2026-11-11",
+     31.57
     ]
    ],
    "min": 29.9
@@ -30519,9 +30558,13 @@
     [
      "2026-11-10",
      14.99
+    ],
+    [
+     "2026-11-11",
+     13.13
     ]
    ],
-   "min": 14.99
+   "min": 13.13
   },
   "SHP16610445000": {
    "historico": [
@@ -31363,6 +31406,10 @@
     [
      "2026-11-10",
      24.99
+    ],
+    [
+     "2026-11-11",
+     31.99
     ]
    ],
    "min": 24.99
@@ -31430,9 +31477,13 @@
     [
      "2026-11-10",
      36.99
+    ],
+    [
+     "2026-11-11",
+     29.87
     ]
    ],
-   "min": 36.99
+   "min": 29.87
   },
   "SHP19498013784": {
    "historico": [
@@ -31492,9 +31543,13 @@
     [
      "2026-11-10",
      397.66
+    ],
+    [
+     "2026-11-11",
+     386.91
     ]
    ],
-   "min": 397.66
+   "min": 386.91
   },
   "SHP19599043004": {
    "historico": [
@@ -32920,6 +32975,15 @@
    ],
    "min": 27.0
   },
+  "SHP21598330491": {
+   "historico": [
+    [
+     "2026-11-11",
+     29.9
+    ]
+   ],
+   "min": 29.9
+  },
   "SHP21599369006": {
    "historico": [
     [
@@ -33215,6 +33279,15 @@
    ],
    "min": 34.3
   },
+  "SHP22093859063": {
+   "historico": [
+    [
+     "2026-11-11",
+     35.78
+    ]
+   ],
+   "min": 35.78
+  },
   "SHP22094238309": {
    "historico": [
     [
@@ -33238,9 +33311,13 @@
     [
      "2026-11-10",
      99.79
+    ],
+    [
+     "2026-11-11",
+     89.27
     ]
    ],
-   "min": 99.79
+   "min": 89.27
   },
   "SHP22094378943": {
    "historico": [
@@ -33680,6 +33757,10 @@
     [
      "2026-11-10",
      47.9
+    ],
+    [
+     "2026-11-11",
+     49.9
     ]
    ],
    "min": 47.42
@@ -33737,6 +33818,15 @@
     ]
    ],
    "min": 12.99
+  },
+  "SHP22292393292": {
+   "historico": [
+    [
+     "2026-11-11",
+     47.99
+    ]
+   ],
+   "min": 47.99
   },
   "SHP22292923573": {
    "historico": [
@@ -35268,9 +35358,13 @@
     [
      "2026-11-10",
      39.9
+    ],
+    [
+     "2026-11-11",
+     29.9
     ]
    ],
-   "min": 39.9
+   "min": 29.9
   },
   "SHP22798130401": {
    "historico": [
@@ -35559,6 +35653,10 @@
     [
      "2026-11-10",
      63.97
+    ],
+    [
+     "2026-11-11",
+     66.8
     ]
    ],
    "min": 63.97
@@ -36243,6 +36341,10 @@
     [
      "2026-11-10",
      95.78
+    ],
+    [
+     "2026-11-11",
+     96.58
     ]
    ],
    "min": 95.78
@@ -36413,6 +36515,10 @@
     [
      "2026-11-10",
      46.55
+    ],
+    [
+     "2026-11-11",
+     46.56
     ]
    ],
    "min": 46.55
@@ -36983,6 +37089,15 @@
     ]
    ],
    "min": 15.98
+  },
+  "SHP23398879858": {
+   "historico": [
+    [
+     "2026-11-11",
+     25.99
+    ]
+   ],
+   "min": 25.99
   },
   "SHP23399008498": {
    "historico": [
@@ -37633,9 +37748,13 @@
     [
      "2026-11-10",
      34.9
+    ],
+    [
+     "2026-11-11",
+     29.99
     ]
    ],
-   "min": 34.9
+   "min": 29.99
   },
   "SHP23693223002": {
    "historico": [
@@ -39247,15 +39366,23 @@
     [
      "2026-11-10",
      24.9
+    ],
+    [
+     "2026-11-11",
+     22.88
     ]
    ],
-   "min": 24.9
+   "min": 22.88
   },
   "SHP41628916751": {
    "historico": [
     [
      "2026-11-10",
      35.9
+    ],
+    [
+     "2026-11-11",
+     36.9
     ]
    ],
    "min": 35.9
@@ -40611,9 +40738,13 @@
     [
      "2026-11-10",
      64.97
+    ],
+    [
+     "2026-11-11",
+     64.96
     ]
    ],
-   "min": 64.97
+   "min": 64.96
   },
   "SHP55408103589": {
    "historico": [
@@ -40629,6 +40760,10 @@
     [
      "2026-11-10",
      41.9
+    ],
+    [
+     "2026-11-11",
+     43.9
     ]
    ],
    "min": 41.9
@@ -40736,9 +40871,13 @@
     [
      "2026-11-10",
      74.99
+    ],
+    [
+     "2026-11-11",
+     74.9
     ]
    ],
-   "min": 74.99
+   "min": 74.9
   },
   "SHP57206016016": {
    "historico": [
@@ -40866,6 +41005,10 @@
     [
      "2026-11-10",
      28.49
+    ],
+    [
+     "2026-11-11",
+     29.99
     ]
    ],
    "min": 28.49
@@ -41241,6 +41384,15 @@
    ],
    "min": 11.47
   },
+  "SHP58204448907": {
+   "historico": [
+    [
+     "2026-11-11",
+     31.9
+    ]
+   ],
+   "min": 31.9
+  },
   "SHP58204493163": {
    "historico": [
     [
@@ -41448,9 +41600,13 @@
     [
      "2026-11-10",
      70.0
+    ],
+    [
+     "2026-11-11",
+     68.2
     ]
    ],
-   "min": 70.0
+   "min": 68.2
   },
   "SHP58207069383": {
    "historico": [
@@ -42598,6 +42754,15 @@
    ],
    "min": 36.79
   },
+  "SHP58218254211": {
+   "historico": [
+    [
+     "2026-11-11",
+     24.0
+    ]
+   ],
+   "min": 24.0
+  },
   "SHP58218304319": {
    "historico": [
     [
@@ -42648,6 +42813,10 @@
     [
      "2026-11-10",
      11.98
+    ],
+    [
+     "2026-11-11",
+     11.99
     ]
    ],
    "min": 11.98
@@ -42900,6 +43069,10 @@
     [
      "2026-11-10",
      35.14
+    ],
+    [
+     "2026-11-11",
+     36.99
     ]
    ],
    "min": 35.14
@@ -43489,9 +43662,13 @@
     [
      "2026-11-10",
      13.7
+    ],
+    [
+     "2026-11-11",
+     13.49
     ]
    ],
-   "min": 13.7
+   "min": 13.49
   },
   "SHP58256871642": {
    "historico": [
@@ -43808,6 +43985,10 @@
     [
      "2026-11-10",
      38.44
+    ],
+    [
+     "2026-11-11",
+     38.45
     ]
    ],
    "min": 38.44
@@ -43969,6 +44150,10 @@
     [
      "2026-11-10",
      37.51
+    ],
+    [
+     "2026-11-11",
+     39.9
     ]
    ],
    "min": 37.51
@@ -44267,6 +44452,15 @@
     ]
    ],
    "min": 29.99
+  },
+  "SHP58265003459": {
+   "historico": [
+    [
+     "2026-11-11",
+     59.9
+    ]
+   ],
+   "min": 59.9
   },
   "SHP58265369761": {
    "historico": [
@@ -45000,7 +45194,8 @@
   "hora": [
    "2026-11-11T10:14-03:00",
    "2026-11-11T10:14-03:00",
-   "2026-11-11T10:26-03:00"
+   "2026-11-11T10:26-03:00",
+   "2026-11-11T11:13-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -45016,6 +45211,7 @@
    "SHP22094723670": "2026-11-10T20:40-03:00",
    "SHP22197613491": "2026-11-10T19:43-03:00",
    "SHP22198012044": "2026-11-10T19:24-03:00",
+   "SHP22296700159": "2026-11-11T11:13-03:00",
    "SHP22392476232": "2026-11-10T21:42-03:00",
    "SHP22393516179": "2026-11-10T21:24-03:00",
    "SHP22498844695": "2026-11-10T17:15-03:00",
@@ -45037,11 +45233,12 @@
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 5,
+  "termo": 8,
   "tipos": {
    "2026-11-11": [
     "babuche menina",
     "biblia meninas",
+    "conjunto masculino",
     "fralda",
     "lego/blocos",
     "lenco umedecido",
@@ -45060,7 +45257,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T10:45-03:00",
+  "em": "2026-11-11T11:05-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -45141,6 +45338,16 @@
     "link": "https://meli.la/2FcodwC",
     "preco": 288.9,
     "titulo": "Banheira com Suporte Dobrável para Bebê Mini Assento Válvula de Esvaziamento 45 Litros Lisa Plástico Rígido At"
+   },
+   {
+    "categoria": "passeio",
+    "de": 619.9,
+    "desconto": 0.492,
+    "id": "MLB62445069",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_849686-MLA99207858759_112025-F.jpg",
+    "link": "https://meli.la/1jDpjpK",
+    "preco": 314.79,
+    "titulo": "Cadeirinha Automotiva Atentu BS05 para Bebê e Criança de 9 a 36 kg Vermelha"
    },
    {
     "categoria": "escola",
@@ -45543,6 +45750,16 @@
     "titulo": "Kit Mochila Infantil Disney Frozen Azul com Lancheira"
    },
    {
+    "categoria": "quarto",
+    "de": 1099.0,
+    "desconto": 0.455,
+    "id": "MLB65896917",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_952958-MLA114390358396_082026-F.jpg",
+    "link": "https://meli.la/1XZ2xMc",
+    "preco": 598.9,
+    "titulo": "Berço Portátil Balanço Moises Sleepguard Cobed Bege Ragaluma Bege"
+   },
+   {
     "categoria": "higiene",
     "de": 45.8,
     "desconto": 0.454,
@@ -45551,6 +45768,16 @@
     "link": "https://meli.la/189Unwc",
     "preco": 24.99,
     "titulo": "Lenços Umedecidos Huggies Recém Nascido Pack C/4 - 192 Un"
+   },
+   {
+    "categoria": "quarto",
+    "de": 199.99,
+    "desconto": 0.325,
+    "id": "MLB30430533",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_861910-MLA100372311178_122025-F.jpg",
+    "link": "https://meli.la/1AB9pCs",
+    "preco": 134.9,
+    "titulo": "Colchão Berço Prorelax D18 Branco Para Bebê, 70 x 130 cm - Prorelax"
    },
    {
     "categoria": "gestante",
@@ -45631,39 +45858,9 @@
     "link": "https://meli.la/2bAX86M",
     "preco": 90.0,
     "titulo": "Andador Empurrador Infantil Musical Educativo Rosa Yuupi YPHE0811"
-   },
-   {
-    "categoria": "passeio",
-    "de": 1799.9,
-    "desconto": 0.366,
-    "id": "MLB62926546",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_760834-MLA100113185128_122025-F.jpg",
-    "link": "https://meli.la/1HM1CU6",
-    "preco": 1141.0,
-    "titulo": "Carrinho de Bebê Travel System Maxi Baby Elysian Cinza e Dourado com Moisés e Bebê Conforto"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 78.99,
-    "desconto": 0.707,
-    "id": "MLB76574611",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_815293-MLA115438222718_082026-F.jpg",
-    "link": "https://meli.la/1c7EjFK",
-    "preco": 23.18,
-    "titulo": "Tapete De Atividades Para Bebes Almofada De Água Inflável Interativo Aquário Sensorial Fundo Do Mar Rosa Tsc S"
-   },
-   {
-    "categoria": "gestante",
-    "de": 69.99,
-    "desconto": 0.364,
-    "id": "MLB65558091",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_637788-MLA107177132239_022026-F.jpg",
-    "link": "https://meli.la/1Z6CgKJ",
-    "preco": 44.52,
-    "titulo": "Trocador Absorvente Baby & Me 10 Unid"
    }
   ]
  },
- "vitrine_assinatura": "92a1c86f2d85d3084067f4e53f5b48473d6a51a6",
- "vitrine_publicada_em": "2026-11-11T10:05-03:00"
+ "vitrine_assinatura": "3ea235480311596b42de218dd641262d6fc015df",
+ "vitrine_publicada_em": "2026-11-11T11:05-03:00"
 }
