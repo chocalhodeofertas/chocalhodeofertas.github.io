@@ -5307,6 +5307,12 @@
    "status": "encerrado",
    "validade": "2026-11-09T23:59-03:00"
   },
+  "MELHORESPROMOS": {
+   "criado": "2026-11-11T19:00-03:00",
+   "post": 375,
+   "status": "ativo",
+   "validade": "2026-11-11T23:59-03:00"
+  },
   "MELHOROFERTA": {
    "criado": "2026-11-11T15:01-03:00",
    "post": 350,
@@ -5513,7 +5519,7 @@
   }
  },
  "cupons_extra_ultimo:cupombr": 5557,
- "cupons_ml_ultimo": 6470,
+ "cupons_ml_ultimo": 6471,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -11934,7 +11940,7 @@
   },
   "2026-11-11": {
    "com_cupom": 3,
-   "cupons": 27,
+   "cupons": 28,
    "posts": 72,
    "shopee": 36
   }
@@ -14161,6 +14167,17 @@
     }
    ],
    "criado": "2026-11-11T18:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "375": {
+   "blocos": [
+    {
+     "codigo": "MELHORESPROMOS",
+     "html": "<b>🎟️ MELHORESPROMOS</b> 👉 <b>10% OFF</b>\nCompra mín.: R$149 · Desconto máx.: R$100\n⏰ Válido até 11/11\n👉 <a href=\"https://bit.ly/4sQuRkL\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-11T19:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
