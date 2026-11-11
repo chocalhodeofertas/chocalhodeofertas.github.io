@@ -5361,6 +5361,12 @@
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
   },
+  "SEMPREAQUI": {
+   "criado": "2026-11-11T10:00-03:00",
+   "post": 302,
+   "status": "ativo",
+   "validade": "2026-11-12T23:59-03:00"
+  },
   "SITETODO1011": {
    "criado": "2026-11-10T12:02-03:00",
    "post": 215,
@@ -5398,7 +5404,7 @@
    "validade": "2026-11-10T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5535,
+ "cupons_extra_ultimo:cupombr": 5536,
  "cupons_ml_ultimo": 6454,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
@@ -11819,7 +11825,7 @@
    "shopee": 24
   },
   "2026-11-11": {
-   "cupons": 8,
+   "cupons": 9,
    "posts": 12,
    "shopee": 6
   }
@@ -13679,6 +13685,17 @@
     }
    ],
    "criado": "2026-11-11T08:04-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "302": {
+   "blocos": [
+    {
+     "codigo": "SEMPREAQUI",
+     "html": "<b>🎟️ SEMPREAQUI</b> 👉 <b>15% OFF</b>\nDesconto máx.: R$80\n⏰ Válido até 12/11"
+    }
+   ],
+   "criado": "2026-11-11T10:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
