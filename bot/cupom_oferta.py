@@ -15,6 +15,7 @@ afirmamos o que o anúncio não diz). Regras usadas:
 - só mostra quando economiza pelo menos R$ 2.
 """
 import html
+import json
 import re
 from datetime import datetime
 
@@ -127,3 +128,81 @@ def melhor_cupom(estado, oferta, agora):
             melhor = {"codigo": codigo, "economia": e, "preco": round(oferta.preco - e, 2),
                       "desconto": html.unescape(desc.group(1)).strip() if desc else ""}
     return melhor
+
+
+# ---------- cupom mostrado pelo próprio Mercado Livre no anúncio ----------
+# O link meli.la abre a página social do afiliado. O 1º bloco "polycards" é o
+# produto compartilhado e, quando ele tem cupom, o card traz o selo "com Cupom":
+#  - promotions [{type: coupon, text: "{1} com Cupom", values: [preço]}] → preço com cupom
+#  - promotions [{type: coupon, text: "8% OFF com Cupom"}]              → só o percentual
+#  - price.discount_label "44% OFF com Cupom" → o preço do card já é com cupom
+# É o ML dizendo que AQUELE produto tem cupom, então não precisa de "se elegível".
+
+def _cards_do_produto(texto):
+    i = (texto or "").find('"polycards":')
+    if i < 0:
+        return []
+    try:
+        cards, _ = json.JSONDecoder().raw_decode(texto[i + len('"polycards":'):])
+    except ValueError:
+        return []
+    return cards if isinstance(cards, list) else []
+
+
+def ler_cupom_pagina(texto, oferta_id, preco):
+    """{'origem': 'pagina', 'preco', 'economia', 'desconto'} ou None."""
+    cards = _cards_do_produto(texto)
+    if not cards:
+        return None
+    card = cards[0]
+    md = card.get("metadata") or {}
+    if oferta_id and oferta_id not in (md.get("id"), md.get("product_id")):
+        return None  # o card não é o produto do link: melhor não arriscar
+    comps = {c.get("type"): c.get(c.get("type")) for c in card.get("components") or []}
+    price = comps.get("price") or {}
+    atual = (price.get("current_price") or {}).get("value")
+    rotulo = ((price.get("discount_label") or {}).get("text") or "")
+    for p in comps.get("promotions") or []:
+        if p.get("type") != "coupon":
+            continue
+        valores = [v["price"]["value"] for v in p.get("values") or [] if v.get("type") == "price"]
+        if valores:
+            novo = float(valores[0])
+            if preco - novo >= ECONOMIA_MIN:
+                return {"origem": "pagina", "preco": round(novo, 2), "economia": round(preco - novo, 2),
+                        "desconto": ""}
+        pct = re.search(r"(\d+(?:[.,]\d+)?)\s*%\s*OFF", p.get("text") or "", re.I)
+        if pct:
+            return {"origem": "pagina", "preco": None, "economia": 0.0,
+                    "desconto": f"{pct.group(1).replace('.', ',')}% OFF"}
+    if "cupom" in rotulo.lower() and atual and preco - float(atual) >= ECONOMIA_MIN:
+        return {"origem": "pagina", "preco": round(float(atual), 2),
+                "economia": round(preco - float(atual), 2), "desconto": ""}
+    return None
+
+
+def cupom_da_pagina(oferta, session=None, log=print):
+    """Abre o meli.la da oferta e lê o cupom do anúncio. Qualquer falha → None."""
+    link = getattr(oferta, "link", "") or ""
+    if "meli.la/" not in link:
+        return None
+    import requests
+
+    from .comandos import UA
+
+    try:
+        r = (session or requests).get(link, headers=UA, timeout=25)
+        return ler_cupom_pagina(r.text, getattr(oferta, "id", None), oferta.preco)
+    except Exception as e:  # noqa: BLE001 - sem cupom não impede o post
+        log(f"Aviso: não consegui ler o cupom da página de {getattr(oferta, 'id', '?')}: {e}")
+        return None
+
+
+def escolher_cupom(estado, oferta, agora, session=None, log=print):
+    """Cupom do próprio anúncio (certo) ou o melhor cupom do canal (se elegível).
+    Fica com o que deixa o produto mais barato; empate ou sem preço fica com o do anúncio."""
+    do_anuncio = cupom_da_pagina(oferta, session, log)
+    do_canal = melhor_cupom(estado, oferta, agora)
+    if do_anuncio and do_canal and do_canal["economia"] > do_anuncio["economia"] and do_anuncio["preco"]:
+        return do_canal
+    return do_anuncio or do_canal

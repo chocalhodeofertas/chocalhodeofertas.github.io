@@ -391,7 +391,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         o = _reconferir(ml, por_id.get(o.id), o, estado, cfg, agora)
         if o is None:
             continue  # tenta a próxima da fila, sem esperar de novo
-        o.cupom = cupom_oferta.melhor_cupom(estado, o, agora)
+        o.cupom = cupom_oferta.escolher_cupom(estado, o, agora, log=log)
         try:
             tg.enviar_oferta(cfg.canal, mensagens.montar_telegram(o, rng), o.imagem)
         except TelegramErro as e:

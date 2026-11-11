@@ -221,9 +221,20 @@ def _linhas_preco(oferta, negrito, riscado, codigo=lambda t: t):
     if getattr(oferta, "loja", "") == "shopee" and getattr(oferta, "vendas", 0):
         linhas.append(f"⭐ {str(round(oferta.nota, 1)).replace('.', ',')} · {_vendidos(oferta.vendas)}")
     cp = getattr(oferta, "cupom", None)
-    if cp:
+    if cp and cp.get("origem") == "pagina":
+        if cp.get("preco"):
+            linhas.append(f"🎟️ Com cupom do anúncio: {negrito(brl(cp['preco']))}*")
+        else:
+            linhas.append(f"🎟️ Tem cupom de {negrito(cp['desconto'])} no anúncio*")
+    elif cp:
         linhas.append(f"🎟️ Com o cupom {codigo(cp['codigo'])}: {negrito(brl(cp['preco']))}*")
     return linhas
+
+
+def _nota_cupom(oferta):
+    if (getattr(oferta, "cupom", None) or {}).get("origem") == "pagina":
+        return "*Ative o cupom na página do produto antes de comprar."
+    return "*Se o produto for elegível ao cupom. Confira no carrinho antes de pagar."
 
 
 def _vendidos(n):
@@ -249,8 +260,7 @@ def montar_telegram(oferta, rng=random):
         "",
         f'👉 <a href="{html.escape(oferta.link, quote=True)}">Ver oferta {_nome_loja(oferta)}</a>',
         "",
-        *(["<i>*Se o produto for elegível ao cupom. Confira no carrinho antes de pagar.</i>"]
-          if getattr(oferta, "cupom", None) else []),
+        *([f"<i>{_nota_cupom(oferta)}</i>"] if getattr(oferta, "cupom", None) else []),
         "<i>Preço e estoque podem mudar a qualquer momento. #publi · link de afiliado</i>",
     ]
     return "\n".join(partes)[:1024]
@@ -268,8 +278,7 @@ def montar_whatsapp(oferta, rng=random):
         "",
         f"👉 {getattr(oferta, 'link_wa', None) or oferta.link}",
         "",
-        *(["_*Se o produto for elegível ao cupom. Confira no carrinho antes de pagar._"]
-          if getattr(oferta, "cupom", None) else []),
+        *([f"_{_nota_cupom(oferta)}_"] if getattr(oferta, "cupom", None) else []),
         "_Preço e estoque podem mudar a qualquer momento. #publi · link de afiliado_",
     ]
     return "\n".join(partes)
