@@ -73,3 +73,26 @@ def posts_ultima_hora(estado, agora):
         except (KeyError, ValueError, TypeError):
             pass
     return total
+
+
+def titulos_recentes(estado, agora, dias=3):
+    """Títulos postados (Mercado Livre e Shopee) nos últimos dias."""
+    from datetime import datetime, timedelta
+
+    corte = agora - timedelta(days=dias)
+    saida = []
+    fontes = list(estado.get("postados", {}).values()) + list(estado.get("shopee", {}).get("titulos", {}).values())
+    for v in fontes:
+        try:
+            if v.get("titulo") and datetime.fromisoformat(v["quando"]) > corte:
+                saida.append(v["titulo"])
+        except (KeyError, ValueError, TypeError, AttributeError):
+            pass
+    return saida
+
+
+def repetido(estado, titulo, agora, dias=3):
+    """True se um produto igual ou bem parecido já saiu nos últimos dias."""
+    from .ofertas import parecido
+
+    return any(parecido(titulo, t) for t in titulos_recentes(estado, agora, dias))

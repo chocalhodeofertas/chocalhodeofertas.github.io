@@ -53,6 +53,7 @@ _REGRAS.append((
     r"mortal kombat|resident evil|the last of us|god of war|elden ring|battlefield|dead space|dead island|"
     r"silent hill|\bdoom\b|outlast|assassin.?s creed)",
 ))
+_REGRAS.append(("Fora do nicho (marca adulta)", r"\bnew era\b"))
 _REGRAS.append(("Possível réplica", r"\b(replica|tailandesa|1a linha|primeira linha|1 linha)\b"))
 _COMPILADAS = [(motivo, re.compile(p)) for motivo, p in _REGRAS]
 
@@ -94,12 +95,19 @@ _CASAL = re.compile(r"\bcasal\b")
 _ITEM_DE_BEBE = re.compile(r"\b(berco|co ?sleeper|moises|bebe conforto|carrinho|cadeirinha|trocador|fralda)")
 
 
+# Boné, chapéu e afins: quase sempre adulto. Só passa com sinal claro de criança ("juvenil" não basta)
+_ACESSORIO_CABECA = re.compile(r"\b(bones?|chapeus?|viseiras?|bucket|toucas?|gorros?)\b")
+_CRIANCA_CLARO = re.compile(r"\b(infantil|infantis|crianca|criancas|kids|kid|bebe|bebes|baby|menino|meninos|menina|meninas)\b")
+
+
 def fora_da_faixa(titulo, categoria, regra=None):
     """Motivo para pular produtos que não são do universo infantil (ou None).
 
     Vale para tudo (itens de casa/adulto que vazam das categorias de bebê) e,
     nas áreas novas, exige sinal de produto infantil no título."""
     t = normalizar(titulo)
+    if _ACESSORIO_CABECA.search(t) and not _CRIANCA_CLARO.search(t):
+        return "boné/chapéu sem ser infantil"
     if not _INFANTIL.search(t):
         if _CASA_ADULTO.search(t) or (_CASAL.search(t) and not _ITEM_DE_BEBE.search(t)):
             return "item de casa/adulto (fora do nicho)"

@@ -383,6 +383,8 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         tp = tipo_produto(o.titulo)
         if tp in tipos_hoje:
             continue  # já saiu um desse tipo hoje (ex.: outra babá eletrônica)
+        if est.repetido(estado, o.titulo, agora, cfg.repost_dias):
+            continue  # mesmo produto (outro anúncio) já saiu nos últimos dias
         if esperar_antes:
             espera = rng.uniform(cfg.intervalo_min, max(cfg.intervalo_max, cfg.intervalo_min))
             log(f"Próximo post em {espera:.1f} min.")

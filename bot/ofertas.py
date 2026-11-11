@@ -49,8 +49,8 @@ def avaliar(produto, info, estado, agora: datetime, min_desconto=0.15, repost_di
     postado = estado["postados"].get(produto.id)
     if postado:
         dias = (agora - datetime.fromisoformat(postado["quando"])).total_seconds() / 86400
-        # Repete só depois de alguns dias, ou se o preço caiu mais 5%
-        if dias < repost_dias and preco > postado["preco"] * 0.95:
+        # O mesmo produto só volta depois de alguns dias (mesmo que o preço caia)
+        if dias < repost_dias:
             return None
 
     return Oferta(
@@ -151,3 +151,26 @@ def meta_ate_agora(max_por_dia, hora, inicio=8, fim=22):
 def limite_hora(max_por_hora, hora):
     """No pico, até 2 posts a mais por hora."""
     return max_por_hora + (2 if hora in PESO_HORA else 0)
+
+
+# Palavras que não ajudam a dizer se dois títulos são o mesmo produto
+_VAZIAS = {"kit", "com", "para", "de", "da", "do", "das", "dos", "em", "e", "a", "o", "infantil", "bebe", "bebes",
+           "baby", "crianca", "criancas", "menino", "menina", "unissex", "original", "novo", "nova", "promocao",
+           "oferta", "envio", "imediato", "pronta", "entrega"}
+
+
+def assinatura(titulo):
+    """Primeiras palavras que importam no título (para achar o mesmo produto com outro anúncio)."""
+    from .filtros import normalizar
+
+    return [p for p in re.findall(r"[a-z0-9]+", normalizar(titulo)) if p not in _VAZIAS and len(p) > 1][:8]
+
+
+def parecido(a, b):
+    """True se os dois títulos parecem o mesmo produto (ou um bem parecido)."""
+    wa, wb = assinatura(a), assinatura(b)
+    if not wa or not wb:
+        return False
+    sa, sb = set(wa), set(wb)
+    comuns = len(sa & sb)
+    return (comuns >= 3 and comuns / len(sa | sb) >= 0.5) or (len(wa) >= 3 and wa[:3] == wb[:3])

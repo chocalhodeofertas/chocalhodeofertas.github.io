@@ -135,7 +135,7 @@ def test_nao_repete_logo():
     e = est.novo()
     est.registrar_post(e, "MLB1", 70, AGORA - timedelta(days=1))
     assert avaliar(prod(), info(70, 100), e, AGORA) is None
-    assert avaliar(prod(), info(60, 100), e, AGORA) is not None  # caiu mais
+    assert avaliar(prod(), info(60, 100), e, AGORA) is None  # mesmo caindo, espera os 3 dias
     assert avaliar(prod(), info(70, 100), e, AGORA + timedelta(days=3)) is not None
 
 
@@ -1337,3 +1337,29 @@ def test_escolhe_entre_cupom_do_anuncio_e_do_canal():
     assert co.escolher_cupom(e, o, AGORA, Sessao("<html></html>"))["codigo"] == "SITETODO10"
     o.link = "https://produto.mercadolivre.com.br/x?matt_word=y"  # link direto: nem abre a página
     assert co.escolher_cupom(e, o, AGORA, Sessao(pag))["codigo"] == "SITETODO10"
+
+
+def test_bone_adulto_bloqueado():
+    from bot.filtros import fora_da_faixa, motivo_bloqueio
+    assert motivo_bloqueio("Boné New Era 9FORTY Aba Curva Yankees")
+    assert fora_da_faixa("Boné Aba Reta Juvenil Snapback", "roupa")
+    assert fora_da_faixa("Boné Infantil Dinossauro Ajustável", "roupa") is None
+    assert fora_da_faixa("Boneca Bebê Reborn Menina", "brinquedo") is None
+
+
+def test_mesmo_produto_outro_anuncio_nao_repete():
+    from datetime import datetime, timedelta, timezone
+    from bot import estado as est
+    from bot.ofertas import parecido
+    fuso = timezone(timedelta(hours=-3))
+    agora = datetime(2026, 11, 11, 15, 0, tzinfo=fuso)
+    e = {"postados": {"MLB1": {"quando": (agora - timedelta(days=1)).isoformat(),
+                               "titulo": "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampado"}},
+         "shopee": {"titulos": {"SHP9": {"quando": (agora - timedelta(days=2)).isoformat(),
+                                         "titulo": "Babá Eletrônica Baby Monitor Vb603 Visão Noturna"}}}}
+    assert est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampa Azul", agora)
+    assert est.repetido(e, "Baba Eletronica Baby Monitor Vb603 Visao Noturna Dual Audio", agora)
+    assert not est.repetido(e, "Mochila Escolar Infantil Dinossauro", agora)
+    # depois de 3 dias pode voltar
+    assert not est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora + timedelta(days=3))
+    assert not parecido("Patinete Infantil 3 Rodas Led", "Boneca Reborn Realista")
