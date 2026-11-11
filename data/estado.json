@@ -1,5 +1,5 @@
 {
- "aguardando_link": 215,
+ "aguardando_link": 213,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 23
+  "2026-11-11": 25
  },
  "cupons": {
   "APROVEITAAGORA": {
@@ -5174,6 +5174,12 @@
    "post": 168,
    "status": "ativo",
    "validade": "2026-11-12T23:59-03:00"
+  },
+  "BEAUTY10": {
+   "criado": "2026-11-11T14:25-03:00",
+   "post": 347,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
   },
   "BELEZALUXO": {
    "criado": "2026-11-11T08:00-03:00",
@@ -5198,6 +5204,12 @@
    "post": 267,
    "status": "ativo",
    "validade": "2026-11-11T23:59-03:00"
+  },
+  "COZINHA10": {
+   "criado": "2026-11-11T14:25-03:00",
+   "post": 347,
+   "status": "ativo",
+   "validade": null
   },
   "CUPOMEXCLUSIVO": {
    "criado": "2026-11-11T12:00-03:00",
@@ -5343,6 +5355,12 @@
    "status": "ativo",
    "validade": "2026-11-11T23:59-03:00"
   },
+  "MOP10SHARK": {
+   "criado": "2026-11-11T14:25-03:00",
+   "post": 347,
+   "status": "ativo",
+   "validade": null
+  },
   "OFERTAJA22": {
    "criado": "2026-11-11T10:03-03:00",
    "post": 303,
@@ -5471,7 +5489,7 @@
   }
  },
  "cupons_extra_ultimo:cupombr": 5548,
- "cupons_ml_ultimo": 6463,
+ "cupons_ml_ultimo": 6464,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -11892,9 +11910,9 @@
   },
   "2026-11-11": {
    "com_cupom": 2,
-   "cupons": 20,
-   "posts": 45,
-   "shopee": 22
+   "cupons": 23,
+   "posts": 48,
+   "shopee": 23
   }
  },
  "links": {
@@ -12304,7 +12322,7 @@
   "2026-11-11": 2
  },
  "membros_lido_em": "2026-11-11T14",
- "numeros_em": "2026-11-11T14:05-03:00",
+ "numeros_em": "2026-11-11T14:25-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12909,6 +12927,12 @@
    "quando": "2026-11-08T14:33-03:00",
    "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Cinza"
   },
+  "MLB52279765": {
+   "desconto": 0.49,
+   "preco": 74.49,
+   "quando": "2026-11-11T14:25-03:00",
+   "titulo": "Assento Redutor Infantil Escada Para Vaso Sanitário Troninho Cor Azul Lisa"
+  },
   "MLB52680667": {
    "desconto": 0.557,
    "preco": 119.61,
@@ -13430,6 +13454,12 @@
    "preco": 26.9,
    "quando": "2026-11-11T12:05-03:00",
    "titulo": "MoveBrinca Bola De Ar Flutuante Com LED Para Crianças 3 Velocidades E Proteção D"
+  },
+  "MLB75505071": {
+   "desconto": 0.491,
+   "preco": 178.0,
+   "quando": "2026-11-11T14:25-03:00",
+   "titulo": "Suporte de Banho Infantil Ajustável Bebê em Pé Base Antiderrapante SekBem Azul"
   },
   "MLB75537532": {
    "desconto": 0.599,
@@ -14010,6 +14040,25 @@
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
+  "347": {
+   "blocos": [
+    {
+     "codigo": "BEAUTY10",
+     "html": "<b>🎟️ BEAUTY10</b> 👉 <b>10%</b>\nCompra mín.: Sem compra mínima · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4ja0zpD\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "COZINHA10",
+     "html": "<b>🎟️ COZINHA10</b> 👉 <b>10%</b>\nCompra mín.: Sem compra mínima · Desconto máx.: R$199\n👉 <a href=\"https://bit.ly/4sYvU2a\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "MOP10SHARK",
+     "html": "<b>🎟️ MOP10SHARK</b> 👉 <b>10%</b>\nCompra mín.: Sem compra mínima · Desconto máx.: R$79\n👉 <a href=\"https://bit.ly/4zFurA9\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-11T14:25-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
   "47": {
    "blocos": [
     {
@@ -14152,6 +14201,10 @@
     [
      "2026-11-11",
      487.48
+    ],
+    [
+     "2026-11-11",
+     499.0
     ]
    ],
    "min": 487.48
@@ -15285,6 +15338,10 @@
     [
      "2026-11-11",
      499.9
+    ],
+    [
+     "2026-11-11",
+     646.1
     ]
    ],
    "min": 499.9
@@ -15877,6 +15934,10 @@
     [
      "2026-11-11",
      759.0
+    ],
+    [
+     "2026-11-11",
+     728.9
     ]
    ],
    "min": 699.9
@@ -17202,6 +17263,10 @@
     [
      "2026-11-11",
      679.9
+    ],
+    [
+     "2026-11-11",
+     729.9
     ]
    ],
    "min": 626.28
@@ -17283,6 +17348,10 @@
     [
      "2026-11-11",
      38.9
+    ],
+    [
+     "2026-11-11",
+     42.9
     ]
    ],
    "min": 37.61
@@ -17559,6 +17628,10 @@
     [
      "2026-11-11",
      169.99
+    ],
+    [
+     "2026-11-11",
+     177.12
     ]
    ],
    "min": 169.99
@@ -18011,6 +18084,10 @@
     [
      "2026-11-11",
      109.9
+    ],
+    [
+     "2026-11-11",
+     147.0
     ]
    ],
    "min": 109.9
@@ -18373,6 +18450,10 @@
     [
      "2026-11-11",
      159.99
+    ],
+    [
+     "2026-11-11",
+     173.82
     ]
    ],
    "min": 159.99
@@ -18510,9 +18591,13 @@
     [
      "2026-11-11",
      21.0
+    ],
+    [
+     "2026-11-11",
+     20.37
     ]
    ],
-   "min": 21.0
+   "min": 20.37
   },
   "MLB28827356": {
    "historico": [
@@ -18605,6 +18690,10 @@
     [
      "2026-11-09",
      4349.0
+    ],
+    [
+     "2026-11-11",
+     4580.0
     ]
    ],
    "min": 4199.0
@@ -18811,6 +18900,10 @@
     [
      "2026-11-11",
      549.0
+    ],
+    [
+     "2026-11-11",
+     434.99
     ]
    ],
    "min": 368.28
@@ -19149,6 +19242,10 @@
     [
      "2026-11-11",
      271.0
+    ],
+    [
+     "2026-11-11",
+     313.73
     ]
    ],
    "min": 270.0
@@ -19216,6 +19313,10 @@
     [
      "2026-11-11",
      443.57
+    ],
+    [
+     "2026-11-11",
+     429.9
     ]
    ],
    "min": 389.0
@@ -20759,6 +20860,10 @@
     [
      "2026-11-11",
      63.9
+    ],
+    [
+     "2026-11-11",
+     32.99
     ]
    ],
    "min": 30.99
@@ -21796,6 +21901,10 @@
     [
      "2026-11-11",
      62.87
+    ],
+    [
+     "2026-11-11",
+     65.0
     ]
    ],
    "min": 62.49
@@ -23569,6 +23678,10 @@
     [
      "2026-11-11",
      5201.01
+    ],
+    [
+     "2026-11-11",
+     4694.0
     ]
    ],
    "min": 4694.0
@@ -23843,9 +23956,13 @@
     [
      "2026-11-09",
      18.0
+    ],
+    [
+     "2026-11-11",
+     16.8
     ]
    ],
-   "min": 18.0
+   "min": 16.8
   },
   "MLB58692864": {
    "historico": [
@@ -24299,6 +24416,10 @@
     [
      "2026-11-11",
      367.91
+    ],
+    [
+     "2026-11-11",
+     398.13
     ]
    ],
    "min": 367.91
@@ -26344,6 +26465,10 @@
     [
      "2026-11-09",
      18.49
+    ],
+    [
+     "2026-11-11",
+     21.56
     ]
    ],
    "min": 18.49
@@ -29730,6 +29855,10 @@
     [
      "2026-11-10",
      328.0
+    ],
+    [
+     "2026-11-11",
+     328.58
     ]
    ],
    "min": 282.0
@@ -29823,6 +29952,10 @@
     [
      "2026-11-11",
      379.9
+    ],
+    [
+     "2026-11-11",
+     409.0
     ]
    ],
    "min": 351.0
@@ -35111,6 +35244,10 @@
     [
      "2026-11-11",
      11.99
+    ],
+    [
+     "2026-11-11",
+     11.98
     ]
    ],
    "min": 11.98
@@ -35301,6 +35438,10 @@
     [
      "2026-11-10",
      42.69
+    ],
+    [
+     "2026-11-11",
+     44.69
     ]
    ],
    "min": 42.69
@@ -38972,9 +39113,13 @@
     [
      "2026-11-11",
      52.89
+    ],
+    [
+     "2026-11-11",
+     44.99
     ]
    ],
-   "min": 52.89
+   "min": 44.99
   },
   "SHP23693280249": {
    "historico": [
@@ -42537,6 +42682,15 @@
     ]
    ],
    "min": 45.99
+  },
+  "SHP58200973028": {
+   "historico": [
+    [
+     "2026-11-11",
+     10.0
+    ]
+   ],
+   "min": 10.0
   },
   "SHP58201178959": {
    "historico": [
@@ -46820,11 +46974,10 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-11T13:16-03:00",
-   "2026-11-11T13:16-03:00",
    "2026-11-11T13:34-03:00",
    "2026-11-11T13:34-03:00",
-   "2026-11-11T13:47-03:00"
+   "2026-11-11T13:47-03:00",
+   "2026-11-11T14:31-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -46846,6 +46999,7 @@
    "SHP22296700159": "2026-11-11T11:13-03:00",
    "SHP22392476232": "2026-11-10T21:42-03:00",
    "SHP22393516179": "2026-11-10T21:24-03:00",
+   "SHP22401382655": "2026-11-11T14:31-03:00",
    "SHP22494274076": "2026-11-11T12:32-03:00",
    "SHP22498844695": "2026-11-10T17:15-03:00",
    "SHP22793967394": "2026-11-11T13:16-03:00",
@@ -46874,7 +47028,7 @@
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 0,
+  "termo": 3,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -46896,6 +47050,7 @@
     "refeicao prato",
     "saquinho organizador",
     "saquinhos maternidade",
+    "shampoo condicionador",
     "tapete inflavel",
     "tenis meninos",
     "toalha banho"
@@ -46910,7 +47065,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T14:05-03:00",
+  "em": "2026-11-11T14:25-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -47151,16 +47306,6 @@
     "link": "https://meli.la/16jZHCR",
     "preco": 379.99,
     "titulo": "Berço 3 em 1 para Colchão 60 x 130cm vira sofá e minicama 3 anos de garantia Multimóveis Branco"
-   },
-   {
-    "categoria": "outros",
-    "de": 499.0,
-    "desconto": 0.585,
-    "id": "MLB22621352",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_954395-MLA96107574707_102025-F.jpg",
-    "link": "https://meli.la/34hrryt",
-    "preco": 206.99,
-    "titulo": "Andador Safari II Infantil Primeiros Passos Tutti Baby Azul"
    },
    {
     "categoria": "higiene",
@@ -47511,6 +47656,16 @@
     "link": "https://meli.la/1jjHUTc",
     "preco": 258.9,
     "titulo": "Cadeira Alimentação Infantil Portátil 3 em 1 Vira Booster Bandeja Dupla Removível Harmony Maxi Baby"
+   },
+   {
+    "categoria": "gestante",
+    "de": 247.9,
+    "desconto": 0.359,
+    "id": "MLB35738935",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_926579-MLA115342374153_072026-F.jpg",
+    "link": "https://meli.la/26jKKnv",
+    "preco": 158.9,
+    "titulo": "Trocador Anatômico Bebê Batistela Baby Linho Jeans Azul 69x46cm"
    }
   ]
  },
