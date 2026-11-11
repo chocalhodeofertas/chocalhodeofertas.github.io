@@ -1,5 +1,5 @@
 {
- "aguardando_link": 210,
+ "aguardando_link": 211,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 14
+  "2026-11-11": 16
  },
  "cupons": {
   "AUTO70OFF": {
@@ -11873,10 +11873,10 @@
    "shopee": 24
   },
   "2026-11-11": {
-   "com_cupom": 1,
+   "com_cupom": 2,
    "cupons": 17,
-   "posts": 28,
-   "shopee": 14
+   "posts": 32,
+   "shopee": 16
   }
  },
  "links": {
@@ -12286,7 +12286,7 @@
   "2026-11-11": 2
  },
  "membros_lido_em": "2026-11-11T12",
- "numeros_em": "2026-11-11T12:05-03:00",
+ "numeros_em": "2026-11-11T12:25-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12637,6 +12637,12 @@
    "quando": "2026-11-10T09:22-03:00",
    "titulo": "Capa Transparente Trocador Anatômico Bebê 71x57cm Polipropileno"
   },
+  "MLB37136700": {
+   "desconto": 0.643,
+   "preco": 107.0,
+   "quando": "2026-11-11T12:25-03:00",
+   "titulo": "Ursinho Que Reza Buba Pelúcia Oração Anjinho Da Guarda 24 Cm Cor Azul"
+  },
   "MLB37622470": {
    "desconto": 0.373,
    "preco": 61.97,
@@ -12986,6 +12992,12 @@
    "preco": 58.0,
    "quando": "2026-11-09T08:02-03:00",
    "titulo": "Carrinho Controle Remoto Rally Jipe Max Carro Grande Bateria Recarregavel Off Ro"
+  },
+  "MLB62060798": {
+   "desconto": 0.386,
+   "preco": 367.91,
+   "quando": "2026-11-11T12:25-03:00",
+   "titulo": "Carrinho De Bebê Cosco Kids, Toffy, Rosa Noite"
   },
   "MLB62169781": {
    "desconto": 0.41,
@@ -14130,6 +14142,10 @@
     [
      "2026-11-07",
      38.99
+    ],
+    [
+     "2026-11-11",
+     39.9
     ]
    ],
    "min": 38.99
@@ -14201,6 +14217,10 @@
     [
      "2026-11-09",
      111.92
+    ],
+    [
+     "2026-11-11",
+     105.99
     ]
    ],
    "min": 104.0
@@ -14735,9 +14755,13 @@
     [
      "2026-11-06",
      195.21
+    ],
+    [
+     "2026-11-11",
+     188.99
     ]
    ],
-   "min": 195.21
+   "min": 188.99
   },
   "MLB18606067": {
    "historico": [
@@ -14826,6 +14850,10 @@
     [
      "2026-11-09",
      19.9
+    ],
+    [
+     "2026-11-11",
+     19.99
     ]
    ],
    "min": 19.9
@@ -14911,9 +14939,13 @@
     [
      "2026-11-10",
      188.75
+    ],
+    [
+     "2026-11-11",
+     129.13
     ]
    ],
-   "min": 167.0
+   "min": 129.13
   },
   "MLB19538172": {
    "historico": [
@@ -15278,6 +15310,10 @@
     [
      "2026-11-10",
      40.0
+    ],
+    [
+     "2026-11-11",
+     49.78
     ]
    ],
    "min": 40.0
@@ -15720,6 +15756,10 @@
     [
      "2026-11-11",
      699.9
+    ],
+    [
+     "2026-11-11",
+     759.0
     ]
    ],
    "min": 699.9
@@ -17966,6 +18006,10 @@
     [
      "2026-11-11",
      317.94
+    ],
+    [
+     "2026-11-11",
+     379.99
     ]
    ],
    "min": 299.9
@@ -18491,6 +18535,10 @@
     [
      "2026-11-11",
      27.9
+    ],
+    [
+     "2026-11-11",
+     28.99
     ]
    ],
    "min": 26.99
@@ -19843,9 +19891,13 @@
     [
      "2026-11-11",
      65.8
+    ],
+    [
+     "2026-11-11",
+     64.31
     ]
    ],
-   "min": 65.8
+   "min": 64.31
   },
   "MLB38713737": {
    "historico": [
@@ -21877,6 +21929,10 @@
     [
      "2026-11-11",
      590.0
+    ],
+    [
+     "2026-11-11",
+     599.0
     ]
    ],
    "min": 590.0
@@ -25019,6 +25075,10 @@
     [
      "2026-11-11",
      309.99
+    ],
+    [
+     "2026-11-11",
+     324.0
     ]
    ],
    "min": 309.99
@@ -25662,6 +25722,10 @@
     [
      "2026-11-11",
      157.6
+    ],
+    [
+     "2026-11-11",
+     249.9
     ]
    ],
    "min": 157.6
@@ -29486,6 +29550,10 @@
     [
      "2026-11-11",
      369.0
+    ],
+    [
+     "2026-11-11",
+     379.9
     ]
    ],
    "min": 351.0
@@ -33328,6 +33396,15 @@
    ],
    "min": 8.99
   },
+  "SHP21639028953": {
+   "historico": [
+    [
+     "2026-11-11",
+     42.9
+    ]
+   ],
+   "min": 42.9
+  },
   "SHP21646178828": {
    "historico": [
     [
@@ -34149,6 +34226,10 @@
     [
      "2026-11-11",
      49.9
+    ],
+    [
+     "2026-11-11",
+     57.9
     ]
    ],
    "min": 49.9
@@ -34295,6 +34376,15 @@
     ]
    ],
    "min": 9.95
+  },
+  "SHP22297280557": {
+   "historico": [
+    [
+     "2026-11-11",
+     25.0
+    ]
+   ],
+   "min": 25.0
   },
   "SHP22297616098": {
    "historico": [
@@ -34529,9 +34619,13 @@
     [
      "2026-11-10",
      160.8
+    ],
+    [
+     "2026-11-11",
+     144.99
     ]
    ],
-   "min": 160.8
+   "min": 144.99
   },
   "SHP22394495140": {
    "historico": [
@@ -35708,6 +35802,15 @@
     ]
    ],
    "min": 27.98
+  },
+  "SHP22797687777": {
+   "historico": [
+    [
+     "2026-11-11",
+     23.9
+    ]
+   ],
+   "min": 23.9
   },
   "SHP22798063238": {
    "historico": [
@@ -39521,6 +39624,15 @@
    ],
    "min": 141.9
   },
+  "SHP29721323416": {
+   "historico": [
+    [
+     "2026-11-11",
+     42.99
+    ]
+   ],
+   "min": 42.99
+  },
   "SHP3056656512": {
    "historico": [
     [
@@ -39979,6 +40091,15 @@
     ]
    ],
    "min": 509.9
+  },
+  "SHP42722573749": {
+   "historico": [
+    [
+     "2026-11-11",
+     47.33
+    ]
+   ],
+   "min": 47.33
   },
   "SHP42722671659": {
    "historico": [
@@ -41149,6 +41270,15 @@
     ]
    ],
    "min": 18.91
+  },
+  "SHP55067827051": {
+   "historico": [
+    [
+     "2026-11-11",
+     34.99
+    ]
+   ],
+   "min": 34.99
   },
   "SHP55257035933": {
    "historico": [
@@ -43220,6 +43350,15 @@
    ],
    "min": 15.99
   },
+  "SHP58218713810": {
+   "historico": [
+    [
+     "2026-11-11",
+     34.99
+    ]
+   ],
+   "min": 34.99
+  },
   "SHP58218729807": {
    "historico": [
     [
@@ -43237,6 +43376,15 @@
     ]
    ],
    "min": 74.99
+  },
+  "SHP58218742884": {
+   "historico": [
+    [
+     "2026-11-11",
+     27.9
+    ]
+   ],
+   "min": 27.9
   },
   "SHP58218772824": {
    "historico": [
@@ -45665,10 +45813,10 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-11T11:26-03:00",
-   "2026-11-11T11:26-03:00",
    "2026-11-11T12:13-03:00",
-   "2026-11-11T12:13-03:00"
+   "2026-11-11T12:13-03:00",
+   "2026-11-11T12:32-03:00",
+   "2026-11-11T12:32-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -45689,8 +45837,10 @@
    "SHP22296700159": "2026-11-11T11:13-03:00",
    "SHP22392476232": "2026-11-10T21:42-03:00",
    "SHP22393516179": "2026-11-10T21:24-03:00",
+   "SHP22494274076": "2026-11-11T12:32-03:00",
    "SHP22498844695": "2026-11-10T17:15-03:00",
    "SHP22994443307": "2026-11-10T19:24-03:00",
+   "SHP23098322636": "2026-11-11T12:32-03:00",
    "SHP23199132850": "2026-11-11T10:26-03:00",
    "SHP23219825532": "2026-11-11T09:11-03:00",
    "SHP23296759926": "2026-11-10T17:34-03:00",
@@ -45710,13 +45860,14 @@
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 17,
+  "termo": 20,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
     "babuche menina",
     "biblia meninas",
     "conjunto masculino",
+    "conjunto pijama",
     "fralda",
     "higiene pecas",
     "lego/blocos",
@@ -45726,6 +45877,7 @@
     "saquinho organizador",
     "saquinhos maternidade",
     "tapete inflavel",
+    "tenis meninos",
     "toalha banho"
    ]
   }
@@ -45738,7 +45890,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T12:05-03:00",
+  "em": "2026-11-11T12:25-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -45851,16 +46003,6 @@
     "titulo": "Cesto Para Bebes Porta Roupa Fraldas Organizador De Banho Cor Bege"
    },
    {
-    "categoria": "outros",
-    "de": 129.9,
-    "desconto": 0.79,
-    "id": "MLB79069896",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_787430-MLA115893535096_092026-F.jpg",
-    "link": "https://meli.la/2oqF3sZ",
-    "preco": 27.27,
-    "titulo": "Aspirador Nasal Elétrico Epsilon Recarregável Rosa para Bebês com 2 Bicos"
-   },
-   {
     "categoria": "passeio",
     "de": 39.9,
     "desconto": 0.399,
@@ -45879,16 +46021,6 @@
     "link": "https://meli.la/23hVpnA",
     "preco": 64.8,
     "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Ocean"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 119.99,
-    "desconto": 0.776,
-    "id": "MLB75488058",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_927720-MLA118032325445_092026-F.jpg",
-    "link": "https://meli.la/17nPXDN",
-    "preco": 26.9,
-    "titulo": "MoveBrinca Bola De Ar Flutuante Com LED Para Crianças 3 Velocidades E Proteção De Espuma Futebol Brinquedo Inf"
    },
    {
     "categoria": "brinquedo",
@@ -46021,6 +46153,16 @@
     "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Rosa"
    },
    {
+    "categoria": "higiene",
+    "de": 129.1,
+    "desconto": 0.502,
+    "id": "MLB38662854",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_872370-MLA99926477141_112025-F.jpg",
+    "link": "https://meli.la/1xMxZt4",
+    "preco": 64.31,
+    "titulo": "Kit Braé Stages Nutrição: Shampoo e Condicionador para Cabelos Ressecados e sem Vida"
+   },
+   {
     "categoria": "outros",
     "de": 197.75,
     "desconto": 0.36,
@@ -46069,16 +46211,6 @@
     "link": "https://meli.la/34hrryt",
     "preco": 206.99,
     "titulo": "Andador Safari II Infantil Primeiros Passos Tutti Baby Azul"
-   },
-   {
-    "categoria": "higiene",
-    "de": 129.1,
-    "desconto": 0.49,
-    "id": "MLB38662854",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_872370-MLA99926477141_112025-F.jpg",
-    "link": "https://meli.la/1xMxZt4",
-    "preco": 65.8,
-    "titulo": "Kit Braé Stages Nutrição: Shampoo e Condicionador para Cabelos Ressecados e sem Vida"
    },
    {
     "categoria": "higiene",
@@ -46271,16 +46403,6 @@
     "titulo": "Boné New Era A-frame New York Yankees Ajustável Cor Preto Tamanho U"
    },
    {
-    "categoria": "higiene",
-    "de": 51.04,
-    "desconto": 0.392,
-    "id": "MLB18392608",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_738296-MLA110297780960_052026-F.jpg",
-    "link": "https://meli.la/1wYBGNu",
-    "preco": 31.05,
-    "titulo": "Fralda Descartável Turma da Mônica Baby M 50 Unidades 12 h"
-   },
-   {
     "categoria": "quarto",
     "de": 199.9,
     "desconto": 0.315,
@@ -46339,6 +46461,36 @@
     "link": "https://meli.la/2bAX86M",
     "preco": 90.0,
     "titulo": "Andador Empurrador Infantil Musical Educativo Rosa Yuupi YPHE0811"
+   },
+   {
+    "categoria": "passeio",
+    "de": 1799.9,
+    "desconto": 0.366,
+    "id": "MLB62926546",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_760834-MLA100113185128_122025-F.jpg",
+    "link": "https://meli.la/1HM1CU6",
+    "preco": 1141.0,
+    "titulo": "Carrinho de Bebê Travel System Maxi Baby Elysian Cinza e Dourado com Moisés e Bebê Conforto"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 78.99,
+    "desconto": 0.707,
+    "id": "MLB76574611",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_815293-MLA115438222718_082026-F.jpg",
+    "link": "https://meli.la/1c7EjFK",
+    "preco": 23.18,
+    "titulo": "Tapete De Atividades Para Bebes Almofada De Água Inflável Interativo Aquário Sensorial Fundo Do Mar Rosa Tsc S"
+   },
+   {
+    "categoria": "gestante",
+    "de": 69.99,
+    "desconto": 0.364,
+    "id": "MLB65558091",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_637788-MLA107177132239_022026-F.jpg",
+    "link": "https://meli.la/1Z6CgKJ",
+    "preco": 44.52,
+    "titulo": "Trocador Absorvente Baby & Me 10 Unid"
    }
   ]
  },
