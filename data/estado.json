@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 21
+  "2026-11-11": 22
  },
  "cupons": {
   "APROVEITAAGORA": {
@@ -11887,8 +11887,8 @@
   "2026-11-11": {
    "com_cupom": 2,
    "cupons": 19,
-   "posts": 42,
-   "shopee": 21
+   "posts": 44,
+   "shopee": 22
   }
  },
  "links": {
@@ -12298,7 +12298,7 @@
   "2026-11-11": 2
  },
  "membros_lido_em": "2026-11-11T13",
- "numeros_em": "2026-11-11T13:25-03:00",
+ "numeros_em": "2026-11-11T13:45-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12688,6 +12688,12 @@
   "MLB38654615": {
    "preco": 64.9,
    "quando": "2026-11-06T18:23-03:00"
+  },
+  "MLB38662854": {
+   "desconto": 0.502,
+   "preco": 64.31,
+   "quando": "2026-11-11T13:45-03:00",
+   "titulo": "Kit Braé Stages Nutrição: Shampoo e Condicionador para Cabelos Ressecados e sem "
   },
   "MLB38804864": {
    "desconto": 0.534,
@@ -15649,9 +15655,13 @@
     [
      "2026-11-10",
      28.0
+    ],
+    [
+     "2026-11-11",
+     27.17
     ]
    ],
-   "min": 28.0
+   "min": 27.17
   },
   "MLB22587554": {
    "historico": [
@@ -18312,9 +18322,13 @@
     [
      "2026-11-09",
      173.82
+    ],
+    [
+     "2026-11-11",
+     159.99
     ]
    ],
-   "min": 173.82
+   "min": 159.99
   },
   "MLB28336136": {
    "historico": [
@@ -18697,6 +18711,10 @@
     [
      "2026-11-11",
      74.9
+    ],
+    [
+     "2026-11-11",
+     73.8
     ]
    ],
    "min": 73.8
@@ -18738,6 +18756,10 @@
     [
      "2026-11-11",
      434.99
+    ],
+    [
+     "2026-11-11",
+     549.0
     ]
    ],
    "min": 368.28
@@ -19072,6 +19094,10 @@
     [
      "2026-11-11",
      313.73
+    ],
+    [
+     "2026-11-11",
+     271.0
     ]
    ],
    "min": 270.0
@@ -21680,6 +21706,10 @@
     [
      "2026-11-10",
      29.98
+    ],
+    [
+     "2026-11-11",
+     36.5
     ]
    ],
    "min": 29.98
@@ -23426,6 +23456,10 @@
     [
      "2026-11-11",
      4299.0
+    ],
+    [
+     "2026-11-11",
+     4559.0
     ]
    ],
    "min": 4154.0
@@ -23472,6 +23506,10 @@
     [
      "2026-11-11",
      4694.0
+    ],
+    [
+     "2026-11-11",
+     5201.01
     ]
    ],
    "min": 4694.0
@@ -25358,6 +25396,10 @@
     [
      "2026-11-10",
      27.11
+    ],
+    [
+     "2026-11-11",
+     27.0
     ]
    ],
    "min": 27.0
@@ -27303,6 +27345,10 @@
     [
      "2026-11-09",
      76.62
+    ],
+    [
+     "2026-11-11",
+     75.33
     ]
    ],
    "min": 72.99
@@ -28367,6 +28413,10 @@
     [
      "2026-11-11",
      31.57
+    ],
+    [
+     "2026-11-11",
+     33.61
     ]
    ],
    "min": 29.9
@@ -32004,9 +32054,13 @@
     [
      "2026-11-10",
      26.62
+    ],
+    [
+     "2026-11-11",
+     23.1
     ]
    ],
-   "min": 26.62
+   "min": 23.1
   },
   "SHP19399611202": {
    "historico": [
@@ -32031,9 +32085,13 @@
     [
      "2026-11-10",
      26.19
+    ],
+    [
+     "2026-11-11",
+     26.1
     ]
    ],
-   "min": 26.19
+   "min": 26.1
   },
   "SHP19399909127": {
    "historico": [
@@ -33705,9 +33763,13 @@
     [
      "2026-11-10",
      34.32
+    ],
+    [
+     "2026-11-11",
+     33.21
     ]
    ],
-   "min": 34.32
+   "min": 33.21
   },
   "SHP21697354187": {
    "historico": [
@@ -34200,6 +34262,15 @@
     ]
    ],
    "min": 14.99
+  },
+  "SHP22099051768": {
+   "historico": [
+    [
+     "2026-11-11",
+     28.9
+    ]
+   ],
+   "min": 28.9
   },
   "SHP22099068546": {
    "historico": [
@@ -36371,9 +36442,13 @@
     [
      "2026-11-11",
      16.53
+    ],
+    [
+     "2026-11-11",
+     15.68
     ]
    ],
-   "min": 16.53
+   "min": 15.68
   },
   "SHP22898200244": {
    "historico": [
@@ -36709,6 +36784,15 @@
     ]
    ],
    "min": 3.99
+  },
+  "SHP22998142354": {
+   "historico": [
+    [
+     "2026-11-11",
+     29.9
+    ]
+   ],
+   "min": 29.9
   },
   "SHP22998166580": {
    "historico": [
@@ -40276,6 +40360,15 @@
    ],
    "min": 23.49
   },
+  "SHP40184359687": {
+   "historico": [
+    [
+     "2026-11-11",
+     16.7
+    ]
+   ],
+   "min": 16.7
+  },
   "SHP40422625558": {
    "historico": [
     [
@@ -41162,6 +41255,10 @@
     [
      "2026-11-11",
      63.99
+    ],
+    [
+     "2026-11-11",
+     64.99
     ]
    ],
    "min": 63.99
@@ -41241,6 +41338,15 @@
     ]
    ],
    "min": 19.0
+  },
+  "SHP47913676401": {
+   "historico": [
+    [
+     "2026-11-11",
+     39.9
+    ]
+   ],
+   "min": 39.9
   },
   "SHP47956032176": {
    "historico": [
@@ -42784,9 +42890,13 @@
     [
      "2026-11-10",
      26.19
+    ],
+    [
+     "2026-11-11",
+     26.1
     ]
    ],
-   "min": 26.19
+   "min": 26.1
   },
   "SHP58206864113": {
    "historico": [
@@ -44283,6 +44393,15 @@
    ],
    "min": 37.2
   },
+  "SHP58221641178": {
+   "historico": [
+    [
+     "2026-11-11",
+     196.36
+    ]
+   ],
+   "min": 196.36
+  },
   "SHP58250102098": {
    "historico": [
     [
@@ -45261,6 +45380,10 @@
     [
      "2026-11-10",
      25.9
+    ],
+    [
+     "2026-11-11",
+     28.9
     ]
    ],
    "min": 25.9
@@ -46393,6 +46516,15 @@
    ],
    "min": 196.37
   },
+  "SHP58271945070": {
+   "historico": [
+    [
+     "2026-11-11",
+     13.9
+    ]
+   ],
+   "min": 13.9
+  },
   "SHP6354204735": {
    "historico": [
     [
@@ -46535,11 +46667,11 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-11T12:47-03:00",
    "2026-11-11T13:16-03:00",
    "2026-11-11T13:16-03:00",
    "2026-11-11T13:34-03:00",
-   "2026-11-11T13:34-03:00"
+   "2026-11-11T13:34-03:00",
+   "2026-11-11T13:47-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -46585,10 +46717,11 @@
    "SHP58213273842": "2026-11-10T20:54-03:00",
    "SHP58213474889": "2026-11-10T20:40-03:00",
    "SHP58215304009": "2026-11-10T21:54-03:00",
+   "SHP58251512194": "2026-11-11T13:47-03:00",
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 29,
+  "termo": 32,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -46596,6 +46729,7 @@
     "barraca menina",
     "biblia meninas",
     "boneca",
+    "cadeirinha de carro",
     "carrinho de brinquedo",
     "conjunto masculino",
     "conjunto pijama",
@@ -46623,18 +46757,8 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T13:25-03:00",
+  "em": "2026-11-11T13:45-03:00",
   "itens": [
-   {
-    "categoria": "higiene",
-    "de": 78.9,
-    "desconto": 0.62,
-    "id": "MLB46247976",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_646981-MLA82633401757_022025-F.jpg",
-    "link": "https://meli.la/2Jjrc85",
-    "preco": 29.98,
-    "titulo": "Almofada De Banho Para Bebê Banheira Flutuante Boia Com Alça Cor Verde-água"
-   },
    {
     "categoria": "quarto",
     "de": 1299.9,
@@ -46664,6 +46788,16 @@
     "link": "https://meli.la/17iYotp",
     "preco": 399.9,
     "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi Baby - CINZA"
+   },
+   {
+    "categoria": "higiene",
+    "de": 78.9,
+    "desconto": 0.537,
+    "id": "MLB46247976",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_646981-MLA82633401757_022025-F.jpg",
+    "link": "https://meli.la/2Jjrc85",
+    "preco": 36.5,
+    "titulo": "Almofada De Banho Para Bebê Banheira Flutuante Boia Com Alça Cor Verde-água"
    },
    {
     "categoria": "quarto",
@@ -46766,6 +46900,16 @@
     "titulo": "Móbile Arco Musical Bebê Carrinho Berço Let's Play Maxi Baby"
    },
    {
+    "categoria": "brinquedo",
+    "de": 49.0,
+    "desconto": 0.449,
+    "id": "MLB64866580",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_735916-MLA105596119925_012026-F.jpg",
+    "link": "https://meli.la/2G3kCUB",
+    "preco": 27.0,
+    "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensorial 1ª Infância Bebê Conforto Ma"
+   },
+   {
     "categoria": "quarto",
     "de": 899.9,
     "desconto": 0.53,
@@ -46784,36 +46928,6 @@
     "link": "https://meli.la/2nnzRT6",
     "preco": 32.94,
     "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 49.0,
-    "desconto": 0.447,
-    "id": "MLB64866580",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_735916-MLA105596119925_012026-F.jpg",
-    "link": "https://meli.la/2G3kCUB",
-    "preco": 27.11,
-    "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensorial 1ª Infância Bebê Conforto Ma"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 147.9,
-    "desconto": 0.719,
-    "id": "MLB54136862",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_612380-MLA117540353805_092026-F.jpg",
-    "link": "https://meli.la/2dtcNri",
-    "preco": 41.61,
-    "titulo": "Barraca Toca Infantil Menina Cabana Tenda Princesa Criança Princesa Judy Cabaninha"
-   },
-   {
-    "categoria": "passeio",
-    "de": 169.9,
-    "desconto": 0.51,
-    "id": "MLB28131603",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_924558-MLA120363058695_102026-F.jpg",
-    "link": "https://meli.la/1sMQwCz",
-    "preco": 83.18,
-    "titulo": "Canguru de Bebê Aiebao Ergonômico Cinza 4 Posições Com Bolsos Ajustável"
    },
    {
     "categoria": "brinquedo",
@@ -47224,6 +47338,26 @@
     "link": "https://meli.la/1dQR2q4",
     "preco": 34.9,
     "titulo": "Labirinto Magnético Coordenação Motora Pedagógico Imã Montessori Madeira Brinquedo Infantil Educativo Colorido"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 157.98,
+    "desconto": 0.5,
+    "id": "MLB80331375",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_895387-MLA119039304811_102026-F.jpg",
+    "link": "https://meli.la/29sFqaC",
+    "preco": 78.98,
+    "titulo": "Piscina de Bolinhas Lelor Infantil com 50 Bolinhas, Estampa Fundo do Mar"
+   },
+   {
+    "categoria": "alimentacao",
+    "de": 449.9,
+    "desconto": 0.425,
+    "id": "MLB53778622",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_855165-MLA120874802387_112026-F.jpg",
+    "link": "https://meli.la/1jjHUTc",
+    "preco": 258.9,
+    "titulo": "Cadeira Alimentação Infantil Portátil 3 em 1 Vira Booster Bandeja Dupla Removível Harmony Maxi Baby"
    }
   ]
  },
