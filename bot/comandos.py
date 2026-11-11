@@ -33,7 +33,8 @@ AJUDA = (
     "🎟️ <b>cupom</b> + o texto do cupom → eu formato e posto. Ex.:\n"
     "<code>cupom 20% OFF em brinquedos acima de R$ 99, código BRINCA20, até 10/11</code>\n"
     "(com a data, eu marco como encerrado sozinho quando vencer)\n\n"
-    "❌ <b>esgotou</b> + código → aviso no canal que o cupom acabou\n\n"
+    "❌ <b>esgotou</b> + código → aviso no canal que o cupom acabou\n"
+    "✅ <b>geral</b> + código → cupom sem categoria que você testou passa a entrar nas ofertas · <b>restrito</b> + código desfaz\n\n"
     "📊 <b>resumo</b> → números do canal agora\n\n"
     "🔎 <b>buscar</b> + produto → melhores ofertas agora · <b>pegar 1 3</b> → manda para o Linkbuilder\n"
     "👀 <b>vigiar</b> + produto → aviso quando entrar em promoção · <b>vigias</b> · <b>parar</b> + produto\n"
@@ -308,6 +309,27 @@ def esgotar_cupom(texto, tg, cfg, estado):
     return f"✅ Marquei o cupom{cupons.nome(chave)} como esgotado e avisei no canal."
 
 
+def marcar_geral(texto, estado, geral=True):
+    """'geral CORREHOJE' libera um cupom sem categoria para as ofertas; 'restrito X' desfaz."""
+    codigo = re.sub(r"^\s*/?(geral|restrito)\s*", "", texto, flags=re.I).strip().upper()
+    lista = cupons.ativos(estado)
+    if not codigo:
+        marcados = [k for k, c in lista.items() if c.get("geral")]
+        return ("Mande <code>geral CÓDIGO</code> depois de testar no carrinho que o cupom vale para "
+                "produtos comuns. Liberados agora: " + (", ".join(html.escape(k) for k in marcados) or "nenhum"))
+    chave = next((k for k in lista if k.upper() == codigo), None)
+    if not chave:
+        return f"Não achei o cupom ativo {html.escape(codigo)}. Ativos: " + ", ".join(
+            html.escape(k) for k in lista if not k.startswith("#"))
+    if geral:
+        estado["cupons"][chave]["geral"] = True
+        return (f"✅ O cupom {html.escape(chave)} agora entra nas ofertas mesmo sem categoria. "
+                "O bot usa sempre o que mais economiza (respeitando mínimo e teto). "
+                f"Para desfazer: <code>restrito {html.escape(chave)}</code>")
+    estado["cupons"][chave].pop("geral", None)
+    return f"↩️ O cupom {html.escape(chave)} voltou a valer só pela categoria dele."
+
+
 def verificar_cupons(tg, cfg, estado, agora, log=print):
     cupons.verificar(tg, cfg, estado, agora, log)
 
@@ -421,6 +443,10 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
         return postar_cupom(t, tg, cfg, estado, agora)
     if n.startswith(("esgotou", "esgotado", "acabou", "/esgotou")):
         return esgotar_cupom(t, tg, cfg, estado)
+    if n.startswith(("geral", "/geral")):
+        return marcar_geral(t, estado, True)
+    if n.startswith(("restrito", "/restrito")):
+        return marcar_geral(t, estado, False)
     if n in ("resumo", "/resumo", "status", "/status"):
         return montar_resumo(estado, cfg, tg, agora)
     if n in ("pacote", "/pacote", "instagram", "/instagram"):
