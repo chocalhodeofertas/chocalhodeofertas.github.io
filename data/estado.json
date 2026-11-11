@@ -5385,6 +5385,12 @@
    "status": "ativo",
    "validade": "2026-12-10T23:59-03:00"
   },
+  "OFERTAMELI": {
+   "criado": "2026-11-11T18:01-03:00",
+   "post": 368,
+   "status": "ativo",
+   "validade": "2026-11-11T23:59-03:00"
+  },
   "OFERTAMELIMAIS1011": {
    "criado": "2026-11-10T16:00-03:00",
    "post": 233,
@@ -5506,8 +5512,8 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5556,
- "cupons_ml_ultimo": 6467,
+ "cupons_extra_ultimo:cupombr": 5557,
+ "cupons_ml_ultimo": 6468,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -11928,7 +11934,7 @@
   },
   "2026-11-11": {
    "com_cupom": 3,
-   "cupons": 26,
+   "cupons": 27,
    "posts": 66,
    "shopee": 33
   }
@@ -14134,6 +14140,17 @@
    "criado": "2026-11-11T16:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "368": {
+   "blocos": [
+    {
+     "codigo": "OFERTAMELI",
+     "html": "<b>🎟️ OFERTAMELI</b> 👉 <b>18% OFF</b>\nCompra mín.: R$99 · Desconto máx.: R$60\n⏰ Válido até 11/11\n👉 <a href=\"https://bit.ly/4foHiyu\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-11T18:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
