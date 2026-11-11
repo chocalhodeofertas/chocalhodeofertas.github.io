@@ -5301,6 +5301,12 @@
    "status": "encerrado",
    "validade": "2026-11-09T23:59-03:00"
   },
+  "MELHOROFERTA": {
+   "criado": "2026-11-11T15:01-03:00",
+   "post": 350,
+   "status": "ativo",
+   "validade": "2026-11-12T23:59-03:00"
+  },
   "MELIHOJE": {
    "criado": "2026-11-10T21:27-03:00",
    "post": 278,
@@ -5488,7 +5494,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5549,
+ "cupons_extra_ultimo:cupombr": 5550,
  "cupons_ml_ultimo": 6464,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
@@ -11910,7 +11916,7 @@
   },
   "2026-11-11": {
    "com_cupom": 2,
-   "cupons": 23,
+   "cupons": 24,
    "posts": 50,
    "shopee": 25
   }
@@ -14058,6 +14064,17 @@
    "criado": "2026-11-11T14:25-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "350": {
+   "blocos": [
+    {
+     "codigo": "MELHOROFERTA",
+     "html": "<b>🎟️ MELHOROFERTA</b> 👉 <b>15% OFF</b>\nDesconto máx.: R$200\n⏰ Válido até 12/11"
+    }
+   ],
+   "criado": "2026-11-11T15:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
