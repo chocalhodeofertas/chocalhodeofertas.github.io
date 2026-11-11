@@ -1,5 +1,5 @@
 {
- "aguardando_link": 209,
+ "aguardando_link": 210,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5513,7 +5513,7 @@
   }
  },
  "cupons_extra_ultimo:cupombr": 5557,
- "cupons_ml_ultimo": 6468,
+ "cupons_ml_ultimo": 6470,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -12346,7 +12346,7 @@
   "2026-11-11": 2
  },
  "membros_lido_em": "2026-11-11T18",
- "numeros_em": "2026-11-11T18:35-03:00",
+ "numeros_em": "2026-11-11T18:55-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -16698,6 +16698,10 @@
     [
      "2026-11-11",
      309.0
+    ],
+    [
+     "2026-11-11",
+     323.48
     ]
    ],
    "min": 289.9
@@ -18445,6 +18449,10 @@
     [
      "2026-11-11",
      27.0
+    ],
+    [
+     "2026-11-11",
+     35.8
     ]
    ],
    "min": 27.0
@@ -18583,9 +18591,13 @@
     [
      "2026-11-09",
      22.74
+    ],
+    [
+     "2026-11-11",
+     22.42
     ]
    ],
-   "min": 22.74
+   "min": 22.42
   },
   "MLB27925223": {
    "historico": [
@@ -18755,6 +18767,10 @@
     [
      "2026-11-11",
      189.99
+    ],
+    [
+     "2026-11-11",
+     173.82
     ]
    ],
    "min": 159.99
@@ -19188,9 +19204,13 @@
     [
      "2026-11-11",
      74.9
+    ],
+    [
+     "2026-11-11",
+     72.89
     ]
    ],
-   "min": 73.8
+   "min": 72.89
   },
   "MLB29756545": {
    "historico": [
@@ -28438,9 +28458,13 @@
     [
      "2026-11-10",
      23.42
+    ],
+    [
+     "2026-11-11",
+     21.87
     ]
    ],
-   "min": 23.42
+   "min": 21.87
   },
   "MLB72683941": {
    "historico": [
@@ -36281,6 +36305,10 @@
     [
      "2026-11-10",
      8.7
+    ],
+    [
+     "2026-11-11",
+     11.99
     ]
    ],
    "min": 8.7
@@ -37295,6 +37323,10 @@
     [
      "2026-11-11",
      29.9
+    ],
+    [
+     "2026-11-11",
+     39.9
     ]
    ],
    "min": 29.9
@@ -46591,6 +46623,10 @@
     [
      "2026-11-10",
      20.49
+    ],
+    [
+     "2026-11-11",
+     20.99
     ]
    ],
    "min": 20.49
@@ -47911,9 +47947,31 @@
   }
  },
  "resumo_enviado": "2026-11-10",
+ "rodada_n": 1,
  "shopee": {
+  "acompanhados": {
+   "SHP19175443586": {
+    "ate": "2026-12-11",
+    "visto": "2026-11-11T18:56-03:00"
+   },
+   "SHP19846180883": {
+    "ate": "2026-12-11",
+    "visto": "2026-11-11T18:56-03:00"
+   },
+   "SHP19898696875": {
+    "ate": "2026-12-11",
+    "visto": "2026-11-11T18:56-03:00"
+   },
+   "SHP22298193615": {
+    "ate": "2026-12-11",
+    "visto": "2026-11-11T18:56-03:00"
+   },
+   "SHP58204083719": {
+    "ate": "2026-12-11",
+    "visto": "2026-11-11T18:56-03:00"
+   }
+  },
   "hora": [
-   "2026-11-11T17:56-03:00",
    "2026-11-11T18:22-03:00",
    "2026-11-11T18:37-03:00",
    "2026-11-11T18:37-03:00"
@@ -47980,7 +48038,7 @@
    "SHP58258341439": "2026-11-11T15:38-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 7,
+  "termo": 10,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -48051,7 +48109,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T18:35-03:00",
+  "em": "2026-11-11T18:55-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -48454,16 +48512,6 @@
     "titulo": "Tapete De Atividades Para Bebes Almofada De Água Inflável Interativo Aquário Sensorial Fundo Do Mar Rosa Tsc S"
    },
    {
-    "categoria": "higiene",
-    "de": 78.99,
-    "desconto": 0.506,
-    "id": "MLB75214967",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_867433-MLA113064409082_072026-F.jpg",
-    "link": "https://meli.la/1KgtRkD",
-    "preco": 38.99,
-    "titulo": "Kit Escova e Pente Lilica Ripilica para Bebê Rosa com Cerdas Naturais"
-   },
-   {
     "categoria": "brinquedo",
     "de": 199.9,
     "desconto": 0.425,
@@ -48652,6 +48700,16 @@
     "link": "https://meli.la/1wX7Xqf",
     "preco": 73.35,
     "titulo": "Bicicleta Bebê 4 Rodas Sem Pedal MSP Kids Vermelha, Bicicleta de Equilíbrio Infantil com 4 Rodas Largas, Estru"
+   },
+   {
+    "categoria": "higiene",
+    "de": 25.99,
+    "desconto": 0.4,
+    "id": "MLB19740292",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_693946-MLA99412724648_112025-F.jpg",
+    "link": "https://meli.la/1YMRtT6",
+    "preco": 15.59,
+    "titulo": "Escova De Dente Infantil Bitufo Cocoricó Primeiro Dentinho"
    }
   ]
  },
