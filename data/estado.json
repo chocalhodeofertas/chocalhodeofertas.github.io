@@ -5163,6 +5163,12 @@
   "2026-11-11": 28
  },
  "cupons": {
+  "AGORAPROMO": {
+   "criado": "2026-11-11T16:01-03:00",
+   "post": 357,
+   "status": "ativo",
+   "validade": "2026-11-12T23:59-03:00"
+  },
   "APROVEITAAGORA": {
    "criado": "2026-11-11T13:00-03:00",
    "post": 330,
@@ -5457,6 +5463,12 @@
    "status": "ativo",
    "validade": "2026-11-11T23:59-03:00"
   },
+  "TECH1111": {
+   "criado": "2026-11-11T16:01-03:00",
+   "post": 357,
+   "status": "ativo",
+   "validade": "2026-11-11T23:59-03:00"
+  },
   "TODO1011SITE": {
    "criado": "2026-11-10T12:02-03:00",
    "post": 215,
@@ -5494,7 +5506,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5550,
+ "cupons_extra_ultimo:cupombr": 5551,
  "cupons_ml_ultimo": 6465,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
@@ -11916,7 +11928,7 @@
   },
   "2026-11-11": {
    "com_cupom": 2,
-   "cupons": 24,
+   "cupons": 26,
    "posts": 56,
    "shopee": 28
   }
@@ -14083,6 +14095,21 @@
    "criado": "2026-11-11T15:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "357": {
+   "blocos": [
+    {
+     "codigo": "AGORAPROMO",
+     "html": "<b>🎟️ AGORAPROMO</b> 👉 <b>25% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$30\n⏰ Válido até 12/11"
+    },
+    {
+     "codigo": "TECH1111",
+     "html": "<b>🎟️ TECH1111</b> 👉 <b>R$220 OFF</b>\nCompra mín.: R$1499\n⏰ Válido até 11/11"
+    }
+   ],
+   "criado": "2026-11-11T16:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
