@@ -5367,6 +5367,12 @@
    "status": "ativo",
    "validade": "2026-11-12T23:59-03:00"
   },
+  "OPORTUNIDADEML": {
+   "criado": "2026-11-11T11:00-03:00",
+   "post": 311,
+   "status": "ativo",
+   "validade": "2026-11-11T23:59-03:00"
+  },
   "POUPAAGORA30": {
    "criado": "2026-11-10T12:02-03:00",
    "post": 214,
@@ -5434,8 +5440,8 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5539,
- "cupons_ml_ultimo": 6457,
+ "cupons_extra_ultimo:cupombr": 5540,
+ "cupons_ml_ultimo": 6458,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -11855,7 +11861,7 @@
    "shopee": 24
   },
   "2026-11-11": {
-   "cupons": 14,
+   "cupons": 15,
    "posts": 18,
    "shopee": 9
   }
@@ -13840,6 +13846,17 @@
    "criado": "2026-11-11T10:07-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "311": {
+   "blocos": [
+    {
+     "codigo": "OPORTUNIDADEML",
+     "html": "<b>🎟️ OPORTUNIDADEML</b> 👉 <b>25% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$50\n⏰ Válido até 11/11\n👉 <a href=\"https://bit.ly/4iEWSHa\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-11T11:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
