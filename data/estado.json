@@ -1,5 +1,5 @@
 {
- "aguardando_link": 212,
+ "aguardando_link": 211,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 28
+  "2026-11-11": 30
  },
  "cupons": {
   "AGORAPROMO": {
@@ -11929,8 +11929,8 @@
   "2026-11-11": {
    "com_cupom": 2,
    "cupons": 26,
-   "posts": 56,
-   "shopee": 28
+   "posts": 60,
+   "shopee": 30
   }
  },
  "links": {
@@ -12339,8 +12339,8 @@
   "2026-11-10": 2,
   "2026-11-11": 2
  },
- "membros_lido_em": "2026-11-11T15",
- "numeros_em": "2026-11-11T15:55-03:00",
+ "membros_lido_em": "2026-11-11T16",
+ "numeros_em": "2026-11-11T16:15-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -13243,6 +13243,12 @@
    "quando": "2026-11-08T11:13-03:00",
    "titulo": "Jogo Banco Imobiliário Grande Estrela em português"
   },
+  "MLB66595119": {
+   "desconto": 0.527,
+   "preco": 89.91,
+   "quando": "2026-11-11T16:15-03:00",
+   "titulo": "Bebê Boneca Reborn Menina Maddie Unicórnio Corpinho Silicone"
+  },
   "MLB66986360": {
    "preco": 122.87,
    "quando": "2026-11-06T20:43-03:00"
@@ -13590,9 +13596,9 @@
    "titulo": "Kit Chocalhos e Mordedores Sensoriais para Bebê com 8 Peças de Silicone e Plásti"
   },
   "MLB79313725": {
-   "desconto": 0.52,
-   "preco": 48.0,
-   "quando": "2026-11-09T18:02-03:00",
+   "desconto": 0.644,
+   "preco": 35.63,
+   "quando": "2026-11-11T16:15-03:00",
    "titulo": "Celular Brinquedo Recarregável Bebê | Educativo com Sons e Luzes, Substitui o Ce"
   },
   "MLB79381515": {
@@ -14837,6 +14843,10 @@
     [
      "2026-11-11",
      24.99
+    ],
+    [
+     "2026-11-11",
+     34.02
     ]
    ],
    "min": 24.99
@@ -19477,6 +19487,10 @@
     [
      "2026-11-11",
      441.0
+    ],
+    [
+     "2026-11-11",
+     447.0
     ]
    ],
    "min": 389.0
@@ -20681,6 +20695,10 @@
     [
      "2026-11-10",
      19.0
+    ],
+    [
+     "2026-11-11",
+     34.99
     ]
    ],
    "min": 19.0
@@ -24469,6 +24487,10 @@
     [
      "2026-11-11",
      89.9
+    ],
+    [
+     "2026-11-11",
+     79.9
     ]
    ],
    "min": 69.25
@@ -25045,6 +25067,10 @@
     [
      "2026-11-11",
      79.99
+    ],
+    [
+     "2026-11-11",
+     58.9
     ]
    ],
    "min": 58.9
@@ -27405,6 +27431,10 @@
     [
      "2026-11-11",
      174.8
+    ],
+    [
+     "2026-11-11",
+     135.9
     ]
    ],
    "min": 135.9
@@ -28869,6 +28899,10 @@
     [
      "2026-11-11",
      33.61
+    ],
+    [
+     "2026-11-11",
+     29.9
     ]
    ],
    "min": 29.9
@@ -28906,6 +28940,10 @@
     [
      "2026-11-11",
      409.0
+    ],
+    [
+     "2026-11-11",
+     379.9
     ]
    ],
    "min": 376.0
@@ -32548,6 +32586,10 @@
     [
      "2026-11-10",
      19.99
+    ],
+    [
+     "2026-11-11",
+     25.98
     ]
    ],
    "min": 19.99
@@ -38209,9 +38251,13 @@
     [
      "2026-11-10",
      74.46
+    ],
+    [
+     "2026-11-11",
+     70.99
     ]
    ],
-   "min": 74.46
+   "min": 70.99
   },
   "SHP23293837881": {
    "historico": [
@@ -38411,9 +38457,13 @@
     [
      "2026-11-10",
      47.9
+    ],
+    [
+     "2026-11-11",
+     40.5
     ]
    ],
-   "min": 47.9
+   "min": 40.5
   },
   "SHP23298360865": {
    "historico": [
@@ -38955,9 +39005,13 @@
     [
      "2026-11-10",
      74.46
+    ],
+    [
+     "2026-11-11",
+     70.99
     ]
    ],
-   "min": 74.46
+   "min": 70.99
   },
   "SHP23498386191": {
    "historico": [
@@ -42121,9 +42175,13 @@
     [
      "2026-11-11",
      55.36
+    ],
+    [
+     "2026-11-11",
+     50.3
     ]
    ],
-   "min": 55.36
+   "min": 50.3
   },
   "SHP49353308715": {
    "historico": [
@@ -45231,9 +45289,13 @@
     [
      "2026-11-10",
      72.8
+    ],
+    [
+     "2026-11-11",
+     69.9
     ]
    ],
-   "min": 72.8
+   "min": 69.9
   },
   "SHP58251256794": {
    "historico": [
@@ -47363,9 +47425,10 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-11T15:14-03:00",
    "2026-11-11T15:38-03:00",
-   "2026-11-11T15:56-03:00"
+   "2026-11-11T15:56-03:00",
+   "2026-11-11T16:23-03:00",
+   "2026-11-11T16:23-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -47390,6 +47453,7 @@
    "SHP22393516179": "2026-11-10T21:24-03:00",
    "SHP22401382655": "2026-11-11T14:31-03:00",
    "SHP22494274076": "2026-11-11T12:32-03:00",
+   "SHP22497914336": "2026-11-11T16:23-03:00",
    "SHP22498844695": "2026-11-10T17:15-03:00",
    "SHP22793967394": "2026-11-11T13:16-03:00",
    "SHP22994443307": "2026-11-10T19:24-03:00",
@@ -47401,6 +47465,7 @@
    "SHP23591689767": "2026-11-11T11:26-03:00",
    "SHP23699651221": "2026-11-11T10:14-03:00",
    "SHP23992252560": "2026-11-11T10:14-03:00",
+   "SHP23993520004": "2026-11-11T16:23-03:00",
    "SHP27621732758": "2026-11-11T09:24-03:00",
    "SHP28620926406": "2026-11-10T19:57-03:00",
    "SHP44809598956": "2026-11-10T21:42-03:00",
@@ -47421,7 +47486,7 @@
    "SHP58258341439": "2026-11-11T15:38-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 18,
+  "termo": 21,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -47441,11 +47506,13 @@
     "lego/blocos",
     "lenco umedecido",
     "mantas cobertor",
+    "meia escolar",
     "mobile",
     "mochila",
     "pijama curto",
     "quebra cabecas",
     "refeicao prato",
+    "sandalia feminina",
     "saquinho organizador",
     "saquinhos maternidade",
     "shampoo condicionador",
@@ -47463,7 +47530,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T15:55-03:00",
+  "em": "2026-11-11T16:15-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -47806,16 +47873,6 @@
     "titulo": "Berço Portátil Balanço Moises Sleepguard Cobed Bege Ragaluma Bege"
    },
    {
-    "categoria": "higiene",
-    "de": 45.8,
-    "desconto": 0.454,
-    "id": "MLB18392845",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_700377-MLA99930638257_112025-F.jpg",
-    "link": "https://meli.la/189Unwc",
-    "preco": 24.99,
-    "titulo": "Lenços Umedecidos Huggies Recém Nascido Pack C/4 - 192 Un"
-   },
-   {
     "categoria": "quarto",
     "de": 199.99,
     "desconto": 0.325,
@@ -48064,9 +48121,19 @@
     "link": "https://meli.la/1NWvSTe",
     "preco": 97.0,
     "titulo": "Brinquedo Pelúcia Infantil Ursinho Reza Bege 18056 - Buba"
+   },
+   {
+    "categoria": "outros",
+    "de": 51.04,
+    "desconto": 0.35,
+    "id": "MLB18392677",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_990051-MLA110123026010_042026-F.jpg",
+    "link": "https://meli.la/2pHZDtK",
+    "preco": 33.2,
+    "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
    }
   ]
  },
- "vitrine_assinatura": "4e0205e18f2d68291186299093d76cad8260049f",
- "vitrine_publicada_em": "2026-11-11T15:05-03:00"
+ "vitrine_assinatura": "4639113531b2b7dc7141cd6c6614059f7419e14f",
+ "vitrine_publicada_em": "2026-11-11T16:15-03:00"
 }
