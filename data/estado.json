@@ -1,5 +1,5 @@
 {
- "aguardando_link": 211,
+ "aguardando_link": 212,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -11917,8 +11917,8 @@
   "2026-11-11": {
    "com_cupom": 2,
    "cupons": 24,
-   "posts": 55,
-   "shopee": 27
+   "posts": 56,
+   "shopee": 28
   }
  },
  "links": {
@@ -12328,7 +12328,7 @@
   "2026-11-11": 2
  },
  "membros_lido_em": "2026-11-11T15",
- "numeros_em": "2026-11-11T15:35-03:00",
+ "numeros_em": "2026-11-11T15:55-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -14781,6 +14781,10 @@
     [
      "2026-11-11",
      42.19
+    ],
+    [
+     "2026-11-11",
+     27.99
     ]
    ],
    "min": 27.87
@@ -15130,6 +15134,10 @@
     [
      "2026-11-11",
      167.0
+    ],
+    [
+     "2026-11-11",
+     188.75
     ]
    ],
    "min": 129.13
@@ -15521,6 +15529,10 @@
     [
      "2026-11-11",
      49.78
+    ],
+    [
+     "2026-11-11",
+     40.0
     ]
    ],
    "min": 40.0
@@ -18658,6 +18670,10 @@
     [
      "2026-11-11",
      54.9
+    ],
+    [
+     "2026-11-11",
+     57.15
     ]
    ],
    "min": 38.65
@@ -18956,6 +18972,10 @@
     [
      "2026-11-11",
      73.8
+    ],
+    [
+     "2026-11-11",
+     74.9
     ]
    ],
    "min": 73.8
@@ -19426,6 +19446,10 @@
     [
      "2026-11-11",
      447.0
+    ],
+    [
+     "2026-11-11",
+     441.0
     ]
    ],
    "min": 389.0
@@ -21448,6 +21472,10 @@
     [
      "2026-11-11",
      848.9
+    ],
+    [
+     "2026-11-11",
+     934.29
     ]
    ],
    "min": 819.18
@@ -22368,9 +22396,13 @@
     [
      "2026-11-11",
      599.0
+    ],
+    [
+     "2026-11-11",
+     560.0
     ]
    ],
-   "min": 590.0
+   "min": 560.0
   },
   "MLB49086353": {
    "historico": [
@@ -27188,9 +27220,13 @@
     [
      "2026-11-11",
      163.0
+    ],
+    [
+     "2026-11-11",
+     162.88
     ]
    ],
-   "min": 163.0
+   "min": 162.88
   },
   "MLB69086946": {
    "historico": [
@@ -27338,6 +27374,10 @@
     [
      "2026-11-10",
      175.0
+    ],
+    [
+     "2026-11-11",
+     174.8
     ]
    ],
    "min": 135.9
@@ -30157,6 +30197,10 @@
     [
      "2026-11-11",
      409.0
+    ],
+    [
+     "2026-11-11",
+     379.9
     ]
    ],
    "min": 351.0
@@ -41867,6 +41911,10 @@
     [
      "2026-11-11",
      19.99
+    ],
+    [
+     "2026-11-11",
+     29.88
     ]
    ],
    "min": 19.99
@@ -42158,6 +42206,10 @@
     [
      "2026-11-11",
      48.9
+    ],
+    [
+     "2026-11-11",
+     50.9
     ]
    ],
    "min": 48.9
@@ -43850,9 +43902,13 @@
     [
      "2026-11-11",
      74.99
+    ],
+    [
+     "2026-11-11",
+     71.24
     ]
    ],
-   "min": 74.99
+   "min": 71.24
   },
   "SHP58211917087": {
    "historico": [
@@ -47280,10 +47336,9 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-11T14:45-03:00",
-   "2026-11-11T14:45-03:00",
    "2026-11-11T15:14-03:00",
-   "2026-11-11T15:38-03:00"
+   "2026-11-11T15:38-03:00",
+   "2026-11-11T15:56-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -47325,6 +47380,7 @@
    "SHP45004572291": "2026-11-10T18:21-03:00",
    "SHP45005226257": "2026-11-11T12:13-03:00",
    "SHP45967606085": "2026-11-11T09:11-03:00",
+   "SHP46303601591": "2026-11-11T15:56-03:00",
    "SHP55615214779": "2026-11-11T15:14-03:00",
    "SHP56215017523": "2026-11-11T13:34-03:00",
    "SHP57707127537": "2026-11-11T13:16-03:00",
@@ -47338,7 +47394,7 @@
    "SHP58258341439": "2026-11-11T15:38-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 15,
+  "termo": 18,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -47360,6 +47416,7 @@
     "mantas cobertor",
     "mobile",
     "mochila",
+    "pijama curto",
     "quebra cabecas",
     "refeicao prato",
     "saquinho organizador",
@@ -47379,7 +47436,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T15:35-03:00",
+  "em": "2026-11-11T15:55-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -47682,16 +47739,6 @@
     "titulo": "Assento Redutor Sanitário Infantil Almofadado Acolchoado Desfralde Bebê Criança Menina Antiderrapante Antirres"
    },
    {
-    "categoria": "brinquedo",
-    "de": 129.99,
-    "desconto": 0.546,
-    "id": "MLB44672426",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_700384-MLA99379664790_112025-F.jpg",
-    "link": "https://meli.la/2ppVzCP",
-    "preco": 58.99,
-    "titulo": "Tapete Educativo Interativo Teclado Musical - Verde"
-   },
-   {
     "categoria": "casa",
     "de": 722.21,
     "desconto": 0.331,
@@ -47820,16 +47867,6 @@
     "link": "https://meli.la/2ZByxUP",
     "preco": 15.0,
     "titulo": "Kit 5 Envelopes Pacotinhos Figurinhas Copa do Mundo 2026 Fifa World Cup Futebol"
-   },
-   {
-    "categoria": "passeio",
-    "de": 1499.0,
-    "desconto": 0.434,
-    "id": "MLB44408859",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_642821-MLA100025575483_122025-F.jpg",
-    "link": "https://meli.la/2AtSY5j",
-    "preco": 848.9,
-    "titulo": "Carrinho de Bebê Safety 1st, Spark Splus, 0 meses a 22 kg, Black Graphite"
    },
    {
     "categoria": "outros",
@@ -47980,6 +48017,26 @@
     "link": "https://meli.la/1F4nhGx",
     "preco": 17.54,
     "titulo": "2 Pente Infantil Cabelo Bebê Criança Menino Menina Colorido Cor Azul - Dinossauro"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 349.99,
+    "desconto": 0.684,
+    "id": "MLB22323833",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_668724-MLA95708595806_102025-F.jpg",
+    "link": "https://meli.la/2SeUJJV",
+    "preco": 110.57,
+    "titulo": "Ursinho Que Reza Azul Urso De Pelucia Hipoalergênico Buba"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 299.99,
+    "desconto": 0.677,
+    "id": "MLB34813250",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_935033-MLA95689805484_102025-F.jpg",
+    "link": "https://meli.la/1NWvSTe",
+    "preco": 97.0,
+    "titulo": "Brinquedo Pelúcia Infantil Ursinho Reza Bege 18056 - Buba"
    }
   ]
  },
