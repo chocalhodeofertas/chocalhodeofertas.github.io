@@ -1,5 +1,5 @@
 {
- "aguardando_link": 299,
+ "aguardando_link": 268,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 6
+  "2026-11-11": 8
  },
  "cupons": {
   "AUTO70OFF": {
@@ -5204,6 +5204,12 @@
    "post": 287,
    "status": "ativo",
    "validade": "2026-11-11T23:59-03:00"
+  },
+  "DESCONTODOML30": {
+   "criado": "2026-11-11T10:07-03:00",
+   "post": 304,
+   "status": "ativo",
+   "validade": "2026-12-11T23:59-03:00"
   },
   "ESPORTE1011": {
    "criado": "2026-11-10T16:04-03:00",
@@ -5337,6 +5343,12 @@
    "status": "encerrado",
    "validade": "2026-11-10T23:59-03:00"
   },
+  "OFERTASML30": {
+   "criado": "2026-11-11T10:07-03:00",
+   "post": 304,
+   "status": "ativo",
+   "validade": "2026-12-11T23:59-03:00"
+  },
   "OFFAGORA": {
    "criado": "2026-11-10T13:30-03:00",
    "post": 224,
@@ -5414,10 +5426,16 @@
    "post": 303,
    "status": "ativo",
    "validade": null
+  },
+  "VALEAGORA30": {
+   "criado": "2026-11-11T10:07-03:00",
+   "post": 304,
+   "status": "ativo",
+   "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5536,
- "cupons_ml_ultimo": 6455,
+ "cupons_extra_ultimo:cupombr": 5537,
+ "cupons_ml_ultimo": 6457,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -11837,9 +11855,9 @@
    "shopee": 24
   },
   "2026-11-11": {
-   "cupons": 11,
-   "posts": 12,
-   "shopee": 6
+   "cupons": 14,
+   "posts": 16,
+   "shopee": 8
   }
  },
  "links": {
@@ -11849,6 +11867,7 @@
   "MLB17489277": "https://meli.la/1HtwReq",
   "MLB17875937": "https://meli.la/2NjnRmU",
   "MLB17876024": "https://meli.la/2aCQKSR",
+  "MLB17876029": "https://meli.la/2zLkgHB",
   "MLB17876092": "https://meli.la/1vyezPy",
   "MLB18392608": "https://meli.la/1wYBGNu",
   "MLB18392677": "https://meli.la/2pHZDtK",
@@ -11859,14 +11878,17 @@
   "MLB19491178": "https://meli.la/2onVFMh",
   "MLB19516361": "https://meli.la/1zcyuvR",
   "MLB19569079": "https://meli.la/2nSqsJA",
+  "MLB19740292": "https://meli.la/1YMRtT6",
   "MLB19807041": "https://meli.la/1D7g9GT",
   "MLB19970137": "https://meli.la/2PJCTUP",
   "MLB20611931": "https://meli.la/3171Zw3",
   "MLB20618866": "https://meli.la/2XrHALZ",
   "MLB20794850": "https://meli.la/1tKMmv8",
   "MLB21464638": "https://meli.la/29fo7Uy",
+  "MLB21466956": "https://meli.la/2ucpYL5",
   "MLB21843844": "https://meli.la/1Y4uD27",
   "MLB22191149": "https://meli.la/1YA9wAs",
+  "MLB22323833": "https://meli.la/2SeUJJV",
   "MLB22501041": "https://meli.la/2gWN9oe",
   "MLB22621352": "https://meli.la/34hrryt",
   "MLB22953629": "https://meli.la/1BBUNsA",
@@ -11901,6 +11923,7 @@
   "MLB25863440": "https://meli.la/14rfQiv",
   "MLB26070781": "https://meli.la/1wzpeM6",
   "MLB26097077": "https://meli.la/2SeXuYe",
+  "MLB26415897": "https://meli.la/33HP11G",
   "MLB26712966": "https://meli.la/1RGvMdG",
   "MLB26727193": "https://meli.la/1nHt6dh",
   "MLB26816126": "https://meli.la/1p2LXfo",
@@ -11909,6 +11932,7 @@
   "MLB26996563": "https://meli.la/1mwPb3w",
   "MLB27044594": "https://meli.la/27LUDxU",
   "MLB27267704": "https://meli.la/2LdrEbD",
+  "MLB27350487": "https://meli.la/2U8ARrB",
   "MLB27590860": "https://meli.la/2fXeJM4",
   "MLB27718012": "https://meli.la/34osqQC",
   "MLB27861415": "https://meli.la/2nvA4BA",
@@ -11918,6 +11942,7 @@
   "MLB28717101": "https://meli.la/182h9X2",
   "MLB29003787": "https://meli.la/1sJpwuc",
   "MLB29038720": "https://meli.la/1HfRzJP",
+  "MLB29456492": "https://meli.la/2NWv6uK",
   "MLB29573091": "https://meli.la/1dhm1rT",
   "MLB29756545": "https://meli.la/1XmiRWF",
   "MLB29770692": "https://meli.la/31JeBnv",
@@ -11926,6 +11951,7 @@
   "MLB30890350": "https://meli.la/2UwBck9",
   "MLB32073190": "https://meli.la/2uBH8p1",
   "MLB34803603": "https://meli.la/23hVpnA",
+  "MLB34813250": "https://meli.la/1NWvSTe",
   "MLB35340738": "https://meli.la/1Rug6so",
   "MLB35738935": "https://meli.la/26jKKnv",
   "MLB36436855": "https://meli.la/2w1vR4r",
@@ -11947,13 +11973,17 @@
   "MLB42082195": "https://meli.la/2N8aBdQ",
   "MLB42088228": "https://meli.la/2o9bXfw",
   "MLB42105593": "https://meli.la/2dR7d3w",
+  "MLB42137247": "https://meli.la/2UR1mcy",
+  "MLB42163798": "https://meli.la/1wX7Xqf",
   "MLB43200233": "https://meli.la/2bKrgJ9",
+  "MLB43279750": "https://meli.la/1x6ckzK",
   "MLB43292361": "https://meli.la/2xAyqfq",
   "MLB43429640": "https://meli.la/2FdYem6",
   "MLB43646204": "https://meli.la/34dnmxD",
   "MLB43756367": "https://meli.la/1EZ8jWW",
   "MLB43880173": "https://meli.la/2VC9aoD",
   "MLB44017218": "https://meli.la/2mUjWfa",
+  "MLB44326248": "https://meli.la/32fHX6E",
   "MLB44349733": "https://meli.la/1wDFkkf",
   "MLB44408859": "https://meli.la/2AtSY5j",
   "MLB44604914": "https://meli.la/21aUBb8",
@@ -11962,6 +11992,7 @@
   "MLB44895295": "https://meli.la/25jVbap",
   "MLB44958164": "https://meli.la/1Ed1cyx",
   "MLB45286830": "https://meli.la/2bAX86M",
+  "MLB45410134": "https://meli.la/2JHBAYd",
   "MLB45423403": "https://meli.la/2Qrohet",
   "MLB45505951": "https://meli.la/29itcCA",
   "MLB45528856": "https://meli.la/2Gwm8my",
@@ -11986,6 +12017,7 @@
   "MLB51979690": "https://meli.la/2HcPWSz",
   "MLB52279765": "https://meli.la/1U8N5vD",
   "MLB52680667": "https://meli.la/2tpB2Xw",
+  "MLB52689065": "https://meli.la/1jMKRDV",
   "MLB53258842": "https://meli.la/1cPi9vw",
   "MLB53778622": "https://meli.la/1jjHUTc",
   "MLB54018368": "https://meli.la/21gqDeR",
@@ -11996,6 +12028,7 @@
   "MLB54191616": "https://meli.la/1QQB3e2",
   "MLB54207427": "https://meli.la/2zi74ho",
   "MLB54245130": "https://meli.la/2ZeJEhn",
+  "MLB54276431": "https://meli.la/2rm4pB4",
   "MLB54357048": "https://meli.la/2ybULdP",
   "MLB54746525": "https://meli.la/2abq4Ss",
   "MLB56415193": "https://meli.la/2DVXn4S",
@@ -12013,6 +12046,7 @@
   "MLB60842313": "https://meli.la/1inDkwx",
   "MLB61118769": "https://meli.la/2qfyL4H",
   "MLB61211409": "https://meli.la/1NSaJZf",
+  "MLB61441388": "https://meli.la/2hGmrQR",
   "MLB61700105": "https://meli.la/2SGo6Vo",
   "MLB61713566": "https://meli.la/2wEAaHE",
   "MLB61715651": "https://meli.la/1YC9QxG",
@@ -12048,6 +12082,7 @@
   "MLB63830721": "https://meli.la/2h1Bo2E",
   "MLB64317110": "https://meli.la/2pqXmxJ",
   "MLB64866580": "https://meli.la/2G3kCUB",
+  "MLB65019163": "https://meli.la/2WgGPot",
   "MLB65019704": "https://meli.la/1mtnsKi",
   "MLB65369406": "https://meli.la/2STyvLe",
   "MLB65558091": "https://meli.la/1Z6CgKJ",
@@ -12061,6 +12096,7 @@
   "MLB66548761": "https://meli.la/2VzY1Mf",
   "MLB66566409": "https://meli.la/1AEMg1j",
   "MLB66595119": "https://meli.la/2FDthRU",
+  "MLB66652186": "https://meli.la/2mdDu7j",
   "MLB66784003": "https://meli.la/2rnD541",
   "MLB66986360": "https://meli.la/14u3fxV",
   "MLB67009348": "https://meli.la/2V6BzoT",
@@ -12082,15 +12118,20 @@
   "MLB68520050": "https://meli.la/1DnDKti",
   "MLB68579627": "https://meli.la/1MmwW1g",
   "MLB68709605": "https://meli.la/2cXyZqP",
+  "MLB68745107": "https://meli.la/16zuMJc",
   "MLB68934417": "https://meli.la/1dk5sV4",
   "MLB69086946": "https://meli.la/2o5yjsh",
   "MLB69251241": "https://meli.la/2tSYegn",
   "MLB69332647": "https://meli.la/25eSjCW",
   "MLB69629265": "https://meli.la/1wfjgsG",
+  "MLB69629267": "https://meli.la/34echxs",
   "MLB69818712": "https://meli.la/2yRNUqX",
+  "MLB70023221": "https://meli.la/1oy1wKR",
+  "MLB70042938": "https://meli.la/1VhVXo8",
   "MLB70063063": "https://meli.la/1QVLyMa",
   "MLB70200075": "https://meli.la/2CRvDS6",
   "MLB70334862": "https://meli.la/2LKN8M4",
+  "MLB70352077": "https://meli.la/1F4nhGx",
   "MLB70382962": "https://meli.la/2tea1GZ",
   "MLB70448723": "https://meli.la/2kKwg45",
   "MLB70587098": "https://meli.la/1AZysjp",
@@ -12101,10 +12142,12 @@
   "MLB72678105": "https://meli.la/2GmUBBg",
   "MLB72720626": "https://meli.la/1DnYqLQ",
   "MLB72723298": "https://meli.la/2A8LoVG",
+  "MLB72898518": "https://meli.la/1mCgyi3",
   "MLB72901008": "https://meli.la/2FcodwC",
   "MLB73061689": "https://meli.la/18vy1iU",
   "MLB73107704": "https://meli.la/2oKjxnh",
   "MLB73156948": "https://meli.la/2ShKRwP",
+  "MLB73192466": "https://meli.la/2hXmUQQ",
   "MLB73212051": "https://meli.la/1DAz6PC",
   "MLB73425165": "https://meli.la/1wjZL9H",
   "MLB73604609": "https://meli.la/2nnzRT6",
@@ -12114,6 +12157,7 @@
   "MLB74331737": "https://meli.la/1VMFgJB",
   "MLB74444759": "https://meli.la/1jprPmC",
   "MLB74454821": "https://meli.la/1Vfqa7f",
+  "MLB74596638": "https://meli.la/2rr27eR",
   "MLB74743819": "https://meli.la/2qDFvi4",
   "MLB74813550": "https://meli.la/2T8poHe",
   "MLB74913640": "https://meli.la/29ASzgj",
@@ -12128,6 +12172,7 @@
   "MLB75656299": "https://meli.la/2Cd81fJ",
   "MLB75659709": "https://meli.la/2byg2Vo",
   "MLB75668257": "https://meli.la/22tVW9i",
+  "MLB75686390": "https://meli.la/22RMXPo",
   "MLB75712282": "https://meli.la/2u8EHXu",
   "MLB75846960": "https://meli.la/1HD9p3K",
   "MLB76227639": "https://meli.la/2JnNyvo",
@@ -12138,6 +12183,7 @@
   "MLB77329018": "https://meli.la/1ALRkVS",
   "MLB77421641": "https://meli.la/237Kzg1",
   "MLB77496641": "https://meli.la/13iBu8Y",
+  "MLB77505415": "https://meli.la/2ePyux8",
   "MLB77624729": "https://meli.la/1J9pYbi",
   "MLB77687455": "https://meli.la/2BGBnmp",
   "MLB77981385": "https://meli.la/1t1WoDS",
@@ -12164,7 +12210,9 @@
   "MLB80107133": "https://meli.la/1PDozfs",
   "MLB80142080": "https://meli.la/27UXmEV",
   "MLB80257465": "https://meli.la/2mobEBr",
+  "MLB80266618": "https://meli.la/2fkoq7W",
   "MLB80306191": "https://meli.la/1RwACtr",
+  "MLB80306260": "https://meli.la/1RfgbZE",
   "MLB80306438": "https://meli.la/2297YSi",
   "MLB80328135": "https://meli.la/2HDXPjg",
   "MLB80331375": "https://meli.la/29sFqaC",
@@ -12179,7 +12227,7 @@
  "lote": null,
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-11": 1
+  "2026-11-11": 2
  },
  "membros_hist": {
   "2026-11-07": 2,
@@ -12188,8 +12236,8 @@
   "2026-11-10": 2,
   "2026-11-11": 2
  },
- "membros_lido_em": "2026-11-11T09",
- "numeros_em": "2026-11-11T09:42-03:00",
+ "membros_lido_em": "2026-11-11T10",
+ "numeros_em": "2026-11-11T10:05-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -12591,6 +12639,12 @@
    "preco": 236.45,
    "quando": "2026-11-08T21:06-03:00",
    "titulo": "Piano Teclado Musical Infantil Pianinho Microfone Brinquedo Cor Rosa"
+  },
+  "MLB42105593": {
+   "desconto": 0.484,
+   "preco": 32.99,
+   "quando": "2026-11-11T10:05-03:00",
+   "titulo": "Fralda Protect & Sec 90 Unidades Tamanho Médio Personal Baby"
   },
   "MLB43200233": {
    "desconto": 0.423,
@@ -13174,6 +13228,12 @@
    "quando": "2026-11-09T11:32-03:00",
    "titulo": "Carro Hot Wheels Premium Chevrolet K5 Blazer Stranger Things"
   },
+  "MLB72678105": {
+   "desconto": 0.703,
+   "preco": 23.42,
+   "quando": "2026-11-11T10:05-03:00",
+   "titulo": "Toalha De Bebe Infantil Macia Com Capuz Grande Forrada Cor Rosa"
+  },
   "MLB72720626": {
    "desconto": 0.578,
    "preco": 549.0,
@@ -13726,6 +13786,25 @@
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
+  "304": {
+   "blocos": [
+    {
+     "codigo": "DESCONTODOML30",
+     "html": "<b>🎟️ DESCONTODOML30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 11/12\n👉 <a href=\"https://bit.ly/4875DoL\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "OFERTASML30",
+     "html": "<b>🎟️ OFERTASML30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 11/12\n👉 <a href=\"https://bit.ly/4BTHFuJ\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "VALEAGORA30",
+     "html": "<b>🎟️ VALEAGORA30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 11/12\n👉 <a href=\"https://bit.ly/4zG4vEE\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-11T10:07-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
   "47": {
    "blocos": [
     {
@@ -14043,6 +14122,10 @@
     [
      "2026-11-10",
      14.06
+    ],
+    [
+     "2026-11-11",
+     13.99
     ]
    ],
    "min": 10.99
@@ -14086,6 +14169,10 @@
     [
      "2026-11-11",
      17.69
+    ],
+    [
+     "2026-11-11",
+     16.99
     ]
    ],
    "min": 16.99
@@ -14551,6 +14638,10 @@
     [
      "2026-11-11",
      419.0
+    ],
+    [
+     "2026-11-11",
+     451.0
     ]
    ],
    "min": 419.0
@@ -15681,6 +15772,10 @@
     [
      "2026-11-10",
      55.48
+    ],
+    [
+     "2026-11-11",
+     57.97
     ]
    ],
    "min": 55.48
@@ -17213,6 +17308,10 @@
     [
      "2026-11-11",
      920.53
+    ],
+    [
+     "2026-11-11",
+     779.9
     ]
    ],
    "min": 779.9
@@ -17947,6 +18046,10 @@
     [
      "2026-11-11",
      78.97
+    ],
+    [
+     "2026-11-11",
+     94.99
     ]
    ],
    "min": 78.9
@@ -18200,6 +18303,10 @@
     [
      "2026-11-11",
      26.99
+    ],
+    [
+     "2026-11-11",
+     27.9
     ]
    ],
    "min": 26.99
@@ -20489,6 +20596,10 @@
     [
      "2026-11-11",
      47.4
+    ],
+    [
+     "2026-11-11",
+     46.72
     ]
    ],
    "min": 41.0
@@ -22871,6 +22982,10 @@
     [
      "2026-11-10",
      4299.0
+    ],
+    [
+     "2026-11-11",
+     4154.0
     ]
    ],
    "min": 4154.0
@@ -24588,6 +24703,10 @@
     [
      "2026-11-11",
      324.0
+    ],
+    [
+     "2026-11-11",
+     309.99
     ]
    ],
    "min": 309.99
@@ -25271,6 +25390,10 @@
     [
      "2026-11-10",
      101.65
+    ],
+    [
+     "2026-11-11",
+     102.9
     ]
    ],
    "min": 101.65
@@ -26354,6 +26477,10 @@
     [
      "2026-11-10",
      34.9
+    ],
+    [
+     "2026-11-11",
+     37.9
     ]
    ],
    "min": 33.33
@@ -27152,6 +27279,10 @@
     [
      "2026-11-11",
      502.9
+    ],
+    [
+     "2026-11-11",
+     899.0
     ]
    ],
    "min": 502.9
@@ -29965,6 +30096,15 @@
    ],
    "min": 60.0
   },
+  "SHP10020147421": {
+   "historico": [
+    [
+     "2026-11-11",
+     18.89
+    ]
+   ],
+   "min": 18.89
+  },
   "SHP10152804739": {
    "historico": [
     [
@@ -30451,9 +30591,13 @@
     [
      "2026-11-10",
      69.7
+    ],
+    [
+     "2026-11-11",
+     62.73
     ]
    ],
-   "min": 69.7
+   "min": 62.73
   },
   "SHP18099349837": {
    "historico": [
@@ -30761,6 +30905,15 @@
    ],
    "min": 21.88
   },
+  "SHP18699696739": {
+   "historico": [
+    [
+     "2026-11-11",
+     19.9
+    ]
+   ],
+   "min": 19.9
+  },
   "SHP18699720783": {
    "historico": [
     [
@@ -30795,6 +30948,15 @@
     ]
    ],
    "min": 19.96
+  },
+  "SHP18797927628": {
+   "historico": [
+    [
+     "2026-11-11",
+     15.99
+    ]
+   ],
+   "min": 15.99
   },
   "SHP18799006736": {
    "historico": [
@@ -30984,6 +31146,15 @@
    ],
    "min": 72.0
   },
+  "SHP19199569308": {
+   "historico": [
+    [
+     "2026-11-11",
+     14.97
+    ]
+   ],
+   "min": 14.97
+  },
   "SHP19199842248": {
    "historico": [
     [
@@ -31061,9 +31232,13 @@
     [
      "2026-11-10",
      23.5
+    ],
+    [
+     "2026-11-11",
+     22.8
     ]
    ],
-   "min": 23.5
+   "min": 22.8
   },
   "SHP19397733632": {
    "historico": [
@@ -31417,6 +31592,15 @@
    ],
    "min": 28.3
   },
+  "SHP19760775818": {
+   "historico": [
+    [
+     "2026-11-11",
+     12.5
+    ]
+   ],
+   "min": 12.5
+  },
   "SHP19799037678": {
    "historico": [
     [
@@ -31730,6 +31914,15 @@
    ],
    "min": 20.99
   },
+  "SHP20277018701": {
+   "historico": [
+    [
+     "2026-11-11",
+     18.99
+    ]
+   ],
+   "min": 18.99
+  },
   "SHP20297503147": {
    "historico": [
     [
@@ -31790,6 +31983,15 @@
     ]
    ],
    "min": 27.89
+  },
+  "SHP20299696786": {
+   "historico": [
+    [
+     "2026-11-11",
+     15.85
+    ]
+   ],
+   "min": 15.85
   },
   "SHP20299834208": {
    "historico": [
@@ -31950,6 +32152,15 @@
     ]
    ],
    "min": 149.6
+  },
+  "SHP20499240473": {
+   "historico": [
+    [
+     "2026-11-11",
+     16.89
+    ]
+   ],
+   "min": 16.89
   },
   "SHP20597689349": {
    "historico": [
@@ -32500,6 +32711,15 @@
    ],
    "min": 27.0
   },
+  "SHP21530374467": {
+   "historico": [
+    [
+     "2026-11-11",
+     14.95
+    ]
+   ],
+   "min": 14.95
+  },
   "SHP21559126207": {
    "historico": [
     [
@@ -32828,6 +33048,10 @@
     [
      "2026-11-10",
      34.3
+    ],
+    [
+     "2026-11-11",
+     35.5
     ]
    ],
    "min": 34.3
@@ -32966,6 +33190,15 @@
     ]
    ],
    "min": 13.99
+  },
+  "SHP22098066200": {
+   "historico": [
+    [
+     "2026-11-11",
+     39.99
+    ]
+   ],
+   "min": 39.99
   },
   "SHP22098194781": {
    "historico": [
@@ -33185,6 +33418,15 @@
     ]
    ],
    "min": 23.9
+  },
+  "SHP22195193339": {
+   "historico": [
+    [
+     "2026-11-11",
+     53.0
+    ]
+   ],
+   "min": 53.0
   },
   "SHP22196172522": {
    "historico": [
@@ -33589,6 +33831,15 @@
    ],
    "min": 39.9
   },
+  "SHP22393807507": {
+   "historico": [
+    [
+     "2026-11-11",
+     29.0
+    ]
+   ],
+   "min": 29.0
+  },
   "SHP22393846464": {
    "historico": [
     [
@@ -33825,6 +34076,15 @@
    ],
    "min": 69.79
   },
+  "SHP22399472833": {
+   "historico": [
+    [
+     "2026-11-11",
+     38.99
+    ]
+   ],
+   "min": 38.99
+  },
   "SHP22399520431": {
    "historico": [
     [
@@ -33985,6 +34245,15 @@
     ]
    ],
    "min": 18.49
+  },
+  "SHP22497167219": {
+   "historico": [
+    [
+     "2026-11-11",
+     14.99
+    ]
+   ],
+   "min": 14.99
   },
   "SHP22497311280": {
    "historico": [
@@ -34367,6 +34636,15 @@
    ],
    "min": 119.9
   },
+  "SHP22693054362": {
+   "historico": [
+    [
+     "2026-11-11",
+     44.98
+    ]
+   ],
+   "min": 44.98
+  },
   "SHP22693669706": {
    "historico": [
     [
@@ -34573,6 +34851,15 @@
    ],
    "min": 34.99
   },
+  "SHP22698412592": {
+   "historico": [
+    [
+     "2026-11-11",
+     15.99
+    ]
+   ],
+   "min": 15.99
+  },
   "SHP22698477099": {
    "historico": [
     [
@@ -34761,6 +35048,15 @@
    ],
    "min": 29.9
   },
+  "SHP22794953291": {
+   "historico": [
+    [
+     "2026-11-11",
+     5.46
+    ]
+   ],
+   "min": 5.46
+  },
   "SHP22796874871": {
    "historico": [
     [
@@ -34845,6 +35141,15 @@
     ]
    ],
    "min": 34.4
+  },
+  "SHP22892493171": {
+   "historico": [
+    [
+     "2026-11-11",
+     79.9
+    ]
+   ],
+   "min": 79.9
   },
   "SHP22893064182": {
    "historico": [
@@ -34939,6 +35244,15 @@
     ]
    ],
    "min": 21.79
+  },
+  "SHP22897748837": {
+   "historico": [
+    [
+     "2026-11-11",
+     16.53
+    ]
+   ],
+   "min": 16.53
   },
   "SHP22898200244": {
    "historico": [
@@ -35120,9 +35434,13 @@
     [
      "2026-11-10",
      31.0
+    ],
+    [
+     "2026-11-11",
+     29.0
     ]
    ],
-   "min": 31.0
+   "min": 29.0
   },
   "SHP22994175243": {
    "historico": [
@@ -35132,6 +35450,15 @@
     ]
    ],
    "min": 27.99
+  },
+  "SHP22994268143": {
+   "historico": [
+    [
+     "2026-11-11",
+     18.99
+    ]
+   ],
+   "min": 18.99
   },
   "SHP22994324513": {
    "historico": [
@@ -35199,6 +35526,15 @@
     ]
    ],
    "min": 28.9
+  },
+  "SHP22997094649": {
+   "historico": [
+    [
+     "2026-11-11",
+     19.9
+    ]
+   ],
+   "min": 19.9
   },
   "SHP22997475974": {
    "historico": [
@@ -35679,6 +36015,15 @@
    ],
    "min": 103.54
   },
+  "SHP23194029573": {
+   "historico": [
+    [
+     "2026-11-11",
+     15.18
+    ]
+   ],
+   "min": 15.18
+  },
   "SHP23194042103": {
    "historico": [
     [
@@ -35773,6 +36118,24 @@
    ],
    "min": 29.9
   },
+  "SHP23198143936": {
+   "historico": [
+    [
+     "2026-11-11",
+     55.22
+    ]
+   ],
+   "min": 55.22
+  },
+  "SHP23198196490": {
+   "historico": [
+    [
+     "2026-11-11",
+     35.9
+    ]
+   ],
+   "min": 35.9
+  },
   "SHP23198205529": {
    "historico": [
     [
@@ -35790,6 +36153,15 @@
     ]
    ],
    "min": 50.9
+  },
+  "SHP23198361609": {
+   "historico": [
+    [
+     "2026-11-11",
+     59.99
+    ]
+   ],
+   "min": 59.99
   },
   "SHP23198643282": {
    "historico": [
@@ -35920,6 +36292,15 @@
     ]
    ],
    "min": 47.98
+  },
+  "SHP23293415344": {
+   "historico": [
+    [
+     "2026-11-11",
+     16.5
+    ]
+   ],
+   "min": 16.5
   },
   "SHP23293514695": {
    "historico": [
@@ -36172,9 +36553,13 @@
     [
      "2026-11-10",
      31.0
+    ],
+    [
+     "2026-11-11",
+     29.0
     ]
    ],
-   "min": 31.0
+   "min": 29.0
   },
   "SHP23299239521": {
    "historico": [
@@ -36193,6 +36578,15 @@
     ]
    ],
    "min": 21.8
+  },
+  "SHP23299419556": {
+   "historico": [
+    [
+     "2026-11-11",
+     22.9
+    ]
+   ],
+   "min": 22.9
   },
   "SHP23299422145": {
    "historico": [
@@ -36229,6 +36623,15 @@
     ]
    ],
    "min": 42.9
+  },
+  "SHP23393093572": {
+   "historico": [
+    [
+     "2026-11-11",
+     29.93
+    ]
+   ],
+   "min": 29.93
   },
   "SHP23393262551": {
    "historico": [
@@ -36372,6 +36775,15 @@
     ]
    ],
    "min": 15.98
+  },
+  "SHP23399008498": {
+   "historico": [
+    [
+     "2026-11-11",
+     39.9
+    ]
+   ],
+   "min": 39.9
   },
   "SHP23399289696": {
    "historico": [
@@ -36973,6 +37385,15 @@
    ],
    "min": 28.99
   },
+  "SHP23599016758": {
+   "historico": [
+    [
+     "2026-11-11",
+     19.9
+    ]
+   ],
+   "min": 19.9
+  },
   "SHP23618360276": {
    "historico": [
     [
@@ -37192,6 +37613,15 @@
    ],
    "min": 26.9
   },
+  "SHP23699651221": {
+   "historico": [
+    [
+     "2026-11-11",
+     19.5
+    ]
+   ],
+   "min": 19.5
+  },
   "SHP23792586434": {
    "historico": [
     [
@@ -37381,6 +37811,10 @@
     [
      "2026-11-10",
      21.8
+    ],
+    [
+     "2026-11-11",
+     22.8
     ]
    ],
    "min": 21.8
@@ -37533,6 +37967,15 @@
    ],
    "min": 49.98
   },
+  "SHP23799515857": {
+   "historico": [
+    [
+     "2026-11-11",
+     17.9
+    ]
+   ],
+   "min": 17.9
+  },
   "SHP23799660745": {
    "historico": [
     [
@@ -37626,6 +38069,24 @@
     ]
    ],
    "min": 31.8
+  },
+  "SHP23898229372": {
+   "historico": [
+    [
+     "2026-11-11",
+     34.9
+    ]
+   ],
+   "min": 34.9
+  },
+  "SHP23898575075": {
+   "historico": [
+    [
+     "2026-11-11",
+     22.7
+    ]
+   ],
+   "min": 22.7
   },
   "SHP23898658814": {
    "historico": [
@@ -38061,6 +38522,15 @@
    ],
    "min": 19.97
   },
+  "SHP27044050938": {
+   "historico": [
+    [
+     "2026-11-11",
+     19.99
+    ]
+   ],
+   "min": 19.99
+  },
   "SHP27245272689": {
    "historico": [
     [
@@ -38356,6 +38826,15 @@
     ]
    ],
    "min": 12.97
+  },
+  "SHP40028697087": {
+   "historico": [
+    [
+     "2026-11-11",
+     49.89
+    ]
+   ],
+   "min": 49.89
   },
   "SHP40063005505": {
    "historico": [
@@ -39161,6 +39640,15 @@
    ],
    "min": 93.99
   },
+  "SHP47210188748": {
+   "historico": [
+    [
+     "2026-11-11",
+     63.99
+    ]
+   ],
+   "min": 63.99
+  },
   "SHP47261463441": {
    "historico": [
     [
@@ -39178,6 +39666,15 @@
     ]
    ],
    "min": 24.57
+  },
+  "SHP47509937990": {
+   "historico": [
+    [
+     "2026-11-11",
+     43.05
+    ]
+   ],
+   "min": 43.05
   },
   "SHP47668034595": {
    "historico": [
@@ -39406,6 +39903,15 @@
     ]
    ],
    "min": 5.99
+  },
+  "SHP49618052338": {
+   "historico": [
+    [
+     "2026-11-11",
+     20.9
+    ]
+   ],
+   "min": 20.9
   },
   "SHP49656685193": {
    "historico": [
@@ -39912,6 +40418,15 @@
     ]
    ],
    "min": 68.9
+  },
+  "SHP56357972761": {
+   "historico": [
+    [
+     "2026-11-11",
+     21.97
+    ]
+   ],
+   "min": 21.97
   },
   "SHP56559697313": {
    "historico": [
@@ -40499,6 +41014,15 @@
    ],
    "min": 69.97
   },
+  "SHP58205404810": {
+   "historico": [
+    [
+     "2026-11-11",
+     24.12
+    ]
+   ],
+   "min": 24.12
+  },
   "SHP58205718637": {
    "historico": [
     [
@@ -40598,6 +41122,15 @@
    ],
    "min": 26.19
   },
+  "SHP58206864113": {
+   "historico": [
+    [
+     "2026-11-11",
+     37.9
+    ]
+   ],
+   "min": 37.9
+  },
   "SHP58206873342": {
    "historico": [
     [
@@ -40683,6 +41216,15 @@
    ],
    "min": 40.79
   },
+  "SHP58207823792": {
+   "historico": [
+    [
+     "2026-11-11",
+     24.9
+    ]
+   ],
+   "min": 24.9
+  },
   "SHP58208134820": {
    "historico": [
     [
@@ -40754,6 +41296,15 @@
     ]
    ],
    "min": 23.99
+  },
+  "SHP58209183840": {
+   "historico": [
+    [
+     "2026-11-11",
+     17.58
+    ]
+   ],
+   "min": 17.58
   },
   "SHP58209209623": {
    "historico": [
@@ -40893,6 +41444,15 @@
     ]
    ],
    "min": 15.85
+  },
+  "SHP58210894557": {
+   "historico": [
+    [
+     "2026-11-11",
+     25.93
+    ]
+   ],
+   "min": 25.93
   },
   "SHP58211010418": {
    "historico": [
@@ -41154,6 +41714,15 @@
    ],
    "min": 31.69
   },
+  "SHP58214491384": {
+   "historico": [
+    [
+     "2026-11-11",
+     22.9
+    ]
+   ],
+   "min": 22.9
+  },
   "SHP58214519187": {
    "historico": [
     [
@@ -41383,6 +41952,15 @@
    ],
    "min": 330.0
   },
+  "SHP58217026576": {
+   "historico": [
+    [
+     "2026-11-11",
+     37.49
+    ]
+   ],
+   "min": 37.49
+  },
   "SHP58217033370": {
    "historico": [
     [
@@ -41544,6 +42122,15 @@
     ]
    ],
    "min": 34.9
+  },
+  "SHP58217447608": {
+   "historico": [
+    [
+     "2026-11-11",
+     33.2
+    ]
+   ],
+   "min": 33.2
   },
   "SHP58217470169": {
    "historico": [
@@ -43078,6 +43665,15 @@
    ],
    "min": 9.97
   },
+  "SHP58261948021": {
+   "historico": [
+    [
+     "2026-11-11",
+     5.46
+    ]
+   ],
+   "min": 5.46
+  },
   "SHP58262131036": {
    "historico": [
     [
@@ -43104,6 +43700,15 @@
     ]
    ],
    "min": 19.99
+  },
+  "SHP58262424110": {
+   "historico": [
+    [
+     "2026-11-11",
+     33.49
+    ]
+   ],
+   "min": 33.49
   },
   "SHP58262743731": {
    "historico": [
@@ -43616,6 +44221,15 @@
    ],
    "min": 41.99
   },
+  "SHP58267797701": {
+   "historico": [
+    [
+     "2026-11-11",
+     5.46
+    ]
+   ],
+   "min": 5.46
+  },
   "SHP58267899873": {
    "historico": [
     [
@@ -43868,6 +44482,15 @@
    ],
    "min": 34.99
   },
+  "SHP58270954012": {
+   "historico": [
+    [
+     "2026-11-11",
+     20.99
+    ]
+   ],
+   "min": 20.99
+  },
   "SHP58271655984": {
    "historico": [
     [
@@ -44024,9 +44647,9 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-11T09:11-03:00",
-   "2026-11-11T09:11-03:00",
-   "2026-11-11T09:24-03:00"
+   "2026-11-11T09:24-03:00",
+   "2026-11-11T10:14-03:00",
+   "2026-11-11T10:14-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -44048,6 +44671,8 @@
    "SHP22994443307": "2026-11-10T19:24-03:00",
    "SHP23219825532": "2026-11-11T09:11-03:00",
    "SHP23296759926": "2026-11-10T17:34-03:00",
+   "SHP23699651221": "2026-11-11T10:14-03:00",
+   "SHP23992252560": "2026-11-11T10:14-03:00",
    "SHP27621732758": "2026-11-11T09:24-03:00",
    "SHP28620926406": "2026-11-10T19:57-03:00",
    "SHP44809598956": "2026-11-10T21:42-03:00",
@@ -44060,7 +44685,7 @@
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 31,
+  "termo": 34,
   "tipos": {
    "2026-11-11": [
     "babuche menina",
@@ -44068,7 +44693,9 @@
     "fralda",
     "lego/blocos",
     "lenco umedecido",
-    "tapete inflavel"
+    "refeicao prato",
+    "tapete inflavel",
+    "toalha banho"
    ]
   }
  },
@@ -44077,10 +44704,10 @@
   "brinquedos": "2026-11-08",
   "passeio": "2026-11-09"
  },
- "tg_offset": 273518001,
+ "tg_offset": 273518002,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T09:45-03:00",
+  "em": "2026-11-11T10:05-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -44103,6 +44730,26 @@
     "titulo": "Berço Portátil PipDip Co-Sleeper, Com Balanço e Colchão Extra Grosso"
    },
    {
+    "categoria": "higiene",
+    "de": 589.9,
+    "desconto": 0.6,
+    "id": "MLB77981385",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_601188-MLA121131973993_112026-F.jpg",
+    "link": "https://meli.la/1t1WoDS",
+    "preco": 235.99,
+    "titulo": "Banheira Trocador Dobrável Termômetro Aloha Maxi Baby"
+   },
+   {
+    "categoria": "higiene",
+    "de": 78.9,
+    "desconto": 0.703,
+    "id": "MLB72678105",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_700435-MLA111726762652_062026-F.jpg",
+    "link": "https://meli.la/2GmUBBg",
+    "preco": 23.42,
+    "titulo": "Toalha De Bebe Infantil Macia Com Capuz Grande Forrada Cor Rosa"
+   },
+   {
     "categoria": "quarto",
     "de": 799.9,
     "desconto": 0.5,
@@ -44111,6 +44758,36 @@
     "link": "https://meli.la/17iYotp",
     "preco": 399.9,
     "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi Baby - CINZA"
+   },
+   {
+    "categoria": "outros",
+    "de": 63.9,
+    "desconto": 0.484,
+    "id": "MLB42105593",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_754916-MLA99922830519_112025-F.jpg",
+    "link": "https://meli.la/2dR7d3w",
+    "preco": 32.99,
+    "titulo": "Fralda Protect & Sec 90 Unidades Tamanho Médio Personal Baby"
+   },
+   {
+    "categoria": "higiene",
+    "de": 34.9,
+    "desconto": 0.544,
+    "id": "MLB72723298",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_663982-MLA112848465113_062026-F.jpg",
+    "link": "https://meli.la/2A8LoVG",
+    "preco": 15.9,
+    "titulo": "Viseira Proteção Banho Bebê Anti Shampoo Ajustável - Azul Azul-petróleo"
+   },
+   {
+    "categoria": "higiene",
+    "de": 41.99,
+    "desconto": 0.457,
+    "id": "MLB17876092",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_759458-MLA109736226025_032026-F.jpg",
+    "link": "https://meli.la/1vyezPy",
+    "preco": 22.78,
+    "titulo": "Sabonete Líquido Glicerina Da Cabeça Aos Pés Johnson's Baby, 400ml"
    },
    {
     "categoria": "quarto",
@@ -44124,6 +44801,16 @@
    },
    {
     "categoria": "higiene",
+    "de": 34.49,
+    "desconto": 0.507,
+    "id": "MLB17875937",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_652883-MLA120426014167_102026-F.jpg",
+    "link": "https://meli.la/2NjnRmU",
+    "preco": 16.99,
+    "titulo": "Sabonete Líquido Johnson's Baby Recém Nascido, 200ml"
+   },
+   {
+    "categoria": "higiene",
     "de": 699.9,
     "desconto": 0.587,
     "id": "MLB72901008",
@@ -44131,6 +44818,16 @@
     "link": "https://meli.la/2FcodwC",
     "preco": 288.9,
     "titulo": "Banheira com Suporte Dobrável para Bebê Mini Assento Válvula de Esvaziamento 45 Litros Lisa Plástico Rígido At"
+   },
+   {
+    "categoria": "escola",
+    "de": 49.0,
+    "desconto": 0.578,
+    "id": "MLB63636535",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_752721-MLA102401357976_122025-F.jpg",
+    "link": "https://meli.la/1AgD25A",
+    "preco": 20.67,
+    "titulo": "Caderneta Anotação A5 Executiva Tipo Moleskine Couro Sintético"
    },
    {
     "categoria": "higiene",
@@ -44163,6 +44860,16 @@
     "titulo": "Cesto Para Bebes Porta Roupa Fraldas Organizador De Banho Cor Bege"
    },
    {
+    "categoria": "outros",
+    "de": 129.9,
+    "desconto": 0.79,
+    "id": "MLB79069896",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_787430-MLA115893535096_092026-F.jpg",
+    "link": "https://meli.la/2oqF3sZ",
+    "preco": 27.27,
+    "titulo": "Aspirador Nasal Elétrico Epsilon Recarregável Rosa para Bebês com 2 Bicos"
+   },
+   {
     "categoria": "passeio",
     "de": 39.9,
     "desconto": 0.399,
@@ -44183,6 +44890,26 @@
     "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Ocean"
    },
    {
+    "categoria": "brinquedo",
+    "de": 119.99,
+    "desconto": 0.776,
+    "id": "MLB75488058",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_927720-MLA118032325445_092026-F.jpg",
+    "link": "https://meli.la/17nPXDN",
+    "preco": 26.9,
+    "titulo": "MoveBrinca Bola De Ar Flutuante Com LED Para Crianças 3 Velocidades E Proteção De Espuma Futebol Brinquedo Inf"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 299.99,
+    "desconto": 0.643,
+    "id": "MLB37136700",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_934309-MLA95405210648_102025-F.jpg",
+    "link": "https://meli.la/23uUAuu",
+    "preco": 107.0,
+    "titulo": "Ursinho Que Reza Buba Pelúcia Oração Anjinho Da Guarda 24 Cm Cor Azul"
+   },
+   {
     "categoria": "passeio",
     "de": 599.0,
     "desconto": 0.386,
@@ -44193,6 +44920,16 @@
     "titulo": "Carrinho De Bebê Cosco Kids, Toffy, Rosa Noite"
    },
    {
+    "categoria": "passeio",
+    "de": 699.9,
+    "desconto": 0.386,
+    "id": "MLB60363392",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_905849-MLA95471483799_102025-F.jpg",
+    "link": "https://meli.la/2xVEHxQ",
+    "preco": 429.99,
+    "titulo": "Carrinho de Bebê Com Alça Reversível YouTurn Maxi Baby - Gold"
+   },
+   {
     "categoria": "brinquedo",
     "de": 149.9,
     "desconto": 0.533,
@@ -44201,6 +44938,16 @@
     "link": "https://meli.la/1aExvGd",
     "preco": 70.0,
     "titulo": "Móbile Arco Musical Bebê Carrinho Berço Let's Play Maxi Baby"
+   },
+   {
+    "categoria": "quarto",
+    "de": 899.9,
+    "desconto": 0.53,
+    "id": "MLB80306191",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_921498-MLA117363268892_102026-F.jpg",
+    "link": "https://meli.la/1RwACtr",
+    "preco": 422.95,
+    "titulo": "Berço Portátil Bebe Moises Acoplado AMR-6272 Colchao com mosqueteiro L'AMOR Cor Cinza"
    },
    {
     "categoria": "quarto",
@@ -44253,6 +45000,36 @@
     "titulo": "Bicicleta De Equilíbrio Infantil Sem Pedal 4 Rodas Bebê Menino Menina Gato Panda"
    },
    {
+    "categoria": "passeio",
+    "de": 169.9,
+    "desconto": 0.51,
+    "id": "MLB28131603",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_924558-MLA120363058695_102026-F.jpg",
+    "link": "https://meli.la/1sMQwCz",
+    "preco": 83.18,
+    "titulo": "Canguru de Bebê Aiebao Ergonômico Cinza 4 Posições Com Bolsos Ajustável"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 69.9,
+    "desconto": 0.428,
+    "id": "MLB75656299",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_969385-MLA114960437177_072026-F.jpg",
+    "link": "https://meli.la/2Cd81fJ",
+    "preco": 39.99,
+    "titulo": "Brinquedo De Banho Bebê Mini Cascata Com Ventosa Sem Pilha Banheira Box Aquababy Maxi Baby - FLOR"
+   },
+   {
+    "categoria": "outros",
+    "de": 197.75,
+    "desconto": 0.36,
+    "id": "MLB17336025",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_782627-MLA99928206837_112025-F.jpg",
+    "link": "https://meli.la/1Ew1jm9",
+    "preco": 126.48,
+    "titulo": "Huggies Fralda Descartável Máxima Proteção XG - 112 Un"
+   },
+   {
     "categoria": "alimentacao",
     "de": 19.98,
     "desconto": 0.355,
@@ -44281,6 +45058,46 @@
     "link": "https://meli.la/34hrryt",
     "preco": 206.99,
     "titulo": "Andador Safari II Infantil Primeiros Passos Tutti Baby Azul"
+   },
+   {
+    "categoria": "higiene",
+    "de": 129.1,
+    "desconto": 0.49,
+    "id": "MLB38662854",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_872370-MLA99926477141_112025-F.jpg",
+    "link": "https://meli.la/1xMxZt4",
+    "preco": 65.8,
+    "titulo": "Kit Braé Stages Nutrição: Shampoo e Condicionador para Cabelos Ressecados e sem Vida"
+   },
+   {
+    "categoria": "higiene",
+    "de": 349.9,
+    "desconto": 0.491,
+    "id": "MLB75505071",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_810962-MLA116130884751_082026-F.jpg",
+    "link": "https://meli.la/2z7SEN2",
+    "preco": 178.0,
+    "titulo": "Suporte de Banho Infantil Ajustável Bebê em Pé Base Antiderrapante SekBem Azul"
+   },
+   {
+    "categoria": "higiene",
+    "de": 145.99,
+    "desconto": 0.49,
+    "id": "MLB52279765",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_730745-MLA87661564519_072025-F.jpg",
+    "link": "https://meli.la/1U8N5vD",
+    "preco": 74.49,
+    "titulo": "Assento Redutor Infantil Escada Para Vaso Sanitário Troninho Cor Azul Lisa"
+   },
+   {
+    "categoria": "game",
+    "de": 507.92,
+    "desconto": 0.68,
+    "id": "MLB80770078",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_862848-MLA118441725014_102026-F.jpg",
+    "link": "https://meli.la/1RxjSQJ",
+    "preco": 162.53,
+    "titulo": "Pokémon Celebração 30 Anos Blister Triplo Com Adesivos Lucario - Copag"
    },
    {
     "categoria": "passeio",
@@ -44343,6 +45160,16 @@
     "titulo": "Retrovisor De Bebe Conforto Buba Espelho Interno Redondo"
    },
    {
+    "categoria": "passeio",
+    "de": 1199.0,
+    "desconto": 0.395,
+    "id": "MLB26070781",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_836450-MLA100062682691_122025-F.jpg",
+    "link": "https://meli.la/1wzpeM6",
+    "preco": 725.9,
+    "titulo": "Cadeira de Carro Infantil All Stages 2.0 Isofix Preto Litet"
+   },
+   {
     "categoria": "brinquedo",
     "de": 129.99,
     "desconto": 0.546,
@@ -44363,6 +45190,16 @@
     "titulo": "Kit Mochila Infantil Disney Frozen Azul com Lancheira"
    },
    {
+    "categoria": "higiene",
+    "de": 45.8,
+    "desconto": 0.454,
+    "id": "MLB18392845",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_700377-MLA99930638257_112025-F.jpg",
+    "link": "https://meli.la/189Unwc",
+    "preco": 24.99,
+    "titulo": "Lenços Umedecidos Huggies Recém Nascido Pack C/4 - 192 Un"
+   },
+   {
     "categoria": "gestante",
     "de": 239.0,
     "desconto": 0.38,
@@ -44371,6 +45208,26 @@
     "link": "https://meli.la/23VP8r1",
     "preco": 148.18,
     "titulo": "Kit Bolsa Maternidade Com Mochila E Trocador Completo Impermeável Bebê Menino Menina Ric Deveras Azul"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 189.9,
+    "desconto": 0.527,
+    "id": "MLB66595119",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_659154-MLA107901202678_032026-F.jpg",
+    "link": "https://meli.la/2FDthRU",
+    "preco": 89.91,
+    "titulo": "Bebê Boneca Reborn Menina Maddie Unicórnio Corpinho Silicone"
+   },
+   {
+    "categoria": "roupa",
+    "de": 249.99,
+    "desconto": 0.53,
+    "id": "MLB56574273",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_763534-MLA99368369100_112025-F.jpg",
+    "link": "https://meli.la/1nM3Xnd",
+    "preco": 117.49,
+    "titulo": "Boné New Era A-frame New York Yankees Ajustável Cor Preto Tamanho U"
    },
    {
     "categoria": "quarto",
@@ -44391,6 +45248,26 @@
     "link": "https://meli.la/2f7JZaE",
     "preco": 56.16,
     "titulo": "Canguru Sling De Bebe Carregar Recem Nascido Cinza G - Marca DE CORAZÓN"
+   },
+   {
+    "categoria": "higiene",
+    "de": 19.9,
+    "desconto": 0.438,
+    "id": "MLB47734236",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_859414-MLA89302556011_082025-F.jpg",
+    "link": "https://meli.la/1HdrmgD",
+    "preco": 11.19,
+    "titulo": "Escova De Dente Primeiro Dentinhos 0 A 2 Anos Mordedor Cor Azul"
+   },
+   {
+    "categoria": "passeio",
+    "de": 1499.0,
+    "desconto": 0.434,
+    "id": "MLB44408859",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_642821-MLA100025575483_122025-F.jpg",
+    "link": "https://meli.la/2AtSY5j",
+    "preco": 848.9,
+    "titulo": "Carrinho de Bebê Safety 1st, Spark Splus, 0 meses a 22 kg, Black Graphite"
    },
    {
     "categoria": "outros",
@@ -44431,259 +45308,9 @@
     "link": "https://meli.la/1Z6CgKJ",
     "preco": 44.52,
     "titulo": "Trocador Absorvente Baby & Me 10 Unid"
-   },
-   {
-    "categoria": "outros",
-    "de": 53.99,
-    "desconto": 0.593,
-    "id": "MLB70448723",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_844369-MLA113628435522_072026-F.jpg",
-    "link": "https://meli.la/2kKwg45",
-    "preco": 21.99,
-    "titulo": "Kit 10 Travas De Geladeira Gaveta Reparador Porta Segurança Infantil Contra Bebes Adesivo Resistente"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 69.9,
-    "desconto": 0.501,
-    "id": "MLB62719788",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_923411-MLA114906766384_082026-F.jpg",
-    "link": "https://meli.la/1dQR2q4",
-    "preco": 34.9,
-    "titulo": "Labirinto Magnético Coordenação Motora Pedagógico Imã Montessori Madeira Brinquedo Infantil Educativo Colorido"
-   },
-   {
-    "categoria": "gestante",
-    "de": 247.9,
-    "desconto": 0.359,
-    "id": "MLB35738935",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_926579-MLA115342374153_072026-F.jpg",
-    "link": "https://meli.la/26jKKnv",
-    "preco": 158.9,
-    "titulo": "Trocador Anatômico Bebê Batistela Baby Linho Jeans Azul 69x46cm"
-   },
-   {
-    "categoria": "passeio",
-    "de": 57.96,
-    "desconto": 0.5,
-    "id": "MLB75373452",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_839941-MLA114417379495_072026-F.jpg",
-    "link": "https://meli.la/2bByDKx",
-    "preco": 29.0,
-    "titulo": "Suporte Tablet Celular P/ Banco Carro Bebê Criança Organizador Encosto garrafa d'água brinquedo sacola viagem "
-   },
-   {
-    "categoria": "outros",
-    "de": 51.04,
-    "desconto": 0.35,
-    "id": "MLB18392677",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_990051-MLA110123026010_042026-F.jpg",
-    "link": "https://meli.la/2pHZDtK",
-    "preco": 33.2,
-    "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 239.0,
-    "desconto": 0.485,
-    "id": "MLB65579852",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_794094-MLA106544309108_022026-F.jpg",
-    "link": "https://meli.la/2uj3eiU",
-    "preco": 123.0,
-    "titulo": "Adora Bebê Reborn Bonecas Realista De Silicone Menina 48 Cm"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 149.99,
-    "desconto": 0.48,
-    "id": "MLB79649272",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_859080-MLA116499283624_092026-F.jpg",
-    "link": "https://meli.la/2fN6LwV",
-    "preco": 77.95,
-    "titulo": "Barraca Infantil Ônibus da Patrulha Canina Dobrável, Pop-Up, para Meninos e Meninas"
-   },
-   {
-    "categoria": "outros",
-    "de": 379.0,
-    "desconto": 0.407,
-    "id": "MLB47899174",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_775995-MLA120917880437_112026-F.jpg",
-    "link": "https://meli.la/1mbZ5jZ",
-    "preco": 224.57,
-    "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco Estary Shop"
-   },
-   {
-    "categoria": "outros",
-    "de": 220.0,
-    "desconto": 0.478,
-    "id": "MLB43292361",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_882234-MLA99374619176_112025-F.jpg",
-    "link": "https://meli.la/2xAyqfq",
-    "preco": 114.9,
-    "titulo": "Andador Educativo Empurrar Infantil Bebê Musical Brinquedo Atentu Rosa"
-   },
-   {
-    "categoria": "outros",
-    "de": 39.23,
-    "desconto": 0.287,
-    "id": "MLB18392841",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_753827-MLA80015367155_102024-F.jpg",
-    "link": "https://meli.la/2hkByUN",
-    "preco": 27.99,
-    "titulo": "Lenços Umedecidos Huggies Rosto E Corpo 4 pcts - 192 Un"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 149.9,
-    "desconto": 0.548,
-    "id": "MLB79738780",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_876736-MLA116970521266_092026-F.jpg",
-    "link": "https://meli.la/1E3rsQs",
-    "preco": 67.8,
-    "titulo": "Kit 48 Carrinhos Miniatura Nanotoyzzz Metal Fricção 1:64 Container com 2 Pistas Carros Sortidos Brinquedo Infa"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 129.9,
-    "desconto": 0.462,
-    "id": "MLB38654615",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_920445-MLU77974913915_072024-F.jpg",
-    "link": "https://meli.la/13aW58Y",
-    "preco": 69.9,
-    "titulo": "Tapete Infantil De Atividades Piano Musical Com Luz E Som"
-   },
-   {
-    "categoria": "higiene",
-    "de": 499.9,
-    "desconto": 0.28,
-    "id": "MLB73425165",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_704974-MLA112019273416_062026-F.jpg",
-    "link": "https://meli.la/1wjZL9H",
-    "preco": 359.9,
-    "titulo": "Banheira Bebê Dobrável Com Suporte Redutor Assento E Termômetro Embutido Até 20kg Melon Maxi Baby - Azul"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 119.9,
-    "desconto": 0.459,
-    "id": "MLB67746701",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_676065-MLA110243997819_042026-F.jpg",
-    "link": "https://meli.la/1p4ugad",
-    "preco": 64.9,
-    "titulo": "Cozinha Infantil Brinquedo Com Luz 33 Acessórios Sai Água Rosa"
-   },
-   {
-    "categoria": "outros",
-    "de": 338.88,
-    "desconto": 0.46,
-    "id": "MLB67741951",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_821539-MLA110242313195_042026-F.jpg",
-    "link": "https://meli.la/13LaFFE",
-    "preco": 183.0,
-    "titulo": "Cercadinho Grande Para Bebe Infantil Vário Tamanho Acessório 127×127cm Cinza"
-   },
-   {
-    "categoria": "outros",
-    "de": 31.9,
-    "desconto": 0.455,
-    "id": "MLB26816126",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_670798-MLA118562377212_102026-F.jpg",
-    "link": "https://meli.la/1p2LXfo",
-    "preco": 17.37,
-    "titulo": "Massageador Mordedor De Gengiva Banana Bebê Buba Cor Amarelo"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 169.9,
-    "desconto": 0.536,
-    "id": "MLB68086238",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_825513-MLA109629080834_042026-F.jpg",
-    "link": "https://meli.la/25BAUrc",
-    "preco": 78.9,
-    "titulo": "Boneca Bebê Reborn Menino Recém Nascido Pode Dar Banho"
-   },
-   {
-    "categoria": "outros",
-    "de": 59.9,
-    "desconto": 0.384,
-    "id": "MLB80328135",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_820161-MLA119031086759_102026-F.jpg",
-    "link": "https://meli.la/2HDXPjg",
-    "preco": 36.9,
-    "titulo": "Aspirador Nasal Rosa Elétrico Infantil Bebê Recarregável USB Sugador de Nariz Limpeza Nasal Portátil Removedor"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 199.99,
-    "desconto": 0.44,
-    "id": "MLB17489277",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_678645-MLA99447823800_112025-F.jpg",
-    "link": "https://meli.la/1HtwReq",
-    "preco": 111.92,
-    "titulo": "LEGO Classic Maleta Criativa com 213 Peças, Brinquedo de Montar para Crianças"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 161.7,
-    "desconto": 0.431,
-    "id": "MLB65019704",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_879550-MLA105423714224_012026-F.jpg",
-    "link": "https://meli.la/1mtnsKi",
-    "preco": 91.94,
-    "titulo": "Jogo de Tabuleiro - Perfil 8 - Grow - 4992"
-   },
-   {
-    "categoria": "higiene",
-    "de": 124.9,
-    "desconto": 0.51,
-    "id": "MLB24762578",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_850864-MLA103491133458_012026-F.jpg",
-    "link": "https://meli.la/21cLMz2",
-    "preco": 61.21,
-    "titulo": "Assento Redutor Infantil Com Escada Para Vaso Sanitário"
-   },
-   {
-    "categoria": "roupa",
-    "de": 189.9,
-    "desconto": 0.366,
-    "id": "MLB63830721",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_681378-MLA117121680280_102026-F.jpg",
-    "link": "https://meli.la/2h1Bo2E",
-    "preco": 120.43,
-    "titulo": "Saída De Maternidade Em Tricô Rosa Bebê Rosa 0 A 3 Meses"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 279.0,
-    "desconto": 0.43,
-    "id": "MLB10923645",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_621182-MLA52734590675_122022-F.jpg",
-    "link": "https://meli.la/1v1oNAW",
-    "preco": 159.0,
-    "titulo": "Piscina Inflável Fun Redonda 1400l Com Kit Reparo - Mor"
-   },
-   {
-    "categoria": "outros",
-    "de": 498.73,
-    "desconto": 0.499,
-    "id": "MLB46681505",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_932524-MLA116048225124_092026-F.jpg",
-    "link": "https://meli.la/1BZwpcU",
-    "preco": 249.96,
-    "titulo": "Cercadinho Bebê Infantil Chiqueirinho Cercado Grande 180x150 Proteção - 8X TECH"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 249.99,
-    "desconto": 0.416,
-    "id": "MLB45423403",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_857306-MLA100035167343_122025-F.jpg",
-    "link": "https://meli.la/2Qrohet",
-    "preco": 145.99,
-    "titulo": "Lego 77242 Speed Champions Ferrari Sf24 F1 Quantidade de peças 275"
    }
   ]
  },
- "vitrine_assinatura": "5b973476ee53610f570c7789d4fa1f6d35fbff9d",
- "vitrine_publicada_em": "2026-11-11T09:02-03:00"
+ "vitrine_assinatura": "92a1c86f2d85d3084067f4e53f5b48473d6a51a6",
+ "vitrine_publicada_em": "2026-11-11T10:05-03:00"
 }
