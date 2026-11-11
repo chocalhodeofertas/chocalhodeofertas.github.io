@@ -1,5 +1,5 @@
 {
- "aguardando_link": 206,
+ "aguardando_link": 204,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 11
+  "2026-11-11": 12
  },
  "cupons": {
   "AUTO70OFF": {
@@ -11863,8 +11863,8 @@
   "2026-11-11": {
    "com_cupom": 1,
    "cupons": 15,
-   "posts": 21,
-   "shopee": 10
+   "posts": 24,
+   "shopee": 12
   }
  },
  "links": {
@@ -12274,7 +12274,7 @@
   "2026-11-11": 2
  },
  "membros_lido_em": "2026-11-11T11",
- "numeros_em": "2026-11-11T11:05-03:00",
+ "numeros_em": "2026-11-11T11:25-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -13062,6 +13062,12 @@
    "preco": 115.0,
    "quando": "2026-11-09T11:12-03:00",
    "titulo": "Mobile Musical Berço Bebê Projetor Estrelas Controle Remoto Rotação 360"
+  },
+  "MLB63636535": {
+   "desconto": 0.578,
+   "preco": 20.67,
+   "quando": "2026-11-11T11:25-03:00",
+   "titulo": "Caderneta Anotação A5 Executiva Tipo Moleskine Couro Sintético"
   },
   "MLB63830721": {
    "desconto": 0.342,
@@ -14518,6 +14524,10 @@
     [
      "2026-11-11",
      27.99
+    ],
+    [
+     "2026-11-11",
+     42.19
     ]
    ],
    "min": 27.87
@@ -16985,9 +16995,13 @@
     [
      "2026-11-09",
      27.11
+    ],
+    [
+     "2026-11-11",
+     19.0
     ]
    ],
-   "min": 27.11
+   "min": 19.0
   },
   "MLB25163760": {
    "historico": [
@@ -19939,6 +19953,10 @@
     [
      "2026-11-07",
      172.0
+    ],
+    [
+     "2026-11-11",
+     176.6
     ]
    ],
    "min": 166.51
@@ -22265,9 +22283,13 @@
     [
      "2026-11-11",
      4648.0
+    ],
+    [
+     "2026-11-11",
+     3801.0
     ]
    ],
-   "min": 4648.0
+   "min": 3801.0
   },
   "MLB52987632": {
    "historico": [
@@ -25956,9 +25978,13 @@
     [
      "2026-11-08",
      17.81
+    ],
+    [
+     "2026-11-11",
+     15.0
     ]
    ],
-   "min": 17.81
+   "min": 15.0
   },
   "MLB67991030": {
    "historico": [
@@ -26361,6 +26387,10 @@
     [
      "2026-11-11",
      179.9
+    ],
+    [
+     "2026-11-11",
+     170.1
     ]
    ],
    "min": 163.29
@@ -27968,6 +27998,10 @@
     [
      "2026-11-11",
      376.0
+    ],
+    [
+     "2026-11-11",
+     409.0
     ]
    ],
    "min": 376.0
@@ -30831,6 +30865,10 @@
     [
      "2026-11-11",
      24.29
+    ],
+    [
+     "2026-11-11",
+     26.99
     ]
    ],
    "min": 24.29
@@ -30909,6 +30947,15 @@
     ]
    ],
    "min": 15.99
+  },
+  "SHP18399229503": {
+   "historico": [
+    [
+     "2026-11-11",
+     14.99
+    ]
+   ],
+   "min": 14.99
   },
   "SHP18399625396": {
    "historico": [
@@ -31035,9 +31082,13 @@
     [
      "2026-11-10",
      77.9
+    ],
+    [
+     "2026-11-11",
+     77.85
     ]
    ],
-   "min": 77.9
+   "min": 77.85
   },
   "SHP18599849474": {
    "historico": [
@@ -32103,6 +32154,15 @@
     ]
    ],
    "min": 18.99
+  },
+  "SHP20297411767": {
+   "historico": [
+    [
+     "2026-11-11",
+     35.9
+    ]
+   ],
+   "min": 35.9
   },
   "SHP20297503147": {
    "historico": [
@@ -33512,6 +33572,15 @@
    ],
    "min": 14.9
   },
+  "SHP22193096698": {
+   "historico": [
+    [
+     "2026-11-11",
+     25.19
+    ]
+   ],
+   "min": 25.19
+  },
   "SHP22193218670": {
    "historico": [
     [
@@ -34587,9 +34656,13 @@
     [
      "2026-11-10",
      29.69
+    ],
+    [
+     "2026-11-11",
+     25.99
     ]
    ],
-   "min": 29.69
+   "min": 25.99
   },
   "SHP22498488670": {
    "historico": [
@@ -36635,6 +36708,15 @@
    ],
    "min": 79.9
   },
+  "SHP23293879417": {
+   "historico": [
+    [
+     "2026-11-11",
+     21.59
+    ]
+   ],
+   "min": 21.59
+  },
   "SHP23293882215": {
    "historico": [
     [
@@ -37743,6 +37825,15 @@
    ],
    "min": 29.9
   },
+  "SHP23692559819": {
+   "historico": [
+    [
+     "2026-11-11",
+     149.9
+    ]
+   ],
+   "min": 149.9
+  },
   "SHP23693092455": {
    "historico": [
     [
@@ -38839,9 +38930,13 @@
     [
      "2026-11-10",
      99.0
+    ],
+    [
+     "2026-11-11",
+     97.9
     ]
    ],
-   "min": 99.0
+   "min": 97.9
   },
   "SHP26367132692": {
    "historico": [
@@ -39339,6 +39434,10 @@
     [
      "2026-11-10",
      299.99
+    ],
+    [
+     "2026-11-11",
+     339.9
     ]
    ],
    "min": 299.99
@@ -42373,9 +42472,13 @@
     [
      "2026-11-10",
      26.9
+    ],
+    [
+     "2026-11-11",
+     22.87
     ]
    ],
-   "min": 26.9
+   "min": 22.87
   },
   "SHP58216758544": {
    "historico": [
@@ -43282,6 +43385,15 @@
    ],
    "min": 14.9
   },
+  "SHP58252558760": {
+   "historico": [
+    [
+     "2026-11-11",
+     64.99
+    ]
+   ],
+   "min": 64.99
+  },
   "SHP58252561349": {
    "historico": [
     [
@@ -43510,6 +43622,10 @@
     [
      "2026-11-10",
      24.8
+    ],
+    [
+     "2026-11-11",
+     24.9
     ]
    ],
    "min": 24.8
@@ -43644,9 +43760,13 @@
     [
      "2026-11-10",
      15.89
+    ],
+    [
+     "2026-11-11",
+     15.87
     ]
    ],
-   "min": 15.89
+   "min": 15.87
   },
   "SHP58256622749": {
    "historico": [
@@ -43805,9 +43925,13 @@
     [
      "2026-11-10",
      44.9
+    ],
+    [
+     "2026-11-11",
+     44.89
     ]
    ],
-   "min": 44.9
+   "min": 44.89
   },
   "SHP58258881523": {
    "historico": [
@@ -44264,6 +44388,15 @@
     ]
    ],
    "min": 39.9
+  },
+  "SHP58263077224": {
+   "historico": [
+    [
+     "2026-11-11",
+     69.95
+    ]
+   ],
+   "min": 69.95
   },
   "SHP58263099645": {
    "historico": [
@@ -45192,10 +45325,9 @@
  "resumo_enviado": "2026-11-10",
  "shopee": {
   "hora": [
-   "2026-11-11T10:14-03:00",
-   "2026-11-11T10:14-03:00",
-   "2026-11-11T10:26-03:00",
-   "2026-11-11T11:13-03:00"
+   "2026-11-11T11:13-03:00",
+   "2026-11-11T11:26-03:00",
+   "2026-11-11T11:26-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -45208,6 +45340,7 @@
    "SHP20399549464": "2026-11-10T19:43-03:00",
    "SHP20997656316": "2026-11-11T08:24-03:00",
    "SHP21297732100": "2026-11-10T18:37-03:00",
+   "SHP21798542996": "2026-11-11T11:26-03:00",
    "SHP22094723670": "2026-11-10T20:40-03:00",
    "SHP22197613491": "2026-11-10T19:43-03:00",
    "SHP22198012044": "2026-11-10T19:24-03:00",
@@ -45219,6 +45352,7 @@
    "SHP23199132850": "2026-11-11T10:26-03:00",
    "SHP23219825532": "2026-11-11T09:11-03:00",
    "SHP23296759926": "2026-11-10T17:34-03:00",
+   "SHP23591689767": "2026-11-11T11:26-03:00",
    "SHP23699651221": "2026-11-11T10:14-03:00",
    "SHP23992252560": "2026-11-11T10:14-03:00",
    "SHP27621732758": "2026-11-11T09:24-03:00",
@@ -45233,13 +45367,15 @@
    "SHP58257299712": "2026-11-10T18:37-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 8,
+  "termo": 11,
   "tipos": {
    "2026-11-11": [
+    "assento redutor",
     "babuche menina",
     "biblia meninas",
     "conjunto masculino",
     "fralda",
+    "higiene pecas",
     "lego/blocos",
     "lenco umedecido",
     "refeicao prato",
@@ -45257,7 +45393,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T11:05-03:00",
+  "em": "2026-11-11T11:25-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -45300,16 +45436,6 @@
     "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi Baby - CINZA"
    },
    {
-    "categoria": "higiene",
-    "de": 41.99,
-    "desconto": 0.457,
-    "id": "MLB17876092",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_759458-MLA109736226025_032026-F.jpg",
-    "link": "https://meli.la/1vyezPy",
-    "preco": 22.78,
-    "titulo": "Sabonete Líquido Glicerina Da Cabeça Aos Pés Johnson's Baby, 400ml"
-   },
-   {
     "categoria": "quarto",
     "de": 73.0,
     "desconto": 0.603,
@@ -45338,16 +45464,6 @@
     "link": "https://meli.la/2FcodwC",
     "preco": 288.9,
     "titulo": "Banheira com Suporte Dobrável para Bebê Mini Assento Válvula de Esvaziamento 45 Litros Lisa Plástico Rígido At"
-   },
-   {
-    "categoria": "passeio",
-    "de": 619.9,
-    "desconto": 0.492,
-    "id": "MLB62445069",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_849686-MLA99207858759_112025-F.jpg",
-    "link": "https://meli.la/1jDpjpK",
-    "preco": 314.79,
-    "titulo": "Cadeirinha Automotiva Atentu BS05 para Bebê e Criança de 9 a 36 kg Vermelha"
    },
    {
     "categoria": "escola",
@@ -45840,6 +45956,16 @@
     "titulo": "Escova De Dente Primeiro Dentinhos 0 A 2 Anos Mordedor Cor Azul"
    },
    {
+    "categoria": "brinquedo",
+    "de": 30.9,
+    "desconto": 0.515,
+    "id": "MLB67928702",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_910349-MLA110350674713_042026-F.jpg",
+    "link": "https://meli.la/2ZByxUP",
+    "preco": 15.0,
+    "titulo": "Kit 5 Envelopes Pacotinhos Figurinhas Copa do Mundo 2026 Fifa World Cup Futebol"
+   },
+   {
     "categoria": "passeio",
     "de": 1499.0,
     "desconto": 0.434,
@@ -45858,6 +45984,16 @@
     "link": "https://meli.la/2bAX86M",
     "preco": 90.0,
     "titulo": "Andador Empurrador Infantil Musical Educativo Rosa Yuupi YPHE0811"
+   },
+   {
+    "categoria": "passeio",
+    "de": 1799.9,
+    "desconto": 0.366,
+    "id": "MLB62926546",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_760834-MLA100113185128_122025-F.jpg",
+    "link": "https://meli.la/1HM1CU6",
+    "preco": 1141.0,
+    "titulo": "Carrinho de Bebê Travel System Maxi Baby Elysian Cinza e Dourado com Moisés e Bebê Conforto"
    }
   ]
  },
