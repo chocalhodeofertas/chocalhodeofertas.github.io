@@ -5160,7 +5160,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-11": 33
+  "2026-11-11": 35
  },
  "cupons": {
   "AGORAPROMO": {
@@ -11935,8 +11935,8 @@
   "2026-11-11": {
    "com_cupom": 3,
    "cupons": 27,
-   "posts": 66,
-   "shopee": 33
+   "posts": 69,
+   "shopee": 34
   }
  },
  "links": {
@@ -12345,8 +12345,8 @@
   "2026-11-10": 2,
   "2026-11-11": 2
  },
- "membros_lido_em": "2026-11-11T17",
- "numeros_em": "2026-11-11T17:55-03:00",
+ "membros_lido_em": "2026-11-11T18",
+ "numeros_em": "2026-11-11T18:15-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -13227,6 +13227,12 @@
    "quando": "2026-11-08T09:02-03:00",
    "titulo": "Jogo de Tabuleiro - Perfil 8 - Grow - 4992"
   },
+  "MLB65558091": {
+   "desconto": 0.364,
+   "preco": 44.52,
+   "quando": "2026-11-11T18:15-03:00",
+   "titulo": "Trocador Absorvente Baby & Me 10 Unid"
+  },
   "MLB65579852": {
    "desconto": 0.651,
    "preco": 125.73,
@@ -13316,9 +13322,9 @@
    "quando": "2026-11-06T21:44-03:00"
   },
   "MLB67928702": {
-   "desconto": 0.596,
-   "preco": 17.81,
-   "quando": "2026-11-10T17:14-03:00",
+   "desconto": 0.515,
+   "preco": 15.0,
+   "quando": "2026-11-11T18:15-03:00",
    "titulo": "Kit 5 Envelopes Pacotinhos Figurinhas Copa do Mundo 2026 Fifa World Cup Futebol"
   },
   "MLB67991030": {
@@ -14306,6 +14312,10 @@
     [
      "2026-11-11",
      499.0
+    ],
+    [
+     "2026-11-11",
+     519.9
     ]
    ],
    "min": 487.48
@@ -14910,6 +14920,10 @@
     [
      "2026-11-11",
      41.79
+    ],
+    [
+     "2026-11-11",
+     34.02
     ]
    ],
    "min": 24.99
@@ -15336,9 +15350,13 @@
     [
      "2026-11-11",
      59.85
+    ],
+    [
+     "2026-11-11",
+     52.99
     ]
    ],
-   "min": 54.22
+   "min": 52.99
   },
   "MLB19728496": {
    "historico": [
@@ -16412,6 +16430,10 @@
     [
      "2026-11-11",
      31.36
+    ],
+    [
+     "2026-11-11",
+     28.9
     ]
    ],
    "min": 28.9
@@ -17823,9 +17845,13 @@
     [
      "2026-11-11",
      725.9
+    ],
+    [
+     "2026-11-11",
+     689.5
     ]
    ],
-   "min": 725.9
+   "min": 689.5
   },
   "MLB26097077": {
    "historico": [
@@ -18959,6 +18985,10 @@
     [
      "2026-11-11",
      4580.0
+    ],
+    [
+     "2026-11-11",
+     4349.0
     ]
    ],
    "min": 4199.0
@@ -19915,6 +19945,10 @@
     [
      "2026-11-11",
      1521.0
+    ],
+    [
+     "2026-11-11",
+     1559.99
     ]
    ],
    "min": 1521.0
@@ -21034,6 +21068,10 @@
     [
      "2026-11-11",
      5322.21
+    ],
+    [
+     "2026-11-11",
+     5500.0
     ]
    ],
    "min": 5322.21
@@ -21739,6 +21777,10 @@
     [
      "2026-11-10",
      29.88
+    ],
+    [
+     "2026-11-11",
+     30.99
     ]
    ],
    "min": 29.88
@@ -21838,6 +21880,10 @@
     [
      "2026-11-10",
      48.45
+    ],
+    [
+     "2026-11-11",
+     39.99
     ]
    ],
    "min": 39.99
@@ -22596,6 +22642,10 @@
     [
      "2026-11-11",
      560.0
+    ],
+    [
+     "2026-11-11",
+     599.0
     ]
    ],
    "min": 560.0
@@ -23160,6 +23210,10 @@
     [
      "2026-11-11",
      4648.0
+    ],
+    [
+     "2026-11-11",
+     4699.0
     ]
    ],
    "min": 3801.0
@@ -25051,6 +25105,10 @@
     [
      "2026-11-11",
      1379.07
+    ],
+    [
+     "2026-11-11",
+     1393.19
     ]
    ],
    "min": 1379.07
@@ -25579,6 +25637,10 @@
     [
      "2026-11-11",
      929.0
+    ],
+    [
+     "2026-11-11",
+     951.0
     ]
    ],
    "min": 929.0
@@ -26033,6 +26095,10 @@
     [
      "2026-11-11",
      27.11
+    ],
+    [
+     "2026-11-11",
+     28.0
     ]
    ],
    "min": 27.0
@@ -27691,6 +27757,10 @@
     [
      "2026-11-11",
      93.47
+    ],
+    [
+     "2026-11-11",
+     169.9
     ]
    ],
    "min": 93.47
@@ -29685,6 +29755,10 @@
     [
      "2026-11-11",
      789.99
+    ],
+    [
+     "2026-11-11",
+     799.99
     ]
    ],
    "min": 789.99
@@ -32599,9 +32673,13 @@
     [
      "2026-11-10",
      15.93
+    ],
+    [
+     "2026-11-11",
+     15.54
     ]
    ],
-   "min": 15.93
+   "min": 15.54
   },
   "SHP18998192991": {
    "historico": [
@@ -35103,9 +35181,13 @@
     [
      "2026-11-10",
      23.5
+    ],
+    [
+     "2026-11-11",
+     23.49
     ]
    ],
-   "min": 23.5
+   "min": 23.49
   },
   "SHP22099138944": {
    "historico": [
@@ -37977,9 +38059,13 @@
     [
      "2026-11-10",
      25.59
+    ],
+    [
+     "2026-11-11",
+     20.59
     ]
    ],
-   "min": 25.59
+   "min": 20.59
   },
   "SHP23098856725": {
    "historico": [
@@ -40789,6 +40875,10 @@
     [
      "2026-11-10",
      41.69
+    ],
+    [
+     "2026-11-11",
+     42.98
     ]
    ],
    "min": 41.69
@@ -42946,6 +43036,15 @@
    ],
    "min": 99.9
   },
+  "SHP54667222201": {
+   "historico": [
+    [
+     "2026-11-11",
+     3.99
+    ]
+   ],
+   "min": 3.99
+  },
   "SHP54719315611": {
    "historico": [
     [
@@ -44324,9 +44423,13 @@
     [
      "2026-11-10",
      39.99
+    ],
+    [
+     "2026-11-11",
+     39.89
     ]
    ],
-   "min": 39.99
+   "min": 39.89
   },
   "SHP58211990380": {
    "historico": [
@@ -44483,6 +44586,15 @@
     ]
    ],
    "min": 47.9
+  },
+  "SHP58213828237": {
+   "historico": [
+    [
+     "2026-11-11",
+     39.9
+    ]
+   ],
+   "min": 39.9
   },
   "SHP58213848850": {
    "historico": [
@@ -45089,6 +45201,10 @@
     [
      "2026-11-10",
      33.9
+    ],
+    [
+     "2026-11-11",
+     34.9
     ]
    ],
    "min": 33.9
@@ -45962,6 +46078,15 @@
     ]
    ],
    "min": 24.8
+  },
+  "SHP58254949260": {
+   "historico": [
+    [
+     "2026-11-11",
+     38.9
+    ]
+   ],
+   "min": 38.9
   },
   "SHP58255011999": {
    "historico": [
@@ -47728,7 +47853,8 @@
   "hora": [
    "2026-11-11T17:25-03:00",
    "2026-11-11T17:25-03:00",
-   "2026-11-11T17:56-03:00"
+   "2026-11-11T17:56-03:00",
+   "2026-11-11T18:22-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -47766,6 +47892,7 @@
    "SHP23296759926": "2026-11-10T17:34-03:00",
    "SHP23591689767": "2026-11-11T11:26-03:00",
    "SHP23699651221": "2026-11-11T10:14-03:00",
+   "SHP23793169776": "2026-11-11T18:22-03:00",
    "SHP23992252560": "2026-11-11T10:14-03:00",
    "SHP23993520004": "2026-11-11T16:23-03:00",
    "SHP27621732758": "2026-11-11T09:24-03:00",
@@ -47789,7 +47916,7 @@
    "SHP58258341439": "2026-11-11T15:38-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 1,
+  "termo": 4,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -47824,13 +47951,19 @@
     "shampoo condicionador",
     "tapete inflavel",
     "tenis meninos",
-    "toalha banho"
+    "toalha banho",
+    "triciclo/bicicleta"
    ]
   },
   "titulos": {
    "SHP15894161282": {
     "quando": "2026-11-11T17:56-03:00",
     "titulo": "Creme para Pentear Multifuncional Hidra Multy Kids Salon Line 300ml"
+   },
+   "SHP23793169776": {
+    "preco": 169.9,
+    "quando": "2026-11-11T18:22-03:00",
+    "titulo": "Bicicleta Infantil Aro 12 Freio Tambor 1 Marcha Cestinha Nathor C/ Rodinha Menin"
    }
   }
  },
@@ -47842,7 +47975,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T17:55-03:00",
+  "em": "2026-11-11T18:15-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -47985,6 +48118,16 @@
     "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Ocean"
    },
    {
+    "categoria": "brinquedo",
+    "de": 52.0,
+    "desconto": 0.462,
+    "id": "MLB64866580",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_735916-MLA105596119925_012026-F.jpg",
+    "link": "https://meli.la/2G3kCUB",
+    "preco": 28.0,
+    "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensorial 1ª Infância Bebê Conforto Ma"
+   },
+   {
     "categoria": "passeio",
     "de": 699.9,
     "desconto": 0.386,
@@ -48025,16 +48168,6 @@
     "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
    },
    {
-    "categoria": "brinquedo",
-    "de": 49.0,
-    "desconto": 0.447,
-    "id": "MLB64866580",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_735916-MLA105596119925_012026-F.jpg",
-    "link": "https://meli.la/2G3kCUB",
-    "preco": 27.11,
-    "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensorial 1ª Infância Bebê Conforto Ma"
-   },
-   {
     "categoria": "outros",
     "de": 290.9,
     "desconto": 0.522,
@@ -48063,6 +48196,16 @@
     "link": "https://meli.la/1jMKRDV",
     "preco": 313.0,
     "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Rosa"
+   },
+   {
+    "categoria": "passeio",
+    "de": 1199.0,
+    "desconto": 0.425,
+    "id": "MLB26070781",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_836450-MLA100062682691_122025-F.jpg",
+    "link": "https://meli.la/1wzpeM6",
+    "preco": 689.5,
+    "titulo": "Cadeira de Carro Infantil All Stages 2.0 Isofix Preto Litet"
    },
    {
     "categoria": "quarto",
@@ -48123,16 +48266,6 @@
     "link": "https://meli.la/2ybULdP",
     "preco": 298.8,
     "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
-   },
-   {
-    "categoria": "passeio",
-    "de": 1199.0,
-    "desconto": 0.395,
-    "id": "MLB26070781",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_836450-MLA100062682691_122025-F.jpg",
-    "link": "https://meli.la/1wzpeM6",
-    "preco": 725.9,
-    "titulo": "Cadeira de Carro Infantil All Stages 2.0 Isofix Preto Litet"
    },
    {
     "categoria": "higiene",
@@ -48203,6 +48336,16 @@
     "link": "https://meli.la/2UvWs2P",
     "preco": 136.9,
     "titulo": "Lixeira Para Fraldas Rister Baby 10l Anti-odor Com Tampa Branco"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 30.9,
+    "desconto": 0.515,
+    "id": "MLB67928702",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_910349-MLA110350674713_042026-F.jpg",
+    "link": "https://meli.la/2ZByxUP",
+    "preco": 15.0,
+    "titulo": "Kit 5 Envelopes Pacotinhos Figurinhas Copa do Mundo 2026 Fifa World Cup Futebol"
    },
    {
     "categoria": "outros",
@@ -48433,19 +48576,9 @@
     "link": "https://meli.la/33HP11G",
     "preco": 779.9,
     "titulo": "Cadeira de Carro Infantil Max360 Isofix Rotação 360° Reclinável 3 Posições Top Tether 0-36kg Maxi Baby"
-   },
-   {
-    "categoria": "outros",
-    "de": 139.9,
-    "desconto": 0.476,
-    "id": "MLB42163798",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_774847-MLA116761361151_082026-F.jpg",
-    "link": "https://meli.la/1wX7Xqf",
-    "preco": 73.35,
-    "titulo": "Bicicleta Bebê 4 Rodas Sem Pedal MSP Kids Vermelha, Bicicleta de Equilíbrio Infantil com 4 Rodas Largas, Estru"
    }
   ]
  },
- "vitrine_assinatura": "89ebc57a85550ca294edfe3633261c27c5fce4d4",
- "vitrine_publicada_em": "2026-11-11T17:15-03:00"
+ "vitrine_assinatura": "f3f8a31527cce5ada005710a960935b8b110c399",
+ "vitrine_publicada_em": "2026-11-11T18:15-03:00"
 }
