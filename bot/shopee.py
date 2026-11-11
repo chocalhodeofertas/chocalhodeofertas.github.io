@@ -123,6 +123,12 @@ class Shopee:
         dados = self._chamar(q).get("productOfferV2") or {}
         return [converter(n) for n in dados.get("nodes") or [] if n.get("offerLink")]
 
+    def item(self, item_id):
+        """Um produto pelo itemId (None se não existir mais na API de afiliados)."""
+        q = "{productOfferV2(itemId:%d,page:1,limit:1){nodes{%s}}}" % (int(item_id), _CAMPOS)
+        nos = (self._chamar(q).get("productOfferV2") or {}).get("nodes") or []
+        return converter(nos[0]) if nos and nos[0].get("offerLink") else None
+
     def link_curto(self, url_original, sub_ids=None):
         subs = f",subIds:{json.dumps(sub_ids)}" if sub_ids else ""
         q = 'mutation{generateShortLink(input:{originUrl:%s%s}){shortLink}}' % (

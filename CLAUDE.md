@@ -17,6 +17,11 @@ Textos para o dono do projeto sempre em português do Brasil.
 ## Módulos principais (bot/)
 - `main.py`: rodada do ML (descoberta, avaliação, ritmo, postagem); chama Shopee, cupons, vitrine e números.
 - `ofertas.py`: `Oferta`, `avaliar`, `pontuacao`, `tipo_produto`, ritmo (`limite_hora`, `meta_ate_agora`).
+- Histórico de preços (`estado.precos`, só quando o preço muda): `estado.preco_tipico` = mediana dia a dia dos últimos 30 dias.
+  Com 7+ dias de histórico, `ofertas.peso_queda_real` dá +30% na pontuação para queda real ≥ 10% e -40% para desconto "de fachada" (< 3%).
+  Quem sai dos mais vendidos do ML vai para `estado.acompanhados` (30 dias, 1/3 por rodada); na Shopee, produtos aprovados vão para
+  `shopee.acompanhados` e 15 por rodada são reconferidos por `itemId` (queda real ≥ 10% vira candidato).
+- Repetição: `estado.repetido` compara títulos (ML + Shopee) dos últimos 3 dias; volta antes só se o preço cair 5%.
 - `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica) e `fora_da_faixa` (casa/adulto, exige sinal infantil).
 - `mensagens.py`: textos do Telegram/WhatsApp, frases de abertura por produto, linha de cupom, Shopee ("A partir de", nota e vendas).
 - `cupons_ml.py` + `cupom_oferta.py`: lê cupons (canal oficial do ML + @cupombr via Telethon) e aplica o melhor cupom compatível na oferta.

@@ -100,3 +100,37 @@ def repetido(estado, titulo, agora, dias=3, preco=None):
         if parecido(titulo, t) and not (preco and p and preco <= p * 0.95):
             return True
     return False
+
+
+def preco_tipico(estado, pid, agora, dias=30):
+    """Preço "normal" do produto pelo histórico do próprio bot: mediana dia a dia dos últimos dias.
+
+    Retorna (preço típico, dias de observação) ou (None, 0). A mediana não se deixa enganar
+    por um preço inflado por poucos dias (ex.: vendedor que sobe antes da Black Friday)."""
+    from datetime import date, timedelta
+
+    hist = (estado.get("precos", {}).get(pid) or {}).get("historico") or []
+    if not hist:
+        return None, 0
+    hoje = agora.date()
+    inicio = date.fromisoformat(hist[0][0])
+    dias_obs = (hoje - inicio).days
+    corte = hoje - timedelta(days=dias)
+    por_dia = {}
+    for d, preco in hist:  # o último preço de cada dia vale para o dia
+        por_dia[date.fromisoformat(d)] = preco
+    serie, atual, dia = [], None, max(inicio, corte)
+    for d in sorted(por_dia):  # preço em vigor no começo da janela
+        if d <= dia:
+            atual = por_dia[d]
+    while dia < hoje:  # hoje fica de fora: é o preço que está sendo avaliado
+        atual = por_dia.get(dia, atual)
+        if atual is not None:
+            serie.append(atual)
+        dia += timedelta(days=1)
+    if not serie:
+        return None, dias_obs
+    serie.sort()
+    meio = len(serie) // 2
+    tipico = serie[meio] if len(serie) % 2 else (serie[meio - 1] + serie[meio]) / 2
+    return tipico, dias_obs

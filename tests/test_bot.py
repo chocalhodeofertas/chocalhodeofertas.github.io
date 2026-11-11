@@ -1366,3 +1366,57 @@ def test_mesmo_produto_outro_anuncio_nao_repete():
     # depois de 3 dias pode voltar
     assert not est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora + timedelta(days=3))
     assert not parecido("Patinete Infantil 3 Rodas Led", "Boneca Reborn Realista")
+
+
+def test_preco_tipico_usa_mediana_e_ignora_pico():
+    e = est.novo()
+    for dias, preco in [(20, 100.0), (6, 140.0), (4, 100.0)]:  # pico de 2 dias antes da "promoção"
+        est.registrar_preco(e, "MLB9", preco, AGORA - timedelta(days=dias))
+    tipico, dias = est.preco_tipico(e, "MLB9", AGORA)
+    assert tipico == 100.0 and dias == 20
+    assert est.preco_tipico(e, "MLB0", AGORA) == (None, 0)
+
+
+def test_queda_real_pesa_na_pontuacao():
+    from bot.ofertas import pontuacao
+    e = est.novo()
+    est.registrar_preco(e, "MLB1", 70.0, AGORA - timedelta(days=10))  # sempre 70: "-30%" é de fachada
+    fachada = avaliar(prod(), info(70, 100), e, AGORA)
+    assert round(fachada.queda_real, 2) == 0 and fachada.dias_hist == 10
+    e2 = est.novo()
+    est.registrar_preco(e2, "MLB1", 100.0, AGORA - timedelta(days=10))  # era 100 de verdade
+    real = avaliar(prod(), info(70, 100), e2, AGORA)
+    assert pontuacao(real) > pontuacao(fachada) * 2
+    e3 = est.novo()
+    est.registrar_preco(e3, "MLB1", 70.0, AGORA - timedelta(days=2))  # pouco histórico: não mexe
+    novo = avaliar(prod(), info(70, 100), e3, AGORA)
+    assert pontuacao(novo) == pytest.approx(pontuacao(avaliar(prod(), info(70, 100), est.novo(), AGORA)))
+
+
+def test_quem_sai_dos_mais_vendidos_continua_acompanhado():
+    from bot.main import acompanhar_quem_saiu
+    e = est.novo()
+    e["descobertos"] = {"MLB1": {"tipo": "catalogo", "categoria": "brinquedo", "pos": 2},
+                        "MLB2": {"tipo": "catalogo", "categoria": "roupa", "pos": 1, "regra": "infantil"}}
+    acompanhar_quem_saiu(e, {"MLB1": {"tipo": "catalogo", "categoria": "brinquedo", "pos": 0}}, AGORA)
+    assert list(e["acompanhados"]) == ["MLB2"] and e["acompanhados"]["MLB2"]["regra"] == "infantil"
+    # depois de 30 dias para de acompanhar; se voltar aos mais vendidos, sai da lista de acompanhados
+    acompanhar_quem_saiu(e, {"MLB2": {}}, AGORA)
+    assert "MLB2" not in e["acompanhados"]
+
+
+def test_shopee_acompanha_e_traz_queda_real():
+    from bot import shopee_ofertas as so
+    e = est.novo()
+    so._marcar_acompanhado(e, _produto_shopee(id="SHP7"), AGORA - timedelta(days=12))
+    est.registrar_preco(e, "SHP7", 50.0, AGORA - timedelta(days=12))
+
+    class Shp:
+        def item(self, iid):
+            assert iid == "7"
+            return _produto_shopee(id="SHP7", preco=40.0)
+
+    caiu = so.acompanhar(Shp(), e, AGORA, log=lambda m: None)
+    assert [p.id for p in caiu] == ["SHP7"]
+    assert e["precos"]["SHP7"]["historico"][-1][1] == 40.0
+    assert e["shopee"]["acompanhados"]["SHP7"]["visto"].startswith(AGORA.date().isoformat())

@@ -53,7 +53,7 @@ def avaliar(produto, info, estado, agora: datetime, min_desconto=0.15, repost_di
         if dias < repost_dias and preco > postado["preco"] * 0.95:
             return None
 
-    return Oferta(
+    o = Oferta(
         id=produto.id,
         titulo=info.titulo,
         preco=preco,
@@ -65,6 +65,35 @@ def avaliar(produto, info, estado, agora: datetime, min_desconto=0.15, repost_di
         imagem=info.imagem,
         categoria=produto.categoria,
     )
+    marcar_queda_real(o, estado, agora)
+    return o
+
+
+# Com pelo menos esta quantidade de dias de histórico, o bot confia no próprio preço "normal"
+DIAS_HIST_MIN = 7
+
+
+def marcar_queda_real(oferta, estado, agora):
+    """Guarda na oferta quanto o preço está abaixo do preço normal visto pelo próprio bot."""
+    from .estado import preco_tipico
+
+    tipico, dias = preco_tipico(estado, oferta.id, agora)
+    oferta.dias_hist = dias
+    oferta.queda_real = (1 - oferta.preco / tipico) if tipico else None
+    return oferta
+
+
+def peso_queda_real(oferta):
+    """Prioriza quem caiu de verdade. Desconto "de fachada" (preço igual ao de sempre) perde força.
+    Sem histórico suficiente, não muda nada."""
+    queda, dias = getattr(oferta, "queda_real", None), getattr(oferta, "dias_hist", 0)
+    if queda is None or dias < DIAS_HIST_MIN:
+        return 1.0
+    if queda >= 0.10:
+        return 1.3
+    if queda < 0.03:
+        return 0.6
+    return 1.0
 
 
 # Comissão por categoria: roupa paga 16%, a maioria 12%
@@ -137,7 +166,7 @@ def pontuacao(oferta, posicao=None):
         peso *= 0.85  # brinquedo é o que mais aparece; equilibra com o resto
     elif oferta.categoria == "game" and re.search(r"ps5|ps4|playstation|xbox", (oferta.titulo or "").lower()):
         peso *= 0.7  # console mais comprado por adultos: entra, mas com menos prioridade
-    return oferta.forca * (1 + pop) * peso
+    return oferta.forca * (1 + pop) * peso * peso_queda_real(oferta)
 
 
 def meta_ate_agora(max_por_dia, hora, inicio=8, fim=22):

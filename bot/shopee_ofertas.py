@@ -99,8 +99,54 @@ def aprovado(p):
     return motivo_bloqueio(p.titulo) or fora_da_faixa(p.titulo, "", "infantil")
 
 
-def pontos(p):
-    return math.log10(max(p.vendas, 1)) * p.nota * (1.2 if p.loja_oficial else 1.0) * (1 + p.comissao)
+def pontos(p, estado=None, agora=None):
+    base = math.log10(max(p.vendas, 1)) * p.nota * (1.2 if p.loja_oficial else 1.0) * (1 + p.comissao)
+    if estado is not None and agora is not None:
+        from .ofertas import DIAS_HIST_MIN
+        tipico, dias = est.preco_tipico(estado, p.id, agora)
+        if tipico and dias >= DIAS_HIST_MIN:
+            queda = 1 - p.preco / tipico
+            base *= 1.3 if queda >= 0.10 else 1.0
+    return base
+
+
+ACOMPANHAR_POR_RODADA = 15
+DIAS_ACOMPANHAR = 30
+
+
+def acompanhar(shp, estado, agora, log=print, limite=ACOMPANHAR_POR_RODADA):
+    """Confere o preço dos produtos bons já vistos (os que demoram mais sem conferir vão primeiro),
+    para o histórico não depender de o produto cair de novo na busca."""
+    s = _estado(estado)
+    acomp = s.setdefault("acompanhados", {})
+    hoje = agora.date().isoformat()
+    for pid in [k for k, v in acomp.items() if v.get("ate", "") < hoje]:
+        del acomp[pid]
+    fila = sorted(acomp, key=lambda k: acomp[k].get("visto", ""))[:limite]
+    from .ofertas import DIAS_HIST_MIN
+    caiu = []
+    for pid in fila:
+        try:
+            p = shp.item(pid[3:])
+        except ShopeeErro as e:
+            log(f"Shopee: não consegui conferir {pid}: {e}")
+            break
+        acomp[pid]["visto"] = agora.isoformat(timespec="minutes")
+        if p is None:
+            del acomp[pid]
+            continue
+        est.registrar_preco(estado, p.id, p.preco, agora)
+        tipico, dias = est.preco_tipico(estado, p.id, agora)
+        if tipico and dias >= DIAS_HIST_MIN and p.preco <= tipico * 0.90 and not aprovado(p):
+            caiu.append(p)  # caiu de verdade: vira candidato mesmo fora da busca desta rodada
+    return caiu
+
+
+def _marcar_acompanhado(estado, p, agora):
+    acomp = _estado(estado).setdefault("acompanhados", {})
+    reg = acomp.setdefault(p.id, {})
+    reg["ate"] = (agora + timedelta(days=DIAS_ACOMPANHAR)).date().isoformat()
+    reg["visto"] = agora.isoformat(timespec="minutes")
 
 
 def buscar_candidatos(shp, estado, agora, repost_dias=3, log=print, termos=None):
@@ -124,8 +170,9 @@ def buscar_candidatos(shp, estado, agora, repost_dias=3, log=print, termos=None)
         if quando and datetime.fromisoformat(quando) > corte:
             continue
         if not aprovado(p):
+            _marcar_acompanhado(estado, p, agora)
             bons.append(p)
-    bons.sort(key=pontos, reverse=True)
+    bons.sort(key=lambda p: pontos(p, estado, agora), reverse=True)
     log(f"Shopee: {len(achados)} produtos vistos ({', '.join(termos)}), {len(bons)} aprovados.")
     return bons
 
@@ -177,6 +224,16 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
                        min(max_dia, meta_ate_agora(max_dia, agora.hour, cfg.hora_inicio, cfg.hora_fim))
                        - posts_hoje(estado, agora)))
     candidatos = buscar_candidatos(shp, estado, agora, cfg.repost_dias, log)
+    try:
+        corte = agora - timedelta(days=cfg.repost_dias)
+        ja = {p.id for p in candidatos}
+        for p in acompanhar(shp, estado, agora, log):
+            quando = s["postados"].get(p.id)
+            if p.id not in ja and not (quando and datetime.fromisoformat(quando) > corte):
+                candidatos.append(p)
+        candidatos.sort(key=lambda p: pontos(p, estado, agora), reverse=True)
+    except Exception as e:  # noqa: BLE001 — acompanhar nunca atrapalha os posts
+        log(f"Shopee: acompanhamento falhou: {type(e).__name__}: {e}")
     if not vagas or not candidatos:
         return []
     hoje = agora.date().isoformat()

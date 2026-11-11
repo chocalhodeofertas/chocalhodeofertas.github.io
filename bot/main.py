@@ -14,7 +14,7 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
@@ -195,6 +195,12 @@ def montar_lista(cfg: Config, da_planilha, estado):
         lista.append(p)
         vistos.add(p.id)
     extras = {**estado.get("manuais", {}), **estado.get("descobertos", {})}
+    # Quem saiu dos mais vendidos continua sendo acompanhado (1/3 por rodada = ~1 vez por hora),
+    # para o histórico de preço não ficar com buracos
+    rodada = estado.get("rodada_n", 0)
+    for pid, d in estado.get("acompanhados", {}).items():
+        if pid not in extras and sum(map(ord, pid)) % 3 == rodada % 3:
+            extras[pid] = d
     for pid, d in extras.items():
         if pid in vistos:
             continue
@@ -218,11 +224,27 @@ def atualizar_descoberta(cfg: Config, ml, estado, agora, forcar=False):
         for pid, d in descobrir_areas(ml, log).items():
             achados.setdefault(pid, d)
     if achados:
+        acompanhar_quem_saiu(estado, achados, agora)
         estado["descobertos"] = achados
         estado["descoberta_em"] = agora.isoformat(timespec="minutes")
-        validos = set(achados) | set(estado["postados"])
+        validos = set(achados) | set(estado["postados"]) | set(estado.get("acompanhados", {}))
         estado["cache"] = {k: v for k, v in estado.get("cache", {}).items() if k in validos}
     return True
+
+
+DIAS_ACOMPANHAR = 30
+
+
+def acompanhar_quem_saiu(estado, achados, agora):
+    """Produto que sai da lista de mais vendidos continua sendo acompanhado por 30 dias."""
+    acomp = estado.setdefault("acompanhados", {})
+    ate = (agora + timedelta(days=DIAS_ACOMPANHAR)).date().isoformat()
+    for pid, d in estado.get("descobertos", {}).items():
+        if pid not in achados:
+            acomp[pid] = {**d, "ate": ate}
+    for pid in list(acomp):
+        if pid in achados or acomp[pid].get("ate", "") < agora.date().isoformat():
+            del acomp[pid]
 
 
 def buscar_infos(ml: MercadoLivre, produtos, estado=None):
@@ -300,7 +322,8 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
             log(f"Sem dados para {p.id} (linha {p.linha}) — anúncio pode ter sido removido.")
             continue
         motivo = motivo_bloqueio(info.titulo) or fora_da_faixa(
-            info.titulo, p.categoria, (estado.get("descobertos", {}).get(p.id) or {}).get("regra"))
+            info.titulo, p.categoria, (estado.get("descobertos", {}).get(p.id)
+                                       or estado.get("acompanhados", {}).get(p.id) or {}).get("regra"))
         if motivo:
             log(f"Bloqueado {p.id}: {motivo} — '{info.titulo[:60]}'")
             continue
@@ -606,6 +629,7 @@ def main(argv=None):
         ml, _ = conectar_ml(cfg)
         agora = datetime.now(FUSO)
         atualizar_descoberta(cfg, ml, estado, agora)
+        estado["rodada_n"] = estado.get("rodada_n", 0) + 1
         lista = montar_lista(cfg, produtos, estado)
         if not lista:
             log("Nenhum produto para acompanhar (planilha vazia e descoberta sem resultado).")
