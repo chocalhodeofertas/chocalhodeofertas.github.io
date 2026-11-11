@@ -1,5 +1,5 @@
 {
- "aguardando_link": 211,
+ "aguardando_link": 210,
  "areas_novas": true,
  "cache": {
   "MLB10923642": [
@@ -12340,7 +12340,7 @@
   "2026-11-11": 2
  },
  "membros_lido_em": "2026-11-11T16",
- "numeros_em": "2026-11-11T16:15-03:00",
+ "numeros_em": "2026-11-11T16:35-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -14392,6 +14392,10 @@
     [
      "2026-11-11",
      126.48
+    ],
+    [
+     "2026-11-11",
+     264.79
     ]
    ],
    "min": 33.0
@@ -14847,6 +14851,10 @@
     [
      "2026-11-11",
      34.02
+    ],
+    [
+     "2026-11-11",
+     41.79
     ]
    ],
    "min": 24.99
@@ -17265,6 +17273,10 @@
     [
      "2026-11-10",
      59.99
+    ],
+    [
+     "2026-11-11",
+     61.2
     ]
    ],
    "min": 59.99
@@ -19408,6 +19420,10 @@
     [
      "2026-11-11",
      271.0
+    ],
+    [
+     "2026-11-11",
+     313.73
     ]
    ],
    "min": 270.0
@@ -19693,6 +19709,10 @@
     [
      "2026-11-11",
      1799.89
+    ],
+    [
+     "2026-11-11",
+     1818.08
     ]
    ],
    "min": 1736.9
@@ -23704,6 +23724,10 @@
     [
      "2026-11-10",
      231.0
+    ],
+    [
+     "2026-11-11",
+     226.99
     ]
    ],
    "min": 199.99
@@ -23908,6 +23932,10 @@
     [
      "2026-11-11",
      4694.0
+    ],
+    [
+     "2026-11-11",
+     5201.01
     ]
    ],
    "min": 4694.0
@@ -25842,6 +25870,10 @@
     [
      "2026-11-11",
      27.0
+    ],
+    [
+     "2026-11-11",
+     27.11
     ]
    ],
    "min": 27.0
@@ -25988,6 +26020,10 @@
     [
      "2026-11-11",
      22.61
+    ],
+    [
+     "2026-11-11",
+     23.95
     ]
    ],
    "min": 22.61
@@ -39636,9 +39672,13 @@
     [
      "2026-11-10",
      29.9
+    ],
+    [
+     "2026-11-11",
+     27.9
     ]
    ],
-   "min": 29.9
+   "min": 27.9
   },
   "SHP23698711829": {
    "historico": [
@@ -47486,7 +47526,7 @@
    "SHP58258341439": "2026-11-11T15:38-03:00",
    "SHP58261933498": "2026-11-10T21:24-03:00"
   },
-  "termo": 21,
+  "termo": 24,
   "tipos": {
    "2026-11-11": [
     "assento redutor",
@@ -47530,7 +47570,7 @@
  "tg_offset": 273518003,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-11T16:15-03:00",
+  "em": "2026-11-11T16:35-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -47683,16 +47723,6 @@
     "titulo": "Móbile Arco Musical Bebê Carrinho Berço Let's Play Maxi Baby"
    },
    {
-    "categoria": "brinquedo",
-    "de": 49.0,
-    "desconto": 0.449,
-    "id": "MLB64866580",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_735916-MLA105596119925_012026-F.jpg",
-    "link": "https://meli.la/2G3kCUB",
-    "preco": 27.0,
-    "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensorial 1ª Infância Bebê Conforto Ma"
-   },
-   {
     "categoria": "quarto",
     "de": 899.9,
     "desconto": 0.53,
@@ -47714,6 +47744,16 @@
    },
    {
     "categoria": "brinquedo",
+    "de": 49.0,
+    "desconto": 0.447,
+    "id": "MLB64866580",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_735916-MLA105596119925_012026-F.jpg",
+    "link": "https://meli.la/2G3kCUB",
+    "preco": 27.11,
+    "titulo": "Móbile Centopeia Em Espiral Bebe Para Carrinho, Berço Com Chocalho Multisensorial 1ª Infância Bebê Conforto Ma"
+   },
+   {
+    "categoria": "brinquedo",
     "de": 69.9,
     "desconto": 0.428,
     "id": "MLB75656299",
@@ -47731,16 +47771,6 @@
     "link": "https://meli.la/1jMKRDV",
     "preco": 313.0,
     "titulo": "Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Rosa"
-   },
-   {
-    "categoria": "outros",
-    "de": 197.75,
-    "desconto": 0.36,
-    "id": "MLB17336025",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_782627-MLA99928206837_112025-F.jpg",
-    "link": "https://meli.la/1Ew1jm9",
-    "preco": 126.48,
-    "titulo": "Huggies Fralda Descartável Máxima Proteção XG - 112 Un"
    },
    {
     "categoria": "quarto",
@@ -47803,16 +47833,6 @@
     "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
    },
    {
-    "categoria": "outros",
-    "de": 90.14,
-    "desconto": 0.334,
-    "id": "MLB24709793",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_755163-MLA117376248859_092026-F.jpg",
-    "link": "https://meli.la/2tMcyrj",
-    "preco": 59.99,
-    "titulo": "Retrovisor De Bebe Conforto Buba Espelho Interno Redondo"
-   },
-   {
     "categoria": "passeio",
     "de": 1199.0,
     "desconto": 0.395,
@@ -47841,16 +47861,6 @@
     "link": "https://meli.la/2hGmrQR",
     "preco": 483.0,
     "titulo": "Berço Americano 3 em 1 para Colchão 130x70cm Multimóveis 0527PA Branco"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 100.0,
-    "desconto": 0.644,
-    "id": "MLB79313725",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_915365-MLA117639458887_092026-F.jpg",
-    "link": "https://meli.la/224xLLB",
-    "preco": 35.63,
-    "titulo": "Celular Brinquedo Recarregável Bebê | Educativo com Sons e Luzes, Substitui o Celular Real"
    },
    {
     "categoria": "escola",
@@ -47891,16 +47901,6 @@
     "link": "https://meli.la/23VP8r1",
     "preco": 148.18,
     "titulo": "Kit Bolsa Maternidade Com Mochila E Trocador Completo Impermeável Bebê Menino Menina Ric Deveras Azul"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 189.9,
-    "desconto": 0.527,
-    "id": "MLB66595119",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_659154-MLA107901202678_032026-F.jpg",
-    "link": "https://meli.la/2FDthRU",
-    "preco": 89.91,
-    "titulo": "Bebê Boneca Reborn Menina Maddie Unicórnio Corpinho Silicone"
    },
    {
     "categoria": "roupa",
@@ -48131,6 +48131,46 @@
     "link": "https://meli.la/2pHZDtK",
     "preco": 33.2,
     "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 69.9,
+    "desconto": 0.571,
+    "id": "MLB69629267",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_637908-MLA112162545313_052026-F.jpg",
+    "link": "https://meli.la/34echxs",
+    "preco": 30.0,
+    "titulo": "Tablet Educativo Infantil Bilíngue 54 Funções Branco Interativo Português Inglês Letras Números Palavras Sons "
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 149.99,
+    "desconto": 0.48,
+    "id": "MLB79649272",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_859080-MLA116499283624_092026-F.jpg",
+    "link": "https://meli.la/2fN6LwV",
+    "preco": 77.95,
+    "titulo": "Barraca Infantil Ônibus da Patrulha Canina Dobrável, Pop-Up, para Meninos e Meninas"
+   },
+   {
+    "categoria": "outros",
+    "de": 379.0,
+    "desconto": 0.407,
+    "id": "MLB47899174",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_775995-MLA120917880437_112026-F.jpg",
+    "link": "https://meli.la/1mbZ5jZ",
+    "preco": 224.57,
+    "titulo": "Baba Eletrônica Baby Monitor Vb603 Visão Noturna Dual Audio Cor Branco Estary Shop"
+   },
+   {
+    "categoria": "roupa",
+    "de": 69.9,
+    "desconto": 0.29,
+    "id": "MLB66652186",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_850960-MLA108709184359_032026-F.jpg",
+    "link": "https://meli.la/2mdDu7j",
+    "preco": 49.62,
+    "titulo": "Kit Macacão + Chapéu Estampado Praia Verão Menino/meninauv50 Desenho Do Tecido Cereja Tamanho 12-18 M"
    }
   ]
  },
