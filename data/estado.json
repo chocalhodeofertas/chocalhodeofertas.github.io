@@ -5319,6 +5319,12 @@
    "status": "ativo",
    "validade": "2026-11-11T23:59-03:00"
   },
+  "OFERTAJA22": {
+   "criado": "2026-11-11T10:03-03:00",
+   "post": 303,
+   "status": "ativo",
+   "validade": "2026-12-11T23:59-03:00"
+  },
   "OFERTAJA30": {
    "criado": "2026-11-10T12:02-03:00",
    "post": 214,
@@ -5402,10 +5408,16 @@
    "post": 210,
    "status": "encerrado",
    "validade": "2026-11-10T23:59-03:00"
+  },
+  "VALEAGORA25": {
+   "criado": "2026-11-11T10:03-03:00",
+   "post": 303,
+   "status": "ativo",
+   "validade": null
   }
  },
  "cupons_extra_ultimo:cupombr": 5536,
- "cupons_ml_ultimo": 6454,
+ "cupons_ml_ultimo": 6455,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -11825,7 +11837,7 @@
    "shopee": 24
   },
   "2026-11-11": {
-   "cupons": 9,
+   "cupons": 11,
    "posts": 12,
    "shopee": 6
   }
@@ -13698,6 +13710,21 @@
    "criado": "2026-11-11T10:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "303": {
+   "blocos": [
+    {
+     "codigo": "VALEAGORA25",
+     "html": "<b>🎟️ VALEAGORA25</b> 👉 <b>25% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n👉 <a href=\"https://bit.ly/4z9h3Dd\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "OFERTAJA22",
+     "html": "<b>🎟️ OFERTAJA22</b> 👉 <b>22% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 11/12\n👉 <a href=\"https://bit.ly/4z99JYx\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-11T10:03-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
