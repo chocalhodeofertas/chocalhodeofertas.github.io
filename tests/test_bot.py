@@ -1458,3 +1458,12 @@ def test_capas_novas_desenham():
     for estilo in ("faixas", "grandes", "classico"):
         img = tiktok.capa(foto, "Eles crescem\nrápido demais", "roupinhas de 0 a 6 meses", estilo=estilo, destaque=["rápido"])
         assert img.size == (1080, 1350)
+
+
+def test_titulo_da_capa_prefere_duas_linhas():
+    from PIL import Image, ImageDraw
+    from bot import tiktok
+    d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    for tamanhos, larg in (((88, 84, 78, 72, 66, 60), 900), ((122, 112, 104, 96, 88, 80, 74), 936)):
+        _, _, linhas = tiktok._linhas_caps(d, "O segredo daquele cheirinho de bebê", tamanhos, larg, max_linhas=4)
+        assert len(linhas) == 2

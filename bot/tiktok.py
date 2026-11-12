@@ -142,16 +142,22 @@ def _poppins(tam, peso="ExtraBold"):
 
 
 def _linhas_caps(d, titulo, tamanhos, largura, peso="ExtraBold", max_linhas=3):
-    """Título em maiúsculas: respeita '\n' ou quebra sozinho; devolve (fonte, linhas)."""
+    """Título em maiúsculas: respeita '\n' ou quebra sozinho; devolve (fonte, tam, linhas).
+    Sempre que der, o título fica em no máximo 2 linhas (diminui a letra antes de usar a 3ª)."""
     titulo = titulo.upper()
-    for tam in tamanhos:
-        f = _poppins(tam, peso)
-        if "\n" in titulo:
-            linhas = [ln.strip() for ln in titulo.split("\n")]
-        else:
+    if "\n" in titulo:
+        linhas = [ln.strip() for ln in titulo.split("\n")]
+        for tam in tamanhos:
+            f = _poppins(tam, peso)
+            if all(d.textlength(ln, font=f) <= largura for ln in linhas):
+                return f, tam, linhas
+        return f, tam, linhas
+    for limite in sorted({min(2, max_linhas), max_linhas}):
+        for tam in tamanhos:
+            f = _poppins(tam, peso)
             linhas = _quebrar(d, titulo, f, largura)
-        if len(linhas) <= max_linhas and all(d.textlength(ln, font=f) <= largura for ln in linhas):
-            return f, tam, linhas
+            if len(linhas) <= limite:
+                return f, tam, linhas
     return f, tam, linhas
 
 
@@ -167,7 +173,7 @@ def capa_faixas(foto, titulo, apoio=None, foco_y=0.5):
     img = _cobrir(foto, foco_y=foco_y)
     img = _degrade(img, 0, 700, 90, de_cima=True)
     d = ImageDraw.Draw(img)
-    f, tam, linhas = _linhas_caps(d, titulo, (88, 84, 78, 72, 66), L - 2 * MARGEM - 36)
+    f, tam, linhas = _linhas_caps(d, titulo, (88, 84, 78, 72, 66, 60), L - 2 * MARGEM - 36)
     alt = int(tam * 1.29)
     y = 150
     for ln in linhas:
@@ -186,7 +192,7 @@ def capa_grandes(foto, titulo, apoio=None, destaque=(), foco_y=0.5):
     img = _cobrir(foto, foco_y=foco_y)
     img = _degrade(img, 0, 900, 170, de_cima=True)
     d = ImageDraw.Draw(img)
-    f, tam, linhas = _linhas_caps(d, titulo, (122, 112, 104, 96, 88, 80), L - 2 * MARGEM, max_linhas=4)
+    f, tam, linhas = _linhas_caps(d, titulo, (122, 112, 104, 96, 88, 80, 74), L - 2 * MARGEM, max_linhas=4)
     destaque = {p.upper() for p in destaque}
     passo = int(tam * 1.03)
     pos = [(MARGEM, 120 + tam + k * passo, ln) for k, ln in enumerate(linhas)]
@@ -228,8 +234,14 @@ def capa(foto, titulo="Se eu estivesse montando um enxoval",
                 break
             continue
         linhas = _quebrar(d, titulo, f, largura)
-        if len(linhas) <= 3:
+        if len(linhas) <= 2:
             break
+    else:
+        for tam in (112, 104, 96, 88, 80, 72) if "\n" not in titulo else ():
+            f = _serif(tam, 500)
+            linhas = _quebrar(d, titulo, f, largura)
+            if len(linhas) <= 3:
+                break
     passo = int(tam * 1.12)
     y_base = 150 + tam
     pos = [(MARGEM, y_base + k * passo, ln) for k, ln in enumerate(linhas)]
