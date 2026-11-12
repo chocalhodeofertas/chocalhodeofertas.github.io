@@ -6663,6 +6663,12 @@
    "status": "ativo",
    "validade": "2026-11-12T23:59-03:00"
   },
+  "MELIGARANTE25": {
+   "criado": "2026-11-12T11:02-03:00",
+   "post": 423,
+   "status": "ativo",
+   "validade": "2026-12-12T23:59-03:00"
+  },
   "MELIHOJE": {
    "criado": "2026-11-10T21:27-03:00",
    "post": 278,
@@ -6680,6 +6686,12 @@
    "post": 62,
    "status": "encerrado",
    "validade": "2026-11-07T23:59-03:00"
+  },
+  "MELIOFF18": {
+   "criado": "2026-11-12T11:02-03:00",
+   "post": 423,
+   "status": "ativo",
+   "validade": "2026-12-12T23:59-03:00"
   },
   "MELIOFF22": {
    "criado": "2026-11-09T13:47-03:00",
@@ -6807,11 +6819,23 @@
    "status": "ativo",
    "validade": "2026-11-12T23:59-03:00"
   },
+  "PROMOFLASH22": {
+   "criado": "2026-11-12T11:02-03:00",
+   "post": 423,
+   "status": "ativo",
+   "validade": "2026-12-12T23:59-03:00"
+  },
   "PROMOFLASH25": {
    "criado": "2026-11-09T13:47-03:00",
    "post": 171,
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
+  },
+  "QUEROPROMO25": {
+   "criado": "2026-11-12T11:02-03:00",
+   "post": 423,
+   "status": "ativo",
+   "validade": "2026-12-12T23:59-03:00"
   },
   "SEMPREAQUI": {
    "criado": "2026-11-11T10:00-03:00",
@@ -6875,7 +6899,7 @@
   }
  },
  "cupons_extra_ultimo:cupombr": 5569,
- "cupons_ml_ultimo": 6474,
+ "cupons_ml_ultimo": 6475,
  "descoberta_em": "2026-11-12T08:07-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -13312,7 +13336,7 @@
    "shopee": 48
   },
   "2026-11-12": {
-   "cupons": 1,
+   "cupons": 5,
    "posts": 18,
    "shopee": 9
   }
@@ -15814,6 +15838,29 @@
    "criado": "2026-11-12T08:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "423": {
+   "blocos": [
+    {
+     "codigo": "MELIGARANTE25",
+     "html": "<b>🎟️ MELIGARANTE25</b> 👉 <b>25% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 12/12\n👉 <a href=\"https://bit.ly/4izqjf9\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "PROMOFLASH22",
+     "html": "<b>🎟️ PROMOFLASH22</b> 👉 <b>22% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 12/12\n👉 <a href=\"https://bit.ly/3WoewHV\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "MELIOFF18",
+     "html": "<b>🎟️ MELIOFF18</b> 👉 <b>18% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 12/12\n👉 <a href=\"https://bit.ly/4BUqUzA\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "QUEROPROMO25",
+     "html": "<b>🎟️ QUEROPROMO25</b> 👉 <b>25% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 12/12\n👉 <a href=\"https://bit.ly/48gbsQH\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-12T11:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "47": {
    "blocos": [
