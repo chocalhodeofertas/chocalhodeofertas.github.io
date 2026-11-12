@@ -1492,3 +1492,9 @@ def test_tipo_do_dia_vale_para_ml_e_shopee():
     e["shopee"] = {"titulos": {"SHP1": {"titulo": "Kit 48 Carrinhos Miniatura Metal", "quando": AGORA.isoformat()}}}
     assert "carrinho de brinquedo" in tipos_do_dia(e, AGORA)
     assert "carrinho de brinquedo" not in tipos_do_dia(e, AGORA + timedelta(days=1))
+
+
+def test_sutia_bloqueado():
+    assert motivo_bloqueio("Kits Sutiãs Infantil Juvenil Algodão Cotton Liso")
+    assert motivo_bloqueio("Sutiã Infantil Top Menina")
+    assert motivo_bloqueio("Body Bebê Algodão Kit 3") is None
