@@ -7,7 +7,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-import makeWASocket, { Browsers, DisconnectReason, useMultiFileAuthState } from "@whiskeysockets/baileys";
+import makeWASocket, { Browsers, DisconnectReason, prepareWAMessageMedia, useMultiFileAuthState } from "@whiskeysockets/baileys";
 import pino from "pino";
 
 import { PASTA_AUTH, RAIZ, abrirSessao, avisar, codigoConvite, dormir, gravarEstado, guardarSessao,
@@ -172,6 +172,23 @@ async function postar(item) {
   await sock.sendPresenceUpdate("composing", grupo).catch(() => {});
   await dormir(2500 + Math.random() * 4000);
   await sock.sendPresenceUpdate("paused", grupo).catch(() => {});
+  // Texto com a prévia grande do link (foto + nome do produto), como nos grupos de ofertas grandes
+  if (item.preview?.link && item.texto.includes(item.preview.link)) {
+    try {
+      const pv = item.preview;
+      const info = { "canonical-url": pv.link, "matched-text": pv.link, title: pv.titulo || "", description: "" };
+      if (pv.imagem) {
+        const { imageMessage } = await prepareWAMessageMedia({ image: { url: pv.imagem } },
+          { upload: sock.waUploadToServer, mediaTypeOverride: "thumbnail-link", logger });
+        info.jpegThumbnail = imageMessage?.jpegThumbnail ? Buffer.from(imageMessage.jpegThumbnail) : undefined;
+        info.highQualityThumbnail = imageMessage || undefined;
+      }
+      await sock.sendMessage(grupo, { text: item.texto, linkPreview: info });
+      return;
+    } catch (e) {
+      console.log("Aviso: não consegui montar a prévia do link; vai como foto:", e?.message);
+    }
+  }
   if (item.imagem) {
     const local = !/^https?:/i.test(item.imagem);
     if (local && !fs.existsSync(item.imagem)) {

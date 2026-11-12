@@ -1467,3 +1467,17 @@ def test_titulo_da_capa_prefere_duas_linhas():
     for tamanhos, larg in (((88, 84, 78, 72, 66, 60), 900), ((122, 112, 104, 96, 88, 80, 74), 936)):
         _, _, linhas = tiktok._linhas_caps(d, "O segredo daquele cheirinho de bebê", tamanhos, larg, max_linhas=4)
         assert len(linhas) == 2
+
+
+def test_whatsapp_oferta_com_previa_do_link(tmp_path, monkeypatch):
+    import json
+    from bot import whatsapp
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    from bot import ofertas
+    o = ofertas.Oferta(id="MLB1", titulo="Banheira Dobrável", preco=99.9, preco_de=None, desconto=0,
+                       abaixo_do_habitual=None, menor_preco_historico=False, link="https://meli.la/abc",
+                       imagem="https://img/x.jpg", categoria="higiene")
+    assert whatsapp.enfileirar_oferta(o, "*Oferta*\n👉 https://meli.la/abc\n_#publi_", AGORA)
+    item = json.loads(next(tmp_path.glob("*.json")).read_text())
+    assert item["preview"] == {"link": "https://meli.la/abc", "titulo": "Banheira Dobrável", "imagem": "https://img/x.jpg"}
+    assert item["imagem"] == "https://img/x.jpg"  # reserva, se a prévia falhar

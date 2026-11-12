@@ -6,12 +6,13 @@ em wa/servico.mjs, que roda junto com o ciclo e controla o ritmo. Sem WA_FILA
 """
 import json
 import os
+import re
 import time
 from datetime import datetime
 from pathlib import Path
 
 
-def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None):
+def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None):
     """png: bytes de uma arte pronta (vai junto na fila e tem prioridade sobre a URL da foto)."""
     pasta = os.environ.get("WA_FILA")
     if not pasta or not texto:
@@ -25,6 +26,8 @@ def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None):
         arq.write_bytes(png)
         imagem = str(arq)
     item = {"texto": texto, "imagem": imagem or None, "criado": quando.isoformat(), "loja": loja}
+    if preview:
+        item["preview"] = preview
     nome = p / f"{base}.json"
     tmp = nome.with_suffix(".tmp")
     tmp.write_text(json.dumps(item, ensure_ascii=False), encoding="utf-8")
@@ -33,17 +36,11 @@ def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None):
 
 
 def enfileirar_oferta(oferta, texto, agora=None, loja="ml"):
-    """Oferta para o grupo com a arte do Chocalho (foto do produto + preço na identidade).
-
-    Se a arte falhar (ex.: foto fora do ar), vai com a foto do anúncio mesmo.
-    """
-    if not os.environ.get("WA_FILA"):
-        return False
-    png = None
-    try:
-        from . import arte
-
-        png = arte.gerar(oferta, cta="Link abaixo")
-    except Exception as e:  # noqa: BLE001
-        print(f"Aviso: arte do WhatsApp falhou ({type(e).__name__}); vai a foto do anúncio.")
-    return enfileirar(texto, getattr(oferta, "imagem", None), agora, loja, png=png)
+    """Oferta para o grupo como texto com a prévia grande do link (foto + nome do produto),
+    igual aos grupos de ofertas grandes. O serviço monta a prévia com a foto do anúncio;
+    se não conseguir, manda a foto com o texto na legenda."""
+    m = re.search(r"https?://\S+", texto or "")
+    preview = None
+    if m and getattr(oferta, "imagem", None):
+        preview = {"link": m.group(0), "titulo": oferta.titulo, "imagem": oferta.imagem}
+    return enfileirar(texto, getattr(oferta, "imagem", None), agora, loja, preview=preview)
