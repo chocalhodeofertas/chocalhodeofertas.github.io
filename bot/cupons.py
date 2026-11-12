@@ -8,7 +8,7 @@ estado["posts_cupom"][id_da_mensagem] = {"titulo", "blocos": [{"codigo", "html"}
 estado["cupons"][CODIGO] = {"post", "status", "validade", "criado"}
 """
 import html
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from .telegram import TelegramErro
 
@@ -37,6 +37,11 @@ def render(estado, post):
     return f"{titulo}\n\n" + "\n\n".join(partes) + f"\n\n<i>{post['rodape']}</i>"
 
 
+def validade_padrao(criado):
+    """Cupom sem data no anúncio vale até as 23h59 do dia seguinte ao post."""
+    return (criado + timedelta(days=1)).replace(hour=23, minute=59, second=0, microsecond=0)
+
+
 def publicar(tg, cfg, estado, titulo, blocos, agora, rodape=RODAPE):
     """blocos: lista de (codigo ou None, html, validade ou None). Retorna o id da mensagem."""
     post = {"titulo": titulo, "blocos": [{"codigo": c or "", "html": h} for c, h, _ in blocos],
@@ -52,7 +57,7 @@ def publicar(tg, cfg, estado, titulo, blocos, agora, rodape=RODAPE):
         geral = (cupons.get(b["codigo"]) or {}).get("geral")  # mantém a marca do admin se repostar
         cupons[b["codigo"]] = {
             "post": mid, "status": "ativo", "criado": post["criado"],
-            "validade": validade.isoformat(timespec="minutes") if validade else None,
+            "validade": (validade or validade_padrao(agora)).isoformat(timespec="minutes"),
         }
         if geral:
             cupons[b["codigo"]]["geral"] = True
@@ -103,6 +108,8 @@ def verificar(tg, cfg, estado, agora, log=print):
     """Encerra os cupons vencidos e esquece os antigos."""
     cupons = estado.get("cupons") or {}
     for codigo, c in list(cupons.items()):
+        if c.get("status") == "ativo" and not c.get("validade") and c.get("criado"):
+            c["validade"] = validade_padrao(datetime.fromisoformat(c["criado"])).isoformat(timespec="minutes")
         if c.get("status") == "ativo" and c.get("validade") and datetime.fromisoformat(c["validade"]) < agora:
             try:
                 marcar(tg, cfg, estado, codigo, "encerrado")

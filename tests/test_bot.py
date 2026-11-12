@@ -1420,3 +1420,19 @@ def test_shopee_acompanha_e_traz_queda_real():
     assert [p.id for p in caiu] == ["SHP7"]
     assert e["precos"]["SHP7"]["historico"][-1][1] == 40.0
     assert e["shopee"]["acompanhados"]["SHP7"]["visto"].startswith(AGORA.date().isoformat())
+
+
+def test_cupom_sem_data_vale_ate_o_fim_do_dia_seguinte():
+    from datetime import timedelta
+    from bot import cupons
+    e = est.novo()
+    tg = TGCmd()
+    cupons.publicar(tg, cfg_cmd(), e, "t", [("SEMDATA10", "<b>🎟️ SEMDATA10</b> 👉 10% OFF", None)], AGORA)
+    fim = (AGORA + timedelta(days=1)).replace(hour=23, minute=59, second=0, microsecond=0)
+    assert e["cupons"]["SEMDATA10"]["validade"] == fim.isoformat(timespec="minutes")
+    # cupom antigo, gravado sem validade: ganha o prazo pela data do post e encerra depois dele
+    e["cupons"]["SEMDATA10"]["validade"] = None
+    cupons.verificar(tg, cfg_cmd(), e, fim - timedelta(minutes=5))
+    assert e["cupons"]["SEMDATA10"]["status"] == "ativo"
+    cupons.verificar(tg, cfg_cmd(), e, fim + timedelta(minutes=1))
+    assert e["cupons"]["SEMDATA10"]["status"] == "encerrado"
