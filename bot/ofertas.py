@@ -126,7 +126,8 @@ _TIPOS = [
     ("triciclo/bicicleta", r"triciclo|bicicleta|patinete|motoca"),
     ("lego/blocos", r"\blego\b|blocos de montar"),
     ("boneca", r"\bboneca"),
-    ("carrinho de brinquedo", r"hot wheels|carrinho (de )?controle|controle remoto"),
+    ("carrinho de brinquedo", r"hot wheels|carrinho (de )?controle|controle remoto|carrinhos?\b.*(miniatura|friccao|1 ?64|metal)|"
+                              r"(maleta|kit|caixa|container|garagem|pista).*\bcarrinhos\b|\d+ carrinhos"),
     ("cozinha de brinquedo", r"cozinha (de )?brinquedo|cozinha infantil|comidinha"),
     ("console", r"\bps5\b|\bps4\b|playstation|xbox|nintendo switch|console"),
     ("cartas pokemon", r"pokemon.*(cartas?|booster|box|deck|tcg)|(cartas?|booster).*pokemon"),
@@ -138,16 +139,36 @@ _TIPOS = [
 _TIPOS_RE = [(t, re.compile(p)) for t, p in _TIPOS]
 
 
+# Palavras de embalagem/quantidade: não dizem o que o produto é
+_EMBALAGEM = {"kit", "kits", "com", "para", "infantil", "infantis", "bebe", "bebes", "baby", "maleta", "caixa",
+              "container", "combo", "pacote", "conjunto", "jogo", "par", "unidades", "pecas", "novo", "nova",
+              "original", "super", "mega", "mini", "promocao", "oferta", "brinquedo", "brinquedos"}
+
+
 def tipo_produto(titulo):
-    """Tipo do produto, para não repetir o mesmo tipo no dia. Sem tipo conhecido: 2 primeiras palavras."""
+    """Tipo do produto, para não repetir o mesmo tipo no dia (ML e Shopee juntos).
+    Sem tipo conhecido: a primeira palavra que diz o que é o produto, no singular."""
     from .filtros import normalizar
 
     t = normalizar(titulo)
     for nome, padrao in _TIPOS_RE:
         if padrao.search(t):
             return nome
-    palavras = [p for p in re.findall(r"[a-z]+", t) if len(p) > 2 and p not in {"kit", "com", "para", "infantil", "bebe"}]
-    return " ".join(palavras[:2])
+    palavras = [p for p in re.findall(r"[a-z]+", t) if len(p) > 2 and p not in _EMBALAGEM]
+    if not palavras:
+        return t[:20]
+    p = palavras[0]
+    return p[:-1] if p.endswith("s") and not p.endswith("ss") else p
+
+
+def tipos_do_dia(estado, agora):
+    """Tipos já postados hoje, somando Mercado Livre e Shopee."""
+    hoje = agora.date().isoformat()
+    titulos = [v.get("titulo", "") for v in estado.get("postados", {}).values()
+               if v.get("quando", "").startswith(hoje)]
+    titulos += [v.get("titulo", "") for v in estado.get("shopee", {}).get("titulos", {}).values()
+                if v.get("quando", "").startswith(hoje)]
+    return {tipo_produto(t) for t in titulos if t} | set(estado.get("shopee", {}).get("tipos", {}).get(hoje, []))
 
 
 def essencial(titulo):

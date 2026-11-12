@@ -106,7 +106,7 @@ def prod(pid="MLB1", ref=None):
 def info(preco, original=None, pid="MLB1"):
     # título diferente por produto (o bot não repete o mesmo tipo de produto no dia)
     nome = "".join(chr(97 + int(c)) for c in pid if c.isdigit()) or "item"
-    return InfoProduto(pid, f"Produto {nome}{nome}{nome} teste", preco, original, "https://img/x-O.jpg", True)
+    return InfoProduto(pid, f"{nome.capitalize()}{nome}{nome} produto teste", preco, original, "https://img/x-O.jpg", True)
 
 
 def test_oferta_por_desconto_do_ml():
@@ -1481,3 +1481,14 @@ def test_whatsapp_oferta_com_previa_do_link(tmp_path, monkeypatch):
     item = json.loads(next(tmp_path.glob("*.json")).read_text())
     assert item["preview"] == {"link": "https://meli.la/abc", "titulo": "Banheira Dobrável", "imagem": "https://img/x.jpg"}
     assert item["imagem"] == "https://img/x.jpg"  # reserva, se a prévia falhar
+
+
+def test_tipo_do_dia_vale_para_ml_e_shopee():
+    from bot.ofertas import tipo_produto, tipos_do_dia
+    assert tipo_produto("Maleta 48 Carrinhos + Tapete Pista 40x60") == tipo_produto(
+        "Kit 48 Carrinhos Miniatura Nanotoyzzz Metal Fricção 1:64") == "carrinho de brinquedo"
+    assert tipo_produto("Kit 3 Brinquedo Sensorial Ventosa") == "sensorial"
+    e = est.novo()
+    e["shopee"] = {"titulos": {"SHP1": {"titulo": "Kit 48 Carrinhos Miniatura Metal", "quando": AGORA.isoformat()}}}
+    assert "carrinho de brinquedo" in tipos_do_dia(e, AGORA)
+    assert "carrinho de brinquedo" not in tipos_do_dia(e, AGORA + timedelta(days=1))

@@ -18,7 +18,7 @@ from datetime import datetime, timedelta
 from . import estado as est
 from . import mensagens, whatsapp
 from .filtros import fora_da_faixa, motivo_bloqueio, normalizar
-from .ofertas import Oferta, limite_hora, meta_ate_agora, tipo_produto
+from .ofertas import Oferta, limite_hora, meta_ate_agora, tipo_produto, tipos_do_dia
 from .shopee import MAIS_VENDIDOS, Shopee, ShopeeErro
 from .telegram import TelegramErro
 
@@ -240,7 +240,8 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
     tipos = s.setdefault("tipos", {})
     for d in [d for d in tipos if d != hoje]:
         del tipos[d]
-    tipos_hoje = set(tipos.setdefault(hoje, []))
+    tipos.setdefault(hoje, [])
+    tipos_hoje = tipos_do_dia(estado, agora)
     enviadas = []
     for p in candidatos:
         if len(enviadas) >= vagas:

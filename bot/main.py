@@ -25,7 +25,7 @@ from . import mensagens
 from .descoberta import descobrir, descobrir_areas
 from .filtros import fora_da_faixa, motivo_bloqueio
 from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, link_produto, renovar_token, token_do_app
-from .ofertas import avaliar, limite_hora, meta_ate_agora, pontuacao, tipo_produto
+from .ofertas import avaliar, limite_hora, meta_ate_agora, pontuacao, tipo_produto, tipos_do_dia
 from .telegram import Telegram, TelegramErro
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -397,8 +397,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         _esperar(rng.uniform(0, cfg.atraso_max) * 60, tarefa)
     por_id = {p.id: p for p in produtos}
     hoje = agora.date().isoformat()
-    tipos_hoje = {tipo_produto(v.get("titulo", "")) for v in estado["postados"].values()
-                  if v.get("quando", "").startswith(hoje) and v.get("titulo")}
+    tipos_hoje = tipos_do_dia(estado, agora)
     esperar_antes = False
     for o in candidatas:
         if len(enviadas) >= vagas:
