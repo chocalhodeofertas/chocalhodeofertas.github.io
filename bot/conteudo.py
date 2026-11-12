@@ -290,6 +290,7 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
             titulo = rng.choice(tema.titulos)
             estilo = "grande" if (estilo_base + n_c) % 2 == 0 else "faixas"
             capa_foto = arte.foto_de_capa(tema.fotos, rng)
+            arte.registrar_capa(capa_foto)
             mp4 = arte.reel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
             if mp4:
                 tg.enviar_video(chat, mp4, f"🎬 {k}. {hora} — Reel temático (escolha a música no Instagram)")
@@ -311,6 +312,7 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
             titulo = rng.choice(tema.titulos)
             estilo = "grande" if (estilo_base + n_c) % 2 == 0 else "faixas"
             capa_foto = arte.foto_de_capa(tema.fotos, rng)
+            arte.registrar_capa(capa_foto)
             slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
             tg.enviar_album(chat, [arte.png(s) for s in slides], f"🎠 {k}. {hora} — carrossel (na ordem)")
             tg.enviar_texto(chat, legenda_carrossel(tema, ofs, rng))
@@ -378,6 +380,7 @@ def enviar_tema(tg, chat, estado, agora, nome, formato="carrossel", rng=random, 
     if len(cand) < 3:
         return f"O tema <b>{nome}</b> tem só {len(cand)} oferta(s) agora; preciso de pelo menos 3."
     capa_foto = arte.foto_de_capa(tema.fotos, rng)
+    arte.registrar_capa(capa_foto)
     if capa_foto is None:
         return f"Faltam fotos de capa para o tema <b>{nome}</b>."
     carr = cand[:4]

@@ -1436,3 +1436,25 @@ def test_cupom_sem_data_vale_ate_o_fim_do_dia_seguinte():
     assert e["cupons"]["SEMDATA10"]["status"] == "ativo"
     cupons.verificar(tg, cfg_cmd(), e, fim + timedelta(minutes=1))
     assert e["cupons"]["SEMDATA10"]["status"] == "encerrado"
+
+
+def test_foto_de_capa_evita_as_ja_usadas(tmp_path, monkeypatch):
+    import random
+    from bot import arte
+    monkeypatch.setattr(arte, "USADAS", tmp_path / "usadas.json")
+    fotos = sorted((arte.CAPAS / "passeio").glob("*.jpg"))
+    for f in fotos[:-1]:
+        arte.registrar_capa(f"passeio/{f.name}", "2026-01-01")
+    for _ in range(5):
+        assert arte.foto_de_capa(["passeio"], random.Random()).nome == f"passeio/{fotos[-1].name}"
+    arte.registrar_capa(f"passeio/{fotos[-1].name}", "2026-02-01")
+    assert arte.foto_de_capa(["passeio"]).nome == f"passeio/{fotos[0].name}"  # todas usadas: a mais antiga
+
+
+def test_capas_novas_desenham():
+    from PIL import Image
+    from bot import tiktok
+    foto = Image.new("RGB", (1200, 1600), (230, 220, 210))
+    for estilo in ("faixas", "grandes", "classico"):
+        img = tiktok.capa(foto, "Eles crescem\nrápido demais", "roupinhas de 0 a 6 meses", estilo=estilo, destaque=["rápido"])
+        assert img.size == (1080, 1350)

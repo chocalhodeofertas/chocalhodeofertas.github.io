@@ -379,17 +379,52 @@ def capa(foto, titulo, destaque=None, estilo="grande", L=1080, A=1350):
     return img
 
 
+USADAS = RAIZ / "data" / "capas_usadas.json"
+
+
+def capas_usadas():
+    """{'tema/arquivo.jpg': 'AAAA-MM-DD'} das fotos de capa que já saíram."""
+    import json
+    try:
+        return json.loads(USADAS.read_text())
+    except (OSError, ValueError):
+        return {}
+
+
+def registrar_capa(foto, dia=None):
+    """Marca a foto de capa como usada (para não repetir)."""
+    import json
+    from datetime import date
+    nome = getattr(foto, "nome", None) if not isinstance(foto, str) else foto
+    if not nome:
+        return
+    usadas = capas_usadas()
+    usadas[nome] = dia or date.today().isoformat()
+    try:
+        USADAS.write_text(json.dumps(usadas, ensure_ascii=False, indent=1, sort_keys=True))
+    except OSError:
+        pass
+
+
 def foto_de_capa(temas, rng=random):
-    """Sorteia uma foto entre as pastas assets/capas/<tema> indicadas.
-    A foto volta com `.rostos` (caixas relativas, de assets/capas/rostos.json)."""
+    """Sorteia uma foto entre as pastas assets/capas/<tema> indicadas, dando
+    preferência às que ainda não foram usadas (data/capas_usadas.json). Se todas
+    já saíram, volta a mais antiga. A foto vem com `.nome` e `.rostos`."""
     fotos = [f for t in temas for f in sorted((CAPAS / t).glob("*.jpg"))]
     if not fotos:
         return None
-    escolhida = rng.choice(fotos)
+    usadas = capas_usadas()
+    chave = lambda f: f"{f.parent.name}/{f.name}"
+    livres = [f for f in fotos if chave(f) not in usadas]
+    if livres:
+        escolhida = rng.choice(livres)
+    else:
+        escolhida = min(fotos, key=lambda f: usadas.get(chave(f), ""))
     img = Image.open(escolhida).convert("RGB")
+    img.nome = chave(escolhida)
     try:
         import json
-        img.rostos = json.loads((CAPAS / "rostos.json").read_text()).get(f"{escolhida.parent.name}/{escolhida.name}", [])
+        img.rostos = json.loads((CAPAS / "rostos.json").read_text()).get(img.nome, [])
     except (OSError, ValueError):
         img.rostos = []
     return img
