@@ -5367,6 +5367,12 @@
    "status": "encerrado",
    "validade": "2026-11-07T23:59-03:00"
   },
+  "MODAESPECIAL": {
+   "criado": "2026-11-11T21:03-03:00",
+   "post": 395,
+   "status": "ativo",
+   "validade": "2026-11-12T23:59-03:00"
+  },
   "MODASEMPREML": {
    "criado": "2026-11-11T08:04-03:00",
    "post": 289,
@@ -5524,7 +5530,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5562,
+ "cupons_extra_ultimo:cupombr": 5563,
  "cupons_ml_ultimo": 6471,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
@@ -11946,7 +11952,7 @@
   },
   "2026-11-11": {
    "com_cupom": 4,
-   "cupons": 29,
+   "cupons": 30,
    "posts": 90,
    "shopee": 44
   }
@@ -14243,6 +14249,17 @@
     }
    ],
    "criado": "2026-11-11T20:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "395": {
+   "blocos": [
+    {
+     "codigo": "MODAESPECIAL",
+     "html": "<b>🎟️ MODAESPECIAL</b> 👉 <b>20% OFF</b>\n📂 Moda\n⏰ Válido até 12/11"
+    }
+   ],
+   "criado": "2026-11-11T21:03-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
