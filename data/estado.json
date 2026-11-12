@@ -5190,7 +5190,7 @@
   "BELEZALUXO": {
    "criado": "2026-11-11T08:00-03:00",
    "post": 286,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "BUDBLACK": {
@@ -5208,7 +5208,7 @@
   "CORREHOJE": {
    "criado": "2026-11-10T20:33-03:00",
    "post": 267,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "COZINHA10": {
@@ -5220,7 +5220,7 @@
   "CUPOMEXCLUSIVO": {
    "criado": "2026-11-11T12:00-03:00",
    "post": 319,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "CUPOMPRAMODA": {
@@ -5232,7 +5232,7 @@
   "DECORACAO1111": {
    "criado": "2026-11-11T08:00-03:00",
    "post": 287,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "DESCONTODOML30": {
@@ -5256,14 +5256,20 @@
   "FULL1011ENTREGAS": {
    "criado": "2026-11-10T16:04-03:00",
    "post": 236,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "FULL1111": {
    "criado": "2026-11-11T08:00-03:00",
    "post": 287,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
+  },
+  "FULL1211": {
+   "criado": "2026-11-12T08:01-03:00",
+   "post": 404,
+   "status": "ativo",
+   "validade": "2026-11-12T23:59-03:00"
   },
   "HOJEMESMO": {
    "criado": "2026-11-09T10:01-03:00",
@@ -5292,7 +5298,7 @@
   "LOJASOFICIAIS1111": {
    "criado": "2026-11-11T08:00-03:00",
    "post": 287,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "MAISCUPONS25": {
@@ -5310,7 +5316,7 @@
   "MELHORESPROMOS": {
    "criado": "2026-11-11T19:00-03:00",
    "post": 375,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "MELHOROFERTA": {
@@ -5322,13 +5328,13 @@
   "MELIHOJE": {
    "criado": "2026-11-10T21:27-03:00",
    "post": 278,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "MELIMAISPREDD": {
    "criado": "2026-11-10T12:02-03:00",
    "post": 215,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "MELIOFERTAS": {
@@ -5358,7 +5364,7 @@
   "MODA1111": {
    "criado": "2026-11-11T08:00-03:00",
    "post": 287,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "MODAAQUI": {
@@ -5376,7 +5382,7 @@
   "MODASEMPREML": {
    "criado": "2026-11-11T08:04-03:00",
    "post": 289,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "MOP10SHARK": {
@@ -5388,7 +5394,7 @@
   "MP1111": {
    "criado": "2026-11-11T20:02-03:00",
    "post": 384,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "OFERTAJA22": {
@@ -5406,7 +5412,7 @@
   "OFERTAMELI": {
    "criado": "2026-11-11T18:01-03:00",
    "post": 368,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "OFERTAMELIMAIS1011": {
@@ -5442,7 +5448,7 @@
   "OPORTUNIDADEML": {
    "criado": "2026-11-11T11:00-03:00",
    "post": 311,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "PARAVOCEDEZ": {
@@ -5484,19 +5490,19 @@
   "SITETODO1111": {
    "criado": "2026-11-11T08:00-03:00",
    "post": 288,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "TECH1111": {
    "criado": "2026-11-11T16:01-03:00",
    "post": 357,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "TODO1011SITE": {
    "criado": "2026-11-10T12:02-03:00",
    "post": 215,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "TODOSITE1011": {
@@ -5508,7 +5514,7 @@
   "TODOSITE1111": {
    "criado": "2026-11-11T08:00-03:00",
    "post": 287,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
   "ULTIMASCHANCES": {
@@ -5530,7 +5536,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5564,
+ "cupons_extra_ultimo:cupombr": 5566,
  "cupons_ml_ultimo": 6471,
  "descoberta_em": "2026-11-11T08:02-03:00",
  "descobertos": {
@@ -11955,6 +11961,9 @@
    "cupons": 30,
    "posts": 98,
    "shopee": 48
+  },
+  "2026-11-12": {
+   "cupons": 1
   }
  },
  "links": {
@@ -14272,6 +14281,17 @@
     }
    ],
    "criado": "2026-11-11T21:03-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "404": {
+   "blocos": [
+    {
+     "codigo": "FULL1211",
+     "html": "<b>🎟️ FULL1211</b> 👉 <b>25% OFF</b>\nCompra mín.: R$119 · Desconto máx.: R$40\n⏰ Válido até 12/11"
+    }
+   ],
+   "criado": "2026-11-12T08:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
