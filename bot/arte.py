@@ -167,8 +167,9 @@ def _preco(d, x, y, oferta, grande=104):
                fill=SUAVE, width=3)
         y += 50
     fp = _poppins(36, "Medium")
-    d.text((x, y + 30), "por", font=fp, fill=UVA)
-    d.text((x + d.textlength("por ", font=fp), y - 18), brl(oferta.preco), font=_fredoka(grande), fill=UVA)
+    rotulo = "a partir de" if getattr(oferta, "a_partir", False) and not oferta.preco_de else "por"
+    d.text((x, y + 30), rotulo, font=fp, fill=UVA)
+    d.text((x + d.textlength(rotulo + " ", font=fp), y - 18), brl(oferta.preco), font=_fredoka(grande), fill=UVA)
 
 
 def _rodape(img, texto, base=None):

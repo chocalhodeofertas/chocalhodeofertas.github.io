@@ -126,7 +126,7 @@ def postar_link(link, tg, ml, estado, cfg, agora, session=None, rng=random):
         tg.enviar_oferta(cfg.canal, mensagens.montar_telegram(oferta, rng), oferta.imagem)
     except TelegramErro as e:
         return f"⚠️ Não consegui postar no canal: {e}"
-    whatsapp.enfileirar(mensagens.montar_whatsapp(oferta, rng), oferta.imagem, agora)
+    whatsapp.enfileirar_oferta(oferta, mensagens.montar_whatsapp(oferta, rng), agora)
     est.registrar_post(estado, pid, preco, agora, info.titulo, oferta.desconto)
     if oferta.cupom:
         est.contar_dia(estado, agora, "com_cupom")

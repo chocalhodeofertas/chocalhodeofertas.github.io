@@ -423,7 +423,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
             log(f"Erro ao postar {o.id} no canal: {e}")
             continue
         esperar_antes = True
-        whatsapp.enfileirar(mensagens.montar_whatsapp(o, rng), o.imagem, agora)
+        whatsapp.enfileirar_oferta(o, mensagens.montar_whatsapp(o, rng), agora)
         est.registrar_post(estado, o.id, o.preco, agora, o.titulo, o.desconto)
         if o.cupom:
             est.contar_dia(estado, agora, "com_cupom")

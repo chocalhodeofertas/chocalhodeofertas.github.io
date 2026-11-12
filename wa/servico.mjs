@@ -159,6 +159,13 @@ function conectar() {
   });
 }
 
+// Arte gerada pelo bot fica na própria pasta da fila; some junto com o item
+function apagarItem(caminho, item) {
+  fs.rmSync(caminho, { force: true });
+  const img = item?.imagem;
+  if (img && !/^https?:/i.test(img) && path.resolve(img).startsWith(FILA)) fs.rmSync(img, { force: true });
+}
+
 async function postar(item) {
   await acharGrupo();
   await sock.presenceSubscribe(grupo).catch(() => {});
@@ -166,7 +173,13 @@ async function postar(item) {
   await dormir(2500 + Math.random() * 4000);
   await sock.sendPresenceUpdate("paused", grupo).catch(() => {});
   if (item.imagem) {
-    await sock.sendMessage(grupo, { image: { url: item.imagem }, caption: item.texto });
+    const local = !/^https?:/i.test(item.imagem);
+    if (local && !fs.existsSync(item.imagem)) {
+      await sock.sendMessage(grupo, { text: item.texto });
+    } else {
+      await sock.sendMessage(grupo, { image: local ? fs.readFileSync(item.imagem) : { url: item.imagem },
+        caption: item.texto });
+    }
   } else {
     await sock.sendMessage(grupo, { text: item.texto });
   }
@@ -199,12 +212,12 @@ async function cuidarDaFila() {
       estado.enviados = 0;
     }
     if (Date.now() - Date.parse(item.criado) > VALIDADE_ITEM || estado.enviados >= MAX_DIA) {
-      fs.rmSync(caminho, { force: true }); // velho demais ou limite do dia: não sai
+      apagarItem(caminho, item); // velho demais ou limite do dia: não sai
       continue;
     }
     if (estado.ultimo && Date.now() - Date.parse(estado.ultimo) < INTERVALO) return; // espera o intervalo
     if (estado.pausado_ate && Date.now() < Date.parse(estado.pausado_ate)) {
-      fs.rmSync(caminho, { force: true }); // em pausa de segurança: não posta
+      apagarItem(caminho, item); // em pausa de segurança: não posta
       continue;
     }
     try {
@@ -221,7 +234,7 @@ async function cuidarDaFila() {
           "por 48h por segurança. Não use automação nem mande muitas mensagens nesse número enquanto isso.");
       }
     }
-    fs.rmSync(caminho, { force: true });
+    apagarItem(caminho, item);
     salvarTudo();
     return; // um por vez
   }
@@ -264,7 +277,7 @@ while (Date.now() < FIM && !fs.existsSync(path.join(FILA, "PARAR"))) {
     conectar();
   }
   if (dormindo) {
-    for (const n of fs.readdirSync(FILA)) if (n.endsWith(".json")) fs.rmSync(path.join(FILA, n), { force: true });
+    for (const n of fs.readdirSync(FILA)) if (/\.(json|png)$/.test(n)) fs.rmSync(path.join(FILA, n), { force: true });
     await dormir(60000);
     continue;
   }

@@ -259,7 +259,7 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
         except TelegramErro as e:
             log(f"Erro ao postar {o.id} (Shopee) no canal: {e}")
             continue
-        whatsapp.enfileirar(mensagens.montar_whatsapp(o, rng), o.imagem, agora, loja="shopee")
+        whatsapp.enfileirar_oferta(o, mensagens.montar_whatsapp(o, rng), agora, loja="shopee")
         s["postados"][o.id] = agora.isoformat(timespec="minutes")
         s.setdefault("titulos", {})[o.id] = {"titulo": o.titulo[:80], "quando": agora.isoformat(timespec="minutes"), "preco": o.preco}
         s["hora"].append(agora.isoformat(timespec="minutes"))
