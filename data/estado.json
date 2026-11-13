@@ -1682,7 +1682,7 @@
    "tipo": "catalogo"
   }
  },
- "aguardando_link": 164,
+ "aguardando_link": 144,
  "areas_novas": true,
  "busca": {
   "itens": [
@@ -7956,7 +7956,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-13": 17
+  "2026-11-13": 19
  },
  "cupons": {
   "AGORAPROMO": {
@@ -8271,6 +8271,24 @@
    "status": "encerrado",
    "validade": "2026-11-10T23:59-03:00"
   },
+  "OFERTAPRATEC": {
+   "criado": "2026-11-13T13:04-03:00",
+   "post": 546,
+   "status": "ativo",
+   "validade": "2026-11-14T23:59-03:00"
+  },
+  "OFERTAS22": {
+   "criado": "2026-11-13T13:02-03:00",
+   "post": 544,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
+  "OFERTAS25": {
+   "criado": "2026-11-13T13:02-03:00",
+   "post": 544,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
   "OFERTASML30": {
    "criado": "2026-11-11T10:07-03:00",
    "post": 304,
@@ -8416,8 +8434,8 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5578,
- "cupons_ml_ultimo": 6486,
+ "cupons_extra_ultimo:cupombr": 5579,
+ "cupons_ml_ultimo": 6487,
  "descoberta_em": "2026-11-13T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -14833,9 +14851,9 @@
    "shopee": 50
   },
   "2026-11-13": {
-   "cupons": 5,
-   "posts": 33,
-   "shopee": 16
+   "cupons": 8,
+   "posts": 37,
+   "shopee": 18
   }
  },
  "links": {
@@ -15352,10 +15370,76 @@
   "MLB81565711": "https://meli.la/1C8TRy9",
   "MLB9412100": "https://meli.la/1CDVwho"
  },
- "lote": null,
+ "lote": {
+  "dia": "2026-11-13",
+  "ids": [
+   "MLB63081358",
+   "MLB45906189",
+   "MLB22528368",
+   "MLB35702926",
+   "MLB21833771",
+   "MLB34506179",
+   "MLB26213266",
+   "MLB18715374",
+   "MLB72267583",
+   "MLB25687130",
+   "MLB31414435",
+   "MLB58523172",
+   "MLB54627223",
+   "MLB25074264",
+   "MLB23491820",
+   "MLB27021011",
+   "MLB72248406",
+   "MLB59323704",
+   "MLB78738420",
+   "MLB27344821",
+   "MLB45721155",
+   "MLB62112459",
+   "MLB51243621",
+   "MLB35340733",
+   "MLB28634708",
+   "MLB22547034",
+   "MLB26758009",
+   "MLB44347475",
+   "MLB49678098",
+   "MLB63888271"
+  ],
+  "urls": [
+   "https://produto.mercadolivre.com.br/MLB-7748154772-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3980494991-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4319996427-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4912446114-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3254150948-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3534116197-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4068688177-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3338901700-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4740306779-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5340187680-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3609909961-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5756297130-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7862833668-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7874918312-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3611878435-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3447225031-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6905632454-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5827058640-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5171640527-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4262777352-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7901275004-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5239444343-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7626846868-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3632066651-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3611878431-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3835803747-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5511980138-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7015994138-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4590118751-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6131822006-produto-_JM"
+  ]
+ },
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-13": 1
+  "2026-11-13": 2
  },
  "membros_hist": {
   "2026-11-07": 2,
@@ -15366,8 +15450,8 @@
   "2026-11-12": 2,
   "2026-11-13": 2
  },
- "membros_lido_em": "2026-11-13T12",
- "numeros_em": "2026-11-13T12:40-03:00",
+ "membros_lido_em": "2026-11-13T13",
+ "numeros_em": "2026-11-13T13:00-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -15595,6 +15679,12 @@
    "preco": 782.0,
    "quando": "2026-11-09T12:52-03:00",
    "titulo": "Cadeira De Carro All Stages 2.0 Isofix 0-36kgs Cinza Litet"
+  },
+  "MLB24777033": {
+   "desconto": 0.559,
+   "preco": 73.37,
+   "quando": "2026-11-13T13:00-03:00",
+   "titulo": "Almofada para Banho Baby Ursinho Azul Buba"
   },
   "MLB24812026": {
    "desconto": 0.568,
@@ -15867,6 +15957,12 @@
    "preco": 78.9,
    "quando": "2026-11-12T14:38-03:00",
    "titulo": "Guitarra E Microfone Infantil Instrumento Brinquedo Musical Cor Azul"
+  },
+  "MLB41678087": {
+   "desconto": 0.401,
+   "preco": 41.9,
+   "quando": "2026-11-13T13:00-03:00",
+   "titulo": "Laptop Infantil Educativo Candide Disney Stitch Bilíngue"
   },
   "MLB42082195": {
    "desconto": 0.401,
@@ -17638,6 +17734,32 @@
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
+  "544": {
+   "blocos": [
+    {
+     "codigo": "OFERTAS25",
+     "html": "<b>🎟️ OFERTAS25</b> 👉 <b>25% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4C2mbfb\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "OFERTAS22",
+     "html": "<b>🎟️ OFERTAS22</b> 👉 <b>22% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4t2zUPc\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-13T13:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "546": {
+   "blocos": [
+    {
+     "codigo": "OFERTAPRATEC",
+     "html": "<b>🎟️ OFERTAPRATEC</b> 👉 <b>R$300 OFF</b>\nCompra mín.: R$2.699\n⏰ Válido até 14/11"
+    }
+   ],
+   "criado": "2026-11-13T13:04-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
   "62": {
    "blocos": [
     {
@@ -18612,6 +18734,10 @@
     [
      "2026-11-13",
      32.59
+    ],
+    [
+     "2026-11-13",
+     43.69
     ]
    ],
    "min": 27.87
@@ -19254,6 +19380,10 @@
     [
      "2026-11-11",
      52.99
+    ],
+    [
+     "2026-11-13",
+     58.9
     ]
    ],
    "min": 52.99
@@ -19452,6 +19582,10 @@
     [
      "2026-11-13",
      645.51
+    ],
+    [
+     "2026-11-13",
+     640.9
     ]
    ],
    "min": 433.0
@@ -19968,6 +20102,10 @@
     [
      "2026-11-12",
      343.24
+    ],
+    [
+     "2026-11-13",
+     344.45
     ]
    ],
    "min": 337.16
@@ -20886,6 +21024,10 @@
     [
      "2026-11-13",
      28.9
+    ],
+    [
+     "2026-11-13",
+     31.36
     ]
    ],
    "min": 28.9
@@ -20954,6 +21096,10 @@
     [
      "2026-11-13",
      824.57
+    ],
+    [
+     "2026-11-13",
+     839.9
     ]
    ],
    "min": 724.66
@@ -22056,6 +22202,10 @@
     [
      "2026-11-13",
      22.37
+    ],
+    [
+     "2026-11-13",
+     22.89
     ]
    ],
    "min": 18.2
@@ -29237,6 +29387,10 @@
     [
      "2026-11-11",
      599.0
+    ],
+    [
+     "2026-11-13",
+     599.9
     ]
    ],
    "min": 560.0
@@ -30563,9 +30717,13 @@
     [
      "2026-11-09",
      49.9
+    ],
+    [
+     "2026-11-13",
+     45.9
     ]
    ],
-   "min": 49.9
+   "min": 45.9
   },
   "MLB54746525": {
    "historico": [
@@ -31118,6 +31276,10 @@
     [
      "2026-11-13",
      4598.0
+    ],
+    [
+     "2026-11-13",
+     4154.0
     ]
    ],
    "min": 4154.0
@@ -31331,6 +31493,10 @@
     [
      "2026-11-12",
      22.61
+    ],
+    [
+     "2026-11-13",
+     25.0
     ]
    ],
    "min": 22.61
@@ -33528,6 +33694,10 @@
     [
      "2026-11-09",
      426.69
+    ],
+    [
+     "2026-11-13",
+     529.0
     ]
    ],
    "min": 426.69
@@ -37937,6 +38107,10 @@
     [
      "2026-11-13",
      139.0
+    ],
+    [
+     "2026-11-13",
+     136.0
     ]
    ],
    "min": 91.6
@@ -38302,6 +38476,10 @@
     [
      "2026-11-12",
      488.16
+    ],
+    [
+     "2026-11-13",
+     489.89
     ]
    ],
    "min": 482.92
@@ -40666,6 +40844,10 @@
     [
      "2026-11-13",
      324.99
+    ],
+    [
+     "2026-11-13",
+     325.0
     ]
    ],
    "min": 252.99
@@ -40865,6 +41047,10 @@
     [
      "2026-11-13",
      214.09
+    ],
+    [
+     "2026-11-13",
+     233.47
     ]
    ],
    "min": 211.04
@@ -49031,6 +49217,10 @@
     [
      "2026-11-12",
      59.49
+    ],
+    [
+     "2026-11-13",
+     54.99
     ]
    ],
    "min": 54.99
@@ -52715,6 +52905,15 @@
     ]
    ],
    "min": 22.88
+  },
+  "SHP41580369202": {
+   "historico": [
+    [
+     "2026-11-13",
+     749.88
+    ]
+   ],
+   "min": 749.88
   },
   "SHP41628916751": {
    "historico": [
@@ -57145,6 +57344,15 @@
    ],
    "min": 36.9
   },
+  "SHP58219686445": {
+   "historico": [
+    [
+     "2026-11-13",
+     14.98
+    ]
+   ],
+   "min": 14.98
+  },
   "SHP58219689262": {
    "historico": [
     [
@@ -59595,6 +59803,15 @@
    ],
    "min": 37.89
   },
+  "SHP58269434746": {
+   "historico": [
+    [
+     "2026-11-13",
+     28.45
+    ]
+   ],
+   "min": 28.45
+  },
   "SHP58269529839": {
    "historico": [
     [
@@ -59888,7 +60105,7 @@
   }
  },
  "resumo_enviado": "2026-11-12",
- "rodada_n": 68,
+ "rodada_n": 69,
  "shopee": {
   "acompanhados": {
    "SHP13047203639": {
@@ -60045,11 +60262,11 @@
    },
    "SHP19898696875": {
     "ate": "2026-12-12",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP19899258737": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP19899773583": {
     "ate": "2026-12-13",
@@ -60081,7 +60298,7 @@
    },
    "SHP20199323262": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP20199894311": {
     "ate": "2026-12-13",
@@ -60157,7 +60374,7 @@
    },
    "SHP21598330491": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP21639028953": {
     "ate": "2026-12-12",
@@ -60169,7 +60386,7 @@
    },
    "SHP21798597083": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T12:42-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP21799358323": {
     "ate": "2026-12-13",
@@ -60193,7 +60410,7 @@
    },
    "SHP21999886368": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP22091616655": {
     "ate": "2026-12-13",
@@ -60213,11 +60430,11 @@
    },
    "SHP22094984499": {
     "ate": "2026-12-11",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP22097368520": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP22097928478": {
     "ate": "2026-12-13",
@@ -60233,7 +60450,7 @@
    },
    "SHP22098763169": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP22194554622": {
     "ate": "2026-12-13",
@@ -60241,7 +60458,7 @@
    },
    "SHP22194576869": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP22194698355": {
     "ate": "2026-12-11",
@@ -60253,7 +60470,7 @@
    },
    "SHP22195082112": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP22196227745": {
     "ate": "2026-12-12",
@@ -60265,7 +60482,7 @@
    },
    "SHP22198347703": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP22293246989": {
     "ate": "2026-12-13",
@@ -60329,7 +60546,7 @@
    },
    "SHP22494807898": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP22497311280": {
     "ate": "2026-12-13",
@@ -60353,7 +60570,7 @@
    },
    "SHP22594275380": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP22596959383": {
     "ate": "2026-12-13",
@@ -60425,7 +60642,7 @@
    },
    "SHP22798746244": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP22893731506": {
     "ate": "2026-12-13",
@@ -60525,7 +60742,7 @@
    },
    "SHP23193726165": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T12:42-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP23194029573": {
     "ate": "2026-12-11",
@@ -60557,7 +60774,7 @@
    },
    "SHP23199200478": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP23292945743": {
     "ate": "2026-12-13",
@@ -60613,11 +60830,11 @@
    },
    "SHP23398654174": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP23399518157": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP23492982953": {
     "ate": "2026-12-13",
@@ -60645,7 +60862,7 @@
    },
    "SHP23498656445": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP23499346925": {
     "ate": "2026-12-12",
@@ -60749,7 +60966,7 @@
    },
    "SHP23894133081": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T11:41-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP23897663976": {
     "ate": "2026-12-13",
@@ -60909,7 +61126,7 @@
    },
    "SHP41676934699": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T12:42-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP41817703236": {
     "ate": "2026-12-13",
@@ -60933,7 +61150,7 @@
    },
    "SHP43201053975": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T09:23-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP43225182025": {
     "ate": "2026-12-12",
@@ -61069,11 +61286,11 @@
    },
    "SHP55809708679": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T12:42-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP56063356954": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T11:41-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP57054796969": {
     "ate": "2026-12-13",
@@ -61117,7 +61334,7 @@
    },
    "SHP58201517017": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T11:21-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP58201517935": {
     "ate": "2026-12-13",
@@ -61125,7 +61342,7 @@
    },
    "SHP58201791571": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T12:42-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP58201868122": {
     "ate": "2026-12-13",
@@ -61177,7 +61394,7 @@
    },
    "SHP58209209623": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T12:42-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP58209212010": {
     "ate": "2026-12-13",
@@ -61197,7 +61414,7 @@
    },
    "SHP58211285776": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T11:07-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP58212515147": {
     "ate": "2026-12-13",
@@ -61305,7 +61522,7 @@
    },
    "SHP58251518035": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T11:21-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP58251753465": {
     "ate": "2026-12-12",
@@ -61329,7 +61546,7 @@
    },
    "SHP58253633838": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T11:21-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP58254532564": {
     "ate": "2026-12-13",
@@ -61365,7 +61582,7 @@
    },
    "SHP58257561563": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T11:07-03:00"
+    "visto": "2026-11-13T13:10-03:00"
    },
    "SHP58258006595": {
     "ate": "2026-12-13",
@@ -61477,10 +61694,10 @@
    }
   },
   "hora": [
-   "2026-11-13T12:08-03:00",
-   "2026-11-13T12:08-03:00",
    "2026-11-13T12:29-03:00",
-   "2026-11-13T12:42-03:00"
+   "2026-11-13T12:42-03:00",
+   "2026-11-13T13:10-03:00",
+   "2026-11-13T13:10-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -61541,6 +61758,7 @@
    "SHP22793967394": "2026-11-11T13:16-03:00",
    "SHP22794871872": "2026-11-11T19:43-03:00",
    "SHP22798176540": "2026-11-12T21:38-03:00",
+   "SHP22798746244": "2026-11-13T13:10-03:00",
    "SHP22897149838": "2026-11-12T10:29-03:00",
    "SHP22993825970": "2026-11-11T19:57-03:00",
    "SHP22994145251": "2026-11-12T14:58-03:00",
@@ -61549,6 +61767,7 @@
    "SHP22998768336": "2026-11-12T21:13-03:00",
    "SHP23092250306": "2026-11-11T14:45-03:00",
    "SHP23098322636": "2026-11-11T12:32-03:00",
+   "SHP23193726165": "2026-11-13T13:10-03:00",
    "SHP23194029573": "2026-11-11T21:32-03:00",
    "SHP23198365635": "2026-11-11T21:08-03:00",
    "SHP23199132850": "2026-11-11T10:26-03:00",
@@ -61622,11 +61841,13 @@
    "SHP58267271883": "2026-11-12T12:16-03:00",
    "SHP58267616997": "2026-11-12T11:47-03:00"
   },
-  "termo": 1,
+  "termo": 4,
   "tipos": {
    "2026-11-13": [
+    "almofada",
     "assento",
     "babador",
+    "bancadinha",
     "banheira",
     "berco",
     "boneca",
@@ -61639,6 +61860,8 @@
     "enxoval",
     "fralda",
     "higiene",
+    "jogo",
+    "laptop",
     "lego/blocos",
     "lenco umedecido",
     "masculino",
@@ -61820,6 +62043,11 @@
     "quando": "2026-11-12T21:38-03:00",
     "titulo": "Camiseta Infantil Menino Básica Lisa Manga Curta"
    },
+   "SHP22798746244": {
+    "preco": 29.9,
+    "quando": "2026-11-13T13:10-03:00",
+    "titulo": "Jogos ​​Labirinto Magnético Montessori de Madeira - Classificação de Cores para "
+   },
    "SHP22897149838": {
     "preco": 75.9,
     "quando": "2026-11-12T10:29-03:00",
@@ -61844,6 +62072,11 @@
     "preco": 48.97,
     "quando": "2026-11-12T21:13-03:00",
     "titulo": "Sandália Infantil Chinelo Eva Anti-Derrapante"
+   },
+   "SHP23193726165": {
+    "preco": 32.9,
+    "quando": "2026-11-13T13:10-03:00",
+    "titulo": "Brinquedo Bancadinha com Martelo e Pinos Geométricos Educativo, Criativo e Inter"
    },
    "SHP23194029573": {
     "preco": 15.18,
@@ -62080,7 +62313,7 @@
  "tg_offset": 273518011,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-13T12:40-03:00",
+  "em": "2026-11-13T13:00-03:00",
   "itens": [
    {
     "categoria": "quarto",
@@ -62091,6 +62324,26 @@
     "link": "https://meli.la/2sHerzw",
     "preco": 35.01,
     "titulo": "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampada Cor Menino"
+   },
+   {
+    "categoria": "higiene",
+    "de": 99.0,
+    "desconto": 0.768,
+    "id": "MLB81362459",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_613228-MLA118900591834_112026-F.jpg",
+    "link": "https://meli.la/1y5jvVU",
+    "preco": 22.99,
+    "titulo": "Termômetro De Banho Para Bebê ALTOMEX Banheira Infantil Medidor De Temperatura Da Água Sem Pilhas Vermlho"
+   },
+   {
+    "categoria": "higiene",
+    "de": 69.9,
+    "desconto": 0.542,
+    "id": "MLB77230786",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_755283-MLA116106182231_082026-F.jpg",
+    "link": "https://meli.la/1RTnKW4",
+    "preco": 32.0,
+    "titulo": "Toalha De Banho Bebê Fralda Algodão Com Capuz Belunebaby Urso"
    },
    {
     "categoria": "higiene",
@@ -62113,6 +62366,16 @@
     "titulo": "Caneta Marcadora Acrílica 36 Cores Canetinha Ponta Pincel Profissional Para Desenho Pintura Colorir Artesanato"
    },
    {
+    "categoria": "higiene",
+    "de": 299.9,
+    "desconto": 0.594,
+    "id": "MLB60715129",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_643662-MLA95803848373_102025-F.jpg",
+    "link": "https://meli.la/2zNxxPH",
+    "preco": 121.9,
+    "titulo": "Banheira Dobrável Infantil Kidsneed Cinza com Termômetro"
+   },
+   {
     "categoria": "gestante",
     "de": 144.9,
     "desconto": 0.477,
@@ -62121,6 +62384,16 @@
     "link": "https://meli.la/1HfRzJP",
     "preco": 75.77,
     "titulo": "Bolsa Mochila Maternidade Vira Berço Troca Bebê Porta Frauda Cor Cinza Desenho do tecido Liso"
+   },
+   {
+    "categoria": "higiene",
+    "de": 166.28,
+    "desconto": 0.559,
+    "id": "MLB24777033",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_631597-MLA95639791548_102025-F.jpg",
+    "link": "https://meli.la/2rPXCoP",
+    "preco": 73.37,
+    "titulo": "Almofada para Banho Baby Ursinho Azul Buba"
    },
    {
     "categoria": "higiene",
@@ -62243,6 +62516,16 @@
     "titulo": "Sabonete líquido de glicerina tradicional Granado Bebê - 250mL"
    },
    {
+    "categoria": "outros",
+    "de": 78.9,
+    "desconto": 0.583,
+    "id": "MLB76227639",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_602206-MLA115521014743_082026-F.jpg",
+    "link": "https://meli.la/2JnNyvo",
+    "preco": 32.9,
+    "titulo": "Aspirador Nasal Elétrico Infantil Recarregável Sugador Nasal Bebê 6 Níveis de Sucção 2 Bicos Cabo USB Livre de"
+   },
+   {
     "categoria": "casa",
     "de": 899.0,
     "desconto": 0.4,
@@ -62251,16 +62534,6 @@
     "link": "https://meli.la/2oKjxnh",
     "preco": 539.4,
     "titulo": "Berço Funcional Móveis Bela Americano 3 em 1 com Colchão e Rodízios Branco"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 455.9,
-    "desconto": 0.673,
-    "id": "MLB50368079",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_675755-MLA116320253672_092026-F.jpg",
-    "link": "https://meli.la/1xWzJ9R",
-    "preco": 148.9,
-    "titulo": "Mesinha Infantil Com 2 Cadeiras Educativa Alfabeto Completo Atacarejo Kids"
    },
    {
     "categoria": "higiene",
@@ -62274,13 +62547,13 @@
    },
    {
     "categoria": "higiene",
-    "de": 360.0,
-    "desconto": 0.528,
-    "id": "MLB68579630",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_952679-MLA111156305978_052026-F.jpg",
-    "link": "https://meli.la/1Hmg1S8",
-    "preco": 169.9,
-    "titulo": "Banheira De Bebê Dobrável Portátil Com Termômetro Almofada Flutuante e Baleia Pluggei Select Pluggkids Mu1p Co"
+    "de": 349.9,
+    "desconto": 0.457,
+    "id": "MLB75505072",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_951714-MLA114762250048_082026-F.jpg",
+    "link": "https://meli.la/1ZTUpWs",
+    "preco": 189.9,
+    "titulo": "Suporte de Banho Infantil Ajustável Bebê em Pé Base Antiderrapante SekBem Verde"
    },
    {
     "categoria": "quarto",
@@ -62293,6 +62566,16 @@
     "titulo": "Colchão Berço Prorelax D18 Branco Para Bebê, 70 x 130 cm - Prorelax"
    },
    {
+    "categoria": "casa",
+    "de": 722.21,
+    "desconto": 0.325,
+    "id": "MLB60947746",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_817012-MLA97119969207_112025-F.jpg",
+    "link": "https://meli.la/1EWrmPW",
+    "preco": 487.59,
+    "titulo": "Berço Americano 3 em 1 para Colchão 130x70cm Multimóveis 0527PA Madeirado/Branco"
+   },
+   {
     "categoria": "outros",
     "de": 69.0,
     "desconto": 0.538,
@@ -62301,6 +62584,16 @@
     "link": "https://meli.la/2pe7nTW",
     "preco": 31.9,
     "titulo": "Aspirador Nasal Elétrico Recarregável para Bebê, com 6 Níveis e 2 Bicos"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 69.99,
+    "desconto": 0.401,
+    "id": "MLB41678087",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_941335-MLA99464009890_112025-F.jpg",
+    "link": "https://meli.la/1L8ghEq",
+    "preco": 41.9,
+    "titulo": "Laptop Infantil Educativo Candide Disney Stitch Bilíngue"
    },
    {
     "categoria": "quarto",
@@ -62331,6 +62624,26 @@
     "link": "https://meli.la/1ZFTWFJ",
     "preco": 27.59,
     "titulo": "Aspirador Nasal Elétrico Epsilon Recarregável Azul para Bebê"
+   },
+   {
+    "categoria": "escola",
+    "de": 198.0,
+    "desconto": 0.51,
+    "id": "MLB44954198",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_740080-MLA116638425891_082026-F.jpg",
+    "link": "https://meli.la/1ZRs3iN",
+    "preco": 97.02,
+    "titulo": "Mochila Infantil Kit para crianças Volta às aulas Vários estilos para meninos e meninas Grande capacidade refo"
+   },
+   {
+    "categoria": "outros",
+    "de": 129.9,
+    "desconto": 0.508,
+    "id": "MLB81421290",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_609371-MLA118976749362_112026-F.jpg",
+    "link": "https://meli.la/12LSevp",
+    "preco": 63.9,
+    "titulo": "Portão De Segurança Pet E Bebê Reforçado Regulável Grade De Proteção Para Cachorros Crianças Cães Gatos Ajustá"
    },
    {
     "categoria": "quarto",
@@ -62364,6 +62677,16 @@
    },
    {
     "categoria": "passeio",
+    "de": 690.0,
+    "desconto": 0.587,
+    "id": "MLB80524536",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_956797-MLA119268829469_102026-F.jpg",
+    "link": "https://meli.la/2UL6u6L",
+    "preco": 284.91,
+    "titulo": "Carrinho Bebê Passeio Dobrável Leve Guarda Chuva Até 15kg - Cinza/Branco"
+   },
+   {
+    "categoria": "passeio",
     "de": 57.96,
     "desconto": 0.5,
     "id": "MLB75373452",
@@ -62391,6 +62714,16 @@
     "link": "https://meli.la/189Unwc",
     "preco": 49.9,
     "titulo": "Lenços Umedecidos Huggies Recém Nascido Pack C/4 - 192 Un"
+   },
+   {
+    "categoria": "passeio",
+    "de": 899.0,
+    "desconto": 0.412,
+    "id": "MLB24070645",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_938116-MLA111193887117_052026-F.jpg",
+    "link": "https://meli.la/1C8JuwK",
+    "preco": 529.0,
+    "titulo": "Carrinho De Bebê Zap Compacto Dobrável - Burigotto, Metal Cobre"
    },
    {
     "categoria": "passeio",
@@ -62513,6 +62846,16 @@
     "titulo": "Cadeira de Carro Infantil 0 a 36Kg Elite 4 em 1 - Maxi Baby - Preto"
    },
    {
+    "categoria": "higiene",
+    "de": 31.9,
+    "desconto": 0.386,
+    "id": "MLB16600923",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_759853-MLA111048261147_042026-F.jpg",
+    "link": "https://meli.la/1YovqpC",
+    "preco": 19.6,
+    "titulo": "Talco Pom Pom de Amido de Milho Para Bebê 200g"
+   },
+   {
     "categoria": "escola",
     "de": 30.9,
     "desconto": 0.385,
@@ -62571,119 +62914,9 @@
     "link": "https://meli.la/1RfgbZE",
     "preco": 387.9,
     "titulo": "Cadeira de descanso bebe 5 Velocidades de balanço Elétrica AMR-9615 Musical e Tela mosqueteiro L’AMOR Cor Cinz"
-   },
-   {
-    "categoria": "outros",
-    "de": 198.99,
-    "desconto": 0.442,
-    "id": "MLB62692699",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_613494-MLA99989589965_112025-F.jpg",
-    "link": "https://meli.la/1RmmAoc",
-    "preco": 111.0,
-    "titulo": "Triciclo Totokinha Sport Rosa Cardoso Toys com Buzina e Porta-Objetos"
-   },
-   {
-    "categoria": "outros",
-    "de": 267.26,
-    "desconto": 0.371,
-    "id": "MLB52361634",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_690718-MLA111328871588_052026-F.jpg",
-    "link": "https://meli.la/18bmgb6",
-    "preco": 168.0,
-    "titulo": "Kit 18 Tapete Emborrachado Tatame Eva Infantil Grosso 10mm Linha Premium Bebê Branco/Cinza"
-   },
-   {
-    "categoria": "outros",
-    "de": 26.39,
-    "desconto": 0.365,
-    "id": "MLB17876024",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_940727-MLA117363373934_102026-F.jpg",
-    "link": "https://meli.la/2aCQKSR",
-    "preco": 16.76,
-    "titulo": "Sabonete Líquido Hora Do Sono 200ml Baby Johnson's"
-   },
-   {
-    "categoria": "passeio",
-    "de": 1199.0,
-    "desconto": 0.309,
-    "id": "MLB26070781",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_836450-MLA100062682691_122025-F.jpg",
-    "link": "https://meli.la/1wzpeM6",
-    "preco": 828.9,
-    "titulo": "Cadeira de Carro Infantil All Stages 2.0 Isofix Preto Litet"
-   },
-   {
-    "categoria": "game",
-    "de": 379.71,
-    "desconto": 0.617,
-    "id": "MLB54411536",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_804107-MLA99531106678_122025-F.jpg",
-    "link": "https://meli.la/2a9Pppe",
-    "preco": 145.47,
-    "titulo": "Jogo Sonic Racing Crossworlds Launch Edition Ps5 Fisico"
-   },
-   {
-    "categoria": "outros",
-    "de": 51.04,
-    "desconto": 0.308,
-    "id": "MLB18392651",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_908623-MLA111032843377_042026-F.jpg",
-    "link": "https://meli.la/2iDJHoN",
-    "preco": 35.31,
-    "titulo": "Fralda Descartável Turma da Mônica Baby XG Pacote 42 Unidades"
-   },
-   {
-    "categoria": "outros",
-    "de": 498.73,
-    "desconto": 0.499,
-    "id": "MLB46681505",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_932524-MLA116048225124_092026-F.jpg",
-    "link": "https://meli.la/1BZwpcU",
-    "preco": 249.96,
-    "titulo": "Cercadinho Bebê Infantil Chiqueirinho Cercado Grande 180x150 Proteção - 8X TECH"
-   },
-   {
-    "categoria": "quarto",
-    "de": 199.9,
-    "desconto": 0.255,
-    "id": "MLB75217338",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_854685-MLA117021135108_102026-F.jpg",
-    "link": "https://meli.la/1VNsf1y",
-    "preco": 148.86,
-    "titulo": "Colchão De Berço Impermeável 130x60 D18 Cor Branco - Z.A Colchões"
-   },
-   {
-    "categoria": "alimentacao",
-    "de": 386.58,
-    "desconto": 0.49,
-    "id": "MLB80715442",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_877947-MLA118185437878_102026-F.jpg",
-    "link": "https://meli.la/2UxQ3DK",
-    "preco": 197.15,
-    "titulo": "Cadeira Portátil Dobrável e Altura Ajustável para Bebê com Bandeja Lulacude M-199"
-   },
-   {
-    "categoria": "higiene",
-    "de": 179.0,
-    "desconto": 0.296,
-    "id": "MLB23644304",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_967759-MLA96419104758_102025-F.jpg",
-    "link": "https://meli.la/2TFdvVS",
-    "preco": 126.0,
-    "titulo": "Styll Baby Banheira 34 Litros Branco Lisa 90 cm x 57 cm x 69 cm"
-   },
-   {
-    "categoria": "outros",
-    "de": 196.2,
-    "desconto": 0.412,
-    "id": "MLB72254053",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_943945-MLA112759124059_062026-F.jpg",
-    "link": "https://meli.la/1du42WU",
-    "preco": 115.33,
-    "titulo": "Cercadinho Bebê Rister Baby Portátil Grande + Tapete Azul"
    }
   ]
  },
- "vitrine_assinatura": "f08f50d7eb9269756944ed2ed70c322559732872",
- "vitrine_publicada_em": "2026-11-13T12:00-03:00"
+ "vitrine_assinatura": "13d91613769c2455bc685df475e8d34cca2aa3ce",
+ "vitrine_publicada_em": "2026-11-13T13:00-03:00"
 }
