@@ -96,6 +96,27 @@ def coletar_dia(ig, dia, agora):
     }
 
 
+def coletar_retroativo(ig, dia, agora):
+    """Só os números da CONTA de um dia passado (o Instagram não guarda o retrato antigo dos posts)."""
+    inicio = datetime(dia.year, dia.month, dia.day, tzinfo=FUSO)
+    fim = inicio + timedelta(days=1)
+    janela = {"since": int(inicio.timestamp()), "until": int(fim.timestamp())}
+    m_conta, a_conta = ig.metricas(ig.user_id, METRICAS_CONTA, period="day", metric_type="total_value", **janela)
+    m2, a2 = ig.metricas(ig.user_id, ["follows_and_unfollows"], period="day", metric_type="total_value",
+                         breakdown="follow_type", **janela)
+    m_conta.update(m2), a_conta.update(a2)
+    return {
+        "dia": dia.isoformat(),
+        "coletado_em": agora.isoformat(timespec="seconds"),
+        "retroativo": True,
+        "nota": NOTA + " Arquivo retroativo: sem retrato dos posts e sem total de seguidores daquele dia.",
+        "conta": {"usuario": None, "seguidores": None, "seguindo": None, "posts": None},
+        "conta_no_dia": {"janela": {"inicio": inicio.isoformat(), "fim": fim.isoformat()},
+                         "metricas": m_conta, "ausentes": a_conta},
+        "posts": [],
+    }
+
+
 def atualizar_stories(ig, agora, pasta=PASTA):
     arq = pasta / "stories.json"
     salvos = json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else {}
