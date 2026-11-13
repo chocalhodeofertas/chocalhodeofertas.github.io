@@ -27,6 +27,9 @@ shp = Shopee(os.environ.get("SHOPEE_APP_ID"), os.environ.get("SHOPEE_SECRET"))
 
 ids_ml = [p["id"] for p in pac["produtos"] if p["loja"] == "ml"]
 info_ml = ml.itens(ids_ml) if ids_ml else {}
+for pid in ids_ml:  # id de catálogo (MLB + 8 dígitos) não vem em /items
+    if pid not in info_ml:
+        info_ml[pid] = ml.catalogo(pid, titulo="-")
 problemas = []
 for p in pac["produtos"]:
     if p["loja"] == "ml":
