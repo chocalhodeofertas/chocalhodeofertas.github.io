@@ -79,6 +79,8 @@ jobs:
           ATRASO_MAX: ${{ vars.ATRASO_MAX }}
           SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
           SHOPEE_SECRET: ${{ secrets.SHOPEE_SECRET }}
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           SHOPEE_ATIVO: ${{ vars.SHOPEE_ATIVO || '1' }}
           SHOPEE_MAX_DIA: ${{ vars.SHOPEE_MAX_DIA || '50' }}
           SHOPEE_MAX_HORA: ${{ vars.SHOPEE_MAX_HORA || '4' }}

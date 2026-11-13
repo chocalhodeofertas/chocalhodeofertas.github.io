@@ -96,6 +96,69 @@ class Instagram:
                           fields="id,caption,media_type,timestamp,permalink,like_count,comments_count")
         return dados.get("data", [])
 
+    CAMPOS_MIDIA = "id,caption,media_type,media_product_type,timestamp,permalink,like_count,comments_count"
+
+    def posts_desde(self, desde_ts, maximo=200):
+        """Posts do feed/reels publicados a partir de `desde_ts` (epoch), do mais novo ao mais velho."""
+        from datetime import datetime
+        achados, depois = [], None
+        while len(achados) < maximo:
+            params = {"limit": 50, "fields": self.CAMPOS_MIDIA}
+            if depois:
+                params["after"] = depois
+            dados = self._get(f"{self.user_id}/media", **params)
+            pagina = dados.get("data", [])
+            for p in pagina:
+                if datetime.strptime(p["timestamp"], "%Y-%m-%dT%H:%M:%S%z").timestamp() < desde_ts:
+                    return achados
+                achados.append(p)
+            depois = ((dados.get("paging") or {}).get("cursors") or {}).get("after")
+            if not pagina or not (dados.get("paging") or {}).get("next"):
+                break
+        return achados
+
+    def stories(self):
+        return self._get(f"{self.user_id}/stories", fields=self.CAMPOS_MIDIA).get("data", [])
+
+    def metricas(self, obj_id, nomes, **params):
+        """Lê métricas de insights. Se o pedido conjunto falhar, tenta uma a uma.
+
+        Devolve (valores, ausentes): ausentes = {métrica: motivo} para o que o Instagram não entregou.
+        """
+        def ler(lista):
+            dados = self._get(f"{obj_id}/insights", metric=",".join(lista), **params)
+            vals = {}
+            for m in dados.get("data", []):
+                if "total_value" in m:
+                    tv = m["total_value"] or {}
+                    quebras = tv.get("breakdowns")
+                    if quebras:
+                        vals[m["name"]] = {"total": tv.get("value"), **{
+                            "_".join(r.get("dimension_values", [])) or "?": r.get("value")
+                            for b in quebras for r in b.get("results", [])}}
+                    else:
+                        vals[m["name"]] = tv.get("value")
+                else:
+                    pontos = m.get("values") or []
+                    vals[m["name"]] = pontos[-1].get("value") if pontos else None
+            return vals
+
+        try:
+            valores = ler(nomes)
+            ausentes = {n: "não veio na resposta" for n in nomes if n not in valores}
+            return valores, ausentes
+        except InstagramErro:
+            pass
+        valores, ausentes = {}, {}
+        for n in nomes:
+            try:
+                valores.update(ler([n]))
+                if n not in valores:
+                    ausentes[n] = "não veio na resposta"
+            except InstagramErro as e:
+                ausentes[n] = str(e)[:160]
+        return valores, ausentes
+
     def insights_conta(self, metricas=("reach", "views", "accounts_engaged", "total_interactions"), dias=7):
         import time
         fim = int(time.time())

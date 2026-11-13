@@ -48,6 +48,7 @@ def sincronizar_antes():
 
 def salvar_estado():
     git("add", "data/estado.json")
+    git("add", "-A", "data/instagram")  # números do Instagram (coleta diária + stories)
     git("add", "docs")  # separado: se a pasta não existir, não atrapalha o resto
     for arq in ("data/wa_sessao.enc", "data/wa_estado.json"):  # sessão do WhatsApp (criptografada)
         git("add", "-A", arq)
@@ -89,6 +90,7 @@ def main(argv=None):
             r = subprocess.run([sys.executable, "-m", "bot.main", "--modo", "normal"])
             if r.returncode != 0:
                 log(f"Rodada terminou com erro (código {r.returncode}); sigo para a próxima.")
+            subprocess.run([sys.executable, "-m", "bot.insights_ig"])  # 1x/dia + stories no ar
             salvar_estado()
 
         # Conta 20 min a partir do INÍCIO da rodada (os posts espaçados tomam parte desse tempo)

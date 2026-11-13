@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
+import json
 import random
 
 import pytest
@@ -1558,3 +1559,80 @@ def test_instagram_publica_carrossel():
     assert s.posts[0] == ("media", {"image_url": "https://a/1.jpg", "is_carousel_item": "true"})
     assert s.posts[2] == ("media", {"media_type": "CAROUSEL", "children": "id1,id2", "caption": "Legenda"})
     assert s.posts[3] == ("media_publish", {"creation_id": "id3"})
+
+
+class _IGFalso:
+    """Imita a API do Instagram: 'saves' e 'ig_reels_avg_watch_time' falham sempre."""
+    user_id = "42"
+
+    def __init__(self):
+        self.chamadas = []
+
+    def _get(self, caminho, **params):
+        from bot.instagram import InstagramErro
+        self.chamadas.append((caminho, params))
+        if caminho.endswith("/insights"):
+            nomes = params["metric"].split(",")
+            if "saves" in nomes or "ig_reels_avg_watch_time" in nomes:
+                raise InstagramErro("HTTP 400: métrica inválida (código 100)")
+            if params.get("breakdown"):
+                return {"data": [{"name": n, "total_value": {"value": 5, "breakdowns": [
+                    {"results": [{"dimension_values": ["FOLLOWER"], "value": 4},
+                                 {"dimension_values": ["NON_FOLLOWER"], "value": 1}]}]}} for n in nomes]}
+            if caminho.startswith("42/"):
+                return {"data": [{"name": n, "total_value": {"value": 10}} for n in nomes]}
+            return {"data": [{"name": n, "values": [{"value": 7}]} for n in nomes]}
+        if caminho == "42/stories":
+            return {"data": []}
+        if caminho == "42/media":
+            return {"data": [
+                {"id": "p1", "media_product_type": "FEED", "media_type": "CAROUSEL_ALBUM",
+                 "timestamp": "2026-11-12T15:00:00+0000", "caption": "Kit enxoval\ncom 10 peças", "permalink": "x"},
+                {"id": "p2", "media_product_type": "REELS", "media_type": "VIDEO",
+                 "timestamp": "2026-11-10T15:00:00+0000", "permalink": "y"},
+                {"id": "velho", "media_product_type": "FEED", "timestamp": "2026-09-01T15:00:00+0000"},
+            ], "paging": {}}
+        if caminho == "42":
+            return {"username": "chocalhodeofertas", "followers_count": 9, "follows_count": 3, "media_count": 9}
+        raise AssertionError(caminho)
+
+    metricas = None  # preenchido abaixo com o método real
+
+
+def _ig_falso():
+    from bot.instagram import Instagram
+    ig = _IGFalso()
+    ig.metricas = Instagram.metricas.__get__(ig)
+    ig.posts_desde = Instagram.posts_desde.__get__(ig)
+    ig.stories = Instagram.stories.__get__(ig)
+    ig.conta = Instagram.conta.__get__(ig)
+    ig.CAMPOS_MIDIA = Instagram.CAMPOS_MIDIA
+    return ig
+
+
+def test_insights_ig_coleta_dia_e_registra_ausentes(tmp_path):
+    from datetime import datetime
+    from bot import insights_ig
+    agora = datetime(2026, 11, 13, 8, 5, tzinfo=insights_ig.FUSO)
+    assert insights_ig.rodar(ig=_ig_falso(), agora=agora, pasta=tmp_path) == 0
+    dados = json.loads((tmp_path / "2026-11-12.json").read_text())
+    assert dados["dia"] == "2026-11-12" and dados["conta"]["seguidores"] == 9
+    assert dados["conta_no_dia"]["metricas"]["reach"] == 10
+    assert "saves" in dados["conta_no_dia"]["ausentes"]  # falhou e ficou registrado
+    assert dados["conta_no_dia"]["metricas"]["follows_and_unfollows"]["FOLLOWER"] == 4
+    assert [p["id"] for p in dados["posts"]] == ["p1", "p2"]  # o de setembro fica de fora
+    assert dados["posts"][0]["legenda"] == "Kit enxoval com 10 peças"
+    assert dados["posts"][1]["formato"] == "REELS" and "ig_reels_avg_watch_time" in dados["posts"][1]["ausentes"]
+    assert dados["posts"][1]["metricas"]["reach"] == 7
+    assert dados["conta_no_dia"]["janela"]["inicio"].startswith("2026-11-12T00:00:00-03:00")
+
+
+def test_insights_ig_nao_coleta_o_mesmo_dia_duas_vezes(tmp_path):
+    from datetime import datetime
+    from bot import insights_ig
+    agora = datetime(2026, 11, 13, 8, 5, tzinfo=insights_ig.FUSO)
+    ig = _ig_falso()
+    insights_ig.rodar(ig=ig, agora=agora, pasta=tmp_path)
+    n = len(ig.chamadas)
+    insights_ig.rodar(ig=ig, agora=agora, pasta=tmp_path)
+    assert len(ig.chamadas) == n + 1  # só a checagem de stories
