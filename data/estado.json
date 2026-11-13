@@ -1687,87 +1687,67 @@
  "busca": {
   "itens": [
    {
-    "categoria": "MLB196490",
-    "de": 57.0,
-    "desconto": 0.6157894736842106,
-    "id": "MLB69612488",
-    "item_id": "MLB4677271637",
-    "preco": 21.9,
-    "rank": 1,
-    "titulo": "Lixa Elétrica Removedora de Cutículas Quicko Portátil com 5 Ponteiras Manicure Profissional Removedora De Cutículas Portátil Polidor Acabamento Profissional Escova De Limpeza De Unhas"
+    "categoria": null,
+    "de": 280.0,
+    "desconto": 0.44285714285714284,
+    "id": "MLB35097050",
+    "item_id": "MLB5488386001",
+    "preco": 156.0,
+    "rank": null,
+    "titulo": "Lixeira Mágica Antiodor Para Descarte De Fralda Branco Buba"
    },
    {
-    "categoria": "MLB196490",
-    "de": 52.9,
-    "desconto": 0.5746691871455576,
-    "id": "MLB75080171",
-    "item_id": "MLB7117997482",
-    "preco": 22.5,
-    "rank": 7,
-    "titulo": "Kit 10 Lixas Buffer De Polir Unha Gel Acrílico 100/180"
+    "categoria": null,
+    "de": 256.45,
+    "desconto": 0.43462663287190484,
+    "id": "MLB37817568",
+    "item_id": "MLB4426152301",
+    "preco": 144.99,
+    "rank": null,
+    "titulo": "Lixeira Sistema Antiodor Bebe Lixo Magico Baby De Fralda Cor Branco"
    },
    {
-    "categoria": "MLB196490",
-    "de": 49.99,
-    "desconto": 0.4652930586117223,
-    "id": "MLB66698450",
-    "item_id": "MLB6465557878",
-    "preco": 26.73,
-    "rank": 5,
-    "titulo": "Kit 20 Lixas Bumerangue Lavável Dupla Face 100/180 Unha Gel Bmed"
+    "categoria": null,
+    "de": 299.99,
+    "desconto": 0.2563418780626021,
+    "id": "MLB79221259",
+    "item_id": "MLB5276450547",
+    "preco": 223.09,
+    "rank": null,
+    "titulo": "Lixeira Infantil Fiszman Coelhinho Rosa para Fralda Antiodor de 12 L"
    },
    {
-    "categoria": "MLB196490",
-    "de": 58.0,
-    "desconto": 0.32999999999999996,
-    "id": "MLB79642647",
-    "item_id": "MLB5271790937",
-    "preco": 38.86,
-    "rank": 3,
-    "titulo": "Kit 7 Brocas Cerâmica e Diamantada 718 720 Para Unhas Gel Acrigel Fibra Manicure Profissional"
+    "categoria": null,
+    "de": 299.99,
+    "desconto": 0.2563418780626021,
+    "id": "MLB79221260",
+    "item_id": "MLB5276466001",
+    "preco": 223.09,
+    "rank": null,
+    "titulo": "Lixeira Infantil Anti Odor Fralda Para Quarto de Bebê Lixeira Decorativa Moderna Colorida Antiodor Para Banheiro Quarto Infantil Fiszman Robô Branco"
    },
    {
-    "categoria": "MLB196490",
-    "de": 49.9,
-    "desconto": 0.32324649298597186,
-    "id": "MLB74792704",
-    "item_id": "MLB4857859481",
-    "preco": 33.77,
-    "rank": 4,
-    "titulo": "Kit 100 Mini Lixas Bloco Buffer Quadrada Polidora Manicure BMED"
+    "categoria": null,
+    "de": 191.92,
+    "desconto": 0.16637140475197987,
+    "id": "MLB80035471",
+    "item_id": "MLB5329803393",
+    "preco": 159.99,
+    "rank": null,
+    "titulo": "Lixeira Antiodor Fralda Descartável Baby Mel Bebe Quarto Rosa"
    },
    {
-    "categoria": "MLB196490",
-    "de": 28.9,
-    "desconto": 0.30830449826989625,
-    "id": "MLB78283431",
-    "item_id": "MLB4528234787",
-    "preco": 19.99,
-    "rank": 0,
-    "titulo": "Kit 10 Lixas Bumerangue Lavável 100/180 Unha Gel BMED"
-   },
-   {
-    "categoria": "MLB196490",
+    "categoria": null,
     "de": null,
     "desconto": 0.0,
-    "id": "MLB44869598",
-    "item_id": "MLB4478948737",
-    "preco": 180.0,
+    "id": "MLB70009081",
+    "item_id": "MLB7873635002",
+    "preco": 149.99,
     "rank": null,
-    "titulo": "Lixa Unha Motor Elétrica Profissional"
-   },
-   {
-    "categoria": "MLB196490",
-    "de": null,
-    "desconto": 0.0,
-    "id": "MLB57428683",
-    "item_id": "MLB4743737711",
-    "preco": 33.49,
-    "rank": null,
-    "titulo": "Lixa Unha Eletrica Profissional Sem Fio"
+    "titulo": "Lixeira Antiodor Baby Mel Para Fralda Descartavel Higienica Cor Lilás"
    }
   ],
-  "termo": "lixa unha bebê"
+  "termo": "lixeira fralda antiodor"
  },
  "cache": {
   "MLB10923642": [
@@ -62097,7 +62077,7 @@
   "brinquedos": "2026-11-08",
   "passeio": "2026-11-09"
  },
- "tg_offset": 273518010,
+ "tg_offset": 273518011,
  "vigias_avisados": {},
  "vitrine": {
   "em": "2026-11-13T12:40-03:00",
