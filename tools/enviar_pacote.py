@@ -17,8 +17,11 @@ from bot.mensagens import brl
 from bot.shopee import _CAMPOS, Shopee
 from bot.telegram import Telegram
 
-pasta = Path("docs/ig-tmp") / sys.argv[1].strip()
+pasta = Path("docs/ig-tmp") / sys.argv[1].split()[0]
 pac = json.loads((pasta / "pacote.json").read_text(encoding="utf-8"))
+if "legenda" in sys.argv[1:] or " legenda" in " ".join(sys.argv[1:]):  # só a legenda nova
+    Telegram(os.environ["TELEGRAM_BOT_TOKEN"]).enviar_texto(os.environ["TELEGRAM_ADMIN_CHAT_ID"], pac["legenda"])
+    sys.exit(0)
 estado = json.loads(Path("data/estado.json").read_text(encoding="utf-8"))
 tg = Telegram(os.environ["TELEGRAM_BOT_TOKEN"])
 admin = os.environ["TELEGRAM_ADMIN_CHAT_ID"]
