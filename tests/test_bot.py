@@ -1509,3 +1509,27 @@ def test_baby_doll_adulto_bloqueado():
     for t in ["Pijama Infantil Bebê Menina Manga Curta com Estampas Fofas",
               "Baby Doll Infantil Menina Estampado", "Kit 2 Pijamas Manga Longa Bebê Menino"]:
         assert fora_da_faixa(t, "", "infantil") is None, t
+
+
+def test_instagram_nao_vaza_token():
+    from bot.instagram import Instagram, InstagramErro
+
+    class Resp:
+        status_code = 400
+        headers = {"content-type": "application/json"}
+        text = ""
+
+        def json(self):
+            return {"error": {"message": "token SEGREDO123 inválido", "code": 190}}
+
+    class Sessao:
+        def get(self, *a, **k):
+            return Resp()
+
+    ig = Instagram("SEGREDO123", "42", session=Sessao())
+    try:
+        ig.conta()
+    except InstagramErro as e:
+        assert "SEGREDO123" not in str(e) and "190" in str(e)
+    else:
+        raise AssertionError("deveria falhar")
