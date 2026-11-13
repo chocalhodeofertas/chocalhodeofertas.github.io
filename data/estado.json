@@ -7978,6 +7978,12 @@
    "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
+  "DESCONTODOML25": {
+   "criado": "2026-11-13T10:32-03:00",
+   "post": 527,
+   "status": "ativo",
+   "validade": "2026-12-13T23:59-03:00"
+  },
   "DESCONTODOML30": {
    "criado": "2026-11-11T10:07-03:00",
    "post": 304,
@@ -8128,6 +8134,12 @@
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
   },
+  "MELIVIP22": {
+   "criado": "2026-11-13T10:32-03:00",
+   "post": 527,
+   "status": "ativo",
+   "validade": "2026-12-13T23:59-03:00"
+  },
   "MODA1111": {
    "criado": "2026-11-11T08:00-03:00",
    "post": 287,
@@ -8260,6 +8272,18 @@
    "status": "ativo",
    "validade": "2026-12-12T23:59-03:00"
   },
+  "QUEROPROMOS25": {
+   "criado": "2026-11-13T10:32-03:00",
+   "post": 527,
+   "status": "ativo",
+   "validade": "2026-12-13T23:59-03:00"
+  },
+  "QUEROPROMOS30": {
+   "criado": "2026-11-13T10:32-03:00",
+   "post": 527,
+   "status": "ativo",
+   "validade": "2026-12-13T23:59-03:00"
+  },
   "SEMPREAQUI": {
    "criado": "2026-11-11T10:00-03:00",
    "post": 302,
@@ -8328,7 +8352,7 @@
   }
  },
  "cupons_extra_ultimo:cupombr": 5577,
- "cupons_ml_ultimo": 6484,
+ "cupons_ml_ultimo": 6485,
  "descoberta_em": "2026-11-13T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -14744,7 +14768,7 @@
    "shopee": 50
   },
   "2026-11-13": {
-   "cupons": 1,
+   "cupons": 5,
    "posts": 17,
    "shopee": 8
   }
@@ -17543,6 +17567,29 @@
    "criado": "2026-11-13T08:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "527": {
+   "blocos": [
+    {
+     "codigo": "QUEROPROMOS25",
+     "html": "<b>🎟️ QUEROPROMOS25</b> 👉 <b>25% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 13/12\n👉 <a href=\"https://bit.ly/4kaBdJq\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "MELIVIP22",
+     "html": "<b>🎟️ MELIVIP22</b> 👉 <b>22% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 13/12\n👉 <a href=\"https://bit.ly/4Aq3Siv\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "DESCONTODOML25",
+     "html": "<b>🎟️ DESCONTODOML25</b> 👉 <b>25% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 13/12\n👉 <a href=\"https://bit.ly/4ApgA0M\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "QUEROPROMOS30",
+     "html": "<b>🎟️ QUEROPROMOS30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 13/12\n👉 <a href=\"https://bit.ly/48cGDwk\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-13T10:32-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "62": {
    "blocos": [
