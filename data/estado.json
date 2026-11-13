@@ -1684,6 +1684,91 @@
  },
  "aguardando_link": 164,
  "areas_novas": true,
+ "busca": {
+  "itens": [
+   {
+    "categoria": "MLB260541",
+    "de": 99.0,
+    "desconto": 0.7677777777777778,
+    "id": "MLB81362459",
+    "item_id": "MLB5457561937",
+    "preco": 22.99,
+    "rank": 6,
+    "titulo": "Termômetro De Banho Para Bebê ALTOMEX Banheira Infantil Medidor De Temperatura Da Água Sem Pilhas Vermlho"
+   },
+   {
+    "categoria": "MLB260541",
+    "de": 21.99,
+    "desconto": 0.23601637107776252,
+    "id": "MLB54944207",
+    "item_id": "MLB7698158074",
+    "preco": 16.8,
+    "rank": 4,
+    "titulo": "Termômetro De Banheira Banho Água Bebê Girafa Urso Pimpolho Cor Branco"
+   },
+   {
+    "categoria": "MLB260541",
+    "de": 69.0,
+    "desconto": 0.21608695652173904,
+    "id": "MLB65261222",
+    "item_id": "MLB5520671811",
+    "preco": 54.09,
+    "rank": 7,
+    "titulo": "Termômetro Digital Para Banho Do Bebê Banheira Infantil Cor Azul"
+   },
+   {
+    "categoria": "MLB260541",
+    "de": 25.0,
+    "desconto": 0.03159999999999996,
+    "id": "MLB62574737",
+    "item_id": "MLB7900561834",
+    "preco": 24.21,
+    "rank": 5,
+    "titulo": "Kit 2 Pacotes Termômetro Infantil Adesivos Termo Friends Colorido"
+   },
+   {
+    "categoria": "MLB260541",
+    "de": 23.19,
+    "desconto": 0.03018542475204844,
+    "id": "MLB40159759",
+    "item_id": "MLB4527149635",
+    "preco": 22.49,
+    "rank": 0,
+    "titulo": "Termômetro De Banho Para Bebês Girafinha Rosa 18805 - Buba"
+   },
+   {
+    "categoria": "MLB260541",
+    "de": null,
+    "desconto": 0.0,
+    "id": "MLB59721607",
+    "item_id": "MLB5048306651",
+    "preco": 25.99,
+    "rank": null,
+    "titulo": "Termometro Banheira Bebe Água Girafinha Rosa Azul Buba"
+   },
+   {
+    "categoria": "MLB260541",
+    "de": null,
+    "desconto": 0.0,
+    "id": "MLB55258304",
+    "item_id": "MLB6681949888",
+    "preco": 23.19,
+    "rank": 1,
+    "titulo": "Termômetro De Banheira Para Banho Bebê Girafinha Buba Cor Az Azul"
+   },
+   {
+    "categoria": "MLB260541",
+    "de": null,
+    "desconto": 0.0,
+    "id": "MLB39633199",
+    "item_id": "MLB7069194640",
+    "preco": 22.99,
+    "rank": 2,
+    "titulo": "Termômetro De Banho Girafinha Bege 18804 - Buba"
+   }
+  ],
+  "termo": "termômetro banheira"
+ },
  "cache": {
   "MLB10923642": [
    "Piscina Inflável Redonda Mor 1000Litros Splash Fun Azul",
@@ -62012,7 +62097,7 @@
   "brinquedos": "2026-11-08",
   "passeio": "2026-11-09"
  },
- "tg_offset": 273518007,
+ "tg_offset": 273518008,
  "vigias_avisados": {},
  "vitrine": {
   "em": "2026-11-13T12:40-03:00",
