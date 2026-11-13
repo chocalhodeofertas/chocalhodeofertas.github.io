@@ -1,0 +1,263 @@
+{
+ "dia": "2026-11-12",
+ "coletado_em": "2026-11-13T16:58:52-03:00",
+ "nota": "conta_no_dia = números da conta só naquele dia (janela de Brasília). posts[].metricas = números acumulados de cada post desde a publicação até coletado_em. Seguidores ganhos por dia = diferença de conta.seguidores entre dias seguidos; a API não diz qual post trouxe cada seguidor.",
+ "conta": {
+  "usuario": "chocalhodeofertas",
+  "seguidores": 9,
+  "seguindo": 9,
+  "posts": 10
+ },
+ "conta_no_dia": {
+  "janela": {
+   "inicio": "2026-11-12T00:00:00-03:00",
+   "fim": "2026-11-13T00:00:00-03:00"
+  },
+  "metricas": {
+   "reach": 6,
+   "views": 44,
+   "accounts_engaged": 3,
+   "total_interactions": 3,
+   "likes": 3,
+   "comments": 0,
+   "saves": 0,
+   "shares": 0,
+   "replies": 0,
+   "profile_links_taps": 0
+  },
+  "ausentes": {
+   "follows_and_unfollows": "não veio na resposta"
+  }
+ },
+ "posts": [
+  {
+   "id": "18155003215537192",
+   "formato": "FEED",
+   "tipo_midia": "CAROUSEL_ALBUM",
+   "publicado_em": "2026-11-13T01:35:35+0000",
+   "link": "https://www.instagram.com/p/Dfqdr6LjA73/",
+   "legenda": "Se eu estivesse montando o enxoval hoje, esses 5 iam direto pro carrinho 🛒 1. Berço co-bed acoplado: R$ 429,00 2. Kit be",
+   "curtidas": 1,
+   "comentarios": 0,
+   "metricas": {
+    "reach": 4,
+    "views": 14,
+    "likes": 1,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 1,
+    "profile_visits": 0,
+    "profile_activity": 0,
+    "follows": 0
+   },
+   "ausentes": {}
+  },
+  {
+   "id": "17991984795074605",
+   "formato": "FEED",
+   "tipo_midia": "CAROUSEL_ALBUM",
+   "publicado_em": "2026-11-12T22:09:40+0000",
+   "link": "https://www.instagram.com/p/DfqGI-QIL60/",
+   "legenda": "Sabe aquele cheirinho de bebê que todo mundo ama? Ele começa na hora do banho 💜 1. Sabonete líquido recém-nascido 2. Sha",
+   "curtidas": 0,
+   "comentarios": 0,
+   "metricas": {
+    "reach": 3,
+    "views": 9,
+    "likes": 0,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 0,
+    "profile_visits": 0,
+    "profile_activity": 0,
+    "follows": 0
+   },
+   "ausentes": {}
+  },
+  {
+   "id": "18183293047446558",
+   "formato": "FEED",
+   "tipo_midia": "CAROUSEL_ALBUM",
+   "publicado_em": "2026-11-12T12:47:05+0000",
+   "link": "https://www.instagram.com/p/DfpFwgHlu4N/",
+   "legenda": "Pisca o olho e já perdeu o tamanho RN 😅 Nos primeiros meses eles crescem rápido demais, então vale apostar em kits práti",
+   "curtidas": 3,
+   "comentarios": 0,
+   "metricas": {
+    "reach": 6,
+    "views": 24,
+    "likes": 3,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 3,
+    "profile_visits": 1,
+    "profile_activity": 0,
+    "follows": 0
+   },
+   "ausentes": {}
+  },
+  {
+   "id": "18099273575393825",
+   "formato": "FEED",
+   "tipo_midia": "CAROUSEL_ALBUM",
+   "publicado_em": "2026-11-11T14:14:12+0000",
+   "link": "https://www.instagram.com/p/Dfmq7sRoHM5/",
+   "legenda": "Separamos as dúvidas que mais chegam pra gente 💬 Ficou com alguma outra? Manda aqui nos comentários! 🔗 Link do grupo na ",
+   "curtidas": 4,
+   "comentarios": 0,
+   "metricas": {
+    "reach": 8,
+    "views": 32,
+    "likes": 4,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 4,
+    "profile_visits": 2,
+    "profile_activity": 0,
+    "follows": 0
+   },
+   "ausentes": {}
+  },
+  {
+   "id": "17900619246394584",
+   "formato": "REELS",
+   "tipo_midia": "VIDEO",
+   "publicado_em": "2026-11-11T02:02:35+0000",
+   "link": "https://www.instagram.com/reel/DflXJ4ZCQa7/",
+   "legenda": "O banho não precisa ser correria 🛁 Com a almofada ele fica apoiadinho e você cuida com calma, sempre pertinho dele. Quer",
+   "curtidas": 9,
+   "comentarios": 0,
+   "metricas": {
+    "reach": 139,
+    "views": 180,
+    "likes": 9,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 9,
+    "ig_reels_avg_watch_time": 6613,
+    "ig_reels_video_view_total_time": 965499
+   },
+   "ausentes": {}
+  },
+  {
+   "id": "17955278196273560",
+   "formato": "FEED",
+   "tipo_midia": "CAROUSEL_ALBUM",
+   "publicado_em": "2026-11-10T23:32:00+0000",
+   "link": "https://www.instagram.com/p/DflF-S_IMSE/",
+   "legenda": "Como funciona o Chocalho de Ofertas 🧸 1. A gente garimpa promoções de produtos para bebês e crianças todos os dias. 2. V",
+   "curtidas": 1,
+   "comentarios": 0,
+   "metricas": {
+    "reach": 7,
+    "views": 18,
+    "likes": 1,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 1,
+    "profile_visits": 2,
+    "profile_activity": 0,
+    "follows": 0
+   },
+   "ausentes": {}
+  },
+  {
+   "id": "18149743888561937",
+   "formato": "FEED",
+   "tipo_midia": "CAROUSEL_ALBUM",
+   "publicado_em": "2026-11-10T15:25:27+0000",
+   "link": "https://www.instagram.com/p/DfkOSmFoCsg/",
+   "legenda": "Brincar também é aprender 💜 Separei um brinquedo pra cada fase, do tapetinho do bebê ao primeiro jogo de letras: 1. Tape",
+   "curtidas": 2,
+   "comentarios": 0,
+   "metricas": {
+    "reach": 5,
+    "views": 28,
+    "likes": 2,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 2,
+    "profile_visits": 2,
+    "profile_activity": 0,
+    "follows": 0
+   },
+   "ausentes": {}
+  },
+  {
+   "id": "18118672754085762",
+   "formato": "FEED",
+   "tipo_midia": "CAROUSEL_ALBUM",
+   "publicado_em": "2026-11-09T23:36:19+0000",
+   "link": "https://www.instagram.com/p/DfihrAZIFel/",
+   "legenda": "8 achados em promoção hoje, do enxoval ao presente de Natal 🎁 1. Andador empurrador musical Yuupi: de R$ 185,90 por R$ 9",
+   "curtidas": 2,
+   "comentarios": 0,
+   "metricas": {
+    "reach": 7,
+    "views": 17,
+    "likes": 2,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 2,
+    "profile_visits": 1,
+    "profile_activity": 0,
+    "follows": 0
+   },
+   "ausentes": {}
+  },
+  {
+   "id": "17992253013099208",
+   "formato": "FEED",
+   "tipo_midia": "CAROUSEL_ALBUM",
+   "publicado_em": "2026-11-09T21:01:48+0000",
+   "link": "https://www.instagram.com/p/DfiP_NGoE64/",
+   "legenda": "Economizar também é cuidar. Separei 4 achados que estão com desconto hoje: 1. Celular Brinquedo Recarregável Bebê | Educ",
+   "curtidas": 3,
+   "comentarios": 0,
+   "metricas": {
+    "reach": 7,
+    "views": 19,
+    "likes": 3,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 3,
+    "profile_visits": 1,
+    "profile_activity": 0,
+    "follows": 0
+   },
+   "ausentes": {}
+  },
+  {
+   "id": "18118912058046729",
+   "formato": "FEED",
+   "tipo_midia": "CAROUSEL_ALBUM",
+   "publicado_em": "2026-11-09T17:06:44+0000",
+   "link": "https://www.instagram.com/p/Dfh1FhiINH4/",
+   "legenda": "Prazer, Chocalho de Ofertas! 🧸 Um canal de ofertas pra famílias que amam economizar pontos do enxoval aos brinquedos, a ",
+   "curtidas": 3,
+   "comentarios": 0,
+   "metricas": {
+    "reach": 8,
+    "views": 27,
+    "likes": 3,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "total_interactions": 3,
+    "profile_visits": 4,
+    "profile_activity": 1,
+    "follows": 0
+   },
+   "ausentes": {}
+  }
+ ]
+}
