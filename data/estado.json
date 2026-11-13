@@ -6504,19 +6504,19 @@
   "AGORAPROMO": {
    "criado": "2026-11-11T16:01-03:00",
    "post": 357,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "APROVEITAAGORA": {
    "criado": "2026-11-11T13:00-03:00",
    "post": 330,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "AUTO70OFF": {
    "criado": "2026-11-09T13:36-03:00",
    "post": 168,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "BEAUTY10": {
@@ -6558,7 +6558,7 @@
   "COZINHA10": {
    "criado": "2026-11-11T14:25-03:00",
    "post": 347,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "COZINHA5": {
@@ -6594,7 +6594,7 @@
   "DESCONTOJA": {
    "criado": "2026-11-11T14:00-03:00",
    "post": 342,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "ESPORTE1011": {
@@ -6618,8 +6618,14 @@
   "FULL1211": {
    "criado": "2026-11-12T08:01-03:00",
    "post": 404,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
+  },
+  "FULL1311": {
+   "criado": "2026-11-13T08:00-03:00",
+   "post": 509,
+   "status": "ativo",
+   "validade": "2026-11-13T23:59-03:00"
   },
   "HOJEMESMO": {
    "criado": "2026-11-09T10:01-03:00",
@@ -6678,7 +6684,7 @@
   "MELHOROFERTA": {
    "criado": "2026-11-11T15:01-03:00",
    "post": 350,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "MELIGARANTE25": {
@@ -6744,7 +6750,7 @@
   "MODAESPECIAL": {
    "criado": "2026-11-11T21:03-03:00",
    "post": 395,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "MODASEMPREML": {
@@ -6756,7 +6762,7 @@
   "MOP10SHARK": {
    "criado": "2026-11-11T14:25-03:00",
    "post": 347,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "MOP5SHARK": {
@@ -6816,7 +6822,7 @@
   "OLHAOARABE20": {
    "criado": "2026-11-09T13:36-03:00",
    "post": 168,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "OPORTUNIDADEML": {
@@ -6828,7 +6834,7 @@
   "PARAVOCEDEZ": {
    "criado": "2026-11-11T11:50-03:00",
    "post": 318,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "POUPAAGORA30": {
@@ -6840,7 +6846,7 @@
   "PROMOCOMTECH": {
    "criado": "2026-11-11T13:31-03:00",
    "post": 336,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "PROMOFLASH22": {
@@ -6864,7 +6870,7 @@
   "SEMPREAQUI": {
    "criado": "2026-11-11T10:00-03:00",
    "post": 302,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "SITETODO1011": {
@@ -6918,7 +6924,7 @@
   "VALEAGORA25": {
    "criado": "2026-11-11T10:03-03:00",
    "post": 303,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
   "VALEAGORA30": {
@@ -6928,7 +6934,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5573,
+ "cupons_extra_ultimo:cupombr": 5575,
  "cupons_ml_ultimo": 6483,
  "descoberta_em": "2026-11-12T08:07-03:00",
  "descobertos": {
@@ -13370,6 +13376,9 @@
    "cupons": 10,
    "posts": 100,
    "shopee": 50
+  },
+  "2026-11-13": {
+   "cupons": 1
   }
  },
  "links": {
@@ -16064,6 +16073,17 @@
    "criado": "2026-11-12T18:38-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "509": {
+   "blocos": [
+    {
+     "codigo": "FULL1311",
+     "html": "<b>🎟️ FULL1311</b> 👉 <b>25% OFF</b>\nCompra mín.: R$119 · Desconto máx.: R$40\n⏰ Válido até 13/11"
+    }
+   ],
+   "criado": "2026-11-13T08:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "62": {
    "blocos": [
