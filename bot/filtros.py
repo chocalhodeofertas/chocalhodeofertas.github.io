@@ -101,12 +101,20 @@ _ACESSORIO_CABECA = re.compile(r"\b(bones?|chapeus?|viseiras?|bucket|toucas?|gor
 _CRIANCA_CLARO = re.compile(r"\b(infantil|infantis|crianca|criancas|kids|kid|bebe|bebes|baby|menino|meninos|menina|meninas)\b")
 
 
+# "Baby" que não é bebê: peças de roupa adulta com "baby" no nome
+_BABY_ADULTO = re.compile(r"\b(baby ?doll|short ?doll|baby ?look)\b")
+# Sinais de roupa/item adulto: só passa com sinal claro de criança
+_ADULTO = re.compile(r"\b(adultos?|plus size|sem bojo|com bojo|bojo|sensual|sexy)\b")
+
+
 def fora_da_faixa(titulo, categoria, regra=None):
     """Motivo para pular produtos que não são do universo infantil (ou None).
 
     Vale para tudo (itens de casa/adulto que vazam das categorias de bebê) e,
     nas áreas novas, exige sinal de produto infantil no título."""
-    t = normalizar(titulo)
+    t = _BABY_ADULTO.sub(" ", normalizar(titulo))
+    if _ADULTO.search(t) and not _CRIANCA_CLARO.search(t):
+        return "roupa/item adulto"
     if _ACESSORIO_CABECA.search(t) and not _CRIANCA_CLARO.search(t):
         return "boné/chapéu sem ser infantil"
     if not _INFANTIL.search(t):

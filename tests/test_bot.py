@@ -1498,3 +1498,14 @@ def test_sutia_bloqueado():
     assert motivo_bloqueio("Kits Sutiãs Infantil Juvenil Algodão Cotton Liso")
     assert motivo_bloqueio("Sutiã Infantil Top Menina")
     assert motivo_bloqueio("Body Bebê Algodão Kit 3") is None
+
+
+def test_baby_doll_adulto_bloqueado():
+    from bot.filtros import fora_da_faixa
+    for t in ["Baby Doll Short Doll Americano Gola V Liso Pijama Feminino",
+              "Kit 4 Conjuntos Femininos Baby Doll Pijama Short Doll Estampado Sem Bojo",
+              "Camiseta Baby Look Feminina Lisa", "Pijama Plus Size Feminino"]:
+        assert fora_da_faixa(t, "", "infantil"), t
+    for t in ["Pijama Infantil Bebê Menina Manga Curta com Estampas Fofas",
+              "Baby Doll Infantil Menina Estampado", "Kit 2 Pijamas Manga Longa Bebê Menino"]:
+        assert fora_da_faixa(t, "", "infantil") is None, t
