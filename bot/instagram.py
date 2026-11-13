@@ -39,6 +39,51 @@ class Instagram:
                 f"HTTP {r.status_code}: {erro.get('message') or r.text[:200]} (código {erro.get('code')})"))
         return dados
 
+    def _post(self, caminho: str, **dados):
+        dados["access_token"] = self.token
+        try:
+            r = self.s.post(f"{BASE}/{caminho}", data=dados, timeout=60)
+        except requests.RequestException as e:
+            raise InstagramErro(self._limpar(e)) from None
+        try:
+            j = r.json()
+        except ValueError:
+            j = {}
+        if r.status_code != 200 or "error" in j:
+            erro = j.get("error", {}) if isinstance(j, dict) else {}
+            raise InstagramErro(self._limpar(
+                f"HTTP {r.status_code}: {erro.get('error_user_msg') or erro.get('message') or r.text[:200]} "
+                f"(código {erro.get('code')})"))
+        return j
+
+    def _esperar_pronto(self, container_id, tentativas=30, espera=5, dormir=None):
+        import time
+        dormir = dormir or time.sleep
+        for _ in range(tentativas):
+            st = self._get(container_id, fields="status_code,status").get("status_code")
+            if st == "FINISHED":
+                return
+            if st in ("ERROR", "EXPIRED"):
+                raise InstagramErro(f"o Instagram recusou a mídia ({st})")
+            dormir(espera)
+        raise InstagramErro("o Instagram demorou demais para processar as imagens")
+
+    def publicar_carrossel(self, urls_imagens, legenda, dormir=None):
+        """Publica um carrossel (2 a 10 imagens JPEG em URLs públicas). Devolve (id, link)."""
+        if not 2 <= len(urls_imagens) <= 10:
+            raise InstagramErro("o carrossel precisa ter de 2 a 10 imagens")
+        filhos = []
+        for url in urls_imagens:
+            filhos.append(self._post(f"{self.user_id}/media", image_url=url, is_carousel_item="true")["id"])
+        for f in filhos:
+            self._esperar_pronto(f, dormir=dormir)
+        cont = self._post(f"{self.user_id}/media", media_type="CAROUSEL", children=",".join(filhos),
+                          caption=legenda)["id"]
+        self._esperar_pronto(cont, dormir=dormir)
+        mid = self._post(f"{self.user_id}/media_publish", creation_id=cont)["id"]
+        link = self._get(mid, fields="permalink").get("permalink")
+        return mid, link
+
     def conta(self):
         return self._get(self.user_id, fields="username,name,followers_count,follows_count,media_count")
 

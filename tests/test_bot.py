@@ -1533,3 +1533,28 @@ def test_instagram_nao_vaza_token():
         assert "SEGREDO123" not in str(e) and "190" in str(e)
     else:
         raise AssertionError("deveria falhar")
+
+
+def test_instagram_publica_carrossel():
+    from bot.instagram import Instagram
+
+    class R:
+        def __init__(self, j): self.j, self.status_code, self.headers, self.text = j, 200, {"content-type": "application/json"}, ""
+        def json(self): return self.j
+
+    class S:
+        def __init__(self): self.posts, self.n = [], 0
+        def post(self, url, data, timeout):
+            self.posts.append((url.rsplit("/", 1)[-1], {k: v for k, v in data.items() if k != "access_token"}))
+            self.n += 1
+            return R({"id": f"id{self.n}"})
+        def get(self, url, params, timeout):
+            return R({"status_code": "FINISHED", "permalink": "https://instagram.com/p/x"})
+
+    s = S()
+    mid, link = Instagram("tok", "123", session=s).publicar_carrossel(["https://a/1.jpg", "https://a/2.jpg"], "Legenda",
+                                                                     dormir=lambda x: None)
+    assert link == "https://instagram.com/p/x" and mid == "id4"
+    assert s.posts[0] == ("media", {"image_url": "https://a/1.jpg", "is_carousel_item": "true"})
+    assert s.posts[2] == ("media", {"media_type": "CAROUSEL", "children": "id1,id2", "caption": "Legenda"})
+    assert s.posts[3] == ("media_publish", {"creation_id": "id3"})
