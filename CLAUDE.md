@@ -40,6 +40,11 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `insights_ig.py`: chamado pelo ciclo a cada rodada. 1x/dia grava `data/instagram/AAAA-MM-DD.json` (conta só no dia anterior,
   janela de Brasília + retrato acumulado dos posts dos últimos 30 dias); a cada rodada atualiza `data/instagram/stories.json`.
   Base do relatório semanal (feito pelo Claude, não pelo bot). `follows_and_unfollows` só vem com 100+ seguidores.
+- `instagram_pub.py`: publicação com aprovação. `conteudo` chama `oferecer()` em carrossel e post de produto (pacote, "carrossel <tema>",
+  "insta <link>"): JPEGs em `docs/ig-tmp/<id>/` + pergunta com botões (callback `ig:ok:<id>` / `ig:nao:<id>`, tratados em
+  `comandos.processar`). `main` (modo normal) chama `publicar_pendentes()`: só aprovados, no horário do roteiro;
+  peça com mais de 2 h confere preço na vitrine (subiu ou saiu → barra e avisa). Pendentes expiram na virada do dia;
+  imagens apagadas 2 dias depois. Reel e stories seguem manuais (API sem música da biblioteca e sem adesivo de link).
 
 ## Ferramentas (tools/, rodar pelo workflow inspecao)
 - `testar_shopee`: prévia de busca da Shopee só para o admin.

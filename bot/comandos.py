@@ -41,7 +41,8 @@ AJUDA = (
     "🗂️ <b>categorias</b> → prévia das categorias novas (roupas, games, livros...) · <b>aprovar categorias</b>\n"
     "🎯 <b>temas</b> → quantas promoções cada tema tem agora\n"
     "🎠 <b>carrossel brinquedos</b> / 🎬 <b>reel brinquedos</b> → temático do tema que você escolher\n"
-    "🖼️ <b>insta</b> + link meli.la → post, legenda e story do produto escolhido\n\n"
+    "🖼️ <b>insta</b> + link meli.la → post, legenda e story do produto escolhido\n"
+    "📲 Carrossel e post chegam com ✅ Aprovar / ❌ Recusar: aprovado, o bot publica no Instagram sozinho\n\n"
     "📦 Para os lotes do Linkbuilder, cole todos os links gerados numa mensagem só.\n\n"
     "<i>Eu leio as mensagens a cada 20 min, das 8h às 22h.</i>"
 )
@@ -203,7 +204,7 @@ def relatorio_areas(tg, ml, cfg, log=print):
             "Os marcados com 🚫 são barrados pelos filtros.")
 
 
-def postar_insta(link, tg, ml, estado, cfg, session=None, rng=random):
+def postar_insta(link, tg, ml, estado, cfg, session=None, rng=random, agora=None):
     """Gera o post do Instagram de um produto escolhido por você (não posta no canal)."""
     oferta, erro = _oferta_do_link(link, ml, estado, session)
     if erro:
@@ -212,7 +213,7 @@ def postar_insta(link, tg, ml, estado, cfg, session=None, rng=random):
     if motivo:
         return f"🚫 Não posso usar “{oferta.titulo[:60]}”: {motivo}."
     from . import conteudo
-    conteudo.enviar_post_produto(tg, cfg.admin_chat, oferta, rng, session)
+    conteudo.enviar_post_produto(tg, cfg.admin_chat, oferta, rng, session, estado=estado, agora=agora)
     return None
 
 
@@ -491,7 +492,7 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
         if not achados:
             return "Mande <b>insta</b> + o link meli.la do produto."
         # vários links numa mensagem só: gera um post para cada
-        erros = [postar_insta(l, tg, ml, estado, cfg, session, rng) for l in dict.fromkeys(achados)]
+        erros = [postar_insta(l, tg, ml, estado, cfg, session, rng, agora) for l in dict.fromkeys(achados)]
         erros = [e for e in erros if e]
         return "\n".join(erros) if erros else None
     links = lote.RE_MELI.findall(t)
@@ -522,6 +523,13 @@ def processar(tg, ml, estado, cfg, agora, log=print, session=None, rng=random):
         estado["tg_offset"] = u["update_id"] + 1
         if u.get("chat_member"):
             _registrar_membro(estado, u["chat_member"], agora)
+            continue
+        if u.get("callback_query"):
+            from . import instagram_pub
+            try:
+                instagram_pub.tratar_toque(tg, cfg.admin_chat, estado, u["callback_query"], agora)
+            except TelegramErro as e:
+                log(f"Aviso: não consegui responder ao botão: {e}")
             continue
         msg = u.get("message") or {}
         if str((msg.get("chat") or {}).get("id")) != str(cfg.admin_chat):

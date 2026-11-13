@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from datetime import date, timedelta
 from types import SimpleNamespace
 
-from . import arte
+from . import arte, instagram_pub
 from .mensagens import _abertura, _titulo_curto, brl
 from .telegram import TelegramErro
 
@@ -314,8 +314,11 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
             capa_foto = arte.foto_de_capa(tema.fotos, rng)
             arte.registrar_capa(capa_foto)
             slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
-            tg.enviar_album(chat, [arte.png(s) for s in slides], f"🎠 {k}. {hora} — carrossel (na ordem)")
-            tg.enviar_texto(chat, legenda_carrossel(tema, ofs, rng))
+            pngs = [arte.png(s) for s in slides]
+            tg.enviar_album(chat, pngs, f"🎠 {k}. {hora} — carrossel (na ordem)")
+            leg = legenda_carrossel(tema, ofs, rng)
+            tg.enviar_texto(chat, leg)
+            instagram_pub.oferecer(tg, chat, estado, agora, "carrossel", pngs, leg, ofs, hora)
             if not dia_lanc and agora.weekday() in (0, 2, 4, 6) and not any(t == "reel" for t in usados):
                 try:
                     mp4 = arte.reel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
@@ -330,8 +333,11 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
             _registrar_tema(estado, agora, tema)
         elif tipo == "post":
             o = _oferta(dado)
-            tg.enviar_foto(chat, arte.gerar(o, session=session, cta="Link na bio"), f"🖼️ {k}. {hora} — post do produto")
-            tg.enviar_texto(chat, legenda_post(o, rng))
+            png_post = arte.gerar(o, session=session, cta="Link na bio")
+            tg.enviar_foto(chat, png_post, f"🖼️ {k}. {hora} — post do produto")
+            leg = legenda_post(o, rng)
+            tg.enviar_texto(chat, leg)
+            instagram_pub.oferecer(tg, chat, estado, agora, "post", [png_post], leg, [o], hora)
             stories.append((o, None))
             _registrar_usados(estado, agora, [dado])
 
@@ -398,17 +404,25 @@ def enviar_tema(tg, chat, estado, agora, nome, formato="carrossel", rng=random, 
                             "🖼️ Capa do Reel: em 'Editar capa', escolha 'Adicionar da galeria'", "image/png")
     else:
         slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
-        tg.enviar_album(chat, [arte.png(s) for s in slides], "🎠 Carrossel temático (na ordem)")
-    tg.enviar_texto(chat, legenda_carrossel(tema, ofs, rng))
+        pngs = [arte.png(s) for s in slides]
+        tg.enviar_album(chat, pngs, "🎠 Carrossel temático (na ordem)")
+    leg = legenda_carrossel(tema, ofs, rng)
+    tg.enviar_texto(chat, leg)
+    if formato != "reel":
+        instagram_pub.oferecer(tg, chat, estado, agora, "carrossel", pngs, leg, ofs)
     for o, f in zip(ofs, fotos):
         tg.enviar_foto(chat, arte.png(arte.story(o, f, session=session)), f"📱 Story — link para o adesivo:\n{o.link}")
     _registrar_tema(estado, agora, tema)
     return None
 
 
-def enviar_post_produto(tg, chat, oferta, rng=random, session=None):
+def enviar_post_produto(tg, chat, oferta, rng=random, session=None, estado=None, agora=None):
     """Post único do Instagram (com 'Link na bio'), legenda e story de um produto que você escolheu."""
-    tg.enviar_foto(chat, arte.gerar(oferta, session=session, cta="Link na bio"), "🖼️ Post do produto")
-    tg.enviar_texto(chat, legenda_post(oferta, rng))
+    png_post = arte.gerar(oferta, session=session, cta="Link na bio")
+    tg.enviar_foto(chat, png_post, "🖼️ Post do produto")
+    leg = legenda_post(oferta, rng)
+    tg.enviar_texto(chat, leg)
+    if estado is not None and agora is not None:
+        instagram_pub.oferecer(tg, chat, estado, agora, "post", [png_post], leg, [oferta])
     tg.enviar_foto(chat, arte.png(arte.story(oferta, None, session=session)),
                    f"📱 Story — link para o adesivo:\n{oferta.link}")

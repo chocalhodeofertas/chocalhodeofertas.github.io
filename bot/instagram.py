@@ -84,6 +84,14 @@ class Instagram:
         link = self._get(mid, fields="permalink").get("permalink")
         return mid, link
 
+    def publicar_imagem(self, url_imagem, legenda, dormir=None):
+        """Publica um post de uma imagem (JPEG em URL pública). Devolve (id, link)."""
+        cont = self._post(f"{self.user_id}/media", image_url=url_imagem, caption=legenda)["id"]
+        self._esperar_pronto(cont, dormir=dormir)
+        mid = self._post(f"{self.user_id}/media_publish", creation_id=cont)["id"]
+        link = self._get(mid, fields="permalink").get("permalink")
+        return mid, link
+
     def conta(self):
         return self._get(self.user_id, fields="username,name,followers_count,follows_count,media_count")
 

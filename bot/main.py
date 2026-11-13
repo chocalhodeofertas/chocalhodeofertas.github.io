@@ -653,6 +653,12 @@ def main(argv=None):
             from . import conteudo
             if os.environ.get("PACOTE_AUTO") == "1":  # pausado: só sai quando você pede "pacote"
                 conteudo.talvez_enviar(tg, cfg, estado, agora, hora=int(os.environ.get("PACOTE_HORA") or 10), log=log)
+            if cfg.admin_chat:
+                from . import instagram_pub
+                try:
+                    instagram_pub.publicar_pendentes(tg, cfg.admin_chat, estado, datetime.now(FUSO), log=log)
+                except Exception as e:  # o Instagram nunca derruba a rodada
+                    log(f"Aviso: publicação no Instagram falhou: {type(e).__name__}: {e}")
             vitrine.talvez_publicar(estado, cfg.canal, agora, log=log,
                                     grupo_wa=os.environ.get("WHATSAPP_GRUPO") or GRUPO_WHATSAPP)
             from . import numeros

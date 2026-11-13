@@ -32,7 +32,7 @@ class Telegram:
         return self._chamar("getChatMemberCount", chat_id=chat)
 
     def atualizacoes(self, offset=None):
-        dados = {"limit": 100, "allowed_updates": ["message", "chat_member"]}
+        dados = {"limit": 100, "allowed_updates": ["message", "chat_member", "callback_query"]}
         if offset:
             dados["offset"] = offset
         return self._chamar("getUpdates", **dados)
@@ -44,8 +44,9 @@ class Telegram:
             dados["parse_mode"] = "HTML"
         return self._chamar("editMessageText", **dados)
 
-    def enviar_texto(self, chat, texto, html=False, botoes=None, responder_a=None):
-        """botoes: lista de (rótulo, url), um botão por linha."""
+    def enviar_texto(self, chat, texto, html=False, botoes=None, responder_a=None, acoes=None):
+        """botoes: lista de (rótulo, url), um botão por linha.
+        acoes: lista de (rótulo, callback_data), lado a lado numa linha (o bot recebe o toque)."""
         dados = {"chat_id": chat, "text": texto, "link_preview_options": {"is_disabled": True}}
         if responder_a:
             dados["reply_parameters"] = {"message_id": responder_a}
@@ -53,7 +54,16 @@ class Telegram:
             dados["parse_mode"] = "HTML"
         if botoes:
             dados["reply_markup"] = {"inline_keyboard": [[{"text": t, "url": u}] for t, u in botoes]}
+        if acoes:
+            dados["reply_markup"] = {"inline_keyboard": [[{"text": t, "callback_data": d} for t, d in acoes]]}
         return self._chamar("sendMessage", **dados)
+
+    def responder_toque(self, callback_id, texto=None):
+        """Tira o 'carregando' do botão tocado (e mostra um aviso curto, se houver)."""
+        dados = {"callback_query_id": callback_id}
+        if texto:
+            dados["text"] = texto[:190]
+        return self._chamar("answerCallbackQuery", **dados)
 
     def enviar_foto(self, chat, png, legenda=None, nome="arte.png"):
         """Envia uma imagem gerada pelo bot (bytes)."""

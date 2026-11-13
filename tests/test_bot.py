@@ -1636,3 +1636,127 @@ def test_insights_ig_nao_coleta_o_mesmo_dia_duas_vezes(tmp_path):
     n = len(ig.chamadas)
     insights_ig.rodar(ig=ig, agora=agora, pasta=tmp_path)
     assert len(ig.chamadas) == n + 1  # só a checagem de stories
+
+
+class _TGFalso:
+    def __init__(self):
+        self.textos, self.edicoes, self.toques = [], [], []
+
+    def enviar_texto(self, chat, texto, html=False, botoes=None, responder_a=None, acoes=None):
+        self.textos.append((texto, acoes))
+        return {"message_id": len(self.textos)}
+
+    def editar_texto(self, chat, mid, texto, html=True):
+        self.edicoes.append((mid, texto))
+
+    def responder_toque(self, cid, texto=None):
+        self.toques.append(texto)
+
+
+class _PubIG:
+    def __init__(self):
+        self.publicados = []
+
+    def publicar_carrossel(self, urls, legenda):
+        self.publicados.append(("carrossel", urls, legenda))
+        return "m1", "https://instagram.com/p/x"
+
+    def publicar_imagem(self, url, legenda):
+        self.publicados.append(("post", [url], legenda))
+        return "m2", "https://instagram.com/p/y"
+
+
+class _Head:
+    def head(self, *a, **k):
+        return type("R", (), {"status_code": 200})()
+
+
+def _png_teste():
+    from PIL import Image
+    import io as _io
+    b = _io.BytesIO()
+    Image.new("RGB", (10, 10), "red").save(b, "PNG")
+    return b.getvalue()
+
+
+def _toque(pid, acao, chat="99"):
+    return {"id": "c1", "data": f"ig:{acao}:{pid}", "message": {"chat": {"id": int(chat)}}}
+
+
+@pytest.fixture
+def ig_ligado(monkeypatch):
+    monkeypatch.setenv("INSTAGRAM_TOKEN", "t")
+    monkeypatch.setenv("INSTAGRAM_USER_ID", "1")
+
+
+def _oferta_pub(id_="MLB1", preco=50.0):
+    from types import SimpleNamespace
+    return SimpleNamespace(id=id_, titulo="Kit body bebê 5 peças", preco=preco)
+
+
+def test_instagram_pub_aprovado_publica_no_horario(tmp_path, ig_ligado):
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    from bot import instagram_pub as pub
+    fuso = ZoneInfo("America/Sao_Paulo")
+    tg, ig, estado = _TGFalso(), _PubIG(), {"vitrine": {"itens": [{"id": "MLB1", "preco": 49.9}]}}
+    agora = datetime(2026, 11, 13, 10, 0, tzinfo=fuso)
+    pid = pub.oferecer(tg, "99", estado, agora, "carrossel", [_png_teste(), _png_teste()], "legenda", [_oferta_pub()], "18h", pasta=tmp_path)
+    assert (tmp_path / pid / "01.jpg").exists() and tg.textos[-1][1][0][1] == f"ig:ok:{pid}"
+    assert "às 18h" in tg.textos[-1][0]
+    # sem aprovar, nada sai
+    pub.publicar_pendentes(tg, "99", estado, agora.replace(hour=19), ig=ig, session=_Head(), pasta=tmp_path)
+    assert not ig.publicados
+    pub.tratar_toque(tg, "99", estado, _toque(pid, "ok"), agora)
+    assert estado["ig_fila"][pid]["status"] == "aprovado"
+    pub.publicar_pendentes(tg, "99", estado, agora.replace(hour=17), ig=ig, session=_Head(), pasta=tmp_path)
+    assert not ig.publicados  # ainda não é a hora
+    pub.publicar_pendentes(tg, "99", estado, agora.replace(hour=18, minute=10), ig=ig, session=_Head(), pasta=tmp_path)
+    assert ig.publicados[0][0] == "carrossel" and ig.publicados[0][1][0].endswith(f"/ig-tmp/{pid}/01.jpg")
+    assert estado["ig_fila"][pid]["status"] == "publicado"
+    assert "Publicado no Instagram" in tg.edicoes[-1][1]
+
+
+def test_instagram_pub_barra_preco_que_subiu(tmp_path, ig_ligado):
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    from bot import instagram_pub as pub
+    fuso = ZoneInfo("America/Sao_Paulo")
+    tg, ig = _TGFalso(), _PubIG()
+    estado = {"vitrine": {"itens": [{"id": "MLB1", "preco": 59.9}]}}
+    agora = datetime(2026, 11, 13, 10, 0, tzinfo=fuso)
+    pid = pub.oferecer(tg, "99", estado, agora, "post", [_png_teste()], "leg", [_oferta_pub()], "20h30", pasta=tmp_path)
+    pub.tratar_toque(tg, "99", estado, _toque(pid, "ok"), agora)
+    pub.publicar_pendentes(tg, "99", estado, agora.replace(hour=20, minute=40), ig=ig, session=_Head(), pasta=tmp_path)
+    assert not ig.publicados and estado["ig_fila"][pid]["status"] == "barrado"
+    assert "subiu" in tg.textos[-1][0]
+
+
+def test_instagram_pub_recusa_toque_alheio_e_expira(tmp_path, ig_ligado):
+    from datetime import datetime, timedelta
+    from zoneinfo import ZoneInfo
+    from bot import instagram_pub as pub
+    fuso = ZoneInfo("America/Sao_Paulo")
+    tg, ig, estado = _TGFalso(), _PubIG(), {}
+    agora = datetime(2026, 11, 13, 10, 0, tzinfo=fuso)
+    a = pub.oferecer(tg, "99", estado, agora, "post", [_png_teste()], "x", [_oferta_pub()], pasta=tmp_path)
+    b = pub.oferecer(tg, "99", estado, agora, "post", [_png_teste()], "y", [_oferta_pub("MLB2")], pasta=tmp_path)
+    pub.tratar_toque(tg, "99", estado, _toque(a, "ok", chat="12345"), agora)  # outra conversa
+    assert estado["ig_fila"][a]["status"] == "pendente"
+    pub.tratar_toque(tg, "99", estado, _toque(b, "nao"), agora)
+    assert estado["ig_fila"][b]["status"] == "recusado"
+    amanha = agora + timedelta(days=1)
+    pub.publicar_pendentes(tg, "99", estado, amanha, ig=ig, session=_Head(), pasta=tmp_path)
+    assert estado["ig_fila"][a]["status"] == "expirado" and not ig.publicados
+    pub.publicar_pendentes(tg, "99", estado, agora + timedelta(days=3), ig=ig, session=_Head(), pasta=tmp_path)
+    assert not (tmp_path / a).exists() and not (tmp_path / b).exists()
+
+
+def test_instagram_pub_sem_token_nao_oferece(tmp_path, monkeypatch):
+    from datetime import datetime
+    from bot import instagram_pub as pub
+    monkeypatch.delenv("INSTAGRAM_TOKEN", raising=False)
+    estado = {}
+    assert pub.oferecer(_TGFalso(), "99", estado, datetime(2026, 11, 13), "post", [_png_teste()], "x",
+                        [_oferta_pub()], pasta=tmp_path) is None
+    assert not estado
