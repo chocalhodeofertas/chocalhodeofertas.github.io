@@ -35,11 +35,18 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas, cupons, WhatsApp).
 - `comandos.py`: comandos do admin no Telegram e resumo diário (inclui WhatsApp).
 - `tiktok.py`: renderizador dos carrosséis 1080x1350 (capa, produto, CTA).
+- `instagram.py`: cliente da API do Instagram (login unificado; segredos `INSTAGRAM_TOKEN`/`INSTAGRAM_USER_ID`, token sem validade).
+  `metricas()` tenta tudo junto e, se falhar, uma a uma; o que não vier fica em `ausentes`.
+- `insights_ig.py`: chamado pelo ciclo a cada rodada. 1x/dia grava `data/instagram/AAAA-MM-DD.json` (conta só no dia anterior,
+  janela de Brasília + retrato acumulado dos posts dos últimos 30 dias); a cada rodada atualiza `data/instagram/stories.json`.
+  Base do relatório semanal (feito pelo Claude, não pelo bot). `follows_and_unfollows` só vem com 100+ seguidores.
 
 ## Ferramentas (tools/, rodar pelo workflow inspecao)
 - `testar_shopee`: prévia de busca da Shopee só para o admin.
 - `exemplos_shopee`: 3 posts de exemplo da Shopee só para o admin.
 - `produto_shopee <itemId>`: dados e foto de um produto da Shopee (foto vai para `saida/`).
+- `testar_instagram` / `coletar_instagram`: confere o token / roda a coleta uma vez em `saida/instagram`.
+- `publicar_carrossel <pasta>`: publica `docs/ig-tmp/<pasta>/` no Instagram (só com aprovação do Leonardo).
 - `baixar nome=url ...`: baixa arquivos para `saida/` (o container não alcança mlstatic/Shopee/Canva).
 
 ## Regras que o código precisa respeitar
