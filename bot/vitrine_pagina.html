@@ -275,5 +275,27 @@ footer a { text-underline-offset:3px; }
   }
 })();
 </script>
+<script>
+/* Botão do WhatsApp: abre o app direto (inclusive dentro do Instagram) e registra o Lead no Pixel. */
+(function () {
+  var ua = navigator.userAgent || "";
+  document.querySelectorAll("a.cta[data-wa]").forEach(function (a) {
+    a.addEventListener("click", function (ev) {
+      if (window.fbq) { try { fbq("track", "Lead"); } catch (e) {} }
+      var codigo = a.getAttribute("data-wa"), web = a.href;
+      if (!codigo) return;
+      if (/android/i.test(ua)) {
+        ev.preventDefault();
+        location.href = "intent://chat/?code=" + codigo + "#Intent;scheme=whatsapp;package=com.whatsapp;" +
+          "S.browser_fallback_url=" + encodeURIComponent(web) + ";end";
+      } else if (/iphone|ipad|ipod/i.test(ua)) {
+        ev.preventDefault();
+        location.href = "whatsapp://chat?code=" + codigo;
+        setTimeout(function () { location.href = web; }, 1600);
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>

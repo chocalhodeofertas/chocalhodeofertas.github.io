@@ -181,7 +181,9 @@ def gerar_html(estado, canal, grupo_wa=None, agora=None):
     chips = '<button class="chip ativo" data-f="" aria-pressed="true">Tudo</button>' + "".join(
         f'<button class="chip" data-f="{c}" aria-pressed="false">{NOMES.get(c, c.title())}</button>' for c in cats)
     url_canal = link_canal(canal)
-    wa_href = "grupo.html" if grupo_wa else ""
+    m_wa = re.search(r"chat\.whatsapp\.com/([A-Za-z0-9]+)", grupo_wa or "")
+    wa_codigo = m_wa.group(1) if m_wa else ""
+    wa_href = html.escape(f"https://chat.whatsapp.com/{wa_codigo}" if wa_codigo else (grupo_wa or ""), quote=True)
     hora = f"{em[11:16]}" if len(em) >= 16 else ""
     dia = f"{em[8:10]}/{em[5:7]}" if len(em) >= 10 else ""
     acompanhados = len(estado.get("precos") or {})
@@ -191,7 +193,7 @@ def gerar_html(estado, canal, grupo_wa=None, agora=None):
     feed_itens = [i for i in itens if i.get("imagem")][:12]
     feed = "".join(_feed(i, n) for n, i in enumerate(feed_itens))
     cards = "".join(_card(i) for i in itens) or '<p class="vazio">As próximas ofertas aparecem aqui em breve.</p>'
-    botao = (f'<a class="cta" href="{wa_href}">{ICONE_WA}<span>Entrar no grupo do WhatsApp</span></a>'
+    botao = (f'<a class="cta" data-wa="{wa_codigo}" href="{wa_href}">{ICONE_WA}<span>Entrar no grupo do WhatsApp</span></a>'
              if wa_href else "")
     telegram = (f'<a class="tg" href="{html.escape(url_canal, quote=True)}" target="_blank" rel="noopener">'
                 f'Prefere Telegram? Entre no canal</a>' if url_canal else "")

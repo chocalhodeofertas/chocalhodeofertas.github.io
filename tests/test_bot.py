@@ -681,7 +681,7 @@ def test_vitrine_selos_e_shopee():
     vitrine.guardar_shopee(e, o, "https://s.shopee.com.br/site", AGORA)
     assert len(e["vitrine_shopee"]) == 1
     h = vitrine.gerar_html(e, "@chocalho", "https://chat.whatsapp.com/ABC", AGORA)
-    assert "Shopee" in h and "a partir de" in h and "https://s.shopee.com.br/site" in h and "grupo.html" in h
+    assert "Shopee" in h and "a partir de" in h and "https://s.shopee.com.br/site" in h and "chat.whatsapp.com" in h
     # some depois de 36 h
     vitrine.guardar_shopee(e, SimpleNamespace(**{**o.__dict__, "id": "SHP2"}), "l", AGORA + timedelta(hours=40))
     assert [i["id"] for i in e["vitrine_shopee"]] == ["SHP2"]
@@ -890,7 +890,7 @@ def test_vitrine_com_grupo_whatsapp(tmp_path):
     arq = tmp_path / "i.html"
     assert vitrine.talvez_publicar(e, "@c", AGORA, arq, log=lambda m: None, grupo_wa="https://chat.whatsapp.com/X")
     h = arq.read_text()
-    assert "Entrar no grupo do WhatsApp" in h and 'href="grupo.html"' in h and "t.me/c" in h
+    assert "Entrar no grupo do WhatsApp" in h and 'href="https://chat.whatsapp.com/' in h and 'data-wa="' in h and "t.me/c" in h
     g = (tmp_path / "grupo.html").read_text()
     assert '"X"' in g and "intent://chat/?code=" in g and "whatsapp://chat?code=" in g
 
