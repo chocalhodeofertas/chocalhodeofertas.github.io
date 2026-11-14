@@ -8561,6 +8561,12 @@
    "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
+  "ECONOMIZEI25": {
+   "criado": "2026-11-14T10:03-03:00",
+   "post": 619,
+   "status": "ativo",
+   "validade": "2026-12-14T23:59-03:00"
+  },
   "ENTREGASFULL1411": {
    "criado": "2026-11-14T08:00-03:00",
    "post": 605,
@@ -8947,7 +8953,7 @@
   }
  },
  "cupons_extra_ultimo:cupombr": 5587,
- "cupons_ml_ultimo": 6489,
+ "cupons_ml_ultimo": 6490,
  "descoberta_em": "2026-11-14T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
@@ -15353,7 +15359,7 @@
    "shopee": 42
   },
   "2026-11-14": {
-   "cupons": 2,
+   "cupons": 3,
    "posts": 12,
    "shopee": 6
   }
@@ -18464,6 +18470,17 @@
     }
    ],
    "criado": "2026-11-14T09:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "619": {
+   "blocos": [
+    {
+     "codigo": "ECONOMIZEI25",
+     "html": "<b>🎟️ ECONOMIZEI25</b> 👉 <b>25% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 14/12\n👉 <a href=\"https://bit.ly/4C2CSao\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-14T10:03-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
