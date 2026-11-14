@@ -8729,6 +8729,12 @@
    "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
+  "MODA1411": {
+   "criado": "2026-11-14T12:02-03:00",
+   "post": 632,
+   "status": "ativo",
+   "validade": "2026-11-14T23:59-03:00"
+  },
   "MODAAQUI": {
    "criado": "2026-11-07T09:04-03:00",
    "post": 47,
@@ -8952,7 +8958,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5588,
+ "cupons_extra_ultimo:cupombr": 5589,
  "cupons_ml_ultimo": 6490,
  "descoberta_em": "2026-11-14T08:02-03:00",
  "descobertos": {
@@ -15359,7 +15365,7 @@
    "shopee": 42
   },
   "2026-11-14": {
-   "cupons": 3,
+   "cupons": 4,
    "posts": 24,
    "shopee": 12
   }
@@ -18492,6 +18498,17 @@
     }
    ],
    "criado": "2026-11-07T13:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "632": {
+   "blocos": [
+    {
+     "codigo": "MODA1411",
+     "html": "<b>🎟️ MODA1411</b> 👉 <b>10% OFF</b>\n📂 Moda\n⏰ Válido até 14/11"
+    }
+   ],
+   "criado": "2026-11-14T12:02-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   }
