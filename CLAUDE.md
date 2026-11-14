@@ -21,7 +21,7 @@ Textos para o dono do projeto sempre em português do Brasil.
   Com 7+ dias de histórico, `ofertas.peso_queda_real` dá +30% na pontuação para queda real ≥ 10% e -40% para desconto "de fachada" (< 3%).
   Quem sai dos mais vendidos do ML vai para `estado.acompanhados` (30 dias, 1/3 por rodada); na Shopee, produtos aprovados vão para
   `shopee.acompanhados` e 15 por rodada são reconferidos por `itemId` (queda real ≥ 10% vira candidato).
-- Repetição: `estado.repetido` compara títulos (ML + Shopee) dos últimos 3 dias; volta antes só se o preço cair 5%.
+- Repetição: `REPOST_DIAS` (padrão 7 no workflow): mesmo produto e títulos parecidos (ML + Shopee) não voltam antes disso; volta antes só se o preço cair 5%.
   Tipo do dia (`ofertas.tipos_do_dia`) soma ML e Shopee; sem tipo conhecido, usa a primeira palavra que diz o que é o produto.
   `ofertas.priorizar_tipos_novos`: tipo que saiu nas últimas 48 h vai para o fim da fila (só entra se faltar alternativa).
 - `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica) e `fora_da_faixa` (casa/adulto, exige sinal infantil).
@@ -32,7 +32,7 @@ Textos para o dono do projeto sempre em português do Brasil.
   Regras: nota ≥ 4,7, vendas ≥ 500, comissão ≥ 5%, só preço final; "de/por" só com queda vista pelo próprio bot.
   Links via `generateShortLink` com subId `telegram` / `whatsapp`.
 - `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/`; o serviço (Baileys) posta com aquecimento automático
-  (4 → 20 posts/dia em 30 dias), só das 7h às 23h, alterna ML/Shopee, pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
+  (4 → 10 → 14 → 20 posts/dia nos dias 0, 4, 8 e 14 desde a conexão), só das 7h às 23h, alterna ML/Shopee, pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
 - `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas, cupons, WhatsApp).
 - `comandos.py`: comandos do admin no Telegram e resumo diário (inclui WhatsApp).
 - `tiktok.py`: renderizador dos carrosséis 1080x1350 (capa, produto, CTA).

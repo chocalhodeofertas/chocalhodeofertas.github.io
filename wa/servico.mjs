@@ -17,7 +17,7 @@ const FILA = path.resolve(RAIZ, process.env.WA_FILA || "fila_wa");
 // Aquecimento automático: o ritmo sobe sozinho conforme o número ganha
 // histórico. WA_MAX_DIA / WA_INTERVALO_MIN (variáveis do GitHub) travam um valor fixo.
 const RAMPA = [ // [a partir do dia, posts por dia, minutos entre posts]
-  [0, 4, 40], [7, 7, 30], [14, 10, 25], [21, 14, 20], [30, 20, 15],
+  [0, 4, 40], [4, 10, 25], [8, 14, 20], [14, 20, 15],
 ];
 const VALIDADE_ITEM = 3 * 60 * 60 * 1000; // oferta parada há mais de 3h na fila não sai
 const FIM = Date.now() + Number(process.env.WA_HORAS || 5.6) * 3600 * 1000;

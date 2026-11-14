@@ -30,7 +30,7 @@ MAPA = {
 }
 
 
-def descobrir(ml, por_categoria=15, log=print, brinquedos=6):
+def descobrir(ml, por_categoria=15, log=print, brinquedos=10):
     """Retorna {id: {"tipo", "categoria", "pos"}} com os mais vendidos.
 
     Bebês tem prioridade: entram as subcategorias e as sub-subcategorias (ex.: Higiene →

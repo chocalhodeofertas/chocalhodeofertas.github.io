@@ -70,7 +70,8 @@ jobs:
           MAX_POSTS_POR_DIA: ${{ vars.MAX_POSTS_POR_DIA || '50' }}
           HORA_INICIO: ${{ vars.HORA_INICIO }}
           HORA_FIM: ${{ vars.HORA_FIM }}
-          POR_CATEGORIA: ${{ vars.POR_CATEGORIA }}
+          POR_CATEGORIA: ${{ vars.POR_CATEGORIA || '20' }}
+          REPOST_DIAS: ${{ vars.REPOST_DIAS || '7' }}
           LINK_MODO: ${{ vars.LINK_MODO }}
           LOTE_TAMANHO: ${{ vars.LOTE_TAMANHO }}
           LOTES_POR_DIA: ${{ vars.LOTES_POR_DIA }}
