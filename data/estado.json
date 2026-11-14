@@ -1998,7 +1998,7 @@
    "tipo": "catalogo"
   }
  },
- "aguardando_link": 33,
+ "aguardando_link": 35,
  "areas_novas": true,
  "busca": {
   "itens": [
@@ -8456,7 +8456,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-14": 28
+  "2026-11-14": 30
  },
  "cupons": {
   "AGORAPROMO": {
@@ -15373,8 +15373,8 @@
   "2026-11-14": {
    "com_cupom": 3,
    "cupons": 5,
-   "posts": 56,
-   "shopee": 28
+   "posts": 59,
+   "shopee": 29
   }
  },
  "links": {
@@ -16056,8 +16056,8 @@
   "2026-11-13": 2,
   "2026-11-14": 2
  },
- "membros_lido_em": "2026-11-14T15",
- "numeros_em": "2026-11-14T15:56-03:00",
+ "membros_lido_em": "2026-11-14T16",
+ "numeros_em": "2026-11-14T16:16-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -17734,6 +17734,12 @@
    "quando": "2026-11-12T08:07-03:00",
    "titulo": "Banheira Trocador Dobrável Termômetro Aloha Maxi Baby"
   },
+  "MLB78015488": {
+   "desconto": 0.511,
+   "preco": 24.4,
+   "quando": "2026-11-14T16:16-03:00",
+   "titulo": "Pulseira Guia Infantil Seguranca Anti Perda Criança Viagens Cor Azul"
+  },
   "MLB78625949": {
    "desconto": 0.279,
    "preco": 25.9,
@@ -17779,7 +17785,7 @@
   "MLB79313725": {
    "desconto": 0.644,
    "preco": 35.63,
-   "quando": "2026-11-11T16:15-03:00",
+   "quando": "2026-11-14T16:16-03:00",
    "titulo": "Celular Brinquedo Recarregável Bebê | Educativo com Sons e Luzes, Substitui o Ce"
   },
   "MLB79378634": {
@@ -25002,6 +25008,10 @@
     [
      "2026-11-14",
      64.72
+    ],
+    [
+     "2026-11-14",
+     54.99
     ]
    ],
    "min": 54.99
@@ -26248,6 +26258,10 @@
     [
      "2026-11-14",
      189.99
+    ],
+    [
+     "2026-11-14",
+     173.82
     ]
    ],
    "min": 159.99
@@ -28332,6 +28346,10 @@
     [
      "2026-11-14",
      119.99
+    ],
+    [
+     "2026-11-14",
+     120.99
     ]
    ],
    "min": 107.0
@@ -32876,6 +32894,10 @@
     [
      "2026-11-14",
      78.0
+    ],
+    [
+     "2026-11-14",
+     42.8
     ]
    ],
    "min": 42.8
@@ -33527,6 +33549,10 @@
     [
      "2026-11-14",
      4500.0
+    ],
+    [
+     "2026-11-14",
+     4499.99
     ]
    ],
    "min": 4084.0
@@ -38580,6 +38606,10 @@
     [
      "2026-11-14",
      34.78
+    ],
+    [
+     "2026-11-14",
+     23.4
     ]
    ],
    "min": 23.4
@@ -64615,7 +64645,7 @@
   }
  },
  "resumo_enviado": "2026-11-13",
- "rodada_n": 122,
+ "rodada_n": 123,
  "shopee": {
   "acompanhados": {
    "SHP12016728643": {
@@ -64672,7 +64702,7 @@
    },
    "SHP18297828234": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP18298128179": {
     "ate": "2026-12-14",
@@ -64764,7 +64794,7 @@
    },
    "SHP19499073421": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:48-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP19599043004": {
     "ate": "2026-12-13",
@@ -64788,7 +64818,7 @@
    },
    "SHP19699230407": {
     "ate": "2026-12-12",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP19699242179": {
     "ate": "2026-12-14",
@@ -64824,7 +64854,7 @@
    },
    "SHP20098273189": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP20099233176": {
     "ate": "2026-12-14",
@@ -64992,7 +65022,7 @@
    },
    "SHP22094950615": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP22094984499": {
     "ate": "2026-12-11",
@@ -65088,7 +65118,7 @@
    },
    "SHP22298479877": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP22298929134": {
     "ate": "2026-12-14",
@@ -65100,7 +65130,7 @@
    },
    "SHP22393732216": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP22394446483": {
     "ate": "2026-12-13",
@@ -65208,7 +65238,7 @@
    },
    "SHP22793967394": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T14:08-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP22794141945": {
     "ate": "2026-12-14",
@@ -65296,7 +65326,7 @@
    },
    "SHP22998076905": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP22998677839": {
     "ate": "2026-12-13",
@@ -65352,7 +65382,7 @@
    },
    "SHP23194642345": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP23195092471": {
     "ate": "2026-12-14",
@@ -65384,7 +65414,7 @@
    },
    "SHP23219825532": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP23292945743": {
     "ate": "2026-12-14",
@@ -65428,11 +65458,11 @@
    },
    "SHP23394401680": {
     "ate": "2026-12-11",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP23395021468": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP23397999673": {
     "ate": "2026-12-12",
@@ -65484,7 +65514,7 @@
    },
    "SHP23499441316": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP23591689767": {
     "ate": "2026-12-14",
@@ -65536,7 +65566,7 @@
    },
    "SHP23698701958": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP23698711829": {
     "ate": "2026-12-12",
@@ -65572,7 +65602,7 @@
    },
    "SHP23799025608": {
     "ate": "2026-12-13",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP23799176716": {
     "ate": "2026-12-14",
@@ -65592,7 +65622,7 @@
    },
    "SHP23894133081": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T14:08-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP23897663976": {
     "ate": "2026-12-14",
@@ -65648,7 +65678,7 @@
    },
    "SHP24291101685": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T14:08-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP25201993062": {
     "ate": "2026-12-14",
@@ -65664,7 +65694,7 @@
    },
    "SHP26781091461": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP27043867803": {
     "ate": "2026-12-14",
@@ -65676,11 +65706,11 @@
    },
    "SHP27621732758": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T14:08-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP27920560464": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP27945255322": {
     "ate": "2026-12-14",
@@ -65760,7 +65790,7 @@
    },
    "SHP41478733625": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP41518716769": {
     "ate": "2026-12-13",
@@ -65808,7 +65838,7 @@
    },
    "SHP44715977004": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:48-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP44809598956": {
     "ate": "2026-12-14",
@@ -65840,7 +65870,7 @@
    },
    "SHP46413273101": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP46513525140": {
     "ate": "2026-12-14",
@@ -65888,7 +65918,7 @@
    },
    "SHP50856640707": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP51252953170": {
     "ate": "2026-12-14",
@@ -65916,7 +65946,7 @@
    },
    "SHP52565926526": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:48-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP52955209386": {
     "ate": "2026-12-14",
@@ -65944,7 +65974,7 @@
    },
    "SHP54556835799": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP55809708679": {
     "ate": "2026-12-14",
@@ -65952,7 +65982,7 @@
    },
    "SHP56063356954": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T14:08-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP57054796969": {
     "ate": "2026-12-13",
@@ -65969,6 +65999,10 @@
    "SHP57656529632": {
     "ate": "2026-12-12",
     "visto": "2026-11-14T14:08-03:00"
+   },
+   "SHP57707127537": {
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP57763997772": {
     "ate": "2026-12-14",
@@ -66000,7 +66034,7 @@
    },
    "SHP58201517935": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP58201791571": {
     "ate": "2026-12-14",
@@ -66064,7 +66098,7 @@
    },
    "SHP58209212010": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP58209355566": {
     "ate": "2026-12-14",
@@ -66132,7 +66166,7 @@
    },
    "SHP58215585924": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP58215984165": {
     "ate": "2026-12-14",
@@ -66148,7 +66182,7 @@
    },
    "SHP58217143979": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP58217221839": {
     "ate": "2026-12-14",
@@ -66284,7 +66318,7 @@
    },
    "SHP58259176297": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:15-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP58259568016": {
     "ate": "2026-12-14",
@@ -66300,7 +66334,7 @@
    },
    "SHP58260901853": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP58261329299": {
     "ate": "2026-12-14",
@@ -66348,7 +66382,7 @@
    },
    "SHP58266798737": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T12:32-03:00"
+    "visto": "2026-11-14T16:25-03:00"
    },
    "SHP58267047154": {
     "ate": "2026-12-12",
@@ -66386,7 +66420,8 @@
   "hora": [
    "2026-11-14T15:38-03:00",
    "2026-11-14T15:56-03:00",
-   "2026-11-14T15:56-03:00"
+   "2026-11-14T15:56-03:00",
+   "2026-11-14T16:25-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -66459,7 +66494,7 @@
    "SHP22593013707": "2026-11-11T17:25-03:00",
    "SHP22593060346": "2026-11-14T11:45-03:00",
    "SHP22597543717": "2026-11-12T21:49-03:00",
-   "SHP22793967394": "2026-11-11T13:16-03:00",
+   "SHP22793967394": "2026-11-14T16:25-03:00",
    "SHP22794871872": "2026-11-11T19:43-03:00",
    "SHP22798176540": "2026-11-12T21:38-03:00",
    "SHP22798746244": "2026-11-13T13:10-03:00",
@@ -66567,7 +66602,7 @@
    "SHP58267271883": "2026-11-12T12:16-03:00",
    "SHP58267616997": "2026-11-12T11:47-03:00"
   },
-  "termo": 23,
+  "termo": 26,
   "tipos": {
    "2026-11-14": [
     "adesivo",
@@ -66589,6 +66624,7 @@
     "calcinha",
     "carrinho",
     "carrinho de brinquedo",
+    "celular",
     "condicionador",
     "copo",
     "cotonete",
@@ -66614,6 +66650,8 @@
     "personagen",
     "pijama",
     "piscina",
+    "pulseira",
+    "quebra",
     "refeicao",
     "repelente",
     "sandalia",
@@ -66886,6 +66924,11 @@
     "preco": 17.9,
     "quando": "2026-11-12T21:49-03:00",
     "titulo": "MEDOOSI Quebra-Cabeça 3D 3 em 1 Tetris De Madeira Brinquedos E Tangram /Jogo Inf"
+   },
+   "SHP22793967394": {
+    "preco": 12.5,
+    "quando": "2026-11-14T16:25-03:00",
+    "titulo": "Kit  Quebra Cabeças Educativos Infantil 3d Diy Feito À Mão Presente"
    },
    "SHP22794871872": {
     "preco": 15.79,
@@ -67322,7 +67365,7 @@
  "tg_offset": 273518017,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-14T15:56-03:00",
+  "em": "2026-11-14T16:16-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -67331,8 +67374,20 @@
     "id": "MLB81362459",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_613228-MLA118900591834_112026-F.jpg",
     "link": "https://meli.la/1y5jvVU",
+    "loja": "ml",
     "preco": 22.99,
     "titulo": "Termômetro De Banho Para Bebê ALTOMEX Banheira Infantil Medidor De Temperatura Da Água Sem Pilhas Vermlho"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 100.0,
+    "desconto": 0.644,
+    "id": "MLB79313725",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_915365-MLA117639458887_092026-F.jpg",
+    "link": "https://meli.la/224xLLB",
+    "loja": "ml",
+    "preco": 35.63,
+    "titulo": "Celular Brinquedo Recarregável Bebê | Educativo com Sons e Luzes, Substitui o Celular Real"
    },
    {
     "categoria": "outros",
@@ -67341,6 +67396,7 @@
     "id": "MLB18626757",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_865500-MLA99942056617_112025-F.jpg",
     "link": "https://meli.la/2kdJh6s",
+    "loja": "ml",
     "preco": 77.38,
     "titulo": "Triciclo Infantil Cardoso Totokinha Ariel Azul 1-3 Anos"
    },
@@ -67351,6 +67407,7 @@
     "id": "MLB68310966",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_787295-MLA109864640470_042026-F.jpg",
     "link": "https://meli.la/1W5NjJc",
+    "loja": "ml",
     "preco": 39.9,
     "titulo": "Caneta Marcadora Acrílica 36 Cores Canetinha Ponta Pincel Profissional Para Desenho Pintura Colorir Artesanato"
    },
@@ -67361,6 +67418,7 @@
     "id": "MLB27044594",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_918471-MLA100118722173_122025-F.jpg",
     "link": "https://meli.la/27LUDxU",
+    "loja": "ml",
     "preco": 21.6,
     "titulo": "Babador Em Silicone Com Pega-migalhas Verde Gumy Buba"
    },
@@ -67371,6 +67429,7 @@
     "id": "MLB60715129",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_643662-MLA95803848373_102025-F.jpg",
     "link": "https://meli.la/2zNxxPH",
+    "loja": "ml",
     "preco": 121.9,
     "titulo": "Banheira Dobrável Infantil Kidsneed Cinza com Termômetro"
    },
@@ -67381,6 +67440,7 @@
     "id": "MLB46557712",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_765902-MLA99386188350_112025-F.jpg",
     "link": "https://meli.la/15gwPUA",
+    "loja": "ml",
     "preco": 849.4,
     "titulo": "Trocador Dobrável para Bebê INICO com Proteção Lateral Porta-Fraldas Cinza"
    },
@@ -67391,6 +67451,7 @@
     "id": "MLB29038720",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_917033-MLA95394434468_102025-F.jpg",
     "link": "https://meli.la/1HfRzJP",
+    "loja": "ml",
     "preco": 75.77,
     "titulo": "Bolsa Mochila Maternidade Vira Berço Troca Bebê Porta Frauda Cor Cinza Desenho do tecido Liso"
    },
@@ -67401,6 +67462,7 @@
     "id": "MLB79107882",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_816294-MLA115945869746_092026-F.jpg",
     "link": "https://meli.la/2APPvJm",
+    "loja": "ml",
     "preco": 342.0,
     "titulo": "Banheira Dobrável Com Suporte e Porta Acessórios YPB888 Cinza Yuupi"
    },
@@ -67411,6 +67473,7 @@
     "id": "MLB45851506",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_620598-MLA111614059260_062026-F.jpg",
     "link": "https://meli.la/1ZwYU4C",
+    "loja": "ml",
     "preco": 58.24,
     "titulo": "Criança Mochila Segurança Anti Perda Com Bracelete Cor Amarelo"
    },
@@ -67421,6 +67484,7 @@
     "id": "MLB72901008",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_847840-MLA116500118433_082026-F.jpg",
     "link": "https://meli.la/2FcodwC",
+    "loja": "ml",
     "preco": 339.4,
     "titulo": "Banheira com Suporte Dobrável para Bebê Mini Assento Válvula de Esvaziamento 45 Litros Lisa Plástico Rígido At"
    },
@@ -67431,6 +67495,7 @@
     "id": "MLB61922175",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_740155-MLA97653162409_112025-F.jpg",
     "link": "https://meli.la/1aExvGd",
+    "loja": "ml",
     "preco": 72.69,
     "titulo": "Móbile Arco Musical Bebê Carrinho Berço Let's Play Maxi Baby"
    },
@@ -67441,6 +67506,7 @@
     "id": "MLB75656299",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_969385-MLA114960437177_072026-F.jpg",
     "link": "https://meli.la/2Cd81fJ",
+    "loja": "ml",
     "preco": 39.9,
     "titulo": "Brinquedo De Banho Bebê Mini Cascata Com Ventosa Sem Pilha Banheira Box Aquababy Maxi Baby - FLOR"
    },
@@ -67451,6 +67517,7 @@
     "id": "MLB80008917",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_826355-MLA118392136835_092026-F.jpg",
     "link": "https://meli.la/1ZFTWFJ",
+    "loja": "ml",
     "preco": 27.59,
     "titulo": "Aspirador Nasal Elétrico Epsilon Recarregável Azul para Bebê"
    },
@@ -67461,6 +67528,7 @@
     "id": "MLB72143098",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_855342-MLA112575977672_062026-F.jpg",
     "link": "https://meli.la/15gyWBy",
+    "loja": "ml",
     "preco": 393.82,
     "titulo": "Cadeira de Balanço Elétrica para Bebê, com Bluetooth, Mosquiteiro e Vibração"
    },
@@ -67471,6 +67539,7 @@
     "id": "MLB54276431",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_729035-MLA99938292437_112025-F.jpg",
     "link": "https://meli.la/2rm4pB4",
+    "loja": "ml",
     "preco": 326.0,
     "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
    },
@@ -67481,6 +67550,7 @@
     "id": "MLB44672426",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_700384-MLA99379664790_112025-F.jpg",
     "link": "https://meli.la/2ppVzCP",
+    "loja": "ml",
     "preco": 57.22,
     "titulo": "Tapete Educativo Interativo Teclado Musical - Verde"
    },
@@ -67491,8 +67561,20 @@
     "id": "MLB27978602",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_652078-MLA99600405536_122025-F.jpg",
     "link": "https://meli.la/1RrxuGb",
+    "loja": "ml",
     "preco": 26.87,
     "titulo": "Babador De Silicone Com Pega Migalhas Verde 15641 - Buba"
+   },
+   {
+    "categoria": "outros",
+    "de": 78.9,
+    "desconto": 0.583,
+    "id": "MLB76227639",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_602206-MLA115521014743_082026-F.jpg",
+    "link": "https://meli.la/2JnNyvo",
+    "loja": "ml",
+    "preco": 32.9,
+    "titulo": "Aspirador Nasal Elétrico Infantil Recarregável Sugador Nasal Bebê 6 Níveis de Sucção 2 Bicos Cabo USB Livre de"
    },
    {
     "categoria": "alimentacao",
@@ -67501,18 +67583,9 @@
     "id": "MLB68254657",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_603283-MLA110564450471_042026-F.jpg",
     "link": "https://meli.la/17jKtKM",
+    "loja": "ml",
     "preco": 53.94,
     "titulo": "Kit 2 Babador Estampado Atoalhado Em Tecido Para Bebe Menina Bege"
-   },
-   {
-    "categoria": "casa",
-    "de": 899.0,
-    "desconto": 0.4,
-    "id": "MLB73107704",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_626480-MLA115109711326_082026-F.jpg",
-    "link": "https://meli.la/2oKjxnh",
-    "preco": 539.4,
-    "titulo": "Berço Funcional Móveis Bela Americano 3 em 1 com Colchão e Rodízios Branco"
    },
    {
     "categoria": "passeio",
@@ -67521,6 +67594,7 @@
     "id": "MLB28131603",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_924558-MLA120363058695_102026-F.jpg",
     "link": "https://meli.la/1sMQwCz",
+    "loja": "ml",
     "preco": 89.9,
     "titulo": "Canguru de Bebê Aiebao Ergonômico Cinza 4 Posições Com Bolsos Ajustável"
    },
@@ -67531,6 +67605,7 @@
     "id": "MLB80306438",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_993575-MLA117363968210_102026-F.jpg",
     "link": "https://meli.la/2297YSi",
+    "loja": "ml",
     "preco": 164.08,
     "titulo": "Cadeira de Descanso Balanço Bebe AMR-7315 Musical L'AMOR Cor Azul"
    },
@@ -67541,18 +67616,9 @@
     "id": "MLB60427023",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_631919-MLA96297425070_102025-F.jpg",
     "link": "https://meli.la/1K3VQ2q",
+    "loja": "ml",
     "preco": 196.56,
     "titulo": "Banheira Plástica Acqua Trio Rose Galzerano"
-   },
-   {
-    "categoria": "higiene",
-    "de": 360.0,
-    "desconto": 0.528,
-    "id": "MLB68579630",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_952679-MLA111156305978_052026-F.jpg",
-    "link": "https://meli.la/1Hmg1S8",
-    "preco": 169.9,
-    "titulo": "Banheira De Bebê Dobrável Portátil Com Termômetro Almofada Flutuante e Baleia Pluggei Select Pluggkids Mu1p Co"
    },
    {
     "categoria": "escola",
@@ -67561,6 +67627,7 @@
     "id": "MLB74813550",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_832256-MLA114015834837_072026-F.jpg",
     "link": "https://meli.la/2T8poHe",
+    "loja": "ml",
     "preco": 159.89,
     "titulo": "Kit Mochila Infantil Disney Frozen Azul com Lancheira"
    },
@@ -67571,6 +67638,7 @@
     "id": "MLB52279765",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_730745-MLA87661564519_072025-F.jpg",
     "link": "https://meli.la/1U8N5vD",
+    "loja": "ml",
     "preco": 78.99,
     "titulo": "Assento Redutor Infantil Escada Para Vaso Sanitário Troninho Cor Azul Lisa"
    },
@@ -67581,6 +67649,7 @@
     "id": "MLB75505072",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_951714-MLA114762250048_082026-F.jpg",
     "link": "https://meli.la/1ZTUpWs",
+    "loja": "ml",
     "preco": 189.9,
     "titulo": "Suporte de Banho Infantil Ajustável Bebê em Pé Base Antiderrapante SekBem Verde"
    },
@@ -67591,6 +67660,7 @@
     "id": "MLB60947746",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_817012-MLA97119969207_112025-F.jpg",
     "link": "https://meli.la/1EWrmPW",
+    "loja": "ml",
     "preco": 487.59,
     "titulo": "Berço Americano 3 em 1 para Colchão 130x70cm Multimóveis 0527PA Madeirado/Branco"
    },
@@ -67601,6 +67671,7 @@
     "id": "MLB43646204",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_778686-MLA99447794164_112025-F.jpg",
     "link": "https://meli.la/34dnmxD",
+    "loja": "ml",
     "preco": 109.0,
     "titulo": "Kit Bolsa Maternidade Bambinelli Mommy Rosa-claro C/ Trocador"
    },
@@ -67611,6 +67682,7 @@
     "id": "MLB24647478",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_950359-MLA99487901484_112025-F.jpg",
     "link": "https://meli.la/2PWFurq",
+    "loja": "ml",
     "preco": 59.9,
     "titulo": "Andador Bebe Carrinho Infantil Treina Equilíbrio Zippy Toys Cor Vermelho"
    },
@@ -67621,6 +67693,7 @@
     "id": "MLB78704873",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_673552-MLA115596034822_092026-F.jpg",
     "link": "https://meli.la/2UvWs2P",
+    "loja": "ml",
     "preco": 136.9,
     "titulo": "Lixeira Para Fraldas Rister Baby 10l Anti-odor Com Tampa Branco"
    },
@@ -67631,6 +67704,7 @@
     "id": "MLB24233595",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_971014-MLA115365063083_072026-F.jpg",
     "link": "https://meli.la/26notwX",
+    "loja": "ml",
     "preco": 167.99,
     "titulo": "Bolsa Mochila Maternidade Lequeen Tradicional Multifuncional ReforçAda Azul Marinho Bolsa Maternidade Para Men"
    },
@@ -67641,6 +67715,7 @@
     "id": "MLB65896917",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_952958-MLA114390358396_082026-F.jpg",
     "link": "https://meli.la/1XZ2xMc",
+    "loja": "ml",
     "preco": 678.03,
     "titulo": "Berço Portátil Balanço Moises Sleepguard Cobed Bege Ragaluma Bege"
    },
@@ -67651,6 +67726,7 @@
     "id": "MLB42162531",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_877618-MLA116755920479_082026-F.jpg",
     "link": "https://meli.la/1c68yTx",
+    "loja": "ml",
     "preco": 78.9,
     "titulo": "Bicicleta de Equilíbrio Infantil Rosa 4 Rodas Sem Pedal Bebê MSP Kids, Primeira Bike para Criança a Partir de "
    },
@@ -67661,6 +67737,7 @@
     "id": "MLB46534809",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_869741-MLA105412578708_012026-F.jpg",
     "link": "https://meli.la/2XZCMTq",
+    "loja": "ml",
     "preco": 19.99,
     "titulo": "2 em 1 Shampoo e Condicionador Infantil JOHNSON’S 400ml"
    },
@@ -67671,6 +67748,7 @@
     "id": "MLB24635596",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_684048-MLA99589673884_122025-F.jpg",
     "link": "https://meli.la/1W8RsA3",
+    "loja": "ml",
     "preco": 20.0,
     "titulo": "Aspirador Nasal Buba Transparente Com Sucção Para Nariz Entupido Bebe"
    },
@@ -67681,6 +67759,7 @@
     "id": "MLB44954198",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_740080-MLA116638425891_082026-F.jpg",
     "link": "https://meli.la/1ZRs3iN",
+    "loja": "ml",
     "preco": 97.02,
     "titulo": "Mochila Infantil Kit para crianças Volta às aulas Vários estilos para meninos e meninas Grande capacidade refo"
    },
@@ -67691,6 +67770,7 @@
     "id": "MLB44017218",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_827223-MLA96140311143_102025-F.jpg",
     "link": "https://meli.la/2mUjWfa",
+    "loja": "ml",
     "preco": 114.89,
     "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Space"
    },
@@ -67701,6 +67781,7 @@
     "id": "MLB62979086",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_756438-MLA100841050889_122025-F.jpg",
     "link": "https://meli.la/1jqyq64",
+    "loja": "ml",
     "preco": 22.99,
     "titulo": "Trocador de Fralda Portátil Impermeável Malipan Safari Dobrável Cáqui"
    },
@@ -67711,6 +67792,7 @@
     "id": "MLB24208936",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_973923-MLA99918118901_112025-F.jpg",
     "link": "https://meli.la/28xGnDR",
+    "loja": "ml",
     "preco": 31.1,
     "titulo": "Shampoo Johnson's Baby Glicerina Hipoalergênico 750ml"
    },
@@ -67721,6 +67803,7 @@
     "id": "MLB80524536",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_956797-MLA119268829469_102026-F.jpg",
     "link": "https://meli.la/2UL6u6L",
+    "loja": "ml",
     "preco": 284.91,
     "titulo": "Carrinho Bebê Passeio Dobrável Leve Guarda Chuva Até 15kg - Cinza/Branco"
    },
@@ -67731,6 +67814,7 @@
     "id": "MLB45780583",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_810826-MLA91562773532_092025-F.jpg",
     "link": "https://meli.la/1K11jM2",
+    "loja": "ml",
     "preco": 110.0,
     "titulo": "Cercadinho Para Bebê Chiqueirinho Infantil Portátil Unissex Cor Azul Desenho Do Tecido Balão"
    },
@@ -67741,8 +67825,20 @@
     "id": "MLB54351561",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_856645-MLA109215224488_042026-F.jpg",
     "link": "https://meli.la/2wvpmGv",
+    "loja": "ml",
     "preco": 379.99,
     "titulo": "Berço 3 em 1 para Colchão 60 x 130 cm Multimóveis Branco"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 189.9,
+    "desconto": 0.49,
+    "id": "MLB66595119",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_659154-MLA107901202678_032026-F.jpg",
+    "link": "https://meli.la/2FDthRU",
+    "loja": "ml",
+    "preco": 96.9,
+    "titulo": "Bebê Boneca Reborn Menina Maddie Unicórnio Corpinho Silicone"
    },
    {
     "categoria": "alimentacao",
@@ -67751,6 +67847,7 @@
     "id": "MLB27344821",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_652694-MLA96101740983_102025-F.jpg",
     "link": "https://meli.la/1719RoA",
+    "loja": "ml",
     "preco": 106.05,
     "titulo": "Cadeira de Refeição Portátil Cosco Kids, Smart, Cinza"
    },
@@ -67761,6 +67858,7 @@
     "id": "MLB22974681",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_687710-MLA99456623672_112025-F.jpg",
     "link": "https://meli.la/25dF8SA",
+    "loja": "ml",
     "preco": 679.9,
     "titulo": "Travel System Duo, Cosco Kids, Reverse, 0 a 15kg, Preto Rajado"
    },
@@ -67771,6 +67869,7 @@
     "id": "MLB18392845",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_700377-MLA99930638257_112025-F.jpg",
     "link": "https://meli.la/189Unwc",
+    "loja": "ml",
     "preco": 49.9,
     "titulo": "Lenços Umedecidos Huggies Recém Nascido Pack C/4 - 192 Un"
    },
@@ -67781,6 +67880,7 @@
     "id": "MLB24070645",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_938116-MLA111193887117_052026-F.jpg",
     "link": "https://meli.la/1C8JuwK",
+    "loja": "ml",
     "preco": 531.04,
     "titulo": "Carrinho De Bebê Zap Compacto Dobrável - Burigotto, Metal Cobre"
    },
@@ -67791,6 +67891,7 @@
     "id": "MLB19970137",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_928226-MLA99462528060_112025-F.jpg",
     "link": "https://meli.la/2PJCTUP",
+    "loja": "ml",
     "preco": 518.9,
     "titulo": "Cadeirinha Cosco Kids, Progress, 0 a 36kg, Preto"
    },
@@ -67801,6 +67902,7 @@
     "id": "MLB62926546",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_760834-MLA100113185128_122025-F.jpg",
     "link": "https://meli.la/1HM1CU6",
+    "loja": "ml",
     "preco": 1177.0,
     "titulo": "Carrinho de Bebê Travel System Maxi Baby Elysian Cinza e Dourado com Moisés e Bebê Conforto"
    },
@@ -67811,8 +67913,20 @@
     "id": "MLB12706806",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_873321-MLA99481911382_112025-F.jpg",
     "link": "https://meli.la/1Qw4z9A",
+    "loja": "ml",
     "preco": 299.05,
     "titulo": "Cadeirinha Cosco Kids, Tour, 9 a 36 Kg, Cinza e Preto"
+   },
+   {
+    "categoria": "quarto",
+    "de": 70.0,
+    "desconto": 0.457,
+    "id": "MLB24446865",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_732807-MLA104900711722_012026-F.jpg",
+    "link": "https://meli.la/2W8W92K",
+    "loja": "ml",
+    "preco": 37.98,
+    "titulo": "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampada Cor Menina"
    },
    {
     "categoria": "outros",
@@ -67821,6 +67935,7 @@
     "id": "MLB17876092",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_759458-MLA109736226025_032026-F.jpg",
     "link": "https://meli.la/1vyezPy",
+    "loja": "ml",
     "preco": 29.99,
     "titulo": "Sabonete Líquido Glicerina Da Cabeça Aos Pés Johnson's Baby, 400ml"
    },
@@ -67831,6 +67946,7 @@
     "id": "MLB66266515",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_897733-MLA120432650447_102026-F.jpg",
     "link": "https://meli.la/32AWHfm",
+    "loja": "ml",
     "preco": 397.97,
     "titulo": "Berço Balanço Portátil Moises Com Mosquiteiro E Colchão Bebê Função Balanço Infantil Compacto Balançinho"
    },
@@ -67841,6 +67957,7 @@
     "id": "MLB68745107",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_839855-MLA110995574859_042026-F.jpg",
     "link": "https://meli.la/16zuMJc",
+    "loja": "ml",
     "preco": 399.99,
     "titulo": "Banheira Para Bebê Dobrável C/suporte Wish Branco Maxi Baby"
    },
@@ -67851,6 +67968,7 @@
     "id": "MLB61794290",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_666205-MLA109881359403_032026-F.jpg",
     "link": "https://meli.la/17iYotp",
+    "loja": "ml",
     "preco": 429.0,
     "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi Baby - CINZA"
    },
@@ -67861,6 +67979,7 @@
     "id": "MLB18392651",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_908623-MLA111032843377_042026-F.jpg",
     "link": "https://meli.la/2iDJHoN",
+    "loja": "ml",
     "preco": 34.25,
     "titulo": "Fralda Descartável Turma da Mônica Baby XG Pacote 42 Unidades"
    },
@@ -67871,6 +67990,7 @@
     "id": "MLB76227640",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_804217-MLA115521274267_082026-F.jpg",
     "link": "https://meli.la/2pe7nTW",
+    "loja": "ml",
     "preco": 31.9,
     "titulo": "Aspirador Nasal Elétrico Recarregável para Bebê, com 6 Níveis e 2 Bicos"
    },
@@ -67881,6 +68001,7 @@
     "id": "MLB29456492",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_906883-MLU77010610814_062024-F.jpg",
     "link": "https://meli.la/2NWv6uK",
+    "loja": "ml",
     "preco": 19.0,
     "titulo": "Lancheira Bolsa Térmica Feminina Marca Lemon Shark Cor Rosa"
    },
@@ -67891,6 +68012,7 @@
     "id": "MLB64951226",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_651741-MLA105820163589_012026-F.jpg",
     "link": "https://meli.la/2q8JkMn",
+    "loja": "ml",
     "preco": 42.0,
     "titulo": "Mochila Infantil Bolsa Menina Escolar Princesa Cor Preto Desenho Do Tecido Liso"
    },
@@ -67901,31 +68023,26 @@
     "id": "MLB62601482",
     "imagem": "https://http2.mlstatic.com/D_NQ_NP_888592-MLA99736995585_112025-F.jpg",
     "link": "https://meli.la/2sEDzhw",
+    "loja": "ml",
     "preco": 1393.19,
     "titulo": "Quarto De Bebê C/ Berço Americano Encanto Multimóveis Mp4585 Branco/off White"
-   },
-   {
-    "categoria": "passeio",
-    "de": 32.9,
-    "desconto": 0.271,
-    "id": "MLB54287362",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_718549-MLA99593266000_122025-F.jpg",
-    "link": "https://meli.la/2Z3EPAv",
-    "preco": 23.99,
-    "titulo": "Trava Clip Peitoral Cinto Segurança Assento Cadeirinha Bebê Preto Liso"
-   },
-   {
-    "categoria": "passeio",
-    "de": 1499.0,
-    "desconto": 0.377,
-    "id": "MLB44408859",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_642821-MLA100025575483_122025-F.jpg",
-    "link": "https://meli.la/2AtSY5j",
-    "preco": 934.29,
-    "titulo": "Carrinho de Bebê Safety 1st, Spark Splus, 0 meses a 22 kg, Black Graphite"
    }
   ]
  },
- "vitrine_assinatura": "bd2e95ef0f1466135faac362d7192669b94d22a4",
- "vitrine_publicada_em": "2026-11-14T15:16-03:00"
+ "vitrine_assinatura": "83b9392d4b8ba9e7daf2309a01881eda9c89666f",
+ "vitrine_publicada_em": "2026-11-14T16:16-03:00",
+ "vitrine_shopee": [
+  {
+   "a_partir": true,
+   "categoria": "brinquedo",
+   "de": null,
+   "em": "2026-11-14T16:25-03:00",
+   "id": "SHP22793967394",
+   "imagem": "https://cf.shopee.com.br/file/br-11134207-7r98o-m9g2lajue7g963",
+   "link": "https://s.shopee.com.br/3LSPJzqGb5",
+   "loja": "shopee",
+   "preco": 12.5,
+   "titulo": "Kit  Quebra Cabeças Educativos Infantil 3d Diy Feito À Mão Presente"
+  }
+ ]
 }
