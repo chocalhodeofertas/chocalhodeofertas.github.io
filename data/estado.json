@@ -8873,6 +8873,12 @@
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
   },
+  "PROMOTEC": {
+   "criado": "2026-11-14T13:04-03:00",
+   "post": 643,
+   "status": "ativo",
+   "validade": "2026-11-15T23:59-03:00"
+  },
   "QUEROPROMO25": {
    "criado": "2026-11-12T11:02-03:00",
    "post": 423,
@@ -8958,7 +8964,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5589,
+ "cupons_extra_ultimo:cupombr": 5590,
  "cupons_ml_ultimo": 6491,
  "descoberta_em": "2026-11-14T08:02-03:00",
  "descobertos": {
@@ -15366,7 +15372,7 @@
   },
   "2026-11-14": {
    "com_cupom": 1,
-   "cupons": 4,
+   "cupons": 5,
    "posts": 34,
    "shopee": 17
   }
@@ -18582,6 +18588,17 @@
     }
    ],
    "criado": "2026-11-14T12:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "643": {
+   "blocos": [
+    {
+     "codigo": "PROMOTEC",
+     "html": "<b>🎟️ PROMOTEC</b> 👉 <b>R$300 OFF</b>\nCompra mín.: R$2.699\n⏰ Válido até 15/11"
+    }
+   ],
+   "criado": "2026-11-14T13:04-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   }
