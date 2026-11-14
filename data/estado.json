@@ -6,6 +6,12 @@
    "pos": 13,
    "tipo": "catalogo"
   },
+  "MLB17876029": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
   "MLB17876060": {
    "ate": "2026-12-12",
    "categoria": "higiene",
@@ -18,29 +24,16 @@
    "pos": 14,
    "tipo": "catalogo"
   },
-  "MLB17876078": {
-   "ate": "2026-12-13",
-   "categoria": "higiene",
-   "pos": 4,
-   "tipo": "catalogo"
-  },
-  "MLB18010993": {
-   "ate": "2026-12-13",
-   "categoria": "game",
-   "pos": 2,
-   "regra": "game",
-   "tipo": "catalogo"
-  },
   "MLB18342131": {
    "ate": "2026-12-13",
    "categoria": "higiene",
    "pos": 12,
    "tipo": "catalogo"
   },
-  "MLB18436951": {
-   "ate": "2026-12-13",
+  "MLB18553141": {
+   "ate": "2026-12-14",
    "categoria": "quarto",
-   "pos": 8,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB18605733": {
@@ -70,11 +63,24 @@
    "regra": "game",
    "tipo": "catalogo"
   },
+  "MLB18917848": {
+   "ate": "2026-12-14",
+   "categoria": "game",
+   "pos": 5,
+   "regra": "game",
+   "tipo": "catalogo"
+  },
   "MLB19305160": {
    "ate": "2026-12-13",
    "categoria": "livro",
    "pos": 16,
    "regra": "infantil",
+   "tipo": "catalogo"
+  },
+  "MLB19315995": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 0,
    "tipo": "catalogo"
   },
   "MLB19525428": {
@@ -95,16 +101,29 @@
    "pos": 1,
    "tipo": "catalogo"
   },
-  "MLB19970138": {
-   "ate": "2026-12-12",
+  "MLB19970139": {
+   "ate": "2026-12-14",
    "categoria": "passeio",
-   "pos": 9,
+   "pos": 7,
+   "tipo": "catalogo"
+  },
+  "MLB20542768": {
+   "ate": "2026-12-14",
+   "categoria": "casa",
+   "pos": 7,
+   "regra": "infantil",
    "tipo": "catalogo"
   },
   "MLB20618866": {
    "ate": "2026-12-13",
    "categoria": "passeio",
    "pos": 13,
+   "tipo": "catalogo"
+  },
+  "MLB20969096": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB21333539": {
@@ -119,10 +138,23 @@
    "pos": 5,
    "tipo": "catalogo"
   },
-  "MLB22276797": {
-   "ate": "2026-12-13",
-   "categoria": "outros",
-   "pos": 1,
+  "MLB21908463": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 3,
+   "tipo": "catalogo"
+  },
+  "MLB22367418": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
+  "MLB22379833": {
+   "ate": "2026-12-14",
+   "categoria": "game",
+   "pos": 15,
+   "regra": "game",
    "tipo": "catalogo"
   },
   "MLB22384557": {
@@ -144,10 +176,28 @@
    "pos": 2,
    "tipo": "catalogo"
   },
+  "MLB22528368": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 10,
+   "tipo": "catalogo"
+  },
   "MLB22585951": {
    "ate": "2026-12-13",
    "categoria": "alimentacao",
    "pos": 2,
+   "tipo": "catalogo"
+  },
+  "MLB22839957": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 11,
+   "tipo": "catalogo"
+  },
+  "MLB22918403": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 14,
    "tipo": "catalogo"
   },
   "MLB23133161": {
@@ -155,6 +205,24 @@
    "categoria": "casa",
    "pos": 13,
    "regra": "infantil",
+   "tipo": "catalogo"
+  },
+  "MLB23490477": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
+  "MLB23534746": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 3,
+   "tipo": "catalogo"
+  },
+  "MLB23541950": {
+   "ate": "2026-12-14",
+   "categoria": "gestante",
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB23563569": {
@@ -170,16 +238,22 @@
    "pos": 4,
    "tipo": "catalogo"
   },
-  "MLB23800353": {
-   "ate": "2026-12-13",
-   "categoria": "outros",
-   "pos": 0,
-   "tipo": "catalogo"
-  },
   "MLB23858163": {
    "ate": "2026-12-13",
    "categoria": "higiene",
    "pos": 6,
+   "tipo": "catalogo"
+  },
+  "MLB23893374": {
+   "ate": "2026-12-14",
+   "categoria": "passeio",
+   "pos": 0,
+   "tipo": "catalogo"
+  },
+  "MLB24009281": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 10,
    "tipo": "catalogo"
   },
   "MLB24032582": {
@@ -194,9 +268,21 @@
    "pos": 12,
    "tipo": "catalogo"
   },
+  "MLB24074299": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 14,
+   "tipo": "catalogo"
+  },
   "MLB24214298": {
    "ate": "2026-12-13",
    "categoria": "alimentacao",
+   "pos": 2,
+   "tipo": "catalogo"
+  },
+  "MLB24219839": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
    "pos": 2,
    "tipo": "catalogo"
   },
@@ -215,6 +301,12 @@
   "MLB24639601": {
    "ate": "2026-12-13",
    "categoria": "higiene",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
+  "MLB24642265": {
+   "ate": "2026-12-14",
+   "categoria": "quarto",
    "pos": 5,
    "tipo": "catalogo"
   },
@@ -261,6 +353,13 @@
    "pos": 6,
    "tipo": "catalogo"
   },
+  "MLB25175860": {
+   "ate": "2026-12-14",
+   "categoria": "casa",
+   "pos": 5,
+   "regra": "infantil",
+   "tipo": "catalogo"
+  },
   "MLB25279369": {
    "ate": "2026-12-12",
    "categoria": "brinquedo",
@@ -291,6 +390,12 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB25978378": {
+   "ate": "2026-12-14",
+   "categoria": "quarto",
+   "pos": 4,
+   "tipo": "catalogo"
+  },
   "MLB26153401": {
    "ate": "2026-12-13",
    "categoria": "outros",
@@ -307,12 +412,6 @@
    "ate": "2026-12-13",
    "categoria": "alimentacao",
    "pos": 2,
-   "tipo": "catalogo"
-  },
-  "MLB26604880": {
-   "ate": "2026-12-13",
-   "categoria": "brinquedo",
-   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB26702230": {
@@ -347,6 +446,12 @@
    "pos": 3,
    "tipo": "catalogo"
   },
+  "MLB27572024": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 12,
+   "tipo": "catalogo"
+  },
   "MLB27621583": {
    "ate": "2026-12-13",
    "categoria": "casa",
@@ -360,28 +465,28 @@
    "pos": 7,
    "tipo": "catalogo"
   },
+  "MLB27824286": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 4,
+   "tipo": "catalogo"
+  },
   "MLB27925223": {
    "ate": "2026-12-12",
    "categoria": "alimentacao",
    "pos": 1,
    "tipo": "catalogo"
   },
-  "MLB28099524": {
-   "ate": "2026-12-13",
-   "categoria": "alimentacao",
-   "pos": 13,
-   "tipo": "catalogo"
-  },
-  "MLB28135869": {
-   "ate": "2026-12-12",
-   "categoria": "passeio",
-   "pos": 7,
-   "tipo": "catalogo"
-  },
   "MLB28203800": {
    "ate": "2026-12-12",
    "categoria": "gestante",
    "pos": 10,
+   "tipo": "catalogo"
+  },
+  "MLB28365779": {
+   "ate": "2026-12-14",
+   "categoria": "alimentacao",
+   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB28865327": {
@@ -403,10 +508,16 @@
    "pos": 0,
    "tipo": "catalogo"
   },
-  "MLB32420202": {
-   "ate": "2026-12-12",
-   "categoria": "brinquedo",
-   "pos": 9,
+  "MLB30430533": {
+   "ate": "2026-12-14",
+   "categoria": "quarto",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
+  "MLB32257502": {
+   "ate": "2026-12-14",
+   "categoria": "gestante",
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB32626622": {
@@ -427,17 +538,22 @@
    "pos": 14,
    "tipo": "catalogo"
   },
-  "MLB33997846": {
-   "ate": "2026-12-13",
-   "categoria": "game",
-   "pos": 3,
-   "regra": "game",
+  "MLB33998445": {
+   "ate": "2026-12-14",
+   "categoria": "gestante",
+   "pos": 10,
    "tipo": "catalogo"
   },
   "MLB34114750": {
    "ate": "2026-12-12",
    "categoria": "outros",
    "pos": 8,
+   "tipo": "catalogo"
+  },
+  "MLB34367122": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB34783927": {
@@ -456,12 +572,6 @@
    "ate": "2026-12-13",
    "categoria": "higiene",
    "pos": 9,
-   "tipo": "catalogo"
-  },
-  "MLB36133934": {
-   "ate": "2026-12-13",
-   "categoria": "gestante",
-   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB36738879": {
@@ -525,10 +635,16 @@
    "pos": 13,
    "tipo": "catalogo"
   },
-  "MLB39057177": {
-   "ate": "2026-12-13",
-   "categoria": "higiene",
-   "pos": 9,
+  "MLB39114334": {
+   "ate": "2026-12-14",
+   "categoria": "escola",
+   "pos": 8,
+   "tipo": "catalogo"
+  },
+  "MLB39228325": {
+   "ate": "2026-12-14",
+   "categoria": "quarto",
+   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB39386482": {
@@ -550,9 +666,27 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
+  "MLB40053439": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
   "MLB40123016": {
    "ate": "2026-12-13",
    "categoria": "higiene",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
+  "MLB40334935": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
+  "MLB40376520": {
+   "ate": "2026-12-14",
+   "categoria": "gestante",
    "pos": 5,
    "tipo": "catalogo"
   },
@@ -566,12 +700,6 @@
    "ate": "2026-12-13",
    "categoria": "passeio",
    "pos": 4,
-   "tipo": "catalogo"
-  },
-  "MLB40588416": {
-   "ate": "2026-12-13",
-   "categoria": "casa",
-   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB40740919": {
@@ -636,10 +764,22 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB43805570": {
+   "ate": "2026-12-14",
+   "categoria": "gestante",
+   "pos": 0,
+   "tipo": "catalogo"
+  },
   "MLB43854141": {
    "ate": "2026-12-13",
    "categoria": "brinquedo",
    "pos": 4,
+   "tipo": "catalogo"
+  },
+  "MLB44196987": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB44238374": {
@@ -658,13 +798,6 @@
    "ate": "2026-12-12",
    "categoria": "casa",
    "pos": 1,
-   "tipo": "catalogo"
-  },
-  "MLB44932986": {
-   "ate": "2026-12-13",
-   "categoria": "roupa",
-   "pos": 2,
-   "regra": "infantil",
    "tipo": "catalogo"
   },
   "MLB44958164": {
@@ -703,6 +836,13 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB45721155": {
+   "ate": "2026-12-14",
+   "categoria": "game",
+   "pos": 8,
+   "regra": "game",
+   "tipo": "catalogo"
+  },
   "MLB45722794": {
    "ate": "2026-12-12",
    "categoria": "passeio",
@@ -719,6 +859,19 @@
    "ate": "2026-12-12",
    "categoria": "gestante",
    "pos": 13,
+   "tipo": "catalogo"
+  },
+  "MLB45840555": {
+   "ate": "2026-12-14",
+   "categoria": "game",
+   "pos": 2,
+   "regra": "game",
+   "tipo": "catalogo"
+  },
+  "MLB45906189": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB45976810": {
@@ -743,13 +896,6 @@
    "ate": "2026-12-13",
    "categoria": "passeio",
    "pos": 5,
-   "tipo": "catalogo"
-  },
-  "MLB47312582": {
-   "ate": "2026-12-13",
-   "categoria": "casa",
-   "pos": 9,
-   "regra": "infantil",
    "tipo": "catalogo"
   },
   "MLB48895591": {
@@ -803,6 +949,18 @@
    "pos": 6,
    "tipo": "catalogo"
   },
+  "MLB51612361": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 14,
+   "tipo": "catalogo"
+  },
+  "MLB51652593": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
   "MLB51668028": {
    "ate": "2026-12-13",
    "categoria": "outros",
@@ -815,22 +973,28 @@
    "pos": 14,
    "tipo": "catalogo"
   },
-  "MLB51907387": {
-   "ate": "2026-12-13",
+  "MLB51911887": {
+   "ate": "2026-12-14",
    "categoria": "brinquedo",
-   "pos": 0,
+   "pos": 2,
+   "tipo": "catalogo"
+  },
+  "MLB51979690": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 8,
+   "tipo": "catalogo"
+  },
+  "MLB52361634": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB52820524": {
    "ate": "2026-12-13",
    "categoria": "gestante",
    "pos": 6,
-   "tipo": "catalogo"
-  },
-  "MLB52987632": {
-   "ate": "2026-12-12",
-   "categoria": "outros",
-   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB53205051": {
@@ -857,6 +1021,18 @@
    "pos": 3,
    "tipo": "catalogo"
   },
+  "MLB55422586": {
+   "ate": "2026-12-14",
+   "categoria": "passeio",
+   "pos": 9,
+   "tipo": "catalogo"
+  },
+  "MLB55683041": {
+   "ate": "2026-12-14",
+   "categoria": "passeio",
+   "pos": 7,
+   "tipo": "catalogo"
+  },
   "MLB55944167": {
    "ate": "2026-12-12",
    "categoria": "alimentacao",
@@ -866,6 +1042,12 @@
   "MLB56082251": {
    "ate": "2026-12-13",
    "categoria": "brinquedo",
+   "pos": 0,
+   "tipo": "catalogo"
+  },
+  "MLB56095158": {
+   "ate": "2026-12-14",
+   "categoria": "gestante",
    "pos": 0,
    "tipo": "catalogo"
   },
@@ -881,16 +1063,22 @@
    "pos": 1,
    "tipo": "catalogo"
   },
-  "MLB56231214": {
-   "ate": "2026-12-13",
-   "categoria": "brinquedo",
-   "pos": 1,
-   "tipo": "catalogo"
-  },
   "MLB57267660": {
    "ate": "2026-12-13",
    "categoria": "brinquedo",
    "pos": 4,
+   "tipo": "catalogo"
+  },
+  "MLB57344166": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
+  "MLB58202624": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB58204350": {
@@ -921,12 +1109,6 @@
   "MLB58826437": {
    "ate": "2026-12-13",
    "categoria": "higiene",
-   "pos": 3,
-   "tipo": "catalogo"
-  },
-  "MLB59002556": {
-   "ate": "2026-12-13",
-   "categoria": "outros",
    "pos": 3,
    "tipo": "catalogo"
   },
@@ -980,6 +1162,13 @@
    "pos": 5,
    "tipo": "catalogo"
   },
+  "MLB62003274": {
+   "ate": "2026-12-14",
+   "categoria": "game",
+   "pos": 1,
+   "regra": "game",
+   "tipo": "catalogo"
+  },
   "MLB62048290": {
    "ate": "2026-12-13",
    "categoria": "quarto",
@@ -992,10 +1181,10 @@
    "pos": 9,
    "tipo": "catalogo"
   },
-  "MLB62376706": {
-   "ate": "2026-12-13",
-   "categoria": "outros",
-   "pos": 14,
+  "MLB62219284": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB62448507": {
@@ -1023,6 +1212,12 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
+  "MLB62594516": {
+   "ate": "2026-12-14",
+   "categoria": "quarto",
+   "pos": 6,
+   "tipo": "catalogo"
+  },
   "MLB62596592": {
    "ate": "2026-12-13",
    "categoria": "quarto",
@@ -1035,10 +1230,28 @@
    "pos": 4,
    "tipo": "catalogo"
   },
+  "MLB62692699": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 3,
+   "tipo": "catalogo"
+  },
   "MLB62774314": {
    "ate": "2026-12-13",
    "categoria": "brinquedo",
    "pos": 6,
+   "tipo": "catalogo"
+  },
+  "MLB62978394": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
+  "MLB62978763": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB63477310": {
@@ -1054,22 +1267,29 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
-  "MLB63887390": {
-   "ate": "2026-12-12",
-   "categoria": "roupa",
+  "MLB63962629": {
+   "ate": "2026-12-14",
+   "categoria": "escola",
    "pos": 2,
    "tipo": "catalogo"
   },
-  "MLB63888248": {
-   "ate": "2026-12-12",
-   "categoria": "roupa",
-   "pos": 0,
+  "MLB63962761": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB64225956": {
    "ate": "2026-12-13",
    "categoria": "roupa",
    "pos": 2,
+   "tipo": "catalogo"
+  },
+  "MLB64883674": {
+   "ate": "2026-12-14",
+   "categoria": "esporte",
+   "pos": 8,
+   "regra": "infantil",
    "tipo": "catalogo"
   },
   "MLB64997746": {
@@ -1091,8 +1311,8 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
-  "MLB65457691": {
-   "ate": "2026-12-13",
+  "MLB65476462": {
+   "ate": "2026-12-14",
    "categoria": "esporte",
    "pos": 0,
    "regra": "infantil",
@@ -1104,10 +1324,28 @@
    "pos": 1,
    "tipo": "catalogo"
   },
+  "MLB65686975": {
+   "ate": "2026-12-14",
+   "categoria": "gestante",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
   "MLB65812073": {
    "ate": "2026-12-12",
    "categoria": "higiene",
    "pos": 6,
+   "tipo": "catalogo"
+  },
+  "MLB65951158": {
+   "ate": "2026-12-14",
+   "categoria": "casa",
+   "pos": 9,
+   "tipo": "catalogo"
+  },
+  "MLB66062610": {
+   "ate": "2026-12-14",
+   "categoria": "roupa",
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB66179945": {
@@ -1155,16 +1393,16 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
-  "MLB66995382": {
-   "ate": "2026-12-12",
+  "MLB67134244": {
+   "ate": "2026-12-14",
    "categoria": "alimentacao",
-   "pos": 11,
+   "pos": 10,
    "tipo": "catalogo"
   },
-  "MLB67485280": {
-   "ate": "2026-12-13",
-   "categoria": "brinquedo",
-   "pos": 11,
+  "MLB67159233": {
+   "ate": "2026-12-14",
+   "categoria": "roupa",
+   "pos": 0,
    "tipo": "catalogo"
   },
   "MLB67493294": {
@@ -1247,6 +1485,12 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB68877254": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 4,
+   "tipo": "catalogo"
+  },
   "MLB69009442": {
    "ate": "2026-12-12",
    "categoria": "roupa",
@@ -1278,23 +1522,16 @@
    "pos": 5,
    "tipo": "catalogo"
   },
+  "MLB69635522": {
+   "ate": "2026-12-14",
+   "categoria": "alimentacao",
+   "pos": 4,
+   "tipo": "catalogo"
+  },
   "MLB69648040": {
    "ate": "2026-12-13",
    "categoria": "outros",
    "pos": 2,
-   "tipo": "catalogo"
-  },
-  "MLB69687960": {
-   "ate": "2026-12-13",
-   "categoria": "casa",
-   "pos": 4,
-   "regra": "infantil",
-   "tipo": "catalogo"
-  },
-  "MLB69748766": {
-   "ate": "2026-12-12",
-   "categoria": "escola",
-   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB69836687": {
@@ -1303,10 +1540,16 @@
    "pos": 0,
    "tipo": "catalogo"
   },
-  "MLB70058387": {
-   "ate": "2026-12-13",
+  "MLB69925379": {
+   "ate": "2026-12-14",
+   "categoria": "escola",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
+  "MLB70023221": {
+   "ate": "2026-12-14",
    "categoria": "alimentacao",
-   "pos": 4,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB70245946": {
@@ -1327,6 +1570,12 @@
    "pos": 8,
    "tipo": "catalogo"
   },
+  "MLB72248406": {
+   "ate": "2026-12-14",
+   "categoria": "alimentacao",
+   "pos": 13,
+   "tipo": "catalogo"
+  },
   "MLB72397083": {
    "ate": "2026-12-13",
    "categoria": "brinquedo",
@@ -1339,10 +1588,28 @@
    "pos": 5,
    "tipo": "catalogo"
   },
+  "MLB72675682": {
+   "ate": "2026-12-14",
+   "categoria": "quarto",
+   "pos": 9,
+   "tipo": "catalogo"
+  },
   "MLB72683941": {
    "ate": "2026-12-12",
    "categoria": "roupa",
    "pos": 10,
+   "tipo": "catalogo"
+  },
+  "MLB72686279": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
+  "MLB72688713": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB72704230": {
@@ -1374,6 +1641,12 @@
    "ate": "2026-12-13",
    "categoria": "outros",
    "pos": 6,
+   "tipo": "catalogo"
+  },
+  "MLB72898518": {
+   "ate": "2026-12-14",
+   "categoria": "escola",
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB73404247": {
@@ -1430,10 +1703,22 @@
    "pos": 13,
    "tipo": "catalogo"
   },
-  "MLB74813550": {
-   "ate": "2026-12-12",
-   "categoria": "escola",
-   "pos": 2,
+  "MLB74828494": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
+  "MLB74907026": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 9,
+   "tipo": "catalogo"
+  },
+  "MLB75172234": {
+   "ate": "2026-12-14",
+   "categoria": "passeio",
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB75214967": {
@@ -1486,6 +1771,13 @@
    "regra": "game",
    "tipo": "catalogo"
   },
+  "MLB75627272": {
+   "ate": "2026-12-14",
+   "categoria": "escola",
+   "pos": 5,
+   "regra": "infantil",
+   "tipo": "catalogo"
+  },
   "MLB75659709": {
    "ate": "2026-12-13",
    "categoria": "quarto",
@@ -1504,14 +1796,20 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB75725312": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 8,
+   "tipo": "catalogo"
+  },
   "MLB75731972": {
    "ate": "2026-12-12",
    "categoria": "gestante",
    "pos": 4,
    "tipo": "catalogo"
   },
-  "MLB75752244": {
-   "ate": "2026-12-13",
+  "MLB75752246": {
+   "ate": "2026-12-14",
    "categoria": "higiene",
    "pos": 9,
    "tipo": "catalogo"
@@ -1552,18 +1850,6 @@
    "pos": 3,
    "tipo": "catalogo"
   },
-  "MLB77144500": {
-   "ate": "2026-12-13",
-   "categoria": "higiene",
-   "pos": 4,
-   "tipo": "catalogo"
-  },
-  "MLB77505415": {
-   "ate": "2026-12-13",
-   "categoria": "outros",
-   "pos": 13,
-   "tipo": "catalogo"
-  },
   "MLB77687455": {
    "ate": "2026-12-13",
    "categoria": "brinquedo",
@@ -1577,10 +1863,16 @@
    "regra": "game",
    "tipo": "catalogo"
   },
-  "MLB78182436": {
-   "ate": "2026-12-13",
+  "MLB78182435": {
+   "ate": "2026-12-14",
    "categoria": "brinquedo",
-   "pos": 4,
+   "pos": 5,
+   "tipo": "catalogo"
+  },
+  "MLB78189885": {
+   "ate": "2026-12-14",
+   "categoria": "higiene",
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB78203087": {
@@ -1593,6 +1885,12 @@
    "ate": "2026-12-13",
    "categoria": "brinquedo",
    "pos": 14,
+   "tipo": "catalogo"
+  },
+  "MLB78402369": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB78403092": {
@@ -1632,12 +1930,6 @@
    "pos": 9,
    "tipo": "catalogo"
   },
-  "MLB79315264": {
-   "ate": "2026-12-13",
-   "categoria": "alimentacao",
-   "pos": 11,
-   "tipo": "catalogo"
-  },
   "MLB79396270": {
    "ate": "2026-12-13",
    "categoria": "game",
@@ -1649,6 +1941,12 @@
    "ate": "2026-12-13",
    "categoria": "outros",
    "pos": 11,
+   "tipo": "catalogo"
+  },
+  "MLB79649272": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB79828895": {
@@ -1663,6 +1961,18 @@
    "pos": 7,
    "tipo": "catalogo"
   },
+  "MLB80147830": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 9,
+   "tipo": "catalogo"
+  },
+  "MLB80148175": {
+   "ate": "2026-12-14",
+   "categoria": "outros",
+   "pos": 12,
+   "tipo": "catalogo"
+  },
   "MLB80171700": {
    "ate": "2026-12-12",
    "categoria": "roupa",
@@ -1675,14 +1985,20 @@
    "pos": 14,
    "tipo": "catalogo"
   },
-  "MLB81215877": {
-   "ate": "2026-12-12",
+  "MLB80823637": {
+   "ate": "2026-12-14",
+   "categoria": "brinquedo",
+   "pos": 2,
+   "tipo": "catalogo"
+  },
+  "MLB81215875": {
+   "ate": "2026-12-14",
    "categoria": "outros",
-   "pos": 12,
+   "pos": 11,
    "tipo": "catalogo"
   }
  },
- "aguardando_link": 96,
+ "aguardando_link": 115,
  "areas_novas": true,
  "busca": {
   "itens": [
@@ -1765,6 +2081,10 @@
   "MLB12706806": [
    "Cadeirinha Cosco Kids, Tour, 9 a 36 Kg, Cinza e Preto",
    "https://http2.mlstatic.com/D_NQ_NP_873321-MLA99481911382_112025-F.jpg"
+  ],
+  "MLB15051867": [
+   "Controle joystick sem fio Sony PlayStation Dualshock 4 Wireless controller uefa champions league",
+   "https://http2.mlstatic.com/D_NQ_NP_997556-MLA52349180906_112022-F.jpg"
   ],
   "MLB15995410": [
    "Lenços Umedecidos Johnson's Baby Recém Nascido, 48 unidades",
@@ -1970,6 +2290,10 @@
    "Patinete Juvenil Rosa Com 2 Rodas Gel Mor Modelo Sensacional",
    "https://http2.mlstatic.com/D_NQ_NP_922404-MLA99960239175_112025-F.jpg"
   ],
+  "MLB18626757": [
+   "Triciclo Infantil Cardoso Totokinha Ariel Azul 1-3 Anos",
+   "https://http2.mlstatic.com/D_NQ_NP_865500-MLA99942056617_112025-F.jpg"
+  ],
   "MLB18630714": [
    "Colchão Physical Resistente Liso (12x70x150) - Ortobom",
    "https://http2.mlstatic.com/D_NQ_NP_698493-MLA96140087151_102025-F.jpg"
@@ -1981,6 +2305,10 @@
   "MLB18715374": [
    "Fraldas Pom Pom Protek P x 54 unidades",
    "https://http2.mlstatic.com/D_NQ_NP_669407-MLA99928202345_112025-F.jpg"
+  ],
+  "MLB18727385": [
+   "Granado Bebê Água de Limpeza Dermocalmante 500ml",
+   "https://http2.mlstatic.com/D_NQ_NP_975205-MLA99415106492_112025-F.jpg"
   ],
   "MLB18758275": [
    "Jogo Elden Ring Standard Edition - PlayStation 5 (Físico)",
@@ -2045,6 +2373,10 @@
   "MLB19305160": [
    "Libro O diário de uma princesa desastrada, Um Romance, de Lacerda, Maidy. Editorial Outro Planeta., tapa mole, en português (2022)",
    "https://http2.mlstatic.com/D_NQ_NP_960774-MLU50455305870_062022-F.jpg"
+  ],
+  "MLB19315994": [
+   "Shampoo Antiqueda Estimulante com Aminexil, Dercos Energy+ Vichy, 400g",
+   "https://http2.mlstatic.com/D_NQ_NP_681583-MLA117488015255_092026-F.jpg"
   ],
   "MLB19315995": [
    "Refil Shampoo Energizante Antiqueda Dercos 200ml Vichy",
@@ -2113,6 +2445,10 @@
   "MLB19683124": [
    "Plafon Led Luminaria Embutir Painel Teto 18w Avant",
    "https://http2.mlstatic.com/D_NQ_NP_625679-MLA116256084340_092026-F.jpg"
+  ],
+  "MLB19692998": [
+   "Controle joystick sem fio Sony PlayStation PS5 gray camuflado",
+   "https://http2.mlstatic.com/D_NQ_NP_744855-MLA95675768770_102025-F.jpg"
   ],
   "MLB19694274": [
    "creme Cetrilan pomada assadura Infantil Pele Delicada Bebê 120g TheraSkinw",
@@ -2218,6 +2554,10 @@
    "Buba, Naninha Macia Pelúcia Antialérgica - Leãozinho",
    "https://http2.mlstatic.com/D_NQ_NP_648527-MLA95960351171_102025-F.jpg"
   ],
+  "MLB21405887": [
+   "Pano De Boca Luxo Branco Bordado 35cmx35cm C/ 3 Unidades 100% Algodão Cremer",
+   "https://http2.mlstatic.com/D_NQ_NP_886488-MLA113150480338_072026-F.jpg"
+  ],
   "MLB21447303": [
    "Natura Mamãe E Bebê Água De Colônia 100 ml",
    "https://http2.mlstatic.com/D_NQ_NP_719824-MLA99924619129_112025-F.jpg"
@@ -2225,6 +2565,10 @@
   "MLB21466956": [
    "Colônia Refrescante Lavanda Para Bebês Johnson's Baby, 400ml",
    "https://http2.mlstatic.com/D_NQ_NP_819092-MLA96870761653_102025-F.jpg"
+  ],
+  "MLB21484539": [
+   "Pelúcia De Coala Treme-treme Com Chocalho E Buzina Buba",
+   "https://http2.mlstatic.com/D_NQ_NP_924371-MLA95524228624_102025-F.jpg"
   ],
   "MLB21719311": [
    "Bola Plush Com Chocalho Multicor Buba",
@@ -2438,6 +2782,10 @@
    "Copo Americano Copo Nadir kit 24 unidades 190ml",
    "https://http2.mlstatic.com/D_NQ_NP_925975-MLA117751158469_092026-F.jpg"
   ],
+  "MLB23420837": [
+   "Berço 3 em 1 com Colchão D18 Incluso vira sofá e minicama 3 anos de garantia Multimóveis MP0527C Branco",
+   "https://http2.mlstatic.com/D_NQ_NP_668315-MLU71454637830_092023-F.jpg"
+  ],
   "MLB23480808": [
    "Laptop Infantil Educativo Spider Man Candide",
    "https://http2.mlstatic.com/D_NQ_NP_715063-MLA108928458188_032026-F.jpg"
@@ -2534,6 +2882,10 @@
    "Cadeira De Alimentação Portátil Bebê 3 em 1 Vira Booster Bandeja Dupla Removível Zest Maxi Baby",
    "https://http2.mlstatic.com/D_NQ_NP_890977-MLA119415862122_112026-F.jpg"
   ],
+  "MLB23883011": [
+   "Tinta Acrilex PVA Fosca 100ml Cinza Lunar Artesanato Madeira Papel",
+   "https://http2.mlstatic.com/D_NQ_NP_960096-MLA104778103588_012026-F.jpg"
+  ],
   "MLB23893374": [
    "Travel System Cosco Kids, Reverse, 0 a 15kg, Rosa Rajado",
    "https://http2.mlstatic.com/D_NQ_NP_958317-MLA99956261033_112025-F.jpg"
@@ -2625,6 +2977,10 @@
   "MLB24219839": [
    "Totokinha Cardoso Azul – Triciclo Infantil Sport 3 em 1 Super Divertido Seguro e Resistente",
    "https://http2.mlstatic.com/D_NQ_NP_914232-MLA99981969587_112025-F.jpg"
+  ],
+  "MLB24233595": [
+   "Bolsa Mochila Maternidade Lequeen Tradicional Multifuncional ReforçAda Azul Marinho Bolsa Maternidade Para Menino E Menina Kit Bolsa Maternidade Luxo Azul Marinho Bolsa Maternidade Grande 17L",
+   "https://http2.mlstatic.com/D_NQ_NP_971014-MLA115365063083_072026-F.jpg"
   ],
   "MLB24275342": [
    "Lápis De Escrever Super Soft Black Faber-castell",
@@ -3026,6 +3382,10 @@
    "Kit C/50 Escovas De Dente Macia Adulto Dentista Atacado",
    "https://http2.mlstatic.com/D_NQ_NP_836392-MLA99925026327_112025-F.jpg"
   ],
+  "MLB26264442": [
+   "Buba Cobertor Manta Estrelinhas Cor Rosa",
+   "https://http2.mlstatic.com/D_NQ_NP_892435-MLA100077750465_122025-F.jpg"
+  ],
   "MLB26282641": [
    "Patinhos Coloridos Brinquedo De Banho Bebê Buba 6 Peças",
    "https://http2.mlstatic.com/D_NQ_NP_603237-MLA112192157709_052026-F.jpg"
@@ -3158,6 +3518,10 @@
    "Huggies Colônia Extra Suave Sem Álcool Hipoalegênica 100 ml",
    "https://http2.mlstatic.com/D_NQ_NP_896995-MLA116124106381_082026-F.jpg"
   ],
+  "MLB27150263": [
+   "Skate Elétrico Hoverboard Polegadas 6.5 Rosa Camuflado Brinovar",
+   "https://http2.mlstatic.com/D_NQ_NP_845642-MLA109035429430_032026-F.jpg"
+  ],
   "MLB27171678": [
    "Brinquedo Banho Baleia De Corda Brinquedos Para Piscina Buba",
    "https://http2.mlstatic.com/D_NQ_NP_641113-MLA100086248007_122025-F.jpg"
@@ -3197,6 +3561,10 @@
   "MLB27390175": [
    "Toalha Compacta De Secagem Rápida 80x130cm Cor Verde Decathlon Nabaiji",
    "https://http2.mlstatic.com/D_NQ_NP_789344-MLA99513242850_112025-F.jpg"
+  ],
+  "MLB27420583": [
+   "Andador Infantil Styllbaby Soft Way Antiqueda Musical Com Brinquedos 6-12 Meses Até 12Kg INMETRO Meninos e Meninas",
+   "https://http2.mlstatic.com/D_NQ_NP_724907-MLA106388650638_022026-F.jpg"
   ],
   "MLB27424973": [
    "Cadeira de Refeição Portátil Cosco Kids, Smart, Gelo",
@@ -3265,6 +3633,10 @@
   "MLB27977662": [
    "Sacos Esterilizadores para Micro-ondas Clingo Zoo, Kit com 5 Unidades",
    "https://http2.mlstatic.com/D_NQ_NP_701020-MLA120765821509_112026-F.jpg"
+  ],
+  "MLB27978602": [
+   "Babador De Silicone Com Pega Migalhas Verde 15641 - Buba",
+   "https://http2.mlstatic.com/D_NQ_NP_652078-MLA99600405536_122025-F.jpg"
   ],
   "MLB28001568": [
    "Andador Infantil Musical Para Bebê Empurrador Compacto 3 Ajustes de Altura La Bamba Maxi Baby - azul",
@@ -3374,6 +3746,10 @@
    "Andador Infantil Musical Para Bebê Megaluxo Jumbo Baby Azul",
    "https://http2.mlstatic.com/D_NQ_NP_777937-MLA108911909976_032026-F.jpg"
   ],
+  "MLB28903070": [
+   "Huggies Creme Preventivo de Assaduras 30g Pele Protegida",
+   "https://http2.mlstatic.com/D_NQ_NP_625309-MLA99349420412_112025-F.jpg"
+  ],
   "MLB28992390": [
    "Bomba Tira Leite Materno Elétrica Portátil Extratora Amamentação Mãos Livres Sem BPA Coletor Sugador Bombinha Peito 3 Modos 9 Níveis de Sucção Recarregável Silenciosa Display Digital - Fergusom",
    "https://http2.mlstatic.com/D_NQ_NP_622220-MLA117869877176_102026-F.jpg"
@@ -3446,6 +3822,10 @@
    "Lenços Pampers Cuidado de Bebê 48 Unidades",
    "https://http2.mlstatic.com/D_NQ_NP_628309-MLA95692798560_102025-F.jpg"
   ],
+  "MLB29692872": [
+   "Escova de Dentes Infantil Kess Extra Macia Azul Anatômica 6 Meses a 2 Anos",
+   "https://http2.mlstatic.com/D_NQ_NP_969926-MLA99341953152_112025-F.jpg"
+  ],
   "MLB29721710": [
    "Kit Nutri Rose Shampoo 250ml + Cond 125ml + Leave-in 30ml",
    "https://http2.mlstatic.com/D_NQ_NP_978551-MLA112195393513_052026-F.jpg"
@@ -3469,6 +3849,10 @@
   "MLB30018475": [
    "Hipoglós Creme Preventivo de Assaduras, 120g",
    "https://http2.mlstatic.com/D_NQ_NP_659536-MLA100117141305_122025-F.jpg"
+  ],
+  "MLB30203999": [
+   "Berço Cosco Kids, Nanny, 0 a 18kg, Azul Rajado",
+   "https://http2.mlstatic.com/D_NQ_NP_839564-MLA100032345515_122025-F.jpg"
   ],
   "MLB30430533": [
    "Colchão Berço Prorelax D18 Branco Para Bebê, 70 x 130 cm - Prorelax",
@@ -3533,6 +3917,10 @@
   "MLB32420202": [
    "Buba, Chocalho Mordedor BPA Free - Coelhinho",
    "https://http2.mlstatic.com/D_NQ_NP_792615-MLA100091829771_122025-F.jpg"
+  ],
+  "MLB32438392": [
+   "Colchão Para Berço Liso Branco 130 X 60 X 10 Cm D18 Prorelax",
+   "https://http2.mlstatic.com/D_NQ_NP_658693-MLA106906339926_022026-F.jpg"
   ],
   "MLB32469560": [
    "Cadeira de Descanso e Balanço Bebê Elétrica Snug - Maxi Baby",
@@ -3730,6 +4118,10 @@
    "Vittak 10 Trava Gaveta Armário Segurança Protetor Proteção Bebe Kit",
    "https://http2.mlstatic.com/D_NQ_NP_709884-MLA111499892755_052026-F.jpg"
   ],
+  "MLB36622876": [
+   "Chupeta Silicone Bebê Buba Comfort Ursinho 0 A 6m Com Tampa",
+   "https://http2.mlstatic.com/D_NQ_NP_640717-MLA99948360923_112025-F.jpg"
+  ],
   "MLB36698749": [
    "Skate Iniciante Completo Esqueite Desenho Skat Spider Aranha",
    "https://http2.mlstatic.com/D_NQ_NP_919608-MLA99475347078_112025-F.jpg"
@@ -3749,6 +4141,10 @@
   "MLB36843519": [
    "Kit 100 Pulseiras Neon Balada Brilho Fluorescente Festa",
    "https://http2.mlstatic.com/D_NQ_NP_812929-MLA100074786831_122025-F.jpg"
+  ],
+  "MLB36872182": [
+   "Bicicletinha De Equilíbrio Para Bebê Buba 4 Rodas Bike Cor Rosa",
+   "https://http2.mlstatic.com/D_NQ_NP_650838-MLA99529732698_122025-F.jpg"
   ],
   "MLB36933476": [
    "Capa Transparente Trocador Anatômico Bebê 71x57cm Polipropileno",
@@ -3946,6 +4342,10 @@
    "Kit Escolar Mochila De Rodinhas C Lancheira Estojo Unicórnio Cor Roxo",
    "https://http2.mlstatic.com/D_NQ_NP_682483-MLA120763376117_112026-F.jpg"
   ],
+  "MLB39156395": [
+   "Almofada Para Amamentação Feeding G",
+   "https://http2.mlstatic.com/D_NQ_NP_989397-MLA95666849580_102025-F.jpg"
+  ],
   "MLB39228325": [
    "Berço Cosco Kids, Nanny, 0 a 18kg, Preto Mescla",
    "https://http2.mlstatic.com/D_NQ_NP_815775-MLA96100703877_102025-F.jpg"
@@ -4065,6 +4465,10 @@
   "MLB40376520": [
    "Almofada Para Amamentação Feeding R",
    "https://http2.mlstatic.com/D_NQ_NP_615991-MLA115447732532_082026-F.jpg"
+  ],
+  "MLB40461064": [
+   "Kit Higiene Cuidados Saúde Bebê Recém Nascido 13pc Cor Azul",
+   "https://http2.mlstatic.com/D_NQ_NP_959833-MLA110242516310_052026-F.jpg"
   ],
   "MLB40479313": [
    "Mamadeira Easy Flow Nuvem 120ml Anticólica Azul Buba",
@@ -4293,6 +4697,10 @@
   "MLB43756367": [
    "Kit Berço Menina Menino Protetor Trança Com Saia 6 Peças Cor Elefantinho Rosa",
    "https://http2.mlstatic.com/D_NQ_NP_945377-MLA95395151234_102025-F.jpg"
+  ],
+  "MLB43774506": [
+   "Kit Mala Maternidade Bolsa 5 Safari Porta Mamadeira Cor Azul-celeste Desenho Do Tecido Leão",
+   "https://http2.mlstatic.com/D_NQ_NP_908888-MLA100047947985_122025-F.jpg"
   ],
   "MLB43797034": [
    "Jogo Lençol Casal 3pç 400 Fios Hipercal Conforto Macio Cor Bordô Desenho do tecido Liso",
@@ -4546,6 +4954,10 @@
    "Trocador Portatil Acolchoado Bebe Com Porta Fraldas Bolsa Cor Esporte Xadrez",
    "https://http2.mlstatic.com/D_NQ_NP_732489-MLA100080320305_122025-F.jpg"
   ],
+  "MLB45780583": [
+   "Cercadinho Para Bebê Chiqueirinho Infantil Portátil Unissex Cor Azul Desenho Do Tecido Balão",
+   "https://http2.mlstatic.com/D_NQ_NP_810826-MLA91562773532_092025-F.jpg"
+  ],
   "MLB45786394": [
    "Bomba Tirar Leite Materno Elétrica Bombinha Extratora Tatudeboa Cor Branco",
    "https://http2.mlstatic.com/D_NQ_NP_732412-MLA100080533655_122025-F.jpg"
@@ -4622,6 +5034,10 @@
    "Portão Segurança Bebê Cachorro Sem Furo Ajustável 68 a 83cm Branco Extensor Incluso Proteção Escada e Porta",
    "https://http2.mlstatic.com/D_NQ_NP_969815-MLA111332779069_052026-F.jpg"
   ],
+  "MLB46480472": [
+   "Edredom Hipoalergênico para Berço Americano Azul 130x70 cm Lavável",
+   "https://http2.mlstatic.com/D_NQ_NP_673975-MLA96681589013_102025-F.jpg"
+  ],
   "MLB46531755": [
    "Mochila Maternidade Menino(a) Bolsa De Costas Passeio Creche Cor Safari Desenho do tecido Desenho",
    "https://http2.mlstatic.com/D_NQ_NP_845444-MLA100084592467_122025-F.jpg"
@@ -4633,6 +5049,10 @@
   "MLB46546444": [
    "Aquecedor de Mamadeira Momcozy Inteligente 6 em 1, Para Leite e Esterilização",
    "https://http2.mlstatic.com/D_NQ_NP_758145-MLA99366526214_112025-F.jpg"
+  ],
+  "MLB46557712": [
+   "Trocador Dobrável para Bebê INICO com Proteção Lateral Porta-Fraldas Cinza",
+   "https://http2.mlstatic.com/D_NQ_NP_765902-MLA99386188350_112025-F.jpg"
   ],
   "MLB46559909": [
    "Sling de Vestir Canguru Ergonômico Yulababy para Bebê 0 a 24 Meses, Preto",
@@ -4785,6 +5205,10 @@
   "MLB49357605": [
    "Trocador De Fraldas Portátil Impermeavel Com Bolso Cor Savana",
    "https://http2.mlstatic.com/D_NQ_NP_978472-MLA100067070359_122025-F.jpg"
+  ],
+  "MLB49362883": [
+   "Brinquedo para Bebês Cachorrinho Aprende Comigo Fisher-Price",
+   "https://http2.mlstatic.com/D_NQ_NP_712626-MLA99888968283_112025-F.jpg"
   ],
   "MLB49524685": [
    "Buba, Copo Treinamento 360o Antivazamento Infanti Com Alça R Rosa Liso",
@@ -4965,6 +5389,10 @@
   "MLB52018108": [
    "Protetor De Borda Quina Afiada Fita Dupla Face Flexível 2m Cor Marrom",
    "https://http2.mlstatic.com/D_NQ_NP_877964-MLA96648615555_102025-F.jpg"
+  ],
+  "MLB52200756": [
+   "Kit 18 Tapete Emborrachado Tatame Eva Infantil Grosso 10mm Linha Premium Bebê Branco/Azul",
+   "https://http2.mlstatic.com/D_NQ_NP_678428-MLA99701023476_122025-F.jpg"
   ],
   "MLB52279320": [
    "Termômetro Digital Portátil Para Banheira Bebê Infantil Cor Preto",
@@ -5258,6 +5686,10 @@
    "Cinta Para Gravida Apoio De Barriga De Gestante Faixa Alça Cor Preto Tamanho Gg",
    "https://http2.mlstatic.com/D_NQ_NP_764370-MLA99841195625_112025-F.jpg"
   ],
+  "MLB56100259": [
+   "Boné New Era 9TWENTY Los Angeles Cor Preto",
+   "https://http2.mlstatic.com/D_NQ_NP_766279-MLA92029731880_092025-F.jpg"
+  ],
   "MLB56117350": [
    "Boné New Era Aba Curva 940 Ny Yankees Preto Unissex Classico Tamanho Un",
    "https://http2.mlstatic.com/D_NQ_NP_640680-MLA99979796829_112025-F.jpg"
@@ -5265,6 +5697,10 @@
   "MLB56136925": [
    "Toalha De Banho Infantil Com Capuz Soft Bublim Baby Cor Cinza",
    "https://http2.mlstatic.com/D_NQ_NP_746487-MLA97117630221_112025-F.jpg"
+  ],
+  "MLB56215148": [
+   "Carrinho Passeio Infantil Empurrador Criança Bebê Andador JustFun Brinquedos",
+   "https://http2.mlstatic.com/D_NQ_NP_604392-MLA119795183135_102026-F.jpg"
   ],
   "MLB56231214": [
    "Patins 4 Rodas Ajustável Rosa DM Toys com Proteção Infantil 30-33",
@@ -5309,6 +5745,10 @@
   "MLB57045468": [
    "Colar Âmbar Para Bebês Com Certificado - Infantil",
    "https://http2.mlstatic.com/D_NQ_NP_904384-MLA99895302847_112025-F.jpg"
+  ],
+  "MLB57053149": [
+   "Cinta Para Gravida Apoio De Barriga De Gestante Faixa Alça Cor Preto Tamanho M",
+   "https://http2.mlstatic.com/D_NQ_NP_699486-MLA92878670858_092025-F.jpg"
   ],
   "MLB57071349": [
    "Cercadinho Infantil Cercado Bebê Criança Chiqueirinho Seguro Hexagonal JustFun Brinquedos Cinza Rosa Azul",
@@ -5494,6 +5934,10 @@
    "Kit Ping Pong Raquete Rede Retrátil Mesa Tênis Portátil Ultshop Ferragens",
    "https://http2.mlstatic.com/D_NQ_NP_862731-MLA99898072617_112025-F.jpg"
   ],
+  "MLB60130684": [
+   "Barraca Túnel Infantil 3x1 Azul Songyi com Piscina de Bolinhas e Basquete",
+   "https://http2.mlstatic.com/D_NQ_NP_700626-MLA96679619885_102025-F.jpg"
+  ],
   "MLB60257806": [
    "Mesa De Jantar 120x80,7cm Tampo Com Vidro 4 Cadeiras Fg",
    "https://http2.mlstatic.com/D_NQ_NP_916405-MLA96651906215_102025-F.jpg"
@@ -5662,6 +6106,10 @@
    "Bicicleta De Equilíbrio Infantil Andador Sem Pedal 4 Rodas Amarelo",
    "https://http2.mlstatic.com/D_NQ_NP_757979-MLA98071198818_112025-F.jpg"
   ],
+  "MLB62250973": [
+   "Triciclo Infantil Cardoso Toys Totokinha Sport Com Buzina Azul",
+   "https://http2.mlstatic.com/D_NQ_NP_671578-MLA98618766349_112025-F.jpg"
+  ],
   "MLB62296908": [
    "Capa De Tecido - Trocador Americano Anatomico Com Ziper Cor Qual Número De Estampa Deseja",
    "https://http2.mlstatic.com/D_NQ_NP_971336-MLA98296212178_112025-F.jpg"
@@ -5673,6 +6121,10 @@
   "MLB62331588": [
    "Portão de Segurança Pet Útil Mini Ajustável, para Cães Pequenos e Bebês, Preto",
    "https://http2.mlstatic.com/D_NQ_NP_764279-MLA113674062635_062026-F.jpg"
+  ],
+  "MLB62367865": [
+   "Kit 10 Balões Vinil 38cm Liso Diversas Cores Decoração Festa",
+   "https://http2.mlstatic.com/D_NQ_NP_888768-MLA98945531737_112025-F.jpg"
   ],
   "MLB62376706": [
    "Trava Para Cinto De Segurança Cadeirinha Preto Safety 1st Liso",
@@ -5733,6 +6185,10 @@
   "MLB62601482": [
    "Quarto De Bebê C/ Berço Americano Encanto Multimóveis Mp4585 Branco/off White",
    "https://http2.mlstatic.com/D_NQ_NP_888592-MLA99736995585_112025-F.jpg"
+  ],
+  "MLB62601676": [
+   "Quarto de Bebê Completo com Berço Americano 3 em 1 p/Colchão 130x70cm Encanto Multimóveis MP4581 Branco",
+   "https://http2.mlstatic.com/D_NQ_NP_628638-MLA99737006677_112025-F.jpg"
   ],
   "MLB62645299": [
    "Mesa de Atividades Infantil 2 em 1 com Cadeira Orelhinha para Blocos de Montar e Desenhar Rosa",
@@ -6121,6 +6577,10 @@
   "MLB65614481": [
    "Suporte Apoio De Cabeça Carro Protetor E Segurança Infantil Cadeirinha Preto Sumo",
    "https://http2.mlstatic.com/D_NQ_NP_752809-MLA106600427426_022026-F.jpg"
+  ],
+  "MLB65661790": [
+   "Bolsa de Bebê Saída Maternidade Mochila E Trocador Grande Menino Azul Ric Deveras",
+   "https://http2.mlstatic.com/D_NQ_NP_931780-MLA107290983329_022026-F.jpg"
   ],
   "MLB65686975": [
    "Bolsa Maternidade Menino Menina Mochila Trocador Ric Deveras Rosa-claro",
@@ -6858,6 +7318,10 @@
    "Toalha De Bebe Infantil Macia Com Capuz Grande Forrada Cor Rosa",
    "https://http2.mlstatic.com/D_NQ_NP_700435-MLA111726762652_062026-F.jpg"
   ],
+  "MLB72678690": [
+   "Conjunto Infantil Blusa Sunga Proteção Solar Uv Surfista Cor Azul-celeste Tamanho 2",
+   "https://http2.mlstatic.com/D_NQ_NP_639259-MLA111727207648_062026-F.jpg"
+  ],
   "MLB72683941": [
    "Tiara Daminha De Honra Noiva Coroa Flores Batizado Perola Conjunto Tiara E Bracelete Azul",
    "https://http2.mlstatic.com/D_NQ_NP_963053-MLA112816728893_062026-F.jpg"
@@ -7110,6 +7574,10 @@
    "Maiô Natação Infantil Biquíni Manga Longa Proteção Solar Uv Cor Água Tamanho 4",
    "https://http2.mlstatic.com/D_NQ_NP_719686-MLA112427993532_062026-F.jpg"
   ],
+  "MLB74341993": [
+   "Kit Mochila Escolar UINNATE 3 Peças Rosa, Com Lancheira e Estojo Impermeável",
+   "https://http2.mlstatic.com/D_NQ_NP_715147-MLA112441799380_062026-F.jpg"
+  ],
   "MLB74347622": [
    "Casinha Educativa Didática Interativa Com Acessórios De Encaixar Primeira Infância",
    "https://http2.mlstatic.com/D_NQ_NP_758122-MLA113619398947_062026-F.jpg"
@@ -7190,6 +7658,10 @@
    "Tapete De Atividades Bebê Piano Musical com 5 Brinquedos Interativos Happy Maxi Baby - Verde",
    "https://http2.mlstatic.com/D_NQ_NP_811423-MLA112855392806_072026-F.jpg"
   ],
+  "MLB74907028": [
+   "Tapete De Atividades Bebê Piano Musical com 5 Brinquedos Interativos Happy Maxi Baby - Azul",
+   "https://http2.mlstatic.com/D_NQ_NP_801932-MLA114056829029_072026-F.jpg"
+  ],
   "MLB74907692": [
    "Cercadinho Infantil De Atividades Mini Sport Com Futebol e Basquete - Kababy",
    "https://http2.mlstatic.com/D_NQ_NP_908216-MLA114057160941_072026-F.jpg"
@@ -7210,6 +7682,10 @@
    "Maiô Infantil Biquíni Manga Longa Proteção Solar Uv Praia Cor Ciano Tamanho 10",
    "https://http2.mlstatic.com/D_NQ_NP_784062-MLA113004360058_072026-F.jpg"
   ],
+  "MLB75034564": [
+   "Capacete de Proteção para Bebê isBOM, Rosa-claro com Rosto Sorridente Ajustável",
+   "https://http2.mlstatic.com/D_NQ_NP_604997-MLA113005620582_072026-F.jpg"
+  ],
   "MLB75172234": [
    "Carrinho de Bebê Stillo Supremo Rosa Gatinhos, de Passeio com Função Berço e Até 15 kg",
    "https://http2.mlstatic.com/D_NQ_NP_664282-MLA114277049153_072026-F.jpg"
@@ -7229,6 +7705,10 @@
   "MLB75319243": [
    "Bicicleta De Equilibrio Infantil 4 Rodas Sem Pedal Buba Cor Marrom",
    "https://http2.mlstatic.com/D_NQ_NP_706172-MLA114334632195_072026-F.jpg"
+  ],
+  "MLB75371752": [
+   "Barraca Infantil Rosa Toca Túnel 3 X 1 Cesta Basquete Barbie Rosa",
+   "https://http2.mlstatic.com/D_NQ_NP_873868-MLA113183448130_072026-F.jpg"
   ],
   "MLB75373452": [
    "Suporte Tablet Celular P/ Banco Carro Bebê Criança Organizador Encosto garrafa d'água brinquedo sacola viagem DIMYS BATH HOME",
@@ -7546,6 +8026,10 @@
    "LMKB Grade Proteção Cama Idoso E Barra Apoio Dobrável Para Cama",
    "https://http2.mlstatic.com/D_NQ_NP_872390-MLA115091436670_082026-F.jpg"
   ],
+  "MLB77871954": [
+   "Penico Troninho Infantil Com Tampa Para Desfralde – Azul",
+   "https://http2.mlstatic.com/D_NQ_NP_947478-MLA115108176840_082026-F.jpg"
+  ],
   "MLB77981385": [
    "Banheira Trocador Dobrável Termômetro Aloha Maxi Baby",
    "https://http2.mlstatic.com/D_NQ_NP_601188-MLA121131973993_112026-F.jpg"
@@ -7609,6 +8093,10 @@
   "MLB78301126": [
    "Kit Chocalho Bebe E Mordedores Para Recem Nascido +6 Peças Estímulo Sensorial Brinquedo Educativo",
    "https://http2.mlstatic.com/D_NQ_NP_825993-MLA116714351933_082026-F.jpg"
+  ],
+  "MLB78402366": [
+   "Portão Retrátil Segurança Bebê Pet Cercadinho Escada 1.80m Branco",
+   "https://http2.mlstatic.com/D_NQ_NP_999709-MLA116761907745_082026-F.jpg"
   ],
   "MLB78402369": [
    "Portão Retrátil Segurança Bebê Pet Cercadinho Escada 1.80m Preto",
@@ -7814,6 +8302,14 @@
    "Kit 10 Trava Bebe Gaveta Armário Segurança Protetor Proteção Bebê Guarda Roupas Segurança Infantil Para Gavetas Nautasi",
    "https://http2.mlstatic.com/D_NQ_NP_840662-MLA117012934326_102026-F.jpg"
   ],
+  "MLB80160073": [
+   "Carrinho De Bebê Stillo Supremo 0 A 15kg Azul Oceano",
+   "https://http2.mlstatic.com/D_NQ_NP_941219-MLA118622859723_102026-F.jpg"
+  ],
+  "MLB80166730": [
+   "Brinquedo Montessori de Madeira Sensorial Infantil 5 em 1 Inclui piano, labirinto, relógio, formas e engrenagens para estimular coordenação motora e aprendizagem infantil.",
+   "https://http2.mlstatic.com/D_NQ_NP_757025-MLA117054547504_102026-F.jpg"
+  ],
   "MLB80167828": [
    "Bundle Nintendo Switch 2 + Mario Kart World + 3 Meses NSO",
    "https://http2.mlstatic.com/D_NQ_NP_642168-MLA118780566083_102026-F.jpg"
@@ -7910,6 +8406,10 @@
    "Kit com 30 Sacos Para Leite Materno Tantsa 250ml, com Dupla Vedação e Livre de BPA",
    "https://http2.mlstatic.com/D_NQ_NP_983862-MLA120237613501_102026-F.jpg"
   ],
+  "MLB81066221": [
+   "Cercadinho Bebê Infantil Cercado Grande 180*150*65cm+puxador NEXMIDIO WL-007 chiqueirinho galzerano cercadinho para bebê infanti Cercadinho Infantil cercadinho bebe",
+   "https://http2.mlstatic.com/D_NQ_NP_989285-MLA118615315854_102026-F.jpg"
+  ],
   "MLB81142365": [
    "Kit 9 Carrinhos de Fricção Patrulha Canina Com Personagens Removíveis",
    "https://http2.mlstatic.com/D_NQ_NP_644449-MLA118688058770_102026-F.jpg"
@@ -7956,7 +8456,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-13": 50
+  "2026-11-14": 2
  },
  "cupons": {
   "AGORAPROMO": {
@@ -8440,9 +8940,9 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5583,
+ "cupons_extra_ultimo:cupombr": 5584,
  "cupons_ml_ultimo": 6489,
- "descoberta_em": "2026-11-13T08:02-03:00",
+ "descoberta_em": "2026-11-14T08:02-03:00",
  "descobertos": {
   "MLB10923642": {
    "categoria": "esporte",
@@ -8464,6 +8964,12 @@
   "MLB12706806": {
    "categoria": "passeio",
    "pos": 14,
+   "tipo": "catalogo"
+  },
+  "MLB15051867": {
+   "categoria": "game",
+   "pos": 8,
+   "regra": "game",
    "tipo": "catalogo"
   },
   "MLB15995410": {
@@ -8557,7 +9063,7 @@
    "pos": 9,
    "tipo": "catalogo"
   },
-  "MLB17876029": {
+  "MLB17876078": {
    "categoria": "higiene",
    "pos": 5,
    "tipo": "catalogo"
@@ -8572,6 +9078,12 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB18010993": {
+   "categoria": "game",
+   "pos": 0,
+   "regra": "game",
+   "tipo": "catalogo"
+  },
   "MLB18341860": {
    "categoria": "higiene",
    "pos": 7,
@@ -8584,12 +9096,12 @@
   },
   "MLB18342620": {
    "categoria": "higiene",
-   "pos": 9,
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB18392608": {
    "categoria": "higiene",
-   "pos": 9,
+   "pos": 10,
    "tipo": "catalogo"
   },
   "MLB18392643": {
@@ -8614,7 +9126,7 @@
   },
   "MLB18392724": {
    "categoria": "higiene",
-   "pos": 10,
+   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB18392841": {
@@ -8657,7 +9169,7 @@
    "pos": 1,
    "tipo": "catalogo"
   },
-  "MLB18553141": {
+  "MLB18436951": {
    "categoria": "quarto",
    "pos": 7,
    "tipo": "catalogo"
@@ -8681,8 +9193,13 @@
   },
   "MLB18606067": {
    "categoria": "esporte",
-   "pos": 7,
+   "pos": 8,
    "regra": "infantil",
+   "tipo": "catalogo"
+  },
+  "MLB18626757": {
+   "categoria": "outros",
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB18630714": {
@@ -8695,15 +9212,14 @@
    "pos": 14,
    "tipo": "catalogo"
   },
+  "MLB18727385": {
+   "categoria": "higiene",
+   "pos": 14,
+   "tipo": "catalogo"
+  },
   "MLB18758275": {
    "categoria": "game",
    "pos": 8,
-   "regra": "game",
-   "tipo": "catalogo"
-  },
-  "MLB18917848": {
-   "categoria": "game",
-   "pos": 5,
    "regra": "game",
    "tipo": "catalogo"
   },
@@ -8746,7 +9262,7 @@
   },
   "MLB19265368": {
    "categoria": "livro",
-   "pos": 16,
+   "pos": 14,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -8764,11 +9280,11 @@
   },
   "MLB19304593": {
    "categoria": "livro",
-   "pos": 18,
+   "pos": 17,
    "regra": "infantil",
    "tipo": "catalogo"
   },
-  "MLB19315995": {
+  "MLB19315994": {
    "categoria": "higiene",
    "pos": 0,
    "tipo": "catalogo"
@@ -8830,7 +9346,7 @@
   },
   "MLB19589765": {
    "categoria": "higiene",
-   "pos": 5,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB19601136": {
@@ -8840,13 +9356,19 @@
   },
   "MLB19642578": {
    "categoria": "higiene",
-   "pos": 11,
+   "pos": 10,
    "tipo": "catalogo"
   },
   "MLB19683124": {
    "categoria": "casa",
    "pos": 0,
    "regra": "infantil",
+   "tipo": "catalogo"
+  },
+  "MLB19692998": {
+   "categoria": "game",
+   "pos": 5,
+   "regra": "game",
    "tipo": "catalogo"
   },
   "MLB19694274": {
@@ -8894,7 +9416,7 @@
    "pos": 7,
    "tipo": "catalogo"
   },
-  "MLB19970139": {
+  "MLB19970138": {
    "categoria": "passeio",
    "pos": 7,
    "tipo": "catalogo"
@@ -8909,10 +9431,9 @@
    "pos": 0,
    "tipo": "catalogo"
   },
-  "MLB20542768": {
-   "categoria": "casa",
-   "pos": 7,
-   "regra": "infantil",
+  "MLB20611931": {
+   "categoria": "brinquedo",
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB20817237": {
@@ -8923,11 +9444,6 @@
   "MLB20948448": {
    "categoria": "higiene",
    "pos": 2,
-   "tipo": "catalogo"
-  },
-  "MLB20969096": {
-   "categoria": "outros",
-   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB21006188": {
@@ -8947,7 +9463,12 @@
   },
   "MLB21346355": {
    "categoria": "quarto",
-   "pos": 6,
+   "pos": 5,
+   "tipo": "catalogo"
+  },
+  "MLB21405887": {
+   "categoria": "alimentacao",
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB21447303": {
@@ -8958,6 +9479,11 @@
   "MLB21466956": {
    "categoria": "higiene",
    "pos": 2,
+   "tipo": "catalogo"
+  },
+  "MLB21484539": {
+   "categoria": "brinquedo",
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB21719311": {
@@ -8972,7 +9498,7 @@
   },
   "MLB21833771": {
    "categoria": "higiene",
-   "pos": 10,
+   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB21847238": {
@@ -8980,14 +9506,9 @@
    "pos": 6,
    "tipo": "catalogo"
   },
-  "MLB21908463": {
-   "categoria": "higiene",
-   "pos": 3,
-   "tipo": "catalogo"
-  },
   "MLB21908556": {
    "categoria": "higiene",
-   "pos": 13,
+   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB22191149": {
@@ -8998,6 +9519,11 @@
   "MLB22275243": {
    "categoria": "alimentacao",
    "pos": 10,
+   "tipo": "catalogo"
+  },
+  "MLB22276797": {
+   "categoria": "outros",
+   "pos": 0,
    "tipo": "catalogo"
   },
   "MLB22277955": {
@@ -9014,7 +9540,7 @@
   },
   "MLB22323833": {
    "categoria": "brinquedo",
-   "pos": 7,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB22347214": {
@@ -9024,23 +9550,12 @@
   },
   "MLB22359613": {
    "categoria": "alimentacao",
-   "pos": 2,
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB22360439": {
    "categoria": "higiene",
    "pos": 6,
-   "tipo": "catalogo"
-  },
-  "MLB22367418": {
-   "categoria": "brinquedo",
-   "pos": 5,
-   "tipo": "catalogo"
-  },
-  "MLB22379833": {
-   "categoria": "game",
-   "pos": 15,
-   "regra": "game",
    "tipo": "catalogo"
   },
   "MLB22500020": {
@@ -9063,11 +9578,6 @@
   "MLB22517003": {
    "categoria": "higiene",
    "pos": 13,
-   "tipo": "catalogo"
-  },
-  "MLB22528368": {
-   "categoria": "higiene",
-   "pos": 10,
    "tipo": "catalogo"
   },
   "MLB22547034": {
@@ -9134,11 +9644,6 @@
    "pos": 7,
    "tipo": "catalogo"
   },
-  "MLB22839957": {
-   "categoria": "outros",
-   "pos": 11,
-   "tipo": "catalogo"
-  },
   "MLB22881230": {
    "categoria": "passeio",
    "pos": 11,
@@ -9146,17 +9651,12 @@
   },
   "MLB22887689": {
    "categoria": "outros",
-   "pos": 11,
+   "pos": 13,
    "tipo": "catalogo"
   },
   "MLB22900049": {
    "categoria": "higiene",
    "pos": 5,
-   "tipo": "catalogo"
-  },
-  "MLB22918403": {
-   "categoria": "outros",
-   "pos": 14,
    "tipo": "catalogo"
   },
   "MLB22949617": {
@@ -9177,7 +9677,7 @@
   },
   "MLB22974681": {
    "categoria": "passeio",
-   "pos": 2,
+   "pos": 0,
    "tipo": "catalogo"
   },
   "MLB23047570": {
@@ -9204,14 +9704,14 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
+  "MLB23420837": {
+   "categoria": "casa",
+   "pos": 9,
+   "tipo": "catalogo"
+  },
   "MLB23480808": {
    "categoria": "brinquedo",
    "pos": 4,
-   "tipo": "catalogo"
-  },
-  "MLB23490477": {
-   "categoria": "brinquedo",
-   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB23491820": {
@@ -9219,24 +9719,14 @@
    "pos": 3,
    "tipo": "catalogo"
   },
-  "MLB23534746": {
-   "categoria": "outros",
-   "pos": 3,
-   "tipo": "catalogo"
-  },
-  "MLB23541950": {
-   "categoria": "gestante",
-   "pos": 8,
-   "tipo": "catalogo"
-  },
   "MLB23545547": {
    "categoria": "outros",
-   "pos": 6,
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB23576106": {
    "categoria": "outros",
-   "pos": 2,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB23581207": {
@@ -9276,7 +9766,12 @@
   },
   "MLB23757310": {
    "categoria": "outros",
-   "pos": 10,
+   "pos": 12,
+   "tipo": "catalogo"
+  },
+  "MLB23800353": {
+   "categoria": "outros",
+   "pos": 0,
    "tipo": "catalogo"
   },
   "MLB23818200": {
@@ -9304,9 +9799,9 @@
    "pos": 14,
    "tipo": "catalogo"
   },
-  "MLB23893374": {
-   "categoria": "passeio",
-   "pos": 0,
+  "MLB23883011": {
+   "categoria": "brinquedo",
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB23912670": {
@@ -9321,12 +9816,7 @@
   },
   "MLB24008919": {
    "categoria": "brinquedo",
-   "pos": 3,
-   "tipo": "catalogo"
-  },
-  "MLB24009281": {
-   "categoria": "brinquedo",
-   "pos": 10,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB24027382": {
@@ -9344,11 +9834,6 @@
    "pos": 13,
    "tipo": "catalogo"
   },
-  "MLB24074299": {
-   "categoria": "outros",
-   "pos": 14,
-   "tipo": "catalogo"
-  },
   "MLB24097850": {
    "categoria": "passeio",
    "pos": 12,
@@ -9356,7 +9841,7 @@
   },
   "MLB24110865": {
    "categoria": "brinquedo",
-   "pos": 6,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB24157936": {
@@ -9366,7 +9851,7 @@
   },
   "MLB24167613": {
    "categoria": "brinquedo",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB24171311": {
@@ -9395,9 +9880,9 @@
    "pos": 0,
    "tipo": "catalogo"
   },
-  "MLB24219839": {
-   "categoria": "outros",
-   "pos": 2,
+  "MLB24233595": {
+   "categoria": "gestante",
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB24275342": {
@@ -9418,17 +9903,17 @@
   },
   "MLB24332433": {
    "categoria": "escola",
-   "pos": 7,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB24373819": {
    "categoria": "quarto",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB24422108": {
    "categoria": "roupa",
-   "pos": 8,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB24591080": {
@@ -9438,7 +9923,7 @@
   },
   "MLB24598901": {
    "categoria": "quarto",
-   "pos": 2,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB24605630": {
@@ -9448,7 +9933,7 @@
   },
   "MLB24626810": {
    "categoria": "alimentacao",
-   "pos": 0,
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB24635461": {
@@ -9464,11 +9949,6 @@
   "MLB24642258": {
    "categoria": "quarto",
    "pos": 1,
-   "tipo": "catalogo"
-  },
-  "MLB24642265": {
-   "categoria": "quarto",
-   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB24647466": {
@@ -9503,7 +9983,7 @@
   },
   "MLB24659861": {
    "categoria": "gestante",
-   "pos": 3,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB24663787": {
@@ -9553,7 +10033,7 @@
   },
   "MLB24726622": {
    "categoria": "esporte",
-   "pos": 12,
+   "pos": 11,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -9576,7 +10056,7 @@
   },
   "MLB24747633": {
    "categoria": "quarto",
-   "pos": 7,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB24762578": {
@@ -9596,7 +10076,7 @@
   },
   "MLB24777033": {
    "categoria": "higiene",
-   "pos": 1,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB24828392": {
@@ -9617,12 +10097,6 @@
   "MLB25163760": {
    "categoria": "passeio",
    "pos": 1,
-   "tipo": "catalogo"
-  },
-  "MLB25175860": {
-   "categoria": "casa",
-   "pos": 5,
-   "regra": "infantil",
    "tipo": "catalogo"
   },
   "MLB25255598": {
@@ -9737,7 +10211,7 @@
   },
   "MLB25843099": {
    "categoria": "gestante",
-   "pos": 7,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB25855989": {
@@ -9760,11 +10234,6 @@
    "pos": 3,
    "tipo": "catalogo"
   },
-  "MLB25978378": {
-   "categoria": "quarto",
-   "pos": 4,
-   "tipo": "catalogo"
-  },
   "MLB26032227": {
    "categoria": "quarto",
    "pos": 3,
@@ -9772,7 +10241,7 @@
   },
   "MLB26069721": {
    "categoria": "alimentacao",
-   "pos": 11,
+   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB26070781": {
@@ -9815,6 +10284,11 @@
    "pos": 6,
    "tipo": "catalogo"
   },
+  "MLB26264442": {
+   "categoria": "quarto",
+   "pos": 3,
+   "tipo": "catalogo"
+  },
   "MLB26282641": {
    "categoria": "brinquedo",
    "pos": 7,
@@ -9850,6 +10324,11 @@
    "pos": 3,
    "tipo": "catalogo"
   },
+  "MLB26604880": {
+   "categoria": "brinquedo",
+   "pos": 9,
+   "tipo": "catalogo"
+  },
   "MLB26654582": {
    "categoria": "brinquedo",
    "pos": 1,
@@ -9882,7 +10361,7 @@
   },
   "MLB26801791": {
    "categoria": "quarto",
-   "pos": 6,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB26816126": {
@@ -9924,7 +10403,7 @@
   },
   "MLB27045235": {
    "categoria": "alimentacao",
-   "pos": 1,
+   "pos": 0,
    "tipo": "catalogo"
   },
   "MLB27051164": {
@@ -9934,7 +10413,7 @@
   },
   "MLB27053942": {
    "categoria": "esporte",
-   "pos": 17,
+   "pos": 16,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -9951,6 +10430,12 @@
   "MLB27145476": {
    "categoria": "higiene",
    "pos": 6,
+   "tipo": "catalogo"
+  },
+  "MLB27150263": {
+   "categoria": "esporte",
+   "pos": 7,
+   "regra": "infantil",
    "tipo": "catalogo"
   },
   "MLB27171678": {
@@ -9971,7 +10456,7 @@
   },
   "MLB27232311": {
    "categoria": "higiene",
-   "pos": 9,
+   "pos": 10,
    "tipo": "catalogo"
   },
   "MLB27282051": {
@@ -9991,14 +10476,14 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
+  "MLB27420583": {
+   "categoria": "outros",
+   "pos": 11,
+   "tipo": "catalogo"
+  },
   "MLB27468405": {
    "categoria": "outros",
    "pos": 5,
-   "tipo": "catalogo"
-  },
-  "MLB27572024": {
-   "categoria": "higiene",
-   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB27585303": {
@@ -10008,7 +10493,7 @@
   },
   "MLB27590860": {
    "categoria": "alimentacao",
-   "pos": 0,
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB27672036": {
@@ -10021,11 +10506,6 @@
    "pos": 8,
    "tipo": "catalogo"
   },
-  "MLB27824286": {
-   "categoria": "brinquedo",
-   "pos": 4,
-   "tipo": "catalogo"
-  },
   "MLB27831940": {
    "categoria": "alimentacao",
    "pos": 2,
@@ -10033,7 +10513,7 @@
   },
   "MLB27861415": {
    "categoria": "brinquedo",
-   "pos": 4,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB27877285": {
@@ -10056,6 +10536,11 @@
    "pos": 6,
    "tipo": "catalogo"
   },
+  "MLB27978602": {
+   "categoria": "alimentacao",
+   "pos": 7,
+   "tipo": "catalogo"
+  },
   "MLB28001568": {
    "categoria": "outros",
    "pos": 3,
@@ -10066,9 +10551,19 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB28099524": {
+   "categoria": "alimentacao",
+   "pos": 12,
+   "tipo": "catalogo"
+  },
   "MLB28131603": {
    "categoria": "passeio",
    "pos": 1,
+   "tipo": "catalogo"
+  },
+  "MLB28135869": {
+   "categoria": "passeio",
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB28318987": {
@@ -10100,11 +10595,6 @@
   "MLB28364092": {
    "categoria": "higiene",
    "pos": 0,
-   "tipo": "catalogo"
-  },
-  "MLB28365779": {
-   "categoria": "alimentacao",
-   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB28368344": {
@@ -10174,6 +10664,11 @@
    "pos": 7,
    "tipo": "catalogo"
   },
+  "MLB28903070": {
+   "categoria": "higiene",
+   "pos": 14,
+   "tipo": "catalogo"
+  },
   "MLB28992390": {
    "categoria": "alimentacao",
    "pos": 1,
@@ -10240,7 +10735,7 @@
   },
   "MLB29573091": {
    "categoria": "brinquedo",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB29575535": {
@@ -10256,6 +10751,11 @@
   "MLB29632495": {
    "categoria": "higiene",
    "pos": 6,
+   "tipo": "catalogo"
+  },
+  "MLB29692872": {
+   "categoria": "higiene",
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB29721710": {
@@ -10289,9 +10789,9 @@
    "pos": 2,
    "tipo": "catalogo"
   },
-  "MLB30430533": {
+  "MLB30203999": {
    "categoria": "quarto",
-   "pos": 1,
+   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB30522365": {
@@ -10336,11 +10836,6 @@
    "pos": 10,
    "tipo": "catalogo"
   },
-  "MLB32257502": {
-   "categoria": "gestante",
-   "pos": 5,
-   "tipo": "catalogo"
-  },
   "MLB32322416": {
    "categoria": "gestante",
    "pos": 4,
@@ -10361,6 +10856,16 @@
    "pos": 7,
    "tipo": "catalogo"
   },
+  "MLB32420202": {
+   "categoria": "brinquedo",
+   "pos": 10,
+   "tipo": "catalogo"
+  },
+  "MLB32438392": {
+   "categoria": "quarto",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
   "MLB32469560": {
    "categoria": "brinquedo",
    "pos": 13,
@@ -10368,7 +10873,7 @@
   },
   "MLB32952224": {
    "categoria": "festa",
-   "pos": 7,
+   "pos": 8,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -10382,9 +10887,10 @@
    "pos": 8,
    "tipo": "catalogo"
   },
-  "MLB33998445": {
-   "categoria": "gestante",
-   "pos": 10,
+  "MLB33997846": {
+   "categoria": "game",
+   "pos": 2,
+   "regra": "game",
    "tipo": "catalogo"
   },
   "MLB34078818": {
@@ -10411,11 +10917,6 @@
   "MLB34235115": {
    "categoria": "brinquedo",
    "pos": 4,
-   "tipo": "catalogo"
-  },
-  "MLB34367122": {
-   "categoria": "outros",
-   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB34376768": {
@@ -10451,7 +10952,7 @@
   },
   "MLB35334938": {
    "categoria": "outros",
-   "pos": 9,
+   "pos": 11,
    "tipo": "catalogo"
   },
   "MLB35340733": {
@@ -10466,7 +10967,7 @@
   },
   "MLB35346085": {
    "categoria": "esporte",
-   "pos": 9,
+   "pos": 10,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -10477,7 +10978,7 @@
   },
   "MLB35433568": {
    "categoria": "outros",
-   "pos": 4,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB35594431": {
@@ -10532,6 +11033,11 @@
    "pos": 8,
    "tipo": "catalogo"
   },
+  "MLB36133934": {
+   "categoria": "gestante",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
   "MLB36160778": {
    "categoria": "alimentacao",
    "pos": 4,
@@ -10554,18 +11060,23 @@
   },
   "MLB36437801": {
    "categoria": "outros",
-   "pos": 7,
+   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB36555516": {
    "categoria": "game",
-   "pos": 0,
+   "pos": 1,
    "regra": "game",
    "tipo": "catalogo"
   },
   "MLB36579836": {
    "categoria": "outros",
    "pos": 8,
+   "tipo": "catalogo"
+  },
+  "MLB36622876": {
+   "categoria": "outros",
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB36698749": {
@@ -10576,7 +11087,7 @@
   },
   "MLB36776116": {
    "categoria": "higiene",
-   "pos": 9,
+   "pos": 11,
    "tipo": "catalogo"
   },
   "MLB36780712": {
@@ -10588,6 +11099,11 @@
    "categoria": "festa",
    "pos": 5,
    "regra": "infantil",
+   "tipo": "catalogo"
+  },
+  "MLB36872182": {
+   "categoria": "outros",
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB36933476": {
@@ -10612,7 +11128,7 @@
   },
   "MLB36975512": {
    "categoria": "outros",
-   "pos": 9,
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB37393957": {
@@ -10648,7 +11164,7 @@
   },
   "MLB37665227": {
    "categoria": "quarto",
-   "pos": 7,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB37682896": {
@@ -10674,7 +11190,7 @@
   },
   "MLB37915869": {
    "categoria": "outros",
-   "pos": 4,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB37993458": {
@@ -10684,7 +11200,7 @@
   },
   "MLB38058948": {
    "categoria": "outros",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB38183040": {
@@ -10699,7 +11215,7 @@
   },
   "MLB38226842": {
    "categoria": "outros",
-   "pos": 13,
+   "pos": 14,
    "tipo": "catalogo"
   },
   "MLB38281783": {
@@ -10755,7 +11271,7 @@
   },
   "MLB38713737": {
    "categoria": "higiene",
-   "pos": 11,
+   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB38777375": {
@@ -10778,19 +11294,19 @@
    "pos": 3,
    "tipo": "catalogo"
   },
-  "MLB39114334": {
-   "categoria": "escola",
-   "pos": 8,
+  "MLB39057177": {
+   "categoria": "higiene",
+   "pos": 9,
    "tipo": "catalogo"
   },
-  "MLB39228325": {
-   "categoria": "quarto",
-   "pos": 12,
+  "MLB39156395": {
+   "categoria": "gestante",
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB39231555": {
    "categoria": "brinquedo",
-   "pos": 4,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB39295341": {
@@ -10852,12 +11368,12 @@
   },
   "MLB39787081": {
    "categoria": "alimentacao",
-   "pos": 1,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB39934861": {
    "categoria": "outros",
-   "pos": 0,
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB39936099": {
@@ -10877,12 +11393,7 @@
   },
   "MLB40053366": {
    "categoria": "alimentacao",
-   "pos": 9,
-   "tipo": "catalogo"
-  },
-  "MLB40053439": {
-   "categoria": "brinquedo",
-   "pos": 5,
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB40117012": {
@@ -10905,24 +11416,24 @@
    "pos": 2,
    "tipo": "catalogo"
   },
-  "MLB40334935": {
+  "MLB40461064": {
    "categoria": "higiene",
    "pos": 1,
    "tipo": "catalogo"
   },
-  "MLB40376520": {
-   "categoria": "gestante",
-   "pos": 5,
-   "tipo": "catalogo"
-  },
   "MLB40550721": {
    "categoria": "outros",
-   "pos": 6,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB40554369": {
    "categoria": "quarto",
    "pos": 4,
+   "tipo": "catalogo"
+  },
+  "MLB40588416": {
+   "categoria": "casa",
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB40690981": {
@@ -10948,7 +11459,7 @@
   },
   "MLB41030675": {
    "categoria": "alimentacao",
-   "pos": 12,
+   "pos": 11,
    "tipo": "catalogo"
   },
   "MLB41030748": {
@@ -10980,7 +11491,7 @@
   },
   "MLB41283390": {
    "categoria": "outros",
-   "pos": 1,
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB41302121": {
@@ -11006,7 +11517,7 @@
   },
   "MLB41596533": {
    "categoria": "brinquedo",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB41678087": {
@@ -11089,7 +11600,7 @@
   },
   "MLB43279750": {
    "categoria": "higiene",
-   "pos": 12,
+   "pos": 11,
    "tipo": "catalogo"
   },
   "MLB43292361": {
@@ -11133,15 +11644,15 @@
    "pos": 5,
    "tipo": "catalogo"
   },
+  "MLB43774506": {
+   "categoria": "gestante",
+   "pos": 0,
+   "tipo": "catalogo"
+  },
   "MLB43797034": {
    "categoria": "casa",
    "pos": 2,
    "regra": "infantil",
-   "tipo": "catalogo"
-  },
-  "MLB43805570": {
-   "categoria": "gestante",
-   "pos": 0,
    "tipo": "catalogo"
   },
   "MLB43809739": {
@@ -11151,7 +11662,7 @@
   },
   "MLB43838477": {
    "categoria": "outros",
-   "pos": 4,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB43942874": {
@@ -11161,7 +11672,7 @@
   },
   "MLB43992760": {
    "categoria": "brinquedo",
-   "pos": 9,
+   "pos": 10,
    "tipo": "catalogo"
   },
   "MLB43995650": {
@@ -11176,7 +11687,7 @@
   },
   "MLB44022617": {
    "categoria": "brinquedo",
-   "pos": 8,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB44155537": {
@@ -11195,11 +11706,6 @@
    "pos": 9,
    "tipo": "catalogo"
   },
-  "MLB44196987": {
-   "categoria": "higiene",
-   "pos": 5,
-   "tipo": "catalogo"
-  },
   "MLB44260449": {
    "categoria": "higiene",
    "pos": 4,
@@ -11212,7 +11718,7 @@
   },
   "MLB44347475": {
    "categoria": "roupa",
-   "pos": 7,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB44349733": {
@@ -11247,7 +11753,7 @@
   },
   "MLB44634228": {
    "categoria": "alimentacao",
-   "pos": 1,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB44672426": {
@@ -11272,12 +11778,18 @@
   },
   "MLB44895132": {
    "categoria": "brinquedo",
-   "pos": 2,
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB44923446": {
    "categoria": "roupa",
    "pos": 0,
+   "regra": "infantil",
+   "tipo": "catalogo"
+  },
+  "MLB44932986": {
+   "categoria": "roupa",
+   "pos": 2,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -11361,7 +11873,7 @@
   },
   "MLB45528856": {
    "categoria": "brinquedo",
-   "pos": 3,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB45694350": {
@@ -11370,10 +11882,9 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
-  "MLB45721155": {
-   "categoria": "game",
-   "pos": 8,
-   "regra": "game",
+  "MLB45780583": {
+   "categoria": "outros",
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB45786394": {
@@ -11393,18 +11904,12 @@
   },
   "MLB45821210": {
    "categoria": "quarto",
-   "pos": 4,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB45822173": {
    "categoria": "brinquedo",
    "pos": 0,
-   "tipo": "catalogo"
-  },
-  "MLB45840555": {
-   "categoria": "game",
-   "pos": 2,
-   "regra": "game",
    "tipo": "catalogo"
   },
   "MLB45851506": {
@@ -11417,11 +11922,6 @@
    "pos": 1,
    "tipo": "catalogo"
   },
-  "MLB45906189": {
-   "categoria": "outros",
-   "pos": 7,
-   "tipo": "catalogo"
-  },
   "MLB46104950": {
    "categoria": "passeio",
    "pos": 2,
@@ -11429,7 +11929,7 @@
   },
   "MLB46159912": {
    "categoria": "casa",
-   "pos": 4,
+   "pos": 5,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -11450,12 +11950,17 @@
   },
   "MLB46435836": {
    "categoria": "brinquedo",
-   "pos": 5,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB46443884": {
    "categoria": "outros",
    "pos": 1,
+   "tipo": "catalogo"
+  },
+  "MLB46480472": {
+   "categoria": "quarto",
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB46531755": {
@@ -11471,6 +11976,11 @@
   "MLB46546444": {
    "categoria": "alimentacao",
    "pos": 7,
+   "tipo": "catalogo"
+  },
+  "MLB46557712": {
+   "categoria": "gestante",
+   "pos": 13,
    "tipo": "catalogo"
   },
   "MLB46559909": {
@@ -11496,7 +12006,7 @@
   },
   "MLB46773017": {
    "categoria": "higiene",
-   "pos": 5,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB46819762": {
@@ -11511,7 +12021,7 @@
   },
   "MLB46955230": {
    "categoria": "outros",
-   "pos": 3,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB46985999": {
@@ -11527,7 +12037,7 @@
   },
   "MLB47107852": {
    "categoria": "gestante",
-   "pos": 4,
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB47111304": {
@@ -11555,6 +12065,12 @@
    "pos": 6,
    "tipo": "catalogo"
   },
+  "MLB47312582": {
+   "categoria": "casa",
+   "pos": 9,
+   "regra": "infantil",
+   "tipo": "catalogo"
+  },
   "MLB47430541": {
    "categoria": "gestante",
    "pos": 1,
@@ -11577,7 +12093,7 @@
   },
   "MLB47710109": {
    "categoria": "brinquedo",
-   "pos": 4,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB47722617": {
@@ -11644,6 +12160,11 @@
   },
   "MLB49357605": {
    "categoria": "gestante",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
+  "MLB49362883": {
+   "categoria": "brinquedo",
    "pos": 6,
    "tipo": "catalogo"
   },
@@ -11654,7 +12175,7 @@
   },
   "MLB49676090": {
    "categoria": "higiene",
-   "pos": 7,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB49678098": {
@@ -11686,7 +12207,7 @@
   },
   "MLB50138205": {
    "categoria": "roupa",
-   "pos": 12,
+   "pos": 10,
    "tipo": "catalogo"
   },
   "MLB50196654": {
@@ -11708,7 +12229,7 @@
   },
   "MLB50321038": {
    "categoria": "brinquedo",
-   "pos": 9,
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB50337725": {
@@ -11728,7 +12249,7 @@
   },
   "MLB50571754": {
    "categoria": "higiene",
-   "pos": 14,
+   "pos": 13,
    "tipo": "catalogo"
   },
   "MLB50615521": {
@@ -11790,16 +12311,6 @@
    "pos": 10,
    "tipo": "catalogo"
   },
-  "MLB51612361": {
-   "categoria": "outros",
-   "pos": 14,
-   "tipo": "catalogo"
-  },
-  "MLB51652593": {
-   "categoria": "brinquedo",
-   "pos": 5,
-   "tipo": "catalogo"
-  },
   "MLB51761193": {
    "categoria": "outros",
    "pos": 4,
@@ -11810,19 +12321,19 @@
    "pos": 2,
    "tipo": "catalogo"
   },
-  "MLB51911887": {
+  "MLB51907387": {
    "categoria": "brinquedo",
    "pos": 2,
-   "tipo": "catalogo"
-  },
-  "MLB51979690": {
-   "categoria": "higiene",
-   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB52018108": {
    "categoria": "outros",
    "pos": 6,
+   "tipo": "catalogo"
+  },
+  "MLB52200756": {
+   "categoria": "outros",
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB52279320": {
@@ -11837,17 +12348,12 @@
   },
   "MLB52300943": {
    "categoria": "outros",
-   "pos": 8,
+   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB52340694": {
    "categoria": "passeio",
    "pos": 6,
-   "tipo": "catalogo"
-  },
-  "MLB52361634": {
-   "categoria": "outros",
-   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB52441777": {
@@ -11893,6 +12399,11 @@
    "categoria": "esporte",
    "pos": 5,
    "regra": "infantil",
+   "tipo": "catalogo"
+  },
+  "MLB52987632": {
+   "categoria": "outros",
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB53042018": {
@@ -12004,7 +12515,7 @@
   },
   "MLB54152915": {
    "categoria": "higiene",
-   "pos": 2,
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB54159991": {
@@ -12102,20 +12613,10 @@
    "pos": 4,
    "tipo": "catalogo"
   },
-  "MLB55422586": {
-   "categoria": "passeio",
-   "pos": 9,
-   "tipo": "catalogo"
-  },
   "MLB55530276": {
    "categoria": "esporte",
-   "pos": 16,
+   "pos": 17,
    "regra": "infantil",
-   "tipo": "catalogo"
-  },
-  "MLB55683041": {
-   "categoria": "passeio",
-   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB55713159": {
@@ -12131,7 +12632,7 @@
   },
   "MLB55937481": {
    "categoria": "gestante",
-   "pos": 12,
+   "pos": 10,
    "tipo": "catalogo"
   },
   "MLB56029167": {
@@ -12151,12 +12652,22 @@
   },
   "MLB56094524": {
    "categoria": "roupa",
-   "pos": 4,
+   "pos": 12,
    "tipo": "catalogo"
   },
-  "MLB56095158": {
-   "categoria": "gestante",
-   "pos": 0,
+  "MLB56100259": {
+   "categoria": "roupa",
+   "pos": 11,
+   "tipo": "catalogo"
+  },
+  "MLB56215148": {
+   "categoria": "outros",
+   "pos": 13,
+   "tipo": "catalogo"
+  },
+  "MLB56231214": {
+   "categoria": "brinquedo",
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB56415193": {
@@ -12177,7 +12688,7 @@
   },
   "MLB56574273": {
    "categoria": "roupa",
-   "pos": 3,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB56580108": {
@@ -12193,7 +12704,7 @@
   },
   "MLB56675821": {
    "categoria": "roupa",
-   "pos": 10,
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB56690567": {
@@ -12213,6 +12724,11 @@
    "pos": 2,
    "tipo": "catalogo"
   },
+  "MLB57053149": {
+   "categoria": "gestante",
+   "pos": 0,
+   "tipo": "catalogo"
+  },
   "MLB57071349": {
    "categoria": "outros",
    "pos": 0,
@@ -12224,6 +12740,11 @@
    "regra": "game",
    "tipo": "catalogo"
   },
+  "MLB57083030": {
+   "categoria": "outros",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
   "MLB57083347": {
    "categoria": "game",
    "pos": 3,
@@ -12232,11 +12753,6 @@
   },
   "MLB57328734": {
    "categoria": "outros",
-   "pos": 3,
-   "tipo": "catalogo"
-  },
-  "MLB57344166": {
-   "categoria": "higiene",
    "pos": 5,
    "tipo": "catalogo"
   },
@@ -12278,7 +12794,7 @@
   },
   "MLB58110639": {
    "categoria": "roupa",
-   "pos": 1,
+   "pos": 0,
    "tipo": "catalogo"
   },
   "MLB58169644": {
@@ -12291,19 +12807,14 @@
    "pos": 4,
    "tipo": "catalogo"
   },
-  "MLB58202624": {
-   "categoria": "outros",
-   "pos": 3,
-   "tipo": "catalogo"
-  },
   "MLB58271433": {
    "categoria": "outros",
-   "pos": 5,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB58382190": {
    "categoria": "escola",
-   "pos": 6,
+   "pos": 5,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -12336,7 +12847,7 @@
   },
   "MLB58664244": {
    "categoria": "brinquedo",
-   "pos": 2,
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB58692864": {
@@ -12365,6 +12876,11 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
+  "MLB59002556": {
+   "categoria": "outros",
+   "pos": 3,
+   "tipo": "catalogo"
+  },
   "MLB59111332": {
    "categoria": "higiene",
    "pos": 14,
@@ -12382,7 +12898,7 @@
   },
   "MLB59608894": {
    "categoria": "livro",
-   "pos": 14,
+   "pos": 15,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -12394,13 +12910,18 @@
   },
   "MLB60044790": {
    "categoria": "brinquedo",
-   "pos": 2,
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB60116473": {
    "categoria": "escola",
-   "pos": 7,
+   "pos": 6,
    "regra": "infantil",
+   "tipo": "catalogo"
+  },
+  "MLB60130684": {
+   "categoria": "brinquedo",
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB60363392": {
@@ -12456,7 +12977,7 @@
   },
   "MLB61271206": {
    "categoria": "brinquedo",
-   "pos": 3,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB61376192": {
@@ -12478,13 +12999,13 @@
   },
   "MLB61701047": {
    "categoria": "esporte",
-   "pos": 10,
+   "pos": 12,
    "regra": "infantil",
    "tipo": "catalogo"
   },
   "MLB61713566": {
    "categoria": "outros",
-   "pos": 13,
+   "pos": 14,
    "tipo": "catalogo"
   },
   "MLB61762908": {
@@ -12511,12 +13032,6 @@
   "MLB61922175": {
    "categoria": "brinquedo",
    "pos": 6,
-   "tipo": "catalogo"
-  },
-  "MLB62003274": {
-   "categoria": "game",
-   "pos": 1,
-   "regra": "game",
    "tipo": "catalogo"
   },
   "MLB62020136": {
@@ -12556,14 +13071,14 @@
    "pos": 7,
    "tipo": "catalogo"
   },
-  "MLB62219284": {
-   "categoria": "higiene",
-   "pos": 12,
+  "MLB62250973": {
+   "categoria": "outros",
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB62296908": {
    "categoria": "quarto",
-   "pos": 4,
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB62315926": {
@@ -12574,6 +13089,16 @@
   "MLB62331588": {
    "categoria": "outros",
    "pos": 5,
+   "tipo": "catalogo"
+  },
+  "MLB62367865": {
+   "categoria": "brinquedo",
+   "pos": 2,
+   "tipo": "catalogo"
+  },
+  "MLB62376706": {
+   "categoria": "outros",
+   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB62416353": {
@@ -12598,7 +13123,7 @@
   },
   "MLB62557150": {
    "categoria": "brinquedo",
-   "pos": 3,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB62572381": {
@@ -12611,24 +13136,19 @@
    "pos": 5,
    "tipo": "catalogo"
   },
-  "MLB62594516": {
-   "categoria": "quarto",
-   "pos": 6,
-   "tipo": "catalogo"
-  },
   "MLB62601482": {
    "categoria": "quarto",
-   "pos": 2,
+   "pos": 1,
+   "tipo": "catalogo"
+  },
+  "MLB62601676": {
+   "categoria": "quarto",
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB62676665": {
    "categoria": "casa",
    "pos": 8,
-   "tipo": "catalogo"
-  },
-  "MLB62692699": {
-   "categoria": "outros",
-   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB62719788": {
@@ -12653,7 +13173,7 @@
   },
   "MLB62798728": {
    "categoria": "brinquedo",
-   "pos": 8,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB62867807": {
@@ -12673,22 +13193,12 @@
   },
   "MLB62960295": {
    "categoria": "quarto",
-   "pos": 6,
-   "tipo": "catalogo"
-  },
-  "MLB62978394": {
-   "categoria": "brinquedo",
-   "pos": 5,
-   "tipo": "catalogo"
-  },
-  "MLB62978763": {
-   "categoria": "brinquedo",
-   "pos": 1,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB62979086": {
    "categoria": "quarto",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB62983652": {
@@ -12745,7 +13255,7 @@
   },
   "MLB63195734": {
    "categoria": "quarto",
-   "pos": 6,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB63329933": {
@@ -12767,7 +13277,7 @@
   },
   "MLB63535707": {
    "categoria": "brinquedo",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB63636535": {
@@ -12806,6 +13316,16 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
+  "MLB63887390": {
+   "categoria": "roupa",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
+  "MLB63888248": {
+   "categoria": "roupa",
+   "pos": 0,
+   "tipo": "catalogo"
+  },
   "MLB63888271": {
    "categoria": "roupa",
    "pos": 5,
@@ -12814,16 +13334,6 @@
   "MLB63959214": {
    "categoria": "quarto",
    "pos": 1,
-   "tipo": "catalogo"
-  },
-  "MLB63962629": {
-   "categoria": "escola",
-   "pos": 2,
-   "tipo": "catalogo"
-  },
-  "MLB63962761": {
-   "categoria": "brinquedo",
-   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB63980306": {
@@ -12896,7 +13406,7 @@
   },
   "MLB64421623": {
    "categoria": "roupa",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB64490516": {
@@ -12914,12 +13424,6 @@
    "pos": 0,
    "tipo": "catalogo"
   },
-  "MLB64883674": {
-   "categoria": "esporte",
-   "pos": 8,
-   "regra": "infantil",
-   "tipo": "catalogo"
-  },
   "MLB64889431": {
    "categoria": "casa",
    "pos": 0,
@@ -12932,17 +13436,17 @@
   },
   "MLB64987103": {
    "categoria": "outros",
-   "pos": 11,
+   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB65019163": {
    "categoria": "brinquedo",
-   "pos": 4,
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB65019704": {
    "categoria": "brinquedo",
-   "pos": 4,
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB65079780": {
@@ -12991,6 +13495,12 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB65457691": {
+   "categoria": "esporte",
+   "pos": 0,
+   "regra": "infantil",
+   "tipo": "catalogo"
+  },
   "MLB65462863": {
    "categoria": "outros",
    "pos": 10,
@@ -13001,15 +13511,9 @@
    "pos": 1,
    "tipo": "catalogo"
   },
-  "MLB65476462": {
-   "categoria": "esporte",
-   "pos": 0,
-   "regra": "infantil",
-   "tipo": "catalogo"
-  },
   "MLB65558091": {
    "categoria": "gestante",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB65570639": {
@@ -13032,7 +13536,7 @@
    "pos": 4,
    "tipo": "catalogo"
   },
-  "MLB65686975": {
+  "MLB65661790": {
    "categoria": "gestante",
    "pos": 1,
    "tipo": "catalogo"
@@ -13058,19 +13562,9 @@
    "pos": 11,
    "tipo": "catalogo"
   },
-  "MLB65951158": {
-   "categoria": "casa",
-   "pos": 9,
-   "tipo": "catalogo"
-  },
   "MLB66057618": {
    "categoria": "brinquedo",
    "pos": 6,
-   "tipo": "catalogo"
-  },
-  "MLB66062610": {
-   "categoria": "roupa",
-   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB66062793": {
@@ -13125,7 +13619,7 @@
   },
   "MLB66566409": {
    "categoria": "brinquedo",
-   "pos": 3,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB66595119": {
@@ -13145,7 +13639,7 @@
   },
   "MLB66741830": {
    "categoria": "quarto",
-   "pos": 3,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB66743611": {
@@ -13178,6 +13672,16 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB66986360": {
+   "categoria": "brinquedo",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
+  "MLB66995382": {
+   "categoria": "alimentacao",
+   "pos": 10,
+   "tipo": "catalogo"
+  },
   "MLB67009348": {
    "categoria": "outros",
    "pos": 1,
@@ -13198,11 +13702,6 @@
    "pos": 7,
    "tipo": "catalogo"
   },
-  "MLB67134244": {
-   "categoria": "alimentacao",
-   "pos": 10,
-   "tipo": "catalogo"
-  },
   "MLB67134371": {
    "categoria": "alimentacao",
    "pos": 2,
@@ -13211,11 +13710,6 @@
   "MLB67146827": {
    "categoria": "outros",
    "pos": 10,
-   "tipo": "catalogo"
-  },
-  "MLB67159233": {
-   "categoria": "roupa",
-   "pos": 0,
    "tipo": "catalogo"
   },
   "MLB67163355": {
@@ -13249,6 +13743,11 @@
    "regra": "infantil",
    "tipo": "catalogo"
   },
+  "MLB67485280": {
+   "categoria": "brinquedo",
+   "pos": 12,
+   "tipo": "catalogo"
+  },
   "MLB67502463": {
    "categoria": "outros",
    "pos": 5,
@@ -13262,7 +13761,7 @@
   },
   "MLB67646913": {
    "categoria": "casa",
-   "pos": 9,
+   "pos": 8,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -13314,17 +13813,17 @@
   },
   "MLB68208636": {
    "categoria": "quarto",
-   "pos": 1,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB68254657": {
    "categoria": "alimentacao",
-   "pos": 7,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB68310966": {
    "categoria": "escola",
-   "pos": 5,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB68351354": {
@@ -13345,7 +13844,7 @@
   },
   "MLB68429537": {
    "categoria": "roupa",
-   "pos": 0,
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB68520050": {
@@ -13360,12 +13859,12 @@
   },
   "MLB68606950": {
    "categoria": "brinquedo",
-   "pos": 10,
+   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB68656192": {
    "categoria": "roupa",
-   "pos": 4,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB68667585": {
@@ -13400,7 +13899,7 @@
   },
   "MLB68758797": {
    "categoria": "roupa",
-   "pos": 9,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB68818364": {
@@ -13412,11 +13911,6 @@
   "MLB68833581": {
    "categoria": "brinquedo",
    "pos": 3,
-   "tipo": "catalogo"
-  },
-  "MLB68877254": {
-   "categoria": "outros",
-   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB69054240": {
@@ -13447,12 +13941,12 @@
   },
   "MLB69561731": {
    "categoria": "brinquedo",
-   "pos": 6,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB69562319": {
    "categoria": "casa",
-   "pos": 8,
+   "pos": 7,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -13472,9 +13966,10 @@
    "pos": 4,
    "tipo": "catalogo"
   },
-  "MLB69635522": {
-   "categoria": "alimentacao",
-   "pos": 4,
+  "MLB69687960": {
+   "categoria": "casa",
+   "pos": 5,
+   "regra": "infantil",
    "tipo": "catalogo"
   },
   "MLB69700255": {
@@ -13499,6 +13994,11 @@
    "pos": 1,
    "tipo": "catalogo"
   },
+  "MLB69748766": {
+   "categoria": "escola",
+   "pos": 1,
+   "tipo": "catalogo"
+  },
   "MLB69818712": {
    "categoria": "outros",
    "pos": 5,
@@ -13507,11 +14007,6 @@
   "MLB69876842": {
    "categoria": "higiene",
    "pos": 3,
-   "tipo": "catalogo"
-  },
-  "MLB69925379": {
-   "categoria": "escola",
-   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB69968142": {
@@ -13540,11 +14035,6 @@
    "pos": 4,
    "tipo": "catalogo"
   },
-  "MLB70023221": {
-   "categoria": "alimentacao",
-   "pos": 5,
-   "tipo": "catalogo"
-  },
   "MLB70032471": {
    "categoria": "game",
    "pos": 10,
@@ -13554,6 +14044,11 @@
   "MLB70042938": {
    "categoria": "higiene",
    "pos": 2,
+   "tipo": "catalogo"
+  },
+  "MLB70058387": {
+   "categoria": "alimentacao",
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB70063063": {
@@ -13589,7 +14084,7 @@
   },
   "MLB70315836": {
    "categoria": "outros",
-   "pos": 7,
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB70322096": {
@@ -13615,7 +14110,7 @@
   },
   "MLB70448723": {
    "categoria": "outros",
-   "pos": 10,
+   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB70510562": {
@@ -13625,7 +14120,7 @@
   },
   "MLB70515455": {
    "categoria": "escola",
-   "pos": 9,
+   "pos": 8,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -13662,7 +14157,7 @@
   },
   "MLB71623820": {
    "categoria": "livro",
-   "pos": 17,
+   "pos": 18,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -13688,7 +14183,7 @@
   },
   "MLB72184672": {
    "categoria": "alimentacao",
-   "pos": 8,
+   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB72185978": {
@@ -13698,7 +14193,7 @@
   },
   "MLB72192584": {
    "categoria": "alimentacao",
-   "pos": 6,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB72223433": {
@@ -13709,11 +14204,6 @@
   "MLB72247484": {
    "categoria": "outros",
    "pos": 2,
-   "tipo": "catalogo"
-  },
-  "MLB72248406": {
-   "categoria": "alimentacao",
-   "pos": 13,
    "tipo": "catalogo"
   },
   "MLB72254053": {
@@ -13728,17 +14218,12 @@
   },
   "MLB72655906": {
    "categoria": "gestante",
-   "pos": 5,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB72664094": {
    "categoria": "outros",
    "pos": 6,
-   "tipo": "catalogo"
-  },
-  "MLB72675682": {
-   "categoria": "quarto",
-   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB72678068": {
@@ -13748,17 +14233,12 @@
   },
   "MLB72678105": {
    "categoria": "higiene",
-   "pos": 2,
+   "pos": 3,
    "tipo": "catalogo"
   },
-  "MLB72686279": {
-   "categoria": "brinquedo",
-   "pos": 1,
-   "tipo": "catalogo"
-  },
-  "MLB72688713": {
-   "categoria": "outros",
-   "pos": 4,
+  "MLB72678690": {
+   "categoria": "roupa",
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB72701612": {
@@ -13778,7 +14258,7 @@
   },
   "MLB72723298": {
    "categoria": "higiene",
-   "pos": 6,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB72727015": {
@@ -13788,12 +14268,12 @@
   },
   "MLB72761304": {
    "categoria": "roupa",
-   "pos": 2,
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB72807208": {
    "categoria": "roupa",
-   "pos": 1,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB72850803": {
@@ -13811,14 +14291,9 @@
    "pos": 7,
    "tipo": "catalogo"
   },
-  "MLB72898518": {
-   "categoria": "escola",
-   "pos": 5,
-   "tipo": "catalogo"
-  },
   "MLB72899436": {
    "categoria": "outros",
-   "pos": 13,
+   "pos": 11,
    "tipo": "catalogo"
   },
   "MLB72901008": {
@@ -13883,7 +14358,7 @@
   },
   "MLB73433120": {
    "categoria": "roupa",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB73452366": {
@@ -13910,7 +14385,7 @@
   },
   "MLB73833764": {
    "categoria": "outros",
-   "pos": 6,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB73899125": {
@@ -13959,7 +14434,7 @@
   },
   "MLB74126952": {
    "categoria": "outros",
-   "pos": 9,
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB74135784": {
@@ -14003,9 +14478,14 @@
    "pos": 5,
    "tipo": "catalogo"
   },
+  "MLB74341993": {
+   "categoria": "escola",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
   "MLB74347622": {
    "categoria": "brinquedo",
-   "pos": 3,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB74418582": {
@@ -14074,12 +14554,12 @@
    "regra": "game",
    "tipo": "catalogo"
   },
-  "MLB74828494": {
-   "categoria": "outros",
-   "pos": 1,
+  "MLB74813550": {
+   "categoria": "escola",
+   "pos": 2,
    "tipo": "catalogo"
   },
-  "MLB74907026": {
+  "MLB74907028": {
    "categoria": "brinquedo",
    "pos": 9,
    "tipo": "catalogo"
@@ -14109,9 +14589,9 @@
    "pos": 0,
    "tipo": "catalogo"
   },
-  "MLB75172234": {
-   "categoria": "passeio",
-   "pos": 4,
+  "MLB75034564": {
+   "categoria": "outros",
+   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB75217338": {
@@ -14122,6 +14602,11 @@
   "MLB75305504": {
    "categoria": "passeio",
    "pos": 0,
+   "tipo": "catalogo"
+  },
+  "MLB75371752": {
+   "categoria": "brinquedo",
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB75373452": {
@@ -14156,7 +14641,7 @@
   },
   "MLB75536046": {
    "categoria": "escola",
-   "pos": 10,
+   "pos": 9,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -14167,19 +14652,13 @@
   },
   "MLB75554771": {
    "categoria": "casa",
-   "pos": 5,
+   "pos": 4,
    "regra": "infantil",
    "tipo": "catalogo"
   },
   "MLB75625924": {
    "categoria": "escola",
    "pos": 3,
-   "regra": "infantil",
-   "tipo": "catalogo"
-  },
-  "MLB75627272": {
-   "categoria": "escola",
-   "pos": 5,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -14195,12 +14674,12 @@
   },
   "MLB75635479": {
    "categoria": "outros",
-   "pos": 14,
+   "pos": 13,
    "tipo": "catalogo"
   },
   "MLB75637239": {
    "categoria": "outros",
-   "pos": 7,
+   "pos": 6,
    "tipo": "catalogo"
   },
   "MLB75656299": {
@@ -14223,11 +14702,6 @@
    "pos": 0,
    "tipo": "catalogo"
   },
-  "MLB75725312": {
-   "categoria": "outros",
-   "pos": 8,
-   "tipo": "catalogo"
-  },
   "MLB75725984": {
    "categoria": "brinquedo",
    "pos": 8,
@@ -14240,7 +14714,7 @@
   },
   "MLB75731506": {
    "categoria": "gestante",
-   "pos": 13,
+   "pos": 12,
    "tipo": "catalogo"
   },
   "MLB75732428": {
@@ -14248,14 +14722,14 @@
    "pos": 2,
    "tipo": "catalogo"
   },
-  "MLB75752246": {
+  "MLB75752244": {
    "categoria": "higiene",
    "pos": 9,
    "tipo": "catalogo"
   },
   "MLB75755258": {
    "categoria": "escola",
-   "pos": 8,
+   "pos": 7,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -14271,7 +14745,7 @@
   },
   "MLB75846960": {
    "categoria": "alimentacao",
-   "pos": 1,
+   "pos": 0,
    "tipo": "catalogo"
   },
   "MLB75917211": {
@@ -14301,7 +14775,7 @@
   },
   "MLB76227640": {
    "categoria": "outros",
-   "pos": 7,
+   "pos": 8,
    "tipo": "catalogo"
   },
   "MLB76247569": {
@@ -14340,6 +14814,11 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB77144500": {
+   "categoria": "higiene",
+   "pos": 5,
+   "tipo": "catalogo"
+  },
   "MLB77186530": {
    "categoria": "brinquedo",
    "pos": 0,
@@ -14375,6 +14854,11 @@
    "pos": 0,
    "tipo": "catalogo"
   },
+  "MLB77505415": {
+   "categoria": "outros",
+   "pos": 14,
+   "tipo": "catalogo"
+  },
   "MLB77510116": {
    "categoria": "brinquedo",
    "pos": 4,
@@ -14387,7 +14871,7 @@
   },
   "MLB77529828": {
    "categoria": "esporte",
-   "pos": 11,
+   "pos": 9,
    "regra": "infantil",
    "tipo": "catalogo"
   },
@@ -14409,11 +14893,16 @@
   },
   "MLB77687448": {
    "categoria": "brinquedo",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB77824951": {
    "categoria": "outros",
+   "pos": 6,
+   "tipo": "catalogo"
+  },
+  "MLB77871954": {
+   "categoria": "higiene",
    "pos": 7,
    "tipo": "catalogo"
   },
@@ -14437,19 +14926,14 @@
    "pos": 3,
    "tipo": "catalogo"
   },
-  "MLB78182435": {
+  "MLB78182436": {
    "categoria": "brinquedo",
    "pos": 5,
    "tipo": "catalogo"
   },
-  "MLB78189885": {
-   "categoria": "higiene",
-   "pos": 7,
-   "tipo": "catalogo"
-  },
   "MLB78190596": {
    "categoria": "higiene",
-   "pos": 3,
+   "pos": 2,
    "tipo": "catalogo"
   },
   "MLB78192682": {
@@ -14479,7 +14963,7 @@
    "pos": 8,
    "tipo": "catalogo"
   },
-  "MLB78402369": {
+  "MLB78402366": {
    "categoria": "outros",
    "pos": 8,
    "tipo": "catalogo"
@@ -14507,12 +14991,12 @@
   },
   "MLB78714478": {
    "categoria": "outros",
-   "pos": 2,
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB78738420": {
    "categoria": "brinquedo",
-   "pos": 2,
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB78745676": {
@@ -14532,7 +15016,7 @@
   },
   "MLB78828696": {
    "categoria": "brinquedo",
-   "pos": 2,
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB78843392": {
@@ -14567,12 +15051,17 @@
   },
   "MLB79280919": {
    "categoria": "roupa",
-   "pos": 11,
+   "pos": 9,
    "tipo": "catalogo"
   },
   "MLB79313725": {
    "categoria": "brinquedo",
    "pos": 2,
+   "tipo": "catalogo"
+  },
+  "MLB79315264": {
+   "categoria": "alimentacao",
+   "pos": 13,
    "tipo": "catalogo"
   },
   "MLB79378634": {
@@ -14598,11 +15087,6 @@
   "MLB79599944": {
    "categoria": "brinquedo",
    "pos": 5,
-   "tipo": "catalogo"
-  },
-  "MLB79649272": {
-   "categoria": "brinquedo",
-   "pos": 1,
    "tipo": "catalogo"
   },
   "MLB79723296": {
@@ -14639,7 +15123,7 @@
   },
   "MLB80008917": {
    "categoria": "outros",
-   "pos": 8,
+   "pos": 7,
    "tipo": "catalogo"
   },
   "MLB80016895": {
@@ -14650,28 +15134,28 @@
   },
   "MLB80107133": {
    "categoria": "brinquedo",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   },
   "MLB80142080": {
    "categoria": "brinquedo",
-   "pos": 4,
+   "pos": 3,
    "tipo": "catalogo"
   },
   "MLB80142249": {
    "categoria": "festa",
-   "pos": 8,
+   "pos": 7,
    "regra": "infantil",
    "tipo": "catalogo"
   },
-  "MLB80147830": {
-   "categoria": "outros",
-   "pos": 9,
+  "MLB80160073": {
+   "categoria": "passeio",
+   "pos": 4,
    "tipo": "catalogo"
   },
-  "MLB80148175": {
-   "categoria": "outros",
-   "pos": 12,
+  "MLB80166730": {
+   "categoria": "brinquedo",
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB80167828": {
@@ -14759,11 +15243,6 @@
    "pos": 1,
    "tipo": "catalogo"
   },
-  "MLB80823637": {
-   "categoria": "brinquedo",
-   "pos": 2,
-   "tipo": "catalogo"
-  },
   "MLB80857862": {
    "categoria": "brinquedo",
    "pos": 4,
@@ -14789,9 +15268,14 @@
    "pos": 1,
    "tipo": "catalogo"
   },
-  "MLB81215875": {
+  "MLB81066221": {
    "categoria": "outros",
-   "pos": 11,
+   "pos": 14,
+   "tipo": "catalogo"
+  },
+  "MLB81215877": {
+   "categoria": "outros",
+   "pos": 10,
    "tipo": "catalogo"
   },
   "MLB81243166": {
@@ -14828,12 +15312,12 @@
   },
   "MLB9228977": {
    "categoria": "brinquedo",
-   "pos": 6,
+   "pos": 5,
    "tipo": "catalogo"
   },
   "MLB9412100": {
    "categoria": "brinquedo",
-   "pos": 5,
+   "pos": 4,
    "tipo": "catalogo"
   }
  },
@@ -14863,7 +15347,9 @@
    "shopee": 42
   },
   "2026-11-14": {
-   "cupons": 1
+   "cupons": 1,
+   "posts": 4,
+   "shopee": 2
   }
  },
  "links": {
@@ -15440,10 +15926,76 @@
   "MLB9228977": "https://meli.la/1igknDB",
   "MLB9412100": "https://meli.la/1CDVwho"
  },
- "lote": null,
+ "lote": {
+  "dia": "2026-11-14",
+  "ids": [
+   "MLB18626757",
+   "MLB26264442",
+   "MLB46557712",
+   "MLB19315994",
+   "MLB69980801",
+   "MLB72143098",
+   "MLB75631431",
+   "MLB24233595",
+   "MLB24635596",
+   "MLB78402366",
+   "MLB45780583",
+   "MLB80166730",
+   "MLB21484539",
+   "MLB74341993",
+   "MLB62250973",
+   "MLB52200756",
+   "MLB39156395",
+   "MLB19970138",
+   "MLB75034564",
+   "MLB77824951",
+   "MLB26114840",
+   "MLB78015488",
+   "MLB32420202",
+   "MLB81215877",
+   "MLB26591881",
+   "MLB19694274",
+   "MLB67201960",
+   "MLB34114750",
+   "MLB44022617",
+   "MLB61271206"
+  ],
+  "urls": [
+   "https://produto.mercadolivre.com.br/MLB-4134061261-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5272813502-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4603086735-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4504333956-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4713054215-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5099971435-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7224761916-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7768021166-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6594294934-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7619712994-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3980481963-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7739715728-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4715982389-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7753678682-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5310343707-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5316437589-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3965340565-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3491669603-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4861529525-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7504427926-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-4212516198-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5180078027-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7579298928-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5480727735-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-3533930397-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7723926458-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-6533497356-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5066705028-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-5269476178-produto-_JM",
+   "https://produto.mercadolivre.com.br/MLB-7077002628-produto-_JM"
+  ]
+ },
  "lote_enviado_em": "2026-11-06",
  "lotes_dia": {
-  "2026-11-13": 3
+  "2026-11-14": 1
  },
  "membros_hist": {
   "2026-11-07": 2,
@@ -15452,10 +16004,11 @@
   "2026-11-10": 2,
   "2026-11-11": 2,
   "2026-11-12": 2,
-  "2026-11-13": 2
+  "2026-11-13": 2,
+  "2026-11-14": 2
  },
- "membros_lido_em": "2026-11-13T21",
- "numeros_em": "2026-11-13T21:51-03:00",
+ "membros_lido_em": "2026-11-14T08",
+ "numeros_em": "2026-11-14T08:02-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -15807,7 +16360,7 @@
   "MLB26851070": {
    "desconto": 0.631,
    "preco": 188.0,
-   "quando": "2026-11-11T08:02-03:00",
+   "quando": "2026-11-14T08:02-03:00",
    "titulo": "Burigotto Kit Banho Branco"
   },
   "MLB27044594": {
@@ -15823,9 +16376,9 @@
    "titulo": "Teclado Eletrônico Musical De 61 Teclas | Brinquedo Infantil Cor Preto"
   },
   "MLB27590860": {
-   "desconto": 0.506,
-   "preco": 19.7,
-   "quando": "2026-11-10T11:02-03:00",
+   "desconto": 0.527,
+   "preco": 18.89,
+   "quando": "2026-11-14T08:02-03:00",
    "titulo": "Babador De Silicone Pega Migalhas Menina 09724 - Buba"
   },
   "MLB27718012": {
@@ -17970,6 +18523,10 @@
     [
      "2026-11-13",
      139.8
+    ],
+    [
+     "2026-11-14",
+     159.0
     ]
    ],
    "min": 134.0
@@ -17987,9 +18544,22 @@
     [
      "2026-11-13",
      389.0
+    ],
+    [
+     "2026-11-14",
+     299.05
     ]
    ],
-   "min": 307.12
+   "min": 299.05
+  },
+  "MLB15051867": {
+   "historico": [
+    [
+     "2026-11-14",
+     119.88
+    ]
+   ],
+   "min": 119.88
   },
   "MLB15995410": {
    "historico": [
@@ -18119,9 +18689,13 @@
     [
      "2026-11-13",
      512.8
+    ],
+    [
+     "2026-11-14",
+     481.97
     ]
    ],
-   "min": 485.04
+   "min": 481.97
   },
   "MLB16201193": {
    "historico": [
@@ -18300,6 +18874,10 @@
     [
      "2026-11-11",
      126.48
+    ],
+    [
+     "2026-11-14",
+     199.99
     ]
    ],
    "min": 33.0
@@ -18410,6 +18988,10 @@
     [
      "2026-11-13",
      13.99
+    ],
+    [
+     "2026-11-14",
+     14.06
     ]
    ],
    "min": 10.99
@@ -18723,6 +19305,10 @@
     [
      "2026-11-12",
      35.74
+    ],
+    [
+     "2026-11-14",
+     34.67
     ]
    ],
    "min": 31.05
@@ -18740,9 +19326,13 @@
     [
      "2026-11-12",
      19.89
+    ],
+    [
+     "2026-11-14",
+     18.33
     ]
    ],
-   "min": 19.09
+   "min": 18.33
   },
   "MLB18392647": {
    "historico": [
@@ -18757,9 +19347,13 @@
     [
      "2026-11-12",
      35.77
+    ],
+    [
+     "2026-11-14",
+     33.85
     ]
    ],
-   "min": 33.98
+   "min": 33.85
   },
   "MLB18392651": {
    "historico": [
@@ -18774,6 +19368,10 @@
     [
      "2026-11-12",
      35.31
+    ],
+    [
+     "2026-11-14",
+     34.25
     ]
    ],
    "min": 29.99
@@ -18799,9 +19397,13 @@
     [
      "2026-11-12",
      34.12
+    ],
+    [
+     "2026-11-14",
+     33.1
     ]
    ],
-   "min": 33.2
+   "min": 33.1
   },
   "MLB18392724": {
    "historico": [
@@ -18937,6 +19539,10 @@
     [
      "2026-11-13",
      32.59
+    ],
+    [
+     "2026-11-14",
+     43.59
     ]
    ],
    "min": 27.87
@@ -19052,9 +19658,13 @@
     [
      "2026-11-11",
      11.88
+    ],
+    [
+     "2026-11-14",
+     11.35
     ]
    ],
-   "min": 11.84
+   "min": 11.35
   },
   "MLB18397455": {
    "historico": [
@@ -19135,9 +19745,13 @@
     [
      "2026-11-13",
      33.61
+    ],
+    [
+     "2026-11-14",
+     33.39
     ]
    ],
-   "min": 33.61
+   "min": 33.39
   },
   "MLB18397498": {
    "historico": [
@@ -19200,6 +19814,15 @@
    ],
    "min": 159.06
   },
+  "MLB18626757": {
+   "historico": [
+    [
+     "2026-11-14",
+     77.38
+    ]
+   ],
+   "min": 77.38
+  },
   "MLB18630714": {
    "historico": [
     [
@@ -19230,6 +19853,15 @@
     ]
    ],
    "min": 34.29
+  },
+  "MLB18727385": {
+   "historico": [
+    [
+     "2026-11-14",
+     59.8
+    ]
+   ],
+   "min": 59.8
   },
   "MLB18917848": {
    "historico": [
@@ -19359,6 +19991,15 @@
     ]
    ],
    "min": 16.59
+  },
+  "MLB19315994": {
+   "historico": [
+    [
+     "2026-11-14",
+     117.13
+    ]
+   ],
+   "min": 117.13
   },
   "MLB19315995": {
    "historico": [
@@ -19568,6 +20209,10 @@
     [
      "2026-11-13",
      43.27
+    ],
+    [
+     "2026-11-14",
+     43.99
     ]
    ],
    "min": 42.9
@@ -19610,9 +20255,22 @@
     [
      "2026-11-13",
      42.32
+    ],
+    [
+     "2026-11-14",
+     58.75
     ]
    ],
    "min": 39.95
+  },
+  "MLB19692998": {
+   "historico": [
+    [
+     "2026-11-14",
+     449.0
+    ]
+   ],
+   "min": 449.0
   },
   "MLB19694274": {
    "historico": [
@@ -19717,6 +20375,10 @@
     [
      "2026-11-10",
      14.95
+    ],
+    [
+     "2026-11-14",
+     22.15
     ]
    ],
    "min": 14.3
@@ -19853,6 +20515,10 @@
     [
      "2026-11-13",
      645.51
+    ],
+    [
+     "2026-11-14",
+     518.9
     ]
    ],
    "min": 433.0
@@ -19918,6 +20584,10 @@
     [
      "2026-11-13",
      619.9
+    ],
+    [
+     "2026-11-14",
+     499.9
     ]
    ],
    "min": 499.9
@@ -19961,6 +20631,10 @@
     [
      "2026-11-13",
      288.0
+    ],
+    [
+     "2026-11-14",
+     284.0
     ]
    ],
    "min": 262.75
@@ -19970,9 +20644,13 @@
     [
      "2026-11-07",
      85.02
+    ],
+    [
+     "2026-11-14",
+     71.9
     ]
    ],
-   "min": 85.02
+   "min": 71.9
   },
   "MLB20618866": {
    "historico": [
@@ -20131,6 +20809,15 @@
    ],
    "min": 40.0
   },
+  "MLB21405887": {
+   "historico": [
+    [
+     "2026-11-14",
+     20.41
+    ]
+   ],
+   "min": 20.41
+  },
   "MLB21447303": {
    "historico": [
     [
@@ -20189,6 +20876,15 @@
     ]
    ],
    "min": 42.84
+  },
+  "MLB21484539": {
+   "historico": [
+    [
+     "2026-11-14",
+     75.69
+    ]
+   ],
+   "min": 75.69
   },
   "MLB21653599": {
    "historico": [
@@ -20629,6 +21325,10 @@
     [
      "2026-11-13",
      224.99
+    ],
+    [
+     "2026-11-14",
+     219.9
     ]
    ],
    "min": 204.92
@@ -20873,9 +21573,13 @@
     [
      "2026-11-13",
      771.72
+    ],
+    [
+     "2026-11-14",
+     679.9
     ]
    ],
-   "min": 699.9
+   "min": 679.9
   },
   "MLB23201346": {
    "historico": [
@@ -20912,6 +21616,15 @@
     ]
    ],
    "min": 472.99
+  },
+  "MLB23420837": {
+   "historico": [
+    [
+     "2026-11-14",
+     524.89
+    ]
+   ],
+   "min": 524.89
   },
   "MLB23480808": {
    "historico": [
@@ -21372,6 +22085,10 @@
     [
      "2026-11-13",
      49.99
+    ],
+    [
+     "2026-11-14",
+     51.5
     ]
    ],
    "min": 37.9
@@ -21489,6 +22206,15 @@
     ]
    ],
    "min": 193.8
+  },
+  "MLB23883011": {
+   "historico": [
+    [
+     "2026-11-14",
+     21.61
+    ]
+   ],
+   "min": 21.61
   },
   "MLB23893374": {
    "historico": [
@@ -21927,6 +22653,10 @@
     [
      "2026-11-13",
      626.51
+    ],
+    [
+     "2026-11-14",
+     531.04
     ]
    ],
    "min": 529.0
@@ -22213,9 +22943,13 @@
     [
      "2026-11-13",
      219.09
+    ],
+    [
+     "2026-11-14",
+     199.0
     ]
    ],
-   "min": 199.9
+   "min": 199.0
   },
   "MLB24214298": {
    "historico": [
@@ -22281,6 +23015,15 @@
     ]
    ],
    "min": 78.39
+  },
+  "MLB24233595": {
+   "historico": [
+    [
+     "2026-11-14",
+     167.99
+    ]
+   ],
+   "min": 167.99
   },
   "MLB24275342": {
    "historico": [
@@ -22432,6 +23175,10 @@
     [
      "2026-11-06",
      37.9
+    ],
+    [
+     "2026-11-14",
+     29.85
     ]
    ],
    "min": 29.85
@@ -22560,6 +23307,10 @@
     [
      "2026-11-13",
      19.0
+    ],
+    [
+     "2026-11-14",
+     23.9
     ]
    ],
    "min": 19.0
@@ -22713,6 +23464,10 @@
     [
      "2026-11-13",
      22.89
+    ],
+    [
+     "2026-11-14",
+     22.77
     ]
    ],
    "min": 18.2
@@ -23096,6 +23851,10 @@
     [
      "2026-11-13",
      50.0
+    ],
+    [
+     "2026-11-14",
+     42.9
     ]
    ],
    "min": 37.61
@@ -23468,9 +24227,13 @@
     [
      "2026-11-11",
      177.12
+    ],
+    [
+     "2026-11-14",
+     164.04
     ]
    ],
-   "min": 169.99
+   "min": 164.04
   },
   "MLB26114869": {
    "historico": [
@@ -23518,6 +24281,15 @@
     ]
    ],
    "min": 62.07
+  },
+  "MLB26264442": {
+   "historico": [
+    [
+     "2026-11-14",
+     33.66
+    ]
+   ],
+   "min": 33.66
   },
   "MLB26282641": {
    "historico": [
@@ -23676,6 +24448,10 @@
     [
      "2026-11-13",
      605.34
+    ],
+    [
+     "2026-11-14",
+     506.9
     ]
    ],
    "min": 506.9
@@ -24021,6 +24797,10 @@
     [
      "2026-11-13",
      222.9
+    ],
+    [
+     "2026-11-14",
+     188.0
     ]
    ],
    "min": 188.0
@@ -24227,6 +25007,10 @@
     [
      "2026-11-13",
      174.0
+    ],
+    [
+     "2026-11-14",
+     187.99
     ]
    ],
    "min": 99.43
@@ -24249,9 +25033,13 @@
     [
      "2026-11-13",
      138.5
+    ],
+    [
+     "2026-11-14",
+     106.05
     ]
    ],
-   "min": 138.5
+   "min": 106.05
   },
   "MLB27350487": {
    "historico": [
@@ -24299,6 +25087,15 @@
     ]
    ],
    "min": 148.0
+  },
+  "MLB27420583": {
+   "historico": [
+    [
+     "2026-11-14",
+     236.62
+    ]
+   ],
+   "min": 236.62
   },
   "MLB27424973": {
    "historico": [
@@ -24549,6 +25346,10 @@
     [
      "2026-11-12",
      25.99
+    ],
+    [
+     "2026-11-14",
+     27.35
     ]
    ],
    "min": 22.42
@@ -24576,6 +25377,10 @@
     [
      "2026-11-09",
      26.87
+    ],
+    [
+     "2026-11-14",
+     27.72
     ]
    ],
    "min": 26.87
@@ -24627,6 +25432,10 @@
     [
      "2026-11-13",
      689.0
+    ],
+    [
+     "2026-11-14",
+     649.0
     ]
    ],
    "min": 575.0
@@ -24701,6 +25510,10 @@
     [
      "2026-11-13",
      597.7
+    ],
+    [
+     "2026-11-14",
+     569.9
     ]
    ],
    "min": 569.9
@@ -24890,6 +25703,10 @@
     [
      "2026-11-13",
      178.0
+    ],
+    [
+     "2026-11-14",
+     173.82
     ]
    ],
    "min": 159.99
@@ -25127,6 +25944,10 @@
     [
      "2026-11-13",
      48.99
+    ],
+    [
+     "2026-11-14",
+     48.22
     ]
    ],
    "min": 38.19
@@ -25161,6 +25982,10 @@
     [
      "2026-11-11",
      20.37
+    ],
+    [
+     "2026-11-14",
+     21.0
     ]
    ],
    "min": 20.37
@@ -25245,6 +26070,15 @@
     ]
    ],
    "min": 272.08
+  },
+  "MLB28903070": {
+   "historico": [
+    [
+     "2026-11-14",
+     13.91
+    ]
+   ],
+   "min": 13.91
   },
   "MLB28999821": {
    "historico": [
@@ -25497,6 +26331,15 @@
    ],
    "min": 8.99
   },
+  "MLB29692872": {
+   "historico": [
+    [
+     "2026-11-14",
+     20.65
+    ]
+   ],
+   "min": 20.65
+  },
   "MLB29721710": {
    "historico": [
     [
@@ -25623,6 +26466,10 @@
     [
      "2026-11-13",
      549.0
+    ],
+    [
+     "2026-11-14",
+     449.99
     ]
    ],
    "min": 368.28
@@ -25654,6 +26501,10 @@
     [
      "2026-11-12",
      40.99
+    ],
+    [
+     "2026-11-14",
+     41.78
     ]
    ],
    "min": 40.99
@@ -25663,9 +26514,13 @@
     [
      "2026-11-09",
      462.15
+    ],
+    [
+     "2026-11-14",
+     461.36
     ]
    ],
-   "min": 462.15
+   "min": 461.36
   },
   "MLB30430533": {
    "historico": [
@@ -25894,6 +26749,15 @@
     ]
    ],
    "min": 19.99
+  },
+  "MLB32438392": {
+   "historico": [
+    [
+     "2026-11-14",
+     123.48
+    ]
+   ],
+   "min": 123.48
   },
   "MLB32469560": {
    "historico": [
@@ -26356,6 +27220,10 @@
     [
      "2026-11-13",
      75.9
+    ],
+    [
+     "2026-11-14",
+     64.8
     ]
    ],
    "min": 64.8
@@ -26390,6 +27258,10 @@
     [
      "2026-11-12",
      406.22
+    ],
+    [
+     "2026-11-14",
+     401.01
     ]
    ],
    "min": 359.35
@@ -26415,9 +27287,13 @@
     [
      "2026-11-11",
      1818.08
+    ],
+    [
+     "2026-11-14",
+     1727.25
     ]
    ],
-   "min": 1736.9
+   "min": 1727.25
   },
   "MLB35090823": {
    "historico": [
@@ -26526,6 +27402,10 @@
     [
      "2026-11-13",
      1521.0
+    ],
+    [
+     "2026-11-14",
+     1649.0
     ]
    ],
    "min": 1521.0
@@ -26779,6 +27659,15 @@
     ]
    ],
    "min": 230.99
+  },
+  "MLB36872182": {
+   "historico": [
+    [
+     "2026-11-14",
+     188.99
+    ]
+   ],
+   "min": 188.99
   },
   "MLB36933476": {
    "historico": [
@@ -27228,6 +28117,10 @@
     [
      "2026-11-13",
      65.99
+    ],
+    [
+     "2026-11-14",
+     43.49
     ]
    ],
    "min": 43.49
@@ -27301,9 +28194,13 @@
     [
      "2026-11-13",
      217.26
+    ],
+    [
+     "2026-11-14",
+     164.0
     ]
    ],
-   "min": 169.9
+   "min": 164.0
   },
   "MLB38626962": {
    "historico": [
@@ -27468,6 +28365,15 @@
    ],
    "min": 390.6
   },
+  "MLB39156395": {
+   "historico": [
+    [
+     "2026-11-14",
+     172.0
+    ]
+   ],
+   "min": 172.0
+  },
   "MLB39228325": {
    "historico": [
     [
@@ -27557,9 +28463,13 @@
     [
      "2026-11-12",
      18.89
+    ],
+    [
+     "2026-11-14",
+     17.05
     ]
    ],
-   "min": 17.84
+   "min": 17.05
   },
   "MLB39369748": {
    "historico": [
@@ -27684,6 +28594,10 @@
     [
      "2026-11-13",
      76.15
+    ],
+    [
+     "2026-11-14",
+     73.87
     ]
    ],
    "min": 73.87
@@ -27727,9 +28641,13 @@
     [
      "2026-11-08",
      23.0
+    ],
+    [
+     "2026-11-14",
+     22.45
     ]
    ],
-   "min": 23.0
+   "min": 22.45
   },
   "MLB40117012": {
    "historico": [
@@ -27838,6 +28756,15 @@
     ]
    ],
    "min": 159.89
+  },
+  "MLB40461064": {
+   "historico": [
+    [
+     "2026-11-14",
+     32.26
+    ]
+   ],
+   "min": 32.26
   },
   "MLB40506420": {
    "historico": [
@@ -28328,6 +29255,10 @@
     [
      "2026-11-13",
      58.79
+    ],
+    [
+     "2026-11-14",
+     68.99
     ]
    ],
    "min": 30.99
@@ -28428,6 +29359,10 @@
     [
      "2026-11-13",
      17.9
+    ],
+    [
+     "2026-11-14",
+     17.8
     ]
    ],
    "min": 16.92
@@ -28749,6 +29684,10 @@
     [
      "2026-11-13",
      248.89
+    ],
+    [
+     "2026-11-14",
+     260.93
     ]
    ],
    "min": 248.89
@@ -29305,6 +30244,10 @@
     [
      "2026-11-09",
      30.59
+    ],
+    [
+     "2026-11-14",
+     32.9
     ]
    ],
    "min": 30.59
@@ -29414,6 +30357,10 @@
     [
      "2026-11-10",
      114.9
+    ],
+    [
+     "2026-11-14",
+     110.0
     ]
    ],
    "min": 106.7
@@ -29815,6 +30762,10 @@
     [
      "2026-11-13",
      62.87
+    ],
+    [
+     "2026-11-14",
+     65.0
     ]
    ],
    "min": 62.49
@@ -29858,6 +30809,15 @@
     ]
    ],
    "min": 19.99
+  },
+  "MLB46557712": {
+   "historico": [
+    [
+     "2026-11-14",
+     849.4
+    ]
+   ],
+   "min": 849.4
   },
   "MLB46559909": {
    "historico": [
@@ -30009,6 +30969,10 @@
     [
      "2026-11-12",
      54.99
+    ],
+    [
+     "2026-11-14",
+     36.99
     ]
    ],
    "min": 29.99
@@ -30277,6 +31241,15 @@
     ]
    ],
    "min": 24.0
+  },
+  "MLB49362883": {
+   "historico": [
+    [
+     "2026-11-14",
+     220.91
+    ]
+   ],
+   "min": 220.91
   },
   "MLB49524685": {
    "historico": [
@@ -30817,6 +31790,10 @@
     [
      "2026-11-13",
      25.79
+    ],
+    [
+     "2026-11-14",
+     27.8
     ]
    ],
    "min": 25.79
@@ -30834,6 +31811,10 @@
     [
      "2026-11-13",
      27.8
+    ],
+    [
+     "2026-11-14",
+     29.9
     ]
    ],
    "min": 25.0
@@ -30863,6 +31844,15 @@
     ]
    ],
    "min": 25.9
+  },
+  "MLB52200756": {
+   "historico": [
+    [
+     "2026-11-14",
+     174.33
+    ]
+   ],
+   "min": 174.33
   },
   "MLB52279320": {
    "historico": [
@@ -31029,6 +32019,10 @@
     [
      "2026-11-13",
      4699.0
+    ],
+    [
+     "2026-11-14",
+     4819.78
     ]
    ],
    "min": 3801.0
@@ -31207,9 +32201,13 @@
     [
      "2026-11-12",
      260.44
+    ],
+    [
+     "2026-11-14",
+     252.0
     ]
    ],
-   "min": 258.9
+   "min": 252.0
   },
   "MLB53799589": {
    "historico": [
@@ -31518,6 +32516,10 @@
     [
      "2026-11-13",
      287.65
+    ],
+    [
+     "2026-11-14",
+     326.0
     ]
    ],
    "min": 287.65
@@ -31565,6 +32567,10 @@
     [
      "2026-11-13",
      321.0
+    ],
+    [
+     "2026-11-14",
+     298.79
     ]
    ],
    "min": 283.0
@@ -31812,9 +32818,13 @@
     [
      "2026-11-13",
      1499.0
+    ],
+    [
+     "2026-11-14",
+     1313.7
     ]
    ],
-   "min": 1344.9
+   "min": 1313.7
   },
   "MLB56075481": {
    "historico": [
@@ -31906,6 +32916,15 @@
     ]
    ],
    "min": 32.0
+  },
+  "MLB56215148": {
+   "historico": [
+    [
+     "2026-11-14",
+     169.9
+    ]
+   ],
+   "min": 169.9
   },
   "MLB56231214": {
    "historico": [
@@ -32024,6 +33043,10 @@
     [
      "2026-11-13",
      23.12
+    ],
+    [
+     "2026-11-14",
+     23.9
     ]
    ],
    "min": 20.3
@@ -32067,6 +33090,15 @@
     ]
    ],
    "min": 54.9
+  },
+  "MLB57053149": {
+   "historico": [
+    [
+     "2026-11-14",
+     50.91
+    ]
+   ],
+   "min": 50.91
   },
   "MLB57071349": {
    "historico": [
@@ -32746,6 +33778,10 @@
     [
      "2026-11-13",
      224.9
+    ],
+    [
+     "2026-11-14",
+     219.99
     ]
    ],
    "min": 199.99
@@ -32875,6 +33911,10 @@
     [
      "2026-11-13",
      1135.24
+    ],
+    [
+     "2026-11-14",
+     1099.0
     ]
    ],
    "min": 999.0
@@ -32952,6 +33992,15 @@
     ]
    ],
    "min": 59.0
+  },
+  "MLB60130684": {
+   "historico": [
+    [
+     "2026-11-14",
+     125.0
+    ]
+   ],
+   "min": 125.0
   },
   "MLB60363392": {
    "historico": [
@@ -33482,6 +34531,10 @@
     [
      "2026-11-10",
      116.3
+    ],
+    [
+     "2026-11-14",
+     116.15
     ]
    ],
    "min": 111.2
@@ -33528,6 +34581,10 @@
     [
      "2026-11-13",
      145.0
+    ],
+    [
+     "2026-11-14",
+     103.16
     ]
    ],
    "min": 103.16
@@ -33695,6 +34752,10 @@
     [
      "2026-11-13",
      1379.07
+    ],
+    [
+     "2026-11-14",
+     1681.76
     ]
    ],
    "min": 1379.07
@@ -33802,6 +34863,15 @@
    ],
    "min": 1393.19
   },
+  "MLB62601676": {
+   "historico": [
+    [
+     "2026-11-14",
+     1729.99
+    ]
+   ],
+   "min": 1729.99
+  },
   "MLB62645299": {
    "historico": [
     [
@@ -33860,6 +34930,10 @@
     [
      "2026-11-13",
      889.99
+    ],
+    [
+     "2026-11-14",
+     776.0
     ]
    ],
    "min": 776.0
@@ -34163,6 +35237,10 @@
     [
      "2026-11-13",
      224.56
+    ],
+    [
+     "2026-11-14",
+     199.0
     ]
    ],
    "min": 183.0
@@ -34283,6 +35361,10 @@
     [
      "2026-11-12",
      524.92
+    ],
+    [
+     "2026-11-14",
+     514.99
     ]
    ],
    "min": 514.99
@@ -34523,9 +35605,13 @@
     [
      "2026-11-12",
      889.14
+    ],
+    [
+     "2026-11-14",
+     813.78
     ]
    ],
-   "min": 818.73
+   "min": 813.78
   },
   "MLB63710202": {
    "historico": [
@@ -34718,6 +35804,10 @@
     [
      "2026-11-12",
      319.0
+    ],
+    [
+     "2026-11-14",
+     309.99
     ]
    ],
    "min": 309.99
@@ -34867,9 +35957,13 @@
     [
      "2026-11-13",
      42.39
+    ],
+    [
+     "2026-11-14",
+     37.79
     ]
    ],
-   "min": 38.09
+   "min": 37.79
   },
   "MLB64490516": {
    "historico": [
@@ -35070,9 +36164,13 @@
     [
      "2026-11-13",
      119.0
+    ],
+    [
+     "2026-11-14",
+     118.91
     ]
    ],
-   "min": 119.0
+   "min": 118.91
   },
   "MLB65174776": {
    "historico": [
@@ -35128,6 +36226,10 @@
     [
      "2026-11-11",
      25.99
+    ],
+    [
+     "2026-11-14",
+     24.9
     ]
    ],
    "min": 22.61
@@ -35331,11 +36433,24 @@
    ],
    "min": 49.85
   },
+  "MLB65661790": {
+   "historico": [
+    [
+     "2026-11-14",
+     145.25
+    ]
+   ],
+   "min": 145.25
+  },
   "MLB65686975": {
    "historico": [
     [
      "2026-11-09",
      138.98
+    ],
+    [
+     "2026-11-14",
+     175.0
     ]
    ],
    "min": 138.98
@@ -35912,6 +37027,10 @@
     [
      "2026-11-06",
      122.87
+    ],
+    [
+     "2026-11-14",
+     134.86
     ]
    ],
    "min": 122.87
@@ -36086,6 +37205,10 @@
     [
      "2026-11-13",
      28.0
+    ],
+    [
+     "2026-11-14",
+     32.0
     ]
    ],
    "min": 18.49
@@ -36484,6 +37607,10 @@
     [
      "2026-11-13",
      34.78
+    ],
+    [
+     "2026-11-14",
+     23.4
     ]
    ],
    "min": 23.4
@@ -36835,6 +37962,10 @@
     [
      "2026-11-13",
      176.8
+    ],
+    [
+     "2026-11-14",
+     175.8
     ]
    ],
    "min": 144.0
@@ -36964,6 +38095,10 @@
     [
      "2026-11-13",
      133.9
+    ],
+    [
+     "2026-11-14",
+     99.11
     ]
    ],
    "min": 90.64
@@ -37122,6 +38257,10 @@
     [
      "2026-11-13",
      135.9
+    ],
+    [
+     "2026-11-14",
+     107.68
     ]
    ],
    "min": 85.24
@@ -37333,6 +38472,10 @@
     [
      "2026-11-13",
      23.79
+    ],
+    [
+     "2026-11-14",
+     22.9
     ]
    ],
    "min": 21.88
@@ -37449,9 +38592,13 @@
     [
      "2026-11-12",
      44.9
+    ],
+    [
+     "2026-11-14",
+     39.59
     ]
    ],
-   "min": 44.9
+   "min": 39.59
   },
   "MLB70142021": {
    "historico": [
@@ -37551,6 +38698,10 @@
     [
      "2026-11-13",
      26.0
+    ],
+    [
+     "2026-11-14",
+     26.67
     ]
    ],
    "min": 24.0
@@ -37770,6 +38921,10 @@
     [
      "2026-11-09",
      330.0
+    ],
+    [
+     "2026-11-14",
+     393.82
     ]
    ],
    "min": 330.0
@@ -37989,6 +39144,15 @@
     ]
    ],
    "min": 19.13
+  },
+  "MLB72678690": {
+   "historico": [
+    [
+     "2026-11-14",
+     56.99
+    ]
+   ],
+   "min": 56.99
   },
   "MLB72683941": {
    "historico": [
@@ -38280,9 +39444,13 @@
     [
      "2026-11-13",
      339.4
+    ],
+    [
+     "2026-11-14",
+     272.63
     ]
    ],
-   "min": 288.9
+   "min": 272.63
   },
   "MLB73007900": {
    "historico": [
@@ -38318,6 +39486,10 @@
     [
      "2026-11-13",
      29.53
+    ],
+    [
+     "2026-11-14",
+     28.89
     ]
    ],
    "min": 28.89
@@ -38866,6 +40038,15 @@
    ],
    "min": 51.0
   },
+  "MLB74341993": {
+   "historico": [
+    [
+     "2026-11-14",
+     173.0
+    ]
+   ],
+   "min": 173.0
+  },
   "MLB74347622": {
    "historico": [
     [
@@ -39126,6 +40307,15 @@
    ],
    "min": 67.0
   },
+  "MLB74907028": {
+   "historico": [
+    [
+     "2026-11-14",
+     68.15
+    ]
+   ],
+   "min": 68.15
+  },
   "MLB74907692": {
    "historico": [
     [
@@ -39231,6 +40421,15 @@
     ]
    ],
    "min": 54.99
+  },
+  "MLB75034564": {
+   "historico": [
+    [
+     "2026-11-14",
+     73.67
+    ]
+   ],
+   "min": 73.67
   },
   "MLB75172234": {
    "historico": [
@@ -39613,9 +40812,13 @@
     [
      "2026-11-12",
      36.34
+    ],
+    [
+     "2026-11-14",
+     23.0
     ]
    ],
-   "min": 32.14
+   "min": 23.0
   },
   "MLB75632980": {
    "historico": [
@@ -40537,9 +41740,22 @@
     [
      "2026-11-10",
      289.0
+    ],
+    [
+     "2026-11-14",
+     310.0
     ]
    ],
    "min": 283.27
+  },
+  "MLB77871954": {
+   "historico": [
+    [
+     "2026-11-14",
+     24.52
+    ]
+   ],
+   "min": 24.52
   },
   "MLB77981385": {
    "historico": [
@@ -40748,6 +41964,15 @@
    ],
    "min": 27.61
   },
+  "MLB78402366": {
+   "historico": [
+    [
+     "2026-11-14",
+     156.99
+    ]
+   ],
+   "min": 156.99
+  },
   "MLB78402369": {
    "historico": [
     [
@@ -40864,6 +42089,10 @@
     [
      "2026-11-13",
      379.9
+    ],
+    [
+     "2026-11-14",
+     409.0
     ]
    ],
    "min": 351.0
@@ -40882,6 +42111,10 @@
     [
      "2026-11-07",
      25.9
+    ],
+    [
+     "2026-11-14",
+     35.9
     ]
    ],
    "min": 25.9
@@ -41104,9 +42337,13 @@
     [
      "2026-11-09",
      57.0
+    ],
+    [
+     "2026-11-14",
+     53.0
     ]
    ],
-   "min": 57.0
+   "min": 53.0
   },
   "MLB79164975": {
    "historico": [
@@ -41411,6 +42648,10 @@
     [
      "2026-11-13",
      41.45
+    ],
+    [
+     "2026-11-14",
+     40.95
     ]
    ],
    "min": 31.99
@@ -41572,6 +42813,24 @@
    ],
    "min": 19.23
   },
+  "MLB80160073": {
+   "historico": [
+    [
+     "2026-11-14",
+     339.9
+    ]
+   ],
+   "min": 339.9
+  },
+  "MLB80166730": {
+   "historico": [
+    [
+     "2026-11-14",
+     66.93
+    ]
+   ],
+   "min": 66.93
+  },
   "MLB80167828": {
    "historico": [
     [
@@ -41673,6 +42932,10 @@
     [
      "2026-11-13",
      31.5
+    ],
+    [
+     "2026-11-14",
+     32.9
     ]
    ],
    "min": 28.0
@@ -41726,6 +42989,10 @@
     [
      "2026-11-13",
      387.9
+    ],
+    [
+     "2026-11-14",
+     374.9
     ]
    ],
    "min": 334.0
@@ -42146,6 +43413,15 @@
    ],
    "min": 27.99
   },
+  "MLB81066221": {
+   "historico": [
+    [
+     "2026-11-14",
+     219.27
+    ]
+   ],
+   "min": 219.27
+  },
   "MLB81142365": {
    "historico": [
     [
@@ -42253,9 +43529,13 @@
     [
      "2026-11-13",
      35.0
+    ],
+    [
+     "2026-11-14",
+     33.91
     ]
    ],
-   "min": 35.0
+   "min": 33.91
   },
   "MLB81565711": {
    "historico": [
@@ -42279,6 +43559,10 @@
     [
      "2026-11-10",
      30.21
+    ],
+    [
+     "2026-11-14",
+     23.99
     ]
    ],
    "min": 23.99
@@ -45551,6 +46835,10 @@
     [
      "2026-11-10",
      44.99
+    ],
+    [
+     "2026-11-14",
+     51.99
     ]
    ],
    "min": 44.99
@@ -50709,6 +51997,10 @@
     [
      "2026-11-13",
      29.89
+    ],
+    [
+     "2026-11-14",
+     29.9
     ]
    ],
    "min": 29.88
@@ -51087,6 +52379,10 @@
     [
      "2026-11-11",
      29.5
+    ],
+    [
+     "2026-11-14",
+     29.49
     ]
    ],
    "min": 29.49
@@ -54087,9 +55383,13 @@
     [
      "2026-11-13",
      58.9
+    ],
+    [
+     "2026-11-14",
+     56.92
     ]
    ],
-   "min": 58.9
+   "min": 56.92
   },
   "SHP40661495346": {
    "historico": [
@@ -54432,6 +55732,10 @@
     [
      "2026-11-13",
      19.99
+    ],
+    [
+     "2026-11-14",
+     18.98
     ]
    ],
    "min": 17.98
@@ -57729,6 +59033,10 @@
     [
      "2026-11-12",
      33.89
+    ],
+    [
+     "2026-11-14",
+     34.0
     ]
    ],
    "min": 32.17
@@ -59364,9 +60672,13 @@
     [
      "2026-11-13",
      89.98
+    ],
+    [
+     "2026-11-14",
+     79.98
     ]
    ],
-   "min": 79.99
+   "min": 79.98
   },
   "SHP58253149838": {
    "historico": [
@@ -61664,7 +62976,7 @@
   }
  },
  "resumo_enviado": "2026-11-13",
- "rodada_n": 96,
+ "rodada_n": 97,
  "shopee": {
   "acompanhados": {
    "SHP12016728643": {
@@ -61676,8 +62988,8 @@
     "visto": "2026-11-13T18:51-03:00"
    },
    "SHP13186583964": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP14748104159": {
     "ate": "2026-12-13",
@@ -61749,7 +63061,7 @@
    },
    "SHP18799096812": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP18897670432": {
     "ate": "2026-12-13",
@@ -61792,20 +63104,20 @@
     "visto": "2026-11-13T20:39-03:00"
    },
    "SHP19297977722": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP19299650901": {
     "ate": "2026-12-13",
     "visto": "2026-11-13T19:36-03:00"
    },
    "SHP19399705893": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP19599043004": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP19599048892": {
     "ate": "2026-12-13",
@@ -61844,8 +63156,8 @@
     "visto": "2026-11-13T21:51-03:00"
    },
    "SHP20097685110": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP20098021991": {
     "ate": "2026-12-13",
@@ -61905,7 +63217,7 @@
    },
    "SHP20899598197": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP20997786796": {
     "ate": "2026-12-13",
@@ -61913,7 +63225,7 @@
    },
    "SHP20999385585": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP20999680446": {
     "ate": "2026-12-13",
@@ -61988,8 +63300,8 @@
     "visto": "2026-11-13T20:39-03:00"
    },
    "SHP22091616655": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22094330581": {
     "ate": "2026-12-13",
@@ -62032,8 +63344,8 @@
     "visto": "2026-11-13T20:52-03:00"
    },
    "SHP22194554622": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22194576869": {
     "ate": "2026-12-13",
@@ -62073,15 +63385,15 @@
    },
    "SHP22293577075": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22294423427": {
     "ate": "2026-12-13",
     "visto": "2026-11-13T18:32-03:00"
    },
    "SHP22296977271": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22297616098": {
     "ate": "2026-12-13",
@@ -62109,7 +63421,7 @@
    },
    "SHP22394448025": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22394553041": {
     "ate": "2026-12-11",
@@ -62117,7 +63429,7 @@
    },
    "SHP22397149891": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22494419250": {
     "ate": "2026-12-13",
@@ -62136,8 +63448,8 @@
     "visto": "2026-11-13T20:52-03:00"
    },
    "SHP22498771408": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22498844695": {
     "ate": "2026-12-13",
@@ -62148,16 +63460,16 @@
     "visto": "2026-11-13T21:39-03:00"
    },
    "SHP22593060346": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22594275380": {
     "ate": "2026-12-13",
     "visto": "2026-11-13T20:52-03:00"
    },
    "SHP22596959383": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22597543717": {
     "ate": "2026-12-12",
@@ -62169,7 +63481,7 @@
    },
    "SHP22599158892": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22694017124": {
     "ate": "2026-12-13",
@@ -62193,7 +63505,7 @@
    },
    "SHP22698327328": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22698895880": {
     "ate": "2026-12-12",
@@ -62232,12 +63544,12 @@
     "visto": "2026-11-13T18:51-03:00"
    },
    "SHP22893850637": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22895022843": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP22897149838": {
     "ate": "2026-12-12",
@@ -62432,8 +63744,8 @@
     "visto": "2026-11-13T21:18-03:00"
    },
    "SHP23495525486": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP23498194746": {
     "ate": "2026-12-13",
@@ -62444,8 +63756,8 @@
     "visto": "2026-11-13T20:20-03:00"
    },
    "SHP23498581942": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP23498656445": {
     "ate": "2026-12-13",
@@ -62468,8 +63780,8 @@
     "visto": "2026-11-13T19:36-03:00"
    },
    "SHP23598670552": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP23598853131": {
     "ate": "2026-12-13",
@@ -62493,7 +63805,7 @@
    },
    "SHP23693919146": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP23694958937": {
     "ate": "2026-12-12",
@@ -62524,8 +63836,8 @@
     "visto": "2026-11-13T19:36-03:00"
    },
    "SHP23794265125": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP23794419826": {
     "ate": "2026-12-13",
@@ -62596,8 +63908,8 @@
     "visto": "2026-11-13T21:18-03:00"
    },
    "SHP23997427973": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP23998026468": {
     "ate": "2026-12-13",
@@ -62628,8 +63940,8 @@
     "visto": "2026-11-13T18:51-03:00"
    },
    "SHP27043867803": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP27388066569": {
     "ate": "2026-12-11",
@@ -62640,8 +63952,8 @@
     "visto": "2026-11-13T19:19-03:00"
    },
    "SHP27945255322": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP28243110420": {
     "ate": "2026-12-13",
@@ -62688,8 +64000,8 @@
     "visto": "2026-11-13T21:39-03:00"
    },
    "SHP40580791607": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP4067147602": {
     "ate": "2026-12-13",
@@ -62788,8 +64100,8 @@
     "visto": "2026-11-13T18:51-03:00"
    },
    "SHP46513525140": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP46802017676": {
     "ate": "2026-12-12",
@@ -62804,32 +64116,32 @@
     "visto": "2026-11-13T18:32-03:00"
    },
    "SHP47703405896": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP48400849440": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP48717332204": {
     "ate": "2026-12-13",
     "visto": "2026-11-13T18:32-03:00"
    },
    "SHP49118055951": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP49350070384": {
     "ate": "2026-12-13",
     "visto": "2026-11-13T18:32-03:00"
    },
    "SHP49453606452": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP49711226585": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP50856640707": {
     "ate": "2026-12-13",
@@ -62856,8 +64168,8 @@
     "visto": "2026-11-13T21:18-03:00"
    },
    "SHP52453586517": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP52565926526": {
     "ate": "2026-12-13",
@@ -62876,8 +64188,8 @@
     "visto": "2026-11-13T19:19-03:00"
    },
    "SHP53453581065": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP54216160577": {
     "ate": "2026-12-13",
@@ -62920,8 +64232,8 @@
     "visto": "2026-11-13T21:18-03:00"
    },
    "SHP58056231692": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP58200774700": {
     "ate": "2026-12-13",
@@ -62936,8 +64248,8 @@
     "visto": "2026-11-13T18:32-03:00"
    },
    "SHP58201396106": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP58201517017": {
     "ate": "2026-12-13",
@@ -62988,8 +64300,8 @@
     "visto": "2026-11-13T18:51-03:00"
    },
    "SHP58206034785": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:17-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP58208134820": {
     "ate": "2026-12-13",
@@ -63036,8 +64348,8 @@
     "visto": "2026-11-13T18:51-03:00"
    },
    "SHP58212957990": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP58213107256": {
     "ate": "2026-12-13",
@@ -63069,7 +64381,7 @@
    },
    "SHP58216425795": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T17:51-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP58217143979": {
     "ate": "2026-12-13",
@@ -63105,7 +64417,7 @@
    },
    "SHP58218866507": {
     "ate": "2026-12-12",
-    "visto": "2026-11-13T17:51-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP58219121421": {
     "ate": "2026-12-13",
@@ -63145,7 +64457,7 @@
    },
    "SHP58253149409": {
     "ate": "2026-12-12",
-    "visto": "2026-11-13T17:51-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP58253149838": {
     "ate": "2026-12-13",
@@ -63201,7 +64513,7 @@
    },
    "SHP58258069601": {
     "ate": "2026-12-13",
-    "visto": "2026-11-13T17:51-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP58258890099": {
     "ate": "2026-12-13",
@@ -63216,8 +64528,8 @@
     "visto": "2026-11-13T21:51-03:00"
    },
    "SHP58260111268": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-13T18:32-03:00"
+    "ate": "2026-12-14",
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP58260534035": {
     "ate": "2026-12-13",
@@ -63281,7 +64593,7 @@
    },
    "SHP58267616997": {
     "ate": "2026-12-12",
-    "visto": "2026-11-13T17:51-03:00"
+    "visto": "2026-11-14T08:06-03:00"
    },
    "SHP58268165028": {
     "ate": "2026-12-13",
@@ -63305,9 +64617,8 @@
    }
   },
   "hora": [
-   "2026-11-13T20:52-03:00",
-   "2026-11-13T20:52-03:00",
-   "2026-11-13T21:51-03:00"
+   "2026-11-14T08:06-03:00",
+   "2026-11-14T08:06-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -63404,6 +64715,7 @@
    "SHP23498386191": "2026-11-12T14:24-03:00",
    "SHP23499346925": "2026-11-12T18:28-03:00",
    "SHP23591689767": "2026-11-11T11:26-03:00",
+   "SHP23598670552": "2026-11-14T08:06-03:00",
    "SHP23618360276": "2026-11-12T15:26-03:00",
    "SHP23693223002": "2026-11-12T08:14-03:00",
    "SHP23693919146": "2026-11-13T18:17-03:00",
@@ -63448,6 +64760,7 @@
    "SHP57707127537": "2026-11-11T13:16-03:00",
    "SHP58204083719": "2026-11-12T20:16-03:00",
    "SHP58204393424": "2026-11-10T21:54-03:00",
+   "SHP58206034785": "2026-11-14T08:06-03:00",
    "SHP58210756198": "2026-11-11T12:47-03:00",
    "SHP58213273842": "2026-11-10T20:54-03:00",
    "SHP58213474889": "2026-11-10T20:40-03:00",
@@ -63472,101 +64785,13 @@
    "SHP58267271883": "2026-11-12T12:16-03:00",
    "SHP58267616997": "2026-11-12T11:47-03:00"
   },
-  "termo": 15,
+  "termo": 18,
   "tipos": {
-   "2026-11-13": [
-    "adesivo",
-    "almofada",
-    "andador",
-    "assento",
-    "baba eletronica",
+   "2026-11-14": [
     "babador",
-    "babuche",
-    "bancadinha",
     "banheira",
-    "barraca",
-    "berco",
-    "bingo",
-    "bloco",
-    "bola",
-    "bolsa",
-    "boneca",
-    "booster",
-    "buba",
-    "cadeira",
-    "cadeira de alimentacao",
-    "cadeirinha de carro",
-    "camisa",
-    "camiseta",
-    "canguru",
-    "capa",
-    "capacete",
-    "carrinho",
-    "carrinho de bebe",
-    "carrinho de brinquedo",
-    "casinha",
-    "chocalho",
-    "colonia",
-    "creme",
-    "cubo",
-    "cueca",
-    "dermo",
-    "dove",
     "enxoval",
-    "escolha",
-    "espelho",
-    "estojo",
-    "fantasia",
-    "fralda",
-    "geladeira",
-    "giro",
-    "grade",
-    "guia",
-    "higiene",
-    "jogo",
-    "kidstep",
-    "lanca",
-    "laptop",
-    "lego/blocos",
-    "lenco umedecido",
-    "locao",
-    "manta",
-    "masculino",
-    "massinha",
-    "meia",
-    "mesinha",
-    "mijao",
-    "mochila",
-    "mordedor",
-    "naninha",
-    "papete",
-    "pare",
-    "pc",
-    "pelucia",
-    "pijama",
-    "piscina",
-    "portao",
-    "pula pula",
-    "quadriciclo",
-    "quebra",
-    "rede",
-    "roupa",
-    "sabonete",
-    "sandalia",
-    "shampoo",
-    "sonic",
-    "sugador",
-    "suporte",
-    "talco",
-    "tapete",
-    "tapete de atividades",
-    "teni",
-    "toalha",
-    "trava",
-    "triciclo/bicicleta",
-    "trocador",
-    "violao",
-    "xilofone"
+    "pijama"
    ]
   },
   "titulos": {
@@ -63889,6 +65114,11 @@
     "quando": "2026-11-12T18:28-03:00",
     "titulo": "Kit 4 Conjuntos Femininos Baby Doll Pijama Short Doll Estampado Sem Bojo Origina"
    },
+   "SHP23598670552": {
+    "preco": 27.9,
+    "quando": "2026-11-14T08:06-03:00",
+    "titulo": "Conjunto Pijama Brilha no Escuro Personagens Menina Infantil Minnie Stitch Malha"
+   },
    "SHP23618360276": {
     "preco": 12.98,
     "quando": "2026-11-12T15:26-03:00",
@@ -64034,6 +65264,11 @@
     "quando": "2026-11-12T20:16-03:00",
     "titulo": "Bolsa Com Kit Para Cuidados De Higiene ESaúde Do Seu Bebê Com13 Peças Contém Ter"
    },
+   "SHP58206034785": {
+    "preco": 39.5,
+    "quando": "2026-11-14T08:06-03:00",
+    "titulo": "Kit Enxoval Recem Nascido Bebê 9 Peças Touca Luva e Pantufa Algodão Suedine Mate"
+   },
    "SHP58214519187": {
     "preco": 46.9,
     "quando": "2026-11-11T18:37-03:00",
@@ -64119,8 +65354,18 @@
  "tg_offset": 273518014,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-13T21:51-03:00",
+  "em": "2026-11-14T08:02-03:00",
   "itens": [
+   {
+    "categoria": "higiene",
+    "de": 510.0,
+    "desconto": 0.631,
+    "id": "MLB26851070",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_751805-MLA96144598793_102025-F.jpg",
+    "link": "https://meli.la/2C4ZDFq",
+    "preco": 188.0,
+    "titulo": "Burigotto Kit Banho Branco"
+   },
    {
     "categoria": "quarto",
     "de": 70.0,
@@ -64163,13 +65408,23 @@
    },
    {
     "categoria": "higiene",
-    "de": 77.9,
-    "desconto": 0.5,
-    "id": "MLB28368344",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_896192-MLA116104875284_092026-F.jpg",
-    "link": "https://meli.la/32SXnV5",
-    "preco": 38.92,
-    "titulo": "Rede de proteção para banheira Buba - Rosa"
+    "de": 699.9,
+    "desconto": 0.61,
+    "id": "MLB72901008",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_847840-MLA116500118433_082026-F.jpg",
+    "link": "https://meli.la/2FcodwC",
+    "preco": 272.63,
+    "titulo": "Banheira com Suporte Dobrável para Bebê Mini Assento Válvula de Esvaziamento 45 Litros Lisa Plástico Rígido At"
+   },
+   {
+    "categoria": "alimentacao",
+    "de": 59.9,
+    "desconto": 0.502,
+    "id": "MLB24626810",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_700261-MLA99618194932_122025-F.jpg",
+    "link": "https://meli.la/2DF2FDU",
+    "preco": 29.85,
+    "titulo": "Copo Transição Easy Sip 6m+ SCF551/05 Philips Avent"
    },
    {
     "categoria": "escola",
@@ -64222,6 +65477,16 @@
     "titulo": "Bolsa Mochila Maternidade Vira Berço Troca Bebê Porta Frauda Cor Cinza Desenho do tecido Liso"
    },
    {
+    "categoria": "brinquedo",
+    "de": 145.68,
+    "desconto": 0.555,
+    "id": "MLB34803603",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_869786-MLA96103846233_102025-F.jpg",
+    "link": "https://meli.la/23hVpnA",
+    "preco": 64.8,
+    "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Ocean"
+   },
+   {
     "categoria": "higiene",
     "de": 760.0,
     "desconto": 0.55,
@@ -64242,16 +65507,6 @@
     "titulo": "Criança Mochila Segurança Anti Perda Com Bracelete Cor Amarelo"
    },
    {
-    "categoria": "quarto",
-    "de": 59.9,
-    "desconto": 0.45,
-    "id": "MLB73604609",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_615687-MLA120304135779_102026-F.jpg",
-    "link": "https://meli.la/2nnzRT6",
-    "preco": 32.94,
-    "titulo": "Protetor De Colchão Impermeável Berço Americano Quadriculado Branco"
-   },
-   {
     "categoria": "outros",
     "de": 39.99,
     "desconto": 0.525,
@@ -64260,16 +65515,6 @@
     "link": "https://meli.la/2V6BzoT",
     "preco": 19.0,
     "titulo": "Kit 3 Travas De Geladeira E Gavetas Para Segurança Infantil Não Abre A Porta Adesivo Ultra Resistente Fácil De"
-   },
-   {
-    "categoria": "higiene",
-    "de": 699.9,
-    "desconto": 0.515,
-    "id": "MLB72901008",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_847840-MLA116500118433_082026-F.jpg",
-    "link": "https://meli.la/2FcodwC",
-    "preco": 339.4,
-    "titulo": "Banheira com Suporte Dobrável para Bebê Mini Assento Válvula de Esvaziamento 45 Litros Lisa Plástico Rígido At"
    },
    {
     "categoria": "brinquedo",
@@ -64292,24 +65537,14 @@
     "titulo": "Brinquedo De Banho Bebê Mini Cascata Com Ventosa Sem Pilha Banheira Box Aquababy Maxi Baby - FLOR"
    },
    {
-    "categoria": "brinquedo",
-    "de": 229.95,
-    "desconto": 0.5,
-    "id": "MLB63158085",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_630465-MLA119888186361_102026-F.jpg",
-    "link": "https://meli.la/1NqNEGq",
-    "preco": 115.0,
-    "titulo": "Mobile Musical Berço Bebê Projetor Estrelas Controle Remoto Rotação 360"
-   },
-   {
-    "categoria": "quarto",
-    "de": 499.9,
-    "desconto": 0.425,
-    "id": "MLB54276431",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_729035-MLA99938292437_112025-F.jpg",
-    "link": "https://meli.la/2rm4pB4",
-    "preco": 287.65,
-    "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
+    "categoria": "outros",
+    "de": 69.9,
+    "desconto": 0.605,
+    "id": "MLB80008917",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_826355-MLA118392136835_092026-F.jpg",
+    "link": "https://meli.la/1ZFTWFJ",
+    "preco": 27.59,
+    "titulo": "Aspirador Nasal Elétrico Epsilon Recarregável Azul para Bebê"
    },
    {
     "categoria": "outros",
@@ -64342,34 +65577,24 @@
     "titulo": "Assento Booster Burigotto Protege para Carro, Preto, de 15 a 36 kg"
    },
    {
-    "categoria": "outros",
-    "de": 271.97,
-    "desconto": 0.572,
-    "id": "MLB62692699",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_613494-MLA99989589965_112025-F.jpg",
-    "link": "https://meli.la/1RmmAoc",
-    "preco": 116.3,
-    "titulo": "Triciclo Totokinha Sport Rosa Cardoso Toys com Buzina e Porta-Objetos"
+    "categoria": "quarto",
+    "de": 549.9,
+    "desconto": 0.407,
+    "id": "MLB54276431",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_729035-MLA99938292437_112025-F.jpg",
+    "link": "https://meli.la/2rm4pB4",
+    "preco": 326.0,
+    "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
    },
    {
-    "categoria": "higiene",
-    "de": 49.9,
-    "desconto": 0.403,
-    "id": "MLB17876029",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_625891-MLA99440534946_112025-F.jpg",
-    "link": "https://meli.la/2zLkgHB",
-    "preco": 29.8,
-    "titulo": "Sabonete líquido de glicerina tradicional Granado Bebê - 250mL"
-   },
-   {
-    "categoria": "outros",
-    "de": 78.9,
-    "desconto": 0.583,
-    "id": "MLB76227639",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_602206-MLA115521014743_082026-F.jpg",
-    "link": "https://meli.la/2JnNyvo",
-    "preco": 32.9,
-    "titulo": "Aspirador Nasal Elétrico Infantil Recarregável Sugador Nasal Bebê 6 Níveis de Sucção 2 Bicos Cabo USB Livre de"
+    "categoria": "passeio",
+    "de": 999.0,
+    "desconto": 0.319,
+    "id": "MLB22974681",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_687710-MLA99456623672_112025-F.jpg",
+    "link": "https://meli.la/25dF8SA",
+    "preco": 679.9,
+    "titulo": "Travel System Duo, Cosco Kids, Reverse, 0 a 15kg, Preto Rajado"
    },
    {
     "categoria": "alimentacao",
@@ -64392,6 +65617,26 @@
     "titulo": "Berço Funcional Móveis Bela Americano 3 em 1 com Colchão e Rodízios Branco"
    },
    {
+    "categoria": "higiene",
+    "de": 77.99,
+    "desconto": 0.464,
+    "id": "MLB30018475",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_659536-MLA100117141305_122025-F.jpg",
+    "link": "https://meli.la/2oFgpa5",
+    "preco": 41.78,
+    "titulo": "Hipoglós Creme Preventivo de Assaduras, 120g"
+   },
+   {
+    "categoria": "quarto",
+    "de": 899.9,
+    "desconto": 0.53,
+    "id": "MLB80306191",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_921498-MLA117363268892_102026-F.jpg",
+    "link": "https://meli.la/1RwACtr",
+    "preco": 422.95,
+    "titulo": "Berço Portátil Bebe Moises Acoplado AMR-6272 Colchao com mosqueteiro L'AMOR Cor Cinza"
+   },
+   {
     "categoria": "brinquedo",
     "de": 359.9,
     "desconto": 0.544,
@@ -64412,6 +65657,16 @@
     "titulo": "Banheira Plástica Acqua Trio Rose Galzerano"
    },
    {
+    "categoria": "escola",
+    "de": 296.1,
+    "desconto": 0.46,
+    "id": "MLB74813550",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_832256-MLA114015834837_072026-F.jpg",
+    "link": "https://meli.la/2T8poHe",
+    "preco": 159.89,
+    "titulo": "Kit Mochila Infantil Disney Frozen Azul com Lancheira"
+   },
+   {
     "categoria": "higiene",
     "de": 349.9,
     "desconto": 0.457,
@@ -64420,16 +65675,6 @@
     "link": "https://meli.la/1ZTUpWs",
     "preco": 189.9,
     "titulo": "Suporte de Banho Infantil Ajustável Bebê em Pé Base Antiderrapante SekBem Verde"
-   },
-   {
-    "categoria": "quarto",
-    "de": 69.0,
-    "desconto": 0.54,
-    "id": "MLB25978378",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_865775-MLA99601174126_122025-F.jpg",
-    "link": "https://meli.la/1b1Envu",
-    "preco": 31.75,
-    "titulo": "Mantinha Para Bebê Buba Estrelinhas Cinza"
    },
    {
     "categoria": "casa",
@@ -64452,14 +65697,14 @@
     "titulo": "Kit Bolsa Maternidade Bambinelli Mommy Rosa-claro C/ Trocador"
    },
    {
-    "categoria": "outros",
-    "de": 69.0,
-    "desconto": 0.538,
-    "id": "MLB76227640",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_804217-MLA115521274267_082026-F.jpg",
-    "link": "https://meli.la/2pe7nTW",
-    "preco": 31.9,
-    "titulo": "Aspirador Nasal Elétrico Recarregável para Bebê, com 6 Níveis e 2 Bicos"
+    "categoria": "passeio",
+    "de": 499.0,
+    "desconto": 0.401,
+    "id": "MLB12706806",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_873321-MLA99481911382_112025-F.jpg",
+    "link": "https://meli.la/1Qw4z9A",
+    "preco": 299.05,
+    "titulo": "Cadeirinha Cosco Kids, Tour, 9 a 36 Kg, Cinza e Preto"
    },
    {
     "categoria": "outros",
@@ -64502,16 +65747,6 @@
     "titulo": "Bicicleta de Equilíbrio Infantil Rosa 4 Rodas Sem Pedal Bebê MSP Kids, Primeira Bike para Criança a Partir de "
    },
    {
-    "categoria": "outros",
-    "de": 69.9,
-    "desconto": 0.605,
-    "id": "MLB80008917",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_826355-MLA118392136835_092026-F.jpg",
-    "link": "https://meli.la/1ZFTWFJ",
-    "preco": 27.59,
-    "titulo": "Aspirador Nasal Elétrico Epsilon Recarregável Azul para Bebê"
-   },
-   {
     "categoria": "higiene",
     "de": 34.99,
     "desconto": 0.429,
@@ -64542,6 +65777,16 @@
     "titulo": "Trocador de Fralda Portátil Impermeável Malipan Safari Dobrável Cáqui"
    },
    {
+    "categoria": "higiene",
+    "de": 29.25,
+    "desconto": 0.373,
+    "id": "MLB18392643",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_776721-MLA112696702376_062026-F.jpg",
+    "link": "https://meli.la/1uu5kaa",
+    "preco": 18.33,
+    "titulo": "Fralda Descartável Turma da Mônica Baby Recém-Nascido RN Pacote 36 Unidades"
+   },
+   {
     "categoria": "outros",
     "de": 62.99,
     "desconto": 0.506,
@@ -64550,16 +65795,6 @@
     "link": "https://meli.la/28xGnDR",
     "preco": 31.1,
     "titulo": "Shampoo Johnson's Baby Glicerina Hipoalergênico 750ml"
-   },
-   {
-    "categoria": "quarto",
-    "de": 499.9,
-    "desconto": 0.358,
-    "id": "MLB54357048",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_903019-MLA100032407355_122025-F.jpg",
-    "link": "https://meli.la/2ybULdP",
-    "preco": 321.0,
-    "titulo": "Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Rodinhas 15kg Lune Maxi Baby"
    },
    {
     "categoria": "passeio",
@@ -64572,14 +65807,14 @@
     "titulo": "Carrinho Bebê Passeio Dobrável Leve Guarda Chuva Até 15kg - Cinza/Branco"
    },
    {
-    "categoria": "outros",
-    "de": 220.0,
+    "categoria": "higiene",
+    "de": 77.9,
     "desconto": 0.5,
-    "id": "MLB45906189",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_986871-MLA115693322878_092026-F.jpg",
-    "link": "https://meli.la/1eVeg1f",
-    "preco": 110.0,
-    "titulo": "Cercadinho Para Bebê Chiqueirinho Infantil Portátil Unissex Cor Amarelo Desenho Do Tecido Girafas"
+    "id": "MLB28368344",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_896192-MLA116104875284_092026-F.jpg",
+    "link": "https://meli.la/32SXnV5",
+    "preco": 38.92,
+    "titulo": "Rede de proteção para banheira Buba - Rosa"
    },
    {
     "categoria": "casa",
@@ -64590,6 +65825,26 @@
     "link": "https://meli.la/2wvpmGv",
     "preco": 379.99,
     "titulo": "Berço 3 em 1 para Colchão 60 x 130 cm Multimóveis Branco"
+   },
+   {
+    "categoria": "brinquedo",
+    "de": 129.99,
+    "desconto": 0.447,
+    "id": "MLB20611931",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_897745-MLA99453292044_112025-F.jpg",
+    "link": "https://meli.la/3171Zw3",
+    "preco": 71.9,
+    "titulo": "Sunny Boneco Patrulha Canina 1342 Skye Focos"
+   },
+   {
+    "categoria": "alimentacao",
+    "de": 209.0,
+    "desconto": 0.493,
+    "id": "MLB27344821",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_652694-MLA96101740983_102025-F.jpg",
+    "link": "https://meli.la/1719RoA",
+    "preco": 106.05,
+    "titulo": "Cadeira de Refeição Portátil Cosco Kids, Smart, Cinza"
    },
    {
     "categoria": "higiene",
@@ -64603,6 +65858,26 @@
    },
    {
     "categoria": "passeio",
+    "de": 899.0,
+    "desconto": 0.409,
+    "id": "MLB24070645",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_938116-MLA111193887117_052026-F.jpg",
+    "link": "https://meli.la/1C8JuwK",
+    "preco": 531.04,
+    "titulo": "Carrinho De Bebê Zap Compacto Dobrável - Burigotto, Metal Cobre"
+   },
+   {
+    "categoria": "passeio",
+    "de": 709.0,
+    "desconto": 0.268,
+    "id": "MLB19970137",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_928226-MLA99462528060_112025-F.jpg",
+    "link": "https://meli.la/2PJCTUP",
+    "preco": 518.9,
+    "titulo": "Cadeirinha Cosco Kids, Progress, 0 a 36kg, Preto"
+   },
+   {
+    "categoria": "passeio",
     "de": 1799.9,
     "desconto": 0.346,
     "id": "MLB62926546",
@@ -64610,16 +65885,6 @@
     "link": "https://meli.la/1HM1CU6",
     "preco": 1177.0,
     "titulo": "Carrinho de Bebê Travel System Maxi Baby Elysian Cinza e Dourado com Moisés e Bebê Conforto"
-   },
-   {
-    "categoria": "outros",
-    "de": 529.9,
-    "desconto": 0.4,
-    "id": "MLB27718012",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_823352-MLA116565097240_092026-F.jpg",
-    "link": "https://meli.la/34osqQC",
-    "preco": 317.94,
-    "titulo": "Berço Portátil Basic Cinza Galzerano Chiqueiro Cercado Bebê"
    },
    {
     "categoria": "brinquedo",
@@ -64632,16 +65897,6 @@
     "titulo": "Arco Móbile De Atividades Bebê Carrinho Berço Cadeirinha Chocalho Mordedor Clip Ajustável Maxi Baby - Space"
    },
    {
-    "categoria": "escola",
-    "de": 339.0,
-    "desconto": 0.472,
-    "id": "MLB72898518",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_713641-MLA112919794779_062026-F.jpg",
-    "link": "https://meli.la/1mCgyi3",
-    "preco": 178.83,
-    "titulo": "Conjunto de Mochila UINNATE Escolar 3 Peças Lilás com Lancheira e Estojo, Impermeável e Ergonômico"
-   },
-   {
     "categoria": "quarto",
     "de": 599.9,
     "desconto": 0.337,
@@ -64650,16 +65905,6 @@
     "link": "https://meli.la/32AWHfm",
     "preco": 397.97,
     "titulo": "Berço Balanço Portátil Moises Com Mosquiteiro E Colchão Bebê Função Balanço Infantil Compacto Balançinho"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 319.9,
-    "desconto": 0.55,
-    "id": "MLB68031618",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_628074-MLA117276490721_092026-F.jpg",
-    "link": "https://meli.la/1TrwyJv",
-    "preco": 143.9,
-    "titulo": "Carrinho Controle Remoto Drift Bateria Recarregavel 4x4 Porsche Atacarejo Kids"
    },
    {
     "categoria": "higiene",
@@ -64672,26 +65917,6 @@
     "titulo": "Banheira Para Bebê Dobrável C/suporte Wish Branco Maxi Baby"
    },
    {
-    "categoria": "outros",
-    "de": 290.9,
-    "desconto": 0.393,
-    "id": "MLB39456030",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_957293-MLA99458185276_112025-F.jpg",
-    "link": "https://meli.la/24rKWBQ",
-    "preco": 176.6,
-    "titulo": "Bicicleta De Equilibrio Rosa Com Som Sem Pedal 18824 - Buba"
-   },
-   {
-    "categoria": "outros",
-    "de": 51.04,
-    "desconto": 0.332,
-    "id": "MLB18392677",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_990051-MLA110123026010_042026-F.jpg",
-    "link": "https://meli.la/2pHZDtK",
-    "preco": 34.12,
-    "titulo": "Fralda Turma Da Mônica Baby Mega G 44 Unidades G"
-   },
-   {
     "categoria": "quarto",
     "de": 799.9,
     "desconto": 0.464,
@@ -64702,14 +65927,24 @@
     "titulo": "Berço Portátil Bebê Acoplado Co-Bed Connect Maxi Baby - CINZA"
    },
    {
-    "categoria": "quarto",
-    "de": 2099.99,
-    "desconto": 0.276,
-    "id": "MLB35702926",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_776416-MLU75796913273_042024-F.jpg",
-    "link": "https://meli.la/1mZaAAB",
-    "preco": 1521.0,
-    "titulo": "Quarto Bebê Completo Infantil com Guarda-Roupa Cômoda Berço e Colchão Incluso Pimpolho Multimóveis Branco 3 an"
+    "categoria": "outros",
+    "de": 51.04,
+    "desconto": 0.329,
+    "id": "MLB18392651",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_908623-MLA111032843377_042026-F.jpg",
+    "link": "https://meli.la/2iDJHoN",
+    "preco": 34.25,
+    "titulo": "Fralda Descartável Turma da Mônica Baby XG Pacote 42 Unidades"
+   },
+   {
+    "categoria": "outros",
+    "de": 69.0,
+    "desconto": 0.538,
+    "id": "MLB76227640",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_804217-MLA115521274267_082026-F.jpg",
+    "link": "https://meli.la/2pe7nTW",
+    "preco": 31.9,
+    "titulo": "Aspirador Nasal Elétrico Recarregável para Bebê, com 6 Níveis e 2 Bicos"
    },
    {
     "categoria": "escola",
@@ -64723,6 +65958,6 @@
    }
   ]
  },
- "vitrine_assinatura": "6b700fd4aca6a983bf0707c6dcd724282aecfeb8",
- "vitrine_publicada_em": "2026-11-13T21:11-03:00"
+ "vitrine_assinatura": "203224355df263f06279366dfc71e588c8bc7c4e",
+ "vitrine_publicada_em": "2026-11-14T08:02-03:00"
 }
