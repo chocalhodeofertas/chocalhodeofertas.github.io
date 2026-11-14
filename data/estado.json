@@ -8669,6 +8669,12 @@
    "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
+  "MELIMAIS1411": {
+   "criado": "2026-11-14T09:01-03:00",
+   "post": 612,
+   "status": "ativo",
+   "validade": "2026-11-14T23:59-03:00"
+  },
   "MELIMAISPREDD": {
    "criado": "2026-11-10T12:02-03:00",
    "post": 215,
@@ -8940,7 +8946,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5584,
+ "cupons_extra_ultimo:cupombr": 5586,
  "cupons_ml_ultimo": 6489,
  "descoberta_em": "2026-11-14T08:02-03:00",
  "descobertos": {
@@ -15347,7 +15353,7 @@
    "shopee": 42
   },
   "2026-11-14": {
-   "cupons": 1,
+   "cupons": 2,
    "posts": 6,
    "shopee": 3
   }
@@ -18445,6 +18451,17 @@
     }
    ],
    "criado": "2026-11-14T08:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "612": {
+   "blocos": [
+    {
+     "codigo": "MELIMAIS1411",
+     "html": "<b>🎟️ MELIMAIS1411</b> 👉 <b>20% OFF</b>\n⭐ Exclusivo Meli+\nDesconto máx.: R$80\n⏰ Válido até 14/11"
+    }
+   ],
+   "criado": "2026-11-14T09:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
