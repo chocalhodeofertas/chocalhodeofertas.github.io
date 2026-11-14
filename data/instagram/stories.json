@@ -23,7 +23,7 @@
    }
   },
   "ausentes": {},
-  "coletado_em": "2026-11-14T09:23:55-03:00"
+  "coletado_em": "2026-11-14T09:26:38-03:00"
  },
  "18121575178754441": {
   "id": "18121575178754441",
@@ -34,18 +34,24 @@
   "legenda": "",
   "curtidas": 0,
   "comentarios": 0,
-  "metricas": {},
-  "ausentes": {
-   "reach": "HTTP 400: (#10) Not enough viewers for the media to show insights (código 10)",
-   "views": "HTTP 400: (#10) Not enough viewers for the media to show insights (código 10)",
-   "replies": "HTTP 400: (#10) Not enough viewers for the media to show insights (código 10)",
-   "shares": "HTTP 400: (#10) Not enough viewers for the media to show insights (código 10)",
-   "total_interactions": "HTTP 400: (#10) Not enough viewers for the media to show insights (código 10)",
-   "profile_visits": "HTTP 400: (#10) Not enough viewers for the media to show insights (código 10)",
-   "follows": "HTTP 400: (#10) Not enough viewers for the media to show insights (código 10)",
-   "navigation": "HTTP 400: (#10) Not enough viewers for the media to show insights (código 10)"
+  "metricas": {
+   "reach": 5,
+   "views": 7,
+   "replies": 0,
+   "shares": 0,
+   "total_interactions": 1,
+   "profile_visits": 2,
+   "follows": 0,
+   "navigation": {
+    "total": 4,
+    "tap_forward": 1,
+    "tap_exit": 1,
+    "tap_back": 1,
+    "swipe_forward": 1
+   }
   },
-  "coletado_em": "2026-11-14T09:23:55-03:00"
+  "ausentes": {},
+  "coletado_em": "2026-11-14T09:26:38-03:00"
  },
  "18222929548353952": {
   "id": "18222929548353952",
@@ -67,6 +73,6 @@
    "follows": "HTTP 400: (#10) Not enough viewers for the media to show insights (código 10)",
    "navigation": "HTTP 400: (#10) Not enough viewers for the media to show insights (código 10)"
   },
-  "coletado_em": "2026-11-14T09:23:55-03:00"
+  "coletado_em": "2026-11-14T09:26:38-03:00"
  }
 }
