@@ -8022,7 +8022,7 @@
   "COZINHA5": {
    "criado": "2026-11-12T18:38-03:00",
    "post": 478,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-13T23:59-03:00"
   },
   "CUPOMEXCLUSIVO": {
@@ -8061,6 +8061,12 @@
    "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
+  "ENTREGASFULL1411": {
+   "criado": "2026-11-14T08:00-03:00",
+   "post": 605,
+   "status": "ativo",
+   "validade": "2026-11-14T23:59-03:00"
+  },
   "ESPORTE1011": {
    "criado": "2026-11-10T16:04-03:00",
    "post": 236,
@@ -8088,7 +8094,7 @@
   "FULL1311": {
    "criado": "2026-11-13T08:00-03:00",
    "post": 509,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-13T23:59-03:00"
   },
   "HOJEMESMO": {
@@ -8130,7 +8136,7 @@
   "MAISDESCONTOHOJE": {
    "criado": "2026-11-12T11:29-03:00",
    "post": 427,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-13T23:59-03:00"
   },
   "MELHORDOML": {
@@ -8238,7 +8244,7 @@
   "MOP5SHARK": {
    "criado": "2026-11-12T18:38-03:00",
    "post": 478,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-13T23:59-03:00"
   },
   "MP1111": {
@@ -8394,7 +8400,7 @@
   "TECHSEMPRE": {
    "criado": "2026-11-12T13:00-03:00",
    "post": 441,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-13T23:59-03:00"
   },
   "TODO1011SITE": {
@@ -8434,7 +8440,7 @@
    "validade": "2026-12-11T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5581,
+ "cupons_extra_ultimo:cupombr": 5583,
  "cupons_ml_ultimo": 6489,
  "descoberta_em": "2026-11-13T08:02-03:00",
  "descobertos": {
@@ -14855,6 +14861,9 @@
    "cupons": 8,
    "posts": 92,
    "shopee": 42
+  },
+  "2026-11-14": {
+   "cupons": 1
   }
  },
  "links": {
@@ -17872,6 +17881,17 @@
     }
    ],
    "criado": "2026-11-13T13:04-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "605": {
+   "blocos": [
+    {
+     "codigo": "ENTREGASFULL1411",
+     "html": "<b>🎟️ ENTREGASFULL1411</b> 👉 <b>25% OFF</b>\nCompra mín.: R$119 · Desconto máx.: R$40\n⏰ Válido até 14/11"
+    }
+   ],
+   "criado": "2026-11-14T08:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
