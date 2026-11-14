@@ -11,6 +11,15 @@ from pathlib import Path
 
 from .estado import preco_tipico
 from .mensagens import brl
+# Pixel da Meta (dataset "Chocalho site"). O ID é público: aparece no código de qualquer site com Pixel.
+PIXEL_META = "1161972522974367"
+PIXEL_HTML = ("<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?"
+              "n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;"
+              "n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];"
+              "s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');"
+              f"fbq('init','{PIXEL_META}');fbq('track','PageView');</script>"
+              f'<noscript><img height="1" width="1" style="display:none" alt="" '
+              f'src="https://www.facebook.com/tr?id={PIXEL_META}&amp;ev=PageView&amp;noscript=1"></noscript>')
 PAGINA = (Path(__file__).resolve().parent / "vitrine_pagina.html").read_text(encoding="utf-8")
 
 ARQ = Path(__file__).resolve().parent.parent / "docs" / "index.html"
@@ -193,7 +202,7 @@ def gerar_html(estado, canal, grupo_wa=None, agora=None):
     feed_itens = [i for i in itens if i.get("imagem")][:12]
     feed = "".join(_feed(i, n) for n, i in enumerate(feed_itens))
     cards = "".join(_card(i) for i in itens) or '<p class="vazio">As próximas ofertas aparecem aqui em breve.</p>'
-    botao = (f'<a class="cta" data-wa="{wa_codigo}" href="{wa_href}">{ICONE_WA}<span>Entrar no grupo do WhatsApp</span></a>'
+    botao = (f'<a class="cta" data-wa="{wa_codigo}" href="{wa_href}" target="_blank" rel="noopener">{ICONE_WA}<span>Entrar no grupo do WhatsApp</span></a>'
              if wa_href else "")
     telegram = (f'<a class="tg" href="{html.escape(url_canal, quote=True)}" target="_blank" rel="noopener">'
                 f'Prefere Telegram? Entre no canal</a>' if url_canal else "")
@@ -212,7 +221,7 @@ def gerar_html(estado, canal, grupo_wa=None, agora=None):
             f'<div class="trilho">{"".join(_destaque(i) for i in destaques)}</div></div></section>')
     campos = {
         "feed": feed, "cards": cards, "chips": chips, "botao": botao, "telegram": telegram, "sec_dest": sec_dest,
-        "stats": "".join(stats), "hora": hora, "dia": dia,
+        "stats": "".join(stats), "pixel": PIXEL_HTML, "hora": hora, "dia": dia,
         "acompanhados": _num(acompanhados) if acompanhados else "milhares de",
     }
     pagina = PAGINA
@@ -247,6 +256,7 @@ a.botao {{ display:block; max-width:360px; margin:0 auto 14px; padding:17px 22px
 a.botao:focus-visible {{ outline:3px solid #F1E1FB; outline-offset:3px; }}
 small {{ color:#D9C3E6; display:block; max-width:340px; margin:0 auto; font-size:13.5px; }}
 </style>
+{PIXEL_HTML}
 </head>
 <body>
 <main>
@@ -273,7 +283,7 @@ small {{ color:#D9C3E6; display:block; max-width:340px; margin:0 auto; font-size
     }}
   }}
   document.getElementById("entrar").addEventListener("click", function (ev) {{ ev.preventDefault(); abrir(); }});
-  setTimeout(abrir, 400);
+  setTimeout(abrir, 900);
 }})();
 </script>
 </body>
