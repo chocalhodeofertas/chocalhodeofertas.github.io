@@ -16,7 +16,7 @@ import re
 from datetime import datetime, timedelta
 
 from . import estado as est
-from . import mensagens, whatsapp
+from . import mensagens, vitrine, whatsapp
 from .filtros import fora_da_faixa, motivo_bloqueio, normalizar
 from .ofertas import Oferta, limite_hora, meta_ate_agora, tipo_produto, tipos_do_dia, priorizar_tipos_novos
 from .shopee import MAIS_VENDIDOS, Shopee, ShopeeErro
@@ -204,6 +204,15 @@ def links(shp, p, log=print):
     return saida["telegram"], saida["whatsapp"]
 
 
+def link_site(shp, p, log=print):
+    """Link de afiliado com a etiqueta "site", para medir as vendas que vêm da página."""
+    try:
+        return shp.link_curto(p.link_produto or p.link, ["site"])
+    except ShopeeErro as e:
+        log(f"Shopee: link do site falhou ({e}).")
+        return None
+
+
 def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None):
     """Posta ofertas da Shopee no canal (limite próprio) e manda para a fila do WhatsApp."""
     if os.environ.get("SHOPEE_ATIVO") != "1":
@@ -261,6 +270,10 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
             log(f"Erro ao postar {o.id} (Shopee) no canal: {e}")
             continue
         whatsapp.enfileirar_oferta(o, mensagens.montar_whatsapp(o, rng), agora, loja="shopee")
+        try:
+            vitrine.guardar_shopee(estado, o, link_site(shp, p, log) or link_tg, agora)
+        except Exception as e:  # noqa: BLE001 — a página nunca atrapalha os posts
+            log(f"Shopee: não guardei {o.id} na página: {type(e).__name__}: {e}")
         s["postados"][o.id] = agora.isoformat(timespec="minutes")
         s.setdefault("titulos", {})[o.id] = {"titulo": o.titulo[:80], "quando": agora.isoformat(timespec="minutes"), "preco": o.preco}
         s["hora"].append(agora.isoformat(timespec="minutes"))

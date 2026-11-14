@@ -647,14 +647,44 @@ def test_vitrine(tmp_path):
     arq = tmp_path / "index.html"
     assert vitrine.talvez_publicar(e, "@chocalho", AGORA, arq, log=lambda m: None)
     h = arq.read_text()
-    assert "https://t.me/chocalho" in h and "Body &lt;bebê&gt; &amp; cia" in h and "-40%" in h
-    assert "https://meli.la/A" in h and "#publi" in h and 'data-f="roupa"' in h
+    assert "https://t.me/chocalho" in h and "Body &lt;bebê&gt; &amp; cia" in h and "%" not in h.split("<body>")[1].split("<script>")[0]
+    assert "https://meli.la/A" in h and "#publi" in h and 'data-f="roupa"' in h and "R$ 100,00" in h
+    assert "[[" not in h  # todos os campos do modelo foram preenchidos
     # Mesma hora: não reescreve; hora seguinte sem mudança: também não
     assert not vitrine.talvez_publicar(e, "@chocalho", AGORA, arq, log=lambda m: None)
     assert not vitrine.talvez_publicar(e, "@chocalho", AGORA + timedelta(hours=1), arq, log=lambda m: None)
     o.preco = 55
     vitrine.guardar(e, [o], AGORA)
     assert vitrine.talvez_publicar(e, "@chocalho", AGORA + timedelta(hours=1), arq, log=lambda m: None)
+
+
+def test_vitrine_selos_e_shopee():
+    from types import SimpleNamespace
+    from bot import vitrine
+    e = est.novo()
+    # 10 dias a R$ 100, hoje a R$ 80: baixou de verdade (preço normal R$ 100)
+    for d in range(10, 0, -1):
+        est.registrar_preco(e, "MLB9", 100.0, AGORA - timedelta(days=d))
+    est.registrar_preco(e, "MLB9", 80.0, AGORA)
+    item = {"id": "MLB9", "preco": 80.0}
+    assert vitrine.selo(e, item, AGORA) == ("baixou", 100.0)
+    # preço sempre igual: sem selo, mesmo com "de" alto no anúncio
+    for d in range(10, -1, -1):
+        est.registrar_preco(e, "MLB8", 50.0, AGORA - timedelta(days=d))
+    assert vitrine.selo(e, {"id": "MLB8", "preco": 50.0}, AGORA) == (None, None)
+    # pouco histórico: sem selo
+    est.registrar_preco(e, "MLB7", 30.0, AGORA)
+    assert vitrine.selo(e, {"id": "MLB7", "preco": 30.0}, AGORA) == (None, None)
+    o = SimpleNamespace(id="SHP1", titulo="Kit massinha", preco=19.9, preco_de=None, a_partir=True,
+                        imagem="https://x/y.jpg", categoria="brinquedo")
+    vitrine.guardar_shopee(e, o, "https://s.shopee.com.br/site", AGORA)
+    vitrine.guardar_shopee(e, o, "https://s.shopee.com.br/site", AGORA)
+    assert len(e["vitrine_shopee"]) == 1
+    h = vitrine.gerar_html(e, "@chocalho", "https://chat.whatsapp.com/ABC", AGORA)
+    assert "Shopee" in h and "a partir de" in h and "https://s.shopee.com.br/site" in h and "grupo.html" in h
+    # some depois de 36 h
+    vitrine.guardar_shopee(e, SimpleNamespace(**{**o.__dict__, "id": "SHP2"}), "l", AGORA + timedelta(hours=40))
+    assert [i["id"] for i in e["vitrine_shopee"]] == ["SHP2"]
 
 
 def test_intervalo_aleatorio_entre_posts(monkeypatch):

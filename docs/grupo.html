@@ -4,30 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chocalho de Ofertas</title>
-<meta name="description" content="Entre no grupo de ofertas de bebê e criança.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪇</text></svg>">
+<meta name="description" content="Entre no grupo de ofertas de produtos para bebês e crianças.">
+<meta name="theme-color" content="#1E0524">
+<link rel="icon" type="image/png" href="icone-96.png">
+<link rel="preload" href="fonts/schibsted.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root { --fundo:#fff8ec; --texto:#2b2620; --suave:#7a6f63; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --fundo:#1d1a16; --texto:#f3ece2; --suave:#b5a998; } }
-:root[data-theme="dark"] { --fundo:#1d1a16; --texto:#f3ece2; --suave:#b5a998; }
+@font-face { font-family:"Schibsted Grotesk"; src:url(fonts/schibsted.woff2) format("woff2"); font-weight:400 900; font-display:swap; }
 * { box-sizing:border-box; }
 body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center;
-  background:var(--fundo); color:var(--texto); font:17px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; padding:24px 16px; }
-.logo { font-size:56px; }
-h1 { font-size:24px; margin:6px 0 4px; }
-p { color:var(--suave); margin:0 0 22px; }
-a.botao { display:block; max-width:340px; margin:0 auto 14px; padding:16px 22px; border-radius:999px;
-  background:#25d366; color:#08331a; font-weight:800; font-size:19px; text-decoration:none; }
-small { color:var(--suave); display:block; max-width:340px; margin:0 auto; }
+  background:#1E0524; color:#fff; font:400 17px/1.5 "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding:24px 20px; }
+.logo { width:72px; height:72px; border-radius:18px; background:#F1E1FB; margin:0 auto 14px; display:block; }
+h1 { font-size:26px; font-weight:800; letter-spacing:-.03em; margin:0 0 6px; }
+p { color:#E4CDF5; margin:0 0 24px; }
+a.botao { display:block; max-width:360px; margin:0 auto 14px; padding:17px 22px; border-radius:14px;
+  background:#DC1173; color:#fff; font-weight:700; font-size:18px; text-decoration:none; box-shadow:0 2px 0 rgba(0,0,0,.18), 0 12px 24px -12px rgba(0,0,0,.55); }
+a.botao:focus-visible { outline:3px solid #F1E1FB; outline-offset:3px; }
+small { color:#D9C3E6; display:block; max-width:340px; margin:0 auto; font-size:13.5px; }
 </style>
 </head>
 <body>
 <main>
-  <div class="logo">🪇</div>
+  <img class="logo" src="icone-192.png" alt="">
   <h1>Chocalho de Ofertas</h1>
   <p>Abrindo o grupo no WhatsApp…</p>
   <a class="botao" id="entrar" href="https://chat.whatsapp.com/FOwEWWIjfKoFWmD8Xsv5lq">Entrar no grupo do WhatsApp</a>
-  <small>Se o WhatsApp não abrir sozinho, toque no botão. #publi: os links do grupo são de afiliado.</small>
+  <small>Se o WhatsApp não abrir sozinho, toque no botão. #publi · os links do grupo são de afiliado.</small>
 </main>
 <script>
 (function () {
