@@ -1760,3 +1760,17 @@ def test_instagram_pub_sem_token_nao_oferece(tmp_path, monkeypatch):
     assert pub.oferecer(_TGFalso(), "99", estado, datetime(2026, 11, 13), "post", [_png_teste()], "x",
                         [_oferta_pub()], pasta=tmp_path) is None
     assert not estado
+
+
+def test_tipos_novos_vao_na_frente():
+    from types import SimpleNamespace as NS
+    from bot.ofertas import priorizar_tipos_novos, tipo_produto
+    assert tipo_produto("Totoka Plus Carrinho De Passeio Infantil") == "carrinho de bebe"
+    assert tipo_produto("Sugador Aspirador Nasal Elétrico Infantil") == tipo_produto("Kit Aspirador Nasal Manual Buba")
+    assert tipo_produto("Mosquiteiro Para Carrinho Bebê Conforto") == "mosquiteiro"
+    e = est.novo()
+    est.registrar_post(e, "MLB1", 50.0, AGORA - timedelta(hours=30), "Kit 4 Travas de Segurança Para Gaveta", 0.3)
+    ofs = [NS(titulo="Kit 3 Travas De Geladeira E Gavetas Segurança"), NS(titulo="Xilofone Para Bebês Fisher-price")]
+    assert [o.titulo[:3] for o in priorizar_tipos_novos(ofs, e, AGORA)] == ["Xil", "Kit"]
+    # depois de 2 dias o tipo volta a concorrer normalmente
+    assert priorizar_tipos_novos(ofs, e, AGORA + timedelta(days=2))[0].titulo.startswith("Kit")

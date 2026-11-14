@@ -110,9 +110,17 @@ _ESSENCIAIS = re.compile(
 
 # Mesmo tipo de produto não repete no mesmo dia (ex.: duas babás eletrônicas)
 _TIPOS = [
+    ("mosquiteiro", r"mosquiteiro"),
     ("baba eletronica", r"baba eletronica|baby monitor|monitor (de )?bebe|camera (de )?bebe"),
     ("cadeirinha de carro", r"cadeirinha|cadeira (de|para) (carro|auto)|bebe conforto|assento elevat"),
-    ("carrinho de bebe", r"carrinho de bebe|travel system"),
+    ("carrinho de bebe", r"carrinho (de )?(bebe|passeio)|travel system|\btotoka\b|carrinho guarda.chuva"),
+    ("aspirador nasal", r"aspirador nasal|sugador (aspirador )?nasal|sugador.*nariz|aspirador.*nariz"),
+    ("assento redutor", r"assento redutor|redutor (de )?assento|redutor sanitario"),
+    ("trava de seguranca", r"\btravas?\b.*(seguranca|gaveta|geladeira|porta)|protetor de tomada"),
+    ("repelente", r"repelente"),
+    ("viseira de banho", r"viseira.*banho|viseira.*shampoo"),
+    ("grade de cama", r"grade (de )?(protecao|cama)|grade.*cama"),
+    ("bolsa maternidade", r"bolsa maternidade|mala maternidade|mochila maternidade"),
     ("cadeira de alimentacao", r"cadeira(s)? de alimentacao|cadeirao"),
     ("berco", r"\bberco|cercadinho|chiqueirinho|cercado"),
     ("banheira", r"banheira|kit banho"),
@@ -159,6 +167,29 @@ def tipo_produto(titulo):
         return t[:20]
     p = palavras[0]
     return p[:-1] if p.endswith("s") and not p.endswith("ss") else p
+
+
+def tipos_recentes(estado, agora, horas=48):
+    """Tipos postados nas últimas horas (ML + Shopee). Servem para dar a vez a outros tipos."""
+    from datetime import datetime, timedelta
+
+    corte = agora - timedelta(hours=horas)
+    fontes = list(estado.get("postados", {}).values()) + list(estado.get("shopee", {}).get("titulos", {}).values())
+    tipos = set()
+    for v in fontes:
+        try:
+            if v.get("titulo") and datetime.fromisoformat(v["quando"]) > corte:
+                tipos.add(tipo_produto(v["titulo"]))
+        except (KeyError, ValueError, TypeError):
+            pass
+    return tipos
+
+
+def priorizar_tipos_novos(ofertas, estado, agora, titulo=lambda o: o.titulo):
+    """Mantém a ordem de pontuação, mas quem é de um tipo que não saiu nos últimos 2 dias vai na frente.
+    Os outros só entram se não houver alternativa (o limite de 1 por tipo no dia continua valendo)."""
+    recentes = tipos_recentes(estado, agora)
+    return sorted(ofertas, key=lambda o: tipo_produto(titulo(o)) in recentes)
 
 
 def tipos_do_dia(estado, agora):
