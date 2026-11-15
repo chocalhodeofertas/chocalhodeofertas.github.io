@@ -1998,7 +1998,7 @@
    "tipo": "catalogo"
   }
  },
- "aguardando_link": 34,
+ "aguardando_link": 35,
  "areas_novas": true,
  "busca": {
   "itens": [
@@ -8476,7 +8476,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-14": 47
+  "2026-11-14": 49
  },
  "cupons": {
   "AGORAPROMO": {
@@ -15400,8 +15400,8 @@
   "2026-11-14": {
    "com_cupom": 4,
    "cupons": 6,
-   "posts": 88,
-   "shopee": 41
+   "posts": 92,
+   "shopee": 43
   }
  },
  "links": {
@@ -16084,7 +16084,7 @@
   "2026-11-14": 2
  },
  "membros_lido_em": "2026-11-14T21",
- "numeros_em": "2026-11-14T21:06-03:00",
+ "numeros_em": "2026-11-14T21:26-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -16254,6 +16254,12 @@
    "preco": 13.19,
    "quando": "2026-11-13T16:00-03:00",
    "titulo": "Shampoo Para Bebê Johnson's Baby De Glicerina"
+  },
+  "MLB22547034": {
+   "desconto": 0.375,
+   "preco": 162.0,
+   "quando": "2026-11-14T21:26-03:00",
+   "titulo": "Ofurô Oplà Polar - Burigotto Cor Cinza"
   },
   "MLB22590044": {
    "desconto": 0.412,
@@ -17412,6 +17418,12 @@
    "preco": 35.9,
    "quando": "2026-11-13T21:11-03:00",
    "titulo": "Bola Mágica Disco Voador Brinquedo Ao Ar Livre Bola Maluca Cor Rosa"
+  },
+  "MLB67201960": {
+   "desconto": 0.31,
+   "preco": 24.11,
+   "quando": "2026-11-14T21:26-03:00",
+   "titulo": "Algodão Johnson's Baby Quadrado 50 Unidades Branco"
   },
   "MLB67464018": {
    "desconto": 0.769,
@@ -19944,6 +19956,10 @@
     [
      "2026-11-14",
      39.9
+    ],
+    [
+     "2026-11-14",
+     43.59
     ]
    ],
    "min": 27.87
@@ -22130,6 +22146,10 @@
     [
      "2026-11-14",
      709.9
+    ],
+    [
+     "2026-11-14",
+     771.72
     ]
    ],
    "min": 679.9
@@ -23010,10 +23030,6 @@
    "historico": [
     [
      "2026-11-09",
-     323.48
-    ],
-    [
-     "2026-11-09",
      309.0
     ],
     [
@@ -23247,6 +23263,10 @@
     [
      "2026-11-14",
      309.0
+    ],
+    [
+     "2026-11-14",
+     323.48
     ]
    ],
    "min": 289.9
@@ -24451,6 +24471,10 @@
     [
      "2026-11-13",
      27.99
+    ],
+    [
+     "2026-11-14",
+     27.11
     ]
    ],
    "min": 19.0
@@ -25322,6 +25346,10 @@
     [
      "2026-11-14",
      54.99
+    ],
+    [
+     "2026-11-14",
+     64.72
     ]
    ],
    "min": 54.99
@@ -26656,6 +26684,10 @@
     [
      "2026-11-14",
      173.82
+    ],
+    [
+     "2026-11-14",
+     189.99
     ]
    ],
    "min": 159.99
@@ -28186,6 +28218,10 @@
     [
      "2026-11-13",
      22.99
+    ],
+    [
+     "2026-11-14",
+     30.4
     ]
    ],
    "min": 22.89
@@ -29083,9 +29119,13 @@
     [
      "2026-11-11",
      109.99
+    ],
+    [
+     "2026-11-14",
+     106.99
     ]
    ],
-   "min": 107.99
+   "min": 106.99
   },
   "MLB38285898": {
    "historico": [
@@ -65305,7 +65345,7 @@
   }
  },
  "resumo_enviado": "2026-11-14",
- "rodada_n": 138,
+ "rodada_n": 139,
  "shopee": {
   "acompanhados": {
    "SHP12016728643": {
@@ -65330,7 +65370,7 @@
    },
    "SHP16524189661": {
     "ate": "2026-12-12",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP17146561824": {
     "ate": "2026-12-12",
@@ -65374,11 +65414,11 @@
    },
    "SHP18497505778": {
     "ate": "2026-12-12",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP18498958045": {
     "ate": "2026-12-13",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP18499919440": {
     "ate": "2026-12-14",
@@ -65434,7 +65474,7 @@
    },
    "SHP19198263449": {
     "ate": "2026-12-13",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP19297690824": {
     "ate": "2026-12-14",
@@ -65446,7 +65486,7 @@
    },
    "SHP19299650901": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP19399705893": {
     "ate": "2026-12-14",
@@ -65470,7 +65510,7 @@
    },
    "SHP19599891325": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP19699034557": {
     "ate": "2026-12-14",
@@ -65534,7 +65574,7 @@
    },
    "SHP20199323262": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP20199894311": {
     "ate": "2026-12-14",
@@ -65670,7 +65710,7 @@
    },
    "SHP21999886368": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP22091616655": {
     "ate": "2026-12-14",
@@ -65726,7 +65766,7 @@
    },
    "SHP22194576869": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP22194698355": {
     "ate": "2026-12-11",
@@ -65738,7 +65778,7 @@
    },
    "SHP22195082112": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP22196227745": {
     "ate": "2026-12-12",
@@ -66018,7 +66058,7 @@
    },
    "SHP23092250306": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP23092409051": {
     "ate": "2026-12-14",
@@ -66086,7 +66126,7 @@
    },
    "SHP23199132850": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP23199139189": {
     "ate": "2026-12-13",
@@ -66094,7 +66134,7 @@
    },
    "SHP23199200478": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP23219825532": {
     "ate": "2026-12-14",
@@ -66166,7 +66206,7 @@
    },
    "SHP23399518157": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP23492982953": {
     "ate": "2026-12-13",
@@ -66194,7 +66234,7 @@
    },
    "SHP23498656445": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP23499346925": {
     "ate": "2026-12-12",
@@ -66310,7 +66350,7 @@
    },
    "SHP23894133081": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T20:20-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP23897663976": {
     "ate": "2026-12-14",
@@ -66370,7 +66410,7 @@
    },
    "SHP24291101685": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP25201993062": {
     "ate": "2026-12-14",
@@ -66514,15 +66554,15 @@
    },
    "SHP43201053975": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP43225182025": {
     "ate": "2026-12-12",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP43257554869": {
     "ate": "2026-12-12",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP44617924122": {
     "ate": "2026-12-14",
@@ -66578,7 +66618,7 @@
    },
    "SHP46806113236": {
     "ate": "2026-12-12",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP47668034595": {
     "ate": "2026-12-14",
@@ -66654,7 +66694,7 @@
    },
    "SHP53116407292": {
     "ate": "2026-12-12",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP53453581065": {
     "ate": "2026-12-14",
@@ -66662,7 +66702,7 @@
    },
    "SHP54216160577": {
     "ate": "2026-12-13",
-    "visto": "2026-11-14T17:23-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP54505641752": {
     "ate": "2026-12-13",
@@ -66678,11 +66718,11 @@
    },
    "SHP55809708679": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP56063356954": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T20:20-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP56215017523": {
     "ate": "2026-12-14",
@@ -66734,7 +66774,7 @@
    },
    "SHP58201517017": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T19:57-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP58201517935": {
     "ate": "2026-12-14",
@@ -66742,7 +66782,7 @@
    },
    "SHP58201791571": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP58201868122": {
     "ate": "2026-12-14",
@@ -66750,7 +66790,7 @@
    },
    "SHP58201944334": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP58202056158": {
     "ate": "2026-12-14",
@@ -66794,11 +66834,11 @@
    },
    "SHP58208324168": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP58209209623": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:37-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP58209212010": {
     "ate": "2026-12-14",
@@ -66834,7 +66874,7 @@
    },
    "SHP58212780414": {
     "ate": "2026-12-12",
-    "visto": "2026-11-14T17:23-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP58212957990": {
     "ate": "2026-12-14",
@@ -66850,7 +66890,7 @@
    },
    "SHP58213474889": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:23-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP58214242737": {
     "ate": "2026-12-14",
@@ -66950,7 +66990,7 @@
    },
    "SHP58251518035": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T19:57-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP58251753465": {
     "ate": "2026-12-12",
@@ -66958,7 +66998,7 @@
    },
    "SHP58252217747": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T17:56-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP58253149409": {
     "ate": "2026-12-12",
@@ -66974,7 +67014,7 @@
    },
    "SHP58253633838": {
     "ate": "2026-12-14",
-    "visto": "2026-11-14T19:57-03:00"
+    "visto": "2026-11-14T21:32-03:00"
    },
    "SHP58254532564": {
     "ate": "2026-12-14",
@@ -67130,8 +67170,8 @@
    }
   },
   "hora": [
-   "2026-11-14T20:29-03:00",
-   "2026-11-14T20:29-03:00"
+   "2026-11-14T21:32-03:00",
+   "2026-11-14T21:32-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-10T17:15-03:00",
@@ -67185,6 +67225,7 @@
    "SHP22098066200": "2026-11-11T21:32-03:00",
    "SHP22194698355": "2026-11-11T19:57-03:00",
    "SHP22195063052": "2026-11-13T14:29-03:00",
+   "SHP22195082112": "2026-11-14T21:32-03:00",
    "SHP22196227745": "2026-11-12T19:37-03:00",
    "SHP22197613491": "2026-11-10T19:43-03:00",
    "SHP22198012044": "2026-11-10T19:24-03:00",
@@ -67296,6 +67337,7 @@
    "SHP58204083719": "2026-11-12T20:16-03:00",
    "SHP58204393424": "2026-11-14T14:45-03:00",
    "SHP58206034785": "2026-11-14T08:06-03:00",
+   "SHP58208324168": "2026-11-14T21:32-03:00",
    "SHP58210756198": "2026-11-11T12:47-03:00",
    "SHP58212515147": "2026-11-14T11:27-03:00",
    "SHP58213273842": "2026-11-14T13:48-03:00",
@@ -67323,10 +67365,11 @@
    "SHP58267271883": "2026-11-12T12:16-03:00",
    "SHP58267616997": "2026-11-12T11:47-03:00"
   },
-  "termo": 1,
+  "termo": 4,
   "tipos": {
    "2026-11-14": [
     "adesivo",
+    "algodao",
     "aspirador nasal",
     "assento",
     "babador",
@@ -67348,6 +67391,7 @@
     "caneta",
     "carrinho",
     "carrinho de brinquedo",
+    "cartas pokemon",
     "celular",
     "condicionador",
     "conjunto",
@@ -67383,12 +67427,14 @@
     "mordedor",
     "mosquiteiro",
     "movebrinca",
+    "ofuro",
     "palavrinha",
     "pare",
     "pato",
     "pc",
     "pente",
     "personagen",
+    "pescaria",
     "pijama",
     "pinico",
     "piscina",
@@ -67403,14 +67449,17 @@
     "sandalia",
     "saquinho",
     "shampoo",
+    "sling",
     "stop",
     "sunny",
     "tapete",
     "tartaruga",
     "tela",
     "toalha",
+    "torre",
     "trava",
     "trava de seguranca",
+    "trem",
     "triciclo/bicicleta",
     "ursinho",
     "viseira",
@@ -67621,6 +67670,11 @@
     "preco": 29.9,
     "quando": "2026-11-13T14:29-03:00",
     "titulo": "Kit Chocalho Bebe E Mordedores Para Recem Nascido 8 Peças Estímulo Sensorial Bri"
+   },
+   "SHP22195082112": {
+    "preco": 27.9,
+    "quando": "2026-11-14T21:32-03:00",
+    "titulo": "Pescaria Magnética Brinquedo Infantil Montessori de Madeira Educativa Formas Col"
    },
    "SHP22196227745": {
     "preco": 22.89,
@@ -68062,6 +68116,11 @@
     "quando": "2026-11-14T08:06-03:00",
     "titulo": "Kit Enxoval Recem Nascido Bebê 9 Peças Touca Luva e Pantufa Algodão Suedine Mate"
    },
+   "SHP58208324168": {
+    "preco": 29.98,
+    "quando": "2026-11-14T21:32-03:00",
+    "titulo": "Trem de Madeira Pedagógico Números Brinquedo Educativo Montessori Encaixe Infant"
+   },
    "SHP58212515147": {
     "preco": 12.99,
     "quando": "2026-11-14T11:27-03:00",
@@ -68172,7 +68231,7 @@
  "tg_offset": 273518018,
  "vigias_avisados": {},
  "vitrine": {
-  "em": "2026-11-14T21:06-03:00",
+  "em": "2026-11-14T21:26-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -68329,15 +68388,15 @@
     "titulo": "Babador De Silicone Com Pega Migalhas Verde 15641 - Buba"
    },
    {
-    "categoria": "outros",
-    "de": 78.9,
-    "desconto": 0.583,
-    "id": "MLB76227639",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_602206-MLA115521014743_082026-F.jpg",
-    "link": "https://meli.la/2JnNyvo",
+    "categoria": "quarto",
+    "de": 899.9,
+    "desconto": 0.53,
+    "id": "MLB80306191",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_921498-MLA117363268892_102026-F.jpg",
+    "link": "https://meli.la/1RwACtr",
     "loja": "ml",
-    "preco": 32.9,
-    "titulo": "Aspirador Nasal Elétrico Infantil Recarregável Sugador Nasal Bebê 6 Níveis de Sucção 2 Bicos Cabo USB Livre de"
+    "preco": 422.95,
+    "titulo": "Berço Portátil Bebe Moises Acoplado AMR-6272 Colchao com mosqueteiro L'AMOR Cor Cinza"
    },
    {
     "categoria": "higiene",
@@ -68714,6 +68773,17 @@
     "titulo": "Jogo Sonic Racing Crossworlds Launch Edition Ps5 Fisico"
    },
    {
+    "categoria": "outros",
+    "de": 271.97,
+    "desconto": 0.572,
+    "id": "MLB62692699",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_613494-MLA99989589965_112025-F.jpg",
+    "link": "https://meli.la/1RmmAoc",
+    "loja": "ml",
+    "preco": 116.3,
+    "titulo": "Triciclo Totokinha Sport Rosa Cardoso Toys com Buzina e Porta-Objetos"
+   },
+   {
     "categoria": "quarto",
     "de": 199.9,
     "desconto": 0.255,
@@ -68756,6 +68826,17 @@
     "loja": "ml",
     "preco": 116.15,
     "titulo": "Triciclo Infantil Cardoso Toys Totokinha Sport Com Buzina Azul"
+   },
+   {
+    "categoria": "higiene",
+    "de": 49.9,
+    "desconto": 0.403,
+    "id": "MLB17876029",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_625891-MLA99440534946_112025-F.jpg",
+    "link": "https://meli.la/2zLkgHB",
+    "loja": "ml",
+    "preco": 29.8,
+    "titulo": "Sabonete líquido de glicerina tradicional Granado Bebê - 250mL"
    },
    {
     "categoria": "alimentacao",
@@ -68811,34 +68892,36 @@
     "loja": "ml",
     "preco": 115.33,
     "titulo": "Cercadinho Bebê Rister Baby Portátil Grande + Tapete Azul"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 49.8,
-    "desconto": 0.485,
-    "id": "MLB80857862",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_717878-MLA120073989963_102026-F.jpg",
-    "link": "https://meli.la/2FTkZ5D",
-    "loja": "ml",
-    "preco": 25.67,
-    "titulo": "Kit Chocalho Bebe E Mordedores 8 Peças Estímulo Sensorial Brinquedo Educativo"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 47.0,
-    "desconto": 0.404,
-    "id": "MLB80908129",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_996096-MLA120139170823_102026-F.jpg",
-    "link": "https://meli.la/2RzP6Yt",
-    "loja": "ml",
-    "preco": 27.99,
-    "titulo": "Móbile de Berço Pelúcia Centopeia Colorida Com Chocalho Para Bebê"
    }
   ]
  },
  "vitrine_assinatura": "b0d2d962ad3b9efdc0cffa59741710b65abc057d",
  "vitrine_publicada_em": "2026-11-14T21:06-03:00",
  "vitrine_shopee": [
+  {
+   "a_partir": true,
+   "categoria": "brinquedo",
+   "de": 39.99,
+   "em": "2026-11-14T21:32-03:00",
+   "id": "SHP58208324168",
+   "imagem": "https://cf.shopee.com.br/file/br-11134207-820lz-mvclq261jjsx58",
+   "link": "https://s.shopee.com.br/2qW94bY8Si",
+   "loja": "shopee",
+   "preco": 29.98,
+   "titulo": "Trem de Madeira Pedagógico Números Brinquedo Educativo Montessori Encaixe Infantil"
+  },
+  {
+   "a_partir": true,
+   "categoria": "brinquedo",
+   "de": null,
+   "em": "2026-11-14T21:32-03:00",
+   "id": "SHP22195082112",
+   "imagem": "https://cf.shopee.com.br/file/br-11134207-820lx-muwxfzg8xfcx4d",
+   "link": "https://s.shopee.com.br/9pftOzJT4y",
+   "loja": "shopee",
+   "preco": 27.9,
+   "titulo": "Pescaria Magnética Brinquedo Infantil Montessori de Madeira Educativa Formas Colorida Coordenação Motora Menin"
+  },
   {
    "a_partir": false,
    "categoria": "escola",
