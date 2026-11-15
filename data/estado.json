@@ -2141,6 +2141,9 @@
  },
  "aguardando_link": 76,
  "areas_novas": true,
+ "bloqueados": [
+  "figurinha copa"
+ ],
  "busca": {
   "itens": [
    {
@@ -87034,7 +87037,7 @@
   "brinquedos": "2026-11-08",
   "passeio": "2026-11-09"
  },
- "tg_offset": 273518024,
+ "tg_offset": 273518025,
  "vigias_avisados": {},
  "vitrine": {
   "em": "2026-11-15T14:18-03:00",
