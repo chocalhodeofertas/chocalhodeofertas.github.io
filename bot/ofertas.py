@@ -80,7 +80,36 @@ def marcar_queda_real(oferta, estado, agora):
     tipico, dias = preco_tipico(estado, oferta.id, agora)
     oferta.dias_hist = dias
     oferta.queda_real = (1 - oferta.preco / tipico) if tipico else None
+    oferta.selo_dias = selo_menor_preco(estado, oferta.id, oferta.preco, agora)
     return oferta
+
+
+# Selo "menor preço que o Chocalho viu em N dias": só com histórico suficiente para a frase ser verdadeira
+SELO_DIAS_MIN = 14
+SELO_JANELA = 30
+
+
+def selo_menor_preco(estado, pid, preco, agora):
+    """Dias (14 a 30) em que este é o menor preço registrado pelo bot, ou None.
+
+    Exige 14+ dias acompanhando o produto e que, nesse período, o preço já tenha estado pelo
+    menos 3% mais alto (preço parado no mesmo valor não ganha selo)."""
+    from datetime import date, timedelta
+
+    hist = (estado.get("precos", {}).get(pid) or {}).get("historico") or []
+    if not hist or not preco:
+        return None
+    hoje = agora.date()
+    dias_obs = (hoje - date.fromisoformat(hist[0][0])).days
+    if dias_obs < SELO_DIAS_MIN:
+        return None
+    janela = min(SELO_JANELA, dias_obs)
+    corte = (hoje - timedelta(days=janela)).isoformat()
+    antes = [p for d, p in hist if d < corte]
+    precos = ([antes[-1]] if antes else []) + [p for d, p in hist if d >= corte]  # inclui o preço em vigor no corte
+    if not precos or preco > min(precos) + 0.009 or max(precos) < preco * 1.03:
+        return None
+    return janela
 
 
 def peso_queda_real(oferta):

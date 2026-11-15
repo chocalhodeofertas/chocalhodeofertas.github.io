@@ -1956,3 +1956,30 @@ def test_aviso_de_bot_parado_uma_vez_por_dia():
     assert not comandos.avisar_se_parado(tg, cfg, e, agora)            # só 1 aviso por dia
     e["aviso_parado"] = None
     assert not comandos.avisar_se_parado(tg, cfg, e, agora.replace(hour=9))   # começo do dia não conta
+
+
+def test_selo_menor_preco_so_com_base():
+    from bot.ofertas import selo_menor_preco
+    e = est.novo()
+    for dias, preco in [(40, 120.0), (20, 100.0), (5, 110.0)]:
+        est.registrar_preco(e, "MLB1", preco, AGORA - timedelta(days=dias))
+    assert selo_menor_preco(e, "MLB1", 95.0, AGORA) == 30        # menor da janela de 30 dias
+    assert selo_menor_preco(e, "MLB1", 100.0, AGORA) == 30       # empata com o menor, e já esteve 10% mais caro
+    assert selo_menor_preco(e, "MLB1", 105.0, AGORA) is None     # já esteve mais barato (100)
+    e2 = est.novo()
+    est.registrar_preco(e2, "MLB2", 100.0, AGORA - timedelta(days=16))
+    assert selo_menor_preco(e2, "MLB2", 100.0, AGORA) is None    # preço parado: sem selo
+    assert selo_menor_preco(e2, "MLB2", 90.0, AGORA) == 16       # 16 dias de histórico: diz 16, não 30
+    e3 = est.novo()
+    est.registrar_preco(e3, "MLB3", 100.0, AGORA - timedelta(days=9))
+    assert selo_menor_preco(e3, "MLB3", 80.0, AGORA) is None     # menos de 14 dias acompanhando
+    assert selo_menor_preco(e3, "MLB9", 80.0, AGORA) is None
+
+
+def test_selo_aparece_no_post():
+    e = est.novo()
+    est.registrar_preco(e, "MLB1", 100.0, AGORA - timedelta(days=20))
+    o = avaliar(prod(), info(70, 100), e, AGORA)
+    assert o.selo_dias == 20
+    assert "📉 Menor preço que o Chocalho viu em 20 dias" in mensagens.montar_whatsapp(o, random.Random(1))
+    assert "📉" not in mensagens.montar_whatsapp(avaliar(prod(), info(70, 100), est.novo(), AGORA), random.Random(1))

@@ -229,6 +229,8 @@ def para_oferta(p, estado, agora, link_tg=None, link_wa=None):
                menor_preco_historico=False, link=link_tg or p.link, imagem=p.imagem,
                categoria=categoria_do_titulo(p.titulo))
     o.loja = "shopee"
+    from .ofertas import selo_menor_preco
+    o.selo_dias = selo_menor_preco(estado, p.id, p.preco, agora)
     o.a_partir = bool(p.preco_max and p.preco_max > p.preco * 1.02)
     o.link_wa = link_wa or link_tg or p.link
     o.nota, o.vendas = p.nota, p.vendas

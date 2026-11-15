@@ -23,6 +23,8 @@ Textos para o dono do projeto sempre em português do Brasil.
   Com 7+ dias de histórico, `ofertas.peso_queda_real` dá +30% na pontuação para queda real ≥ 10% e -40% para desconto "de fachada" (< 3%).
   Quem sai dos mais vendidos do ML vai para `estado.acompanhados` (30 dias, 1/3 por rodada); na Shopee, produtos aprovados vão para
   `shopee.acompanhados` e 15 por rodada são reconferidos por `itemId` (queda real ≥ 10% vira candidato).
+- Selo no post (`ofertas.selo_menor_preco`, ML e Shopee): "📉 Menor preço que o Chocalho viu em N dias" com 14+ dias de histórico,
+  preço atual = mínimo da janela (até 30 dias) e preço já 3% mais alto na janela. Decisão do Leonardo apesar da cláusula 5.4 do ML.
 - Repetição: `REPOST_DIAS` (padrão 7 no workflow): mesmo produto e títulos parecidos (ML + Shopee) não voltam antes disso; volta antes só se o preço cair 5%.
   Tipo do dia (`ofertas.tipos_do_dia`) soma ML e Shopee; sem tipo conhecido, usa a primeira palavra que diz o que é o produto.
   `ofertas.priorizar_tipos_novos`: tipo que saiu nas últimas 48 h vai para o fim da fila (só entra se faltar alternativa).

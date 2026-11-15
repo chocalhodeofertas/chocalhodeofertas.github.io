@@ -153,8 +153,10 @@ CHAMADAS = {
     "festa": ["🎉 Pra festa ficar linda", "🎈 Pro aniversário", "🎁 Pra comemorar"],
 }
 
-# Cláusula 5.4 dos termos: só informações que estão no anúncio. Por isso não
-# afirmamos "menor preço" nem "% abaixo do habitual" (são cálculos nossos).
+# Cláusula 5.4 dos termos do ML: nas postagens, só informações que estão no anúncio.
+# Decisão do Leonardo (15/11/2026): o selo "menor preço que o Chocalho viu em N dias" entra mesmo assim,
+# porque é verdadeiro e tem base no histórico do próprio bot (ofertas.selo_menor_preco). Ele assume o risco.
+# Nada além disso: sem "menor preço da história", sem "% abaixo do habitual".
 
 EMOJI_CATEGORIA = {
     "fralda": "🧷",
@@ -255,6 +257,8 @@ def _linhas_preco(oferta, negrito, riscado, codigo=lambda t: t):
         linhas.append(f"A partir de {negrito(brl(oferta.preco))}")
     else:
         linhas.append(f"Por {negrito(brl(oferta.preco))}")
+    if getattr(oferta, "selo_dias", None):
+        linhas.append(f"📉 Menor preço que o Chocalho viu em {oferta.selo_dias} dias")
     por_un = None if getattr(oferta, "a_partir", False) else preco_por_unidade(oferta.titulo, oferta.preco)
     if por_un:
         linhas.append(f"🧮 Sai a {negrito(brl(por_un[0]))} {por_un[1]}")
