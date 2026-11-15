@@ -24,6 +24,9 @@ Textos para o dono do projeto sempre em português do Brasil.
 - Repetição: `REPOST_DIAS` (padrão 7 no workflow): mesmo produto e títulos parecidos (ML + Shopee) não voltam antes disso; volta antes só se o preço cair 5%.
   Tipo do dia (`ofertas.tipos_do_dia`) soma ML e Shopee; sem tipo conhecido, usa a primeira palavra que diz o que é o produto.
   `ofertas.priorizar_tipos_novos`: tipo que saiu nas últimas 48 h vai para o fim da fila (só entra se faltar alternativa).
+- `espelho.py`: lê canais de ofertas do Telegram (`FONTES_OFERTAS_TG`, padrão no ciclo.yml) pela sessão Telethon;
+  links do ML/Shopee viram candidatos por 48 h (`estado.espelho`). ML: catálogo direto; anúncio avulso → busca o catálogo pelo título.
+  Passam pelos mesmos filtros (regra "infantil", NBCAL, repetição); desconto mínimo 10% e +20% na pontuação. Shopee: `shopee_ofertas.do_espelho` confere por itemId.
 - `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica) e `fora_da_faixa` (casa/adulto, exige sinal infantil).
 - `mensagens.py`: textos do Telegram/WhatsApp, frases de abertura por produto, linha de cupom, Shopee ("A partir de", nota e vendas).
 - `cupons_ml.py` + `cupom_oferta.py`: lê cupons (canal oficial do ML + @cupombr via Telethon) e aplica o melhor cupom compatível na oferta.
@@ -53,6 +56,7 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `produto_shopee <itemId>`: dados e foto de um produto da Shopee (foto vai para `saida/`).
 - `testar_instagram` / `coletar_instagram`: confere o token / roda a coleta uma vez em `saida/instagram`.
 - `publicar_carrossel <pasta>`: publica `docs/ig-tmp/<pasta>/` no Instagram (só com aprovação do Leonardo).
+- `achar_canais_tg "termo; termo"`: procura canais públicos de ofertas de bebê no Telegram e mede links/posts infantis (saida/canais_tg.md).
 - `baixar nome=url ...`: baixa arquivos para `saida/` (o container não alcança mlstatic/Shopee/Canva).
 
 ## Regras que o código precisa respeitar

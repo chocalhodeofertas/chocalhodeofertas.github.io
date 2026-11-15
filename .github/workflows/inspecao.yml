@@ -28,6 +28,8 @@ jobs:
           SHOPEE_SECRET: ${{ secrets.SHOPEE_SECRET }}
           INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
       - name: Publica saida/ num branch temporário
         if: always()
         run: |

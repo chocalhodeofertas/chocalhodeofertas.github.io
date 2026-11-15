@@ -90,6 +90,7 @@ jobs:
           TG_CANAL_CUPONS: ${{ secrets.TG_CANAL_CUPONS }}
           CUPONS_CATEGORIAS: ${{ vars.CUPONS_CATEGORIAS }}
           CUPONS_CANAIS_EXTRA: ${{ vars.CUPONS_CANAIS_EXTRA || 'cupombr' }}
+          FONTES_OFERTAS_TG: ${{ vars.FONTES_OFERTAS_TG || '' }}
           WHATSAPP_GRUPO: ${{ vars.WHATSAPP_GRUPO || 'https://chat.whatsapp.com/FOwEWWIjfKoFWmD8Xsv5lq' }}
           AFILIADO_MATT_WORD: ${{ vars.AFILIADO_MATT_WORD || 'chocalhodeofertas' }}
           AFILIADO_MATT_TOOL: ${{ vars.AFILIADO_MATT_TOOL || '39326742' }}

@@ -1805,3 +1805,55 @@ def test_tipos_novos_vao_na_frente():
     assert [o.titulo[:3] for o in priorizar_tipos_novos(ofs, e, AGORA)] == ["Xil", "Kit"]
     # depois de 2 dias o tipo volta a concorrer normalmente
     assert priorizar_tipos_novos(ofs, e, AGORA + timedelta(days=2))[0].titulo.startswith("Kit")
+
+
+def test_espelho_classifica_links():
+    from bot import espelho
+    assert espelho.classificar("https://www.mercadolivre.com.br/p/MLB19876543?matt_tool=1") == ("ml", "catalogo", "MLB19876543")
+    assert espelho.classificar("https://produto.mercadolivre.com.br/MLB-4123456789-body-bebe") == ("ml", "item", "MLB4123456789")
+    assert espelho.classificar("https://shopee.com.br/Body-Bebe-i.123456.22334455667") == ("shopee", "22334455667")
+    assert espelho.classificar("https://shopee.com.br/opaanlp/1648150131/58252119510") == ("shopee", "58252119510")
+    assert espelho.classificar("https://shopee.com.br/product/1648150131/58252119510?x=1") == ("shopee", "58252119510")
+    assert espelho.classificar("https://www.amazon.com.br/dp/B0ABC") is None
+    msg = "🔥 BAIXOU!\n\nKit 3 Bodies Bebê Manga Longa Algodão\n\nDe: R$ 89\nPor: R$ 49\n🛒 https://meli.la/abc"
+    assert espelho.titulo_da_mensagem(msg) == "Kit 3 Bodies Bebê Manga Longa Algodão"
+
+
+def test_espelho_coleta_e_vira_candidato(monkeypatch):
+    from bot import espelho
+    monkeypatch.setenv("FONTES_OFERTAS_TG", "@promosbaby, Canal Teste")
+    e = est.novo()
+    lidos = []
+
+    def ler(lista):
+        lidos.append(lista)
+        return [[(10, "Body bebê https://meli.la/x1"), (11, "Fralda https://s.shopee.com.br/abc")],
+                RuntimeError("não entrou")]
+
+    destinos = {"https://meli.la/x1": "https://www.mercadolivre.com.br/p/MLB555?wid=",
+                "https://s.shopee.com.br/abc": "https://shopee.com.br/Fralda-i.123456.777777"}
+    n = espelho.coletar(None, e, AGORA, log=lambda m: None, ler=ler, expandir_url=lambda u, s=None: destinos[u])
+    assert n == 2 and lidos[0] == [("@promosbaby", None), ("Canal Teste", None)]
+    assert e["espelho"]["fontes"]["@promosbaby"] == 11
+    assert espelho.candidatos_ml(e, AGORA)["MLB555"]["regra"] == "infantil"
+    assert espelho.ids_shopee(e, AGORA) == ["SHP777777"]
+    assert espelho.eh_do_espelho(e, "MLB555")
+    # link repetido não conta de novo; depois de 48 h o candidato expira
+    assert espelho.coletar(None, e, AGORA, log=lambda m: None, ler=lambda l: [[(12, "https://meli.la/x1")], []],
+                           expandir_url=lambda u, s=None: destinos[u]) == 0
+    assert espelho.candidatos_ml(e, AGORA + timedelta(hours=49)) == {}
+
+
+def test_espelho_shopee_confere_pela_api():
+    from bot import espelho, shopee_ofertas as so
+    e = est.novo()
+    espelho._estado(e)["shopee"] = {"SHP7": {"ate": (AGORA + timedelta(hours=5)).isoformat()},
+                                    "SHP8": {"ate": (AGORA + timedelta(hours=5)).isoformat()}}
+
+    class Shp:
+        def item(self, iid):
+            return _produto_shopee(id="SHP" + iid, titulo="Body Bebê Algodão" if iid == "7" else "Jaqueta de couro feminina")
+
+    achados = so.do_espelho(Shp(), e, AGORA, log=lambda m: None)
+    assert [p.id for p in achados] == ["SHP7"]
+    assert e["espelho"]["shopee"]["SHP8"]["fora"]

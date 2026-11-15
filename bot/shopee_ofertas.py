@@ -142,6 +142,37 @@ def acompanhar(shp, estado, agora, log=print, limite=ACOMPANHAR_POR_RODADA):
     return caiu
 
 
+ESPELHO_POR_RODADA = 15
+
+
+def do_espelho(shp, estado, agora, ja=(), log=print, limite=ESPELHO_POR_RODADA):
+    """Produtos da Shopee vistos nos canais de ofertas: confere pela API oficial e aplica as nossas regras."""
+    from . import espelho
+    e = estado.get("espelho") or {}
+    saida = []
+    for pid in espelho.ids_shopee(estado, agora, ja)[:limite]:
+        reg = e["shopee"].get(pid) or {}
+        if reg.get("fora"):
+            continue
+        try:
+            p = shp.item(pid[3:])
+        except ShopeeErro as erro:
+            log(f"Shopee: não consegui conferir {pid} do espelho: {erro}")
+            break
+        if p is None:
+            reg["fora"] = "sumiu"
+            continue
+        est.registrar_preco(estado, p.id, p.preco, agora)
+        motivo = aprovado(p)
+        if motivo:
+            reg["fora"] = motivo
+            log(f"Shopee (espelho): {pid} fora: {motivo}")
+            continue
+        _marcar_acompanhado(estado, p, agora)
+        saida.append(p)
+    return saida
+
+
 def _marcar_acompanhado(estado, p, agora):
     acomp = _estado(estado).setdefault("acompanhados", {})
     reg = acomp.setdefault(p.id, {})
@@ -236,10 +267,11 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
     try:
         corte = agora - timedelta(days=cfg.repost_dias)
         ja = {p.id for p in candidatos}
-        for p in acompanhar(shp, estado, agora, log):
+        for p in acompanhar(shp, estado, agora, log) + do_espelho(shp, estado, agora, ja, log):
             quando = s["postados"].get(p.id)
             if p.id not in ja and not (quando and datetime.fromisoformat(quando) > corte):
                 candidatos.append(p)
+                ja.add(p.id)
         candidatos.sort(key=lambda p: pontos(p, estado, agora), reverse=True)
     except Exception as e:  # noqa: BLE001 — acompanhar nunca atrapalha os posts
         log(f"Shopee: acompanhamento falhou: {type(e).__name__}: {e}")

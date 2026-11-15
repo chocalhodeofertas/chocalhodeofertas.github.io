@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
-from . import afiliado, cofre, comandos, cupom_oferta, cupons_ml, lote, vitrine, whatsapp
+from . import afiliado, cofre, comandos, cupom_oferta, cupons_ml, espelho, lote, vitrine, whatsapp
 from . import estado as est
 from . import mensagens
 from .descoberta import descobrir, descobrir_areas
@@ -183,6 +183,9 @@ def conectar_ml(cfg: Config):
     return MercadoLivre(access), "com token"
 
 
+DESCONTO_MIN_ESPELHO = 0.10
+
+
 def montar_lista(cfg: Config, da_planilha, estado):
     """Junta os produtos da planilha com os descobertos e garante o link de afiliado."""
     lista, vistos = [], set()
@@ -194,7 +197,8 @@ def montar_lista(cfg: Config, da_planilha, estado):
             p.link_afiliado = afiliado.montar(link_produto(p.tipo, p.id), cfg.matt_word, cfg.matt_tool)
         lista.append(p)
         vistos.add(p.id)
-    extras = {**estado.get("manuais", {}), **estado.get("descobertos", {})}
+    extras = {**espelho.candidatos_ml(estado, datetime.now(FUSO)),
+              **estado.get("manuais", {}), **estado.get("descobertos", {})}
     # Quem saiu dos mais vendidos continua sendo acompanhado (1/3 por rodada = ~1 vez por hora),
     # para o histórico de preço não ficar com buracos
     rodada = estado.get("rodada_n", 0)
@@ -323,11 +327,14 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
             continue
         motivo = motivo_bloqueio(info.titulo) or fora_da_faixa(
             info.titulo, p.categoria, (estado.get("descobertos", {}).get(p.id)
-                                       or estado.get("acompanhados", {}).get(p.id) or {}).get("regra"))
+                                       or estado.get("acompanhados", {}).get(p.id)
+                                       or (estado.get("espelho") or {}).get("ml", {}).get(p.id) or {}).get("regra"))
         if motivo:
             log(f"Bloqueado {p.id}: {motivo} — '{info.titulo[:60]}'")
             continue
-        oferta = avaliar(p, info, estado, agora, cfg.min_desconto, cfg.repost_dias)
+        # Quem veio dos canais de ofertas já passou por uma curadoria: desconto mínimo menor
+        min_desc = min(cfg.min_desconto, DESCONTO_MIN_ESPELHO) if espelho.eh_do_espelho(estado, p.id) else cfg.min_desconto
+        oferta = avaliar(p, info, estado, agora, min_desc, cfg.repost_dias)
         if info.preco:
             est.registrar_preco(estado, p.id, float(info.preco), agora)
         if oferta:
@@ -337,6 +344,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
     manuais = estado.get("manuais", {})
     # Pedidos seus (busca/vigia) passam na frente
     candidatas.sort(key=lambda o: pontuacao(o, posicoes.get(o.id))
+                    * (1.2 if espelho.eh_do_espelho(estado, o.id) else 1.0)
                     * (2.0 if (manuais.get(o.id) or {}).get("pedido") or (manuais.get(o.id) or {}).get("vigia") else 1.0),
                     reverse=True)
     if modo == "normal" and cfg.admin_chat:
@@ -628,6 +636,11 @@ def main(argv=None):
         ml, _ = conectar_ml(cfg)
         agora = datetime.now(FUSO)
         atualizar_descoberta(cfg, ml, estado, agora)
+        if args.modo == "normal":
+            try:
+                espelho.coletar(ml, estado, agora, log)
+            except Exception as e:  # noqa: BLE001 — as fontes nunca derrubam a rodada
+                log(f"Aviso: espelho falhou: {type(e).__name__}: {e}")
         estado["rodada_n"] = estado.get("rodada_n", 0) + 1
         lista = montar_lista(cfg, produtos, estado)
         if not lista:
