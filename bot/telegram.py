@@ -115,6 +115,14 @@ class Telegram:
             dados["caption"] = legenda
         return self._multipart("sendVideo", dados, {"video": (nome, mp4, "video/mp4")}, timeout=300)
 
+    def enviar_oferta_com_grafico(self, chat, legenda_html, imagem, png):
+        """Álbum com a foto do produto (endereço) e o gráfico de preço (bytes); a legenda vai na foto."""
+        import json as _json
+        midia = [{"type": "photo", "media": imagem, "caption": legenda_html, "parse_mode": "HTML"},
+                 {"type": "photo", "media": "attach://grafico"}]
+        return self._multipart("sendMediaGroup", {"chat_id": str(chat), "media": _json.dumps(midia)},
+                               {"grafico": ("grafico.png", png, "image/png")})
+
     def enviar_oferta(self, chat, legenda_html, imagem=None):
         """Manda com foto; se a foto falhar, manda só o texto."""
         if imagem:

@@ -16,7 +16,26 @@ def carregar(caminho):
     estado = json.loads(p.read_text())
     for chave, valor in novo().items():
         estado.setdefault(chave, valor)
+    compactar_precos(estado)
     return estado
+
+
+def compactar_precos(estado):
+    """Em cada dia, guarda cada preço diferente uma vez só (na ordem em que apareceu por último).
+
+    No Mercado Livre, alguns produtos alternam entre dois preços a cada consulta (lojas diferentes
+    ganhando a vez). Sem isso, o vai-e-vem enchia o histórico e apagava os dias mais antigos."""
+    for reg in (estado.get("precos") or {}).values():
+        hist = reg.get("historico") or []
+        if len(hist) < 3:
+            continue
+        novo_hist, vistos = [], set()
+        for d, preco in reversed(hist):
+            if (d, preco) not in vistos:
+                vistos.add((d, preco))
+                novo_hist.append([d, preco])
+        if len(novo_hist) != len(hist):
+            reg["historico"] = novo_hist[::-1]
 
 
 def salvar(caminho, estado):
@@ -26,11 +45,20 @@ def salvar(caminho, estado):
 
 
 def registrar_preco(estado, pid, preco, agora):
-    """Guarda o preço só quando ele muda, para o arquivo não crescer à toa."""
+    """Guarda o preço só quando ele muda, para o arquivo não crescer à toa.
+    No mesmo dia, cada preço fica uma vez só: se ele volta a aparecer, vai para o fim da fila
+    (o último registro é sempre o preço em vigor; o menor do dia é o que vale para o histórico)."""
     reg = estado["precos"].setdefault(pid, {"min": preco, "historico": []})
     hist = reg["historico"]
     if not hist or hist[-1][1] != preco:
-        hist.append([agora.date().isoformat(), preco])
+        dia = agora.date().isoformat()
+        for i in range(len(hist) - 1, -1, -1):
+            if hist[i][0] != dia:
+                break
+            if hist[i][1] == preco:
+                del hist[i]
+                break
+        hist.append([dia, preco])
         del hist[:-MAX_HISTORICO]
     reg["min"] = min(reg["min"], preco)
 
@@ -102,35 +130,54 @@ def repetido(estado, titulo, agora, dias=3, preco=None):
     return False
 
 
-def preco_tipico(estado, pid, agora, dias=30):
-    """Preço "normal" do produto pelo histórico do próprio bot: mediana dia a dia dos últimos dias.
+def serie_diaria(estado, pid, agora, dias=30, com_hoje=False):
+    """Preço do produto dia a dia: [(date, preço)], do começo da janela até ontem (ou hoje, com_hoje=True).
 
-    Retorna (preço típico, dias de observação) ou (None, 0). A mediana não se deixa enganar
-    por um preço inflado por poucos dias (ex.: vendedor que sobe antes da Black Friday)."""
+    Em cada dia vale o MENOR preço visto (se num dia o produto apareceu a R$ 30 e a R$ 40, ele esteve
+    disponível a R$ 30). Dia sem registro repete o último preço em vigor."""
     from datetime import date, timedelta
 
     hist = (estado.get("precos", {}).get(pid) or {}).get("historico") or []
     if not hist:
-        return None, 0
+        return []
     hoje = agora.date()
-    inicio = date.fromisoformat(hist[0][0])
-    dias_obs = (hoje - inicio).days
-    corte = hoje - timedelta(days=dias)
-    por_dia = {}
-    for d, preco in hist:  # o último preço de cada dia vale para o dia
-        por_dia[date.fromisoformat(d)] = preco
-    serie, atual, dia = [], None, max(inicio, corte)
-    for d in sorted(por_dia):  # preço em vigor no começo da janela
-        if d <= dia:
-            atual = por_dia[d]
-    while dia < hoje:  # hoje fica de fora: é o preço que está sendo avaliado
-        atual = por_dia.get(dia, atual)
-        if atual is not None:
-            serie.append(atual)
+    menor, ultimo = {}, {}
+    for d, preco in hist:
+        d = date.fromisoformat(d)
+        menor[d] = min(menor.get(d, preco), preco)
+        ultimo[d] = preco
+    dia = max(min(menor), hoje - timedelta(days=dias))
+    em_vigor = None
+    for d in sorted(ultimo):  # preço em vigor no começo da janela
+        if d < dia:
+            em_vigor = ultimo[d]
+    serie = []
+    fim = hoje if com_hoje else hoje - timedelta(days=1)
+    while dia <= fim:
+        if dia in menor:
+            serie.append((dia, menor[dia]))
+            em_vigor = ultimo[dia]
+        elif em_vigor is not None:
+            serie.append((dia, em_vigor))
         dia += timedelta(days=1)
+    return serie
+
+
+def preco_tipico(estado, pid, agora, dias=30):
+    """Preço "normal" do produto pelo histórico do próprio bot: mediana dia a dia dos últimos dias
+    (em cada dia vale o menor preço visto; hoje fica de fora, é o preço que está sendo avaliado).
+
+    Retorna (preço típico, dias de observação) ou (None, 0). A mediana não se deixa enganar
+    por um preço inflado por poucos dias (ex.: vendedor que sobe antes da Black Friday)."""
+    from datetime import date
+
+    hist = (estado.get("precos", {}).get(pid) or {}).get("historico") or []
+    if not hist:
+        return None, 0
+    dias_obs = (agora.date() - date.fromisoformat(hist[0][0])).days
+    serie = sorted(p for _, p in serie_diaria(estado, pid, agora, dias))
     if not serie:
         return None, dias_obs
-    serie.sort()
     meio = len(serie) // 2
     tipico = serie[meio] if len(serie) % 2 else (serie[meio - 1] + serie[meio]) / 2
     return tipico, dias_obs

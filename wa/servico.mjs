@@ -11,7 +11,7 @@ import makeWASocket, { Browsers, DisconnectReason, prepareWAMessageMedia, useMul
 import pino from "pino";
 
 import { PASTA_AUTH, RAIZ, abrirSessao, avisar, codigoConvite, dormir, gravarEstado, guardarSessao,
-  lerEstado } from "./comum.mjs";
+  lerEstado, naMeiaNoite } from "./comum.mjs";
 
 const FILA = path.resolve(RAIZ, process.env.WA_FILA || "fila_wa");
 // Aquecimento automático: o ritmo sobe sozinho conforme o número ganha
@@ -25,7 +25,8 @@ const HORA_INICIO = Number(process.env.WA_HORA_INICIO || 7);
 const HORA_FIM = Number(process.env.WA_HORA_FIM || 23);
 const horaLocal = () => Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/Sao_Paulo", hour: "numeric",
   hourCycle: "h23" }).format(new Date()));
-const deDia = () => horaLocal() >= HORA_INICIO && horaLocal() < HORA_FIM;
+const MEIA_NOITE_EXTRA = 6; // posts da virada (Black Friday, 12.12) que não entram na conta do dia
+const deDia = () => (horaLocal() >= HORA_INICIO && horaLocal() < HORA_FIM) || naMeiaNoite();
 const RE_LINK = /(https?:\/\/|www\.|chat\.whatsapp\.com|\b[\w-]+\.(com|com\.br|net|ly|me)\/)/i;
 
 let temSessao = false;
@@ -230,7 +231,13 @@ async function cuidarDaFila() {
       estado.dia = hoje();
       estado.enviados = 0;
     }
-    if (Date.now() - Date.parse(item.criado) > VALIDADE_ITEM || estado.enviados >= MAX_DIA) {
+    const virada = naMeiaNoite();
+    if (estado.virada_dia !== hoje() && virada) {
+      estado.virada_dia = hoje();
+      estado.virada_enviados = 0;
+    }
+    const extraVirada = virada && (estado.virada_enviados || 0) < MEIA_NOITE_EXTRA;
+    if (Date.now() - Date.parse(item.criado) > VALIDADE_ITEM || (estado.enviados >= MAX_DIA && !extraVirada)) {
       apagarItem(caminho, item); // velho demais ou limite do dia: não sai
       continue;
     }
@@ -241,7 +248,8 @@ async function cuidarDaFila() {
     }
     try {
       await postar(item);
-      estado.enviados += 1;
+      if (extraVirada) estado.virada_enviados = (estado.virada_enviados || 0) + 1; // extra da data, fora da conta do dia
+      else estado.enviados += 1;
       estado.ultimo = new Date().toISOString();
       estado.ultima_loja = item.loja || "ml";
       console.log(`Postado no grupo do WhatsApp (${estado.enviados}/${MAX_DIA} hoje).`);

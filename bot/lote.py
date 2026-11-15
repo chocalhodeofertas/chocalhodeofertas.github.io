@@ -17,10 +17,10 @@ def url_linkbuilder(item_id):
     return f"https://produto.mercadolivre.com.br/MLB-{item_id[3:]}-produto-_JM"
 
 
-def prioridade(oferta, posicao=None):
+def prioridade(oferta, posicao=None, agora=None):
     from .ofertas import pontuacao
 
-    return pontuacao(oferta, posicao)
+    return pontuacao(oferta, posicao, agora)
 
 
 def montar_lote(estado, sem_link, tamanho, agora):
@@ -34,7 +34,7 @@ def montar_lote(estado, sem_link, tamanho, agora):
 
     def chave(x):
         o = x[0]
-        peso = prioridade(o, pos.get(o.id))
+        peso = prioridade(o, pos.get(o.id), agora)
         if espelho.eh_do_espelho(estado, o.id):
             peso *= 1.5   # candidato de canal vale só 48 h: precisa do link logo
         if est.repetido(estado, o.titulo, agora, 7, o.preco):

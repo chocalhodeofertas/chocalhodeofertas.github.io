@@ -77,19 +77,16 @@ def link_canal(canal):
 def selo(estado, item, agora):
     """Selo de preço pelo histórico do próprio bot (nunca pelo "de" do anúncio).
     ("baixou", preço normal) quando está 10% ou mais abaixo do preço normal com 7+ dias de histórico;
-    ("menor30", None) quando é o menor preço visto em 30 dias e o preço já esteve mais alto."""
+    ("menor", dias) quando é o menor preço que o bot viu em N dias (mesma regra do selo dos posts:
+    14+ dias de histórico, preço já esteve mais alto e não é um preço que aparece todo dia)."""
+    from .ofertas import selo_menor_preco
+
     tipico, dias = preco_tipico(estado, item["id"], agora)
-    if not tipico or dias < 7:
-        return None, None
     preco = item["preco"]
-    if preco <= tipico * 0.9:
+    if tipico and dias >= 7 and preco <= tipico * 0.9:
         return "baixou", tipico
-    hist = (estado.get("precos", {}).get(item["id"]) or {}).get("historico") or []
-    corte = (agora.date() - timedelta(days=30)).isoformat()
-    janela = [p for d, p in hist if d >= corte] or [p for _, p in hist[-1:]]
-    if janela and preco <= min(janela) + 0.009 and max(p for _, p in hist) > preco * 1.02:
-        return "menor30", None
-    return None, None
+    n = selo_menor_preco(estado, item["id"], preco, agora)
+    return ("menor", n) if n else (None, None)
 
 
 def _itens(estado, agora):
@@ -97,8 +94,10 @@ def _itens(estado, agora):
     shp = estado.get("vitrine_shopee") or []
     itens = []
     for i in [dict(x, loja=x.get("loja", "ml")) for x in ml] + [dict(x) for x in shp]:
-        tipo, tipico = selo(estado, i, agora)
-        i["selo"], i["tipico"] = tipo, tipico
+        tipo, valor = selo(estado, i, agora)
+        i["selo"] = "menor30" if tipo == "menor" else tipo  # "menor30" é o nome da classe no CSS da página
+        i["tipico"] = valor if tipo == "baixou" else None
+        i["selo_dias"] = valor if tipo == "menor" else None
         itens.append(i)
     # intercala as duas lojas para a vitrine não ficar em blocos
     ml_i = [i for i in itens if i["loja"] == "ml"]
@@ -116,6 +115,13 @@ def _itens(estado, agora):
 
 LOJA = {"ml": "Mercado Livre", "shopee": "Shopee"}
 SELO_TXT = {"baixou": "Baixou de verdade", "menor30": "Menor preço em 30 dias"}
+
+
+def _selo_txt(i):
+    """Texto do selo: o do menor preço diz por quantos dias o bot acompanha o produto (14 a 30)."""
+    if i.get("selo") == "menor30":
+        return f"Menor preço em {i.get('selo_dias') or 30} dias"
+    return SELO_TXT[i["selo"]]
 
 
 def _foto(i, eager=False):
@@ -138,7 +144,7 @@ def _preco(i, com_de=True):
 
 def _card(i):
     e = html.escape
-    marca = (f'<span class="selo s-{i["selo"]}">{SELO_TXT[i["selo"]]}</span>' if i.get("selo") else "")
+    marca = (f'<span class="selo s-{i["selo"]}">{_selo_txt(i)}</span>' if i.get("selo") else "")
     return (
         f'<a class="card" data-cat="{e(i["categoria"])}" href="{e(i["link"], quote=True)}" '
         f'target="_blank" rel="noopener sponsored">'
@@ -150,7 +156,7 @@ def _card(i):
 
 def _feed(i, n):
     e = html.escape
-    marca = (f'<span class="f-selo">{SELO_TXT[i["selo"]]}</span>' if i.get("selo") else
+    marca = (f'<span class="f-selo">{_selo_txt(i)}</span>' if i.get("selo") else
              f'<span class="f-loja">{LOJA[i["loja"]]}</span>')
     return (f'<li class="msg"><span class="f-foto">{_foto(i, eager=n < 4)}</span>'
             f'<span class="f-txt">{marca}<span class="f-tit">{e(i["titulo"])}</span>'
@@ -161,10 +167,10 @@ def _destaque(i):
     e = html.escape
     normal = (f'<span class="normal">Preço normal pelo histórico: {brl(i["tipico"])}</span>'
               if i.get("selo") == "baixou" and i.get("tipico") else
-              '<span class="normal">O menor preço que o Chocalho viu em 30 dias</span>')
+              f'<span class="normal">O menor preço que o Chocalho viu em {i.get("selo_dias") or 30} dias</span>')
     return (f'<a class="dest" href="{e(i["link"], quote=True)}" target="_blank" rel="noopener sponsored">'
             f'<span class="foto">{_foto(i)}</span><span class="d-info">'
-            f'<span class="selo s-{i["selo"]}">{SELO_TXT[i["selo"]]}</span>'
+            f'<span class="selo s-{i["selo"]}">{_selo_txt(i)}</span>'
             f'<span class="titulo">{e(i["titulo"])}</span>{_preco(i, com_de=False)}{normal}'
             f'<span class="loja">{LOJA[i["loja"]]}</span></span></a>')
 

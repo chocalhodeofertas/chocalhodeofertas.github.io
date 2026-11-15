@@ -1961,11 +1961,13 @@ def test_aviso_de_bot_parado_uma_vez_por_dia():
 def test_selo_menor_preco_so_com_base():
     from bot.ofertas import selo_menor_preco
     e = est.novo()
-    for dias, preco in [(40, 120.0), (20, 100.0), (5, 110.0)]:
+    for dias, preco in [(40, 120.0), (20, 100.0), (18, 110.0)]:
         est.registrar_preco(e, "MLB1", preco, AGORA - timedelta(days=dias))
     assert selo_menor_preco(e, "MLB1", 95.0, AGORA) == 30        # menor da janela de 30 dias
-    assert selo_menor_preco(e, "MLB1", 100.0, AGORA) == 30       # empata com o menor, e já esteve 10% mais caro
+    assert selo_menor_preco(e, "MLB1", 100.0, AGORA) == 30       # empata com o menor (visto só 2 dias) e já esteve mais caro
     assert selo_menor_preco(e, "MLB1", 105.0, AGORA) is None     # já esteve mais barato (100)
+    est.registrar_preco(e, "MLB1", 98.0, AGORA)                  # hoje mais cedo já esteve a 98
+    assert selo_menor_preco(e, "MLB1", 100.0, AGORA) is None
     e2 = est.novo()
     est.registrar_preco(e2, "MLB2", 100.0, AGORA - timedelta(days=16))
     assert selo_menor_preco(e2, "MLB2", 100.0, AGORA) is None    # preço parado: sem selo
@@ -2062,3 +2064,263 @@ def test_shopee_busca_sem_palavra_nao_manda_keyword():
     s.buscar("fralda")
     assert "keyword" not in vistos[0] and "productCatId:100684" in vistos[0] and "page:2" in vistos[0]
     assert 'keyword:"fralda"' in vistos[1]
+
+
+# ---------- bloco 3: meia-noite, calendário, histórico sem vai-e-vem, resumos e gráfico ----------
+
+def test_janela_da_meia_noite(monkeypatch):
+    from bot import ciclo, horario
+    from bot.ofertas import vagas_da_rodada
+    monkeypatch.delenv("DATAS_MEIA_NOITE", raising=False)
+    d = lambda dia, h, m=0, mes=11: datetime(2026, mes, dia, h, m, tzinfo=FUSO)  # noqa: E731
+    assert not horario.meia_noite(d(26, 23, 29)) and horario.meia_noite(d(26, 23, 30))   # véspera da Black Friday
+    assert horario.meia_noite(d(27, 0, 59)) and not horario.meia_noite(d(27, 1, 0))
+    assert not horario.meia_noite(d(27, 23, 40))                                          # a virada seguinte não conta
+    assert horario.meia_noite(d(11, 23, 45, mes=12)) and horario.meia_noite(d(12, 0, 10, mes=12))  # 12.12
+    assert horario.ativo(d(26, 23, 40), 8, 22) and not horario.ativo(d(25, 23, 40), 8, 22)
+    assert horario.ativo(d(20, 9), 8, 22) and not horario.ativo(d(20, 22), 8, 22)
+    # O ciclo acorda às 23h30 na véspera e volta ao normal depois da 1h
+    assert ciclo.proximo_horario(d(26, 21, 50), 8, 22) == d(26, 23, 30)
+    assert ciclo.proximo_horario(d(26, 23, 50), 8, 22) == d(27, 0, 10)
+    assert ciclo.proximo_horario(d(27, 0, 50), 8, 22) == d(27, 8, 2)
+    assert ciclo.proximo_horario(d(20, 21, 50), 8, 22) == d(21, 8, 2)
+    # Na janela vale só o limite por hora (com reforço), fora da conta do dia
+    assert vagas_da_rodada(d(27, 0, 10), 2, 4, 50, 0, 0) == 2
+    assert vagas_da_rodada(d(26, 23, 40), 2, 4, 50, 5, 50) == 1 and vagas_da_rodada(d(26, 23, 40), 2, 4, 50, 6, 50) == 0
+    assert vagas_da_rodada(d(20, 9), 2, 4, 50, 0, 50) == 0                                 # dia normal: limite do dia vale
+    monkeypatch.setenv("DATAS_MEIA_NOITE", "")
+    assert not horario.meia_noite(d(26, 23, 40)) and horario.proxima_janela(d(1, 9)) is None
+
+
+def test_rodada_posta_na_virada_da_black_friday(monkeypatch):
+    monkeypatch.delenv("DATAS_MEIA_NOITE", raising=False)
+    produtos, ml = cenario()
+    cfg = Config(canal="@canal", max_por_rodada=1)
+    virada = datetime(2026, 11, 27, 0, 10, tzinfo=FUSO)
+    assert [o.id for o in rodar("normal", cfg, ml, TGFalso(), est.novo(), produtos, agora=virada)] == ["MLB2"]
+    comum = datetime(2026, 11, 20, 0, 10, tzinfo=FUSO)
+    assert rodar("normal", cfg, ml, TGFalso(), est.novo(), produtos, agora=comum) == []
+
+
+def test_calendario_sazonal():
+    from datetime import date
+    from bot import sazonal
+    from bot.ofertas import Oferta, pontuacao
+    assert sazonal.carnaval(2027) == date(2027, 2, 9) and sazonal.pascoa(2026) == date(2026, 4, 5)
+    assert sazonal.epocas(date(2026, 12, 1)) == ["Natal", "verão"]
+    assert "volta às aulas" in sazonal.epocas(date(2027, 1, 10)) and "Carnaval" in sazonal.epocas(date(2027, 2, 1))
+    assert sazonal.epocas(date(2027, 4, 20)) == []
+    natal, janeiro = date(2026, 12, 1), date(2027, 1, 10)
+    assert sazonal.peso("Boneca Fashion Com Acessórios", natal) == 1.2
+    assert sazonal.peso("Jogo de Lençol Para Berço", natal, "quarto") == 1.0          # "jogo" de cama não é brinquedo
+    assert sazonal.peso("Fralda Descartável M 80 un", natal, "fralda") == 1.0
+    assert sazonal.peso("Mochila Escolar Infantil", janeiro) == 1.35 and sazonal.peso("Mochila Escolar Infantil", natal) == 1.0
+    assert sazonal.peso("Piscina Inflável 1000 Litros", janeiro) == 1.2
+    assert sazonal.peso("Boneca", None) == 1.0
+    assert "mochila infantil" in sazonal.termos_shopee(janeiro) and sazonal.termos_shopee(date(2027, 4, 20)) == []
+    o = Oferta(id="MLB1", titulo="Mochila Escolar Infantil", preco=70, preco_de=100, desconto=0.3,
+               abaixo_do_habitual=None, menor_preco_historico=False, link="x", imagem=None, categoria="escola")
+    assert pontuacao(o, None, datetime(2027, 1, 10, 9, tzinfo=FUSO)) == pytest.approx(pontuacao(o) * 1.35)
+    assert pontuacao(o, None, AGORA) == pontuacao(o)
+
+
+def test_shopee_busca_termo_da_epoca():
+    from bot import shopee_ofertas as so
+
+    class Shp:
+        def __init__(self): self.termos = []
+        def buscar(self, termo, **k):
+            self.termos.append(termo)
+            return []
+
+    e, shp = est.novo(), Shp()
+    so.buscar_candidatos(shp, e, datetime(2027, 1, 10, 9, tzinfo=FUSO), log=lambda m: None)
+    so.buscar_candidatos(shp, e, datetime(2027, 1, 10, 9, 20, tzinfo=FUSO), log=lambda m: None)
+    da_epoca = [t for t in shp.termos if t in ("mochila infantil", "lancheira infantil")]
+    assert da_epoca == ["mochila infantil", "lancheira infantil"]      # uma por rodada, em rodízio
+
+
+def test_historico_sem_vai_e_vem():
+    """Produto que alterna entre dois preços no ML: cada preço fica uma vez por dia e vale o menor do dia."""
+    from bot.ofertas import selo_menor_preco
+    e = est.novo()
+    for dias in range(20, 0, -1):
+        for preco in (323.48, 309.0, 323.48, 309.0, 323.48):
+            est.registrar_preco(e, "MLB1", preco, AGORA - timedelta(days=dias))
+    hist = e["precos"]["MLB1"]["historico"]
+    assert len(hist) == 40 and hist[-1][1] == 323.48                 # 2 por dia; o último é o preço em vigor
+    assert est.preco_tipico(e, "MLB1", AGORA) == (309.0, 20)         # o "normal" é o preço baixo de todo dia
+    assert selo_menor_preco(e, "MLB1", 309.0, AGORA) is None         # aparece todo dia: não é menor preço "novo"
+    assert selo_menor_preco(e, "MLB1", 289.0, AGORA) == 20           # queda de verdade ganha o selo
+    assert avaliar(prod(), info(309.0), e, AGORA) is None            # e não vira "baixou" só por alternar
+    o = avaliar(prod(), info(270.0), e, AGORA)
+    assert o and o.preco_normal == 309.0
+    # Dados antigos (gravados antes desta regra) são enxugados ao carregar
+    e2 = {"precos": {"MLB2": {"min": 10, "historico": [["2026-11-01", 10], ["2026-11-01", 12], ["2026-11-01", 10],
+                                                       ["2026-11-01", 12], ["2026-11-02", 12], ["2026-11-02", 10]]}}}
+    est.compactar_precos(e2)
+    assert e2["precos"]["MLB2"]["historico"] == [["2026-11-01", 10], ["2026-11-01", 12], ["2026-11-02", 12], ["2026-11-02", 10]]
+    serie = est.serie_diaria(e2, "MLB2", datetime(2026, 11, 4, 9, tzinfo=FUSO))
+    assert [p for _, p in serie] == [10, 10, 10]                      # dia 3 sem registro repete o preço em vigor
+
+
+def test_selo_do_site_usa_a_mesma_regra():
+    from bot import vitrine
+    e = est.novo()
+    est.registrar_preco(e, "MLB1", 100.0, AGORA - timedelta(days=9))
+    assert vitrine.selo(e, {"id": "MLB1", "preco": 97.0}, AGORA) == (None, None)   # 9 dias: ainda sem "menor preço"
+    assert vitrine.selo(e, {"id": "MLB1", "preco": 85.0}, AGORA) == ("baixou", 100.0)
+    e2 = est.novo()
+    est.registrar_preco(e2, "MLB1", 100.0, AGORA - timedelta(days=20))
+    assert vitrine.selo(e2, {"id": "MLB1", "preco": 95.0}, AGORA) == ("menor", 20)
+    assert vitrine._selo_txt({"selo": "menor30", "selo_dias": 20}) == "Menor preço em 20 dias"
+
+
+def test_tabela_de_fraldas(monkeypatch, tmp_path):
+    from bot import resumos
+    assert resumos.tamanho_fralda("Fralda Pampers Confort Sec Tamanho G, 92 Un") == "G"
+    assert resumos.tamanho_fralda("Huggies Fralda Descartável Máxima Proteção XG - 16 Un") == "XG"
+    assert resumos.tamanho_fralda("Fralda Descartável Turma da Mônica Baby Recém-Nascido RN Pacote 36 Unidades") == "RN"
+    assert resumos.tamanho_fralda("Fralda Protect & Sec 90 Unidades Tamanho Médio Personal Baby") == "M"
+    assert resumos.tamanho_fralda("Fralda Infantil Tamanhos P M G 50 Unidades") is None      # mais de um tamanho
+    assert resumos.tamanho_fralda("Fralda P/ Bebê 30 Unidades") is None                      # "P/" é "para"
+    assert resumos.item_fralda("MLB1", "ml", "Trocador de Fralda Portátil M", 30, "https://meli.la/a") is None
+    produtos = [prod("MLB1"), prod("MLB2"), prod("MLB3"), prod("MLB4"), prod("MLB5")]
+    produtos[4].link_afiliado = "https://www.mercadolivre.com.br/p/MLB5?matt_word=x"       # sem link oficial
+    infos = {
+        "MLB1": InfoProduto("MLB1", "Fralda Marca A Tamanho M 80 Unidades", 64.0, None, None, True),
+        "MLB2": InfoProduto("MLB2", "Fralda Marca B M 50 Unidades", 35.0, None, None, True),
+        "MLB3": InfoProduto("MLB3", "Fralda Marca A Tamanho G 60 Unidades", 60.0, None, None, True),
+        "MLB4": InfoProduto("MLB4", "Fralda Marca C RN 36 Unidades", 18.0, None, None, True),
+        "MLB5": InfoProduto("MLB5", "Fralda Marca D Tamanho G 100 Unidades", 50.0, None, None, True),
+    }
+    e = est.novo()
+    resumos.guardar_fraldas_ml(e, produtos, infos, AGORA, lambda link: "matt_word=" not in link)
+    assert {i["id"] for i in e["fraldas_ml"]["itens"]} == {"MLB1", "MLB2", "MLB3", "MLB4"}
+
+    class Shp:
+        def buscar(self, termo, **k):
+            return [_produto_shopee(id="SHP1", titulo="Fralda Marca E Tamanho G 100 Unidades", preco=70.0, preco_max=0),
+                    _produto_shopee(id="SHP2", titulo="Fralda Marca F Tamanho M 100 Unidades", preco=20.0, nota=4.0),
+                    _produto_shopee(id="SHP3", titulo="Fralda Marca G Tamanho P 40 Unidades", preco=20.0, preco_max=45.0)]
+
+    links = lambda shp, p, log: ("https://s.shopee.com.br/tg", "https://s.shopee.com.br/wa")  # noqa: E731
+    escolhidas = resumos.tabela_fraldas(e, AGORA, Shp(), lambda m: None, links)
+    assert [(i["tam"], i["id"]) for i in escolhidas] == [("RN", "MLB4"), ("M", "MLB2"), ("G", "SHP1")]
+    texto = resumos.montar_fraldas(escolhidas, AGORA, "whatsapp", {"M": 0.80, "G": 0.70})
+    assert "*M* · *R$ 0,70* por fralda ⬇️ ontem era R$ 0,80" in texto and "*G* · *R$ 0,70* por fralda\n" in texto
+    assert "https://s.shopee.com.br/wa" in texto and "na Shopee" in texto and "#publi" in texto
+    # Só sai ligado, uma vez por dia, a partir das 10h
+    tg, cfg = TGCmd(), cfg_cmd()
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    monkeypatch.setenv("SHOPEE_ATIVO", "1")
+    assert not resumos.talvez_fraldas(tg, cfg, e, AGORA, Shp(), lambda m: None, links) and not tg.textos   # desligado
+    monkeypatch.setenv("FRALDAS_ATIVO", "1")
+    assert not resumos.talvez_fraldas(tg, cfg, e, AGORA.replace(hour=9), Shp(), lambda m: None, links)
+    assert resumos.talvez_fraldas(tg, cfg, e, AGORA, Shp(), lambda m: None, links)
+    assert tg.textos[0][0] == "@canal" and "s.shopee.com.br/tg" in tg.textos[0][1] and len(list(tmp_path.glob("*.json"))) == 1
+    assert not resumos.talvez_fraldas(tg, cfg, e, AGORA, Shp(), lambda m: None, links)                     # já saiu hoje
+    assert e["fraldas_tabela"]["valores"]["RN"] == 0.5
+
+
+def test_top_5_do_dia(monkeypatch, tmp_path):
+    from types import SimpleNamespace as N
+    from bot import resumos
+    e = est.novo()
+    agora = AGORA.replace(hour=21, minute=4)
+    nomes = ["Fralda Descartável M", "Banheira Dobrável", "Mochila Escolar", "Boneca de Pano", "Tapete de Atividades",
+             "Cadeira de Alimentação"]
+    for k, (nome, de) in enumerate(zip(nomes, [100, 90, 80, 75, 72, 71])):
+        o = N(id=f"MLB{k}", titulo=nome, preco=70.0, preco_de=float(de), link=f"https://meli.la/{k}", imagem=None,
+              categoria="higiene", selo_dias=20 if k == 5 else None)
+        resumos.registrar(e, o, agora, "ml", "catalogo")
+    shp_o = N(id="SHP9", titulo="Livro Infantil Colorir", preco=20.0, preco_de=None, link="https://s.shopee.com.br/tg",
+              link_wa="https://s.shopee.com.br/wa", imagem=None, categoria="livro", vendas=9000, nota=4.9, a_partir=True)
+    resumos.registrar(e, shp_o, agora, "shopee")
+    resumos.registrar(e, shp_o, agora, "shopee")                       # o mesmo produto não entra duas vezes
+    assert len(e["posts_dia"]["itens"]) == 7
+    top = resumos.escolher_top(e["posts_dia"]["itens"])
+    # 3 do ML + a da Shopee; como sobrou vaga, completa com mais uma do ML (a do selo vem antes)
+    assert [i["id"] for i in top] == ["MLB0", "MLB1", "MLB2", "MLB5", "SHP9"]
+    assert [i["id"] for i in resumos.escolher_top(e["posts_dia"]["itens"], n=4)] == ["MLB0", "MLB1", "MLB2", "SHP9"]
+    # Confere o preço na hora: quem subiu ou acabou sai; quem baixou entra com o preço novo
+    precos = {"MLB0": 75.0, "MLB1": 65.0, "MLB2": None, "MLB3": 70.0, "MLB4": 70.0, "MLB5": 70.0, "SHP9": 20.0}
+    top = resumos.escolher_top(e["posts_dia"]["itens"], conferir=lambda i: precos[i["id"]], log=lambda m: None)
+    assert [i["id"] for i in top] == ["MLB1", "MLB5", "MLB3", "MLB4", "SHP9"] and top[0]["preco"] == 65.0
+    texto = resumos.montar_top(top, agora, "whatsapp")
+    assert texto.startswith("*🪇 As 5 melhores ofertas de hoje no Chocalho*") and "1️⃣" in texto and "5️⃣" in texto
+    assert "De ~R$ 90,00~ por *R$ 65,00* (-28%) · Mercado Livre" in texto and "A partir de *R$ 20,00* · Shopee" in texto
+    assert "📉 Menor preço que o Chocalho viu em 20 dias" in texto and "https://s.shopee.com.br/wa" in texto
+    assert "Preços conferidos às 21h04" in texto and "Ver oferta na Shopee" in resumos.montar_top(top, agora, "telegram")
+    # Postagem: só ligado, às 21h, uma vez
+    ml = MLFalso({f"MLB{k}": InfoProduto(f"MLB{k}", nomes[k], 70.0, None, None, True) for k in range(6)})
+
+    class Shp:
+        def item(self, item_id):
+            return _produto_shopee(id=f"SHP{item_id}", preco=20.0)
+
+    tg, cfg = TGCmd(), cfg_cmd()
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    assert not resumos.talvez_top(tg, cfg, e, agora, ml, Shp(), lambda m: None)
+    monkeypatch.setenv("TOP5_ATIVO", "1")
+    assert not resumos.talvez_top(tg, cfg, e, agora.replace(hour=20), ml, Shp(), lambda m: None)
+    assert resumos.talvez_top(tg, cfg, e, agora, ml, Shp(), lambda m: None)
+    assert tg.textos[0][0] == "@canal" and "As 5 melhores" in tg.textos[0][1] and len(list(tmp_path.glob("*.json"))) == 1
+    assert not resumos.talvez_top(tg, cfg, e, agora, ml, Shp(), lambda m: None)
+    # No dia seguinte a lista começa do zero
+    resumos.registrar(e, shp_o, agora + timedelta(days=1), "shopee")
+    assert len(e["posts_dia"]["itens"]) == 1
+
+
+def test_rodada_guarda_post_do_dia_e_fraldas():
+    produtos, ml = cenario()
+    e = est.novo()
+    rodar("normal", Config(canal="@canal", max_por_rodada=1), ml, TGFalso(), e, produtos, agora=AGORA)
+    assert [i["id"] for i in e["posts_dia"]["itens"]] == ["MLB2"] and e["posts_dia"]["itens"][0]["tipo"] == "item"
+    assert e["fraldas_ml"]["itens"] == []
+
+
+def test_grafico_de_preco(monkeypatch):
+    from types import SimpleNamespace as N
+    from bot import grafico
+    e = est.novo()
+    for dias, preco in [(25, 89.9), (18, 94.9), (10, 89.9)]:
+        est.registrar_preco(e, "MLB1", preco, AGORA - timedelta(days=dias))
+    serie = grafico.serie_diaria(e, "MLB1", AGORA)
+    assert len(serie) == 26 and serie[0][1] == 89.9 and serie[8][1] == 94.9 and serie[-1][1] == 89.9
+    o = N(id="MLB1", titulo="Fralda Marca A Tamanho G 92 Un", preco=64.9, imagem="https://img/x.jpg", selo_dias=25, loja="ml")
+    png = grafico.da_oferta(o, e, AGORA)
+    assert png[:8] == b"\x89PNG\r\n\x1a\n"
+    assert grafico.gerar(o.titulo, serie, "shopee", formato="4x5")[:4] == b"\x89PNG"
+    assert grafico.da_oferta(N(id="MLB9", titulo="x", preco=10, imagem=None), e, AGORA) is None        # sem histórico
+    e9 = est.novo()
+    est.registrar_preco(e9, "MLB1", 100.0, AGORA - timedelta(days=5))
+    assert grafico.da_oferta(o, e9, AGORA) is None                                                     # menos de 14 dias
+
+    class Tg:
+        def __init__(self): self.chamadas = []
+        def enviar_oferta(self, chat, legenda, imagem=None): self.chamadas.append("normal")
+        def enviar_oferta_com_grafico(self, chat, legenda, imagem, png): self.chamadas.append("album")
+
+    tg = Tg()
+    grafico.enviar_oferta(tg, "@c", "legenda", o, e, AGORA)                 # desligado: post normal
+    monkeypatch.setenv("GRAFICO_ATIVO", "1")
+    grafico.enviar_oferta(tg, "@c", "legenda", o, e, AGORA)                 # ligado e com selo: álbum
+    o.selo_dias = None
+    grafico.enviar_oferta(tg, "@c", "legenda", o, e, AGORA)                 # sem selo: post normal
+    assert tg.chamadas == ["normal", "album", "normal"]
+
+
+def test_telegram_album_com_grafico():
+    from bot.telegram import Telegram
+
+    class S:
+        def post(self, url, data=None, files=None, json=None, timeout=None):
+            self.url, self.data, self.files = url, data, files
+            return Resp(200, {"ok": True, "result": [{"message_id": 1}, {"message_id": 2}]})
+
+    s = S()
+    Telegram("T", session=s).enviar_oferta_com_grafico("@c", "<b>oi</b>", "https://img/x.jpg", b"png")
+    midia = json.loads(s.data["media"])
+    assert s.url.endswith("sendMediaGroup") and midia[0]["media"] == "https://img/x.jpg" and midia[0]["parse_mode"] == "HTML"
+    assert midia[1]["media"] == "attach://grafico" and "grafico" in s.files

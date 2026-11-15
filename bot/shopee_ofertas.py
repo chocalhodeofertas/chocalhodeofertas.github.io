@@ -16,9 +16,9 @@ import re
 from datetime import datetime, timedelta
 
 from . import estado as est
-from . import mensagens, vitrine, whatsapp
+from . import grafico, horario, mensagens, resumos, sazonal, vitrine, whatsapp
 from .filtros import fora_da_faixa, motivo_bloqueio, normalizar
-from .ofertas import Oferta, limite_hora, meta_ate_agora, tipo_produto, tipos_do_dia, priorizar_tipos_novos
+from .ofertas import Oferta, tipo_produto, tipos_do_dia, priorizar_tipos_novos, vagas_da_rodada
 from .shopee import MAIS_VENDIDOS, Shopee, ShopeeErro
 from .telegram import TelegramErro
 
@@ -117,6 +117,8 @@ def pontos(p, estado=None, agora=None):
         if tipico and dias >= DIAS_HIST_MIN:
             queda = 1 - p.preco / tipico
             base *= 1.3 if queda >= 0.10 else 1.0
+    if agora is not None:
+        base *= sazonal.peso(p.titulo, agora, categoria_do_titulo(p.titulo))  # produto da época sobe um pouco
     return base
 
 
@@ -211,6 +213,12 @@ def buscar_candidatos(shp, estado, agora, repost_dias=3, log=print, termos=None)
         i = s["termo"] % len(TERMOS)
         termos = (TERMOS + TERMOS)[i:i + TERMOS_POR_RODADA]
         s["termo"] = (i + TERMOS_POR_RODADA) % len(TERMOS)
+        da_epoca = sazonal.termos_shopee(agora)  # uma palavra-chave da época por rodada, em rodízio
+        if da_epoca:
+            k = s.get("termo_epoca", 0) % len(da_epoca)
+            if da_epoca[k] not in termos:
+                termos = termos + [da_epoca[k]]
+            s["termo_epoca"] = (k + 1) % len(da_epoca)
     achados = {}
     for termo in termos:
         try:
@@ -290,7 +298,7 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
     """Posta ofertas da Shopee no canal (limite próprio) e manda para a fila do WhatsApp."""
     if os.environ.get("SHOPEE_ATIVO") != "1":
         return []
-    if not (cfg.hora_inicio <= agora.hour < cfg.hora_fim):
+    if not horario.ativo(agora, cfg.hora_inicio, cfg.hora_fim):
         return []
     try:
         shp = shp or Shopee(os.environ.get("SHOPEE_APP_ID"), os.environ.get("SHOPEE_SECRET"))
@@ -302,9 +310,8 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
     max_rodada = int(os.environ.get("SHOPEE_MAX_RODADA") or 2)
     s = _estado(estado)
     s["hora"] = [q for q in s["hora"] if (agora - datetime.fromisoformat(q)).total_seconds() < 3600]
-    vagas = max(0, min(max_rodada, limite_hora(max_hora, agora.hour) - posts_ultima_hora(estado, agora),
-                       min(max_dia, meta_ate_agora(max_dia, agora.hour, cfg.hora_inicio, cfg.hora_fim))
-                       - posts_hoje(estado, agora)))
+    vagas = vagas_da_rodada(agora, max_rodada, max_hora, max_dia, posts_ultima_hora(estado, agora),
+                            posts_hoje(estado, agora), cfg.hora_inicio, cfg.hora_fim)
     candidatos = buscar_candidatos(shp, estado, agora, cfg.repost_dias, log)
     try:
         corte = agora - timedelta(days=cfg.repost_dias)
@@ -339,11 +346,12 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
         link_tg, link_wa = links(shp, p, log)
         o = para_oferta(p, estado, agora, link_tg, link_wa)
         try:
-            tg.enviar_oferta(cfg.canal, mensagens.montar_telegram(o, rng), o.imagem)
+            grafico.enviar_oferta(tg, cfg.canal, mensagens.montar_telegram(o, rng), o, estado, agora, log)
         except TelegramErro as e:
             log(f"Erro ao postar {o.id} (Shopee) no canal: {e}")
             continue
         whatsapp.enfileirar_oferta(o, mensagens.montar_whatsapp(o, rng), agora, loja="shopee")
+        resumos.registrar(estado, o, agora, "shopee")
         try:
             vitrine.guardar_shopee(estado, o, link_site(shp, p, log) or link_tg, agora)
         except Exception as e:  # noqa: BLE001 — a página nunca atrapalha os posts

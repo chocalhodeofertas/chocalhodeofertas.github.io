@@ -19,7 +19,16 @@ Textos para o dono do projeto sempre em português do Brasil.
 ## Módulos principais (bot/)
 - `main.py`: rodada do ML (descoberta, avaliação, ritmo, postagem); chama Shopee, cupons, vitrine e números.
 - `ofertas.py`: `Oferta`, `avaliar`, `pontuacao`, `tipo_produto`, ritmo (`limite_hora`, `meta_ate_agora`).
-- Histórico de preços (`estado.precos`, só quando o preço muda): `estado.preco_tipico` = mediana dia a dia dos últimos 30 dias.
+- `horario.py`: horário de postagem (`ativo`) + janela da meia-noite (`DATAS_MEIA_NOITE`, padrão Black Friday 27/11 e 12.12):
+  das 23h30 da véspera à 1h o ciclo, o ML, a Shopee e o WhatsApp (`wa/comum.mjs: naMeiaNoite`) também postam;
+  na janela vale só o limite por hora (`ofertas.vagas_da_rodada`), fora da conta do dia (WhatsApp: até 6 extras).
+- `sazonal.py`: calendário do ano (Natal, volta às aulas, verão, Carnaval, Páscoa, inverno, festa junina, Dia das Crianças,
+  Halloween). Produto da época ganha peso em `ofertas.pontuacao(..., agora)` e em `shopee_ofertas.pontos`; a busca da Shopee
+  ganha 1 palavra-chave da época por rodada. Não muda o que é oferta, só a ordem.
+- Histórico de preços (`estado.precos`): no mesmo dia cada preço fica uma vez só (último registro = preço em vigor;
+  `estado.compactar_precos` enxuga dados antigos ao carregar). `estado.serie_diaria` = MENOR preço de cada dia (no ML ~8% dos
+  produtos alternam entre dois preços a cada consulta; o menor do dia é o que estava disponível).
+  `estado.preco_tipico` = mediana dessa série nos últimos 30 dias (hoje fica de fora).
   Com 7+ dias de histórico, `ofertas.peso_queda_real` dá +30% na pontuação para queda real ≥ 10% e -40% para desconto "de fachada" (< 3%).
   Quem sai dos mais vendidos do ML vai para `estado.acompanhados` (30 dias, 1/3 por rodada); na Shopee, produtos aprovados vão para
   `shopee.acompanhados` e 15 por rodada são reconferidos por `itemId` (queda real ≥ 10% vira candidato).
@@ -27,7 +36,9 @@ Textos para o dono do projeto sempre em português do Brasil.
   da categoria; ≥ 10% se veio do espelho; ≥ 10% + cupom do canal que leve o total a 20%; ou queda real ≥ 10% sobre o preço típico
   (7+ dias de histórico), mesmo sem "de" no anúncio (o post mostra "📉 Baixou: vinha custando R$ X no histórico do Chocalho").
 - Selo no post (`ofertas.selo_menor_preco`, ML e Shopee): "📉 Menor preço que o Chocalho viu em N dias" com 14+ dias de histórico,
-  preço atual = mínimo da janela (até 30 dias) e preço já 3% mais alto na janela. Decisão do Leonardo apesar da cláusula 5.4 do ML.
+  preço atual = mínimo da janela (até 30 dias, contando hoje mais cedo), preço já 3% mais alto na janela e esse nível de preço
+  visto em no máximo 3 dias (quem alterna entre dois preços não ganha selo). O site (`vitrine.selo`) usa a mesma função e
+  mostra "Menor preço em N dias". Decisão do Leonardo apesar da cláusula 5.4 do ML.
 - Repetição: `REPOST_DIAS` (padrão 7 no workflow): mesmo produto e títulos parecidos (ML + Shopee) não voltam antes disso; volta antes só se o preço cair 5%.
   Tipo do dia (`ofertas.tipos_do_dia`) soma ML e Shopee; sem tipo conhecido, usa a primeira palavra que diz o que é o produto.
   `ofertas.priorizar_tipos_novos`: tipo que saiu nas últimas 48 h vai para o fim da fila (só entra se faltar alternativa).
@@ -47,6 +58,14 @@ Textos para o dono do projeto sempre em português do Brasil.
   Links via `generateShortLink` com subId `telegram` / `whatsapp`.
 - `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/`; o serviço (Baileys) posta com aquecimento automático
   (4 → 10 → 14 → 20 posts/dia nos dias 0, 4, 8 e 14 desde a conexão), só das 7h às 23h, alterna ML/Shopee, pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
+- `resumos.py`: posts de resumo (fora do limite e da regra de repetição), chamados por `resumos.rodar` no fim da rodada:
+  tabela de fraldas (`FRALDAS_ATIVO`, 10h): menor preço por fralda em cada tamanho, ML (`estado.fraldas_ml`, guardado a cada
+  rodada, só com link oficial) + Shopee (busca na hora, preço único); mostra "ontem era R$ X" quando baixou 2%+.
+  As 5 melhores do dia (`TOP5_ATIVO`, 21h): ofertas de `estado.posts_dia` (gravado por `resumos.registrar` a cada post),
+  até 3 por loja e 1 por tipo, com o preço conferido de novo (subiu ou acabou → sai).
+- `grafico.py`: gráfico de preço em Pillow (1080x1080; `formato="4x5"` para carrossel) pela `estado.serie_diaria`.
+  `grafico.enviar_oferta` posta a oferta; com selo e `GRAFICO_ATIVO=1`, manda álbum (foto + gráfico) no Telegram.
+  Os três formatos ficam em 0 no ciclo.yml até o Leonardo aprovar a prévia (`tools/previa_resumos`).
 - `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas, cupons, WhatsApp).
 - `comandos.py`: comandos do admin no Telegram e resumo diário (inclui WhatsApp). `bloquear/desbloquear/bloqueados` (palavras em
   `estado.bloqueados`, aplicadas por `filtros.definir_bloqueios` no início de cada rodada); `fila`, `tirar N`, `limpar fila` (fila do WhatsApp);
@@ -69,6 +88,7 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `produto_shopee <itemId>`: dados e foto de um produto da Shopee (foto vai para `saida/`).
 - `testar_instagram` / `coletar_instagram`: confere o token / roda a coleta uma vez em `saida/instagram`.
 - `publicar_carrossel <pasta>`: publica `docs/ig-tmp/<pasta>/` no Instagram (só com aprovação do Leonardo).
+- `previa_resumos "fraldas top5 grafico"`: manda só para o admin a prévia da tabela de fraldas, das 5 melhores do dia e do gráfico.
 - `sondar_shopee`: mostra categorias (productCatIds) e tipos de lista que a API da Shopee devolve (só leitura).
 - `achar_canais_tg "termo; termo"`: procura canais públicos de ofertas de bebê no Telegram e mede links/posts infantis (saida/canais_tg.md).
 - `baixar nome=url ...`: baixa arquivos para `saida/` (o container não alcança mlstatic/Shopee/Canva).

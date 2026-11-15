@@ -97,27 +97,33 @@ def marcar_queda_real(oferta, estado, agora):
 # Selo "menor preço que o Chocalho viu em N dias": só com histórico suficiente para a frase ser verdadeira
 SELO_DIAS_MIN = 14
 SELO_JANELA = 30
+SELO_DIAS_NO_NIVEL = 3  # se o preço já esteve neste nível em mais dias que isso, não é novidade
 
 
-def selo_menor_preco(estado, pid, preco, agora):
+def selo_menor_preco(estado, pid, preco, agora, dias_min=SELO_DIAS_MIN):
     """Dias (14 a 30) em que este é o menor preço registrado pelo bot, ou None.
 
-    Exige 14+ dias acompanhando o produto e que, nesse período, o preço já tenha estado pelo
-    menos 3% mais alto (preço parado no mesmo valor não ganha selo)."""
-    from datetime import date, timedelta
+    Exige: 14+ dias acompanhando o produto; nenhum dia da janela (nem hoje mais cedo) com preço menor;
+    pelo menos um dia com o preço 3% mais alto (preço parado no mesmo valor não ganha selo); e o preço
+    de agora visto em no máximo 3 dias da janela. Essa última regra tira o selo de quem vive alternando
+    entre dois preços no Mercado Livre: o "menor preço" dele aparece todo dia, não é queda."""
+    from datetime import date
+
+    from .estado import serie_diaria
 
     hist = (estado.get("precos", {}).get(pid) or {}).get("historico") or []
     if not hist or not preco:
         return None
     hoje = agora.date()
     dias_obs = (hoje - date.fromisoformat(hist[0][0])).days
-    if dias_obs < SELO_DIAS_MIN:
+    if dias_obs < dias_min:
         return None
     janela = min(SELO_JANELA, dias_obs)
-    corte = (hoje - timedelta(days=janela)).isoformat()
-    antes = [p for d, p in hist if d < corte]
-    precos = ([antes[-1]] if antes else []) + [p for d, p in hist if d >= corte]  # inclui o preço em vigor no corte
-    if not precos or preco > min(precos) + 0.009 or max(precos) < preco * 1.03:
+    antes = [p for _, p in serie_diaria(estado, pid, agora, janela)]
+    hoje_cedo = [p for d, p in hist if d == hoje.isoformat()]
+    if not antes or preco > min(antes + hoje_cedo) + 0.009 or max(antes) < preco * 1.03:
+        return None
+    if sum(1 for p in antes if p <= preco * 1.03) > SELO_DIAS_NO_NIVEL:
         return None
     return janela
 
@@ -247,8 +253,9 @@ def essencial(titulo):
     return bool(_ESSENCIAIS.search(normalizar(titulo)))
 
 
-def pontuacao(oferta, posicao=None):
-    """Desconto x popularidade (posição nos mais vendidos) x item essencial. Comissão não conta."""
+def pontuacao(oferta, posicao=None, agora=None):
+    """Desconto x popularidade (posição nos mais vendidos) x item essencial x época do ano. Comissão não conta.
+    Com 'agora', produto da época (Natal, volta às aulas, verão...) sobe um pouco: ver bot/sazonal.py."""
     pop = 0.0
     if posicao is not None:
         pop = 0.6 if posicao < 3 else 0.35 if posicao < 8 else 0.15 if posicao < 15 else 0.0
@@ -257,6 +264,9 @@ def pontuacao(oferta, posicao=None):
         peso *= 0.85  # brinquedo é o que mais aparece; equilibra com o resto
     elif oferta.categoria == "game" and re.search(r"ps5|ps4|playstation|xbox", (oferta.titulo or "").lower()):
         peso *= 0.7  # console mais comprado por adultos: entra, mas com menos prioridade
+    if agora is not None:
+        from . import sazonal
+        peso *= sazonal.peso(oferta.titulo, agora, oferta.categoria)
     return oferta.forca * (1 + pop) * peso * peso_queda_real(oferta)
 
 
@@ -271,6 +281,18 @@ def meta_ate_agora(max_por_dia, hora, inicio=8, fim=22):
 def limite_hora(max_por_hora, hora):
     """No pico, até 2 posts a mais por hora."""
     return max_por_hora + (2 if hora in PESO_HORA else 0)
+
+
+def vagas_da_rodada(agora, max_rodada, max_hora, max_dia, feitos_hora, feitos_hoje, inicio=8, fim=22):
+    """Quantos posts cabem nesta rodada pelo ritmo do dia.
+    Na janela da meia-noite (Black Friday, 12.12) vale só o limite por hora, com o reforço de pico:
+    é um extra da data, fora da conta do dia."""
+    from . import horario
+
+    if horario.meia_noite(agora):
+        return max(0, min(max_rodada, max_hora + 2 - feitos_hora))
+    return max(0, min(max_rodada, limite_hora(max_hora, agora.hour) - feitos_hora,
+                      min(max_dia, meta_ate_agora(max_dia, agora.hour, inicio, fim)) - feitos_hoje))
 
 
 # Palavras que não ajudam a dizer se dois títulos são o mesmo produto

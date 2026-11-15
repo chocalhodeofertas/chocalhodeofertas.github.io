@@ -14,6 +14,8 @@ import time
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
+from . import horario
+
 FUSO = ZoneInfo("America/Sao_Paulo")
 INTERVALO = timedelta(minutes=20)
 RAPIDO_SEG = 120
@@ -64,12 +66,15 @@ def salvar_estado():
 
 
 def proximo_horario(agora, inicio, fim):
-    """Daqui a 20 min; se cair fora do horário de postagem, pula para o início do dia seguinte."""
+    """Daqui a 20 min; se cair fora do horário de postagem, pula para o início do dia seguinte
+    (ou para as 23h30, na véspera de uma data com janela da meia-noite)."""
     prox = agora + INTERVALO
-    if inicio <= prox.hour < fim:
+    if horario.ativo(prox, inicio, fim):
         return prox
     dia = prox.date() if prox.hour < inicio else prox.date() + timedelta(days=1)
-    return datetime(dia.year, dia.month, dia.day, inicio, 2, tzinfo=FUSO)
+    manha = datetime(dia.year, dia.month, dia.day, inicio, 2, tzinfo=FUSO)
+    virada = horario.proxima_janela(agora)
+    return min(manha, virada) if virada else manha
 
 
 def main(argv=None):
@@ -85,7 +90,7 @@ def main(argv=None):
     while True:
         agora = datetime.now(FUSO)
         inicio_rodada = agora
-        if inicio <= agora.hour < fim:
+        if horario.ativo(agora, inicio, fim):
             sincronizar_antes()
             r = subprocess.run([sys.executable, "-m", "bot.main", "--modo", "normal"])
             if r.returncode != 0:
@@ -108,7 +113,7 @@ def main(argv=None):
         while (espera := (prox - datetime.now(FUSO)).total_seconds()) > 0:
             time.sleep(min(RAPIDO_SEG, espera))
             agora = datetime.now(FUSO)
-            if inicio <= agora.hour < fim and (prox - agora).total_seconds() > 30:
+            if horario.ativo(agora, inicio, fim) and (prox - agora).total_seconds() > 30:
                 sincronizar_antes()
                 subprocess.run([sys.executable, "-m", "bot.main", "--modo", "rapido"])
                 salvar_estado()

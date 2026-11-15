@@ -89,3 +89,18 @@ export function codigoConvite(link) {
 }
 
 export const dormir = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Janela da meia-noite: nas datas especiais (Black Friday, 12.12) o grupo também recebe ofertas
+// das 23h30 da véspera à 1h do dia. Mesmas datas do bot (bot/horario.py).
+const DATAS_MEIA_NOITE = (process.env.DATAS_MEIA_NOITE ?? "2026-11-27,2026-12-12").split(/[,;]/).map((d) => d.trim())
+  .filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d));
+export function naMeiaNoite(agora = new Date(), datas = DATAS_MEIA_NOITE) {
+  const f = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo", year: "numeric", month: "2-digit",
+    day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(agora);
+  const p = Object.fromEntries(f.map((x) => [x.type, x.value]));
+  const dia = `${p.year}-${p.month}-${p.day}`;
+  const hora = Number(p.hour), minuto = Number(p.minute);
+  if (datas.includes(dia) && hora < 1) return true;
+  const amanha = new Date(Date.UTC(Number(p.year), Number(p.month) - 1, Number(p.day) + 1)).toISOString().slice(0, 10);
+  return datas.includes(amanha) && (hora > 23 || (hora === 23 && minuto >= 30));
+}

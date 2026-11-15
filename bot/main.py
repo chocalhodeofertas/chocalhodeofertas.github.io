@@ -19,13 +19,13 @@ from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
-from . import afiliado, cofre, comandos, cupom_oferta, cupons_ml, espelho, lote, vitrine, whatsapp
+from . import afiliado, cofre, comandos, cupom_oferta, cupons_ml, espelho, grafico, horario, lote, resumos, vitrine, whatsapp
 from . import estado as est
 from . import mensagens
 from .descoberta import descobrir, descobrir_areas
 from .filtros import definir_bloqueios, fora_da_faixa, motivo_bloqueio
 from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, link_produto, renovar_token, token_do_app
-from .ofertas import avaliar, limite_hora, meta_ate_agora, pontuacao, tipo_produto, tipos_do_dia, priorizar_tipos_novos
+from .ofertas import avaliar, pontuacao, tipo_produto, tipos_do_dia, priorizar_tipos_novos, vagas_da_rodada
 from .telegram import Telegram, TelegramErro
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -366,10 +366,14 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         if oferta:
             candidatas.append(oferta)
 
+    if modo == "normal":  # fraldas com o preço que acabou de ser conferido (para a tabela do dia)
+        oficial = (lambda link: not _link_direto(link)) if cfg.link_modo == "oficial" else (lambda link: True)
+        resumos.guardar_fraldas_ml(estado, produtos, infos, agora, oficial)
+
     posicoes = {pid: d.get("pos") for pid, d in estado.get("descobertos", {}).items()}
     manuais = estado.get("manuais", {})
     # Pedidos seus (busca/vigia) passam na frente
-    candidatas.sort(key=lambda o: pontuacao(o, posicoes.get(o.id))
+    candidatas.sort(key=lambda o: pontuacao(o, posicoes.get(o.id), agora)
                     * (1.2 if espelho.eh_do_espelho(estado, o.id) else 1.0)
                     * (2.0 if (manuais.get(o.id) or {}).get("pedido") or (manuais.get(o.id) or {}).get("vigia") else 1.0),
                     reverse=True)
@@ -408,7 +412,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
             enviadas.append(o)
         return enviadas
 
-    if not (cfg.hora_inicio <= agora.hour < cfg.hora_fim):
+    if not horario.ativo(agora, cfg.hora_inicio, cfg.hora_fim):
         log(f"Fora do horário de postagem ({cfg.hora_inicio}h–{cfg.hora_fim}h). Só atualizei os preços.")
         return []
 
@@ -418,13 +422,11 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         return []
 
     # Ritmo: mais posts no almoço e à noite, sem gastar o limite do dia cedo demais
-    vagas = min(
-        cfg.max_por_rodada,
-        limite_hora(cfg.max_por_hora, agora.hour) - est.posts_ultima_hora(estado, agora),
-        min(cfg.max_por_dia, meta_ate_agora(cfg.max_por_dia, agora.hour, cfg.hora_inicio, cfg.hora_fim))
-        - est.posts_hoje(estado, agora),
-    )
-    vagas = max(vagas, 0)
+    vagas = vagas_da_rodada(agora, cfg.max_por_rodada, cfg.max_por_hora, cfg.max_por_dia,
+                            est.posts_ultima_hora(estado, agora), est.posts_hoje(estado, agora),
+                            cfg.hora_inicio, cfg.hora_fim)
+    if horario.meia_noite(agora):
+        log("Janela da meia-noite: postando fora do horário normal por causa da data.")
     enviadas = []
     if vagas and candidatas and cfg.atraso_max:
         # Atraso inicial: as rodadas começam em horário fixo, os posts não
@@ -451,13 +453,14 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
             continue  # tenta a próxima da fila, sem esperar de novo
         o.cupom = cupom_oferta.escolher_cupom(estado, o, agora, log=log)
         try:
-            tg.enviar_oferta(cfg.canal, mensagens.montar_telegram(o, rng), o.imagem)
+            grafico.enviar_oferta(tg, cfg.canal, mensagens.montar_telegram(o, rng), o, estado, agora, log)
         except TelegramErro as e:
             log(f"Erro ao postar {o.id} no canal: {e}")
             continue
         esperar_antes = True
         whatsapp.enfileirar_oferta(o, mensagens.montar_whatsapp(o, rng), agora)
         est.registrar_post(estado, o.id, o.preco, agora, o.titulo, o.desconto)
+        resumos.registrar(estado, o, agora, "ml", getattr(por_id.get(o.id), "tipo", None))
         if o.cupom:
             est.contar_dia(estado, agora, "com_cupom")
         tipos_hoje.add(tp)
@@ -480,7 +483,7 @@ def _talvez_mandar_lote(cfg, tg, estado, sem_link, agora):
 
     O próximo lote sai assim que você responde o anterior, até LOTES_POR_DIA.
     """
-    if not cfg.admin_chat or not (cfg.hora_inicio <= agora.hour < cfg.hora_fim):
+    if not cfg.admin_chat or not horario.ativo(agora, cfg.hora_inicio, cfg.hora_fim):
         return
     hoje = agora.date().isoformat()
     pendente = estado.get("lote") or {}
@@ -623,7 +626,7 @@ def diagnostico(cfg: Config, produtos, avisos):
 def tarefas_rapidas(cfg, ml, tg, estado):
     """Suas mensagens, o canal de cupons e a validade dos cupons."""
     agora = datetime.now(FUSO)
-    if not (cfg.hora_inicio <= agora.hour < cfg.hora_fim):
+    if not horario.ativo(agora, cfg.hora_inicio, cfg.hora_fim):
         return
     if cfg.admin_chat:
         comandos.processar(tg, ml, estado, cfg, agora, log)
@@ -686,7 +689,11 @@ def main(argv=None):
                                      esperar=lambda s: _esperar(s, tarefa))
             except Exception as e:  # a Shopee nunca derruba o ciclo do Mercado Livre
                 log(f"Aviso: Shopee falhou nesta rodada: {type(e).__name__}: {e}")
-            if cfg.hora_inicio <= agora.hour < cfg.hora_fim:
+            try:  # tabela de fraldas (manhã) e as 5 melhores do dia (21h), quando ligados
+                resumos.rodar(tg, cfg, estado, datetime.now(FUSO), ml, log)
+            except Exception as e:  # noqa: BLE001 — os resumos nunca derrubam a rodada
+                log(f"Aviso: resumo do dia falhou: {type(e).__name__}: {e}")
+            if horario.ativo(agora, cfg.hora_inicio, cfg.hora_fim):
                 cupons_ml.processar(tg, cfg, estado, agora, log)
             comandos.verificar_cupons(tg, cfg, estado, agora, log)
             comandos.talvez_resumo_diario(tg, estado, cfg, agora, log)

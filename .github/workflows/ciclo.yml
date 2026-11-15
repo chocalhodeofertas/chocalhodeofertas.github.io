@@ -85,6 +85,14 @@ jobs:
           SHOPEE_ATIVO: ${{ vars.SHOPEE_ATIVO || '1' }}
           SHOPEE_MAX_DIA: ${{ vars.SHOPEE_MAX_DIA || '50' }}
           SHOPEE_MAX_HORA: ${{ vars.SHOPEE_MAX_HORA || '4' }}
+          # Datas com postagem também na virada (23h30 da véspera à 1h): Black Friday e 12.12
+          DATAS_MEIA_NOITE: ${{ vars.DATAS_MEIA_NOITE || '2026-11-27,2026-12-12' }}
+          # Formatos novos: ficam em 0 até o Leonardo aprovar a prévia de cada um
+          FRALDAS_ATIVO: ${{ vars.FRALDAS_ATIVO || '0' }}
+          FRALDAS_HORA: ${{ vars.FRALDAS_HORA || '10' }}
+          TOP5_ATIVO: ${{ vars.TOP5_ATIVO || '0' }}
+          TOP5_HORA: ${{ vars.TOP5_HORA || '21' }}
+          GRAFICO_ATIVO: ${{ vars.GRAFICO_ATIVO || '0' }}
           TG_API_ID: ${{ secrets.TG_API_ID }}
           TG_API_HASH: ${{ secrets.TG_API_HASH }}
           TG_CANAL_CUPONS: ${{ secrets.TG_CANAL_CUPONS }}
