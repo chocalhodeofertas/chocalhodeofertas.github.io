@@ -35,7 +35,9 @@ AJUDA = (
     "(com a data, eu marco como encerrado sozinho quando vencer)\n\n"
     "❌ <b>esgotou</b> + código → aviso no canal que o cupom acabou\n"
     "✅ <b>geral</b> + código → cupom sem categoria que você testou passa a entrar nas ofertas · <b>restrito</b> + código desfaz\n\n"
-    "📊 <b>resumo</b> → números do canal agora\n\n"
+    "📊 <b>resumo</b> → números do canal agora\n"
+    "🚫 <b>bloquear</b> + palavra → o bot para de postar produtos com ela · <b>desbloquear</b> + palavra · <b>bloqueados</b>\n"
+    "📬 <b>fila</b> → o que vai sair no WhatsApp · <b>tirar 2</b> → cancela o item 2 · <b>limpar fila</b>\n\n"
     "🔎 <b>buscar</b> + produto → melhores ofertas agora · <b>pegar 1 3</b> → manda para o Linkbuilder\n"
     "👀 <b>vigiar</b> + produto → aviso quando entrar em promoção · <b>vigias</b> · <b>parar</b> + produto\n"
     "🗂️ <b>categorias</b> → prévia das categorias novas (roupas, games, livros...) · <b>aprovar categorias</b>\n"
@@ -436,6 +438,190 @@ def _registrar_membro(estado, cm, agora):
     estado["membros_dia"] = {hoje: dia}
 
 
+# ---------- palavras bloqueadas ----------
+
+def _titulos_recentes(estado):
+    fontes = list(estado.get("postados", {}).values()) + list(estado.get("shopee", {}).get("titulos", {}).values())
+    return [v["titulo"] for v in fontes if v.get("titulo")]
+
+
+def bloquear(palavra, estado):
+    from . import filtros
+    palavra = " ".join((palavra or "").split()).lower()
+    if len(filtros.normalizar(palavra).strip()) < 3:
+        return "Mande <b>bloquear</b> + a palavra (pelo menos 3 letras). Ex.: <code>bloquear baby doll</code>"
+    lista = estado.setdefault("bloqueados", [])
+    if filtros.normalizar(palavra) in [filtros.normalizar(p) for p in lista]:
+        return f"🚫 <b>{html.escape(palavra)}</b> já estava bloqueada."
+    # Mostra o que essa palavra teria barrado, para você ver se não é ampla demais
+    filtros.definir_bloqueios([palavra])
+    pegos = [t for t in _titulos_recentes(estado) if (filtros.motivo_bloqueio(t) or "").startswith("bloqueado por você")]
+    lista.append(palavra)
+    filtros.definir_bloqueios(lista)
+    resp = f"🚫 Pronto: não posto mais produtos com <b>{html.escape(palavra)}</b> no título."
+    if pegos:
+        resp += f"\n\nDos posts recentes, {len(pegos)} teriam sido barrados. Ex.:\n" + "\n".join(
+            f"• {html.escape(t[:60])}" for t in pegos[:3])
+        if len(pegos) > 15:
+            resp += "\n\n⚠️ É bastante coisa. Se a palavra for ampla demais, mande <b>desbloquear " \
+                    f"{html.escape(palavra)}</b>."
+    return resp
+
+
+def desbloquear(palavra, estado):
+    from . import filtros
+    alvo = filtros.normalizar(" ".join((palavra or "").split()))
+    lista = estado.get("bloqueados") or []
+    nova = [p for p in lista if filtros.normalizar(p) != alvo]
+    if len(nova) == len(lista):
+        return "Essa palavra não está na lista. Mande <b>bloqueados</b> para ver a lista."
+    estado["bloqueados"] = nova
+    filtros.definir_bloqueios(nova)
+    return f"✅ <b>{html.escape(palavra.strip())}</b> liberada de novo."
+
+
+def listar_bloqueados(estado):
+    lista = estado.get("bloqueados") or []
+    if not lista:
+        return "Nenhuma palavra bloqueada por você. Para bloquear: <code>bloquear baby doll</code>"
+    return "🚫 <b>Palavras bloqueadas por você</b>\n" + "\n".join(f"• {html.escape(p)}" for p in lista) + \
+        "\n\nPara liberar: <b>desbloquear</b> + palavra."
+
+
+# ---------- fila do WhatsApp ----------
+
+def _itens_fila():
+    import json
+    import os
+    from pathlib import Path
+
+    pasta = os.environ.get("WA_FILA")
+    if not pasta or not Path(pasta).is_dir():
+        return []
+    itens = []
+    for arq in sorted(Path(pasta).glob("*.json")):
+        try:
+            itens.append((arq, json.loads(arq.read_text(encoding="utf-8"))))
+        except (OSError, ValueError):
+            pass
+    return itens
+
+
+def _apagar_item(arq, item):
+    from pathlib import Path
+    img = item.get("imagem")
+    if img and not str(img).startswith("http"):
+        Path(img).unlink(missing_ok=True)
+    arq.unlink(missing_ok=True)
+
+
+def _nome_do_item(item):
+    """Linha do produto dentro do texto da oferta (pula a frase de abertura e os preços)."""
+    linhas = [l.strip() for l in (item.get("texto") or "").splitlines() if l.strip()]
+    for l in linhas[1:]:
+        if "R$" not in l and "http" not in l and not l.startswith(("_", "*")):
+            return l
+    return linhas[0] if linhas else "(sem texto)"
+
+
+def ver_fila(agora, arquivo_wa=None):
+    import json
+    from pathlib import Path
+
+    arq = Path(arquivo_wa) if arquivo_wa else Path(__file__).resolve().parent.parent / "data" / "wa_estado.json"
+    try:
+        wa = json.loads(arq.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        wa = {}
+    enviados = wa.get("enviados", 0) if wa.get("dia") == agora.date().isoformat() else 0
+    limite = f" de {wa['max_dia']}" if wa.get("max_dia") else ""
+    linhas = [f"📬 <b>Fila do WhatsApp</b>", f"Hoje já saíram <b>{enviados}</b>{limite} posts no grupo."]
+    if wa.get("intervalo_min"):
+        linhas.append(f"Sai 1 a cada {wa['intervalo_min']} min, das 7h às 23h.")
+    itens = _itens_fila()
+    if not itens:
+        return "\n".join(linhas + ["", "A fila está vazia agora."])
+    linhas.append("")
+    for i, (_, item) in enumerate(itens, 1):
+        loja = "Shopee" if item.get("loja") == "shopee" else "ML"
+        linhas.append(f"{i}. [{loja}] {html.escape(_nome_do_item(item)[:60])}")
+    linhas += ["", "Para cancelar um: <b>tirar 2</b>. Para cancelar todos: <b>limpar fila</b>.",
+               "<i>Oferta parada há mais de 3 h sai da fila sozinha.</i>"]
+    return "\n".join(linhas)
+
+
+def tirar_da_fila(texto):
+    nums = sorted({int(n) for n in re.findall(r"\d+", texto)}, reverse=True)
+    itens = _itens_fila()
+    if not nums:
+        return "Mande <b>tirar</b> + o número do item. Veja os números com <b>fila</b>."
+    tirados = []
+    for n in nums:
+        if 1 <= n <= len(itens):
+            arq, item = itens[n - 1]
+            _apagar_item(arq, item)
+            tirados.append(_nome_do_item(item)[:50])
+    if not tirados:
+        return "Não achei esse número na fila. Mande <b>fila</b> para ver a lista atual."
+    return "🗑️ Tirei da fila:\n" + "\n".join(f"• {html.escape(t)}" for t in reversed(tirados))
+
+
+def limpar_fila():
+    itens = _itens_fila()
+    for arq, item in itens:
+        _apagar_item(arq, item)
+    return f"🗑️ Fila do WhatsApp limpa ({len(itens)} item(ns) cancelado(s))." if itens else "A fila já estava vazia."
+
+
+# ---------- aviso de bot parado ----------
+
+HORAS_SEM_POST = 3
+
+
+def ultimo_post(estado):
+    """Data e hora do último post no canal (Mercado Livre ou Shopee), ou None."""
+    quando = [v.get("quando") for v in estado.get("postados", {}).values()]
+    quando += list(estado.get("shopee", {}).get("postados", {}).values())
+    datas = []
+    for q in quando:
+        try:
+            datas.append(datetime.fromisoformat(q))
+        except (TypeError, ValueError):
+            pass
+    return max(datas) if datas else None
+
+
+def avisar_se_parado(tg, cfg, estado, agora, log=print):
+    """Rodando, mas sem postar nada há horas (token vencido, loja fora do ar...): avisa 1x por dia."""
+    hoje = agora.date().isoformat()
+    if not cfg.admin_chat or estado.get("aviso_parado") == hoje:
+        return False
+    if not (cfg.hora_inicio + HORAS_SEM_POST <= agora.hour < cfg.hora_fim):
+        return False
+    ultimo = ultimo_post(estado)
+    if ultimo is None:
+        return False
+    if ultimo.tzinfo is None:
+        ultimo = ultimo.replace(tzinfo=agora.tzinfo)
+    horas = (agora - ultimo).total_seconds() / 3600
+    if horas < HORAS_SEM_POST:
+        return False
+    texto = (f"⚠️ <b>Faz {int(horas)} h que não sai nenhuma oferta no canal.</b>\n"
+             f"Último post: {ultimo:%d/%m às %H:%M}. O bot está rodando, mas não achou nada para postar "
+             "ou algo está falhando.")
+    if estado.get("aguardando_link"):
+        texto += f"\n⏳ Há {estado['aguardando_link']} ofertas boas esperando link do Linkbuilder."
+    texto += "\nMe chame no Claude se quiser que eu veja o motivo."
+    try:
+        tg.enviar_texto(cfg.admin_chat, texto, html=True)
+        estado["aviso_parado"] = hoje
+        log("Aviso de bot parado enviado.")
+        return True
+    except TelegramErro as e:
+        log(f"Aviso: não consegui mandar o aviso de bot parado: {e}")
+        return False
+
+
 def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
     """Decide o que fazer com uma mensagem sua. Retorna a resposta (ou None)."""
     t = (texto or "").strip()
@@ -450,6 +636,18 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
         return marcar_geral(t, estado, False)
     if n in ("resumo", "/resumo", "status", "/status"):
         return montar_resumo(estado, cfg, tg, agora)
+    if n.startswith(("bloquear ", "/bloquear ")):
+        return bloquear(t.split(" ", 1)[1], estado)
+    if n.startswith(("desbloquear ", "/desbloquear ")):
+        return desbloquear(t.split(" ", 1)[1], estado)
+    if n in ("bloqueados", "/bloqueados", "bloquear", "/bloquear"):
+        return listar_bloqueados(estado)
+    if n in ("fila", "/fila"):
+        return ver_fila(agora)
+    if n in ("limpar fila", "/limpar_fila"):
+        return limpar_fila()
+    if n.startswith(("tirar ", "/tirar ")):
+        return tirar_da_fila(n)
     if n in ("pacote", "/pacote", "instagram", "/instagram"):
         from . import conteudo
         conteudo.montar_e_enviar(tg, cfg.admin_chat, estado, agora, rng=rng, session=session)

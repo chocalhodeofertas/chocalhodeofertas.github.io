@@ -23,7 +23,7 @@ from . import afiliado, cofre, comandos, cupom_oferta, cupons_ml, espelho, lote,
 from . import estado as est
 from . import mensagens
 from .descoberta import descobrir, descobrir_areas
-from .filtros import fora_da_faixa, motivo_bloqueio
+from .filtros import definir_bloqueios, fora_da_faixa, motivo_bloqueio
 from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, link_produto, renovar_token, token_do_app
 from .ofertas import avaliar, limite_hora, meta_ate_agora, pontuacao, tipo_produto, tipos_do_dia, priorizar_tipos_novos
 from .telegram import Telegram, TelegramErro
@@ -622,6 +622,7 @@ def main(argv=None):
         return 1
 
     estado = est.carregar(ARQ_ESTADO)
+    definir_bloqueios(estado.get("bloqueados"))
     if args.modo == "rapido":
         # Entre as rodadas: só suas mensagens e o canal de cupons (leve)
         try:
@@ -663,6 +664,7 @@ def main(argv=None):
                 cupons_ml.processar(tg, cfg, estado, agora, log)
             comandos.verificar_cupons(tg, cfg, estado, agora, log)
             comandos.talvez_resumo_diario(tg, estado, cfg, agora, log)
+            comandos.avisar_se_parado(tg, cfg, estado, datetime.now(FUSO), log)
             from . import conteudo
             if os.environ.get("PACOTE_AUTO") == "1":  # pausado: só sai quando você pede "pacote"
                 conteudo.talvez_enviar(tg, cfg, estado, agora, hora=int(os.environ.get("PACOTE_HORA") or 10), log=log)

@@ -11,6 +11,8 @@ Textos para o dono do projeto sempre em português do Brasil.
   O que for gravado em `saida/` vai para o branch `tmp-saida`, para baixar com git clone.
 - Disparar workflow: `gh api -X POST repos/chocalhodeofertas/chocalhodeofertas.github.io/actions/workflows/<arq>.yml/dispatches -f ref=main -f 'inputs[script]=...'`.
   Pelo proxy do container não dá para criar variáveis nem segredos (403): padrões ficam no próprio workflow (`vars.X || 'padrão'`).
+- `.github/workflows/vigia.yml`: cron de 30 em 30 min; se não houver execução do ciclo rodando ou na fila, religa e avisa o admin
+  (respeita o ciclo desligado de propósito).
 - Testes: `python3 -m pytest -q tests` (tudo em `tests/test_bot.py`). Rodar antes de cada commit.
 - Antes de dar push: `git pull --rebase` (o ciclo commita `data/` sozinho).
 
@@ -28,7 +30,7 @@ Textos para o dono do projeto sempre em português do Brasil.
   links do ML/Shopee viram candidatos por 48 h (`estado.espelho`). ML: catálogo direto; anúncio avulso → busca o catálogo pelo título.
   Passam pelos mesmos filtros (regra "infantil", NBCAL, repetição); desconto mínimo 10% e +20% na pontuação. Shopee: `shopee_ofertas.do_espelho` confere por itemId.
 - `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica) e `fora_da_faixa` (casa/adulto, exige sinal infantil).
-- `mensagens.py`: textos do Telegram/WhatsApp, frases de abertura por produto, linha de cupom, Shopee ("A partir de", nota e vendas).
+- `mensagens.py`: `preco_por_unidade` (fralda descartável: por fralda; lenço umedecido: a cada 100; só com quantidade clara no título). Textos do Telegram/WhatsApp, frases de abertura por produto, linha de cupom, Shopee ("A partir de", nota e vendas).
 - `cupons_ml.py` + `cupom_oferta.py`: lê cupons (canal oficial do ML + @cupombr via Telethon) e aplica o melhor cupom compatível na oferta.
 - `shopee.py`: cliente da Open API de afiliados (GraphQL, assinatura SHA256). Repete em erro 10000/10030.
 - `shopee_ofertas.py`: ofertas da Shopee por cima das do ML (limite próprio: `SHOPEE_MAX_DIA` 50, `SHOPEE_MAX_HORA` 4).
@@ -37,7 +39,9 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/`; o serviço (Baileys) posta com aquecimento automático
   (4 → 10 → 14 → 20 posts/dia nos dias 0, 4, 8 e 14 desde a conexão), só das 7h às 23h, alterna ML/Shopee, pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
 - `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas, cupons, WhatsApp).
-- `comandos.py`: comandos do admin no Telegram e resumo diário (inclui WhatsApp).
+- `comandos.py`: comandos do admin no Telegram e resumo diário (inclui WhatsApp). `bloquear/desbloquear/bloqueados` (palavras em
+  `estado.bloqueados`, aplicadas por `filtros.definir_bloqueios` no início de cada rodada); `fila`, `tirar N`, `limpar fila` (fila do WhatsApp);
+  `avisar_se_parado`: 1 aviso por dia se passar 3 h sem post no horário ativo.
 - `tiktok.py`: renderizador dos carrosséis 1080x1350 (capa, produto, CTA).
 - `instagram.py`: cliente da API do Instagram (login unificado; segredos `INSTAGRAM_TOKEN`/`INSTAGRAM_USER_ID`, token sem validade).
   `metricas()` tenta tudo junto e, se falhar, uma a uma; o que não vier fica em `ausentes`.

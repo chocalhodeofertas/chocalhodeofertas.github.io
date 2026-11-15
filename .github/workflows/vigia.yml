@@ -1,0 +1,57 @@
+name: Vigia do Chocalho
+
+# De meia em meia hora confere se o ciclo do bot está rodando. Se tiver parado
+# (falha ao disparar a próxima execução, queda do GitHub...), religa e avisa no Telegram.
+# Se o workflow do ciclo foi desligado de propósito (Disable workflow), não faz nada.
+
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+concurrency:
+  group: chocalho-vigia
+  cancel-in-progress: true
+
+jobs:
+  vigia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Confere o ciclo e religa se precisar
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TG_CHAT: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID || '787296152' }}
+          REPO: ${{ github.repository }}
+        run: |
+          ativos() {
+            total=0
+            for s in in_progress queued pending waiting requested; do
+              n=$(gh api "repos/$REPO/actions/workflows/ciclo.yml/runs?status=$s&per_page=1" --jq .total_count)
+              total=$((total + n))
+            done
+            echo "$total"
+          }
+          estado=$(gh api "repos/$REPO/actions/workflows/ciclo.yml" --jq .state)
+          if [ "$estado" != "active" ]; then
+            echo "O ciclo está desligado de propósito ($estado). Nada a fazer."
+            exit 0
+          fi
+          if [ "$(ativos)" -gt 0 ]; then echo "Ciclo rodando. Tudo certo."; exit 0; fi
+          # Pode ser só a troca de uma execução pela próxima: espera e confere de novo
+          sleep 120
+          if [ "$(ativos)" -gt 0 ]; then echo "Ciclo rodando (estava trocando de execução)."; exit 0; fi
+          if gh workflow run ciclo.yml --repo "$REPO" --ref main; then
+            msg="🔁 O bot do Chocalho tinha parado e eu religuei sozinho. Não precisa fazer nada."
+          else
+            msg="🛑 O bot do Chocalho parou e não consegui religar. No GitHub: Actions → Chocalho de Ofertas (ciclo) → Run workflow."
+          fi
+          echo "$msg"
+          if [ -n "$TG_TOKEN" ]; then
+            curl -s -o /dev/null -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${TG_CHAT}" --data-urlencode "text=${msg}"
+          fi

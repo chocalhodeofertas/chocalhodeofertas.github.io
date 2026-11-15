@@ -209,6 +209,43 @@ def _abertura(oferta, rng):
     return rng.choice(marca)
 
 
+_NAO_E_FRALDA = (r"\b(pano|tecido|algodao|reutiliz\w*|ecologic\w*|piscina|natacao|praia|sunga|biquini|boca|ombro|"
+                 r"porta|lixeira|lixo|bolsa|mochila|trocador|creme|pomada|cueiro|capa|calca plastica|boneca|"
+                 r"brinquedo|geriatric\w*|adult\w*|aquecedor|dispenser|bordad\w*)\b")
+_UNIDADE = r"(?:unidades?|unids?|unid|und|uni|un|fraldas|lencos|toalhas|toalhinhas|tiras|folhas)"
+
+
+def preco_por_unidade(titulo, preco):
+    """Para fralda descartável e lenço umedecido: (valor, rótulo), ex. (0.89, "por fralda").
+
+    Só quando o título diz a quantidade sem ambiguidade; na dúvida (kit sem "N pacotes de M",
+    dois números diferentes), não mostra nada."""
+    import re
+    from .filtros import normalizar
+
+    t = normalizar(titulo)
+    fralda = bool(re.search(r"\bfraldas?\b", t))
+    lenco = bool(re.search(r"\b(lencos?|toalhas?|toalhinhas?) umedecid", t))
+    if fralda == lenco or re.search(_NAO_E_FRALDA, t) or not preco:
+        return None
+    total = None
+    m = re.search(r"\b(\d{1,2})\s*(?:x|pacotes? (?:de|com|c/)|pcts? (?:de|com|c/))\s*(\d{2,4})\b", t)
+    if m:
+        total = int(m.group(1)) * int(m.group(2))
+    elif not re.search(r"\b(kit|combo|pacotes|pcts|fardo|caixa com|leve \d)", t):
+        qtds = {int(q) for q in re.findall(r"\b(\d{2,4})\s*" + _UNIDADE + r"\b", t)}
+        qtds |= {int(q) for q in re.findall(r"\bc/\s*(\d{2,4})\b", t)}
+        if len(qtds) == 1:
+            total = qtds.pop()
+    if not total:
+        return None
+    if fralda:
+        valor = float(preco) / total
+        return (valor, "por fralda") if 8 <= total <= 400 and 0.35 <= valor <= 4 else None
+    valor = float(preco) / total * 100
+    return (valor, "a cada 100 lenços") if 20 <= total <= 3000 and 2 <= valor <= 50 else None
+
+
 def _linhas_preco(oferta, negrito, riscado, codigo=lambda t: t):
     linhas = []
     if oferta.preco_de:
@@ -218,6 +255,9 @@ def _linhas_preco(oferta, negrito, riscado, codigo=lambda t: t):
         linhas.append(f"A partir de {negrito(brl(oferta.preco))}")
     else:
         linhas.append(f"Por {negrito(brl(oferta.preco))}")
+    por_un = None if getattr(oferta, "a_partir", False) else preco_por_unidade(oferta.titulo, oferta.preco)
+    if por_un:
+        linhas.append(f"🧮 Sai a {negrito(brl(por_un[0]))} {por_un[1]}")
     if getattr(oferta, "loja", "") == "shopee" and getattr(oferta, "vendas", 0):
         linhas.append(f"⭐ {str(round(oferta.nota, 1)).replace('.', ',')} · {_vendidos(oferta.vendas)}")
     cp = getattr(oferta, "cupom", None)

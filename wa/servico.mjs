@@ -48,6 +48,8 @@ const diasConectado = Math.floor((Date.now() - Date.parse(estado.inicio)) / 8640
 const degrau = RAMPA.filter(([d]) => diasConectado >= d).pop();
 const MAX_DIA = Number(process.env.WA_MAX_DIA || degrau[1]);
 const INTERVALO = Number(process.env.WA_INTERVALO_MIN || degrau[2]) * 60 * 1000;
+estado.max_dia = MAX_DIA; // para o comando "fila" do Telegram mostrar o limite de hoje
+estado.intervalo_min = INTERVALO / 60000;
 console.log(`WhatsApp: dia ${diasConectado + 1} conectado; até ${MAX_DIA} posts hoje, ${INTERVALO / 60000} min entre eles.`);
 const hoje = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo" }).format(new Date());
 const { state, saveCreds } = await useMultiFileAuthState(PASTA_AUTH);

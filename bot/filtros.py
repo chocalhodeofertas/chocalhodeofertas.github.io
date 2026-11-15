@@ -59,6 +59,16 @@ _REGRAS.append(("Possível réplica", r"\b(replica|tailandesa|1a linha|primeira 
 _COMPILADAS = [(motivo, re.compile(p)) for motivo, p in _REGRAS]
 
 
+# Palavras que o dono do canal bloqueou pelo Telegram ("bloquear baby doll")
+_EXTRAS = []
+
+
+def definir_bloqueios(palavras):
+    """Carrega as palavras bloqueadas pelo admin (guardadas em estado["bloqueados"])."""
+    _EXTRAS[:] = [(p, re.compile(r"\b" + re.escape(normalizar(p)).replace(r"\ ", r"\s+") + r"s?\b"))
+                  for p in (palavras or []) if normalizar(p).strip()]
+
+
 def motivo_bloqueio(*textos: str):
     """Retorna o motivo do bloqueio, ou None se o produto pode ser divulgado."""
     alvo = " ".join(normalizar(t) for t in textos if t)
@@ -67,6 +77,9 @@ def motivo_bloqueio(*textos: str):
     for motivo, padrao in _COMPILADAS:
         if padrao.search(alvo):
             return motivo
+    for palavra, padrao in _EXTRAS:
+        if padrao.search(alvo):
+            return f"bloqueado por você: {palavra}"
     return None
 
 

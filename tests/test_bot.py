@@ -1885,3 +1885,74 @@ def test_espelho_ignora_chamada_em_caixa_alta():
     assert espelho.titulo_da_mensagem("CORRE QUE A SHOPEE TÁ COM DESCONTO\nBanheira Dobrável Infantil 35L") == "Banheira Dobrável Infantil 35L"
     assert fora_da_faixa("Hipoglós Creme Preventivo de Assaduras, 120g", "outros", "infantil") is None
     assert fora_da_faixa("Kit Com 5 Carrinhos Sortidos Hot Wheels Coloridos Mattel", "outros", "infantil") is None
+
+
+def test_preco_por_unidade_so_quando_esta_claro():
+    f = mensagens.preco_por_unidade
+    assert f("Fralda Pampers Confort Sec XG 104 Unidades", 93.60) == (pytest.approx(0.90), "por fralda")
+    assert f("Fralda Babysec 2 pacotes de 52 unidades", 110)[0] == pytest.approx(110 / 104)
+    assert f("Lenços Umedecidos Huggies 384 unidades", 38.40) == (pytest.approx(10.0), "a cada 100 lenços")
+    # na dúvida, não mostra nada
+    assert f("Kit 3 Pacotes Fralda Pom Pom G 48 unidades", 120) is None      # 48 no total ou em cada pacote?
+    assert f("Kit 10 Fraldas De Pano Cremer Luxo Bordada", 60) is None       # fralda de pano
+    assert f("Bolsa Porta Fraldas com 3 unidades", 50) is None
+    assert f("Fralda Pampers P 36 unidades + Lenços umedecidos 48 unidades", 50) is None
+    assert f("Fralda Premium XG 104 Unidades", 2000) is None                 # preço por fralda absurdo
+    assert f("Carrinho de Bebê Travel System", 900) is None
+
+
+def test_preco_por_unidade_aparece_na_mensagem():
+    from bot import ofertas
+    o = ofertas.Oferta(id="MLB1", titulo="Fralda Pampers Confort Sec XG 104 Unidades", preco=93.60, preco_de=120.0,
+                       desconto=0.22, abaixo_do_habitual=None, menor_preco_historico=False,
+                       link="https://meli.la/x", imagem=None, categoria="fralda")
+    assert "🧮 Sai a *R$ 0,90* por fralda" in mensagens.montar_whatsapp(o, random.Random(1))
+    assert "🧮 Sai a <b>R$ 0,90</b> por fralda" in mensagens.montar_telegram(o, random.Random(1))
+    o.titulo = "Banheira Dobrável Infantil"
+    assert "🧮" not in mensagens.montar_whatsapp(o, random.Random(1))
+
+
+def test_comando_bloquear_e_desbloquear():
+    from bot import comandos, filtros
+    e = est.novo()
+    e["postados"]["MLB7"] = {"quando": AGORA.isoformat(), "preco": 30.0, "titulo": "Baby Doll Short Doll Feminino"}
+    try:
+        r = comandos.tratar_texto("bloquear Baby Doll", None, None, e, cfg_cmd(), AGORA)
+        assert e["bloqueados"] == ["baby doll"] and "1 teriam sido barrados" in r
+        assert motivo_bloqueio("Kit Baby-Doll Feminino Estampado") == "bloqueado por você: baby doll"
+        assert motivo_bloqueio("Body Bebê Algodão") is None
+        assert "já estava" in comandos.tratar_texto("bloquear baby doll", None, None, e, cfg_cmd(), AGORA)
+        assert "baby doll" in comandos.tratar_texto("bloqueados", None, None, e, cfg_cmd(), AGORA)
+        assert "3 letras" in comandos.tratar_texto("bloquear ab", None, None, e, cfg_cmd(), AGORA)
+        assert "liberada" in comandos.tratar_texto("desbloquear BABY DOLL", None, None, e, cfg_cmd(), AGORA)
+        assert e["bloqueados"] == [] and motivo_bloqueio("Kit Baby Doll Feminino") is None
+    finally:
+        filtros.definir_bloqueios([])
+
+
+def test_comando_fila_do_whatsapp(tmp_path, monkeypatch):
+    from bot import comandos, whatsapp
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    assert "vazia" in comandos.tratar_texto("fila", None, None, est.novo(), cfg_cmd(), AGORA)
+    for nome, loja in (("Banheira Dobrável Infantil", "ml"), ("Kit Body Bebê", "shopee"), ("Mochila Escolar", "ml")):
+        whatsapp.enfileirar(f"*🪇 Chacoalhou o preço!*\n\n🛁 {nome}\n\nPor *R$ 50,00*\n\n👉 https://meli.la/x", None, AGORA, loja)
+    r = comandos.tratar_texto("fila", None, None, est.novo(), cfg_cmd(), AGORA)
+    assert "1. [ML] 🛁 Banheira Dobrável Infantil" in r and "2. [Shopee] 🛁 Kit Body Bebê" in r
+    assert "Kit Body" in comandos.tratar_texto("tirar 2", None, None, est.novo(), cfg_cmd(), AGORA)
+    assert len(list(tmp_path.glob("*.json"))) == 2
+    assert "2 item" in comandos.tratar_texto("limpar fila", None, None, est.novo(), cfg_cmd(), AGORA)
+    assert not list(tmp_path.glob("*.json"))
+
+
+def test_aviso_de_bot_parado_uma_vez_por_dia():
+    from bot import comandos
+    tg, e, cfg = TGCmd(), est.novo(), cfg_cmd()
+    agora = AGORA.replace(hour=15, minute=0)
+    e["postados"]["MLB1"] = {"quando": (agora - timedelta(hours=1)).isoformat(), "preco": 10.0, "titulo": "x"}
+    assert not comandos.avisar_se_parado(tg, cfg, e, agora)            # postou há 1 h: tudo certo
+    e["postados"]["MLB1"]["quando"] = (agora - timedelta(hours=4)).isoformat()
+    e["shopee"] = {"postados": {"SHP1": (agora - timedelta(hours=5)).isoformat(timespec="minutes")}}
+    assert comandos.avisar_se_parado(tg, cfg, e, agora) and "4 h" in tg.textos[-1][1]
+    assert not comandos.avisar_se_parado(tg, cfg, e, agora)            # só 1 aviso por dia
+    e["aviso_parado"] = None
+    assert not comandos.avisar_se_parado(tg, cfg, e, agora.replace(hour=9))   # começo do dia não conta
