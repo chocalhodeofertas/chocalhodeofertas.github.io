@@ -31,8 +31,17 @@ def main(arg):
     estado = copy.deepcopy(est.carregar(ARQ_ESTADO))
     estado.pop("espelho", None)  # ensaio do zero: olha as últimas mensagens de cada canal
     ml = MercadoLivre(token_do_app(os.environ["ML_CLIENT_ID"], os.environ["ML_CLIENT_SECRET"]))
-    linhas = []
-    espelho.coletar(ml, estado, agora, log=lambda m: linhas.append(f"- {m}"))
+    linhas, amostra = [], []
+
+    def expandir_registrando(url, sess=None):
+        final = espelho.expandir(url, sess)
+        if len(amostra) < 80:
+            amostra.append(f"- {url[:70]} → {final[:110]}")
+        return final
+
+    espelho.coletar(ml, estado, agora, log=lambda m: linhas.append(f"- {m}"), expandir_url=expandir_registrando)
+    linhas.append("\n## Amostra de links (original → destino)\n")
+    linhas.extend(amostra)
     e = estado["espelho"]
     linhas.append(f"\n## Mercado Livre ({len(e['ml'])} produtos de catálogo achados)\n")
     for pid, d in e["ml"].items():
