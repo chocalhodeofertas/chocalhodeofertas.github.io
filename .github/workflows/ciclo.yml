@@ -82,6 +82,8 @@ jobs:
           SHOPEE_SECRET: ${{ secrets.SHOPEE_SECRET }}
           INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          # Pausa as chamadas automáticas à API do Instagram enquanto a Meta revisa a conta (15/11). Para religar: vars.INSTAGRAM_PAUSADO=0
+          INSTAGRAM_PAUSADO: ${{ vars.INSTAGRAM_PAUSADO || '1' }}
           SHOPEE_ATIVO: ${{ vars.SHOPEE_ATIVO || '1' }}
           SHOPEE_MAX_DIA: ${{ vars.SHOPEE_MAX_DIA || '50' }}
           SHOPEE_MAX_HORA: ${{ vars.SHOPEE_MAX_HORA || '4' }}

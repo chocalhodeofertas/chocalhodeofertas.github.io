@@ -2381,3 +2381,20 @@ def test_rodada_nao_posta_link_de_anuncio_pausado():
     cfg = Config(canal="@canal", max_por_rodada=1, link_modo="oficial", matt_word="chocalho", matt_tool="1")
     assert rodar("normal", cfg, MLFalso(infos), TGFalso(), e, produtos, agora=AGORA) == []
     assert "MLB1" not in e["links"] and e["aguardando_link"] == 1
+
+
+def test_instagram_pausado(monkeypatch, tmp_path):
+    from bot import instagram_pub, insights_ig
+    monkeypatch.setenv("INSTAGRAM_TOKEN", "t")
+    monkeypatch.setenv("INSTAGRAM_USER_ID", "1")
+    monkeypatch.delenv("INSTAGRAM_PAUSADO", raising=False)
+    assert instagram_pub.ativo()
+    monkeypatch.setenv("INSTAGRAM_PAUSADO", "1")
+    assert not instagram_pub.ativo()
+    # coleta de métricas não chama a API quando pausado
+    assert insights_ig.rodar(pasta=tmp_path) == 0
+    # fila aprovada fica parada, sem tocar na API
+    estado = {"ig_fila": {"x": {"criado_em": "2026-11-15T10:00:00"}}}
+    from datetime import datetime
+    assert instagram_pub.publicar_pendentes(None, "1", estado, datetime(2026, 11, 15, 12, 0)) is None
+    assert "x" in estado["ig_fila"]

@@ -151,6 +151,9 @@ def _avisar_admin(texto, agora, pasta=PASTA):
 
 def rodar(ig=None, agora=None, pasta=PASTA):
     agora = agora or datetime.now(FUSO)
+    if os.environ.get("INSTAGRAM_PAUSADO") == "1" and ig is None:
+        print("Instagram: chamadas automáticas pausadas (INSTAGRAM_PAUSADO=1); pulando coleta.")
+        return 0
     if not (os.environ.get("INSTAGRAM_TOKEN") and os.environ.get("INSTAGRAM_USER_ID")) and ig is None:
         print("Instagram: sem token configurado; pulando coleta.")
         return 0

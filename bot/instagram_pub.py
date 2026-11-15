@@ -29,8 +29,13 @@ GUARDAR_DIAS = 2
 NOME_TIPO = {"carrossel": "carrossel", "post": "post do produto"}
 
 
+def pausado():
+    """Pausa total das chamadas automáticas à API do Instagram (INSTAGRAM_PAUSADO=1 no ciclo)."""
+    return os.environ.get("INSTAGRAM_PAUSADO") == "1"
+
+
 def ativo():
-    return bool(os.environ.get("INSTAGRAM_TOKEN") and os.environ.get("INSTAGRAM_USER_ID"))
+    return bool(os.environ.get("INSTAGRAM_TOKEN") and os.environ.get("INSTAGRAM_USER_ID")) and not pausado()
 
 
 def _hora(texto, agora):
@@ -145,7 +150,7 @@ def _no_ar(urls, session):
 def publicar_pendentes(tg, chat, estado, agora, ig=None, session=None, pasta=PASTA, log=print):
     """Publica o que foi aprovado e já chegou no horário; expira e limpa o resto."""
     fila = estado.get("ig_fila") or {}
-    if not fila:
+    if not fila or pausado():
         return
     hoje = agora.date().isoformat()
     session = session or requests.Session()
