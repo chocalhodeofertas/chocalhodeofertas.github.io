@@ -63,6 +63,25 @@ def montar_lote(estado, sem_link, tamanho, agora):
     return [u for _, u in escolhidas]
 
 
+def conferir_anuncio(estado, pid, info, log=print):
+    """O link oficial de um produto de catálogo abre UM anúncio (o que venceu quando o lote foi montado).
+    Se esse anúncio não está mais ativo no catálogo (pausado, sem estoque, saiu), o link é descartado:
+    o produto volta para a fila do lote com o anúncio que vende agora. Se está ativo, o preço do post
+    passa a ser o DESSE anúncio (é ele que a pessoa vai ver ao tocar no link).
+    Retorna False quando o link foi descartado."""
+    item = (estado.get("links_item") or {}).get(pid)
+    if not item or not info or not getattr(info, "ativos", None) or pid not in estado.get("links", {}):
+        return True  # link antigo (sem anúncio anotado) ou catálogo não consultado: segue como antes
+    if item not in info.ativos:
+        del estado["links"][pid]
+        del estado["links_item"][pid]
+        log(f"{pid}: o anúncio do link oficial ({item}) não está mais ativo; link descartado, volta para o lote.")
+        return False
+    preco, de = info.ativos[item]
+    info.preco, info.preco_original, info.item_id = preco, de, item
+    return True
+
+
 def texto_lote(urls, numero=1, total=1):
     return (
         f"🔗 <b>Lote {numero} de até {total} hoje: {len(urls)} ofertas sem link oficial</b>\n\n"
@@ -93,8 +112,12 @@ def aplicar_resposta(estado, texto):
             "Para não trocar um produto pelo outro, não salvei nada. "
             "Gere de novo com o bloco inteiro e mande todos os links juntos."
         )
-    for pid, link in zip(lote["ids"], links):
+    anuncios = estado.setdefault("links_item", {})
+    for pid, link, url in zip(lote["ids"], links, lote.get("urls") or [None] * len(links)):
         estado["links"][pid] = link
+        m = re.search(r"MLB-(\d+)", url or "")
+        if m:
+            anuncios[pid] = "MLB" + m.group(1)  # o link oficial abre este anúncio (não o catálogo inteiro)
     estado["lote"] = None
     return True, (f"✅ {len(links)} links oficiais salvos ({len(estado['links'])} no total)! "
                   "Começo a postar nas próximas rodadas. Se ainda houver lote hoje, ele chega em até 20 min.")

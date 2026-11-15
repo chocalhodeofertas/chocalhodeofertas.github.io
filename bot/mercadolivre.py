@@ -2,7 +2,7 @@
 import json
 import os
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional
 from urllib.parse import parse_qs, urlparse
 
@@ -32,6 +32,8 @@ class InfoProduto:
     imagem: Optional[str]
     disponivel: bool
     item_id: Optional[str] = None  # anúncio vencedor (para o Linkbuilder)
+    # Anúncios ativos do produto de catálogo agora: {item_id: (preço, preço "de")}. Vazio = não consultado.
+    ativos: dict = field(default_factory=dict)
 
 
 def extrair_id(link: str):
@@ -125,7 +127,7 @@ class MercadoLivre:
             fotos = dados.get("pictures") or []
             imagem = _imagem_grande(fotos[0].get("url")) if fotos else None
         try:
-            ofertas = self._get(f"/products/{pid}/items", {"limit": 5}).get("results") or []
+            ofertas = self._get(f"/products/{pid}/items", {"limit": 20}).get("results") or []
         except ErroML:
             ofertas = []  # 404 = nenhuma loja vendendo agora
         ofertas = [o for o in ofertas if o.get("price")]
@@ -138,6 +140,7 @@ class MercadoLivre:
             imagem=imagem,
             disponivel=bool(melhor),
             item_id=melhor.get("item_id"),
+            ativos={o["item_id"]: (o["price"], o.get("original_price")) for o in ofertas if o.get("item_id")},
         )
 
     def mais_vendidos(self, categoria):

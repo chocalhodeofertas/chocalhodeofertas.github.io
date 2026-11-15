@@ -334,6 +334,8 @@ def _reconferir(ml, produto, oferta, estado, cfg, agora):
             info = ml.itens([produto.id]).get(produto.id)
     except (ErroML, AcessoNegado):
         return oferta  # sem como conferir agora: vale a consulta de minutos atrás
+    if not lote.conferir_anuncio(estado, produto.id, info, log):
+        return None  # o anúncio do link pausou/saiu: não posta link quebrado
     nova = avaliar_oferta(cfg, estado, produto, info, agora)
     if nova is None:
         log(f"{oferta.id}: o preço mudou antes do post; pulei.")
@@ -360,9 +362,11 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         if motivo:
             log(f"Bloqueado {p.id}: {motivo} — '{info.titulo[:60]}'")
             continue
-        oferta = avaliar_oferta(cfg, estado, p, info, agora)
-        if info.preco:
+        if info.preco:  # histórico: menor preço do catálogo (o que estava à venda)
             est.registrar_preco(estado, p.id, float(info.preco), agora)
+        if not lote.conferir_anuncio(estado, p.id, info, log):
+            p.link_afiliado = afiliado.montar(p.link_produto, cfg.matt_word, cfg.matt_tool)  # sem link oficial agora
+        oferta = avaliar_oferta(cfg, estado, p, info, agora)
         if oferta:
             candidatas.append(oferta)
 

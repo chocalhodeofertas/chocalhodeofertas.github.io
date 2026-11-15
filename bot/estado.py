@@ -17,6 +17,10 @@ def carregar(caminho):
     for chave, valor in novo().items():
         estado.setdefault(chave, valor)
     compactar_precos(estado)
+    if "links_item" not in estado:  # uma vez: qual anúncio cada link antigo abre (tirado dos lotes já respondidos)
+        inicial = p.parent / "links_item_inicial.json"
+        if inicial.exists():
+            estado["links_item"] = {k: v for k, v in json.loads(inicial.read_text()).items() if k in estado["links"]}
     return estado
 
 

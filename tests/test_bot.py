@@ -2348,3 +2348,36 @@ def test_origem_do_espelho_aparece_para_o_admin():
     assert "Copiada do canal @babypromokids" in tg.textos[-1][1]
     texto = comandos.montar_resumo(e, cfg_cmd(), TGCmd(), AGORA)
     assert "Copiadas de outros canais hoje: <b>1</b>" in texto and "@babypromokids → Banheira Dobrável (ML)" in texto
+
+
+def test_link_de_anuncio_pausado_e_descartado():
+    from bot import lote
+    e = est.novo()
+    e["lote"] = {"dia": "2026-11-05", "ids": ["MLB1", "MLB2"],
+                 "urls": ["https://produto.mercadolivre.com.br/MLB-111-produto-_JM",
+                          "https://produto.mercadolivre.com.br/MLB-222-produto-_JM"]}
+    ok, _ = lote.aplicar_resposta(e, "https://meli.la/AAA https://meli.la/BBB")
+    assert ok and e["links_item"] == {"MLB1": "MLB111", "MLB2": "MLB222"}
+    # MLB1: o anúncio do link continua ativo, mas outro vendedor está mais barato → o post usa o preço do anúncio do link
+    i1 = InfoProduto("MLB1", "Banheira", 60.0, 100.0, None, True, "MLB999",
+                     ativos={"MLB999": (60.0, 100.0), "MLB111": (70.0, 100.0)})
+    assert lote.conferir_anuncio(e, "MLB1", i1) and i1.preco == 70.0 and i1.item_id == "MLB111"
+    # MLB2: o anúncio do link pausou → link descartado, produto volta para o lote
+    i2 = InfoProduto("MLB2", "Berço", 300.0, 400.0, None, True, "MLB888", ativos={"MLB888": (300.0, 400.0)})
+    assert not lote.conferir_anuncio(e, "MLB2", i2)
+    assert "MLB2" not in e["links"] and "MLB2" not in e["links_item"]
+    # Sem anúncio anotado (link antigo) ou sem consulta ao catálogo: segue como antes
+    assert lote.conferir_anuncio(e, "MLB3", i2)
+    assert lote.conferir_anuncio(e, "MLB1", InfoProduto("MLB1", "Banheira", 60.0, None, None, True))
+
+
+def test_rodada_nao_posta_link_de_anuncio_pausado():
+    produtos = [Produto("MLB1", "catalogo", "https://www.mercadolivre.com.br/p/MLB1", "https://meli.la/AAA", "higiene", None, 0)]
+    infos = {"MLB1": InfoProduto("MLB1", "Banheira Dobrável Infantil", 50.0, 100.0, None, True, "MLB888",
+                                 ativos={"MLB888": (50.0, 100.0)})}
+    e = est.novo()
+    e["links"] = {"MLB1": "https://meli.la/AAA"}
+    e["links_item"] = {"MLB1": "MLB111"}
+    cfg = Config(canal="@canal", max_por_rodada=1, link_modo="oficial", matt_word="chocalho", matt_tool="1")
+    assert rodar("normal", cfg, MLFalso(infos), TGFalso(), e, produtos, agora=AGORA) == []
+    assert "MLB1" not in e["links"] and e["aguardando_link"] == 1
