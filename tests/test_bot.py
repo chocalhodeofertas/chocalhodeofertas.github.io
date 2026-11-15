@@ -2324,3 +2324,10 @@ def test_telegram_album_com_grafico():
     midia = json.loads(s.data["media"])
     assert s.url.endswith("sendMediaGroup") and midia[0]["media"] == "https://img/x.jpg" and midia[0]["parse_mode"] == "HTML"
     assert midia[1]["media"] == "attach://grafico" and "grafico" in s.files
+
+
+def test_colchao_de_solteiro_fica_de_fora():
+    from bot.filtros import fora_da_faixa
+    assert fora_da_faixa("Colchão Solteiro 188x88cm Espuma D20 Gazin", "quarto")
+    assert fora_da_faixa("Jogo de Cama Solteiro Infantil Dinossauros 3 Peças", "quarto") is None
+    assert fora_da_faixa("Berço 3 em 1 Vira Cama de Solteiro", "quarto") is None

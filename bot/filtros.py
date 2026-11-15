@@ -105,8 +105,9 @@ _CASA_ADULTO = re.compile(
     r"furadeira|parafusadeira|ferramentas?|pneus?|notebook|smartphone|air ?fryer|cafeteira|"
     r"panela de pressao|aspirador de po)\b"
 )
-# "Casal" só é problema quando o item não é de bebê (berço acoplado à cama de casal pode)
-_CASAL = re.compile(r"\bcasal\b")
+# "Casal"/"solteiro" só é problema quando o item não é de bebê nem diz que é infantil
+# (berço acoplado à cama de casal e jogo de cama solteiro infantil podem)
+_CASAL = re.compile(r"\b(casal|solteiro|solteirao|viuva)\b")  # tamanhos de cama de adulto
 _ITEM_DE_BEBE = re.compile(r"\b(berco|co ?sleeper|moises|bebe conforto|carrinho|cadeirinha|trocador|fralda)")
 
 
