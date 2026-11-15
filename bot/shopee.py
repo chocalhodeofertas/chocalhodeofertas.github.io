@@ -115,8 +115,9 @@ class Shopee:
         return j.get("data") or {}
 
     def buscar(self, termo="", ordem=MAIS_VENDIDOS, pagina=1, limite=50, categoria=None):
-        args = [f"keyword:{json.dumps(termo, ensure_ascii=False)}", f"sortType:{ordem}",
-                f"page:{pagina}", f"limit:{limite}"]
+        args = [f"sortType:{ordem}", f"page:{pagina}", f"limit:{limite}"]
+        if termo:
+            args.insert(0, f"keyword:{json.dumps(termo, ensure_ascii=False)}")
         if categoria:
             args.append(f"productCatId:{int(categoria)}")
         q = "{productOfferV2(%s){nodes{%s} pageInfo{hasNextPage}}}" % (",".join(args), _CAMPOS)

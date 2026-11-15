@@ -32,7 +32,17 @@ TERMOS = [
     "pratinho infantil", "toalha de banho infantil", "protetor de berço", "ninho redutor",
 ]
 TERMOS_POR_RODADA = 3
+# Categorias infantis da Shopee (mais vendidos de cada uma, sem palavra-chave). Uma dupla por rodada,
+# passando pelas 3 primeiras páginas: dá a volta completa em ~6 horas.
+CATEGORIAS = [
+    (100683, "fraldas e troca"), (100684, "brinquedos"), (100678, "banho e higiene"), (100692, "calçados infantis"),
+    (100689, "acessórios infantis"), (100690, "roupa infantil"), (100632, "mãe e bebê"), (100691, "roupa infantil"),
+    (100112, "bonecas"), (100693, "calçados infantis"), (100633, "moda infantil"), (100777, "livros"),
+]
+CATEGORIAS_POR_RODADA = 2
+PAGINAS_CATEGORIA = 3
 NOTA_MIN, VENDAS_MIN, COMISSAO_MIN = 4.7, 500, 0.05
+VENDAS_MIN_ESPELHO = 200  # produto que veio de um canal de ofertas (alguém já escolheu)
 QUEDA_MIN = 0.10  # "de/por" só se o próprio bot viu o preço 10% mais alto nos últimos 30 dias
 
 _CATEGORIAS = [
@@ -86,11 +96,11 @@ def preco_de_pelo_historico(estado, pid, preco, agora):
     return maior if preco <= maior * (1 - QUEDA_MIN) else None
 
 
-def aprovado(p):
+def aprovado(p, vendas_min=VENDAS_MIN):
     """Motivo para não usar o produto (ou None)."""
     if p.nota < NOTA_MIN:
         return "nota baixa"
-    if p.vendas < VENDAS_MIN:
+    if p.vendas < vendas_min:
         return "poucas vendas"
     if p.comissao < COMISSAO_MIN:
         return "comissão baixa"
@@ -177,7 +187,7 @@ def do_espelho(shp, estado, agora, ja=(), log=print, limite=ESPELHO_POR_RODADA):
             reg["fora"] = "sumiu"
             continue
         est.registrar_preco(estado, p.id, p.preco, agora)
-        motivo = aprovado(p)
+        motivo = aprovado(p, VENDAS_MIN_ESPELHO)
         if motivo:
             reg["fora"] = motivo
             log(f"Shopee (espelho): {pid} fora: {motivo}")
@@ -196,7 +206,8 @@ def _marcar_acompanhado(estado, p, agora):
 
 def buscar_candidatos(shp, estado, agora, repost_dias=3, log=print, termos=None):
     s = _estado(estado)
-    if termos is None:
+    auto = termos is None
+    if auto:
         i = s["termo"] % len(TERMOS)
         termos = (TERMOS + TERMOS)[i:i + TERMOS_POR_RODADA]
         s["termo"] = (i + TERMOS_POR_RODADA) % len(TERMOS)
@@ -207,6 +218,21 @@ def buscar_candidatos(shp, estado, agora, repost_dias=3, log=print, termos=None)
                 achados.setdefault(p.id, p)
         except ShopeeErro as e:
             log(f"Shopee: busca '{termo}' falhou: {e}")
+    nomes_cat = []
+    if auto:
+        k = s.get("cat", 0)
+        total = len(CATEGORIAS) * PAGINAS_CATEGORIA
+        for j in range(CATEGORIAS_POR_RODADA):
+            idx = (k + j) % total
+            cid, nome = CATEGORIAS[idx % len(CATEGORIAS)]
+            pagina = idx // len(CATEGORIAS) + 1
+            try:
+                for p in shp.buscar("", ordem=MAIS_VENDIDOS, pagina=pagina, limite=50, categoria=cid):
+                    achados.setdefault(p.id, p)
+                nomes_cat.append(f"{nome} p{pagina}")
+            except ShopeeErro as e:
+                log(f"Shopee: categoria '{nome}' falhou: {e}")
+        s["cat"] = (k + CATEGORIAS_POR_RODADA) % total
     corte = agora - timedelta(days=repost_dias)
     bons = []
     for p in achados.values():
@@ -218,7 +244,7 @@ def buscar_candidatos(shp, estado, agora, repost_dias=3, log=print, termos=None)
             _marcar_acompanhado(estado, p, agora)
             bons.append(p)
     bons.sort(key=lambda p: pontos(p, estado, agora), reverse=True)
-    log(f"Shopee: {len(achados)} produtos vistos ({', '.join(termos)}), {len(bons)} aprovados.")
+    log(f"Shopee: {len(achados)} produtos vistos ({', '.join(list(termos) + nomes_cat)}), {len(bons)} aprovados.")
     return bons
 
 

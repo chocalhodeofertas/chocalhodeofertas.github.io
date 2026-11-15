@@ -29,8 +29,20 @@ def montar_lote(estado, sem_link, tamanho, agora):
     escolhidas, vistos = [], set()
     from .ofertas import tipo_produto
 
+    from . import espelho
+    from . import estado as est
+
+    def chave(x):
+        o = x[0]
+        peso = prioridade(o, pos.get(o.id))
+        if espelho.eh_do_espelho(estado, o.id):
+            peso *= 1.5   # candidato de canal vale só 48 h: precisa do link logo
+        if est.repetido(estado, o.titulo, agora, 7, o.preco):
+            peso *= 0.4   # parecido com algo postado na semana: não sairia agora de qualquer jeito
+        return peso
+
     por_tipo = {}
-    for o, item in sorted(sem_link, key=lambda x: prioridade(x[0], pos.get(x[0].id)), reverse=True):
+    for o, item in sorted(sem_link, key=chave, reverse=True):
         if o.id in vistos or o.id in estado["links"] or not item:
             continue
         tp = tipo_produto(o.titulo)

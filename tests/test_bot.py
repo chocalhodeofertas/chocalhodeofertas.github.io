@@ -1983,3 +1983,82 @@ def test_selo_aparece_no_post():
     assert o.selo_dias == 20
     assert "📉 Menor preço que o Chocalho viu em 20 dias" in mensagens.montar_whatsapp(o, random.Random(1))
     assert "📉" not in mensagens.montar_whatsapp(avaliar(prod(), info(70, 100), est.novo(), AGORA), random.Random(1))
+
+
+def test_queda_real_vira_oferta_sem_de_no_anuncio():
+    e = est.novo()
+    est.registrar_preco(e, "MLB1", 100.0, AGORA - timedelta(days=10))
+    assert avaliar(prod(), info(95), e, AGORA) is None              # só 5% abaixo do normal: não é oferta
+    o = avaliar(prod(), info(85), e, AGORA)                         # 15% abaixo do normal, sem "de" no anúncio
+    assert o and o.preco_de is None and o.preco_normal == 100.0
+    assert "📉 Baixou: vinha custando R$ 100,00 no histórico do Chocalho" in mensagens.montar_whatsapp(o, random.Random(1))
+    e2 = est.novo()
+    est.registrar_preco(e2, "MLB1", 100.0, AGORA - timedelta(days=3))
+    assert avaliar(prod(), info(85), e2, AGORA) is None             # pouco histórico: não vale ainda
+    com_de = avaliar(prod(), info(70, 100), e, AGORA)               # com "de" do anúncio, mostra só o de/por
+    assert com_de.preco_normal is None
+
+
+def test_desconto_minimo_por_tipo_de_oferta(monkeypatch):
+    from bot import cupom_oferta, espelho
+    from bot.main import avaliar_oferta, desconto_minimo
+    cfg = Config(min_desconto=0.20)
+    e = est.novo()
+    e["descobertos"] = {"MLB1": {"tipo": "item", "categoria": "fralda", "pos": 1},
+                        "MLB2": {"tipo": "item", "categoria": "fralda", "pos": 9}}
+    espelho._estado(e)["ml"]["MLB3"] = {"ate": (AGORA + timedelta(hours=5)).isoformat(timespec="minutes")}
+    assert desconto_minimo(cfg, e, "MLB1") == 0.15     # entre os 3 mais vendidos
+    assert desconto_minimo(cfg, e, "MLB2") == 0.20
+    assert desconto_minimo(cfg, e, "MLB3") == 0.10     # veio de um canal de ofertas
+    assert avaliar_oferta(cfg, e, prod("MLB1"), info(84, 100, "MLB1"), AGORA)          # 16% e é top 3
+    assert avaliar_oferta(cfg, e, prod("MLB2"), info(84, 100, "MLB2"), AGORA) is None  # 16% e não é top
+    # cupom do canal que completa os 20%: 12% do anúncio + cupom levando a R$ 75
+    monkeypatch.setattr(cupom_oferta, "melhor_cupom", lambda est_, o, ag: {"codigo": "X", "preco": 75.0, "economia": 13.0})
+    assert avaliar_oferta(cfg, e, prod("MLB2"), info(88, 100, "MLB2"), AGORA)
+    monkeypatch.setattr(cupom_oferta, "melhor_cupom", lambda est_, o, ag: {"codigo": "X", "preco": 85.0, "economia": 3.0})
+    assert avaliar_oferta(cfg, e, prod("MLB2"), info(88, 100, "MLB2"), AGORA) is None
+
+
+def test_shopee_busca_por_categoria_com_rodizio():
+    from bot import shopee_ofertas as so
+    chamadas = []
+
+    class Shp:
+        def buscar(self, termo="", ordem=2, pagina=1, limite=50, categoria=None):
+            chamadas.append((termo, categoria, pagina))
+            return [_produto_shopee(id=f"SHP{len(chamadas)}", titulo=f"Brinquedo Infantil Modelo {len(chamadas)}")]
+
+    e = est.novo()
+    so.buscar_candidatos(Shp(), e, AGORA, log=lambda m: None)
+    cats = [c for c in chamadas if c[1]]
+    assert len(chamadas) == so.TERMOS_POR_RODADA + 2 and cats == [("", 100683, 1), ("", 100684, 1)]
+    chamadas.clear()
+    e["shopee"]["cat"] = len(so.CATEGORIAS)          # deu a volta: começa a página 2
+    so.buscar_candidatos(Shp(), e, AGORA, log=lambda m: None)
+    assert [c for c in chamadas if c[1]][0] == ("", 100683, 2)
+    chamadas.clear()
+    so.buscar_candidatos(Shp(), e, AGORA, log=lambda m: None, termos=["fralda"])   # busca pedida: sem categorias
+    assert chamadas == [("fralda", None, 1)]
+
+
+def test_shopee_espelho_aceita_200_vendas():
+    from bot import shopee_ofertas as so
+    p = _produto_shopee(vendas=250)
+    assert so.aprovado(p) == "poucas vendas" and so.aprovado(p, so.VENDAS_MIN_ESPELHO) is None
+    assert so.aprovado(_produto_shopee(vendas=150), so.VENDAS_MIN_ESPELHO) == "poucas vendas"
+
+
+def test_shopee_busca_sem_palavra_nao_manda_keyword():
+    from bot.shopee import Shopee
+    vistos = []
+
+    class S(Shopee):
+        def _chamar(self, consulta, **k):
+            vistos.append(consulta)
+            return {"productOfferV2": {"nodes": []}}
+
+    s = S("1", "x")
+    s.buscar("", categoria=100684, pagina=2)
+    s.buscar("fralda")
+    assert "keyword" not in vistos[0] and "productCatId:100684" in vistos[0] and "page:2" in vistos[0]
+    assert 'keyword:"fralda"' in vistos[1]

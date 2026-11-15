@@ -183,7 +183,35 @@ def conectar_ml(cfg: Config):
     return MercadoLivre(access), "com token"
 
 
-DESCONTO_MIN_ESPELHO = 0.10
+DESCONTO_MIN_ESPELHO = 0.10   # veio de um canal de ofertas (já passou por curadoria)
+DESCONTO_MIN_TOP = 0.15       # está entre os 3 mais vendidos da sua categoria
+DESCONTO_MIN_CUPOM = 0.10     # com cupom do canal que leve o desconto total ao mínimo normal
+TOP_MAIS_VENDIDOS = 3
+
+
+def desconto_minimo(cfg, estado, pid):
+    """Desconto do anúncio exigido para este produto (o padrão é MIN_DESCONTO)."""
+    if espelho.eh_do_espelho(estado, pid):
+        return min(cfg.min_desconto, DESCONTO_MIN_ESPELHO)
+    pos = (estado.get("descobertos", {}).get(pid) or {}).get("pos")
+    if pos is not None and pos < TOP_MAIS_VENDIDOS:
+        return min(cfg.min_desconto, DESCONTO_MIN_TOP)
+    return cfg.min_desconto
+
+
+def avaliar_oferta(cfg, estado, produto, info, agora):
+    """avaliar() com as regras de desconto: o anúncio com o mínimo do produto, queda real pelo
+    histórico (dentro de avaliar) ou cupom do canal que complete o desconto."""
+    oferta = avaliar(produto, info, estado, agora, desconto_minimo(cfg, estado, produto.id), cfg.repost_dias)
+    if oferta or cfg.min_desconto <= DESCONTO_MIN_CUPOM:
+        return oferta
+    prov = avaliar(produto, info, estado, agora, DESCONTO_MIN_CUPOM, cfg.repost_dias)
+    if prov:
+        cp = cupom_oferta.melhor_cupom(estado, prov, agora)
+        ref = prov.preco_de or prov.preco
+        if cp and cp.get("preco") and 1 - cp["preco"] / ref >= cfg.min_desconto:
+            return prov
+    return None
 
 
 def montar_lista(cfg: Config, da_planilha, estado):
@@ -306,7 +334,7 @@ def _reconferir(ml, produto, oferta, estado, cfg, agora):
             info = ml.itens([produto.id]).get(produto.id)
     except (ErroML, AcessoNegado):
         return oferta  # sem como conferir agora: vale a consulta de minutos atrás
-    nova = avaliar(produto, info, estado, agora, cfg.min_desconto, cfg.repost_dias)
+    nova = avaliar_oferta(cfg, estado, produto, info, agora)
     if nova is None:
         log(f"{oferta.id}: o preço mudou antes do post; pulei.")
         return None
@@ -332,9 +360,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         if motivo:
             log(f"Bloqueado {p.id}: {motivo} — '{info.titulo[:60]}'")
             continue
-        # Quem veio dos canais de ofertas já passou por uma curadoria: desconto mínimo menor
-        min_desc = min(cfg.min_desconto, DESCONTO_MIN_ESPELHO) if espelho.eh_do_espelho(estado, p.id) else cfg.min_desconto
-        oferta = avaliar(p, info, estado, agora, min_desc, cfg.repost_dias)
+        oferta = avaliar_oferta(cfg, estado, p, info, agora)
         if info.preco:
             est.registrar_preco(estado, p.id, float(info.preco), agora)
         if oferta:

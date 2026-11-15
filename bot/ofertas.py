@@ -43,7 +43,12 @@ def avaliar(produto, info, estado, agora: datetime, min_desconto=0.15, repost_di
     reg = estado["precos"].get(produto.id)
     menor_hist = bool(reg and len(reg["historico"]) >= 3 and preco < reg["min"] * 0.98)
 
-    if not (desconto >= min_desconto or (abaixo or 0) >= min_desconto or menor_hist):
+    # Queda de verdade pelo histórico do próprio bot: vale mesmo sem o "de" do anúncio
+    from .estado import preco_tipico
+    tipico, dias_hist = preco_tipico(estado, produto.id, agora)
+    queda_real = bool(tipico and dias_hist >= DIAS_HIST_MIN and preco <= tipico * (1 - QUEDA_REAL_MIN))
+
+    if not (desconto >= min_desconto or (abaixo or 0) >= min_desconto or menor_hist or queda_real):
         return None
 
     postado = estado["postados"].get(produto.id)
@@ -71,6 +76,8 @@ def avaliar(produto, info, estado, agora: datetime, min_desconto=0.15, repost_di
 
 # Com pelo menos esta quantidade de dias de histórico, o bot confia no próprio preço "normal"
 DIAS_HIST_MIN = 7
+# Preço 10% abaixo do normal (mediana de 30 dias) já é oferta, com ou sem "de" no anúncio
+QUEDA_REAL_MIN = 0.10
 
 
 def marcar_queda_real(oferta, estado, agora):
@@ -80,6 +87,9 @@ def marcar_queda_real(oferta, estado, agora):
     tipico, dias = preco_tipico(estado, oferta.id, agora)
     oferta.dias_hist = dias
     oferta.queda_real = (1 - oferta.preco / tipico) if tipico else None
+    # Sem "de" no anúncio, mas com queda de verdade: o post mostra o preço que vinha sendo praticado
+    oferta.preco_normal = tipico if (tipico and dias >= DIAS_HIST_MIN and not oferta.preco_de
+                                     and oferta.preco <= tipico * (1 - QUEDA_REAL_MIN)) else None
     oferta.selo_dias = selo_menor_preco(estado, oferta.id, oferta.preco, agora)
     return oferta
 

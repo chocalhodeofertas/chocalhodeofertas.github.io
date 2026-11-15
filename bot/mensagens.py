@@ -257,6 +257,8 @@ def _linhas_preco(oferta, negrito, riscado, codigo=lambda t: t):
         linhas.append(f"A partir de {negrito(brl(oferta.preco))}")
     else:
         linhas.append(f"Por {negrito(brl(oferta.preco))}")
+    if getattr(oferta, "preco_normal", None):
+        linhas.append(f"📉 Baixou: vinha custando {brl(oferta.preco_normal)} no histórico do Chocalho")
     if getattr(oferta, "selo_dias", None):
         linhas.append(f"📉 Menor preço que o Chocalho viu em {oferta.selo_dias} dias")
     por_un = None if getattr(oferta, "a_partir", False) else preco_por_unidade(oferta.titulo, oferta.preco)

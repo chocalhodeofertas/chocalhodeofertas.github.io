@@ -23,6 +23,9 @@ Textos para o dono do projeto sempre em português do Brasil.
   Com 7+ dias de histórico, `ofertas.peso_queda_real` dá +30% na pontuação para queda real ≥ 10% e -40% para desconto "de fachada" (< 3%).
   Quem sai dos mais vendidos do ML vai para `estado.acompanhados` (30 dias, 1/3 por rodada); na Shopee, produtos aprovados vão para
   `shopee.acompanhados` e 15 por rodada são reconferidos por `itemId` (queda real ≥ 10% vira candidato).
+- Quando vira oferta (ML, `main.avaliar_oferta`): desconto do anúncio ≥ `MIN_DESCONTO` (20%); ≥ 15% se está entre os 3 mais vendidos
+  da categoria; ≥ 10% se veio do espelho; ≥ 10% + cupom do canal que leve o total a 20%; ou queda real ≥ 10% sobre o preço típico
+  (7+ dias de histórico), mesmo sem "de" no anúncio (o post mostra "📉 Baixou: vinha custando R$ X no histórico do Chocalho").
 - Selo no post (`ofertas.selo_menor_preco`, ML e Shopee): "📉 Menor preço que o Chocalho viu em N dias" com 14+ dias de histórico,
   preço atual = mínimo da janela (até 30 dias) e preço já 3% mais alto na janela. Decisão do Leonardo apesar da cláusula 5.4 do ML.
 - Repetição: `REPOST_DIAS` (padrão 7 no workflow): mesmo produto e títulos parecidos (ML + Shopee) não voltam antes disso; volta antes só se o preço cair 5%.
@@ -33,10 +36,14 @@ Textos para o dono do projeto sempre em português do Brasil.
   Passam pelos mesmos filtros (regra "infantil", NBCAL, repetição); desconto mínimo 10% e +20% na pontuação. Shopee: `shopee_ofertas.do_espelho` confere por itemId.
 - `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica) e `fora_da_faixa` (casa/adulto, exige sinal infantil).
 - `mensagens.py`: `preco_por_unidade` (fralda descartável: por fralda; lenço umedecido: a cada 100; só com quantidade clara no título). Textos do Telegram/WhatsApp, frases de abertura por produto, linha de cupom, Shopee ("A partir de", nota e vendas).
+- `lote.py`: lote do Linkbuilder (não existe API oficial do ML para gerar link; é manual). Prioriza candidatos do espelho (valem 48 h)
+  e rebaixa o que é parecido com algo postado na semana.
 - `cupons_ml.py` + `cupom_oferta.py`: lê cupons (canal oficial do ML + @cupombr via Telethon) e aplica o melhor cupom compatível na oferta.
 - `shopee.py`: cliente da Open API de afiliados (GraphQL, assinatura SHA256). Repete em erro 10000/10030.
 - `shopee_ofertas.py`: ofertas da Shopee por cima das do ML (limite próprio: `SHOPEE_MAX_DIA` 50, `SHOPEE_MAX_HORA` 4).
-  Regras: nota ≥ 4,7, vendas ≥ 500, comissão ≥ 5%, só preço final; "de/por" só com queda vista pelo próprio bot.
+  Busca: 3 palavras-chave + 2 categorias infantis por rodada (`CATEGORIAS`, mais vendidos, páginas 1 a 3 em rodízio).
+  A API não tem oferta relâmpago; `listType` 2 (top) e 0 trazem produtos gerais, não usamos.
+  Regras: nota ≥ 4,7, vendas ≥ 500 (200 se veio do espelho), comissão ≥ 5%, só preço final; "de/por" só com queda vista pelo próprio bot.
   Links via `generateShortLink` com subId `telegram` / `whatsapp`.
 - `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/`; o serviço (Baileys) posta com aquecimento automático
   (4 → 10 → 14 → 20 posts/dia nos dias 0, 4, 8 e 14 desde a conexão), só das 7h às 23h, alterna ML/Shopee, pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
@@ -62,6 +69,7 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `produto_shopee <itemId>`: dados e foto de um produto da Shopee (foto vai para `saida/`).
 - `testar_instagram` / `coletar_instagram`: confere o token / roda a coleta uma vez em `saida/instagram`.
 - `publicar_carrossel <pasta>`: publica `docs/ig-tmp/<pasta>/` no Instagram (só com aprovação do Leonardo).
+- `sondar_shopee`: mostra categorias (productCatIds) e tipos de lista que a API da Shopee devolve (só leitura).
 - `achar_canais_tg "termo; termo"`: procura canais públicos de ofertas de bebê no Telegram e mede links/posts infantis (saida/canais_tg.md).
 - `baixar nome=url ...`: baixa arquivos para `saida/` (o container não alcança mlstatic/Shopee/Canva).
 
