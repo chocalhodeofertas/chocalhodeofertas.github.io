@@ -90,7 +90,7 @@ jobs:
           TG_CANAL_CUPONS: ${{ secrets.TG_CANAL_CUPONS }}
           CUPONS_CATEGORIAS: ${{ vars.CUPONS_CATEGORIAS }}
           CUPONS_CANAIS_EXTRA: ${{ vars.CUPONS_CANAIS_EXTRA || 'cupombr' }}
-          FONTES_OFERTAS_TG: ${{ vars.FONTES_OFERTAS_TG || '' }}
+          FONTES_OFERTAS_TG: ${{ vars.FONTES_OFERTAS_TG || 'babypromokids,canalpromocoesdemamae,descontinhodemamae,boomdescontos,agirafinhababy,promodebebe,OfertasdaAdil,promobytebaby,blackoutmamaeebebe,mamaecomprapromo,ofertas_itens_de_bebes,shopee_baby,alebabykids,economiadasmamaes,clubekotascriancas,promohypebaby,comparebaby,OfertaKids' }}
           WHATSAPP_GRUPO: ${{ vars.WHATSAPP_GRUPO || 'https://chat.whatsapp.com/FOwEWWIjfKoFWmD8Xsv5lq' }}
           AFILIADO_MATT_WORD: ${{ vars.AFILIADO_MATT_WORD || 'chocalhodeofertas' }}
           AFILIADO_MATT_TOOL: ${{ vars.AFILIADO_MATT_TOOL || '39326742' }}

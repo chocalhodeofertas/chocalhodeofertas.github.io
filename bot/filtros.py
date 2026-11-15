@@ -75,7 +75,7 @@ _INFANTIL = re.compile(
     r"menino|meninos|menina|meninas|junior|escolar|aro (12|14|16|20)|"
     r"pokemon|patrulha canina|turma da monica|peppa|bluey|frozen|homem aranha|minecraft|"
     r"colorir|livro de atividades|historinhas?|conto de fadas|diario de um banana|"
-    r"fraldas?|enxoval|maternidade|berco|lencos? umedecidos?)\b"
+    r"fraldas?|enxoval|maternidade|berco|lencos? umedecidos?|assaduras?|barbie|hot wheels|lego|bonecas?)\b"
 )
 # Games: só o que é do universo infantil/familiar (fone, cadeira gamer etc. ficam de fora)
 _GAMES_OK = re.compile(

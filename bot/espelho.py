@@ -140,6 +140,9 @@ def titulo_da_mensagem(texto):
             continue
         if sum(c.isalpha() for c in limpa) < 8:
             continue
+        letras = [c for c in limpa if c.isalpha()]
+        if letras and sum(c.isupper() for c in letras) / len(letras) > 0.8:
+            continue  # chamada em caixa alta ("CORRE QUE ACABA"), não é o nome do produto
         return limpa[:120]
     return ""
 

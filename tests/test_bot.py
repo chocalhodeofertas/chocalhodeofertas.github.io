@@ -1877,3 +1877,11 @@ def test_espelho_link_sem_produto_usa_o_nome(monkeypatch):
     assert n == 2
     assert "MLB321" in espelho.candidatos_ml(e, AGORA)
     assert list(espelho.titulos_shopee(e, AGORA)) == ["Banheira Dobrável Infantil Com Termômetro"]
+
+
+def test_espelho_ignora_chamada_em_caixa_alta():
+    from bot import espelho
+    from bot.filtros import fora_da_faixa
+    assert espelho.titulo_da_mensagem("CORRE QUE A SHOPEE TÁ COM DESCONTO\nBanheira Dobrável Infantil 35L") == "Banheira Dobrável Infantil 35L"
+    assert fora_da_faixa("Hipoglós Creme Preventivo de Assaduras, 120g", "outros", "infantil") is None
+    assert fora_da_faixa("Kit Com 5 Carrinhos Sortidos Hot Wheels Coloridos Mattel", "outros", "infantil") is None
