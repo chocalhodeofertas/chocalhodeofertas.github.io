@@ -47,8 +47,12 @@ async def _resolver(client, fonte):
     raise RuntimeError("a conta do Telegram ainda não entrou nesse canal")
 
 
-async def _ler(api_id, api_hash, sessao, fontes):
-    """fontes: [(nome, desde)] -> [[(id, texto)] | Exception] na mesma ordem."""
+async def _ler(api_id, api_hash, sessao, fontes, cache=None):
+    """fontes: [(nome, desde)] -> [[(id, texto)] | Exception] na mesma ordem.
+
+    cache {nome: [id, access_hash]} evita procurar o @ toda rodada (o Telegram limita essas buscas)."""
+    from telethon.tl.types import InputPeerChannel
+    cache = {} if cache is None else cache
     from telethon import TelegramClient
     from telethon.sessions import StringSession
 
@@ -60,7 +64,13 @@ async def _ler(api_id, api_hash, sessao, fontes):
         saida = []
         for nome, desde in fontes:
             try:
-                chat = await _resolver(client, nome)
+                if nome in cache:
+                    chat = InputPeerChannel(*cache[nome])
+                else:
+                    ent = await _resolver(client, nome)
+                    if getattr(ent, "access_hash", None):
+                        cache[nome] = [ent.id, ent.access_hash]
+                    chat = ent
                 msgs = []
                 limite = MSGS_POR_RODADA if desde else MSGS_PRIMEIRA_VEZ
                 async for m in client.iter_messages(chat, min_id=desde or 0, limit=limite):
@@ -77,6 +87,7 @@ async def _ler(api_id, api_hash, sessao, fontes):
                     msgs.append((m.id, texto))
                 saida.append(sorted(msgs))
             except Exception as e:  # noqa: BLE001
+                cache.pop(nome, None)
                 saida.append(e)
         return saida
     finally:
@@ -155,8 +166,10 @@ def coletar(ml, estado, agora, log=print, ler=None, expandir_url=expandir):
             return 0
         sessao = ler_seguro(api_hash, ARQ_SESSAO)["sessao"]
 
+        cache = e.setdefault("entidades", {})
+
         def ler(lista):
-            return asyncio.run(_ler(api_id, api_hash, sessao, lista))
+            return asyncio.run(_ler(api_id, api_hash, sessao, lista, cache))
     try:
         resultados = ler([(f, e["fontes"].get(f)) for f in fontes])
     except Exception as erro:  # noqa: BLE001
