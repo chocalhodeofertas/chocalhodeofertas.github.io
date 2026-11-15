@@ -44,7 +44,9 @@ Textos para o dono do projeto sempre em português do Brasil.
   `ofertas.priorizar_tipos_novos`: tipo que saiu nas últimas 48 h vai para o fim da fila (só entra se faltar alternativa).
 - `espelho.py`: lê canais de ofertas do Telegram (`FONTES_OFERTAS_TG`, padrão no ciclo.yml) pela sessão Telethon;
   links do ML/Shopee viram candidatos por 48 h (`estado.espelho`). ML: catálogo direto; anúncio avulso → busca o catálogo pelo título.
-  Passam pelos mesmos filtros (regra "infantil", NBCAL, repetição); desconto mínimo 10% e +20% na pontuação. Shopee: `shopee_ofertas.do_espelho` confere por itemId.
+  Passam pelos mesmos filtros (regra "infantil", NBCAL, repetição); desconto mínimo 10% e +20% na pontuação.
+  Origem visível para o admin: `espelho.fonte` → linha "🔁 Copiada do canal @x" na cópia do ML, aviso no post da Shopee
+  e lista no resumo diário (`posts_dia[].fonte`). Shopee: `shopee_ofertas.do_espelho` confere por itemId.
 - `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica) e `fora_da_faixa` (casa/adulto, exige sinal infantil).
 - `mensagens.py`: `preco_por_unidade` (fralda descartável: por fralda; lenço umedecido: a cada 100; só com quantidade clara no título). Textos do Telegram/WhatsApp, frases de abertura por produto, linha de cupom, Shopee ("A partir de", nota e vendas).
 - `lote.py`: lote do Linkbuilder (não existe API oficial do ML para gerar link; é manual). Prioriza candidatos do espelho (valem 48 h)
@@ -65,7 +67,7 @@ Textos para o dono do projeto sempre em português do Brasil.
   até 3 por loja e 1 por tipo, com o preço conferido de novo (subiu ou acabou → sai).
 - `grafico.py`: gráfico de preço em Pillow (1080x1080; `formato="4x5"` para carrossel) pela `estado.serie_diaria`.
   `grafico.enviar_oferta` posta a oferta; com selo e `GRAFICO_ATIVO=1`, manda álbum (foto + gráfico) no Telegram.
-  Os três formatos ficam em 0 no ciclo.yml até o Leonardo aprovar a prévia (`tools/previa_resumos`).
+  Os três aprovados e ligados em 15/11. WhatsApp não recebe o gráfico (só o texto com a prévia do link).
 - `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas, cupons, WhatsApp).
 - `comandos.py`: comandos do admin no Telegram e resumo diário (inclui WhatsApp). `bloquear/desbloquear/bloqueados` (palavras em
   `estado.bloqueados`, aplicadas por `filtros.definir_bloqueios` no início de cada rodada); `fila`, `tirar N`, `limpar fila` (fila do WhatsApp);

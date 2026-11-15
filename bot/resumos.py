@@ -13,7 +13,7 @@ import os
 import re
 from datetime import datetime
 
-from . import mensagens, whatsapp
+from . import espelho, mensagens, whatsapp
 from .filtros import motivo_bloqueio
 from .ofertas import tipo_produto
 from .telegram import TelegramErro
@@ -195,6 +195,7 @@ def registrar(estado, oferta, agora, loja="ml", tipo=None):
         "link": oferta.link, "link_wa": getattr(oferta, "link_wa", None) or oferta.link,
         "imagem": oferta.imagem, "categoria": oferta.categoria or "",
         "vendas": getattr(oferta, "vendas", 0) or 0, "nota": getattr(oferta, "nota", 0) or 0,
+        "fonte": espelho.fonte(estado, oferta.id),
     })
 
 

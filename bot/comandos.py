@@ -80,8 +80,9 @@ def resolver_meli(link, session=None):
 
 # ---------- postar ----------
 
-def enviar_copias(tg, chat, oferta, rng=random):
-    """Arte da oferta + texto do WhatsApp com botões que abrem WhatsApp e X já preenchidos."""
+def enviar_copias(tg, chat, oferta, rng=random, fonte=None):
+    """Arte da oferta + texto do WhatsApp com botões que abrem WhatsApp e X já preenchidos.
+    fonte: canal do Telegram de onde a oferta foi copiada (espelho), para você saber a origem."""
     if hasattr(tg, "enviar_foto"):
         try:
             from . import arte
@@ -90,7 +91,8 @@ def enviar_copias(tg, chat, oferta, rng=random):
         except Exception:  # noqa: BLE001
             pass  # sem arte, segue com o texto
     wa = mensagens.montar_whatsapp(oferta, rng)
-    tg.enviar_texto(chat, "📋 Toque no bloco abaixo para copiar e cole no WhatsApp:\n\n<pre>"
+    origem = f"🔁 <b>Copiada do canal @{html.escape(fonte)}</b>\n" if fonte else ""
+    tg.enviar_texto(chat, origem + "📋 Toque no bloco abaixo para copiar e cole no WhatsApp:\n\n<pre>"
                     + html.escape(wa) + "</pre>", html=True,
                     botoes=mensagens.botoes_compartilhar(wa, mensagens.montar_x(oferta)))
 
@@ -397,6 +399,13 @@ def montar_resumo(estado, cfg, tg, agora):
     feitos = (estado.get("lotes_dia") or {}).get(hoje, 0)
     pend = " (1 esperando sua resposta)" if (estado.get("lote") or {}).get("dia") == hoje else ""
     linhas.append(f"📦 Lotes hoje: {feitos} de {cfg.lotes_por_dia}{pend}")
+
+    copiadas = [i for i in ((estado.get("posts_dia") or {}).get("itens") or [])
+                if i.get("fonte") and (estado.get("posts_dia") or {}).get("dia") == hoje]
+    linhas.append(f"🔁 Copiadas de outros canais hoje: <b>{len(copiadas)}</b>")
+    for i in copiadas[:15]:
+        loja = "Shopee" if i.get("loja") == "shopee" else "ML"
+        linhas.append(f"   • @{html.escape(i['fonte'])} → {html.escape(i['titulo'][:45])} ({loja})")
 
     de_hoje = [p for p in estado.get("postados", {}).values()
                if str(p.get("quando", "")).startswith(hoje) and p.get("titulo")]

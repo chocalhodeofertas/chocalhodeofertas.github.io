@@ -272,6 +272,11 @@ def para_oferta(p, estado, agora, link_tg=None, link_wa=None):
     return o
 
 
+def espelho_fonte(estado, pid):
+    from .espelho import fonte
+    return fonte(estado, pid)
+
+
 def links(shp, p, log=print):
     """Link de afiliado da própria Shopee, com etiqueta por canal. Sem a API, usa o offerLink."""
     origem = p.link_produto or p.link
@@ -352,6 +357,13 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
             continue
         whatsapp.enfileirar_oferta(o, mensagens.montar_whatsapp(o, rng), agora, loja="shopee")
         resumos.registrar(estado, o, agora, "shopee")
+        canal = espelho_fonte(estado, o.id)
+        if canal and getattr(cfg, "admin_chat", ""):
+            try:  # avisa você de onde veio a oferta copiada
+                tg.enviar_texto(cfg.admin_chat, f"🔁 Shopee: postei uma oferta copiada do canal @{canal}\n"
+                                f"{o.titulo[:80]}\n{o.link}")
+            except TelegramErro:
+                pass
         try:
             vitrine.guardar_shopee(estado, o, link_site(shp, p, log) or link_tg, agora)
         except Exception as e:  # noqa: BLE001 — a página nunca atrapalha os posts

@@ -468,7 +468,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         log(f"Postado: {o.id} {mensagens.brl(o.preco)} (-{round(o.desconto * 100)}%)")
         if cfg.admin_chat:
             try:
-                comandos.enviar_copias(tg, cfg.admin_chat, o, rng)
+                comandos.enviar_copias(tg, cfg.admin_chat, o, rng, fonte=espelho.fonte(estado, o.id))
             except TelegramErro as e:
                 log(f"Aviso: não consegui mandar a cópia para você: {e}")
     return enviadas

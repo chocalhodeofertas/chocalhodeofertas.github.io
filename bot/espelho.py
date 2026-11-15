@@ -266,6 +266,13 @@ def titulos_shopee(estado, agora):
     return {t: d for t, d in _estado(estado)["shopee_titulos"].items() if not d.get("fora")}
 
 
+def fonte(estado, pid):
+    """Canal de onde o produto veio (sem @), ou None se não veio do espelho."""
+    e = estado.get("espelho") or {}
+    reg = (e.get("ml") or {}).get(pid) or (e.get("shopee") or {}).get(pid)
+    return (reg or {}).get("fonte") or None
+
+
 def eh_do_espelho(estado, pid):
     e = estado.get("espelho") or {}
     return pid in (e.get("ml") or {}) or pid in (e.get("shopee") or {})

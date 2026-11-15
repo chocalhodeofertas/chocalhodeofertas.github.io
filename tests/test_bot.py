@@ -2331,3 +2331,20 @@ def test_colchao_de_solteiro_fica_de_fora():
     assert fora_da_faixa("Colchão Solteiro 188x88cm Espuma D20 Gazin", "quarto")
     assert fora_da_faixa("Jogo de Cama Solteiro Infantil Dinossauros 3 Peças", "quarto") is None
     assert fora_da_faixa("Berço 3 em 1 Vira Cama de Solteiro", "quarto") is None
+
+
+def test_origem_do_espelho_aparece_para_o_admin():
+    from types import SimpleNamespace as N
+    from bot import comandos, espelho, resumos
+    e = est.novo()
+    e["espelho"] = {"ml": {"MLB1": {"fonte": "babypromokids", "ate": "2099-01-01"}}, "shopee": {}}
+    assert espelho.fonte(e, "MLB1") == "babypromokids" and espelho.fonte(e, "MLB2") is None
+    o = N(id="MLB1", titulo="Banheira Dobrável", preco=70.0, preco_de=100.0, link="https://meli.la/a", imagem=None,
+          categoria="higiene", desconto=0.3)
+    resumos.registrar(e, o, AGORA, "ml")
+    assert e["posts_dia"]["itens"][0]["fonte"] == "babypromokids"
+    tg = TGCmd()
+    comandos.enviar_copias(tg, "123", avaliar(prod(), info(70, 100), est.novo(), AGORA), random.Random(1), fonte="babypromokids")
+    assert "Copiada do canal @babypromokids" in tg.textos[-1][1]
+    texto = comandos.montar_resumo(e, cfg_cmd(), TGCmd(), AGORA)
+    assert "Copiadas de outros canais hoje: <b>1</b>" in texto and "@babypromokids → Banheira Dobrável (ML)" in texto
