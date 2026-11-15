@@ -35,7 +35,7 @@ def main(arg):
 
     def expandir_registrando(url, sess=None):
         final = espelho.expandir(url, sess)
-        if len(amostra) < 80:
+        if len(amostra) < 25 and "amazon" not in final:
             amostra.append(f"- {url[:70]} → {final[:110]}")
         return final
 
@@ -71,6 +71,8 @@ def main(arg):
         for pid, d in e["shopee"].items():
             if d.get("fora"):
                 linhas.append(f"- ❌ {d['fora']} — {pid} [{d.get('fonte')}]")
+        for t, d in e["shopee_titulos"].items():
+            linhas.append(f"- 🔎 {d.get('fora', 'pendente')} — “{t[:60]}” [{d.get('fonte')}]")
     fontes = {k: v for k, v in e["fontes"].items()}
     linhas.insert(0, f"# Ensaio do espelho {agora:%d/%m %H:%M}\n\nFontes lidas: {json.dumps(fontes, ensure_ascii=False)}\n")
     Path("saida").mkdir(exist_ok=True)

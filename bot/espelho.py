@@ -28,7 +28,7 @@ def fontes_configuradas():
 
 def _estado(estado):
     e = estado.setdefault("espelho", {})
-    for k in ("fontes", "ml", "shopee", "links"):
+    for k in ("fontes", "ml", "shopee", "links", "shopee_titulos"):
         e.setdefault(k, {})
     return e
 
@@ -123,6 +123,14 @@ def classificar(url):
     return None
 
 
+def _loja(texto):
+    if re.search(r"meli\.la|mercadolivre\.com|mercadolibre\.com|mercado\.?livre", texto):
+        return "ml"
+    if re.search(r"shopee\.com|shope\.ee|shp\.ee", texto):
+        return "shopee"
+    return None
+
+
 def titulo_da_mensagem(texto):
     """Primeira linha que parece nome de produto (sem preço, link nem chamada)."""
     for linha in (texto or "").splitlines():
@@ -190,9 +198,22 @@ def coletar(ml, estado, agora, log=print, ler=None, expandir_url=expandir):
                 if url in e["links"]:
                     continue
                 e["links"][url] = agora.date().isoformat()
-                alvo = classificar(url) or classificar(expandir_url(url, sess))
+                final = url if classificar(url) else expandir_url(url, sess)
+                alvo = classificar(final)
                 if not alvo:
-                    continue
+                    # Link de afiliado que não mostra o produto (vitrine "social" do ML, encurtador da Shopee
+                    # que só abre no app): procura o produto pelo nome escrito na mensagem
+                    loja = _loja(url + " " + final)
+                    titulo = titulo_da_mensagem(texto)
+                    if loja == "ml":
+                        pid = _catalogo_por_titulo(ml, titulo)
+                        alvo = ("ml", "catalogo", pid) if pid else None
+                    elif loja == "shopee" and titulo:
+                        if titulo not in e["shopee_titulos"]:
+                            novos += 1
+                        e["shopee_titulos"][titulo] = {"ate": ate, "fonte": fonte}
+                    if not alvo:
+                        continue
                 if alvo[0] == "shopee":
                     chave = "SHP" + alvo[1]
                     if chave not in e["shopee"]:
@@ -217,7 +238,7 @@ def coletar(ml, estado, agora, log=print, ler=None, expandir_url=expandir):
 def limpar(estado, agora):
     e = _estado(estado)
     agora_iso = agora.isoformat(timespec="minutes")
-    for loja in ("ml", "shopee"):
+    for loja in ("ml", "shopee", "shopee_titulos"):
         for k in [k for k, v in e[loja].items() if v.get("ate", "") < agora_iso]:
             del e[loja][k]
     corte = (agora - timedelta(days=7)).date().isoformat()
@@ -234,6 +255,12 @@ def candidatos_ml(estado, agora):
 def ids_shopee(estado, agora, ja_vistos=()):
     limpar(estado, agora)
     return [k for k in _estado(estado)["shopee"] if k not in ja_vistos]
+
+
+def titulos_shopee(estado, agora):
+    """Nomes de produtos da Shopee citados nos canais (link que não abriu fora do app)."""
+    limpar(estado, agora)
+    return {t: d for t, d in _estado(estado)["shopee_titulos"].items() if not d.get("fora")}
 
 
 def eh_do_espelho(estado, pid):

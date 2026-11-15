@@ -148,8 +148,22 @@ ESPELHO_POR_RODADA = 15
 def do_espelho(shp, estado, agora, ja=(), log=print, limite=ESPELHO_POR_RODADA):
     """Produtos da Shopee vistos nos canais de ofertas: confere pela API oficial e aplica as nossas regras."""
     from . import espelho
-    e = estado.get("espelho") or {}
+    from .ofertas import parecido
+    e = espelho._estado(estado)
     saida = []
+    # Nomes vindos de links que não abriram: procura pela API oficial e só aceita produto bem parecido
+    for titulo, reg in list(espelho.titulos_shopee(estado, agora).items())[:limite]:
+        try:
+            achados = shp.buscar(titulo, ordem=MAIS_VENDIDOS, limite=5)
+        except ShopeeErro as erro:
+            log(f"Shopee: busca do espelho falhou: {erro}")
+            break
+        par = next((p for p in achados if parecido(titulo, p.titulo)), None)
+        if par is None:
+            reg["fora"] = "não achei na API"
+            continue
+        reg["fora"] = "resolvido"
+        e["shopee"].setdefault(par.id, {"ate": reg["ate"], "fonte": reg.get("fonte")})
     for pid in espelho.ids_shopee(estado, agora, ja)[:limite]:
         reg = e["shopee"].get(pid) or {}
         if reg.get("fora"):

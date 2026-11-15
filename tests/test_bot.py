@@ -1857,3 +1857,23 @@ def test_espelho_shopee_confere_pela_api():
     achados = so.do_espelho(Shp(), e, AGORA, log=lambda m: None)
     assert [p.id for p in achados] == ["SHP7"]
     assert e["espelho"]["shopee"]["SHP8"]["fora"]
+
+
+def test_espelho_link_sem_produto_usa_o_nome(monkeypatch):
+    from bot import espelho
+    e = est.novo()
+    monkeypatch.setenv("FONTES_OFERTAS_TG", "@canal")
+
+    class ML:
+        def buscar_produtos(self, termo, limite=10):
+            return [("MLB321", "Kit 3 Bodies Bebê Manga Longa Algodão Branco")]
+
+    msg_ml = "Kit 3 Bodies Bebê Manga Longa Algodão\nPor R$ 49\nhttps://meli.la/abc"
+    msg_shp = "Banheira Dobrável Infantil Com Termômetro\nR$ 89\nhttps://s.shopee.com.br/xyz"
+    destinos = {"https://meli.la/abc": "https://www.mercadolivre.com.br/social/fulano?matt_word=x",
+                "https://s.shopee.com.br/xyz": "https://s.shopee.com.br/xyz"}
+    n = espelho.coletar(ML(), e, AGORA, log=lambda m: None, ler=lambda l: [[(1, msg_ml), (2, msg_shp)]],
+                        expandir_url=lambda u, s=None: destinos[u])
+    assert n == 2
+    assert "MLB321" in espelho.candidatos_ml(e, AGORA)
+    assert list(espelho.titulos_shopee(e, AGORA)) == ["Banheira Dobrável Infantil Com Termômetro"]
