@@ -12,7 +12,7 @@ import hashlib
 import html
 import os
 import re
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 from . import mensagens
 from .filtros import fora_da_faixa, motivo_bloqueio, normalizar

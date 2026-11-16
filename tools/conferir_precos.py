@@ -12,7 +12,7 @@ import time
 import requests
 
 from bot import estado as est
-from bot.mercadolivre import API, MercadoLivre, token_do_app
+from bot.mercadolivre import MercadoLivre, token_do_app
 
 quantos = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].strip().isdigit() else 999
 estado = est.carregar("data/estado.json")

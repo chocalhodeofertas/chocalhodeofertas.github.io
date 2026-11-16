@@ -9,7 +9,7 @@ Fontes em FONTES_OFERTAS_TG (separadas por vírgula): @usuario, link t.me ou o t
 import asyncio
 import os
 import re
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 import requests
 

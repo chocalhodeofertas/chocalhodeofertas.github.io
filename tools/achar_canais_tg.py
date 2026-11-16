@@ -6,12 +6,11 @@ Grava saida/canais_tg.md e manda um resumo no privado do admin.
 """
 import asyncio
 import os
-import re
 import sys
 from pathlib import Path
 
 from bot.cupons_ml import ARQ_SESSAO, ler_seguro
-from bot.espelho import _RE_URL, classificar
+from bot.espelho import _RE_URL
 from bot.filtros import _INFANTIL, normalizar
 
 TERMOS = ["promoções bebê", "ofertas bebê", "promo baby", "baby promo", "ofertas infantis", "achadinhos bebê",

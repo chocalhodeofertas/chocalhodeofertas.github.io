@@ -16,6 +16,17 @@ Textos para o dono do projeto sempre em português do Brasil.
 - Testes: `python3 -m pytest -q tests` (tudo em `tests/test_bot.py`). Rodar antes de cada commit.
 - Antes de dar push: `git pull --rebase` (o ciclo commita `data/` sozinho).
 
+## Automações do Claude Code (`.claude/`, instaladas em 16/11 a pedido do Leonardo)
+- Travas (`.claude/hooks/proteger.py`, PreToolUse): bloqueiam abrir link de afiliado do Leonardo (meli.la,
+  s.shopee.com.br, shope.ee) por WebFetch, curl/requests ou disparando ferramenta no GitHub, e bloqueiam editar
+  `data/*.json` na mão (o ciclo grava; mudança de dados vai por migração em `bot/estado.py`).
+- Conferência do Python (`.claude/hooks/checar_python.py`, PostToolUse): pyflakes no `.py` editado
+  (`pip install pyflakes --break-system-packages`). O repositório está limpo: manter assim.
+- Skills: `testar-no-github` (`.claude/skills/testar-no-github/rodar.sh <script> "<args>"`: dispara o inspecao,
+  espera, mostra o log e clona `tmp-saida` em /tmp/saida) e `subir-mudanca` (testes, mapa, revisão, commit, rebase, push).
+- Agente `revisor-regras` (`.claude/agents/`): revisa o diff contra NBCAL, links, aprovação, segredos e decisões do Leonardo.
+- MCP `context7` (`.mcp.json`): documentação atual das bibliotecas (Baileys, Telethon, Pillow, Telegram Bot API).
+
 ## Módulos principais (bot/)
 - `main.py`: rodada do ML (descoberta, avaliação, ritmo, postagem); chama Shopee, cupons, vitrine e números.
 - `ofertas.py`: `Oferta`, `avaliar`, `pontuacao`, `tipo_produto`, ritmo (`limite_hora`, `meta_ate_agora`).

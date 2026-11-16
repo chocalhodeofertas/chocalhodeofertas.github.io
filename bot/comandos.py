@@ -635,7 +635,7 @@ def ver_fila(agora, arquivo_wa=None):
         wa = {}
     enviados = wa.get("enviados", 0) if wa.get("dia") == agora.date().isoformat() else 0
     limite = f" de {wa['max_dia']}" if wa.get("max_dia") else ""
-    linhas = [f"📬 <b>Fila do WhatsApp</b>", f"Hoje já saíram <b>{enviados}</b>{limite} posts no grupo."]
+    linhas = ["📬 <b>Fila do WhatsApp</b>", f"Hoje já saíram <b>{enviados}</b>{limite} posts no grupo."]
     if wa.get("intervalo_min"):
         linhas.append(f"Sai 1 a cada {wa['intervalo_min']} min, das 7h às 23h.")
     itens = _itens_fila()

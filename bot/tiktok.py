@@ -304,7 +304,6 @@ def produto(cena, titulo, preco, preco_de=None, foco_y=0.5, titulo_em=None):
         if len(linhas) <= 2:
             break
     passo = int(tam * 1.12)
-    alt_txt = passo * (len(linhas) - 1) + tam
     y_cartao = y0 - 34 - passo * (len(linhas) - 1)          # base da 1ª linha
     faixa = (MARGEM, y_cartao - tam - 20, L - MARGEM, y0 - 10)
     # padrão aprovado: nome logo acima do preço; o degradê garante a leitura.

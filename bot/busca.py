@@ -3,7 +3,7 @@ import html
 from datetime import timedelta
 
 from . import lote
-from .filtros import fora_da_faixa, motivo_bloqueio
+from .filtros import motivo_bloqueio
 from .mensagens import brl
 from .mercadolivre import AcessoNegado, ErroML
 

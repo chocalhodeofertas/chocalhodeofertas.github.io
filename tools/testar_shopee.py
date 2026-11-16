@@ -47,7 +47,7 @@ def main():
     bons.sort(key=lambda p: (p.desconto, p.vendas), reverse=True)
     Path("saida").mkdir(exist_ok=True)
     Path("saida/shopee.json").write_text(json.dumps([p.__dict__ for p in bons], ensure_ascii=False, indent=1))
-    linhas = [f"🛍️ <b>Teste da API da Shopee</b> (nada foi postado)",
+    linhas = ["🛍️ <b>Teste da API da Shopee</b> (nada foi postado)",
               f"{len(vistos)} produtos encontrados · {len(bons)} passaram nos filtros"]
     if erros:
         linhas.append("• a API falhou em: " + html.escape(", ".join(erros)))
