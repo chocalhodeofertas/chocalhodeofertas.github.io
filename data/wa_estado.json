@@ -14,8 +14,11 @@
     "2026-11-15": 12,
     "2026-11-16": 13
   },
-  "membros_em": "2026-11-16T19:12:29.796Z",
+  "membros_em": "2026-11-16T19:32:34.023Z",
   "ultima_loja": "shopee",
   "max_dia": 10,
-  "intervalo_min": 25
+  "intervalo_min": 4,
+  "intervalo_max": 13,
+  "caiu_em": null,
+  "avisou_queda": false
 }
