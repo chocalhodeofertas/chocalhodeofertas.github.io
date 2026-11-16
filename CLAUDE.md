@@ -78,6 +78,9 @@ Textos para o dono do projeto sempre em português do Brasil.
   `ml.procurar_anuncio` olha as páginas seguintes antes de descartar. O histórico segue com o menor preço do catálogo. Prioriza candidatos do espelho (valem 48 h)
   e rebaixa o que é parecido com algo postado na semana.
 - `cupons_ml.py` + `cupom_oferta.py`: lê cupons (canal oficial do ML + @cupombr via Telethon) e aplica o melhor cupom compatível na oferta.
+  O "cupom do anúncio" (`cupom_oferta.cupom_da_pagina`) lia a página abrindo o meli.la do Leonardo a cada post: DESLIGADO em 16/11
+  (regra dele: o bot não abre links de afiliado). Só volta com `CUPOM_DA_PAGINA=1`, se ele pedir. Ainda abrem o link, só quando
+  ele manda um meli.la avulso ao bot: `comandos.resolver_meli` (postar link / `insta <link>`); pendente de decisão dele.
 - `shopee.py`: cliente da Open API de afiliados (GraphQL, assinatura SHA256). Repete em erro 10000/10030.
 - `shopee_ofertas.py`: ofertas da Shopee por cima das do ML (limite próprio: `SHOPEE_MAX_DIA` 50, `SHOPEE_MAX_HORA` 4).
   Busca: 3 palavras-chave + 2 categorias infantis por rodada (`CATEGORIAS`, mais vendidos, páginas 1 a 3 em rodízio).

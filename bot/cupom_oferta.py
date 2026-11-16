@@ -16,6 +16,7 @@ afirmamos o que o anúncio não diz). Regras usadas:
 """
 import html
 import json
+import os
 import re
 from datetime import datetime
 
@@ -181,10 +182,16 @@ def ler_cupom_pagina(texto, oferta_id, preco):
     return None
 
 
+def pagina_ligada():
+    """Ler o cupom na página exige ABRIR o link de afiliado (meli.la). Decisão do Leonardo (16/11): o bot
+    nunca abre links de afiliado dele. Fica desligado; só volta com CUPOM_DA_PAGINA=1, se ele pedir."""
+    return os.environ.get("CUPOM_DA_PAGINA") == "1"
+
+
 def cupom_da_pagina(oferta, session=None, log=print):
-    """Abre o meli.la da oferta e lê o cupom do anúncio. Qualquer falha → None."""
+    """Abre o meli.la da oferta e lê o cupom do anúncio. Desligado por padrão (ver pagina_ligada). Qualquer falha → None."""
     link = getattr(oferta, "link", "") or ""
-    if "meli.la/" not in link:
+    if "meli.la/" not in link or not pagina_ligada():
         return None
     import requests
 

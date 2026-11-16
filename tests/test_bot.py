@@ -1346,9 +1346,30 @@ def test_cupom_lido_da_pagina_do_anuncio():
     assert "Tem cupom de *8% OFF* no anúncio" in mensagens.montar_whatsapp(o)
 
 
-def test_escolhe_entre_cupom_do_anuncio_e_do_canal():
+def test_bot_nao_abre_link_de_afiliado_para_ler_cupom(monkeypatch):
+    """Decisão do Leonardo (16/11): o bot nunca abre o meli.la dele. Sem CUPOM_DA_PAGINA=1, vale só o cupom do canal."""
     from types import SimpleNamespace as N
     from bot import cupom_oferta as co, cupons
+
+    class NaoAbre:
+        def get(self, *a, **k):
+            raise AssertionError("o bot abriu o link de afiliado")
+
+    monkeypatch.delenv("CUPOM_DA_PAGINA", raising=False)
+    e = est.novo()
+    o = N(id="MLB1", titulo="Barraca", preco=138.13, categoria="brinquedo", link="https://meli.la/x")
+    assert co.cupom_da_pagina(o, NaoAbre()) is None
+    assert co.escolher_cupom(e, o, AGORA, NaoAbre()) is None
+    cupons.publicar(TGCmd(), cfg_cmd(), e, "t",
+                    [("SITETODO10", "<b>🎟️ SITETODO10</b> 👉 <b>R$10 OFF</b>\nCompra mín.: R$79", None)], AGORA)
+    assert co.escolher_cupom(e, o, AGORA, NaoAbre())["codigo"] == "SITETODO10"
+
+
+def test_escolhe_entre_cupom_do_anuncio_e_do_canal(monkeypatch):
+    from types import SimpleNamespace as N
+    from bot import cupom_oferta as co, cupons
+
+    monkeypatch.setenv("CUPOM_DA_PAGINA", "1")  # só para testar a leitura; em produção fica desligado
 
     class Sessao:
         def __init__(self, texto):

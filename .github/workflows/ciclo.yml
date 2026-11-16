@@ -99,6 +99,8 @@ jobs:
           SHOPEE_CUPONS_LINK: ${{ vars.SHOPEE_CUPONS_LINK || 'https://s.shopee.com.br/8fTxwjM742' }}
           CUPONS_SHOPEE_ATIVO: ${{ vars.CUPONS_SHOPEE_ATIVO || '0' }}  # post diário: 0 até o Leonardo aprovar o texto
           CUPONS_SHOPEE_HORA: ${{ vars.CUPONS_SHOPEE_HORA || '9' }}
+          # Cupom "do anúncio": para ler, o bot teria de abrir o link de afiliado (meli.la). Fica 0: o Leonardo não quer o bot abrindo os links dele
+          CUPOM_DA_PAGINA: ${{ vars.CUPOM_DA_PAGINA || '0' }}
           # Busca sob pedido no privado do bot: 0 = só o admin testa (comando "achar"); 1 = aberta para todos
           BUSCA_PUBLICA: ${{ vars.BUSCA_PUBLICA || '0' }}
           TG_API_ID: ${{ secrets.TG_API_ID }}
