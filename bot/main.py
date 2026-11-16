@@ -404,6 +404,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         estado["aguardando_link"] = len(sem_link)
         vitrine.guardar(estado, oficiais, agora)
         _talvez_mandar_lote(cfg, tg, estado, sem_link, agora)
+        estado["fila_link"] = lote.resumo_fila(estado, sem_link, agora)  # para a página da fila
         candidatas = oficiais
 
     if modo == "teste":
@@ -714,8 +715,9 @@ def main(argv=None):
                     log(f"Aviso: publicação no Instagram falhou: {type(e).__name__}: {e}")
             vitrine.talvez_publicar(estado, cfg.canal, agora, log=log,
                                     grupo_wa=os.environ.get("WHATSAPP_GRUPO") or GRUPO_WHATSAPP)
-            from . import numeros
+            from . import fila_pagina, numeros
             numeros.talvez_publicar(estado, agora, tg, cfg.canal, log=log)
+            fila_pagina.publicar(estado, datetime.now(FUSO), log=log)
     except AcessoNegado as e:
         log(f"Mercado Livre recusou o acesso: {e}\nRode o modo diagnostico para ver o que fazer.")
         return 1

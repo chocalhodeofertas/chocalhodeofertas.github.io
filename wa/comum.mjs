@@ -119,3 +119,20 @@ export function ordenarFila(nomes, ler, ultimaLoja = "ml") {
   const ordem = outra ? [outra, ...itens.filter((i) => i !== outra)] : itens;
   return ordem.map((i) => i.nome);
 }
+
+// Histórico do dia para a página da fila (bot/fila_pagina.py): o que saiu no grupo e o que ficou de fora, e por quê.
+// resultado: "enviado" | "venceu" (mais de 3 h na fila) | "limite" (limite de posts do dia) | "pausa" | "erro".
+export function nomeDoItem(item) {
+  const linhas = String(item?.texto || "").split("\n").map((l) => l.trim()).filter(Boolean);
+  const nome = linhas.slice(1).find((l) => !l.includes("R$") && !l.includes("http") && !/^[_*]/.test(l));
+  return (nome || linhas[0] || "(sem texto)").slice(0, 80);
+}
+
+export function anotarHistorico(estado, item, resultado, dia, agora = new Date()) {
+  if (!estado.historico || estado.historico.dia !== dia) estado.historico = { dia, itens: [] };
+  const link = /https?:\/\/\S+/.exec(String(item?.texto || ""));
+  estado.historico.itens.push({ h: agora.toISOString(), n: nomeDoItem(item), l: item?.loja || "ml", r: resultado,
+    k: link ? link[0] : null, p: Number(item?.pontos) || 0 });
+  if (estado.historico.itens.length > 200) estado.historico.itens = estado.historico.itens.slice(-200);
+  return estado.historico;
+}

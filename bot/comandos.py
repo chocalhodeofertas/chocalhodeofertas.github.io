@@ -638,15 +638,17 @@ def ver_fila(agora, arquivo_wa=None):
     linhas = ["📬 <b>Fila do WhatsApp</b>", f"Hoje já saíram <b>{enviados}</b>{limite} posts no grupo."]
     if wa.get("intervalo_min"):
         linhas.append(f"Sai 1 a cada {wa['intervalo_min']} min, das 7h às 23h.")
+    from .fila_pagina import ENDERECO
+    pagina = f'🗂️ O dia inteiro (o que saiu, o que espera e o que ficou de fora): <a href="{ENDERECO}">página da fila</a>'
     itens = _itens_fila()
     if not itens:
-        return "\n".join(linhas + ["", "A fila está vazia agora."])
+        return "\n".join(linhas + ["", "A fila está vazia agora.", "", pagina])
     linhas.append("")
     for i, (_, item) in enumerate(itens, 1):
         loja = "Shopee" if item.get("loja") == "shopee" else "ML"
         linhas.append(f"{i}. [{loja}] {html.escape(_nome_do_item(item)[:60])}")
     linhas += ["", "Para cancelar um: <b>tirar 2</b>. Para cancelar todos: <b>limpar fila</b>.",
-               "<i>Oferta parada há mais de 3 h sai da fila sozinha.</i>"]
+               "<i>Oferta parada há mais de 3 h sai da fila sozinha.</i>", "", pagina]
     return "\n".join(linhas)
 
 

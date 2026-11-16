@@ -2573,3 +2573,88 @@ def test_produto_para_animais_fica_de_fora():
     assert fora_da_faixa("Patrulha Canina Boneco Chase", "brinquedo") is None
     assert bp._no_comeco("LEGO Classic Caixa Média", ["lego"])
     assert not bp._no_comeco("Kit 5/10 Saquinho Organizador Envelope De Brinquedo Quebra Cabeça Lego", ["lego"])
+
+
+def test_pagina_da_fila_mostra_o_que_saiu_o_que_espera_e_o_que_ficou_de_fora():
+    from bot import fila_pagina as fp
+
+    agora = AGORA.replace(hour=14, minute=0)
+    hoje = agora.date().isoformat()
+    e = est.novo()
+    e["posts_dia"] = {"dia": hoje, "itens": [
+        {"id": "MLB1", "loja": "ml", "titulo": "Fralda Pampers G", "preco": 89.9, "hora": "12:10", "link": "https://meli.la/a",
+         "link_wa": "https://meli.la/a", "fonte": "babypromokids", "selo": 20, "cupom": True},
+        {"id": "S2", "loja": "shopee", "titulo": "Mochila <b>infantil</b>", "preco": 59.0, "hora": "12:40",
+         "link": "https://s.shopee.com.br/t", "link_wa": "https://s.shopee.com.br/w"},
+        {"id": "MLB3", "loja": "ml", "titulo": "Banheira dobrável", "preco": 120.0, "hora": "13:30", "link": "https://meli.la/c",
+         "link_wa": "https://meli.la/c"},
+        {"id": "MLB4", "loja": "ml", "titulo": "Carrinho de boneca", "preco": 70.0, "link": "https://meli.la/d"},
+    ]}
+    e["fila_link"] = {"total": 40, "itens": [{"id": "MLB9", "titulo": "Cadeirinha", "preco": 300.0, "desconto": .25,
+                                              "espelho": True, "no_lote": True}]}
+    e["lote"] = {"dia": hoje, "ids": ["MLB9"], "urls": ["u"]}
+    wa = {"dia": hoje, "enviados": 3, "max_dia": 10, "intervalo_min": 25, "conectado": True, "ultima_loja": "ml",
+          "ultimo": agora.replace(hour=13, minute=50).isoformat(),
+          "historico": {"dia": hoje, "itens": [
+              {"h": agora.replace(hour=12, minute=30).isoformat(), "n": "Fralda Pampers G", "l": "ml", "r": "enviado", "k": "https://meli.la/a"},
+              {"h": agora.replace(hour=13, minute=0).isoformat(), "n": "Mochila", "l": "shopee", "r": "venceu", "k": "https://s.shopee.com.br/w"},
+              {"h": agora.replace(hour=9, minute=5).isoformat(), "n": "🎟️ Cupons de hoje", "l": "ml", "r": "enviado", "k": None}]}}
+    fila = [{"arquivo": "2.json", "nome": "Banheira dobrável", "loja": "ml", "pontos": .3,
+             "criado": agora.replace(hour=13, minute=30).isoformat(), "link": "https://meli.la/c"},
+            {"arquivo": "1.json", "nome": "Kit body", "loja": "shopee", "pontos": .1,
+             "criado": agora.replace(hour=11, minute=20).isoformat(), "link": "https://s.shopee.com.br/z"}]
+    h = fp.gerar_html(e, wa, fila, agora)
+    assert "No grupo às 12:30" in h and "Não foi ao grupo: esperou mais de 3 h" in h and "Na fila do grupo" in h
+    assert "Sem registro no grupo" in h                      # MLB4 nunca entrou na fila
+    assert "copiada de @babypromokids" in h and "menor preço em 20 dias" in h and "com cupom" in h
+    assert "Mochila &lt;b&gt;infantil&lt;/b&gt;" in h          # título escapado
+    assert "Cupons, avisos e resumos no grupo hoje" in h and "🎟️ Cupons de hoje" in h
+    assert "No lote enviado" in h and "E mais 39 na sequência" in h and "esperando a sua resposta" in h
+    assert "meli.la" not in h and "s.shopee.com.br" not in h  # nenhum link de afiliado na página
+    assert 'content="noindex' in h
+    # previsão: a outra loja (Shopee) sairia primeiro às 14:15, mas vence às 14:20 → sai; a Banheira fica para 14:40
+    prev = {i["nome"]: i["previsao"] for i in fp.prever(fila, wa, agora)}
+    assert prev["Kit body"] == ("espera", "previsão 14:15") and prev["Banheira dobrável"] == ("espera", "previsão 14:40")
+    # limite do dia atingido: nada mais sai e a página avisa
+    wa["enviados"] = 10
+    assert all(i["previsao"][0] == "fora" for i in fp.prever(fila, wa, agora))
+    assert "já recebeu os 10 posts de hoje" in fp.gerar_html(e, wa, fila, agora)
+    # aviso (cupom) passa na frente; item que venceria antes da vez fica marcado
+    wa["enviados"] = 3
+    fila2 = fila + [{"arquivo": "3.json", "nome": "Cupons", "loja": "ml", "pontos": 9.0, "criado": agora.isoformat(), "link": None}]
+    ordem = [i["nome"] for i in fp.ordem_de_saida(fila2, "ml")]
+    assert ordem[0] == "Cupons" and set(ordem[1:]) == {"Kit body", "Banheira dobrável"}
+    prev2 = {i["nome"]: i["previsao"] for i in fp.prever(fila2, wa, agora)}
+    assert prev2["Cupons"] == ("espera", "previsão 14:15") and prev2["Kit body"][0] == "fora"  # 14:40 > vence 14:20
+
+
+def test_pagina_da_fila_vazia_e_publicar(tmp_path):
+    from bot import fila_pagina as fp
+
+    e = est.novo()
+    h = fp.gerar_html(e, {}, [], AGORA)
+    assert "Nada esperando agora" in h and "Nenhuma oferta saiu hoje ainda" in h and "Nenhum produto esperando link" in h
+    arq = tmp_path / "docs" / "fila.html"
+    assert fp.publicar(e, AGORA, arquivo=arq, arquivo_wa=tmp_path / "nao_existe.json", itens=[]) is True
+    assert "Fila do Chocalho" in arq.read_text(encoding="utf-8")
+
+
+def test_resumo_da_fila_de_links_e_hora_do_post():
+    from types import SimpleNamespace as N
+    from bot import lote, resumos
+
+    e = est.novo()
+    from bot.ofertas import Oferta
+
+    a = Oferta("MLB1", "Cadeirinha para carro", 300.0, 400.0, .25, None, False, "https://www.mercadolivre.com.br/p/MLB1", None, "passeio")
+    b = Oferta("MLB2", "Banheira de bebê", 100.0, 166.0, .40, None, False, "https://www.mercadolivre.com.br/p/MLB2", None, "higiene")
+    c = Oferta("MLB3", "Já tem link", 50.0, 71.0, .30, None, False, "https://meli.la/x", None, "higiene")
+    e["links"]["MLB3"] = "https://meli.la/x"
+    e["lote"] = {"dia": AGORA.date().isoformat(), "ids": ["MLB2"], "urls": ["u"]}
+    r = lote.resumo_fila(e, [(a, "MLB10"), (b, "MLB20"), (c, "MLB30"), (a, "MLB10")], AGORA)
+    assert r["total"] == 2 and {i["id"] for i in r["itens"]} == {"MLB1", "MLB2"}
+    assert next(i for i in r["itens"] if i["id"] == "MLB2")["no_lote"] is True
+    o = N(id="MLB1", titulo="Cadeirinha", preco=300.0, preco_de=400.0, link="https://meli.la/a", imagem=None, categoria="passeio",
+          cupom={"codigo": "X"})
+    resumos.registrar(e, o, AGORA.replace(hour=9, minute=7), "ml")
+    assert e["posts_dia"]["itens"][0]["hora"] == "09:07" and e["posts_dia"]["itens"][0]["cupom"] is True

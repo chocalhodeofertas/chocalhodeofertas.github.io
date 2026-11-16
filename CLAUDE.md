@@ -107,6 +107,11 @@ Textos para o dono do projeto sempre em português do Brasil.
   grupo com `SHOPEE_CUPONS_LINK` (link oficial do Leonardo para a página de cupons; NUNCA abrir/expandir links de afiliado dele).
   `resumos.talvez_cupons_shopee`: post diário às 9h com esse link (`CUPONS_SHOPEE_ATIVO`, 0 até ele aprovar o texto).
 - `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas, cupons, WhatsApp).
+- `fila_pagina.py`: página escondida `docs/fila-4e7a91c3.html`, reescrita a cada rodada (`publicar` no fim da rodada normal):
+  o que saiu hoje no canal (`estado.posts_dia`, com hora, origem do espelho, selo, cupom) e o que aconteceu com cada oferta no
+  grupo do WhatsApp (`wa_estado.json: historico`, gravado por `wa/comum.mjs: anotarHistorico`: enviado / venceu / limite / pausa /
+  erro); o que espera no grupo, na ordem e com previsão de saída (`prever`, mesma regra de `ordenarFila`); e os produtos que
+  esperam link oficial (`estado.fila_link`, de `lote.resumo_fila`). Sem links na página. O comando `fila` aponta para ela.
 - `comandos.py`: comandos do admin no Telegram e resumo diário (inclui WhatsApp). `bloquear/desbloquear/bloqueados` (palavras em
   `estado.bloqueados`, aplicadas por `filtros.definir_bloqueios` no início de cada rodada); `fila`, `tirar N`, `limpar fila` (fila do WhatsApp);
   `avisar_se_parado`: 1 aviso por dia se passar 3 h sem post no horário ativo.

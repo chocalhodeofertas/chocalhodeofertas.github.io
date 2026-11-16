@@ -10,7 +10,7 @@ import path from "node:path";
 import makeWASocket, { Browsers, DisconnectReason, prepareWAMessageMedia, useMultiFileAuthState } from "@whiskeysockets/baileys";
 import pino from "pino";
 
-import { PASTA_AUTH, RAIZ, abrirSessao, avisar, codigoConvite, dormir, gravarEstado, guardarSessao,
+import { PASTA_AUTH, RAIZ, abrirSessao, anotarHistorico, avisar, codigoConvite, dormir, gravarEstado, guardarSessao,
   lerEstado, naMeiaNoite, ordenarFila } from "./comum.mjs";
 
 const FILA = path.resolve(RAIZ, process.env.WA_FILA || "fila_wa");
@@ -214,6 +214,7 @@ async function cuidarDaFila() {
       return {};
     }
   }, estado.ultima_loja || "ml");
+  let mudou = false;
   for (const nome of arquivos) {
     const caminho = path.join(FILA, nome);
     let item;
@@ -233,17 +234,23 @@ async function cuidarDaFila() {
       estado.virada_enviados = 0;
     }
     const extraVirada = virada && (estado.virada_enviados || 0) < MEIA_NOITE_EXTRA;
-    if (Date.now() - Date.parse(item.criado) > VALIDADE_ITEM || (estado.enviados >= MAX_DIA && !extraVirada)) {
+    const velho = Date.now() - Date.parse(item.criado) > VALIDADE_ITEM;
+    if (velho || (estado.enviados >= MAX_DIA && !extraVirada)) {
+      anotarHistorico(estado, item, velho ? "venceu" : "limite", hoje());
       apagarItem(caminho, item); // velho demais ou limite do dia: não sai
+      mudou = true;
       continue;
     }
-    if (estado.ultimo && Date.now() - Date.parse(estado.ultimo) < INTERVALO) return; // espera o intervalo
+    if (estado.ultimo && Date.now() - Date.parse(estado.ultimo) < INTERVALO) break; // espera o intervalo
     if (estado.pausado_ate && Date.now() < Date.parse(estado.pausado_ate)) {
+      anotarHistorico(estado, item, "pausa", hoje());
       apagarItem(caminho, item); // em pausa de segurança: não posta
+      mudou = true;
       continue;
     }
     try {
       await postar(item);
+      anotarHistorico(estado, item, "enviado", hoje());
       if (extraVirada) estado.virada_enviados = (estado.virada_enviados || 0) + 1; // extra da data, fora da conta do dia
       else estado.enviados += 1;
       estado.ultimo = new Date().toISOString();
@@ -251,6 +258,7 @@ async function cuidarDaFila() {
       console.log(`Postado no grupo do WhatsApp (${estado.enviados}/${MAX_DIA} hoje).`);
     } catch (e) {
       console.log("Aviso: não consegui postar no WhatsApp:", e?.message);
+      anotarHistorico(estado, item, "erro", hoje());
       if (/463|timelock|restrict|forbidden|403/i.test(String(e?.message) + String(e?.output?.statusCode))) {
         estado.pausado_ate = new Date(Date.now() + 48 * 3600 * 1000).toISOString();
         await avisar("🛑 O WhatsApp sinalizou uma <b>restrição</b> no número do Chocalho. Pausei os posts no grupo " +
@@ -261,6 +269,7 @@ async function cuidarDaFila() {
     salvarTudo();
     return; // um por vez
   }
+  if (mudou) salvarTudo(); // descartes anotados no histórico: grava para a página da fila enxergar
 }
 
 async function encerrar() {

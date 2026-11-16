@@ -23,14 +23,12 @@ def prioridade(oferta, posicao=None, agora=None):
     return pontuacao(oferta, posicao, agora)
 
 
-def montar_lote(estado, sem_link, tamanho, agora):
-    pos = {pid: d.get("pos") for pid, d in estado.get("descobertos", {}).items()}
-    """sem_link: lista de (oferta, item_id). Grava o lote pendente e devolve as URLs."""
-    escolhidas, vistos = [], set()
-    from .ofertas import tipo_produto
-
+def _chave_do_lote(estado, agora):
+    """Ordem em que os produtos sem link entram no lote (a mesma que a página da fila mostra)."""
     from . import espelho
     from . import estado as est
+
+    pos = {pid: d.get("pos") for pid, d in estado.get("descobertos", {}).items()}
 
     def chave(x):
         o = x[0]
@@ -41,6 +39,32 @@ def montar_lote(estado, sem_link, tamanho, agora):
             peso *= 0.4   # parecido com algo postado na semana: não sairia agora de qualquer jeito
         return peso
 
+    return chave
+
+
+def resumo_fila(estado, sem_link, agora, n=25):
+    """Retrato dos produtos aprovados que esperam o link oficial, na ordem do lote, para a página da fila."""
+    from . import espelho
+
+    no_lote = set((estado.get("lote") or {}).get("ids") or [])
+    itens, vistos = [], set()
+    for o, item in sorted(sem_link, key=_chave_do_lote(estado, agora), reverse=True):
+        if o.id in vistos or o.id in estado["links"] or not item:
+            continue
+        vistos.add(o.id)
+        if len(itens) < n:
+            itens.append({"id": o.id, "titulo": (o.titulo or "")[:80], "preco": o.preco,
+                          "desconto": round(getattr(o, "desconto", 0) or 0, 3),
+                          "espelho": bool(espelho.eh_do_espelho(estado, o.id)), "no_lote": o.id in no_lote})
+    return {"em": agora.isoformat(timespec="minutes"), "total": len(vistos), "itens": itens}
+
+
+def montar_lote(estado, sem_link, tamanho, agora):
+    """sem_link: lista de (oferta, item_id). Grava o lote pendente e devolve as URLs."""
+    escolhidas, vistos = [], set()
+    from .ofertas import tipo_produto
+
+    chave = _chave_do_lote(estado, agora)
     por_tipo = {}
     for o, item in sorted(sem_link, key=chave, reverse=True):
         if o.id in vistos or o.id in estado["links"] or not item:
