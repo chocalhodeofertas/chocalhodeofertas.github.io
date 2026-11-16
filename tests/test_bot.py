@@ -2468,3 +2468,77 @@ def test_alerta_de_oferta_forte(monkeypatch):
     assert not comandos.alertar_oferta_forte(tg, cfg, e, fraca, AGORA)          # limite do dia
     monkeypatch.setenv("ALERTA_MAX_DIA", "0")
     assert not comandos.alertar_oferta_forte(tg, cfg, est.novo(), forte, AGORA) # desligado
+
+
+def test_comando_cupom_shopee(monkeypatch, tmp_path):
+    from bot import comandos
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    monkeypatch.delenv("SHOPEE_CUPONS_LINK", raising=False)
+    e, tg, cfg = est.novo(), TGCmd(), cfg_cmd()
+    r = comandos.tratar_texto("cupom shopee R$ 20 OFF acima de R$ 150, código BEBE20, até 20/11", tg, None, e, cfg, AGORA)
+    assert "Cupom da Shopee postado no canal e na fila do grupo" in r and "esgotou BEBE20" in r
+    canal = [t for c, t in tg.textos if c == "@canal"][-1]
+    assert "Cupom da Shopee" in canal and "BEBE20" in canal and "https://s.shopee.com.br/8fTxwjM742" in canal
+    item = json.loads(next(tmp_path.glob("*.json")).read_text())
+    assert item["loja"] == "shopee" and item["pontos"] == 9.0 and "Ative aqui: https://s.shopee.com.br/8fTxwjM742" in item["texto"]
+    assert "Escreva o cupom" in comandos.tratar_texto("cupom shopee", tg, None, e, cfg, AGORA)
+    # o comando antigo (cupom do Mercado Livre) continua igual
+    assert "Cupom postado no canal" in comandos.tratar_texto("cupom 10% OFF em fraldas, código FRALDA10", tg, None, e, cfg, AGORA)
+
+
+def test_cupons_shopee_do_dia(monkeypatch, tmp_path):
+    from bot import resumos
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    e, tg, cfg = est.novo(), TGCmd(), cfg_cmd()
+    assert not resumos.talvez_cupons_shopee(tg, cfg, e, AGORA) and not tg.textos          # desligado
+    monkeypatch.setenv("CUPONS_SHOPEE_ATIVO", "1")
+    assert not resumos.talvez_cupons_shopee(tg, cfg, e, AGORA.replace(hour=8))            # antes das 9h
+    assert resumos.talvez_cupons_shopee(tg, cfg, e, AGORA)
+    assert "Cupons da Shopee de hoje" in tg.textos[0][1] and "s.shopee.com.br/8fTxwjM742" in tg.textos[0][1]
+    assert not resumos.talvez_cupons_shopee(tg, cfg, e, AGORA)                            # uma vez por dia
+    assert "👉 https://s.shopee.com.br/8fTxwjM742" in resumos.montar_cupons_shopee("https://s.shopee.com.br/8fTxwjM742", "whatsapp")
+
+
+def test_busca_sob_pedido(monkeypatch):
+    from bot import busca_publica as bp, comandos
+    e = est.novo()
+    e["links"] = {"MLB1": "https://meli.la/a", "MLB2": "https://meli.la/b", "MLB3": "https://meli.la/c", "MLB4": "https://meli.la/d"}
+    e["cache"] = {"MLB1": ["Fralda Marca A Tamanho G 60 Unidades", None], "MLB2": ["Fralda Marca B G 100 Unidades", None],
+                  "MLB3": ["Trocador de Fralda Portátil", None], "MLB4": ["Fralda Marca C Tamanho M 50 Unidades", None],
+                  "MLB5": ["Fralda Sem Link G 10 Unidades", None]}
+    for pid, preco in [("MLB1", 60.0), ("MLB2", 80.0), ("MLB3", 30.0), ("MLB4", 40.0), ("MLB5", 5.0)]:
+        est.registrar_preco(e, pid, preco, AGORA)
+    infos = {"MLB1": InfoProduto("MLB1", "Fralda Marca A Tamanho G 60 Unidades", 57.0, 70.0, None, True),
+             "MLB2": InfoProduto("MLB2", "Fralda Marca B G 100 Unidades", 80.0, None, None, True)}
+    ml = MLFalso(infos)
+
+    class Shp:
+        def buscar(self, termo, **k):
+            return [_produto_shopee(id="SHP1", titulo="Fralda Infantil Marca S Tamanho G 80 Unidades", preco=70.0),
+                    _produto_shopee(id="SHP2", titulo="Fralda Infantil Marca R Tamanho G", preco=10.0, nota=4.0)]
+        def link_curto(self, url, subs=None):
+            return "https://s.shopee.com.br/" + subs[0]
+
+    itens = bp.do_mercado_livre("fralda g", e, ml, lambda m: None)
+    assert [(i["id"], i["preco"]) for i in itens] == [("MLB2", 80.0), ("MLB1", 57.0)]      # só tamanho G, com link; por fralda
+    texto = bp.procurar("Fralda G", e, AGORA, ml, Shp(), lambda m: None)
+    assert "🔎 <b>Fralda G</b>: o que achei agora" in texto and "https://meli.la/b" in texto and "(R$ 0,80 por fralda)" in texto
+    assert "De <s>R$ 70,00</s> por <b>R$ 57,00</b>" in texto and "https://s.shopee.com.br/busca" in texto and "SHP2" not in texto
+    assert "Marca R" not in texto and "Trocador" not in texto and "#publi" in texto
+    assert "não divulga mamadeiras" in bp.procurar("mamadeira", e, AGORA, ml, Shp())
+    assert "Não achei agora" in bp.procurar("unicornio roxo", e, AGORA, ml, None)
+    assert e["buscas_termos"]["fralda g"]["n"] == 1 and e["buscas_termos"]["unicornio roxo"]["sem"] == 1
+    assert "fralda g (1x)" in comandos.montar_resumo(e, cfg_cmd(), TGCmd(), AGORA)
+    # admin testa com "achar"; os outros só recebem resposta com a busca aberta
+    tg = TGCmd()
+    assert "o que achei agora" in comandos.tratar_texto("achar fralda g", tg, ml, e, cfg_cmd(), AGORA)
+    msg = {"chat": {"id": 555, "type": "private"}, "text": "fralda g"}
+    monkeypatch.delenv("BUSCA_PUBLICA", raising=False)
+    assert not bp.atender(msg, tg, ml, e, AGORA, shp=Shp()) and not tg.textos
+    monkeypatch.setenv("BUSCA_PUBLICA", "1")
+    assert bp.atender(msg, tg, ml, e, AGORA, shp=Shp()) and tg.textos[-1][0] == 555 and "achei agora" in tg.textos[-1][1]
+    assert bp.atender({"chat": {"id": 555, "type": "private"}, "text": "/start"}, tg, ml, e, AGORA) and "Me diga o que você procura" in tg.textos[-1][1]
+    assert not bp.atender({"chat": {"id": -100, "type": "group"}, "text": "fralda"}, tg, ml, e, AGORA)
+    for _ in range(6):
+        bp.atender(msg, tg, ml, e, AGORA, shp=Shp())
+    assert "várias buscas" in tg.textos[-1][1] and "555" not in json.dumps(e["buscas"])       # limite por hora, sem guardar o número

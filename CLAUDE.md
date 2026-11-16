@@ -73,6 +73,14 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `grafico.py`: gráfico de preço em Pillow (1080x1080; `formato="4x5"` para carrossel) pela `estado.serie_diaria`.
   `grafico.enviar_oferta` posta a oferta; com selo e `GRAFICO_ATIVO=1`, manda álbum (foto + gráfico) no Telegram.
   Os três aprovados e ligados em 15/11. WhatsApp não recebe o gráfico (só o texto com a prévia do link).
+- `busca_publica.py`: busca sob pedido. `procurar(termo)` = ML (só produtos com link oficial, preço conferido na hora e
+  `lote.conferir_anuncio`) + Shopee ao vivo (API, regras de `aprovado`, link com subId `busca`); mesmos filtros dos posts (NBCAL).
+  Admin testa com `achar <produto>`; quem escreve no privado do bot só recebe resposta com `BUSCA_PUBLICA=1` (`atender`).
+  Limite de 5 buscas/hora por pessoa com código embaralhado (repo público: não guarda chat id); `buscas_termos` conta os termos
+  mais procurados (aparece no resumo diário).
+- Cupons da Shopee: a API não lista cupons. `comandos.postar_cupom_shopee` (`cupom shopee <texto>`) posta no canal e na fila do
+  grupo com `SHOPEE_CUPONS_LINK` (link oficial do Leonardo para a página de cupons; NUNCA abrir/expandir links de afiliado dele).
+  `resumos.talvez_cupons_shopee`: post diário às 9h com esse link (`CUPONS_SHOPEE_ATIVO`, 0 até ele aprovar o texto).
 - `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas, cupons, WhatsApp).
 - `comandos.py`: comandos do admin no Telegram e resumo diário (inclui WhatsApp). `bloquear/desbloquear/bloqueados` (palavras em
   `estado.bloqueados`, aplicadas por `filtros.definir_bloqueios` no início de cada rodada); `fila`, `tirar N`, `limpar fila` (fila do WhatsApp);
@@ -100,6 +108,7 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `previa_resumos "fraldas top5 grafico"`: manda só para o admin a prévia da tabela de fraldas, das 5 melhores do dia e do gráfico.
 - `conferir_precos`: posts do dia x preço de agora nas lojas (saida/conferir_precos.json). `sondar_precos_ml`: o que a API dá de preço
   (não dá o preço no Pix: /items é 403). `ver_pagina_ml <links>`: o que a página de destino mostra (diagnóstico pontual).
+- `previa_busca "fralda g; mochila infantil"`: manda só para o admin as respostas da busca sob pedido e a prévia dos cupons da Shopee.
 - `sondar_shopee`: mostra categorias (productCatIds) e tipos de lista que a API da Shopee devolve (só leitura).
 - `achar_canais_tg "termo; termo"`: procura canais públicos de ofertas de bebê no Telegram e mede links/posts infantis (saida/canais_tg.md).
 - `baixar nome=url ...`: baixa arquivos para `saida/` (o container não alcança mlstatic/Shopee/Canva).
@@ -108,3 +117,5 @@ Textos para o dono do projeto sempre em português do Brasil.
 - NBCAL: nunca mamadeira, bico, chupeta, fórmula/leite infantil.
 - Links de afiliado oficiais e sem alteração; Shopee só pela API oficial (nada de raspar o site); cupons só oficiais.
 - Segredos só em GitHub Secrets; nunca imprimir tokens em log.
+- Decisões do Leonardo (16/11): o bot nunca abre/clica links de afiliado dele (nem páginas ligadas à conta dele); sem filtro por
+  reputação do vendedor; sem prioridade por comissão; sem limite de variação de preço na Shopee.

@@ -325,6 +325,43 @@ def talvez_top(tg, cfg, estado, agora, ml=None, shp=None, log=print):
     return True
 
 
+# ---------------------------------------------------------------- cupons da Shopee (link da página de cupons)
+
+def montar_cupons_shopee(link, formato="telegram"):
+    tg = formato == "telegram"
+    b = (lambda t: f"<b>{t}</b>") if tg else (lambda t: f"*{t}*")
+    it = (lambda t: f"<i>{t}</i>") if tg else (lambda t: f"_{t}_")
+    onde = f'👉 <a href="{html.escape(link, quote=True)}">Ver os cupons de hoje</a>' if tg else f"👉 {link}"
+    return "\n".join([
+        b("🎟️ Cupons da Shopee de hoje"), "",
+        "Antes de fechar a compra, passe na página de cupons e ative os que servem para você. "
+        "Tem desconto e frete grátis, e eles mudam todo dia.", "",
+        onde, "",
+        it("Cupons têm quantidade e prazo limitados. #publi · link de afiliado"),
+    ])
+
+
+def talvez_cupons_shopee(tg, cfg, estado, agora, log=print):
+    """Uma vez por dia, a partir de CUPONS_SHOPEE_HORA (9h), se CUPONS_SHOPEE_ATIVO=1."""
+    from .comandos import link_cupons_shopee
+
+    hoje = agora.date().isoformat()
+    hora = int(os.environ.get("CUPONS_SHOPEE_HORA") or 9)
+    if (os.environ.get("CUPONS_SHOPEE_ATIVO") != "1" or estado.get("cupons_shopee_enviado") == hoje
+            or not (hora <= agora.hour < cfg.hora_fim)):
+        return False
+    link = link_cupons_shopee()
+    try:
+        tg.enviar_texto(cfg.canal, montar_cupons_shopee(link, "telegram"), html=True)
+    except TelegramErro as e:
+        log(f"Cupons da Shopee: não consegui postar: {e}")
+        return False
+    whatsapp.enfileirar(montar_cupons_shopee(link, "whatsapp"), agora=agora, loja="shopee")
+    estado["cupons_shopee_enviado"] = hoje
+    log("Cupons da Shopee do dia postados.")
+    return True
+
+
 # ---------------------------------------------------------------- chamada da rodada
 
 def _shopee(log=print):
@@ -340,6 +377,7 @@ def _shopee(log=print):
 
 def rodar(tg, cfg, estado, agora, ml=None, log=print, shp=None):
     """Chamado no fim de cada rodada: posta o que estiver na hora (e ligado)."""
+    talvez_cupons_shopee(tg, cfg, estado, agora, log)
     hoje = agora.date().isoformat()
     na_hora = lambda chave, padrao: int(os.environ.get(chave) or padrao) <= agora.hour < cfg.hora_fim  # noqa: E731
     fraldas = (os.environ.get("FRALDAS_ATIVO") == "1" and estado.get("fraldas_enviado") != hoje

@@ -33,13 +33,15 @@ AJUDA = (
     "🔗 <b>Um link de afiliado</b> (meli.la/...) → eu descubro o produto e posto no canal\n\n"
     "🎟️ <b>cupom</b> + o texto do cupom → eu formato e posto. Ex.:\n"
     "<code>cupom 20% OFF em brinquedos acima de R$ 99, código BRINCA20, até 10/11</code>\n"
-    "(com a data, eu marco como encerrado sozinho quando vencer)\n\n"
+    "(com a data, eu marco como encerrado sozinho quando vencer)\n"
+    "🛍️ <b>cupom shopee</b> + o texto → posto no canal e no grupo com o seu link da página de cupons\n\n"
     "❌ <b>esgotou</b> + código → aviso no canal que o cupom acabou\n"
     "✅ <b>geral</b> + código → cupom sem categoria que você testou passa a entrar nas ofertas · <b>restrito</b> + código desfaz\n\n"
     "📊 <b>resumo</b> → números do canal agora\n"
     "🚫 <b>bloquear</b> + palavra → o bot para de postar produtos com ela · <b>desbloquear</b> + palavra · <b>bloqueados</b>\n"
     "📬 <b>fila</b> → o que vai sair no WhatsApp · <b>tirar 2</b> → cancela o item 2 · <b>limpar fila</b>\n\n"
     "🔎 <b>buscar</b> + produto → melhores ofertas agora · <b>pegar 1 3</b> → manda para o Linkbuilder\n"
+    "🙋 <b>achar</b> + produto → a resposta que um membro receberia na busca sob pedido\n"
     "👀 <b>vigiar</b> + produto → aviso quando entrar em promoção · <b>vigias</b> · <b>parar</b> + produto\n"
     "🗂️ <b>categorias</b> → prévia das categorias novas (roupas, games, livros...) · <b>aprovar categorias</b>\n"
     "🎯 <b>temas</b> → quantas promoções cada tema tem agora\n"
@@ -307,6 +309,41 @@ def extrair_validade(corpo, agora):
     return None
 
 
+LINK_CUPONS_SHOPEE = "https://s.shopee.com.br/8fTxwjM742"  # link oficial do Leonardo para a página de cupons
+
+
+def link_cupons_shopee():
+    return os.environ.get("SHOPEE_CUPONS_LINK") or LINK_CUPONS_SHOPEE
+
+
+def postar_cupom_shopee(texto, tg, cfg, estado=None, agora=None):
+    """`cupom shopee <texto>`: você repassa um cupom da Shopee (ex.: o que chega na notificação do app)
+    e o bot posta no canal e põe na fila do grupo, com o seu link da página de cupons."""
+    corpo = re.sub(r"^\s*/?cupom\s+(da\s+)?shopee\s*[:\-–]?\s*", "", texto, flags=re.I).strip()
+    if not corpo:
+        return ("Escreva o cupom depois de <b>cupom shopee</b>. Ex.:\n"
+                "<code>cupom shopee R$ 20 OFF acima de R$ 150, código BEBE20, até 20/11</code>")
+    agora = agora or datetime.now()
+    estado = estado if estado is not None else {}
+    link = link_cupons_shopee()
+    rodape = "Cupons têm quantidade e prazo limitados. #publi · link de afiliado"
+    codigo = extrair_codigo(corpo)
+    validade = extrair_validade(corpo, agora)
+    bloco = f"{html.escape(corpo)}\n👉 <a href=\"{html.escape(link, quote=True)}\">Ativar na página de cupons da Shopee</a>"
+    try:
+        cupons.publicar(tg, cfg, estado, "🎟️ <b>Cupom da Shopee</b>", [(codigo, bloco, validade)], agora, rodape)
+    except TelegramErro as e:
+        return f"⚠️ Não consegui postar o cupom: {e}"
+    wa = f"*🎟️ Cupom da Shopee*\n\n{corpo}\n\n👉 Ative aqui: {link}\n\n_{rodape}_"
+    na_fila = whatsapp.enfileirar(wa, None, agora, loja="shopee")
+    partes = ["✅ Cupom da Shopee postado no canal" + (" e na fila do grupo do WhatsApp!" if na_fila else "!")]
+    if validade:
+        partes.append(f"⏰ Vale até {validade:%d/%m às %H:%M}: aí eu marco como encerrado sozinho.")
+    partes.append(f"Quando esgotar, me mande: <code>esgotou {html.escape(codigo)}</code>" if codigo
+                  else "Quando esgotar, me mande só: <code>esgotou</code>")
+    return "\n".join(partes)
+
+
 def postar_cupom(texto, tg, cfg, estado=None, agora=None):
     corpo = re.sub(r"^\s*/?cupom\s*[:\-–]?\s*", "", texto, flags=re.I).strip()
     if not corpo:
@@ -453,6 +490,13 @@ def montar_resumo(estado, cfg, tg, agora):
     for i in copiadas[:15]:
         loja = "Shopee" if i.get("loja") == "shopee" else "ML"
         linhas.append(f"   • @{html.escape(i['fonte'])} → {html.escape(i['titulo'][:45])} ({loja})")
+
+    from . import busca_publica
+    procurados = busca_publica.mais_procurados(estado)
+    if procurados:
+        linhas.append("🙋 Mais procurados na busca (30 dias): " + ", ".join(
+            f"{html.escape(t)} ({v['n']}x{', ' + str(v['sem']) + ' sem resultado' if v['sem'] else ''})"
+            for t, v in procurados))
 
     de_hoje = [p for p in estado.get("postados", {}).values()
                if str(p.get("quando", "")).startswith(hoje) and p.get("titulo")]
@@ -682,8 +726,13 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
     """Decide o que fazer com uma mensagem sua. Retorna a resposta (ou None)."""
     t = (texto or "").strip()
     n = _norm(t)
+    if re.match(r"/?cupom\s+(da\s+)?shopee\b", n):
+        return postar_cupom_shopee(t, tg, cfg, estado, agora)
     if n.startswith(("cupom", "/cupom")):
         return postar_cupom(t, tg, cfg, estado, agora)
+    if n.startswith(("achar ", "/achar ")):
+        from . import busca_publica
+        return busca_publica.procurar(t.split(" ", 1)[1], estado, agora, ml, busca_publica._shopee())
     if n.startswith(("esgotou", "esgotado", "acabou", "/esgotou")):
         return esgotar_cupom(t, tg, cfg, estado)
     if n.startswith(("geral", "/geral")):
@@ -787,6 +836,8 @@ def processar(tg, ml, estado, cfg, agora, log=print, session=None, rng=random):
             continue
         msg = u.get("message") or {}
         if str((msg.get("chat") or {}).get("id")) != str(cfg.admin_chat):
+            from . import busca_publica  # busca sob pedido para quem escreve no privado do bot (se ligada)
+            busca_publica.atender(msg, tg, ml, estado, agora, log)
             continue
         resposta = tratar_texto(msg.get("text") or msg.get("caption") or "", tg, ml, estado, cfg, agora,
                                 session, rng)

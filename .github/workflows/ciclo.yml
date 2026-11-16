@@ -95,6 +95,12 @@ jobs:
           TOP5_ATIVO: ${{ vars.TOP5_ATIVO || '1' }}
           TOP5_HORA: ${{ vars.TOP5_HORA || '21' }}
           GRAFICO_ATIVO: ${{ vars.GRAFICO_ATIVO || '1' }}
+          # Cupons da Shopee: link oficial do Leonardo para a página de cupons (o bot não abre esse link)
+          SHOPEE_CUPONS_LINK: ${{ vars.SHOPEE_CUPONS_LINK || 'https://s.shopee.com.br/8fTxwjM742' }}
+          CUPONS_SHOPEE_ATIVO: ${{ vars.CUPONS_SHOPEE_ATIVO || '0' }}  # post diário: 0 até o Leonardo aprovar o texto
+          CUPONS_SHOPEE_HORA: ${{ vars.CUPONS_SHOPEE_HORA || '9' }}
+          # Busca sob pedido no privado do bot: 0 = só o admin testa (comando "achar"); 1 = aberta para todos
+          BUSCA_PUBLICA: ${{ vars.BUSCA_PUBLICA || '0' }}
           TG_API_ID: ${{ secrets.TG_API_ID }}
           TG_API_HASH: ${{ secrets.TG_API_HASH }}
           TG_CANAL_CUPONS: ${{ secrets.TG_CANAL_CUPONS }}
