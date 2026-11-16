@@ -63,9 +63,14 @@ for pid in pids[:2]:
     print("  bloqueio?:", bool(re.search(r"captcha|account-verification|negative_traffic", h, re.I)))
     time.sleep(3)
 
-print("#" * 10, f"3. Shopee: '{termo}'")
 shp = Shopee(os.environ.get("SHOPEE_APP_ID"), os.environ.get("SHOPEE_SECRET"))
-achados = shp.buscar(termo, ordem=MAIS_VENDIDOS, limite=30)
-print("vieram", len(achados))
-for p in achados:
-    print(f"  {aprovado(p) or 'OK':14} nota {p.nota} vendas {p.vendas} comissão {p.comissao:.3f} R$ {p.preco} | {p.titulo[:70]}")
+for t in [x.strip() for x in termo.split("|") if x.strip()][:4]:
+    print("#" * 10, f"3. Shopee: '{t}'")
+    try:
+        achados = shp.buscar(t, ordem=MAIS_VENDIDOS, limite=30)
+    except Exception as e:  # noqa: BLE001
+        print("  ERRO", type(e).__name__, str(e)[:150])
+        continue
+    print("vieram", len(achados))
+    for p in achados:
+        print(f"  {aprovado(p) or 'OK':14} nota {p.nota} vendas {p.vendas} comissão {p.comissao:.3f} R$ {p.preco} | {p.titulo[:70]}")
