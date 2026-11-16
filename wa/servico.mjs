@@ -11,7 +11,7 @@ import makeWASocket, { Browsers, DisconnectReason, prepareWAMessageMedia, useMul
 import pino from "pino";
 
 import { PASTA_AUTH, RAIZ, abrirSessao, avisar, codigoConvite, dormir, gravarEstado, guardarSessao,
-  lerEstado, naMeiaNoite } from "./comum.mjs";
+  lerEstado, naMeiaNoite, ordenarFila } from "./comum.mjs";
 
 const FILA = path.resolve(RAIZ, process.env.WA_FILA || "fila_wa");
 // Aquecimento automático: o ritmo sobe sozinho conforme o número ganha
@@ -207,17 +207,13 @@ async function postar(item) {
 
 async function cuidarDaFila() {
   if (!aberto) return;
-  let arquivos = fs.readdirSync(FILA).filter((n) => n.endsWith(".json")).sort();
-  // Alterna as lojas (Mercado Livre / Shopee): a mais antiga da outra loja passa na frente
-  const lojaDe = (n) => {
+  let arquivos = ordenarFila(fs.readdirSync(FILA).filter((n) => n.endsWith(".json")).sort(), (n) => {
     try {
-      return JSON.parse(fs.readFileSync(path.join(FILA, n), "utf8")).loja || "ml";
+      return JSON.parse(fs.readFileSync(path.join(FILA, n), "utf8"));
     } catch {
-      return "ml";
+      return {};
     }
-  };
-  const outra = arquivos.find((n) => lojaDe(n) !== (estado.ultima_loja || "ml"));
-  if (outra) arquivos = [outra, ...arquivos.filter((n) => n !== outra)];
+  }, estado.ultima_loja || "ml");
   for (const nome of arquivos) {
     const caminho = path.join(FILA, nome);
     let item;

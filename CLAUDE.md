@@ -52,17 +52,19 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `lote.py`: lote do Linkbuilder (não existe API oficial do ML para gerar link; é manual). Cada link oficial abre UM anúncio
   (o vencedor quando o lote foi montado): `estado.links_item` guarda qual (lotes antigos vieram de `data/links_item_inicial.json`).
   `lote.conferir_anuncio` (na rodada e antes de postar): anúncio fora da lista de ativos do catálogo (pausado/sem estoque) →
-  link descartado e o produto volta ao lote; ativo → o post usa o preço DESSE anúncio. O histórico segue com o menor preço do catálogo. Prioriza candidatos do espelho (valem 48 h)
+  link descartado e o produto volta ao lote; ativo → o post usa o preço DESSE anúncio. Catálogo com mais de 20 anúncios:
+  `ml.procurar_anuncio` olha as páginas seguintes antes de descartar. O histórico segue com o menor preço do catálogo. Prioriza candidatos do espelho (valem 48 h)
   e rebaixa o que é parecido com algo postado na semana.
 - `cupons_ml.py` + `cupom_oferta.py`: lê cupons (canal oficial do ML + @cupombr via Telethon) e aplica o melhor cupom compatível na oferta.
 - `shopee.py`: cliente da Open API de afiliados (GraphQL, assinatura SHA256). Repete em erro 10000/10030.
 - `shopee_ofertas.py`: ofertas da Shopee por cima das do ML (limite próprio: `SHOPEE_MAX_DIA` 50, `SHOPEE_MAX_HORA` 4).
   Busca: 3 palavras-chave + 2 categorias infantis por rodada (`CATEGORIAS`, mais vendidos, páginas 1 a 3 em rodízio).
   A API não tem oferta relâmpago; `listType` 2 (top) e 0 trazem produtos gerais, não usamos.
-  Regras: nota ≥ 4,7, vendas ≥ 500 (200 se veio do espelho), comissão ≥ 5%, só preço final; "de/por" só com queda vista pelo próprio bot.
+  Regras: nota ≥ 4,7, vendas ≥ 500 (200 se veio do espelho), comissão ≥ 5%, opção mais cara < 3x a mais barata, só preço final; "de/por" só com queda vista pelo próprio bot.
   Links via `generateShortLink` com subId `telegram` / `whatsapp`.
 - `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/`; o serviço (Baileys) posta com aquecimento automático
-  (4 → 10 → 14 → 20 posts/dia nos dias 0, 4, 8 e 14 desde a conexão), só das 7h às 23h, alterna ML/Shopee, pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
+  (4 → 10 → 14 → 20 posts/dia nos dias 0, 4, 8 e 14 desde a conexão), só das 7h às 23h, alterna ML/Shopee,
+  posta primeiro o que tem mais `pontos` (`whatsapp.forca`: força do desconto; avisos = 9; `wa/comum.mjs: ordenarFila`), pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
 - `resumos.py`: posts de resumo (fora do limite e da regra de repetição), chamados por `resumos.rodar` no fim da rodada:
   tabela de fraldas (`FRALDAS_ATIVO`, 10h): menor preço por fralda em cada tamanho, ML (`estado.fraldas_ml`, guardado a cada
   rodada, só com link oficial) + Shopee (busca na hora, preço único); mostra "ontem era R$ X" quando baixou 2%+.
@@ -94,6 +96,8 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `testar_instagram` / `coletar_instagram`: confere o token / roda a coleta uma vez em `saida/instagram`.
 - `publicar_carrossel <pasta>`: publica `docs/ig-tmp/<pasta>/` no Instagram (só com aprovação do Leonardo).
 - `previa_resumos "fraldas top5 grafico"`: manda só para o admin a prévia da tabela de fraldas, das 5 melhores do dia e do gráfico.
+- `conferir_precos`: posts do dia x preço de agora nas lojas (saida/conferir_precos.json). `sondar_precos_ml`: o que a API dá de preço
+  (não dá o preço no Pix: /items é 403). `ver_pagina_ml <links>`: o que a página de destino mostra (diagnóstico pontual).
 - `sondar_shopee`: mostra categorias (productCatIds) e tipos de lista que a API da Shopee devolve (só leitura).
 - `achar_canais_tg "termo; termo"`: procura canais públicos de ofertas de bebê no Telegram e mede links/posts infantis (saida/canais_tg.md).
 - `baixar nome=url ...`: baixa arquivos para `saida/` (o container não alcança mlstatic/Shopee/Canva).

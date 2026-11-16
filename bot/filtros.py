@@ -122,6 +122,16 @@ _BABY_ADULTO = re.compile(r"\b(baby ?doll|short ?doll|baby ?look)\b")
 _ADULTO = re.compile(r"\b(adultos?|plus size|sem bojo|com bojo|bojo|sensual|sexy)\b")
 
 
+# Cosmético e cabelo de adulto que vazam da categoria de higiene do bebê
+_COSMETICO_ADULTO = re.compile(r"\b(men|anticaspa|antiqueda|barba|pos barba|desodorantes?|antitranspirante|tintura|"
+                               r"coloracao|progressiva|alisamento|maquiagem|batom|rimel)\b")
+_CABELO = re.compile(r"\b(shampoo|xampu|condicionador|leave ?in|creme (de|para) pentear|mascara capilar)\b")
+_MARCA_BEBE = re.compile(r"\b(mustela|johnsons?|granado|pom pom|xuxinha|tra la la|galinha pintadinha|huggies|pampers|"
+                         r"baruel|weleda|natura mamae|cetaphil baby|dove baby)\b")
+# Material de artesanato (novelo, fio) que aparece entre os brinquedos
+_ARTESANATO = re.compile(r"\b(novelos?|barbante|fio (de )?malha|linha (de|para) croche|chenille)\b")
+
+
 def fora_da_faixa(titulo, categoria, regra=None):
     """Motivo para pular produtos que não são do universo infantil (ou None).
 
@@ -132,9 +142,15 @@ def fora_da_faixa(titulo, categoria, regra=None):
         return "roupa/item adulto"
     if _ACESSORIO_CABECA.search(t) and not _CRIANCA_CLARO.search(t):
         return "boné/chapéu sem ser infantil"
+    if _COSMETICO_ADULTO.search(t) and not _CRIANCA_CLARO.search(t):
+        return "cosmético de adulto"
     if not _INFANTIL.search(t):
         if _CASA_ADULTO.search(t) or (_CASAL.search(t) and not _ITEM_DE_BEBE.search(t)):
             return "item de casa/adulto (fora do nicho)"
+        if _CABELO.search(t) and not _MARCA_BEBE.search(t):
+            return "produto de cabelo sem ser infantil"
+        if _ARTESANATO.search(t):
+            return "material de artesanato"
     if regra == "game" or categoria == "game":
         if _GAMES_FORA.search(t) or not _GAMES_OK.search(t):
             return "game fora da lista infantil"

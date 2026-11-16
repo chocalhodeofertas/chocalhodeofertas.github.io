@@ -96,6 +96,9 @@ def preco_de_pelo_historico(estado, pid, preco, agora):
     return maior if preco <= maior * (1 - QUEDA_MIN) else None
 
 
+VARIACAO_MAX = 3.0  # opção mais cara custando 3x a mais barata: o preço do post não bate com o que a pessoa vê
+
+
 def aprovado(p, vendas_min=VENDAS_MIN):
     """Motivo para não usar o produto (ou None)."""
     if p.nota < NOTA_MIN:
@@ -106,6 +109,8 @@ def aprovado(p, vendas_min=VENDAS_MIN):
         return "comissão baixa"
     if not p.preco or not p.link:
         return "sem preço ou link"
+    if p.preco_max and p.preco_max >= p.preco * VARIACAO_MAX:
+        return "preço varia demais entre as opções"  # o "a partir de" seria de uma opção que quase ninguém quer
     return motivo_bloqueio(p.titulo) or fora_da_faixa(p.titulo, "", "infantil")
 
 

@@ -34,6 +34,7 @@ class InfoProduto:
     item_id: Optional[str] = None  # anúncio vencedor (para o Linkbuilder)
     # Anúncios ativos do produto de catálogo agora: {item_id: (preço, preço "de")}. Vazio = não consultado.
     ativos: dict = field(default_factory=dict)
+    total: int = 0  # quantos anúncios o catálogo tem ao todo (a consulta traz só os 20 primeiros)
 
 
 def extrair_id(link: str):
@@ -126,8 +127,11 @@ class MercadoLivre:
             titulo = dados.get("name") or ""
             fotos = dados.get("pictures") or []
             imagem = _imagem_grande(fotos[0].get("url")) if fotos else None
+        total = 0
         try:
-            ofertas = self._get(f"/products/{pid}/items", {"limit": 20}).get("results") or []
+            dados = self._get(f"/products/{pid}/items", {"limit": 20})
+            ofertas = dados.get("results") or []
+            total = (dados.get("paging") or {}).get("total") or len(ofertas)
         except ErroML:
             ofertas = []  # 404 = nenhuma loja vendendo agora
         ofertas = [o for o in ofertas if o.get("price")]
@@ -141,7 +145,20 @@ class MercadoLivre:
             disponivel=bool(melhor),
             item_id=melhor.get("item_id"),
             ativos={o["item_id"]: (o["price"], o.get("original_price")) for o in ofertas if o.get("item_id")},
+            total=total,
         )
+
+    def procurar_anuncio(self, pid, item_id, total, maximo=300):
+        """Procura um anúncio nas páginas seguintes do catálogo (além dos 20 primeiros).
+        Retorna (preço, preço "de") se está ativo, None se não está, e levanta ErroML se não deu para conferir."""
+        for inicio in range(20, min(total, maximo), 20):
+            dados = self._get(f"/products/{pid}/items", {"limit": 20, "offset": inicio})
+            for o in dados.get("results") or []:
+                if o.get("item_id") == item_id and o.get("price"):
+                    return o["price"], o.get("original_price")
+        if total > maximo:
+            raise ErroML("catálogo grande demais para conferir o anúncio")
+        return None
 
     def mais_vendidos(self, categoria):
         """Lista (tipo, id) dos mais vendidos de uma categoria, em ordem."""

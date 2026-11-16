@@ -104,3 +104,18 @@ export function naMeiaNoite(agora = new Date(), datas = DATAS_MEIA_NOITE) {
   const amanha = new Date(Date.UTC(Number(p.year), Number(p.month) - 1, Number(p.day) + 1)).toISOString().slice(0, 10);
   return datas.includes(amanha) && (hora > 23 || (hora === 23 && minuto >= 30));
 }
+
+// Ordem da fila do grupo: o limite diário é pequeno, então sai primeiro o que tem mais pontos
+// (avisos como cupons e resumos valem 9; ofertas valem pela força do desconto). Empate: a mais antiga.
+// As lojas continuam alternando: a melhor oferta da outra loja passa na frente, a não ser que haja um aviso.
+export function ordenarFila(nomes, ler, ultimaLoja = "ml") {
+  const itens = nomes.map((nome) => {
+    const d = ler(nome) || {};
+    return { nome, pontos: Number(d.pontos) || 0, loja: d.loja || "ml" };
+  });
+  itens.sort((a, b) => b.pontos - a.pontos || (a.nome < b.nome ? -1 : 1));
+  const aviso = itens.length && itens[0].pontos >= 9;
+  const outra = aviso ? null : itens.find((i) => i.loja !== ultimaLoja);
+  const ordem = outra ? [outra, ...itens.filter((i) => i !== outra)] : itens;
+  return ordem.map((i) => i.nome);
+}

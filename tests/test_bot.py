@@ -1088,7 +1088,8 @@ def test_fila_whatsapp(tmp_path, monkeypatch):
     monkeypatch.setenv("WA_FILA", str(tmp_path / "fila"))
     assert whatsapp.enfileirar("*Oferta*", "https://img/x.jpg", AGORA)
     itens = [json.loads(p.read_text()) for p in (tmp_path / "fila").glob("*.json")]
-    assert itens == [{"texto": "*Oferta*", "imagem": "https://img/x.jpg", "criado": AGORA.isoformat(), "loja": "ml"}]
+    assert itens == [{"texto": "*Oferta*", "imagem": "https://img/x.jpg", "criado": AGORA.isoformat(), "loja": "ml",
+                      "pontos": 9.0}]
 
 
 def test_cupons_vao_para_fila_do_whatsapp(tmp_path, monkeypatch):
@@ -2398,3 +2399,56 @@ def test_instagram_pausado(monkeypatch, tmp_path):
     from datetime import datetime
     assert instagram_pub.publicar_pendentes(None, "1", estado, datetime(2026, 11, 15, 12, 0)) is None
     assert "x" in estado["ig_fila"]
+
+
+def test_anuncio_do_link_alem_dos_20_primeiros():
+    from bot import lote
+    e = est.novo()
+    e["links"], e["links_item"] = {"MLB1": "https://meli.la/AAA"}, {"MLB1": "MLB111"}
+    i = InfoProduto("MLB1", "Banheira", 60.0, 100.0, None, True, "MLB999", ativos={"MLB999": (60.0, 100.0)}, total=71)
+    assert lote.conferir_anuncio(e, "MLB1", i) and "MLB1" in e["links"]              # sem como procurar: não descarta
+    assert lote.conferir_anuncio(e, "MLB1", i, procurar=lambda p, it, t: (70.0, 100.0)) and i.preco == 70.0
+    i = InfoProduto("MLB1", "Banheira", 60.0, 100.0, None, True, "MLB999", ativos={"MLB999": (60.0, 100.0)}, total=71)
+    assert not lote.conferir_anuncio(e, "MLB1", i, procurar=lambda p, it, t: None) and "MLB1" not in e["links"]
+
+    class S:
+        def __init__(self): self.offsets = []
+        def get(self, url, params=None, headers=None, timeout=None):
+            self.offsets.append(params.get("offset"))
+            achou = [{"item_id": "MLB111", "price": 70.0, "original_price": 100.0}] if params.get("offset") == 40 else []
+            return Resp(200, {"results": achou, "paging": {"total": 71}})
+
+    s = S()
+    assert MercadoLivre("t", session=s).procurar_anuncio("MLB1", "MLB111", 71) == (70.0, 100.0) and s.offsets == [20, 40]
+
+
+def test_shopee_recusa_variacao_enorme_de_preco():
+    from bot import shopee_ofertas as so
+    assert so.aprovado(_produto_shopee(preco=13.0, preco_max=49.49)) == "preço varia demais entre as opções"
+    assert so.aprovado(_produto_shopee(preco=20.0, preco_max=45.0)) is None
+    assert so.aprovado(_produto_shopee(preco=20.0, preco_max=0)) is None
+
+
+def test_cosmetico_de_adulto_e_artesanato_ficam_de_fora():
+    from bot.filtros import fora_da_faixa
+    assert fora_da_faixa("Clear Men Shampoo Anticaspa Ice Cool Menthol 400ml", "higiene") == "cosmético de adulto"
+    assert fora_da_faixa("Kit Nutri Rose Shampoo 250ml + Cond 125ml + Leave-in 30ml", "higiene") == "produto de cabelo sem ser infantil"
+    assert fora_da_faixa("Amigurumi Chenille Círculo - 100 Gramas - 110 Metros Cor 1317", "brinquedo") == "material de artesanato"
+    assert fora_da_faixa("Shampoo Infantil Cabelos Cacheados 200ml", "higiene") is None
+    assert fora_da_faixa("Shampoo Johnson's Baby Regular 400ml", "higiene") is None
+    assert fora_da_faixa("Shampoo Mustela 200ml", "higiene") is None
+    assert fora_da_faixa("Manta Bebê Chenille Azul", "quarto") is None
+    assert fora_da_faixa("Sabonete Líquido Glicerina Da Cabeça Aos Pés 250ml", "higiene") is None
+
+
+def test_whatsapp_fila_leva_os_pontos(monkeypatch, tmp_path):
+    from types import SimpleNamespace as N
+    from bot import whatsapp
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    forte = N(titulo="A", preco=50.0, preco_de=100.0, imagem=None, preco_normal=None)
+    real = N(titulo="B", preco=80.0, preco_de=None, imagem=None, preco_normal=100.0, selo_dias=20)
+    assert whatsapp.forca(forte) == 0.3 and whatsapp.forca(real) == 0.35 and whatsapp.forca(N(preco=10.0)) == 0
+    whatsapp.enfileirar_oferta(forte, "oferta https://meli.la/a", AGORA)
+    whatsapp.enfileirar("cupom novo", None, AGORA)
+    pontos = sorted(json.loads(f.read_text())["pontos"] for f in tmp_path.glob("*.json"))
+    assert pontos == [0.3, 9.0]

@@ -12,8 +12,25 @@ from datetime import datetime
 from pathlib import Path
 
 
-def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None):
-    """png: bytes de uma arte pronta (vai junto na fila e tem prioridade sobre a URL da foto)."""
+PONTOS_AVISO = 9.0  # cupons, tabela de fraldas e resumo do dia: sempre passam na frente das ofertas
+
+
+def forca(oferta):
+    """Quão forte é a oferta, para o grupo do WhatsApp receber as melhores (o limite diário de lá é pequeno).
+    Queda vista pelo próprio bot vale mais que o "de" do anúncio; selo e cupom somam um pouco."""
+    preco = getattr(oferta, "preco", 0) or 0
+    normal, de = getattr(oferta, "preco_normal", None), getattr(oferta, "preco_de", None)
+    real = 1 - preco / normal if normal and normal > preco else 0
+    anuncio = 1 - preco / de if de and de > preco else 0
+    pontos = max(real * 1.5, min(anuncio, 0.6) * 0.6)
+    pontos += 0.05 if getattr(oferta, "selo_dias", None) else 0
+    pontos += 0.05 if getattr(oferta, "cupom", None) else 0
+    return round(pontos, 4)
+
+
+def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None, pontos=PONTOS_AVISO):
+    """png: bytes de uma arte pronta (vai junto na fila e tem prioridade sobre a URL da foto).
+    pontos: prioridade na fila (o serviço posta primeiro o que tem mais pontos)."""
     pasta = os.environ.get("WA_FILA")
     if not pasta or not texto:
         return False
@@ -25,7 +42,7 @@ def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None
         arq = (p / f"{base}.png").resolve()
         arq.write_bytes(png)
         imagem = str(arq)
-    item = {"texto": texto, "imagem": imagem or None, "criado": quando.isoformat(), "loja": loja}
+    item = {"texto": texto, "imagem": imagem or None, "criado": quando.isoformat(), "loja": loja, "pontos": pontos}
     if preview:
         item["preview"] = preview
     nome = p / f"{base}.json"
@@ -43,4 +60,4 @@ def enfileirar_oferta(oferta, texto, agora=None, loja="ml"):
     preview = None
     if m and getattr(oferta, "imagem", None):
         preview = {"link": m.group(0), "titulo": oferta.titulo, "imagem": oferta.imagem}
-    return enfileirar(texto, getattr(oferta, "imagem", None), agora, loja, preview=preview)
+    return enfileirar(texto, getattr(oferta, "imagem", None), agora, loja, preview=preview, pontos=forca(oferta))

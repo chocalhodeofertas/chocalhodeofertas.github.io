@@ -63,15 +63,25 @@ def montar_lote(estado, sem_link, tamanho, agora):
     return [u for _, u in escolhidas]
 
 
-def conferir_anuncio(estado, pid, info, log=print):
+def conferir_anuncio(estado, pid, info, log=print, procurar=None):
     """O link oficial de um produto de catálogo abre UM anúncio (o que venceu quando o lote foi montado).
     Se esse anúncio não está mais ativo no catálogo (pausado, sem estoque, saiu), o link é descartado:
     o produto volta para a fila do lote com o anúncio que vende agora. Se está ativo, o preço do post
     passa a ser o DESSE anúncio (é ele que a pessoa vai ver ao tocar no link).
-    Retorna False quando o link foi descartado."""
+    Retorna False quando o link foi descartado.
+    procurar(pid, item, total): consulta as páginas seguintes do catálogo quando ele tem mais de 20 anúncios."""
     item = (estado.get("links_item") or {}).get(pid)
     if not item or not info or not getattr(info, "ativos", None) or pid not in estado.get("links", {}):
         return True  # link antigo (sem anúncio anotado) ou catálogo não consultado: segue como antes
+    if item not in info.ativos and getattr(info, "total", 0) > len(info.ativos):
+        if procurar is None:
+            return True  # não dá para saber: não descarta
+        try:
+            achado = procurar(pid, item, info.total)
+        except Exception:  # noqa: BLE001 — sem conferir, mantém o link
+            return True
+        if achado:
+            info.ativos[item] = achado
     if item not in info.ativos:
         del estado["links"][pid]
         del estado["links_item"][pid]
