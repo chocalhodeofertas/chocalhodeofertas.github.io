@@ -26,6 +26,10 @@ Textos para o dono do projeto sempre em português do Brasil.
   espera, mostra o log e clona `tmp-saida` em /tmp/saida) e `subir-mudanca` (testes, mapa, revisão, commit, rebase, push).
 - Agente `revisor-regras` (`.claude/agents/`): revisa o diff contra NBCAL, links, aprovação, segredos e decisões do Leonardo.
 - MCP `context7` (`.mcp.json`): documentação atual das bibliotecas (Baileys, Telethon, Pillow, Telegram Bot API).
+- Skill `find-skills` (de `vercel-labs/skills`, instalada com `npx skills add`; versão travada em `skills-lock.json`):
+  procura skills prontas. No container da nuvem o site skills.sh é bloqueado e `npx skills find` devolve
+  "No skills found" mesmo existindo: aí a busca é pelos repositórios de origem no GitHub (obra/superpowers,
+  coreyhaines31/marketingskills, trailofbits/skills, anthropics/skills). Skill de terceiro: ler antes de instalar.
 
 ## Módulos principais (bot/)
 - `main.py`: rodada do ML (descoberta, avaliação, ritmo, postagem); chama Shopee, cupons, vitrine e números.
