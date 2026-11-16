@@ -20,5 +20,18 @@
   "intervalo_min": 4,
   "intervalo_max": 13,
   "caiu_em": null,
-  "avisou_queda": false
+  "avisou_queda": false,
+  "historico": {
+    "dia": "2026-11-16",
+    "itens": [
+      {
+        "h": "2026-11-16T19:38:08.047Z",
+        "n": "Antes de fechar a compra, passe na página de cupons e ative os que servem para v",
+        "l": "shopee",
+        "r": "limite",
+        "k": "https://s.shopee.com.br/8fTxwjM742",
+        "p": 9
+      }
+    ]
+  }
 }
