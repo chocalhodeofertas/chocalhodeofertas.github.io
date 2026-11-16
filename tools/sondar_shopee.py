@@ -70,13 +70,18 @@ def main():
 
     print("\n## Outras consultas")
     for nome, q in [
-        ("shopeeOfferV2", "{shopeeOfferV2(page:1,limit:10){nodes{offerName offerLink commissionRate offerType categoryId periodEndTime}}}"),
+        ("shopeeOfferV2", "{shopeeOfferV2(page:1,limit:50){nodes{offerName offerLink originalLink commissionRate offerType "
+                          "categoryId collectionId periodStartTime periodEndTime}}}"),
+        ("shopeeOfferV2 cupom", "{shopeeOfferV2(keyword:\"cupom\",page:1,limit:30){nodes{offerName offerLink originalLink "
+                                "commissionRate offerType periodEndTime}}}"),
+        ("link de cupons", "mutation{generateShortLink(input:{originUrl:\"https://shopee.com.br/m/cupom-de-desconto\","
+                           "subIds:[\"teste\"]}){shortLink}}"),
         ("shopOfferV2", "{shopOfferV2(page:1,limit:5){nodes{shopName commissionRate offerLink}}}"),
         ("isAMSOffer", "{productOfferV2(isAMSOffer:true,page:1,limit:5){nodes{productName commissionRate}}}"),
     ]:
         try:
             d = shp._chamar(q, tentativas=2)
-            print(f"- {nome}: {json.dumps(d, ensure_ascii=False)[:600]}")
+            print(f"- {nome}: {json.dumps(d, ensure_ascii=False)[:6000]}")
         except ShopeeErro as e:
             print(f"- {nome}: ERRO {e}")
 
