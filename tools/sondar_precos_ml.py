@@ -35,5 +35,9 @@ for par in (sys.argv[1] if len(sys.argv) > 1 else "").split()[:4]:
     try:
         d = ml._get(f"/products/{pid}/items", {"limit": 3})
         print("items keys:", sorted(d.keys()), "paging:", d.get("paging"))
+        for o in d.get("results") or []:
+            sid = o.get("seller_id")
+            print("  anuncio", o.get("item_id"), o.get("price"), "loja oficial:", o.get("official_store_id"), "vendedor", sid)
+            print("   users:", tenta(f"/users/{sid}")[:700])
     except Exception as e:  # noqa: BLE001
         print("items ERRO", type(e).__name__, str(e)[:200])
