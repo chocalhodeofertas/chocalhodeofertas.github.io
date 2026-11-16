@@ -2422,13 +2422,6 @@ def test_anuncio_do_link_alem_dos_20_primeiros():
     assert MercadoLivre("t", session=s).procurar_anuncio("MLB1", "MLB111", 71) == (70.0, 100.0) and s.offsets == [20, 40]
 
 
-def test_shopee_recusa_variacao_enorme_de_preco():
-    from bot import shopee_ofertas as so
-    assert so.aprovado(_produto_shopee(preco=13.0, preco_max=49.49)) == "preço varia demais entre as opções"
-    assert so.aprovado(_produto_shopee(preco=20.0, preco_max=45.0)) is None
-    assert so.aprovado(_produto_shopee(preco=20.0, preco_max=0)) is None
-
-
 def test_cosmetico_de_adulto_e_artesanato_ficam_de_fora():
     from bot.filtros import fora_da_faixa
     assert fora_da_faixa("Clear Men Shampoo Anticaspa Ice Cool Menthol 400ml", "higiene") == "cosmético de adulto"
@@ -2452,3 +2445,26 @@ def test_whatsapp_fila_leva_os_pontos(monkeypatch, tmp_path):
     whatsapp.enfileirar("cupom novo", None, AGORA)
     pontos = sorted(json.loads(f.read_text())["pontos"] for f in tmp_path.glob("*.json"))
     assert pontos == [0.3, 9.0]
+
+
+def test_alerta_de_oferta_forte(monkeypatch):
+    from types import SimpleNamespace as N
+    from bot import comandos
+    e, tg, cfg = est.novo(), TGCmd(), cfg_cmd()
+    for dias in range(10, 0, -1):
+        est.registrar_preco(e, "MLB1", 100.0, AGORA - timedelta(days=dias))
+        est.registrar_preco(e, "MLB2", 100.0, AGORA - timedelta(days=dias))
+    forte = N(id="MLB1", titulo="Cadeira de Alimentação", preco=75.0, link="https://meli.la/a", selo_dias=None)
+    fraca = N(id="MLB2", titulo="Banheira", preco=90.0, link="https://meli.la/b", selo_dias=None)
+    nova = N(id="MLB3", titulo="Sem histórico", preco=10.0, link="https://meli.la/c", selo_dias=None)
+    assert comandos.motivo_oferta_forte(e, forte, AGORA) == "25% abaixo do que vinha custando (R$ 100,00) nos últimos 10 dias"
+    assert comandos.motivo_oferta_forte(e, fraca, AGORA) is None and comandos.motivo_oferta_forte(e, nova, AGORA) is None
+    fraca.selo_dias = 20                                         # menor preço em 20 dias e 10% abaixo: também avisa
+    assert comandos.motivo_oferta_forte(e, fraca, AGORA) == "menor preço que o Chocalho viu em 20 dias"
+    assert comandos.alertar_oferta_forte(tg, cfg, e, forte, AGORA) and "Oferta forte" in tg.textos[-1][1]
+    assert "25% abaixo" in tg.textos[-1][1] and "https://meli.la/a" in tg.textos[-1][1] and tg.textos[-1][0] == cfg.admin_chat
+    assert not comandos.alertar_oferta_forte(tg, cfg, e, forte, AGORA)          # o mesmo produto não avisa duas vezes no dia
+    monkeypatch.setenv("ALERTA_MAX_DIA", "1")
+    assert not comandos.alertar_oferta_forte(tg, cfg, e, fraca, AGORA)          # limite do dia
+    monkeypatch.setenv("ALERTA_MAX_DIA", "0")
+    assert not comandos.alertar_oferta_forte(tg, cfg, est.novo(), forte, AGORA) # desligado

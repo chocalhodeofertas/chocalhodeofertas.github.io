@@ -60,7 +60,7 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `shopee_ofertas.py`: ofertas da Shopee por cima das do ML (limite próprio: `SHOPEE_MAX_DIA` 50, `SHOPEE_MAX_HORA` 4).
   Busca: 3 palavras-chave + 2 categorias infantis por rodada (`CATEGORIAS`, mais vendidos, páginas 1 a 3 em rodízio).
   A API não tem oferta relâmpago; `listType` 2 (top) e 0 trazem produtos gerais, não usamos.
-  Regras: nota ≥ 4,7, vendas ≥ 500 (200 se veio do espelho), comissão ≥ 5%, opção mais cara < 3x a mais barata, só preço final; "de/por" só com queda vista pelo próprio bot.
+  Regras: nota ≥ 4,7, vendas ≥ 500 (200 se veio do espelho), comissão ≥ 5%, só preço final; "de/por" só com queda vista pelo próprio bot.
   Links via `generateShortLink` com subId `telegram` / `whatsapp`.
 - `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/`; o serviço (Baileys) posta com aquecimento automático
   (4 → 10 → 14 → 20 posts/dia nos dias 0, 4, 8 e 14 desde a conexão), só das 7h às 23h, alterna ML/Shopee,
@@ -77,6 +77,8 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `comandos.py`: comandos do admin no Telegram e resumo diário (inclui WhatsApp). `bloquear/desbloquear/bloqueados` (palavras em
   `estado.bloqueados`, aplicadas por `filtros.definir_bloqueios` no início de cada rodada); `fila`, `tirar N`, `limpar fila` (fila do WhatsApp);
   `avisar_se_parado`: 1 aviso por dia se passar 3 h sem post no horário ativo.
+  `alertar_oferta_forte` (chamado a cada post, ML e Shopee): avisa o admin quando o preço está 20% abaixo do típico (7+ dias de
+  histórico) ou 10% abaixo com selo de menor preço; até `ALERTA_MAX_DIA` (5) por dia.
 - `tiktok.py`: renderizador dos carrosséis 1080x1350 (capa, produto, CTA).
 - `instagram.py`: cliente da API do Instagram (login unificado; segredos `INSTAGRAM_TOKEN`/`INSTAGRAM_USER_ID`, token sem validade).
   `metricas()` tenta tudo junto e, se falhar, uma a uma; o que não vier fica em `ausentes`.

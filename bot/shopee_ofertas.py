@@ -96,9 +96,6 @@ def preco_de_pelo_historico(estado, pid, preco, agora):
     return maior if preco <= maior * (1 - QUEDA_MIN) else None
 
 
-VARIACAO_MAX = 3.0  # opção mais cara custando 3x a mais barata: o preço do post não bate com o que a pessoa vê
-
-
 def aprovado(p, vendas_min=VENDAS_MIN):
     """Motivo para não usar o produto (ou None)."""
     if p.nota < NOTA_MIN:
@@ -109,8 +106,6 @@ def aprovado(p, vendas_min=VENDAS_MIN):
         return "comissão baixa"
     if not p.preco or not p.link:
         return "sem preço ou link"
-    if p.preco_max and p.preco_max >= p.preco * VARIACAO_MAX:
-        return "preço varia demais entre as opções"  # o "a partir de" seria de uma opção que quase ninguém quer
     return motivo_bloqueio(p.titulo) or fora_da_faixa(p.titulo, "", "infantil")
 
 
@@ -362,6 +357,11 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
             continue
         whatsapp.enfileirar_oferta(o, mensagens.montar_whatsapp(o, rng), agora, loja="shopee")
         resumos.registrar(estado, o, agora, "shopee")
+        try:
+            from . import comandos
+            comandos.alertar_oferta_forte(tg, cfg, estado, o, agora, "shopee")
+        except Exception:  # noqa: BLE001 — o aviso nunca atrapalha o post
+            pass
         canal = espelho_fonte(estado, o.id)
         if canal and getattr(cfg, "admin_chat", ""):
             try:  # avisa você de onde veio a oferta copiada

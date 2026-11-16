@@ -6,6 +6,7 @@
 - Vários meli.la de uma vez        → resposta de um lote do Linkbuilder
 """
 import html
+import os
 import random
 import re
 import unicodedata
@@ -79,6 +80,52 @@ def resolver_meli(link, session=None):
 
 
 # ---------- postar ----------
+
+ALERTA_QUEDA = 0.20      # preço 20% abaixo do que vinha custando no histórico do bot
+ALERTA_QUEDA_SELO = 0.10  # ou 10% abaixo, quando também é o menor preço em 14+ dias
+ALERTA_DIAS_MIN = 7
+
+
+def motivo_oferta_forte(estado, oferta, agora):
+    """Por que a oferta é fora da curva (ou None). Só pelo histórico do próprio bot: o "de" do anúncio não conta."""
+    tipico, dias = est.preco_tipico(estado, oferta.id, agora)
+    if not tipico or dias < ALERTA_DIAS_MIN or not oferta.preco:
+        return None
+    queda = round(1 - oferta.preco / tipico, 4)
+    if queda >= ALERTA_QUEDA:
+        return (f"{round(queda * 100)}% abaixo do que vinha custando ({mensagens.brl(tipico)}) "
+                f"nos últimos {min(dias, 30)} dias")
+    if getattr(oferta, "selo_dias", None) and queda >= ALERTA_QUEDA_SELO:
+        return f"menor preço que o Chocalho viu em {oferta.selo_dias} dias"
+    return None
+
+
+def alertar_oferta_forte(tg, cfg, estado, oferta, agora, loja="ml"):
+    """Avisa você na hora quando sai uma oferta fora da curva (para destacar nos Stories, por exemplo).
+    Até ALERTA_MAX_DIA avisos por dia (padrão 5; 0 desliga) e um por produto."""
+    limite = int(os.environ.get("ALERTA_MAX_DIA") or 5)
+    if not getattr(cfg, "admin_chat", "") or limite <= 0:
+        return False
+    hoje = agora.date().isoformat()
+    reg = estado.get("alertas")
+    if not isinstance(reg, dict) or reg.get("dia") != hoje:
+        reg = estado["alertas"] = {"dia": hoje, "ids": []}
+    if oferta.id in reg["ids"] or len(reg["ids"]) >= limite:
+        return False
+    motivo = motivo_oferta_forte(estado, oferta, agora)
+    if not motivo:
+        return False
+    onde = "Shopee" if loja == "shopee" else "Mercado Livre"
+    texto = (f"🚨 <b>Oferta forte no canal agora</b> ({onde})\n{html.escape((oferta.titulo or '')[:90])}\n"
+             f"<b>{mensagens.brl(oferta.preco)}</b> · {motivo}\n{html.escape(oferta.link or '')}\n"
+             f"<i>Boa para destacar nos Stories. Aviso {len(reg['ids']) + 1} de até {limite} hoje.</i>")
+    try:
+        tg.enviar_texto(cfg.admin_chat, texto, html=True)
+    except TelegramErro:
+        return False
+    reg["ids"].append(oferta.id)
+    return True
+
 
 def enviar_copias(tg, chat, oferta, rng=random, fonte=None):
     """Arte da oferta + texto do WhatsApp com botões que abrem WhatsApp e X já preenchidos.

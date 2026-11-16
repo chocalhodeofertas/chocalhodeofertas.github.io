@@ -465,6 +465,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         whatsapp.enfileirar_oferta(o, mensagens.montar_whatsapp(o, rng), agora)
         est.registrar_post(estado, o.id, o.preco, agora, o.titulo, o.desconto)
         resumos.registrar(estado, o, agora, "ml", getattr(por_id.get(o.id), "tipo", None))
+        comandos.alertar_oferta_forte(tg, cfg, estado, o, agora, "ml")
         if o.cupom:
             est.contar_dia(estado, agora, "com_cupom")
         tipos_hoje.add(tp)
