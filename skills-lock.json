@@ -1,12 +1,47 @@
 {
   "version": 2,
   "skills": {
+    "ad-creative": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "sourceType": "github",
+      "skillPath": "skills/ad-creative/SKILL.md",
+      "computedHash": "24cbcb16e03336bf568175d2ddad0aa772c493ea48deb44431bd23cfc16489d7"
+    },
+    "ads": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "sourceType": "github",
+      "skillPath": "skills/ads/SKILL.md",
+      "computedHash": "c6c0606e493a78ce01dd3060034d9ebb4187a1dd5d452b7b79b391d000e9aaf5"
+    },
     "find-skills": {
       "source": "vercel-labs/skills",
       "commit": "50894c1d98bc45ca1ab127213e59d6525065b5e7",
       "sourceType": "github",
       "skillPath": "skills/find-skills/SKILL.md",
       "computedHash": "7bc223e2aafbdbf6e50ea243ba6ef67fe432bb069ab439fea0390795dac0bf7f"
+    },
+    "social": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "sourceType": "github",
+      "skillPath": "skills/social/SKILL.md",
+      "computedHash": "91bfb578ae1c1c1d488a59bc734ff1716b1d924a8451be31021d1cb3a411f241"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "sourceType": "github",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "computedHash": "79ff0583175346e39431b0dc713b223edd1bd7a7ea2b6c8b78b2fb9a3fed6782"
+    },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "sourceType": "github",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "computedHash": "09b0e3a4689c1c38a3b8fc6ef57a1d4165aa33c0013d546dbde9dd348941a319"
     }
   }
 }

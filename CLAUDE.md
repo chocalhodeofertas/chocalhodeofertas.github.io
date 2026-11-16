@@ -30,6 +30,13 @@ Textos para o dono do projeto sempre em português do Brasil.
   procura skills prontas. No container da nuvem o site skills.sh é bloqueado e `npx skills find` devolve
   "No skills found" mesmo existindo: aí a busca é pelos repositórios de origem no GitHub (obra/superpowers,
   coreyhaines31/marketingskills, trailofbits/skills, anthropics/skills). Skill de terceiro: ler antes de instalar.
+- Skills de terceiros instaladas em 16/11 (revisadas antes; versões em `skills-lock.json`, atualizar com `npx skills update`):
+  `systematic-debugging` e `verification-before-completion` (obra/superpowers): achar a causa antes de consertar e
+  só dizer "pronto" com a prova rodada na hora. `ads`, `ad-creative` e `social` (coreyhaines31/marketingskills):
+  anúncios na Meta e conteúdo orgânico; são em inglês e pensadas para software, adaptar ao Chocalho.
+  As regras do Leonardo valem por cima delas: nada de gerar imagem/vídeo com serviço pago sem autorização, textos em
+  português, sem porcentagem em artes. Elas procuram um `.claude/product-marketing.md`: NÃO criar aqui (o repositório
+  é público e a estratégia é privada); o contexto vem do briefing do projeto.
 
 ## Módulos principais (bot/)
 - `main.py`: rodada do ML (descoberta, avaliação, ritmo, postagem); chama Shopee, cupons, vitrine e números.
