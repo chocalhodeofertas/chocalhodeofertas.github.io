@@ -704,6 +704,7 @@ def main(argv=None):
             comandos.verificar_cupons(tg, cfg, estado, agora, log)
             comandos.talvez_resumo_diario(tg, estado, cfg, agora, log)
             comandos.avisar_se_parado(tg, cfg, estado, datetime.now(FUSO), log)
+            comandos.lembrar_recarga(tg, cfg, estado, datetime.now(FUSO), log)
             from . import conteudo
             if os.environ.get("PACOTE_AUTO") == "1":  # pausado: só sai quando você pede "pacote"
                 conteudo.talvez_enviar(tg, cfg, estado, agora, hora=int(os.environ.get("PACOTE_HORA") or 10), log=log)

@@ -636,7 +636,10 @@ def ver_fila(agora, arquivo_wa=None):
     enviados = wa.get("enviados", 0) if wa.get("dia") == agora.date().isoformat() else 0
     limite = f" de {wa['max_dia']}" if wa.get("max_dia") else ""
     linhas = ["📬 <b>Fila do WhatsApp</b>", f"Hoje já saíram <b>{enviados}</b>{limite} posts no grupo."]
-    if wa.get("intervalo_min"):
+    if wa.get("intervalo_max"):
+        linhas.append(f"Sai 1 a cada {wa['intervalo_min']:g} a {wa['intervalo_max']:g} min (sorteado), "
+                      "com o limite espalhado das 7h às 23h.")
+    elif wa.get("intervalo_min"):
         linhas.append(f"Sai 1 a cada {wa['intervalo_min']} min, das 7h às 23h.")
     from .fila_pagina import ENDERECO
     pagina = f'🗂️ O dia inteiro (o que saiu, o que espera e o que ficou de fora): <a href="{ENDERECO}">página da fila</a>'
@@ -724,6 +727,57 @@ def avisar_se_parado(tg, cfg, estado, agora, log=print):
         return False
 
 
+# ---------------------------------------------------------------- recarga do chip do WhatsApp
+RECARGA_AVISOS = (75, 85)  # chip pré-pago perde o número com 90 dias sem recarga
+
+
+def registrar_recarga(texto, estado, agora):
+    """'recarga' (hoje), 'recarga 10/11' ou 'recarga plano' (chip com plano: não precisa de lembrete)."""
+    resto = _norm(texto).split(" ", 1)[1].strip() if " " in texto.strip() else ""
+    if resto in ("plano", "pos", "pós", "controle", "pos-pago", "pós-pago"):
+        estado["chip_recarga"] = {"plano": True}
+        return "Anotado: o chip do WhatsApp tem plano. Não vou lembrar de recarga."
+    if not resto:
+        dia = agora.date()
+    else:
+        m = re.fullmatch(r"(\d{1,2})/(\d{1,2})(?:/(\d{2,4}))?", resto)
+        if not m:
+            return "Mande <b>recarga</b> (fiz hoje), <b>recarga 10/11</b> (fiz nesse dia) ou <b>recarga plano</b>."
+        ano = int(m.group(3)) if m.group(3) else agora.year
+        ano = ano + 2000 if ano < 100 else ano
+        try:
+            dia = agora.date().replace(year=ano, month=int(m.group(2)), day=int(m.group(1)))
+        except ValueError:
+            return "Essa data não existe. Ex.: <b>recarga 10/11</b>."
+        if dia > agora.date():
+            dia = dia.replace(year=dia.year - 1)
+    estado["chip_recarga"] = {"dia": dia.isoformat(), "avisos": []}
+    vence = dia + timedelta(days=90)
+    return (f"Anotado: última recarga do chip em {dia:%d/%m/%Y}. O número só corre risco depois de "
+            f"{vence:%d/%m/%Y}. Aviso você com {RECARGA_AVISOS[0]} e {RECARGA_AVISOS[1]} dias.")
+
+
+def lembrar_recarga(tg, cfg, estado, agora, log=print):
+    """Lembra a recarga do chip pré-pago antes dos 90 dias (1 aviso em cada marco)."""
+    reg = estado.get("chip_recarga") or {}
+    if not cfg.admin_chat or reg.get("plano") or not reg.get("dia"):
+        return False
+    dias = (agora.date() - datetime.fromisoformat(reg["dia"]).date()).days
+    marco = max((m for m in RECARGA_AVISOS if dias >= m), default=None)
+    if marco is None or marco in reg.get("avisos", []):
+        return False
+    falta = 90 - dias
+    try:
+        tg.enviar_texto(cfg.admin_chat, f"📱 <b>Recarga do chip do WhatsApp</b>: a última foi há {dias} dias. Chip pré-pago "
+                        f"perde o número com 90 dias sem recarga (faltam {max(falta, 0)}). Depois de recarregar, "
+                        "mande <b>recarga</b> aqui.")
+    except TelegramErro as e:
+        log(f"Aviso: não consegui lembrar da recarga: {e}")
+        return False
+    reg.setdefault("avisos", []).append(marco)
+    return True
+
+
 def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
     """Decide o que fazer com uma mensagem sua. Retorna a resposta (ou None)."""
     t = (texto or "").strip()
@@ -751,6 +805,8 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
         return listar_bloqueados(estado)
     if n in ("fila", "/fila"):
         return ver_fila(agora)
+    if n == "recarga" or n.startswith(("recarga ", "/recarga")):
+        return registrar_recarga(t.lstrip("/"), estado, agora)
     if n in ("limpar fila", "/limpar_fila"):
         return limpar_fila()
     if n.startswith(("tirar ", "/tirar ")):

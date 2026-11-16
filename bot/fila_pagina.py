@@ -55,21 +55,37 @@ def ordem_de_saida(itens, ultima_loja="ml"):
     return ordem
 
 
+def cota_ate(maximo, t):
+    """Mesma regra do wa/comum.mjs (cotaAteAgora): o limite do dia espalhado das 7h às 23h."""
+    passou = min(max(t.hour + t.minute / 60 - HORA_INICIO, 0), HORA_FIM - HORA_INICIO)
+    return min(maximo, max(1, -(-maximo * passou // (HORA_FIM - HORA_INICIO))))
+
+
+def _intervalo_medio(wa):
+    if wa.get("intervalo_max"):
+        return timedelta(minutes=(float(wa.get("intervalo_min") or 4) + float(wa["intervalo_max"])) / 2)
+    return timedelta(minutes=float(wa.get("intervalo_min") or 25))
+
+
 def prever(itens, wa, agora):
     """Para cada item esperando no grupo: a hora prevista de saída, ou por que não deve sair."""
     hoje = agora.date().isoformat()
-    intervalo = timedelta(minutes=float(wa.get("intervalo_min") or 25))
+    intervalo = _intervalo_medio(wa)
     limite = wa.get("max_dia")
     enviados = wa.get("enviados", 0) if wa.get("dia") == hoje else 0
     pausado = bool(wa.get("pausado_ate") and wa["pausado_ate"] > agora.isoformat())
+    proximo = _quando(wa.get("proximo_em"), agora)
     ultimo = _quando(wa.get("ultimo"), agora)
-    t = max(agora, ultimo + intervalo) if ultimo else agora
+    t = max(agora, proximo) if proximo else (max(agora, ultimo + intervalo) if ultimo else agora)
     saida = []
     for item in ordem_de_saida(itens, wa.get("ultima_loja") or "ml"):
         criado = _quando(item.get("criado"), agora) or agora
         vence = criado + timedelta(hours=VALIDADE_H)
         if t.hour < HORA_INICIO:
             t = t.replace(hour=HORA_INICIO, minute=0)
+        while limite and wa.get("intervalo_max") and enviados >= cota_ate(limite, t) and enviados < limite \
+                and t.hour < HORA_FIM:
+            t += timedelta(minutes=15)  # espera a cota do dia liberar mais um post
         if pausado:
             previsao = ("fora", "não sai: grupo em pausa de segurança")
         elif limite and enviados >= limite:
@@ -143,7 +159,8 @@ def gerar_html(estado, wa, itens_fila, agora):
     tiles = "".join([
         tile("Saíram no Telegram hoje", len(posts), "o Telegram não tem fila: aprovou, saiu"),
         tile("Saíram no grupo hoje", f"{enviados}" + (f" de {limite}" if limite else ""),
-             f"1 a cada {wa['intervalo_min']:g} min" if wa.get("intervalo_min") else "WhatsApp"),
+             (f"1 a cada {wa['intervalo_min']:g} a {wa['intervalo_max']:g} min, espalhados pelo dia" if wa.get("intervalo_max")
+              else f"1 a cada {wa['intervalo_min']:g} min" if wa.get("intervalo_min") else "WhatsApp")),
         tile("Esperando no grupo", len(pendentes), f"{fora} ficaram de fora hoje" if fora else "fila do WhatsApp"),
         tile("Esperando link oficial", esperando_link, "Mercado Livre: depende do lote"),
     ])

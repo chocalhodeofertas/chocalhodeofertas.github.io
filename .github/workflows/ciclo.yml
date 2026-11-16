@@ -74,7 +74,7 @@ jobs:
           REPOST_DIAS: ${{ vars.REPOST_DIAS || '7' }}
           LINK_MODO: ${{ vars.LINK_MODO }}
           LOTE_TAMANHO: ${{ vars.LOTE_TAMANHO }}
-          LOTES_POR_DIA: ${{ vars.LOTES_POR_DIA }}
+          LOTES_POR_DIA: ${{ vars.LOTES_POR_DIA || '6' }}
           INTERVALO_MIN: ${{ vars.INTERVALO_MIN }}
           INTERVALO_MAX: ${{ vars.INTERVALO_MAX }}
           ATRASO_MAX: ${{ vars.ATRASO_MAX }}
@@ -97,7 +97,7 @@ jobs:
           GRAFICO_ATIVO: ${{ vars.GRAFICO_ATIVO || '1' }}
           # Cupons da Shopee: link oficial do Leonardo para a página de cupons (o bot não abre esse link)
           SHOPEE_CUPONS_LINK: ${{ vars.SHOPEE_CUPONS_LINK || 'https://s.shopee.com.br/8fTxwjM742' }}
-          CUPONS_SHOPEE_ATIVO: ${{ vars.CUPONS_SHOPEE_ATIVO || '0' }}  # post diário: 0 até o Leonardo aprovar o texto
+          CUPONS_SHOPEE_ATIVO: ${{ vars.CUPONS_SHOPEE_ATIVO || '1' }}  # post diário das 9h: aprovado pelo Leonardo em 16/11
           CUPONS_SHOPEE_HORA: ${{ vars.CUPONS_SHOPEE_HORA || '9' }}
           # Cupom "do anúncio": para ler, o bot teria de abrir o link de afiliado (meli.la). Fica 0: o Leonardo não quer o bot abrindo os links dele
           CUPOM_DA_PAGINA: ${{ vars.CUPOM_DA_PAGINA || '0' }}

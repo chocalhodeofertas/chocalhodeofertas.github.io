@@ -69,7 +69,7 @@ Textos para o dono do projeto sempre em português do Brasil.
   Passam pelos mesmos filtros (regra "infantil", NBCAL, repetição); desconto mínimo 10% e +20% na pontuação.
   Origem visível para o admin: `espelho.fonte` → linha "🔁 Copiada do canal @x" na cópia do ML, aviso no post da Shopee
   e lista no resumo diário (`posts_dia[].fonte`). Shopee: `shopee_ofertas.do_espelho` confere por itemId.
-- `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica) e `fora_da_faixa` (casa/adulto, exige sinal infantil).
+- `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica, fralda geriátrica/incontinência) e `fora_da_faixa` (casa/adulto, exige sinal infantil).
 - `mensagens.py`: `preco_por_unidade` (fralda descartável: por fralda; lenço umedecido: a cada 100; só com quantidade clara no título). Textos do Telegram/WhatsApp, frases de abertura por produto, linha de cupom, Shopee ("A partir de", nota e vendas).
 - `lote.py`: lote do Linkbuilder (não existe API oficial do ML para gerar link; é manual). Cada link oficial abre UM anúncio
   (o vencedor quando o lote foi montado): `estado.links_item` guarda qual (lotes antigos vieram de `data/links_item_inicial.json`).
@@ -89,6 +89,9 @@ Textos para o dono do projeto sempre em português do Brasil.
   Links via `generateShortLink` com subId `telegram` / `whatsapp`.
 - `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/`; o serviço (Baileys) posta com aquecimento automático
   (4 → 10 → 14 → 20 posts/dia nos dias 0, 4, 8 e 14 desde a conexão), só das 7h às 23h, alterna ML/Shopee,
+  intervalo sorteado de 4 a 13 min (`WA_INTERVALO_MIN/MAX`) e o limite do dia espalhado pelas horas (`comum.mjs: cotaAteAgora`;
+  às 12h só pode ter saído 4/16 do limite); avisa quando cai por mais de 10 min, quando volta e quando a pausa de segurança acaba;
+  Radar (`comum.mjs: anotarRadar`): `wa_estado.json: radar[dia][hora] = [entradas, saídas, mensagens]`, 45 dias, só contagens;
   posta primeiro o que tem mais `pontos` (`whatsapp.forca`: força do desconto; avisos = 9; `wa/comum.mjs: ordenarFila`), pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
 - `resumos.py`: posts de resumo (fora do limite e da regra de repetição), chamados por `resumos.rodar` no fim da rodada:
   tabela de fraldas (`FRALDAS_ATIVO`, 10h): menor preço por fralda em cada tamanho, ML (`estado.fraldas_ml`, guardado a cada
@@ -105,7 +108,7 @@ Textos para o dono do projeto sempre em português do Brasil.
   mais procurados (aparece no resumo diário).
 - Cupons da Shopee: a API não lista cupons. `comandos.postar_cupom_shopee` (`cupom shopee <texto>`) posta no canal e na fila do
   grupo com `SHOPEE_CUPONS_LINK` (link oficial do Leonardo para a página de cupons; NUNCA abrir/expandir links de afiliado dele).
-  `resumos.talvez_cupons_shopee`: post diário às 9h com esse link (`CUPONS_SHOPEE_ATIVO`, 0 até ele aprovar o texto).
+  `resumos.talvez_cupons_shopee`: post diário às 9h com esse link (`CUPONS_SHOPEE_ATIVO`, ligado: aprovado em 16/11).
 - `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas, cupons, WhatsApp).
 - `fila_pagina.py`: página escondida `docs/fila-4e7a91c3.html`, reescrita a cada rodada (`publicar` no fim da rodada normal):
   o que saiu hoje no canal (`estado.posts_dia`, com hora, origem do espelho, selo, cupom) e o que aconteceu com cada oferta no
@@ -114,7 +117,8 @@ Textos para o dono do projeto sempre em português do Brasil.
   esperam link oficial (`estado.fila_link`, de `lote.resumo_fila`). Sem links na página. O comando `fila` aponta para ela.
 - `comandos.py`: comandos do admin no Telegram e resumo diário (inclui WhatsApp). `bloquear/desbloquear/bloqueados` (palavras em
   `estado.bloqueados`, aplicadas por `filtros.definir_bloqueios` no início de cada rodada); `fila`, `tirar N`, `limpar fila` (fila do WhatsApp);
-  `avisar_se_parado`: 1 aviso por dia se passar 3 h sem post no horário ativo.
+  `avisar_se_parado`: 1 aviso por dia se passar 3 h sem post no horário ativo. `recarga [dd/mm|plano]` grava a última recarga do
+  chip do WhatsApp (`estado.chip_recarga`); `lembrar_recarga` avisa com 75 e 85 dias (pré-pago perde o número com 90).
   `alertar_oferta_forte` (chamado a cada post, ML e Shopee): avisa o admin quando o preço está 20% abaixo do típico (7+ dias de
   histórico) ou 10% abaixo com selo de menor preço; até `ALERTA_MAX_DIA` (5) por dia.
 - `tiktok.py`: renderizador dos carrosséis 1080x1350 (capa, produto, CTA).
@@ -136,8 +140,11 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `testar_instagram` / `coletar_instagram`: confere o token / roda a coleta uma vez em `saida/instagram`.
 - `publicar_carrossel <pasta>`: publica `docs/ig-tmp/<pasta>/` no Instagram (só com aprovação do Leonardo).
 - `previa_resumos "fraldas top5 grafico"`: manda só para o admin a prévia da tabela de fraldas, das 5 melhores do dia e do gráfico.
-- `conferir_precos`: posts do dia x preço de agora nas lojas (saida/conferir_precos.json). `sondar_precos_ml`: o que a API dá de preço
-  (não dá o preço no Pix: /items é 403). `ver_pagina_ml <links>`: o que a página de destino mostra (diagnóstico pontual).
+- `conferir_precos`: posts do dia x preço de agora nas lojas, só pela API (saida/conferir_precos.json). `sondar_precos_ml`: o que a
+  API dá de preço (não dá o preço no Pix: /items é 403). `sondar_extras "MLB.. MLB..; termo|termo"`: frete grátis/Full por
+  anúncio (a API dá `shipping.free_shipping` e `logistic_type == "fulfillment"`; Pix e cupom não), se a página pública do produto
+  abre do GitHub (não: cai em account-verification) e por que a Shopee recusou cada produto de uma busca.
+  Nenhuma ferramenta abre link de afiliado (a antiga `ver_pagina_ml` foi apagada em 16/11).
 - `previa_busca "fralda g; mochila infantil"`: manda só para o admin as respostas da busca sob pedido e a prévia dos cupons da Shopee.
 - `sondar_shopee`: mostra categorias (productCatIds) e tipos de lista que a API da Shopee devolve (só leitura).
 - `achar_canais_tg "termo; termo"`: procura canais públicos de ofertas de bebê no Telegram e mede links/posts infantis (saida/canais_tg.md).

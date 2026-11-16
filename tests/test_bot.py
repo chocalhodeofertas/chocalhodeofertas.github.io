@@ -2658,3 +2658,45 @@ def test_resumo_da_fila_de_links_e_hora_do_post():
           cupom={"codigo": "X"})
     resumos.registrar(e, o, AGORA.replace(hour=9, minute=7), "ml")
     assert e["posts_dia"]["itens"][0]["hora"] == "09:07" and e["posts_dia"]["itens"][0]["cupom"] is True
+
+
+def test_pagina_da_fila_com_intervalo_sorteado_e_cota_do_dia():
+    from bot import fila_pagina as fp
+
+    agora = AGORA.replace(hour=9, minute=0)
+    hoje = agora.date().isoformat()
+    assert [fp.cota_ate(10, agora.replace(hour=h)) for h in (7, 9, 12, 18, 22)] == [1, 2, 4, 7, 10]
+    wa = {"dia": hoje, "enviados": 2, "max_dia": 10, "intervalo_min": 4, "intervalo_max": 13, "ultima_loja": "ml",
+          "proximo_em": agora.replace(minute=5).isoformat()}
+    fila = [{"arquivo": "1", "nome": "Body", "loja": "shopee", "pontos": .2, "criado": agora.isoformat(), "link": None}]
+    # às 9h já saíram 2 de 2 permitidos até agora: o 3º só é liberado depois das 10h12
+    assert fp.prever(fila, wa, agora)[0]["previsao"] == ("espera", "previsão 10:20")
+    assert "4 a 13 min, espalhados pelo dia" in fp.gerar_html(est.novo(), wa, fila, agora)
+
+
+def test_fralda_geriatrica_fica_de_fora():
+    from bot.filtros import motivo_bloqueio
+    for t in ("Fralda Geriátrica Usefral Hiper G 50 Unidades", "Kit 32 Fraldas Geriátricas Unissex ConfortMaster Pants",
+              "Fralda Adulto Tena Pants Noturna", "Absorvente para incontinência urinária"):
+        assert motivo_bloqueio(t), t
+    for t in ("Fralda Pampers Confort Sec G 128un", "Fralda Huggies Máxima Proteção Tamanho G", "Fralda Turma da Mônica Baby"):
+        assert motivo_bloqueio(t) is None, t
+
+
+def test_recarga_do_chip(monkeypatch):
+    from bot import comandos
+
+    e = est.novo()
+    cfg = cfg_cmd()
+    assert "16/11/2026" not in comandos.registrar_recarga("recarga 31/02", e, AGORA)
+    r = comandos.registrar_recarga("recarga 20/08", e, AGORA)
+    assert e["chip_recarga"]["dia"] == f"{AGORA.year}-08-20" and "Aviso você com 75 e 85 dias" in r
+    tg = TGCmd()
+    assert comandos.lembrar_recarga(tg, cfg, e, AGORA.replace(month=11, day=1)) is False   # 73 dias
+    assert comandos.lembrar_recarga(tg, cfg, e, AGORA.replace(month=11, day=3)) is True    # 75 dias
+    assert comandos.lembrar_recarga(tg, cfg, e, AGORA.replace(month=11, day=4)) is False   # já avisou nesse marco
+    assert comandos.lembrar_recarga(tg, cfg, e, AGORA.replace(month=11, day=13)) is True   # 85 dias
+    assert comandos.registrar_recarga("recarga plano", e, AGORA).startswith("Anotado: o chip")
+    assert comandos.lembrar_recarga(tg, cfg, e, AGORA.replace(month=12, day=30)) is False
+    assert comandos.registrar_recarga("recarga 20/12", e, AGORA.replace(month=11, day=16))  # data futura = ano passado
+    assert e["chip_recarga"]["dia"].endswith("-12-20") and e["chip_recarga"]["dia"] < AGORA.date().isoformat()

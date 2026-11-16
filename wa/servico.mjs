@@ -2,22 +2,22 @@
 // o que o bot coloca na fila (ofertas e cupons já publicados no Telegram) e
 // apaga links que outras pessoas mandarem no grupo.
 //
-// Ritmo (para não parecer robô): no máximo WA_MAX_DIA posts por dia, com pelo
-// menos WA_INTERVALO_MIN minutos entre eles, "digitando..." antes de cada um.
+// Ritmo (para não parecer robô): no máximo WA_MAX_DIA posts por dia, espalhados pelo dia, com um intervalo
+// sorteado entre WA_INTERVALO_MIN e WA_INTERVALO_MAX minutos (padrão 4 a 13), "digitando..." antes de cada um.
 import fs from "node:fs";
 import path from "node:path";
 
 import makeWASocket, { Browsers, DisconnectReason, prepareWAMessageMedia, useMultiFileAuthState } from "@whiskeysockets/baileys";
 import pino from "pino";
 
-import { PASTA_AUTH, RAIZ, abrirSessao, anotarHistorico, avisar, codigoConvite, dormir, gravarEstado, guardarSessao,
-  lerEstado, naMeiaNoite, ordenarFila } from "./comum.mjs";
+import { PASTA_AUTH, RAIZ, abrirSessao, anotarHistorico, anotarRadar, avisar, codigoConvite, cotaAteAgora, dormir, gravarEstado,
+  guardarSessao, lerEstado, naMeiaNoite, ordenarFila, sortearIntervalo } from "./comum.mjs";
 
 const FILA = path.resolve(RAIZ, process.env.WA_FILA || "fila_wa");
 // Aquecimento automático: o ritmo sobe sozinho conforme o número ganha
-// histórico. WA_MAX_DIA / WA_INTERVALO_MIN (variáveis do GitHub) travam um valor fixo.
-const RAMPA = [ // [a partir do dia, posts por dia, minutos entre posts]
-  [0, 4, 40], [4, 10, 25], [8, 14, 20], [14, 20, 15],
+// histórico. WA_MAX_DIA (variável do GitHub) trava um valor fixo.
+const RAMPA = [ // [a partir do dia, posts por dia]
+  [0, 4], [4, 10], [8, 14], [14, 20],
 ];
 const VALIDADE_ITEM = 3 * 60 * 60 * 1000; // oferta parada há mais de 3h na fila não sai
 const FIM = Date.now() + Number(process.env.WA_HORAS || 5.6) * 3600 * 1000;
@@ -48,10 +48,15 @@ estado.inicio = estado.inicio || new Date().toISOString();
 const diasConectado = Math.floor((Date.now() - Date.parse(estado.inicio)) / 86400000);
 const degrau = RAMPA.filter(([d]) => diasConectado >= d).pop();
 const MAX_DIA = Number(process.env.WA_MAX_DIA || degrau[1]);
-const INTERVALO = Number(process.env.WA_INTERVALO_MIN || degrau[2]) * 60 * 1000;
-estado.max_dia = MAX_DIA; // para o comando "fila" do Telegram mostrar o limite de hoje
-estado.intervalo_min = INTERVALO / 60000;
-console.log(`WhatsApp: dia ${diasConectado + 1} conectado; até ${MAX_DIA} posts hoje, ${INTERVALO / 60000} min entre eles.`);
+const INTERVALO_MIN = Number(process.env.WA_INTERVALO_MIN || 4);
+const INTERVALO_MAX = Math.max(INTERVALO_MIN, Number(process.env.WA_INTERVALO_MAX || 13));
+estado.max_dia = MAX_DIA; // para o comando "fila" e a página da fila mostrarem o ritmo de hoje
+estado.intervalo_min = INTERVALO_MIN;
+estado.intervalo_max = INTERVALO_MAX;
+const minutoLocal = () => Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/Sao_Paulo", minute: "numeric" })
+  .format(new Date()));
+console.log(`WhatsApp: dia ${diasConectado + 1} conectado; até ${MAX_DIA} posts hoje, de ${INTERVALO_MIN} a ` +
+  `${INTERVALO_MAX} min entre eles, espalhados das ${HORA_INICIO}h às ${HORA_FIM}h.`);
 const hoje = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo" }).format(new Date());
 const { state, saveCreds } = await useMultiFileAuthState(PASTA_AUTH);
 const logger = pino({ level: "silent" });
@@ -110,6 +115,12 @@ function conectar() {
       tentativas = 0;
       console.log("WhatsApp conectado.");
       estado.conectado = true;
+      if (estado.avisou_queda && estado.caiu_em) {
+        const fora = Math.round((Date.now() - Date.parse(estado.caiu_em)) / 60000);
+        await avisar(`✅ O WhatsApp do Chocalho voltou a conectar (ficou ${fora} min fora). Os posts no grupo seguem normais.`);
+      }
+      estado.caiu_em = null;
+      estado.avisou_queda = false;
       try {
         await acharGrupo();
         await contarMembros();
@@ -133,16 +144,24 @@ function conectar() {
         process.exit(0);
       }
       tentativas += 1;
+      estado.caiu_em = estado.caiu_em || new Date().toISOString();
       const espera = Math.min(60000 * tentativas, 10 * 60000);
       console.log(`Conexão caiu (${motivo}); tentando de novo em ${Math.round(espera / 1000)}s.`);
       setTimeout(conectar, espera);
     }
+  });
+  // Radar do grupo: quem entra e quem sai, por hora (só a contagem)
+  sock.ev.on("group-participants.update", ({ id, participants, action }) => {
+    if (id !== grupo) return;
+    const tipo = action === "add" ? "entrou" : action === "remove" ? "saiu" : null;
+    if (tipo) anotarRadar(estado, tipo, (participants || []).length, hoje(), horaLocal());
   });
   // Anti-link: apaga links de quem não é administrador
   sock.ev.on("messages.upsert", async ({ messages, type }) => {
     if (type !== "notify" || !grupo) return;
     for (const m of messages) {
       if (m.key.remoteJid !== grupo || m.key.fromMe) continue;
+      anotarRadar(estado, "mensagem", 1, hoje(), horaLocal());
       const msg = m.message || {};
       const texto = msg.conversation || msg.extendedTextMessage?.text || msg.imageMessage?.caption ||
         msg.videoMessage?.caption || "";
@@ -241,7 +260,10 @@ async function cuidarDaFila() {
       mudou = true;
       continue;
     }
-    if (estado.ultimo && Date.now() - Date.parse(estado.ultimo) < INTERVALO) break; // espera o intervalo
+    if (estado.proximo_em && Date.now() < Date.parse(estado.proximo_em)) break; // espera o intervalo sorteado
+    if (!extraVirada && estado.enviados >= cotaAteAgora(MAX_DIA, horaLocal(), minutoLocal(), HORA_INICIO, HORA_FIM)) {
+      break; // já saiu a parte do dia até agora: guarda o resto para a tarde e a noite
+    }
     if (estado.pausado_ate && Date.now() < Date.parse(estado.pausado_ate)) {
       anotarHistorico(estado, item, "pausa", hoje());
       apagarItem(caminho, item); // em pausa de segurança: não posta
@@ -254,6 +276,7 @@ async function cuidarDaFila() {
       if (extraVirada) estado.virada_enviados = (estado.virada_enviados || 0) + 1; // extra da data, fora da conta do dia
       else estado.enviados += 1;
       estado.ultimo = new Date().toISOString();
+      estado.proximo_em = new Date(Date.now() + sortearIntervalo(INTERVALO_MIN, INTERVALO_MAX)).toISOString();
       estado.ultima_loja = item.loja || "ml";
       console.log(`Postado no grupo do WhatsApp (${estado.enviados}/${MAX_DIA} hoje).`);
     } catch (e) {
@@ -312,6 +335,15 @@ while (Date.now() < FIM && !fs.existsSync(path.join(FILA, "PARAR"))) {
     for (const n of fs.readdirSync(FILA)) if (/\.(json|png)$/.test(n)) fs.rmSync(path.join(FILA, n), { force: true });
     await dormir(60000);
     continue;
+  }
+  if (!aberto && estado.caiu_em && !estado.avisou_queda && Date.now() - Date.parse(estado.caiu_em) > 10 * 60000) {
+    estado.avisou_queda = true; // caiu e não voltou em 10 min: avisa uma vez; quando voltar, avisa de novo
+    await avisar("⚠️ O WhatsApp do Chocalho caiu há mais de 10 min e está tentando reconectar sozinho. " +
+      "Aviso quando voltar. Se passar de 1 h, rode o workflow “Conectar WhatsApp”.");
+  }
+  if (estado.pausado_ate && Date.now() >= Date.parse(estado.pausado_ate)) {
+    estado.pausado_ate = null;
+    await avisar("✅ Acabou a pausa de segurança do WhatsApp: o grupo volta a receber ofertas.");
   }
   await cuidarDaFila().catch((e) => console.log("Aviso:", e?.message));
   if (Date.now() - ultimoSalvo > 5 * 60 * 1000) {

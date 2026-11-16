@@ -54,6 +54,8 @@ _REGRAS.append((
     r"silent hill|\bdoom\b|outlast|assassin.?s creed)",
 ))
 _REGRAS.append(("Fora do nicho (sutiã/lingerie)", r"\b(sutias?|sutien|lingeries?)\b"))
+_REGRAS.append(("Fora do nicho (geriátrico/incontinência)",
+                r"\b(geriatric[oa]s?|incontinencias?|bigfral|tena|plenitud|confort ?master|usefral)\b"))
 _REGRAS.append(("Fora do nicho (marca adulta)", r"\bnew era\b"))
 _REGRAS.append(("Possível réplica", r"\b(replica|tailandesa|1a linha|primeira linha|1 linha)\b"))
 _COMPILADAS = [(motivo, re.compile(p)) for motivo, p in _REGRAS]

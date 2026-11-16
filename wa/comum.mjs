@@ -136,3 +136,29 @@ export function anotarHistorico(estado, item, resultado, dia, agora = new Date()
   if (estado.historico.itens.length > 200) estado.historico.itens = estado.historico.itens.slice(-200);
   return estado.historico;
 }
+
+// Ritmo do grupo. Intervalo sorteado entre um post e outro (fixo parece robô) e o limite do dia espalhado pelas horas:
+// até agora só pode ter saído a fração do dia que já passou (sempre pelo menos 1). Assim o grupo recebe oferta de
+// manhã, à tarde e à noite, em vez de gastar o limite inteiro de manhã.
+export function sortearIntervalo(minimo = 4, maximo = 13, sorte = Math.random) {
+  return Math.round((minimo + (maximo - minimo) * sorte()) * 60000);
+}
+
+export function cotaAteAgora(maxDia, hora, minuto = 0, inicio = 7, fim = 23) {
+  const passou = Math.min(Math.max(hora + minuto / 60 - inicio, 0), fim - inicio);
+  return Math.min(maxDia, Math.max(1, Math.ceil((maxDia * passou) / (fim - inicio))));
+}
+
+// Radar do grupo: entradas, saídas e mensagens por hora (só contagens: nenhum número nem texto é guardado).
+// estado.radar = { "AAAA-MM-DD": { "HH": [entradas, saídas, mensagens] } }, últimos 45 dias.
+export function anotarRadar(estado, tipo, quantos, dia, hora) {
+  const i = { entrou: 0, saiu: 1, mensagem: 2 }[tipo];
+  if (i === undefined || !quantos) return estado.radar;
+  estado.radar = estado.radar || {};
+  const h = String(hora).padStart(2, "0");
+  const d = (estado.radar[dia] = estado.radar[dia] || {});
+  d[h] = d[h] || [0, 0, 0];
+  d[h][i] += quantos;
+  for (const velho of Object.keys(estado.radar).sort().slice(0, -45)) delete estado.radar[velho];
+  return estado.radar;
+}

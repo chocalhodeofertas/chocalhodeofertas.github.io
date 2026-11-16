@@ -1,15 +1,12 @@
-"""Confere os posts do dia: preço que saiu no post x preço de agora nas lojas, e para onde o link leva.
+"""Confere os posts do dia: preço que saiu no post x preço de agora nas lojas (tudo pela API oficial).
 
-Só leitura: não posta nem grava nada no estado. Resultado em saida/conferir_precos.json e no log.
+Só leitura: não posta nem grava nada no estado. NÃO abre os links de afiliado (regra do Leonardo, 16/11):
+qual anúncio o link abre vem de estado.links_item, gravado quando o lote foi respondido. Resultado em saida/conferir_precos.json e no log.
 Uso (workflow inspecao): script=conferir_precos, args="[quantos]" (padrão: todos os do dia).
 """
 import json
 import os
-import re
 import sys
-import time
-
-import requests
 
 from bot import estado as est
 from bot.mercadolivre import MercadoLivre, token_do_app
@@ -25,23 +22,8 @@ try:
 except Exception as e:  # noqa: BLE001
     print("Shopee indisponível:", type(e).__name__)
 
-NAVEGADOR = {"User-Agent": "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) "
-                           "Chrome/124.0 Mobile Safari/537.36", "Accept-Language": "pt-BR,pt;q=0.9"}
-
-
-def destino(link):
-    """Para onde o link oficial leva (só segue os redirecionamentos; não lê a página)."""
-    try:
-        r = requests.get(link, headers=NAVEGADOR, timeout=20, allow_redirects=True, stream=True)
-        url = r.url
-        r.close()
-        return re.sub(r"[?&](matt_\w+|ref|forceInApp|tracking_id)=[^&#]*", "", url)[:200]
-    except requests.RequestException as e:
-        return f"erro: {type(e).__name__}"
-
-
 saida, bruto = [], None
-for n, i in enumerate(itens):
+for i in itens:
     reg = {"id": i["id"], "loja": i["loja"], "titulo": i["titulo"][:60], "post": i["preco"], "de": i.get("de")}
     try:
         if i["loja"] == "shopee":
@@ -61,9 +43,6 @@ for n, i in enumerate(itens):
                         "do_link": next((o["price"] for o in ofertas if o.get("item_id") == item_link), None),
                         "vencedor": ofertas[0].get("item_id") if ofertas else None,
                         "preco_vencedor": ofertas[0].get("price") if ofertas else None})
-            if n < 25:
-                reg["destino"] = destino(i["link"])
-                time.sleep(0.5)
     except Exception as e:  # noqa: BLE001
         reg["erro"] = f"{type(e).__name__}: {str(e)[:80]}"
     saida.append(reg)
