@@ -34,6 +34,12 @@ def _bate(titulo_norm, tokens):
     return all(re.search(rf"\b{re.escape(w)}(s|es)?\b", titulo_norm) for w in tokens)
 
 
+def _no_comeco(titulo, tokens, ate=6):
+    """A primeira palavra do pedido aparece entre as 6 primeiras do título."""
+    inicio = re.findall(r"[a-z0-9]+", normalizar(titulo))[:ate]
+    return any(w == tokens[0] or w in (tokens[0] + "s", tokens[0] + "es") for w in inicio)
+
+
 def _chave(item, frase):
     """Ordem: quem tem o pedido como frase no título primeiro; depois o mais barato (por unidade, se houver)."""
     por_un = mensagens.preco_por_unidade(item["titulo"], item["preco"])
@@ -91,7 +97,8 @@ def da_shopee(termo, shp, log=print, maximo=MAX_SHOPEE):
     except ShopeeErro as e:
         log(f"Busca: Shopee falhou: {e}")
         return []
-    bons = [p for p in achados if not aprovado(p) and _bate(normalizar(p.titulo), tokens)]
+    # Só entra quando o que a pessoa pediu está no começo do nome (senão vem acessório que só cita a palavra)
+    bons = [p for p in achados if not aprovado(p) and _bate(normalizar(p.titulo), tokens) and _no_comeco(p.titulo, tokens)]
     bons.sort(key=pontos, reverse=True)
     saida = []
     for p in bons[:maximo]:

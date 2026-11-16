@@ -128,6 +128,8 @@ _COSMETICO_ADULTO = re.compile(r"\b(men|anticaspa|antiqueda|barba|pos barba|deso
 _CABELO = re.compile(r"\b(shampoo|xampu|condicionador|leave ?in|creme (de|para) pentear|mascara capilar)\b")
 _MARCA_BEBE = re.compile(r"\b(mustela|johnsons?|granado|pom pom|xuxinha|tra la la|galinha pintadinha|huggies|pampers|"
                          r"baruel|weleda|natura mamae|cetaphil baby|dove baby)\b")
+# Produto para animais (ex.: "fralda para cachorra"): "para" + bicho, para não barrar pelúcia de cachorro nem Patrulha Canina
+_PARA_ANIMAL = re.compile(r"\b(para|pra|p) (cachorr[oa]s?|caes|cao|gatos?|pets?|animais)\b|\b(cio|racao|tapete higienico)\b")
 # Material de artesanato (novelo, fio) que aparece entre os brinquedos
 _ARTESANATO = re.compile(r"\b(novelos?|barbante|fio (de )?malha|linha (de|para) croche|chenille)\b")
 
@@ -142,6 +144,8 @@ def fora_da_faixa(titulo, categoria, regra=None):
         return "roupa/item adulto"
     if _ACESSORIO_CABECA.search(t) and not _CRIANCA_CLARO.search(t):
         return "boné/chapéu sem ser infantil"
+    if _PARA_ANIMAL.search(t):
+        return "produto para animais"
     if _COSMETICO_ADULTO.search(t) and not _CRIANCA_CLARO.search(t):
         return "cosmético de adulto"
     if not _INFANTIL.search(t):

@@ -2542,3 +2542,13 @@ def test_busca_sob_pedido(monkeypatch):
     for _ in range(6):
         bp.atender(msg, tg, ml, e, AGORA, shp=Shp())
     assert "várias buscas" in tg.textos[-1][1] and "555" not in json.dumps(e["buscas"])       # limite por hora, sem guardar o número
+
+
+def test_produto_para_animais_fica_de_fora():
+    from bot.filtros import fora_da_faixa
+    from bot import busca_publica as bp
+    assert fora_da_faixa("Newpet Fralda Descartável para Cachorra Fêmea Anti-Vazamento Cuidado do Cio", "", "infantil") == "produto para animais"
+    assert fora_da_faixa("Cachorro de Pelúcia Infantil 30cm", "brinquedo") is None
+    assert fora_da_faixa("Patrulha Canina Boneco Chase", "brinquedo") is None
+    assert bp._no_comeco("LEGO Classic Caixa Média", ["lego"])
+    assert not bp._no_comeco("Kit 5/10 Saquinho Organizador Envelope De Brinquedo Quebra Cabeça Lego", ["lego"])
