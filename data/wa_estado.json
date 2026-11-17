@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-17",
-  "enviados": 2,
-  "ultimo": "2026-11-17T11:37:07.895Z",
+  "enviados": 3,
+  "ultimo": "2026-11-17T13:13:05.231Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -16,7 +16,7 @@
     "2026-11-17": 14
   },
   "membros_em": "2026-11-17T12:14:18.621Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 10,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -40,6 +40,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/LorzHoTdF",
         "p": 0
+      },
+      {
+        "h": "2026-11-17T13:13:05.231Z",
+        "n": "🧸 Kit 4 Brinquedos De Banho Para Bebe Fundo Do Mar Vila Toy Cor Dinossauros",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2NVPf5a",
+        "p": 0.1448
       }
     ]
   },
@@ -59,5 +67,5 @@
       ]
     }
   },
-  "proximo_em": "2026-11-17T11:48:47.018Z"
+  "proximo_em": "2026-11-17T13:21:08.270Z"
 }
