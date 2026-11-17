@@ -105,7 +105,7 @@ _GAMES_FORA = re.compile(r"\b(headset|fone|cadeira|microfone|mouse|teclado|monit
 _CASA_ADULTO = re.compile(
     r"\b(torneira|pia|queen|king|hotel|spa|gelo|passaros|pombos|morcegos|mantimentos?|churrasqueira|"
     r"furadeira|parafusadeira|ferramentas?|pneus?|notebook|smartphone|air ?fryer|cafeteira|"
-    r"panela de pressao|aspirador de po)\b"
+    r"panela de pressao|aspirador de po|escritorio|igreja)\b"
 )
 # "Casal"/"solteiro" só é problema quando o item não é de bebê nem diz que é infantil
 # (berço acoplado à cama de casal e jogo de cama solteiro infantil podem)
@@ -121,7 +121,8 @@ _CRIANCA_CLARO = re.compile(r"\b(infantil|infantis|crianca|criancas|kids|kid|beb
 # "Baby" que não é bebê: peças de roupa adulta com "baby" no nome
 _BABY_ADULTO = re.compile(r"\b(baby ?doll|short ?doll|baby ?look)\b")
 # Sinais de roupa/item adulto: só passa com sinal claro de criança
-_ADULTO = re.compile(r"\b(adultos?|plus size|sem bojo|com bojo|bojo|sensual|sexy)\b")
+_ADULTO = re.compile(r"\b(adultos?|plus size|sem bojo|com bojo|bojo|sensual|sexy|fita up|tapa seios?|"
+                    r"(protetor|adesivo)e?s? (de|para) seios? (de )?silicone)\b")
 
 
 # Cosmético e cabelo de adulto que vazam da categoria de higiene do bebê

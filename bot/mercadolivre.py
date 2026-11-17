@@ -38,6 +38,8 @@ class InfoProduto:
     # Entrega de cada anúncio ativo: {item_id: (frete grátis?, Full?)}; frete = a do anúncio que o link abre.
     envio: dict = field(default_factory=dict)
     frete: Optional[tuple] = None
+    # Vendedor de cada anúncio ativo: {item_id: seller_id} (para a regra de reputação do lote).
+    vendedores: dict = field(default_factory=dict)
 
 
 def entrega(anuncio):
@@ -156,6 +158,7 @@ class MercadoLivre:
             ativos={o["item_id"]: (o["price"], o.get("original_price")) for o in ofertas if o.get("item_id")},
             total=total,
             envio={o["item_id"]: entrega(o) for o in ofertas if o.get("item_id")},
+            vendedores={o["item_id"]: o.get("seller_id") for o in ofertas if o.get("item_id")},
         )
 
     def procurar_anuncio(self, pid, item_id, total, maximo=300):
@@ -179,6 +182,11 @@ class MercadoLivre:
             for c in sorted(dados.get("content") or [], key=lambda c: c.get("position", 999))
             if c.get("type") in tipos
         ]
+
+    def reputacao(self, seller_id):
+        """Cor da reputação do vendedor ("1_red", "2_orange", "3_yellow", "4_light_green", "5_green") ou None (sem cor)."""
+        dados = self._get(f"/users/{seller_id}")
+        return (dados.get("seller_reputation") or {}).get("level_id")
 
     def buscar_produtos(self, termo, limite=10):
         """Busca no catálogo do ML (a busca de anúncios é bloqueada para o token do app)."""

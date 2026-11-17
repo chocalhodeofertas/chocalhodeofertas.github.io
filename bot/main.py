@@ -410,7 +410,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         log(f"{len(oficiais)} com link oficial, {len(sem_link)} aguardando link.")
         estado["aguardando_link"] = len(sem_link)
         vitrine.guardar(estado, oficiais, agora)
-        _talvez_mandar_lote(cfg, tg, estado, sem_link, agora)
+        _talvez_mandar_lote(cfg, tg, estado, sem_link, agora, ml, infos)
         estado["fila_link"] = lote.resumo_fila(estado, sem_link, agora)  # para a página da fila
         candidatas = oficiais
 
@@ -491,7 +491,7 @@ def _link_direto(link):
     return "matt_word=" in (link or "")
 
 
-def _talvez_mandar_lote(cfg, tg, estado, sem_link, agora):
+def _talvez_mandar_lote(cfg, tg, estado, sem_link, agora, ml=None, infos=None):
     """Manda um lote para o Linkbuilder quando não há outro pendente.
 
     O próximo lote sai assim que você responde o anterior, até LOTES_POR_DIA.
@@ -505,7 +505,7 @@ def _talvez_mandar_lote(cfg, tg, estado, sem_link, agora):
     feitos = (estado.get("lotes_dia") or {}).get(hoje, 0)
     if feitos >= cfg.lotes_por_dia:
         return
-    urls = lote.montar_lote(estado, sem_link, cfg.lote_tamanho, agora)
+    urls = lote.montar_lote(estado, sem_link, cfg.lote_tamanho, agora, ml, infos, log)
     if not urls:
         return
     try:

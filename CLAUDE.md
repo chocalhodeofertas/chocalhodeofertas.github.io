@@ -73,7 +73,8 @@ Textos para o dono do projeto sempre em português do Brasil.
   Passam pelos mesmos filtros (regra "infantil", NBCAL, repetição); desconto mínimo 10% e +20% na pontuação.
   Origem visível para o admin: `espelho.fonte` → linha "🔁 Copiada do canal @x" na cópia do ML, aviso no post da Shopee
   e lista no resumo diário (`posts_dia[].fonte`). Shopee: `shopee_ofertas.do_espelho` confere por itemId.
-- `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica, fralda geriátrica/incontinência) e `fora_da_faixa` (casa/adulto, exige sinal infantil).
+- `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica, fralda geriátrica/incontinência) e `fora_da_faixa` (casa/adulto, exige sinal infantil;
+  17/11: escritório/igreja sem sinal infantil e protetor/adesivo de seios de silicone, "fita up").
 - Frete no post (ML): `mercadolivre.entrega` lê `shipping.free_shipping` e `logistic_type == "fulfillment"` de cada anúncio
   (`InfoProduto.envio`); `lote.conferir_anuncio` guarda o do anúncio que o link abre (`info.frete`) e `main._com_frete` põe na oferta;
   `mensagens._linhas_preco` mostra "🚚 Frete grátis · ⚡ Full (entrega rápida)" só quando é verdade. Sem anúncio conhecido, não mostra.
@@ -84,6 +85,10 @@ Textos para o dono do projeto sempre em português do Brasil.
   link descartado e o produto volta ao lote; ativo → o post usa o preço DESSE anúncio. Catálogo com mais de 20 anúncios:
   `ml.procurar_anuncio` olha as páginas seguintes antes de descartar. O histórico segue com o menor preço do catálogo. Prioriza candidatos do espelho (valem 48 h)
   e rebaixa o que é parecido com algo postado na semana.
+  Reputação (17/11, `lote.anuncio_bom`): vendedor 🔴/🟠 (`REPUTACAO_RUIM`, via `ml.reputacao` = users/{id} level_id, cache de 3 dias
+  em `estado.reputacao`) não entra no lote: troca pelo anúncio de outro vendedor do catálogo até 5% mais caro
+  (`InfoProduto.vendedores`); sem alternativa, fica de fora. Amarelo, verde e "sem cor" entram. Falha na consulta não barra.
+  Sonda: `tools/sondar_reputacao` (cor do vendedor de cada item do lote pendente, só API).
 - `cupons_ml.py` + `cupom_oferta.py`: lê cupons (canal oficial do ML + @cupombr via Telethon) e aplica o melhor cupom compatível na oferta.
   O "cupom do anúncio" (`cupom_oferta.cupom_da_pagina`) lia a página abrindo o meli.la do Leonardo a cada post: DESLIGADO em 16/11
   (regra dele: o bot não abre links de afiliado). Só volta com `CUPOM_DA_PAGINA=1`, se ele pedir. Ainda abrem o link, só quando

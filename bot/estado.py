@@ -21,7 +21,19 @@ def carregar(caminho):
         inicial = p.parent / "links_item_inicial.json"
         if inicial.exists():
             estado["links_item"] = {k: v for k, v in json.loads(inicial.read_text()).items() if k in estado["links"]}
+    refazer_lote_17_11(estado)
     return estado
+
+
+def refazer_lote_17_11(estado):
+    """Uma vez (pedido do Leonardo, 17/11): o lote de 17/11 tinha vendedor vermelho/laranja e itens fora do nicho.
+    Descarta o lote pendente (sem contar como lote do dia); a próxima rodada monta outro já com as regras novas."""
+    lote = estado.get("lote") or {}
+    if lote.get("dia") == "2026-11-17" and "MLB26414752" in (lote.get("ids") or []):
+        estado["lote"] = None
+        dias = estado.get("lotes_dia") or {}
+        if dias.get("2026-11-17"):
+            dias["2026-11-17"] -= 1
 
 
 def compactar_precos(estado):

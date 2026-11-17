@@ -59,8 +59,57 @@ def resumo_fila(estado, sem_link, agora, n=25):
     return {"em": agora.isoformat(timespec="minutes"), "total": len(vistos), "itens": itens}
 
 
-def montar_lote(estado, sem_link, tamanho, agora):
-    """sem_link: lista de (oferta, item_id). Grava o lote pendente e devolve as URLs."""
+# Reputação (decisão do Leonardo, 17/11): vendedor vermelho ou laranja não entra no lote. O bot troca pelo anúncio
+# de outro vendedor do mesmo catálogo com preço até 5% maior; sem alternativa, o produto fica de fora.
+# Amarelo, verde e "sem cor" (conta nova) entram normalmente.
+REPUTACAO_RUIM = ("1_red", "2_orange")
+TROCA_ATE = 1.05
+REPUTACAO_DIAS = 3  # quanto tempo a cor de um vendedor fica guardada
+
+
+def cor_do_vendedor(estado, ml, seller_id, agora, log=print):
+    """Cor da reputação (com cache em estado["reputacao"]). Falha na consulta → None (não barra)."""
+    if not seller_id:
+        return None
+    cache = estado.setdefault("reputacao", {})
+    chave = str(seller_id)
+    salvo = cache.get(chave)
+    hoje = agora.date()
+    if salvo:
+        from datetime import date
+
+        if (hoje - date.fromisoformat(salvo[1])).days < REPUTACAO_DIAS:
+            return salvo[0]
+    try:
+        cor = ml.reputacao(seller_id)
+    except Exception as e:  # noqa: BLE001 — sem saber a cor, não barra
+        log(f"Aviso: não consegui ver a reputação do vendedor {seller_id}: {e}")
+        return None
+    cache[chave] = [cor, hoje.isoformat()]
+    return cor
+
+
+def anuncio_bom(estado, ml, oferta, item, info, agora, log=print):
+    """Anúncio para o lote respeitando a reputação: o próprio item, uma troca, ou None (fica de fora)."""
+    vendedores = getattr(info, "vendedores", None) or {}
+    if not item or ml is None or item not in vendedores:
+        return item  # sem dados do vendedor: segue como antes
+    if cor_do_vendedor(estado, ml, vendedores[item], agora, log) not in REPUTACAO_RUIM:
+        return item
+    preco = (info.ativos.get(item) or (None,))[0] or oferta.preco
+    for alt, (p, _) in sorted(info.ativos.items(), key=lambda x: x[1][0] or 1e9):
+        if alt == item or not p or not preco or p > preco * TROCA_ATE:
+            continue
+        if cor_do_vendedor(estado, ml, vendedores.get(alt), agora, log) not in REPUTACAO_RUIM:
+            log(f"{oferta.id}: vendedor com reputação ruim; lote usa o anúncio {alt} (R$ {p:.2f}).")
+            return alt
+    log(f"{oferta.id}: vendedor com reputação ruim e sem outro vendedor até 5% mais caro; fora do lote.")
+    return None
+
+
+def montar_lote(estado, sem_link, tamanho, agora, ml=None, infos=None, log=print):
+    """sem_link: lista de (oferta, item_id). Grava o lote pendente e devolve as URLs.
+    Com ml e infos, aplica a regra de reputação (anuncio_bom) em quem for entrar."""
     escolhidas, vistos = [], set()
     from .ofertas import tipo_produto
 
@@ -72,6 +121,10 @@ def montar_lote(estado, sem_link, tamanho, agora):
         tp = tipo_produto(o.titulo)
         if por_tipo.get(tp, 0) >= 2:  # no máximo 2 do mesmo tipo por lote: mais variedade
             continue
+        if infos is not None:
+            item = anuncio_bom(estado, ml, o, item, infos.get(o.id), agora, log)
+            if not item:
+                continue
         por_tipo[tp] = por_tipo.get(tp, 0) + 1
         vistos.add(o.id)
         escolhidas.append((o.id, url_linkbuilder(item)))

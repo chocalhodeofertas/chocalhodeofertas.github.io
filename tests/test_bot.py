@@ -2875,3 +2875,69 @@ def test_marcar_vai_para_o_whatsapp_com_mencao(tmp_path, monkeypatch):
     whatsapp.enfileirar_oferta(o, "texto https://meli.la/x", agora)
     item = json.loads(next(tmp_path.glob("*.json")).read_text())
     assert "mencionar" not in item and item["categoria"] == "alimentacao"
+
+
+def test_lote_troca_vendedor_vermelho_ou_laranja():
+    from types import SimpleNamespace as N
+    from bot import lote
+    agora = datetime.fromisoformat("2026-11-17T13:30-03:00")
+
+    class ML:
+        cores = {1: "1_red", 2: "5_green", 3: "2_orange", 4: None, 5: "3_yellow"}
+        consultas = []
+
+        def reputacao(self, sid):
+            self.consultas.append(sid)
+            return self.cores[sid]
+
+    ml = ML()
+    e = est.novo()
+    cadeira = N(id="MLB1", titulo="Cadeira de alimentação", preco=300.0, categoria="alimentacao", forca=0.5, desconto=.3,
+                link="x?matt_word=y", preco_de=None)
+    febre = N(id="MLB2", titulo="Compressa refrescante", preco=33.0, categoria="higiene", forca=0.4, desconto=.3,
+              link="x?matt_word=y", preco_de=None)
+    pinico = N(id="MLB3", titulo="Pinico sapinho", preco=23.0, categoria="higiene", forca=0.3, desconto=.3,
+               link="x?matt_word=y", preco_de=None)
+    infos = {
+        # vermelho → troca pelo verde até 5% mais caro
+        "MLB1": N(ativos={"MLBa": (300.0, None), "MLBb": (310.0, None)}, vendedores={"MLBa": 1, "MLBb": 2}),
+        # laranja e a alternativa é 20% mais cara → fica de fora
+        "MLB2": N(ativos={"MLBc": (33.0, None), "MLBd": (40.0, None)}, vendedores={"MLBc": 3, "MLBd": 2}),
+        # sem cor (conta nova) entra normalmente
+        "MLB3": N(ativos={"MLBe": (23.0, None)}, vendedores={"MLBe": 4}),
+    }
+    sem_link = [(cadeira, "MLBa"), (febre, "MLBc"), (pinico, "MLBe")]
+    urls = lote.montar_lote(e, sem_link, 10, agora, ml, infos, log=lambda m: None)
+    assert e["lote"]["ids"] == ["MLB1", "MLB3"]
+    assert urls == [lote.url_linkbuilder("MLBb"), lote.url_linkbuilder("MLBe")]
+    # cor fica guardada: refazer o lote não consulta de novo
+    n = len(ml.consultas)
+    e["lote"] = None
+    lote.montar_lote(e, sem_link, 10, agora, ml, infos, log=lambda m: None)
+    assert len(ml.consultas) == n
+    # falha na consulta não barra ninguém
+    class MLQuebrado:
+        def reputacao(self, sid):
+            raise RuntimeError("fora do ar")
+    e2 = est.novo()
+    lote.montar_lote(e2, sem_link, 10, agora, MLQuebrado(), infos, log=lambda m: None)
+    assert e2["lote"]["ids"] == ["MLB1", "MLB2", "MLB3"]
+
+
+def test_refaz_o_lote_de_17_11_uma_vez():
+    e = est.novo()
+    e["lote"] = {"dia": "2026-11-17", "ids": ["MLB62213727", "MLB26414752"], "urls": ["a", "b"]}
+    e["lotes_dia"] = {"2026-11-17": 1}
+    est.refazer_lote_17_11(e)
+    assert e["lote"] is None and e["lotes_dia"] == {"2026-11-17": 0}
+    e["lote"] = {"dia": "2026-11-17", "ids": ["MLB99"], "urls": ["c"]}
+    est.refazer_lote_17_11(e)
+    assert e["lote"]["ids"] == ["MLB99"]  # lote novo não é mexido
+
+
+def test_filtros_fora_do_nicho_17_11():
+    from bot.filtros import fora_da_faixa
+    assert fora_da_faixa("Kit 10 Cadeiras Iso Fixa Escritorio, Escola, Igreja, Cozinha", "outros")
+    assert fora_da_faixa("Protetor de Seios Silicone Ultra Fino Fita Up", "outros")
+    assert fora_da_faixa("Cadeira de Escritório Infantil Gamer", "outros") is None
+    assert fora_da_faixa("Pomada para Cuidado dos Seios com Lanolina HPA Lansinoh 30g", "outros") is None
