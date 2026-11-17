@@ -1236,7 +1236,8 @@ def test_shopee_regras_e_post():
     assert so.aprovado(_produto_shopee()) is None
     assert so.aprovado(_produto_shopee(nota=4.5)) == "nota baixa"
     assert so.aprovado(_produto_shopee(vendas=300)) == "poucas vendas"
-    assert so.aprovado(_produto_shopee(comissao=0.03)) == "comissão baixa"
+    assert so.aprovado(_produto_shopee(comissao=0.03)) is None  # 3% passa (decisão de 17/11)
+    assert so.aprovado(_produto_shopee(comissao=0.02)) == "comissão baixa"
     assert so.aprovado(_produto_shopee(titulo="Mamadeira Anticólica Infantil"))  # NBCAL
     e = est.novo()
     o = so.para_oferta(_produto_shopee(), e, AGORA, "https://s.shopee.com.br/tg", "https://s.shopee.com.br/wa")
