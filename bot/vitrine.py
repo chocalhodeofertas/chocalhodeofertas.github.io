@@ -12,7 +12,7 @@ from pathlib import Path
 from .estado import preco_tipico
 from .mensagens import brl
 # Pixel da Meta (dataset "Chocalho site"). O ID é público: aparece no código de qualquer site com Pixel.
-PIXEL_META = "1161972522974367"
+PIXEL_META = "1828540891726257"
 PIXEL_HTML = ("<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?"
               "n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;"
               "n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];"
