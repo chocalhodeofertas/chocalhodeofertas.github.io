@@ -204,14 +204,21 @@ def avaliar_oferta(cfg, estado, produto, info, agora):
     histórico (dentro de avaliar) ou cupom do canal que complete o desconto."""
     oferta = avaliar(produto, info, estado, agora, desconto_minimo(cfg, estado, produto.id), cfg.repost_dias)
     if oferta or cfg.min_desconto <= DESCONTO_MIN_CUPOM:
-        return oferta
+        return _com_frete(oferta, info)
     prov = avaliar(produto, info, estado, agora, DESCONTO_MIN_CUPOM, cfg.repost_dias)
     if prov:
         cp = cupom_oferta.melhor_cupom(estado, prov, agora)
         ref = prov.preco_de or prov.preco
         if cp and cp.get("preco") and 1 - cp["preco"] / ref >= cfg.min_desconto:
-            return prov
+            return _com_frete(prov, info)
     return None
+
+
+def _com_frete(oferta, info):
+    """Frete grátis / Full do anúncio do link oficial (só quando lote.conferir_anuncio soube qual é)."""
+    if oferta is not None and getattr(info, "frete", None):
+        oferta.frete_gratis, oferta.full = info.frete
+    return oferta
 
 
 def montar_lista(cfg: Config, da_planilha, estado):
@@ -717,6 +724,10 @@ def main(argv=None):
             vitrine.talvez_publicar(estado, cfg.canal, agora, log=log,
                                     grupo_wa=os.environ.get("WHATSAPP_GRUPO") or GRUPO_WHATSAPP)
             from . import fila_pagina, numeros
+            try:  # preço das ofertas que esperam no grupo do WhatsApp, conferido de novo pela API
+                whatsapp.conferir_fila(estado, datetime.now(FUSO), ml, resumos._shopee(log), log)
+            except Exception as e:  # noqa: BLE001 — nunca derruba a rodada
+                log(f"Aviso: conferência da fila do WhatsApp falhou: {type(e).__name__}: {e}")
             numeros.talvez_publicar(estado, agora, tg, cfg.canal, log=log)
             fila_pagina.publicar(estado, datetime.now(FUSO), log=log)
     except AcessoNegado as e:

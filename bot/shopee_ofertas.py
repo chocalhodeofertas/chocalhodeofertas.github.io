@@ -41,7 +41,7 @@ CATEGORIAS = [
 ]
 CATEGORIAS_POR_RODADA = 2
 PAGINAS_CATEGORIA = 3
-NOTA_MIN, VENDAS_MIN, COMISSAO_MIN = 4.7, 500, 0.05
+NOTA_MIN, VENDAS_MIN, COMISSAO_MIN = 4.7, 500, 0.03  # 3%: a base da Shopee (decisão do Leonardo, 17/11)
 VENDAS_MIN_ESPELHO = 200  # produto que veio de um canal de ofertas (alguém já escolheu)
 QUEDA_MIN = 0.10  # "de/por" só se o próprio bot viu o preço 10% mais alto nos últimos 30 dias
 

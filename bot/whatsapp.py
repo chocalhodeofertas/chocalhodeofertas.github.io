@@ -28,7 +28,7 @@ def forca(oferta):
     return round(pontos, 4)
 
 
-def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None, pontos=PONTOS_AVISO):
+def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None, pontos=PONTOS_AVISO, oferta=None):
     """png: bytes de uma arte pronta (vai junto na fila e tem prioridade sobre a URL da foto).
     pontos: prioridade na fila (o serviço posta primeiro o que tem mais pontos)."""
     pasta = os.environ.get("WA_FILA")
@@ -45,6 +45,8 @@ def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None
     item = {"texto": texto, "imagem": imagem or None, "criado": quando.isoformat(), "loja": loja, "pontos": pontos}
     if preview:
         item["preview"] = preview
+    if oferta:
+        item["oferta"] = oferta
     nome = p / f"{base}.json"
     tmp = nome.with_suffix(".tmp")
     tmp.write_text(json.dumps(item, ensure_ascii=False), encoding="utf-8")
@@ -60,4 +62,68 @@ def enfileirar_oferta(oferta, texto, agora=None, loja="ml"):
     preview = None
     if m and getattr(oferta, "imagem", None):
         preview = {"link": m.group(0), "titulo": oferta.titulo, "imagem": oferta.imagem}
-    return enfileirar(texto, getattr(oferta, "imagem", None), agora, loja, preview=preview, pontos=forca(oferta))
+    meta = ({"id": oferta.id, "preco": oferta.preco}  # para conferir o preço antes de sair (conferir_fila)
+            if getattr(oferta, "id", None) and getattr(oferta, "preco", None) else None)
+    return enfileirar(texto, getattr(oferta, "imagem", None), agora, loja, preview=preview, pontos=forca(oferta),
+                      oferta=meta)
+
+
+SUBIU_TOLERANCIA = 0.02  # subiu mais que 2% desde que entrou na fila → não sai no grupo
+
+
+def conferir_fila(estado, agora, ml=None, shp=None, log=print):
+    """A cada rodada (uns 20 min), confere pela API o preço das ofertas que esperam no grupo do WhatsApp.
+    Subiu mais de 2%, acabou o estoque ou o anúncio do link saiu → tira da fila (e anota para a página da fila).
+    Baixou → fica, com o texto de quando entrou (a pessoa encontra um preço melhor). Sem como conferir → fica."""
+    from . import lote
+
+    pasta = os.environ.get("WA_FILA")
+    if not pasta or not Path(pasta).is_dir():
+        return 0
+    tirados = 0
+    reg = estado.get("wa_conferidos") or {}
+    if reg.get("dia") != agora.date().isoformat():
+        reg = {"dia": agora.date().isoformat(), "itens": []}
+    for arq in sorted(Path(pasta).glob("*.json")):
+        try:
+            item = json.loads(arq.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        meta = item.get("oferta") or {}
+        if not meta.get("id") or not meta.get("preco"):
+            continue
+        try:
+            if item.get("loja") == "shopee":
+                if shp is None:
+                    continue
+                p = shp.item(int(str(meta["id"]).removeprefix("SHP")))
+                agora_preco = p.preco if p else None
+            else:
+                if ml is None:
+                    continue
+                info = ml.catalogo(meta["id"], "-", None)
+                if not lote.conferir_anuncio(estado, meta["id"], info, log, getattr(ml, "procurar_anuncio", None)):
+                    agora_preco = None
+                else:
+                    agora_preco = info.preco if info.disponivel else None
+        except Exception as e:  # noqa: BLE001 — sem conferir agora: deixa na fila
+            log(f"WhatsApp: não deu para conferir {meta['id']}: {type(e).__name__}")
+            continue
+        motivo = None
+        if agora_preco is None:
+            motivo = "acabou"
+        elif agora_preco > meta["preco"] * (1 + SUBIU_TOLERANCIA):
+            motivo = "subiu"
+        if motivo:
+            try:
+                arq.unlink()
+            except OSError:
+                continue
+            tirados += 1
+            link = re.search(r"https?://\S+", item.get("texto") or "")
+            reg["itens"].append({"h": agora.isoformat(), "k": link.group(0) if link else None, "r": motivo,
+                                 "l": item.get("loja") or "ml", "de": meta["preco"], "agora": agora_preco})
+            log(f"WhatsApp: tirei {meta['id']} da fila ({'o preço subiu' if motivo == 'subiu' else 'acabou'}).")
+    reg["itens"] = reg["itens"][-100:]
+    estado["wa_conferidos"] = reg
+    return tirados

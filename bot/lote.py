@@ -113,6 +113,8 @@ def conferir_anuncio(estado, pid, info, log=print, procurar=None):
         return False
     preco, de = info.ativos[item]
     info.preco, info.preco_original, info.item_id = preco, de, item
+    if getattr(info, "envio", None) and item in info.envio:
+        info.frete = info.envio[item]  # frete grátis / Full do anúncio que a pessoa vai abrir
     return True
 
 

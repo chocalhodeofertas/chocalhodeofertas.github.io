@@ -16,7 +16,7 @@ VALIDADE_H = 3          # igual ao wa/servico.mjs: oferta parada há mais de 3 h
 HORA_INICIO, HORA_FIM = 7, 23
 PONTOS_AVISO = 9.0
 MOTIVOS = {"venceu": "esperou mais de 3 h", "limite": "limite de posts do dia", "pausa": "grupo em pausa de segurança",
-           "erro": "o WhatsApp recusou"}
+           "erro": "o WhatsApp recusou", "subiu": "o preço subiu enquanto esperava", "acabou": "acabou ou o anúncio saiu"}
 
 
 def _brl(v):
@@ -133,7 +133,9 @@ def gerar_html(estado, wa, itens_fila, agora):
     posts = list(reg.get("itens") or []) if reg.get("dia") == hoje else []
     hist = wa.get("historico") or {}
     historico = list(hist.get("itens") or []) if hist.get("dia") == hoje else []
-    por_link = {h["k"]: h for h in historico if h.get("k")}  # o último registro de cada link vale
+    conf = estado.get("wa_conferidos") or {}
+    conferidos = list(conf.get("itens") or []) if conf.get("dia") == hoje else []
+    por_link = {h["k"]: h for h in conferidos + historico if h.get("k")}  # o envio pelo WhatsApp vale por último
     pendentes = prever(itens_fila, wa, agora)
     na_fila = {i["link"] for i in itens_fila if i.get("link")}
     enviados = wa.get("enviados", 0) if wa.get("dia") == hoje else 0

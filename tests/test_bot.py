@@ -2700,3 +2700,62 @@ def test_recarga_do_chip(monkeypatch):
     assert comandos.lembrar_recarga(tg, cfg, e, AGORA.replace(month=12, day=30)) is False
     assert comandos.registrar_recarga("recarga 20/12", e, AGORA.replace(month=11, day=16))  # data futura = ano passado
     assert e["chip_recarga"]["dia"].endswith("-12-20") and e["chip_recarga"]["dia"] < AGORA.date().isoformat()
+
+
+def test_whatsapp_confere_o_preco_da_fila(monkeypatch, tmp_path):
+    from types import SimpleNamespace as N
+    from bot import fila_pagina, whatsapp
+    from bot.mercadolivre import InfoProduto
+
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    ofertas = {"MLB1": 100.0, "MLB2": 100.0, "MLB3": 100.0, "SHP7": 50.0}
+    for pid, preco in ofertas.items():
+        o = N(id=pid, titulo=pid, preco=preco, preco_de=None, imagem=None, preco_normal=None)
+        whatsapp.enfileirar_oferta(o, f"oferta https://x.com/{pid}", AGORA, loja="shopee" if pid.startswith("SHP") else "ml")
+    whatsapp.enfileirar("cupom do dia", None, AGORA)  # aviso: não tem preço para conferir
+
+    class ML:
+        def catalogo(self, pid, titulo=None, imagem=None):
+            preco = {"MLB1": 101.0, "MLB2": 110.0, "MLB3": None}[pid]
+            return InfoProduto(pid, "t", preco, None, None, preco is not None)
+
+    class Shp:
+        def item(self, item_id):
+            assert item_id == 7
+            return N(preco=45.0)
+
+    e = est.novo()
+    assert whatsapp.conferir_fila(e, AGORA, ML(), Shp()) == 2          # MLB2 subiu 10%, MLB3 acabou
+    sobrou = sorted(json.loads(f.read_text())["texto"] for f in tmp_path.glob("*.json"))
+    assert sobrou == ["cupom do dia", "oferta https://x.com/MLB1", "oferta https://x.com/SHP7"]
+    assert {i["r"] for i in e["wa_conferidos"]["itens"]} == {"subiu", "acabou"}
+    # a página da fila mostra o motivo
+    e["posts_dia"] = {"dia": AGORA.date().isoformat(), "itens": [
+        {"loja": "ml", "titulo": "Dois", "preco": 100.0, "link": "https://x.com/MLB2", "link_wa": "https://x.com/MLB2"}]}
+    assert "o preço subiu enquanto esperava" in fila_pagina.gerar_html(e, {}, [], AGORA)
+
+
+def test_frete_gratis_e_full_no_post():
+    from types import SimpleNamespace as N
+    from bot import lote, main, mensagens
+    from bot.mercadolivre import InfoProduto, entrega
+
+    assert entrega({"shipping": {"free_shipping": True, "logistic_type": "fulfillment"}}) == (True, True)
+    assert entrega({"shipping": {"free_shipping": False, "logistic_type": "xd_drop_off"}}) == (False, False)
+    assert entrega({}) == (False, False)
+    e = est.novo()
+    e["links"]["MLB1"] = "https://meli.la/a"
+    e.setdefault("links_item", {})["MLB1"] = "MLB10"
+    info = InfoProduto("MLB1", "Banheira", 80.0, 100.0, None, True, "MLB20",
+                       ativos={"MLB10": (90.0, 120.0), "MLB20": (80.0, 100.0)},
+                       envio={"MLB10": (True, True), "MLB20": (False, False)})
+    assert lote.conferir_anuncio(e, "MLB1", info) and info.frete == (True, True) and info.preco == 90.0
+    o = N(id="MLB1", titulo="Banheira", preco=90.0, preco_de=120.0, desconto=.25, link="https://meli.la/a",
+          categoria="higiene", imagem=None)
+    main._com_frete(o, info)
+    assert "🚚 Frete grátis · ⚡ Full (entrega rápida)" in mensagens.montar_telegram(o)
+    o2 = N(**{**vars(o), "frete_gratis": True, "full": False})
+    texto = mensagens.montar_whatsapp(o2)
+    assert "🚚 Frete grátis" in texto and "Full" not in texto
+    o3 = N(**{**vars(o), "frete_gratis": False, "full": False})
+    assert "Frete" not in mensagens.montar_whatsapp(o3)

@@ -35,6 +35,15 @@ class InfoProduto:
     # Anúncios ativos do produto de catálogo agora: {item_id: (preço, preço "de")}. Vazio = não consultado.
     ativos: dict = field(default_factory=dict)
     total: int = 0  # quantos anúncios o catálogo tem ao todo (a consulta traz só os 20 primeiros)
+    # Entrega de cada anúncio ativo: {item_id: (frete grátis?, Full?)}; frete = a do anúncio que o link abre.
+    envio: dict = field(default_factory=dict)
+    frete: Optional[tuple] = None
+
+
+def entrega(anuncio):
+    """(frete grátis?, Full?) de um anúncio, pelo que a API oficial informa em "shipping"."""
+    s = anuncio.get("shipping") or {}
+    return bool(s.get("free_shipping")), s.get("logistic_type") == "fulfillment"
 
 
 def extrair_id(link: str):
@@ -146,6 +155,7 @@ class MercadoLivre:
             item_id=melhor.get("item_id"),
             ativos={o["item_id"]: (o["price"], o.get("original_price")) for o in ofertas if o.get("item_id")},
             total=total,
+            envio={o["item_id"]: entrega(o) for o in ofertas if o.get("item_id")},
         )
 
     def procurar_anuncio(self, pid, item_id, total, maximo=300):

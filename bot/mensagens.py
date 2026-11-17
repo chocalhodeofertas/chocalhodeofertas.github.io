@@ -266,6 +266,10 @@ def _linhas_preco(oferta, negrito, riscado, codigo=lambda t: t):
         linhas.append(f"🧮 Sai a {negrito(brl(por_un[0]))} {por_un[1]}")
     if getattr(oferta, "loja", "") == "shopee" and getattr(oferta, "vendas", 0):
         linhas.append(f"⭐ {str(round(oferta.nota, 1)).replace('.', ',')} · {_vendidos(oferta.vendas)}")
+    entrega = [x for x, tem in (("🚚 Frete grátis", getattr(oferta, "frete_gratis", False)),
+                                ("⚡ Full (entrega rápida)", getattr(oferta, "full", False))) if tem]
+    if entrega:
+        linhas.append(" · ".join(entrega))
     cp = getattr(oferta, "cupom", None)
     if cp and cp.get("origem") == "pagina":
         if cp.get("preco"):
