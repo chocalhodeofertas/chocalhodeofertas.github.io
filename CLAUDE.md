@@ -64,6 +64,10 @@ Textos para o dono do projeto sempre em português do Brasil.
 - Repetição: `REPOST_DIAS` (padrão 7 no workflow): mesmo produto e títulos parecidos (ML + Shopee) não voltam antes disso; volta antes só se o preço cair 5%.
   Tipo do dia (`ofertas.tipos_do_dia`) soma ML e Shopee; sem tipo conhecido, usa a primeira palavra que diz o que é o produto.
   `ofertas.priorizar_tipos_novos`: tipo que saiu nas últimas 48 h vai para o fim da fila (só entra se faltar alternativa).
+  Rodízio de categorias (17/11, `ofertas.equilibrar_categorias`, ML e Shopee, por cima do de tipos): conta o dia em
+  `estado.posts_dia` (`categoria_efetiva`: categoria da descoberta ou, se "outros", `categoria_do_titulo`); brinquedo acima de
+  30% do dia (a partir de 6 posts) vai para o fim; alimentação, passeio, roupa e quarto com menos de 2 posts vão na frente.
+  Só muda a ordem entre ofertas aprovadas.
 - `espelho.py`: lê canais de ofertas do Telegram (`FONTES_OFERTAS_TG`, padrão no ciclo.yml) pela sessão Telethon;
   links do ML/Shopee viram candidatos por 48 h (`estado.espelho`). ML: catálogo direto; anúncio avulso → busca o catálogo pelo título.
   Passam pelos mesmos filtros (regra "infantil", NBCAL, repetição); desconto mínimo 10% e +20% na pontuação.
@@ -97,7 +101,11 @@ Textos para o dono do projeto sempre em português do Brasil.
   Radar (`comum.mjs: anotarRadar`): `wa_estado.json: radar[dia][hora] = [entradas, saídas, mensagens]`, 45 dias, só contagens;
   `whatsapp.conferir_fila` (a cada rodada, ~20 min): reconfere pela API o preço do que espera no grupo; subiu > 2% ou acabou → sai da fila
   (`estado.wa_conferidos`, aparece na página da fila); baixou → fica.
-  posta primeiro o que tem mais `pontos` (`whatsapp.forca`: força do desconto; avisos = 9; `wa/comum.mjs: ordenarFila`), pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
+  posta primeiro o que tem mais `pontos` (`whatsapp.forca`: força do desconto; avisos = 9; `wa/comum.mjs: ordenarFila`), alterna a loja e
+  evita repetir a categoria da anterior (`categoria` no item, `wa_estado.ultima_categoria`; espelhado em `fila_pagina.ordem_de_saida`),
+  pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
+  Menção oculta (`mencionar` no item → `mentions` com todos os participantes, sem "@" no texto): SÓ pelo comando `marcar <texto|meli.la>`
+  do Leonardo (`comandos.marcar`, até 2/dia); nunca automático (decisão de 17/11).
 - `resumos.py`: posts de resumo (fora do limite e da regra de repetição), chamados por `resumos.rodar` no fim da rodada:
   tabela de fraldas (`FRALDAS_ATIVO`, 10h): menor preço por fralda em cada tamanho, ML (`estado.fraldas_ml`, guardado a cada
   rodada, só com link oficial) + Shopee (busca na hora, preço único); mostra "ontem era R$ X" quando baixou 2%+.
@@ -132,6 +140,7 @@ Textos para o dono do projeto sempre em português do Brasil.
   chip do WhatsApp (`estado.chip_recarga`); `lembrar_recarga` avisa com 75 e 85 dias (pré-pago perde o número com 90).
   `alertar_oferta_forte` (chamado a cada post, ML e Shopee): avisa o admin quando o preço está 20% abaixo do típico (7+ dias de
   histórico) ou 10% abaixo com selo de menor preço; até `ALERTA_MAX_DIA` (5) por dia.
+  Quando o post sai sem selo, o aviso explica (`nota_sem_selo`: histórico menor que 14 dias ou regra do selo não batida).
 - `tiktok.py`: renderizador dos carrosséis 1080x1350 (capa, produto, CTA).
 - `instagram.py`: cliente da API do Instagram (login unificado; segredos `INSTAGRAM_TOKEN`/`INSTAGRAM_USER_ID`, token sem validade).
   `metricas()` tenta tudo junto e, se falhar, uma a uma; o que não vier fica em `ausentes`.

@@ -34,7 +34,8 @@ AJUDA = (
     "🎟️ <b>cupom</b> + o texto do cupom → eu formato e posto. Ex.:\n"
     "<code>cupom 20% OFF em brinquedos acima de R$ 99, código BRINCA20, até 10/11</code>\n"
     "(com a data, eu marco como encerrado sozinho quando vencer)\n"
-    "🛍️ <b>cupom shopee</b> + o texto → posto no canal e no grupo com o seu link da página de cupons\n\n"
+    "🛍️ <b>cupom shopee</b> + o texto → posto no canal e no grupo com o seu link da página de cupons\n"
+    "📣 <b>marcar</b> + texto ou link meli.la → vai para o grupo do WhatsApp com todos marcados, sem “@” (até 2/dia)\n\n"
     "❌ <b>esgotou</b> + código → aviso no canal que o cupom acabou\n"
     "✅ <b>geral</b> + código → cupom sem categoria que você testou passa a entrar nas ofertas · <b>restrito</b> + código desfaz\n\n"
     "📊 <b>resumo</b> → números do canal agora\n"
@@ -102,6 +103,19 @@ def motivo_oferta_forte(estado, oferta, agora):
     return None
 
 
+def nota_sem_selo(estado, oferta, agora):
+    """Linha do aviso explicando por que o post saiu sem o selo de menor preço (decisão do Leonardo, 17/11)."""
+    if getattr(oferta, "selo_dias", None):
+        return ""
+    from .ofertas import SELO_DIAS_MIN
+
+    _, dias = est.preco_tipico(estado, oferta.id, agora)
+    if dias < SELO_DIAS_MIN:
+        return (f"ℹ️ O post saiu sem selo: o selo de menor preço precisa de {SELO_DIAS_MIN} dias de histórico "
+                f"e este produto tem {dias}.\n")
+    return "ℹ️ O post saiu sem selo: o preço não bateu a regra do selo de menor preço (ex.: já esteve mais barato).\n"
+
+
 def alertar_oferta_forte(tg, cfg, estado, oferta, agora, loja="ml"):
     """Avisa você na hora quando sai uma oferta fora da curva (para destacar nos Stories, por exemplo).
     Até ALERTA_MAX_DIA avisos por dia (padrão 5; 0 desliga) e um por produto."""
@@ -120,6 +134,7 @@ def alertar_oferta_forte(tg, cfg, estado, oferta, agora, loja="ml"):
     onde = "Shopee" if loja == "shopee" else "Mercado Livre"
     texto = (f"🚨 <b>Oferta forte no canal agora</b> ({onde})\n{html.escape((oferta.titulo or '')[:90])}\n"
              f"<b>{mensagens.brl(oferta.preco)}</b> · {motivo}\n{html.escape(oferta.link or '')}\n"
+             f"{nota_sem_selo(estado, oferta, agora)}"
              f"<i>Boa para destacar nos Stories. Aviso {len(reg['ids']) + 1} de até {limite} hoje.</i>")
     try:
         tg.enviar_texto(cfg.admin_chat, texto, html=True)
@@ -146,7 +161,38 @@ def enviar_copias(tg, chat, oferta, rng=random, fonte=None):
                     botoes=mensagens.botoes_compartilhar(wa, mensagens.montar_x(oferta)))
 
 
-def postar_link(link, tg, ml, estado, cfg, agora, session=None, rng=random):
+MARCAR_MAX_DIA = 2  # menção oculta incomoda: no máximo 2 por dia, mesmo pedindo
+
+
+def marcar(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
+    """`marcar <texto>` ou `marcar <link meli.la>`: vai para o grupo do WhatsApp com todos os membros marcados
+    sem "@" no texto (menção oculta). Só quando o Leonardo pede; o canal do Telegram não muda."""
+    corpo = re.sub(r"^\s*/?marcar\b\s*", "", texto or "", flags=re.I).strip()
+    if not corpo:
+        return ("Mande <b>marcar</b> + o texto (ou + um link meli.la) que vai para o grupo do WhatsApp com todo mundo "
+                "marcado, sem aparecer “@”. Ex.:\n<code>marcar 🥄 Separei ofertas para a introdução alimentar!</code>")
+    hoje = agora.date().isoformat()
+    reg = estado.get("marcacoes")
+    if not isinstance(reg, dict) or reg.get("dia") != hoje:
+        reg = estado["marcacoes"] = {"dia": hoje, "n": 0}
+    if reg["n"] >= MARCAR_MAX_DIA:
+        return (f"⚠️ Já foram {MARCAR_MAX_DIA} mensagens com todo mundo marcado hoje. Para não incomodar o grupo "
+                "(e não arriscar denúncia), a próxima só amanhã.")
+    links = lote.RE_MELI.findall(corpo)
+    if links:
+        resposta = postar_link(links[0], tg, ml, estado, cfg, agora, session, rng, mencionar=True)
+        if resposta and resposta.startswith(("⚠️", "🚫")):
+            return resposta
+        reg["n"] += 1
+        return (resposta or "✅ Postado.") + "\n📣 No grupo do WhatsApp ela vai com todo mundo marcado (sem “@”)."
+    if not whatsapp.enfileirar(corpo, None, agora, mencionar=True):
+        return "⚠️ O WhatsApp não está ligado nesta rodada; não consegui colocar a mensagem na fila."
+    reg["n"] += 1
+    return ("📣 Na fila do grupo do WhatsApp, na frente das ofertas, com todo mundo marcado (sem “@”). "
+            f"Marcações hoje: {reg['n']} de {MARCAR_MAX_DIA}.")
+
+
+def postar_link(link, tg, ml, estado, cfg, agora, session=None, rng=random, mencionar=False):
     """Posta no canal a oferta de um link de afiliado. Retorna a resposta para você."""
     achado = resolver_meli(link, session)
     if not achado:
@@ -180,7 +226,7 @@ def postar_link(link, tg, ml, estado, cfg, agora, session=None, rng=random):
         tg.enviar_oferta(cfg.canal, mensagens.montar_telegram(oferta, rng), oferta.imagem)
     except TelegramErro as e:
         return f"⚠️ Não consegui postar no canal: {e}"
-    whatsapp.enfileirar_oferta(oferta, mensagens.montar_whatsapp(oferta, rng), agora)
+    whatsapp.enfileirar_oferta(oferta, mensagens.montar_whatsapp(oferta, rng), agora, mencionar=mencionar)
     est.registrar_post(estado, pid, preco, agora, info.titulo, oferta.desconto)
     if oferta.cupom:
         est.contar_dia(estado, agora, "com_cupom")
@@ -815,6 +861,8 @@ def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
         from . import conteudo
         conteudo.montar_e_enviar(tg, cfg.admin_chat, estado, agora, rng=rng, session=session)
         return None
+    if n == "marcar" or n.startswith(("marcar ", "/marcar")):
+        return marcar(t, tg, ml, estado, cfg, agora, session, rng)
     if n.startswith(("buscar ", "/buscar ")):
         from . import busca
         return busca.buscar(t.split(" ", 1)[1], ml, estado)

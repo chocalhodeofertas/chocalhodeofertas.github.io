@@ -108,14 +108,21 @@ export function naMeiaNoite(agora = new Date(), datas = DATAS_MEIA_NOITE) {
 // Ordem da fila do grupo: o limite diário é pequeno, então sai primeiro o que tem mais pontos
 // (avisos como cupons e resumos valem 9; ofertas valem pela força do desconto). Empate: a mais antiga.
 // As lojas continuam alternando: a melhor oferta da outra loja passa na frente, a não ser que haja um aviso.
-export function ordenarFila(nomes, ler, ultimaLoja = "ml") {
+// Ordem da fila: mais pontos primeiro; aviso (9+) na frente de tudo; senão alterna a loja e, dentro disso,
+// evita repetir a categoria da última oferta (rodízio aprovado em 17/11). Espelhado em bot/fila_pagina.py.
+export function ordenarFila(nomes, ler, ultimaLoja = "ml", ultimaCategoria = null) {
   const itens = nomes.map((nome) => {
     const d = ler(nome) || {};
-    return { nome, pontos: Number(d.pontos) || 0, loja: d.loja || "ml" };
+    return { nome, pontos: Number(d.pontos) || 0, loja: d.loja || "ml", categoria: d.categoria || null };
   });
   itens.sort((a, b) => b.pontos - a.pontos || (a.nome < b.nome ? -1 : 1));
   const aviso = itens.length && itens[0].pontos >= 9;
-  const outra = aviso ? null : itens.find((i) => i.loja !== ultimaLoja);
+  let outra = null;
+  if (!aviso) {
+    const daOutraLoja = itens.filter((i) => i.loja !== ultimaLoja);
+    const base = daOutraLoja.length ? daOutraLoja : itens;
+    outra = base.find((i) => !ultimaCategoria || i.categoria !== ultimaCategoria) || base[0] || null;
+  }
   const ordem = outra ? [outra, ...itens.filter((i) => i !== outra)] : itens;
   return ordem.map((i) => i.nome);
 }

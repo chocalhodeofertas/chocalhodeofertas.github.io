@@ -18,7 +18,7 @@ from datetime import datetime, timedelta
 from . import estado as est
 from . import grafico, horario, mensagens, resumos, sazonal, vitrine, whatsapp
 from .filtros import fora_da_faixa, motivo_bloqueio, normalizar
-from .ofertas import Oferta, tipo_produto, tipos_do_dia, priorizar_tipos_novos, vagas_da_rodada
+from .ofertas import Oferta, tipo_produto, tipos_do_dia, priorizar_tipos_novos, equilibrar_categorias, vagas_da_rodada
 from .shopee import MAIS_VENDIDOS, Shopee, ShopeeErro
 from .telegram import TelegramErro
 
@@ -338,7 +338,8 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
     tipos.setdefault(hoje, [])
     tipos_hoje = tipos_do_dia(estado, agora)
     enviadas = []
-    for p in priorizar_tipos_novos(candidatos, estado, agora):
+    for p in equilibrar_categorias(priorizar_tipos_novos(candidatos, estado, agora), estado, agora,
+                                   categoria=lambda p: ""):
         if len(enviadas) >= vagas:
             break
         tp = tipo_produto(p.titulo)

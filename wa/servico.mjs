@@ -188,8 +188,23 @@ function apagarItem(caminho, item) {
   if (img && !/^https?:/i.test(img) && path.resolve(img).startsWith(FILA)) fs.rmSync(img, { force: true });
 }
 
+// Menção oculta: todos do grupo recebem a notificação de menção, sem "@" no texto.
+// Só em item com "mencionar" (comando `marcar` do Leonardo); nunca automático.
+async function mencoes(item) {
+  if (!item.mencionar) return {};
+  try {
+    const meta = await sock.groupMetadata(grupo);
+    const ids = meta.participants.map((p) => p.id).filter(Boolean);
+    return ids.length ? { mentions: ids } : {};
+  } catch (e) {
+    console.log("Aviso: não consegui ler os membros para a menção; vai sem marcar:", e?.message);
+    return {};
+  }
+}
+
 async function postar(item) {
   await acharGrupo();
+  const extra = await mencoes(item);
   await sock.presenceSubscribe(grupo).catch(() => {});
   await sock.sendPresenceUpdate("composing", grupo).catch(() => {});
   await dormir(2500 + Math.random() * 4000);
@@ -205,7 +220,7 @@ async function postar(item) {
         info.jpegThumbnail = imageMessage?.jpegThumbnail ? Buffer.from(imageMessage.jpegThumbnail) : undefined;
         info.highQualityThumbnail = imageMessage || undefined;
       }
-      await sock.sendMessage(grupo, { text: item.texto, linkPreview: info });
+      await sock.sendMessage(grupo, { text: item.texto, linkPreview: info, ...extra });
       return;
     } catch (e) {
       console.log("Aviso: não consegui montar a prévia do link; vai como foto:", e?.message);
@@ -214,13 +229,13 @@ async function postar(item) {
   if (item.imagem) {
     const local = !/^https?:/i.test(item.imagem);
     if (local && !fs.existsSync(item.imagem)) {
-      await sock.sendMessage(grupo, { text: item.texto });
+      await sock.sendMessage(grupo, { text: item.texto, ...extra });
     } else {
       await sock.sendMessage(grupo, { image: local ? fs.readFileSync(item.imagem) : { url: item.imagem },
-        caption: item.texto });
+        caption: item.texto, ...extra });
     }
   } else {
-    await sock.sendMessage(grupo, { text: item.texto });
+    await sock.sendMessage(grupo, { text: item.texto, ...extra });
   }
 }
 
@@ -232,7 +247,7 @@ async function cuidarDaFila() {
     } catch {
       return {};
     }
-  }, estado.ultima_loja || "ml");
+  }, estado.ultima_loja || "ml", estado.ultima_categoria || null);
   let mudou = false;
   for (const nome of arquivos) {
     const caminho = path.join(FILA, nome);
@@ -278,6 +293,7 @@ async function cuidarDaFila() {
       estado.ultimo = new Date().toISOString();
       estado.proximo_em = new Date(Date.now() + sortearIntervalo(INTERVALO_MIN, INTERVALO_MAX)).toISOString();
       estado.ultima_loja = item.loja || "ml";
+      if (item.categoria) estado.ultima_categoria = item.categoria;
       console.log(`Postado no grupo do WhatsApp (${estado.enviados}/${MAX_DIA} hoje).`);
     } catch (e) {
       console.log("Aviso: não consegui postar no WhatsApp:", e?.message);

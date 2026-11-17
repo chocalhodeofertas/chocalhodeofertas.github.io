@@ -1275,7 +1275,8 @@ def test_shopee_rodar_posta_por_cima(monkeypatch, tmp_path):
     e, tg = est.novo(), Tg()
     agora = AGORA.replace(hour=20)
     feitas = so.rodar(Cfg, tg, e, agora, rng=random.Random(1), shp=Shp(), log=lambda m: None)
-    assert [o.id for o in feitas] == ["SHP1", "SHP2"] and len(tg.posts) == 2  # SHP3: nota baixa
+    # SHP2 (body: roupa, categoria em falta no dia) passa na frente pelo rodízio; SHP3: nota baixa
+    assert [o.id for o in feitas] == ["SHP2", "SHP1"] and len(tg.posts) == 2
     assert e["contagem_dia"] == {}  # não gasta o limite do Mercado Livre
     assert e["hist_dia"][agora.date().isoformat()]["shopee"] == 2
     import json
@@ -2798,3 +2799,79 @@ def test_carrossel_ganha_cartao_de_grafico_e_tema_black_friday():
     assert len(cartao) == 1 and cartao[0].size == (1080, 1350)
     assert conteudo._oferta({"id": "SHP5", "preco": 1.0, "titulo": "x"}).loja == "shopee"
     assert conteudo.cartao_grafico([conteudo._oferta(item_igual)], e, hoje) == []  # preço não caiu: sem cartão
+
+
+def test_aviso_oferta_forte_explica_post_sem_selo():
+    from types import SimpleNamespace as N
+    from bot import comandos
+    e = est.novo()
+    e["precos"]["MLB9"] = {"historico": [["2026-11-09", 15.47], ["2026-11-12", 12.73]]}
+    agora = datetime.fromisoformat("2026-11-17T12:30-03:00")
+    o = N(id="MLB9", selo_dias=None)
+    assert "precisa de 14 dias de histórico e este produto tem 8" in comandos.nota_sem_selo(e, o, agora)
+    o.selo_dias = 20
+    assert comandos.nota_sem_selo(e, o, agora) == ""
+    o.selo_dias = None
+    e["precos"]["MLB9"]["historico"][0][0] = "2026-10-20"
+    assert "não bateu a regra do selo" in comandos.nota_sem_selo(e, o, agora)
+
+
+def test_rodizio_de_categorias():
+    from types import SimpleNamespace as N
+    from bot import ofertas
+    agora = datetime.fromisoformat("2026-11-17T15:00-03:00")
+    e = est.novo()
+    itens = [{"categoria": "brinquedo", "titulo": "Boneca"}] * 3 + [{"categoria": "higiene", "titulo": "Shampoo"}] * 4
+    e["posts_dia"] = {"dia": "2026-11-17", "itens": itens}
+    carrinho = N(titulo="Carrinho de brinquedo controle remoto", categoria="brinquedo")
+    pratinho = N(titulo="Pratinho com ventosa", categoria="alimentacao")
+    body = N(titulo="Body manga longa bebê", categoria="outros")  # categoria vem do título
+    banheira = N(titulo="Banheira dobrável", categoria="higiene")
+    ordem = ofertas.equilibrar_categorias([carrinho, banheira, pratinho, body], e, agora)
+    # 3 brinquedos em 7 já passa de 30%: brinquedo vai para o fim; alimentação e roupa (em falta) vão na frente
+    assert ordem == [pratinho, body, banheira, carrinho]
+    # de manhã (poucos posts) o teto ainda não vale
+    e["posts_dia"]["itens"] = itens[:2]
+    assert ofertas.equilibrar_categorias([carrinho, banheira], e, agora) == [carrinho, banheira]
+    # cota cumprida: alimentação volta à ordem normal
+    e["posts_dia"]["itens"] = [{"categoria": "alimentacao", "titulo": "Colher"}] * 2
+    assert ofertas.equilibrar_categorias([banheira, pratinho], e, agora) == [banheira, pratinho]
+    assert ofertas.categoria_efetiva("outros", "Body manga longa bebê") == "roupa"
+
+
+def test_fila_do_whatsapp_nao_repete_categoria():
+    from bot import fila_pagina as fp
+    fila = [{"arquivo": "1.json", "nome": "Boneca", "loja": "shopee", "pontos": 0.5, "categoria": "brinquedo"},
+            {"arquivo": "2.json", "nome": "Carrinho", "loja": "shopee", "pontos": 0.4, "categoria": "brinquedo"},
+            {"arquivo": "3.json", "nome": "Pratinho", "loja": "shopee", "pontos": 0.2, "categoria": "alimentacao"}]
+    assert [i["nome"] for i in fp.ordem_de_saida(fila, "ml", "brinquedo")] == ["Pratinho", "Boneca", "Carrinho"]
+    assert [i["nome"] for i in fp.ordem_de_saida(fila, "ml", None)] == ["Boneca", "Pratinho", "Carrinho"]
+
+
+def test_marcar_vai_para_o_whatsapp_com_mencao(tmp_path, monkeypatch):
+    import json
+    from bot import comandos
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    e = est.novo()
+    agora = datetime.fromisoformat("2026-11-17T15:00-03:00")
+    assert "Mande <b>marcar</b>" in comandos.tratar_texto("marcar", None, None, e, cfg_cmd(), agora)
+    r = comandos.tratar_texto("marcar 🥄 Separei ofertas para a introdução alimentar!", None, None, e, cfg_cmd(), agora)
+    assert "todo mundo marcado" in r
+    item = json.loads(next(tmp_path.glob("*.json")).read_text())
+    assert item["mencionar"] is True and item["pontos"] >= 9 and item["texto"].startswith("🥄 Separei")
+    chamadas = []
+    monkeypatch.setattr(comandos, "postar_link",
+                        lambda *a, **k: chamadas.append(k) or "✅ Postado: Pratinho — R$ 20,00")
+    r = comandos.tratar_texto("marcar https://meli.la/1AbC2dE", None, None, e, cfg_cmd(), agora)
+    assert chamadas == [{"mencionar": True}] and "todo mundo marcado" in r
+    assert "a próxima só amanhã" in comandos.tratar_texto("marcar oi", None, None, e, cfg_cmd(), agora)
+    # ofertas normais nunca vão com menção
+    from types import SimpleNamespace as N
+    from bot import whatsapp
+    for f in tmp_path.glob("*.json"):
+        f.unlink()
+    o = N(id="MLB1", titulo="Pratinho com ventosa", preco=20.0, preco_de=30.0, desconto=.33, imagem=None,
+          categoria="outros", link="https://meli.la/x", cupom=None)
+    whatsapp.enfileirar_oferta(o, "texto https://meli.la/x", agora)
+    item = json.loads(next(tmp_path.glob("*.json")).read_text())
+    assert "mencionar" not in item and item["categoria"] == "alimentacao"

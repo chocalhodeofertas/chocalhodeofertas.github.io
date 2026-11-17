@@ -237,6 +237,51 @@ def priorizar_tipos_novos(ofertas, estado, agora, titulo=lambda o: o.titulo):
     return sorted(ofertas, key=lambda o: tipo_produto(titulo(o)) in recentes)
 
 
+# Rodízio de categorias (aprovado pelo Leonardo em 17/11): brinquedo não passa de ~30% do dia e as categorias
+# que quase não aparecem ganham a frente da fila até ter COTA_MIN posts no dia. Só muda a ORDEM entre ofertas
+# que já passaram em todas as regras; não cria oferta nem baixa o desconto mínimo.
+TETO_BRINQUEDO = 0.30
+TETO_A_PARTIR_DE = 6  # o teto só vale depois de alguns posts no dia (de manhã 1 de 2 seria 50%)
+CATEGORIAS_COTA = ("alimentacao", "passeio", "roupa", "quarto")
+COTA_MIN = 2
+
+
+def categoria_efetiva(categoria, titulo):
+    """Categoria da descoberta do ML; quando ela não diz nada ("outros"), a categoria pelo título."""
+    if categoria and categoria != "outros":
+        return categoria
+    from .shopee_ofertas import categoria_do_titulo
+
+    return categoria_do_titulo(titulo or "") or "outros"
+
+
+def categorias_do_dia(estado, agora):
+    """Contagem por categoria do que saiu hoje no canal (ML + Shopee), pelo registro de posts do dia."""
+    from collections import Counter
+
+    reg = estado.get("posts_dia")
+    if not isinstance(reg, dict) or reg.get("dia") != agora.date().isoformat():
+        return Counter()
+    return Counter(categoria_efetiva(i.get("categoria"), i.get("titulo")) for i in reg.get("itens") or [])
+
+
+def equilibrar_categorias(ofertas, estado, agora, titulo=lambda o: o.titulo,
+                          categoria=lambda o: getattr(o, "categoria", "")):
+    """Reordena (sem tirar ninguém): categoria em falta na frente, brinquedo acima do teto no fim."""
+    cont = categorias_do_dia(estado, agora)
+    total = sum(cont.values())
+
+    def chave(o):
+        c = categoria_efetiva(categoria(o), titulo(o))
+        if c == "brinquedo" and total >= TETO_A_PARTIR_DE and (cont[c] + 1) / (total + 1) > TETO_BRINQUEDO:
+            return 2
+        if c in CATEGORIAS_COTA and cont[c] < COTA_MIN:
+            return 0
+        return 1
+
+    return sorted(ofertas, key=chave)
+
+
 def tipos_do_dia(estado, agora):
     """Tipos já postados hoje, somando Mercado Livre e Shopee."""
     hoje = agora.date().isoformat()

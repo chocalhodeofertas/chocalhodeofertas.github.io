@@ -43,18 +43,20 @@ def _link(texto):
     return m.group(0) if m else None
 
 
-def ordem_de_saida(itens, ultima_loja="ml"):
+def ordem_de_saida(itens, ultima_loja="ml", ultima_categoria=None):
     """Mesma regra do wa/comum.mjs (ordenarFila), repetida até a fila acabar: mais pontos primeiro,
-    aviso (cupom, resumo) na frente de tudo, e as lojas alternando."""
+    aviso (cupom, resumo) na frente de tudo, as lojas alternando e sem repetir a categoria da anterior."""
     resto = sorted(itens, key=lambda i: (-(i.get("pontos") or 0), i.get("arquivo") or ""))
     ordem = []
     while resto:
         prox = resto[0]
         if (prox.get("pontos") or 0) < PONTOS_AVISO:
-            prox = next((i for i in resto if (i.get("loja") or "ml") != ultima_loja), prox)
+            base = [i for i in resto if (i.get("loja") or "ml") != ultima_loja] or resto
+            prox = next((i for i in base if not ultima_categoria or i.get("categoria") != ultima_categoria), base[0])
         resto.remove(prox)
         ordem.append(prox)
         ultima_loja = prox.get("loja") or "ml"
+        ultima_categoria = prox.get("categoria") or ultima_categoria
     return ordem
 
 
@@ -81,7 +83,7 @@ def prever(itens, wa, agora):
     ultimo = _quando(wa.get("ultimo"), agora)
     t = max(agora, proximo) if proximo else (max(agora, ultimo + intervalo) if ultimo else agora)
     saida = []
-    for item in ordem_de_saida(itens, wa.get("ultima_loja") or "ml"):
+    for item in ordem_de_saida(itens, wa.get("ultima_loja") or "ml", wa.get("ultima_categoria")):
         criado = _quando(item.get("criado"), agora) or agora
         vence = criado + timedelta(hours=VALIDADE_H)
         if t.hour < HORA_INICIO:

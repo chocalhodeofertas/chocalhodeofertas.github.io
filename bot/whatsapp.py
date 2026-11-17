@@ -28,9 +28,13 @@ def forca(oferta):
     return round(pontos, 4)
 
 
-def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None, pontos=PONTOS_AVISO, oferta=None):
+def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None, pontos=PONTOS_AVISO, oferta=None,
+               categoria=None, mencionar=False):
     """png: bytes de uma arte pronta (vai junto na fila e tem prioridade sobre a URL da foto).
-    pontos: prioridade na fila (o serviço posta primeiro o que tem mais pontos)."""
+    pontos: prioridade na fila (o serviço posta primeiro o que tem mais pontos).
+    categoria: o serviço evita duas ofertas seguidas da mesma categoria.
+    mencionar: menção oculta (todos do grupo notificados, sem "@" no texto). Só quando o Leonardo pede
+    (comando `marcar`): nunca automático."""
     pasta = os.environ.get("WA_FILA")
     if not pasta or not texto:
         return False
@@ -47,6 +51,10 @@ def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None
         item["preview"] = preview
     if oferta:
         item["oferta"] = oferta
+    if categoria:
+        item["categoria"] = categoria
+    if mencionar:
+        item["mencionar"] = True
     nome = p / f"{base}.json"
     tmp = nome.with_suffix(".tmp")
     tmp.write_text(json.dumps(item, ensure_ascii=False), encoding="utf-8")
@@ -54,7 +62,7 @@ def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None
     return True
 
 
-def enfileirar_oferta(oferta, texto, agora=None, loja="ml"):
+def enfileirar_oferta(oferta, texto, agora=None, loja="ml", mencionar=False):
     """Oferta para o grupo como texto com a prévia grande do link (foto + nome do produto),
     igual aos grupos de ofertas grandes. O serviço monta a prévia com a foto do anúncio;
     se não conseguir, manda a foto com o texto na legenda."""
@@ -64,8 +72,11 @@ def enfileirar_oferta(oferta, texto, agora=None, loja="ml"):
         preview = {"link": m.group(0), "titulo": oferta.titulo, "imagem": oferta.imagem}
     meta = ({"id": oferta.id, "preco": oferta.preco}  # para conferir o preço antes de sair (conferir_fila)
             if getattr(oferta, "id", None) and getattr(oferta, "preco", None) else None)
-    return enfileirar(texto, getattr(oferta, "imagem", None), agora, loja, preview=preview, pontos=forca(oferta),
-                      oferta=meta)
+    from .ofertas import categoria_efetiva
+
+    return enfileirar(texto, getattr(oferta, "imagem", None), agora, loja, preview=preview,
+                      pontos=PONTOS_AVISO if mencionar else forca(oferta), oferta=meta,
+                      categoria=categoria_efetiva(getattr(oferta, "categoria", ""), oferta.titulo), mencionar=mencionar)
 
 
 SUBIU_TOLERANCIA = 0.02  # subiu mais que 2% desde que entrou na fila → não sai no grupo
