@@ -21,6 +21,9 @@ def carregar(caminho):
         inicial = p.parent / "links_item_inicial.json"
         if inicial.exists():
             estado["links_item"] = {k: v for k, v in json.loads(inicial.read_text()).items() if k in estado["links"]}
+    if "posts_hist" not in estado:  # uma vez: todos os posts desde 06/11, refeitos a partir do histórico do git
+        inicial = p.parent / "posts_hist_inicial.json"
+        estado["posts_hist"] = json.loads(inicial.read_text()) if inicial.exists() else []
     refazer_lote_17_11(estado)
     return estado
 
@@ -79,7 +82,74 @@ def registrar_preco(estado, pid, preco, agora):
     reg["min"] = min(reg["min"], preco)
 
 
+# ---------------------------------------------------------------- repetição
+# Um produto (mesmo anúncio OU título parecido, em qualquer loja) só volta ao canal depois de REPOST_DIAS.
+# Antes disso, só se o preço estiver REPOST_QUEDA (10%) abaixo do MENOR preço com que ele já saiu nesse período
+# (antes era 5% abaixo do último post: produto que alterna entre dois preços, ou variações de cor com preços
+# diferentes, voltava a cada poucos dias como se tivesse baixado).
+HIST_POSTS_DIAS = 45
+
+
+def _queda_minima():
+    import os
+    try:
+        return float(os.environ.get("REPOST_QUEDA") or 0.10)
+    except ValueError:
+        return 0.10
+
+
+def anotar_post(estado, pid, preco, agora, titulo=None):
+    """Guarda cada post (ML e Shopee) para a regra de repetição: [id, quando, preço, título]."""
+    from datetime import timedelta
+
+    hist = estado.setdefault("posts_hist", [])
+    hist.append([pid, agora.isoformat(timespec="minutes"), preco, (titulo or "")[:80]])
+    corte = (agora - timedelta(days=HIST_POSTS_DIAS)).isoformat()
+    estado["posts_hist"] = [x for x in hist if x[1] >= corte]
+
+
+def _posts_conhecidos(estado):
+    vistos = {(x[0], x[1]) for x in estado.get("posts_hist") or []}
+    saida = [tuple(x) for x in estado.get("posts_hist") or []]
+    fontes = [(k, v) for k, v in (estado.get("postados") or {}).items()]
+    fontes += [(k, v) for k, v in ((estado.get("shopee") or {}).get("titulos") or {}).items()]
+    for pid, v in fontes:  # posts antigos ou gravados por outro caminho
+        if isinstance(v, dict) and v.get("quando") and (pid, v["quando"]) not in vistos:
+            saida.append((pid, v["quando"], v.get("preco"), v.get("titulo") or ""))
+    return saida
+
+
+def checar_repeticao(estado, pid, titulo, preco, agora, dias=7):
+    """None = nunca saiu no período. Senão, dict com:
+    bloqueado (True = não pode sair), quando/preco (último post), menor (menor preço já postado), queda."""
+    from datetime import datetime, timedelta
+
+    from .ofertas import parecido
+
+    corte = agora - timedelta(days=dias)
+    antes = []
+    for p_id, quando, p_preco, p_titulo in _posts_conhecidos(estado):
+        try:
+            t = datetime.fromisoformat(quando)
+        except (TypeError, ValueError):
+            continue
+        if t <= corte or t > agora:
+            continue
+        if p_id == pid or (titulo and p_titulo and parecido(titulo, p_titulo)):
+            antes.append((t, p_preco, p_id))
+    if not antes:
+        return None
+    ultimo = max(antes)
+    precos = [p for _, p, _ in antes if p]
+    menor = min(precos) if precos else None
+    queda = (1 - preco / menor) if (preco and menor) else 0.0
+    return {"bloqueado": not (menor and queda >= _queda_minima() - 1e-9), "quando": ultimo[0].isoformat(timespec="minutes"),
+            "preco": ultimo[1], "menor": menor, "queda": round(queda, 3), "mesmo_anuncio": ultimo[2] == pid,
+            "vezes": len(antes)}
+
+
 def registrar_post(estado, pid, preco, agora, titulo=None, desconto=None):
+    anotar_post(estado, pid, preco, agora, titulo)
     estado["postados"][pid] = {"quando": agora.isoformat(timespec="minutes"), "preco": preco}
     if titulo:
         estado["postados"][pid]["titulo"] = titulo[:80]
@@ -135,15 +205,11 @@ def titulos_recentes(estado, agora, dias=3):
     return saida
 
 
-def repetido(estado, titulo, agora, dias=3, preco=None):
-    """True se um produto igual ou bem parecido já saiu nos últimos dias.
-    Volta antes do prazo só se o preço agora estiver 5% abaixo do que foi postado."""
-    from .ofertas import parecido
-
-    for t, p in titulos_recentes(estado, agora, dias):
-        if parecido(titulo, t) and not (preco and p and preco <= p * 0.95):
-            return True
-    return False
+def repetido(estado, titulo, agora, dias=3, preco=None, pid=None):
+    """True se o produto (ou um bem parecido) já saiu nos últimos dias e o preço não caiu o bastante
+    (ver checar_repeticao)."""
+    r = checar_repeticao(estado, pid, titulo, preco, agora, dias)
+    return bool(r and r["bloqueado"])
 
 
 def serie_diaria(estado, pid, agora, dias=30, com_hoje=False):

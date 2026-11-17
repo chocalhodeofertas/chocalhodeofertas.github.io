@@ -453,8 +453,11 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         tp = tipo_produto(o.titulo)
         if tp in tipos_hoje:
             continue  # já saiu um desse tipo hoje (ex.: outra babá eletrônica)
-        if est.repetido(estado, o.titulo, agora, cfg.repost_dias, o.preco):
-            continue  # mesmo produto (outro anúncio) já saiu nos últimos dias
+        rep = est.checar_repeticao(estado, o.id, o.titulo, o.preco, agora, cfg.repost_dias)
+        if rep and rep["bloqueado"]:
+            continue  # mesmo produto (ou outro anúncio dele) já saiu nos últimos dias e não baixou 10%
+        if rep:
+            o.repeticao = rep
         if esperar_antes:
             espera = rng.uniform(cfg.intervalo_min, max(cfg.intervalo_max, cfg.intervalo_min))
             log(f"Próximo post em {espera:.1f} min.")
@@ -474,6 +477,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         est.registrar_post(estado, o.id, o.preco, agora, o.titulo, o.desconto)
         resumos.registrar(estado, o, agora, "ml", getattr(por_id.get(o.id), "tipo", None))
         comandos.alertar_oferta_forte(tg, cfg, estado, o, agora, "ml")
+        comandos.avisar_repeticao(tg, cfg, o, "ml", log)
         if o.cupom:
             est.contar_dia(estado, agora, "com_cupom")
         tipos_hoje.add(tp)

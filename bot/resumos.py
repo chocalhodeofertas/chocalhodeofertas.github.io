@@ -191,6 +191,7 @@ def registrar(estado, oferta, agora, loja="ml", tipo=None):
     reg["itens"].append({
         "id": oferta.id, "loja": loja, "tipo": tipo, "titulo": (oferta.titulo or "")[:110],
         "hora": agora.strftime("%H:%M"), "cupom": bool(getattr(oferta, "cupom", None)),
+        "repete": getattr(oferta, "repeticao", None),
         "preco": oferta.preco, "de": oferta.preco_de, "normal": getattr(oferta, "preco_normal", None),
         "selo": getattr(oferta, "selo_dias", None), "a_partir": bool(getattr(oferta, "a_partir", False)),
         "link": oferta.link, "link_wa": getattr(oferta, "link_wa", None) or oferta.link,

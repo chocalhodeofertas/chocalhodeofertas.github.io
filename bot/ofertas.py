@@ -51,12 +51,11 @@ def avaliar(produto, info, estado, agora: datetime, min_desconto=0.15, repost_di
     if not (desconto >= min_desconto or (abaixo or 0) >= min_desconto or menor_hist or queda_real):
         return None
 
-    postado = estado["postados"].get(produto.id)
-    if postado:
-        dias = (agora - datetime.fromisoformat(postado["quando"])).total_seconds() / 86400
-        # Repete só depois de alguns dias, ou se o preço caiu mais 5%
-        if dias < repost_dias and preco > postado["preco"] * 0.95:
-            return None
+    # Repetição: mesmo anúncio ou título parecido só volta depois de repost_dias, ou 10% abaixo do menor preço já postado
+    from .estado import checar_repeticao
+    repeticao = checar_repeticao(estado, produto.id, info.titulo, preco, agora, repost_dias)
+    if repeticao and repeticao["bloqueado"]:
+        return None
 
     o = Oferta(
         id=produto.id,
@@ -70,6 +69,7 @@ def avaliar(produto, info, estado, agora: datetime, min_desconto=0.15, repost_di
         imagem=info.imagem,
         categoria=produto.categoria,
     )
+    o.repeticao = repeticao  # None ou o post anterior (voltou porque baixou)
     marcar_queda_real(o, estado, agora)
     return o
 

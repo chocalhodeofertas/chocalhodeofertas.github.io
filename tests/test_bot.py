@@ -1416,9 +1416,9 @@ def test_mesmo_produto_outro_anuncio_nao_repete():
     assert est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampa Azul", agora)
     assert est.repetido(e, "Baba Eletronica Baby Monitor Vb603 Visao Noturna Dual Audio", agora)
     assert not est.repetido(e, "Mochila Escolar Infantil Dinossauro", agora)
-    # outro anúncio do mesmo produto pode sair se estiver 5% mais barato
-    assert est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora, preco=39.0)
-    assert not est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora, preco=37.0)
+    # outro anúncio do mesmo produto só sai antes do prazo se estiver 10% abaixo do menor preço já postado (17/11)
+    assert est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora, preco=37.0)
+    assert not est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora, preco=36.0)
     # depois de 3 dias pode voltar
     assert not est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora + timedelta(days=3))
     assert not parecido("Patinete Infantil 3 Rodas Led", "Boneca Reborn Realista")
@@ -2975,3 +2975,41 @@ def test_previa_com_marca_no_whatsapp(tmp_path, monkeypatch):
     whatsapp.enfileirar_oferta(o, "texto https://meli.la/x", agora)
     item = json.loads(next(tmp_path.glob("*.json")).read_text())
     assert item["preview"]["imagem"] == o.imagem
+
+
+def test_repeticao_compara_com_o_menor_preco_ja_postado():
+    """Caso real (Mini Brands, 06 a 17/11): variações a R$ 38 e R$ 76 se alternavam e cada volta contava como 'baixou'."""
+    from bot import comandos, estado as est
+    from types import SimpleNamespace
+
+    e = est.novo()
+    e["posts_hist"] = []
+    t0 = AGORA - timedelta(days=10)
+    titulo = "Kit 3 Bolas Surpresa Cápsula Mini Brands Hc-3006 Azul"
+    est.anotar_post(e, "MLB1", 38.32, t0, titulo)
+    est.anotar_post(e, "MLB2", 76.62, t0 + timedelta(days=2), titulo.replace("Azul", "Rosa"))
+    r = est.checar_repeticao(e, "MLB3", titulo, 37.36, AGORA, dias=14)
+    assert r["bloqueado"] and r["menor"] == 38.32 and r["vezes"] == 2   # antes passava (51% abaixo do último post)
+    r = est.checar_repeticao(e, "MLB1", titulo, 34.0, AGORA, dias=14)
+    assert not r["bloqueado"] and r["queda"] >= 0.10 and not r["mesmo_anuncio"]  # o último post foi o MLB2
+    assert est.checar_repeticao(e, "MLB1", titulo, 30.0, AGORA, dias=7) is None   # fora do prazo
+    assert est.checar_repeticao(e, "MLB9", "Mochila Escolar Dinossauro", 10.0, AGORA, 14) is None
+    # o aviso para você diz quando saiu e por quê voltou
+    txt = comandos.texto_repeticao(r)
+    assert "por R$ 76,62" in txt and "abaixo do menor preço com que saiu (R$ 38,32)" in txt and "outro anúncio" in txt
+    tg = TGCmd()
+    o = SimpleNamespace(titulo=titulo, preco=34.0, repeticao=r)
+    assert comandos.avisar_repeticao(tg, cfg_cmd(), o, "ml") is True
+    assert comandos.avisar_repeticao(tg, cfg_cmd(), SimpleNamespace(titulo="x", preco=1.0, repeticao=None), "ml") is False
+    # a anotação guarda só os últimos 45 dias e o post entra na conta pelo registrar_post
+    est.anotar_post(e, "MLB7", 5.0, AGORA + timedelta(days=50), "Outro")
+    assert [x[0] for x in e["posts_hist"]] == ["MLB7"]
+
+
+def test_estado_carrega_historico_inicial_de_posts(tmp_path):
+    from bot import estado as est
+
+    (tmp_path / "posts_hist_inicial.json").write_text('[["MLB1","2026-11-06T11:05-03:00",19.97,"Trava"]]')
+    (tmp_path / "estado.json").write_text("{}")
+    e = est.carregar(str(tmp_path / "estado.json"))
+    assert e["posts_hist"] == [["MLB1", "2026-11-06T11:05-03:00", 19.97, "Trava"]]

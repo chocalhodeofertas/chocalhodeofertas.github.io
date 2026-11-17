@@ -186,6 +186,11 @@ def gerar_html(estado, wa, itens_fila, agora):
             partes.append(f'📉 menor preço em {p["selo"]} dias')
         if p.get("cupom"):
             partes.append("🎟️ com cupom")
+        rep = p.get("repete")
+        if rep and rep.get("quando"):
+            q = _quando(rep["quando"], agora)
+            partes.append(f"🔁 repetido: já tinha saído em {q:%d/%m}" + (f", voltou {round(rep.get('queda', 0) * 100)}% abaixo "
+                          f"do menor preço com que saiu" if rep.get("menor") else ""))
         return ", ".join(x for x in partes if x)
 
     linhas_posts = "".join(

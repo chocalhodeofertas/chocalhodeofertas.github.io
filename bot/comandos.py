@@ -824,6 +824,35 @@ def lembrar_recarga(tg, cfg, estado, agora, log=print):
     return True
 
 
+def texto_repeticao(rep):
+    """'Já saiu em 13/11 por R$ 75,99; voltou porque está 12% abaixo do menor preço com que saiu (R$ 70,00).'"""
+    from datetime import datetime as _dt
+
+    quando = _dt.fromisoformat(rep["quando"])
+    base = f"Já saiu em {quando:%d/%m} às {quando:%H:%M}" + (f" por {mensagens.brl(rep['preco'])}" if rep.get("preco") else "")
+    if rep.get("menor"):
+        base += (f"; voltou porque está {round(rep['queda'] * 100)}% abaixo do menor preço com que saiu "
+                 f"({mensagens.brl(rep['menor'])})")
+    if not rep.get("mesmo_anuncio"):
+        base += " (outro anúncio do mesmo produto)"
+    return base + "."
+
+
+def avisar_repeticao(tg, cfg, oferta, loja, log=print):
+    """Toda vez que um produto volta ao canal antes do prazo (porque baixou), avisa o admin."""
+    rep = getattr(oferta, "repeticao", None)
+    if not rep or not cfg.admin_chat:
+        return False
+    try:
+        tg.enviar_texto(cfg.admin_chat, f"🔁 <b>Repetido de propósito</b> ({'Shopee' if loja == 'shopee' else 'Mercado Livre'})\n"
+                        f"{html.escape((oferta.titulo or '')[:80])}\nAgora: {mensagens.brl(oferta.preco)}. "
+                        f"{html.escape(texto_repeticao(rep))}", html=True)
+        return True
+    except TelegramErro as e:
+        log(f"Aviso: não consegui avisar da repetição: {e}")
+        return False
+
+
 def tratar_texto(texto, tg, ml, estado, cfg, agora, session=None, rng=random):
     """Decide o que fazer com uma mensagem sua. Retorna a resposta (ou None)."""
     t = (texto or "").strip()
