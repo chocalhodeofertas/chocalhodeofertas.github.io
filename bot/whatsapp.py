@@ -64,15 +64,6 @@ def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None
     return True
 
 
-def titulo_previa(oferta):
-    """Título da prévia do link: emoji da categoria + nome do produto (ex.: "🧷 Fralda Pampers G 94 unidades")."""
-    from .mensagens import EMOJI_CATEGORIA
-    from .ofertas import categoria_efetiva
-
-    emoji = EMOJI_CATEGORIA.get(categoria_efetiva(getattr(oferta, "categoria", ""), oferta.titulo), "😍")
-    return f"{emoji} {oferta.titulo}"
-
-
 def cartao_da_oferta(oferta, session=None):
     """Cartão com a marca para a prévia (PREVIA_MARCA=1, aprovado pelo Leonardo). Desligado ou falhou → None
     (a prévia usa a foto do anúncio, como antes)."""
@@ -95,8 +86,7 @@ def enfileirar_oferta(oferta, texto, agora=None, loja="ml", mencionar=False):
     preview = None
     cartao = None
     if m and getattr(oferta, "imagem", None):
-        titulo = titulo_previa(oferta) if os.environ.get("PREVIA_MARCA") == "1" else oferta.titulo
-        preview = {"link": m.group(0), "titulo": titulo, "imagem": oferta.imagem}
+        preview = {"link": m.group(0), "titulo": oferta.titulo, "imagem": oferta.imagem}
         cartao = cartao_da_oferta(oferta)
     meta = ({"id": oferta.id, "preco": oferta.preco}  # para conferir o preço antes de sair (conferir_fila)
             if getattr(oferta, "id", None) and getattr(oferta, "preco", None) else None)

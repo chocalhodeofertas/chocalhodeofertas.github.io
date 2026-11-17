@@ -109,9 +109,10 @@ Textos para o dono do projeto sempre em português do Brasil.
   posta primeiro o que tem mais `pontos` (`whatsapp.forca`: força do desconto; avisos = 9; `wa/comum.mjs: ordenarFila`), alterna a loja e
   evita repetir a categoria da anterior (`categoria` no item, `wa_estado.ultima_categoria`; espelhado em `fila_pagina.ordem_de_saida`),
   pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
-  Prévia do link: com `PREVIA_MARCA=1`, título = emoji da categoria + nome (`whatsapp.titulo_previa`) e a imagem da prévia é o
-  cartão com a marca (`arte.cartao_previa`: foto do produto num cartão branco, fundo lavanda, logo embaixo, sem preço), gerado
-  em `whatsapp.cartao_da_oferta` e salvo na fila; desligado (padrão no ciclo.yml até o Leonardo aprovar) ou foto que não baixa → foto do anúncio.
+  Prévia do link (é a prévia do próprio link, `linkPreview`, não imagem anexa): com `PREVIA_MARCA=1` (aprovado e ligado em 17/11)
+  a imagem da prévia é o cartão com a marca (`arte.cartao_previa`: foto do produto num cartão branco, fundo lavanda, logo embaixo,
+  sem preço), gerado em `whatsapp.cartao_da_oferta` e salvo na fila; foto que não baixa → foto do anúncio.
+  Título da prévia = nome do produto, sem emoji (decisão dele). Imagem anexa só se a prévia falhar.
   Prévia só para o admin: `tools/previa_cartao_wa`.
   Menção oculta (`mencionar` no item → `mentions` com todos os participantes, sem "@" no texto): SÓ pelo comando `marcar <texto|meli.la>`
   do Leonardo (`comandos.marcar`, até 2/dia); nunca automático (decisão de 17/11).

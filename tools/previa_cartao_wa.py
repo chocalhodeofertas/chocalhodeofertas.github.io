@@ -6,9 +6,8 @@ Uso (workflow inspecao): script=previa_cartao_wa
 """
 import os
 from pathlib import Path
-from types import SimpleNamespace
 
-from bot import arte, whatsapp
+from bot import arte
 from bot import estado as est
 from bot.telegram import Telegram
 
@@ -25,7 +24,7 @@ for n, i in enumerate(itens, 1):
     png = arte.cartao_previa(foto)
     (saida / f"cartao{n}.png").write_bytes(png)
     pngs.append(png)
-    titulos.append(whatsapp.titulo_previa(SimpleNamespace(titulo=i["titulo"], categoria=i.get("categoria", ""))))
+    titulos.append(i["titulo"])
 print("\n".join(titulos))
 if pngs:
     tg = Telegram(os.environ["TELEGRAM_BOT_TOKEN"])
