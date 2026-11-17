@@ -185,4 +185,4 @@ Textos para o dono do projeto sempre em português do Brasil.
 - Links de afiliado oficiais e sem alteração; Shopee só pela API oficial (nada de raspar o site); cupons só oficiais.
 - Segredos só em GitHub Secrets; nunca imprimir tokens em log.
 - Decisões do Leonardo (16/11): o bot nunca abre/clica links de afiliado dele (nem páginas ligadas à conta dele); sem filtro por
-  reputação do vendedor; sem prioridade por comissão; sem limite de variação de preço na Shopee.
+  reputação do vendedor (mudou em 17/11: vermelho/laranja fora do lote, com troca; ver `lote.anuncio_bom`); sem prioridade por comissão; sem limite de variação de preço na Shopee.
