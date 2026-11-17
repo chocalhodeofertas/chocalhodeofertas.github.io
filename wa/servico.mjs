@@ -215,7 +215,8 @@ async function postar(item) {
       const pv = item.preview;
       const info = { "canonical-url": pv.link, "matched-text": pv.link, title: pv.titulo || "", description: "" };
       if (pv.imagem) {
-        const { imageMessage } = await prepareWAMessageMedia({ image: { url: pv.imagem } },
+        const local = !/^https?:/i.test(pv.imagem);
+        const { imageMessage } = await prepareWAMessageMedia({ image: local ? fs.readFileSync(pv.imagem) : { url: pv.imagem } },
           { upload: sock.waUploadToServer, mediaTypeOverride: "thumbnail-link", logger });
         info.jpegThumbnail = imageMessage?.jpegThumbnail ? Buffer.from(imageMessage.jpegThumbnail) : undefined;
         info.highQualityThumbnail = imageMessage || undefined;

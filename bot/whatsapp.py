@@ -46,6 +46,8 @@ def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None
         arq = (p / f"{base}.png").resolve()
         arq.write_bytes(png)
         imagem = str(arq)
+        if preview:
+            preview = {**preview, "imagem": imagem}  # prévia do link usa a arte pronta (cartão com a marca)
     item = {"texto": texto, "imagem": imagem or None, "criado": quando.isoformat(), "loja": loja, "pontos": pontos}
     if preview:
         item["preview"] = preview
@@ -62,19 +64,44 @@ def enfileirar(texto, imagem=None, agora=None, loja="ml", png=None, preview=None
     return True
 
 
+def titulo_previa(oferta):
+    """Título da prévia do link: emoji da categoria + nome do produto (ex.: "🧷 Fralda Pampers G 94 unidades")."""
+    from .mensagens import EMOJI_CATEGORIA
+    from .ofertas import categoria_efetiva
+
+    emoji = EMOJI_CATEGORIA.get(categoria_efetiva(getattr(oferta, "categoria", ""), oferta.titulo), "😍")
+    return f"{emoji} {oferta.titulo}"
+
+
+def cartao_da_oferta(oferta, session=None):
+    """Cartão com a marca para a prévia (PREVIA_MARCA=1, aprovado pelo Leonardo). Desligado ou falhou → None
+    (a prévia usa a foto do anúncio, como antes)."""
+    if os.environ.get("PREVIA_MARCA") != "1":
+        return None
+    try:
+        from . import arte
+
+        foto = arte.baixar_foto(oferta.imagem, session)
+        return arte.cartao_previa(foto) if foto is not None else None
+    except Exception:  # noqa: BLE001 — sem cartão, segue com a foto do anúncio
+        return None
+
+
 def enfileirar_oferta(oferta, texto, agora=None, loja="ml", mencionar=False):
     """Oferta para o grupo como texto com a prévia grande do link (foto + nome do produto),
     igual aos grupos de ofertas grandes. O serviço monta a prévia com a foto do anúncio;
     se não conseguir, manda a foto com o texto na legenda."""
     m = re.search(r"https?://\S+", texto or "")
     preview = None
+    cartao = None
     if m and getattr(oferta, "imagem", None):
-        preview = {"link": m.group(0), "titulo": oferta.titulo, "imagem": oferta.imagem}
+        preview = {"link": m.group(0), "titulo": titulo_previa(oferta), "imagem": oferta.imagem}
+        cartao = cartao_da_oferta(oferta)
     meta = ({"id": oferta.id, "preco": oferta.preco}  # para conferir o preço antes de sair (conferir_fila)
             if getattr(oferta, "id", None) and getattr(oferta, "preco", None) else None)
     from .ofertas import categoria_efetiva
 
-    return enfileirar(texto, getattr(oferta, "imagem", None), agora, loja, preview=preview,
+    return enfileirar(texto, getattr(oferta, "imagem", None), agora, loja, png=cartao, preview=preview,
                       pontos=PONTOS_AVISO if mencionar else forca(oferta), oferta=meta,
                       categoria=categoria_efetiva(getattr(oferta, "categoria", ""), oferta.titulo), mencionar=mencionar)
 

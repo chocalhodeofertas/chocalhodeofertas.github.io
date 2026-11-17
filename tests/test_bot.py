@@ -1535,7 +1535,8 @@ def test_whatsapp_oferta_com_previa_do_link(tmp_path, monkeypatch):
                        imagem="https://img/x.jpg", categoria="higiene")
     assert whatsapp.enfileirar_oferta(o, "*Oferta*\n👉 https://meli.la/abc\n_#publi_", AGORA)
     item = json.loads(next(tmp_path.glob("*.json")).read_text())
-    assert item["preview"] == {"link": "https://meli.la/abc", "titulo": "Banheira Dobrável", "imagem": "https://img/x.jpg"}
+    assert item["preview"]["link"] == "https://meli.la/abc" and item["preview"]["imagem"] == "https://img/x.jpg"
+    assert item["preview"]["titulo"].endswith(" Banheira Dobrável")  # emoji da categoria na frente
     assert item["imagem"] == "https://img/x.jpg"  # reserva, se a prévia falhar
 
 
@@ -2941,3 +2942,36 @@ def test_filtros_fora_do_nicho_17_11():
     assert fora_da_faixa("Protetor de Seios Silicone Ultra Fino Fita Up", "outros")
     assert fora_da_faixa("Cadeira de Escritório Infantil Gamer", "outros") is None
     assert fora_da_faixa("Pomada para Cuidado dos Seios com Lanolina HPA Lansinoh 30g", "outros") is None
+
+
+def test_previa_com_marca_no_whatsapp(tmp_path, monkeypatch):
+    import json
+    from types import SimpleNamespace as N
+    from PIL import Image
+    from bot import arte, whatsapp
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    agora = datetime.fromisoformat("2026-11-17T15:00-03:00")
+    o = N(id="MLB1", titulo="Fralda Pampers Confort Sec G 94 Unidades", preco=99.0, preco_de=130.0, desconto=.24,
+          imagem="https://http2.mlstatic.com/x.jpg", categoria="outros", link="https://meli.la/x", cupom=None)
+    assert whatsapp.titulo_previa(o).startswith("🧷 Fralda")
+    # desligado (padrão até aprovar): prévia com a foto do anúncio, como antes
+    monkeypatch.delenv("PREVIA_MARCA", raising=False)
+    whatsapp.enfileirar_oferta(o, "texto https://meli.la/x", agora)
+    item = json.loads(next(tmp_path.glob("*.json")).read_text())
+    assert item["preview"]["imagem"] == o.imagem and item["preview"]["titulo"].startswith("🧷")
+    for f in tmp_path.iterdir():
+        f.unlink()
+    # ligado: cartão com a marca vira a imagem da prévia (arquivo na fila, apagado junto com o item)
+    monkeypatch.setenv("PREVIA_MARCA", "1")
+    monkeypatch.setattr(arte, "baixar_foto", lambda url, session=None: Image.new("RGBA", (400, 400), (255, 255, 255, 255)))
+    whatsapp.enfileirar_oferta(o, "texto https://meli.la/x", agora)
+    item = json.loads(next(tmp_path.glob("*.json")).read_text())
+    assert item["preview"]["imagem"] == item["imagem"] and item["imagem"].endswith(".png")
+    assert Image.open(item["imagem"]).size == (1080, 1080)
+    # foto não baixou: segue com a foto do anúncio
+    for f in tmp_path.iterdir():
+        f.unlink()
+    monkeypatch.setattr(arte, "baixar_foto", lambda url, session=None: None)
+    whatsapp.enfileirar_oferta(o, "texto https://meli.la/x", agora)
+    item = json.loads(next(tmp_path.glob("*.json")).read_text())
+    assert item["preview"]["imagem"] == o.imagem

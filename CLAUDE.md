@@ -109,6 +109,10 @@ Textos para o dono do projeto sempre em português do Brasil.
   posta primeiro o que tem mais `pontos` (`whatsapp.forca`: força do desconto; avisos = 9; `wa/comum.mjs: ordenarFila`), alterna a loja e
   evita repetir a categoria da anterior (`categoria` no item, `wa_estado.ultima_categoria`; espelhado em `fila_pagina.ordem_de_saida`),
   pausa 48 h se o WhatsApp sinalizar restrição, apaga links de não-admins.
+  Prévia do link: título = emoji da categoria + nome (`whatsapp.titulo_previa`); com `PREVIA_MARCA=1` a imagem da prévia é o
+  cartão com a marca (`arte.cartao_previa`: foto do produto num cartão branco, fundo lavanda, logo embaixo, sem preço), gerado
+  em `whatsapp.cartao_da_oferta` e salvo na fila; desligado (padrão no ciclo.yml até o Leonardo aprovar) ou foto que não baixa → foto do anúncio.
+  Prévia só para o admin: `tools/previa_cartao_wa`.
   Menção oculta (`mencionar` no item → `mentions` com todos os participantes, sem "@" no texto): SÓ pelo comando `marcar <texto|meli.la>`
   do Leonardo (`comandos.marcar`, até 2/dia); nunca automático (decisão de 17/11).
 - `resumos.py`: posts de resumo (fora do limite e da regra de repetição), chamados por `resumos.rodar` no fim da rodada:
@@ -173,6 +177,7 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `previa_busca "fralda g; mochila infantil"`: manda só para o admin as respostas da busca sob pedido e a prévia dos cupons da Shopee.
 - `sondar_shopee`: mostra categorias (productCatIds) e tipos de lista que a API da Shopee devolve (só leitura).
 - `achar_canais_tg "termo; termo"`: procura canais públicos de ofertas de bebê no Telegram e mede links/posts infantis (saida/canais_tg.md).
+- `previa_cartao_wa`: manda só para o admin o cartão da prévia do WhatsApp das 3 últimas ofertas do dia.
 - `baixar nome=url ...`: baixa arquivos para `saida/` (o container não alcança mlstatic/Shopee/Canva).
 
 ## Regras que o código precisa respeitar

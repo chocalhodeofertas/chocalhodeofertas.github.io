@@ -693,5 +693,26 @@ def reel(ofertas, fotos, titulo, foto_capa, destaque=None, estilo="grande", fps=
         return saida.read_bytes()
 
 
+def cartao_previa(foto, L=1080):
+    """Imagem da prévia do link no grupo do WhatsApp: a foto do produto num cartão branco sobre o fundo lavanda
+    da marca, com o logo do Chocalho embaixo (como os grupos grandes fazem). Sem preço nem porcentagem:
+    o preço está no texto e pode mudar. Devolve PNG (bytes)."""
+    img = _fundo(L, L)
+    m = 54
+    base = L - 150
+    _cartao_foto(img, (m, m, L - m, base), foto)
+    d = ImageDraw.Draw(img)
+    ic = _icone(78)
+    f = _fredoka(46)
+    largura = ic.width + 14 + d.textlength("Chocalho de Ofertas", font=f)
+    x = int((L - largura) / 2)
+    y = base + (L - base - ic.height) // 2 + 6
+    img.paste(ic, (x, y), ic)
+    tx = x + ic.width + 14
+    d.text((tx, y + ic.height // 2), "Chocalho", font=f, fill=UVA, anchor="lm")
+    d.text((tx + d.textlength("Chocalho ", font=f), y + ic.height // 2), "de Ofertas", font=f, fill=PINK, anchor="lm")
+    return _png(img)
+
+
 def png(img):
     return _png(img)
