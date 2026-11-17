@@ -2776,3 +2776,25 @@ def test_radar_do_grupo_na_pagina_de_numeros():
     h = numeros.gerar_html(est.novo(), {"radar": radar, "dia": hoje, "enviados": 1}, AGORA)
     assert "Quem entra e quem sai do grupo" in h and "barra sai" in h and 'aria-current="page"' in h
     assert "fila-4e7a91c3.html" in h and "Ninguém entrou" in numeros._frase_radar(numeros.radar_horas({}, AGORA), {})
+
+
+def test_carrossel_ganha_cartao_de_grafico_e_tema_black_friday():
+    from bot import conteudo
+
+    e = est.novo()
+    hoje = AGORA
+    # 20 dias a R$ 100 e hoje R$ 70: queda real de 30%
+    for k in range(20, 0, -1):
+        est.registrar_preco(e, "MLB1", 100.0, hoje - timedelta(days=k))
+    est.registrar_preco(e, "MLB1", 70.0, hoje)
+    for k in range(20, 0, -1):
+        est.registrar_preco(e, "MLB2", 50.0, hoje - timedelta(days=k))
+    item_bom = {"id": "MLB1", "preco": 70.0, "titulo": "Banheira", "categoria": "higiene"}
+    item_igual = {"id": "MLB2", "preco": 50.0, "titulo": "Body", "categoria": "roupa"}
+    assert round(conteudo.queda_real(e, item_bom, hoje), 2) == 0.30 and conteudo.queda_real(e, item_igual, hoje) == 0
+    assert conteudo.queda_real(e, {"id": "MLB9", "preco": 1.0}, hoje) == 0  # sem histórico
+    ofs = [conteudo._oferta(item_igual), conteudo._oferta(item_bom)]
+    cartao = conteudo.cartao_grafico(ofs, e, hoje)
+    assert len(cartao) == 1 and cartao[0].size == (1080, 1350)
+    assert conteudo._oferta({"id": "SHP5", "preco": 1.0, "titulo": "x"}).loja == "shopee"
+    assert conteudo.cartao_grafico([conteudo._oferta(item_igual)], e, hoje) == []  # preço não caiu: sem cartão

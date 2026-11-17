@@ -106,6 +106,9 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `grafico.py`: gráfico de preço em Pillow (1080x1080; `formato="4x5"` para carrossel) pela `estado.serie_diaria`.
   `grafico.enviar_oferta` posta a oferta; com selo e `GRAFICO_ATIVO=1`, manda álbum (foto + gráfico) no Telegram.
   Os três aprovados e ligados em 15/11. WhatsApp não recebe o gráfico (só o texto com a prévia do link).
+  Carrossel do Instagram: `conteudo.cartao_grafico` põe um cartão 4x5 do gráfico do produto que mais caiu (antes do slide final),
+  só quando o gráfico existe (14+ dias de histórico). Tema sob pedido `carrossel blackfriday` (`conteudo.TEMA_BLACK_FRIDAY`):
+  só produtos com queda real ≥ 10% sobre o preço típico (`conteudo.queda_real`), do que mais caiu para o que menos caiu.
 - `busca_publica.py`: busca sob pedido. `procurar(termo)` = ML (só produtos com link oficial, preço conferido na hora e
   `lote.conferir_anuncio`) + Shopee ao vivo (API, regras de `aprovado`, link com subId `busca`); mesmos filtros dos posts (NBCAL).
   Admin testa com `achar <produto>`; quem escreve no privado do bot só recebe resposta com `BUSCA_PUBLICA=1` (`atender`).

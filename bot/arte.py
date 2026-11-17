@@ -637,11 +637,12 @@ def institucional(nome, rng=random):
 
 # ---------- 5) carrossel e Reel ----------
 
-def carrossel(ofertas, fotos, titulo, foto_capa, destaque=None, estilo="grande"):
-    """Lista de imagens PIL: capa, produtos (n/total) e final."""
+def carrossel(ofertas, fotos, titulo, foto_capa, destaque=None, estilo="grande", extras=()):
+    """Lista de imagens PIL: capa, produtos (n/total), cartões extras (ex.: gráfico de preço) e final."""
     n = len(ofertas)
     return ([capa(foto_capa, titulo, destaque, estilo)]
             + [post(o, f, cta=None, indice=f"{i + 1}/{n}") for i, (o, f) in enumerate(zip(ofertas, fotos))]
+            + list(extras)
             + [final()])
 
 

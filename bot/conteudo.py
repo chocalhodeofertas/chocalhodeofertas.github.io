@@ -91,6 +91,15 @@ TEMAS_GERAIS = [
          ["Economizar também é cuidar.", "Pequenos preços, grandes ajudas no dia a dia:"],
          preco_max=50),
 ]
+# Só sob pedido ("carrossel blackfriday"): produtos com queda REAL pelo histórico do Chocalho, não o "de/por" do anúncio
+TEMA_BLACK_FRIDAY = Tema(
+    "blackfriday", None,
+    ["Black Friday: o que baixou de verdade", "Black Friday com histórico: preços que caíram mesmo"],
+    ["familia", "crianca", "enxoval"],
+    ["Desconfiou do desconto? A gente acompanha os preços todo dia.",
+     "Na Black Friday, desconto bom é o que o histórico confirma:"])
+QUEDA_BF = 0.10
+
 TEMAS = TEMAS_CATEGORIA + TEMAS_GERAIS
 
 
@@ -101,7 +110,42 @@ def _itens(estado):
 def _oferta(i):
     return SimpleNamespace(titulo=i["titulo"], preco=i["preco"], preco_de=i.get("de"),
                            desconto=i.get("desconto") or 0, imagem=i.get("imagem"),
-                           categoria=i.get("categoria", ""), link=i.get("link"), id=i.get("id"))
+                           categoria=i.get("categoria", ""), link=i.get("link"), id=i.get("id"), loja=_loja(i))
+
+
+def _loja(i):
+    return "shopee" if str(i.get("id", "")).startswith("SHP") else "ml"
+
+
+def queda_real(estado, item, agora):
+    """Quanto o preço está abaixo do típico do Chocalho (mediana de 30 dias), ou 0 sem histórico suficiente."""
+    from . import estado as est
+    from .ofertas import DIAS_HIST_MIN
+
+    tipico, dias = est.preco_tipico(estado, item["id"], agora)
+    if not tipico or dias < DIAS_HIST_MIN or not item.get("preco"):
+        return 0.0
+    return max(0.0, 1 - float(item["preco"]) / tipico)
+
+
+def cartao_grafico(ofs, estado, agora, log=print):
+    """Cartão 4x5 com o gráfico de preço do produto do carrossel que mais caiu (só se o gráfico existir)."""
+    from io import BytesIO
+
+    from PIL import Image
+
+    from . import grafico
+
+    melhores = sorted(ofs, key=lambda o: -queda_real(estado, {"id": o.id, "preco": o.preco}, agora))
+    for o in melhores[:2]:
+        try:
+            png = grafico.da_oferta(o, estado, agora, formato="4x5")
+        except Exception as e:  # noqa: BLE001 — o cartão nunca impede o carrossel
+            log(f"Aviso: cartão de gráfico de {o.id} não saiu ({type(e).__name__}).")
+            continue
+        if png:
+            return [Image.open(BytesIO(png)).convert("RGB")]
+    return []
 
 
 def _candidatos(tema, itens, usados):
@@ -313,7 +357,8 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
             estilo = "grande" if (estilo_base + n_c) % 2 == 0 else "faixas"
             capa_foto = arte.foto_de_capa(tema.fotos, rng)
             arte.registrar_capa(capa_foto)
-            slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
+            slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo,
+                                    extras=cartao_grafico(ofs, estado, agora, log))
             pngs = [arte.png(s) for s in slides]
             tg.enviar_album(chat, pngs, f"🎠 {k}. {hora} — carrossel (na ordem)")
             leg = legenda_carrossel(tema, ofs, rng)
@@ -373,16 +418,22 @@ def listar_temas(estado, agora):
         if cand:
             top = ", ".join(_curto(i["titulo"], 28) for i in cand[:3])
             linhas.append(f"• <b>{t.nome}</b> — {len(cand)} ofertas (ex.: {top})")
+    bf = [i for i in _candidatos(TEMA_BLACK_FRIDAY, itens, set()) if queda_real(estado, i, agora) >= QUEDA_BF]
+    if bf:
+        linhas.append(f"• <b>blackfriday</b> — {len(bf)} com queda real de 10% ou mais no histórico do Chocalho")
     linhas += ["", "Para gerar: <b>carrossel brinquedos</b> ou <b>reel brinquedos</b> (troque pelo tema).",
                "Para o post de um produto: <b>insta</b> + o link meli.la dele."]
     return "\n".join(linhas)
 
 
 def enviar_tema(tg, chat, estado, agora, nome, formato="carrossel", rng=random, session=None):
-    tema = NOMES_TEMA.get(nome)
+    tema = TEMA_BLACK_FRIDAY if nome in ("blackfriday", "black friday", "black") else NOMES_TEMA.get(nome)
     if not tema:
-        return f"Não conheço o tema “{nome}”. Opções: {', '.join(NOMES_TEMA)}."
+        return f"Não conheço o tema “{nome}”. Opções: {', '.join(NOMES_TEMA)}, blackfriday."
     cand = _candidatos(tema, _itens(estado), set())
+    if tema is TEMA_BLACK_FRIDAY:  # só o que caiu de verdade, do que mais caiu para o que menos caiu
+        cand = sorted((i for i in cand if queda_real(estado, i, agora) >= QUEDA_BF),
+                      key=lambda i: -queda_real(estado, i, agora))
     if len(cand) < 3:
         return f"O tema <b>{nome}</b> tem só {len(cand)} oferta(s) agora; preciso de pelo menos 3."
     capa_foto = arte.foto_de_capa(tema.fotos, rng)
@@ -403,7 +454,8 @@ def enviar_tema(tg, chat, estado, agora, nome, formato="carrossel", rng=random, 
         tg.enviar_documento(chat, arte.png(capa_916), "capa_reel.png",
                             "🖼️ Capa do Reel: em 'Editar capa', escolha 'Adicionar da galeria'", "image/png")
     else:
-        slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
+        slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo,
+                                extras=cartao_grafico(ofs, estado, agora))
         pngs = [arte.png(s) for s in slides]
         tg.enviar_album(chat, pngs, "🎠 Carrossel temático (na ordem)")
     leg = legenda_carrossel(tema, ofs, rng)
