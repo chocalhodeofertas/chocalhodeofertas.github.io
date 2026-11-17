@@ -234,7 +234,8 @@ def priorizar_tipos_novos(ofertas, estado, agora, titulo=lambda o: o.titulo):
     """Mantém a ordem de pontuação, mas quem é de um tipo que não saiu nos últimos 2 dias vai na frente.
     Os outros só entram se não houver alternativa (o limite de 1 por tipo no dia continua valendo)."""
     recentes = tipos_recentes(estado, agora)
-    return sorted(ofertas, key=lambda o: tipo_produto(titulo(o)) in recentes)
+    # item de reposição (fralda, lenço...) não vai para o fim da fila por já ter saído: ele pode repetir no dia
+    return sorted(ofertas, key=lambda o: not reposicao(titulo(o)) and tipo_produto(titulo(o)) in recentes)
 
 
 # Rodízio de categorias (aprovado pelo Leonardo em 17/11): brinquedo não passa de ~30% do dia e as categorias
@@ -280,6 +281,116 @@ def equilibrar_categorias(ofertas, estado, agora, titulo=lambda o: o.titulo,
         return 1
 
     return sorted(ofertas, key=chave)
+
+
+# ---------------------------------------------------------------- itens de reposição (aprovado pelo Leonardo, 17/11)
+# Coisas que a família compra sempre, em muitas marcas e tamanhos: podem sair várias vezes no dia (fralda até 8,
+# os outros até 5 de cada tipo); marca ou tamanho diferente é OUTRO produto; o mesmo (marca + tamanho) volta em 3 dias.
+# Papinha e cereal infantil ficam de fora (a NBCAL restringe a propaganda); protetor de mamilo também.
+REPOSICAO = [
+    ("fralda", r"\bfraldas?\b(?!.*\b(pano|ecologica|natacao|piscina|reutiliza))", 8),
+    ("lenco umedecido", r"lencos? umedecid|toalhas? umedecid|lencinhos? umedecid", 5),
+    ("pomada de assadura", r"assadura|pomada (infantil|bebe)|creme (preventivo|barreira)|hipoglos|bepantol baby|dermodex", 5),
+    ("shampoo e sabonete", r"\bshampoo|\bsabonete|condicionador infantil|condicionador.*(bebe|kids|infantil)|"
+                           r"(sabonete|shampoo).*(cabeca aos pes)|banho.*(liquido|glicerina)", 5),
+    ("hidratante e oleo", r"hidratante (infantil|bebe|kids)|locao hidratante.*(bebe|infantil)|oleo (de amendoas )?(infantil|bebe|baby)|"
+                          r"colonia (infantil|bebe|baby)", 5),
+    ("algodao e cotonete", r"\balgodao (em )?(bola|disco|quadrado|rolo)|\bcotonete|hastes? flexive", 5),
+    ("protetor solar", r"protetor solar|filtro solar|fps ?\d", 5),
+    ("repelente", r"repelente", 5),
+    ("higiene bucal", r"creme dental|pasta de dente|gel dental|escova (de )?dente|escova dental", 5),
+    ("roupa de bebe (lavar)", r"(sabao|lava.roupas?|amaciante).*(bebe|infantil|baby)|(bebe|infantil|baby).*(sabao|lava.roupas?|amaciante)", 5),
+    ("absorvente de seio", r"absorventes? (de|para) seios?|absorventes? (para )?amamentacao|discos? de amamentacao", 5),
+]
+_REPOSICAO_RE = [(nome, re.compile(p), lim) for nome, p, lim in REPOSICAO]
+REPOSICAO_DIAS = 3  # o mesmo item de reposição (mesma marca e tamanho) volta depois disso
+MARCAS_REPOSICAO = (
+    "pampers, huggies, mamypoko, personal, babysec, turma da monica, pom pom, pompom, cremer, johnsons, johnson, "
+    "granado, mustela, natura, cetaphil, dove, nivea, sundown, episol, neutrogena, banana boat, isdin, exposis, repelex, "
+    "avon, boticario, baby soft, babysoft, hipoglos, bepantol, dermodex, desitin, colgate, sorriso, malvatrikids, curaprox, "
+    "dentalclean, tandy, omo, ype, comfort, downy, dreft, brilhante, topz, cottonbaby, apolo, bioderma, la roche posay, "
+    "eucerin, baruel, needs, muriel, giovanna baby, tra la la, plim plim, chicco, lillo, kuka, buba, huggies supreme"
+).split(", ")
+
+
+def _norm(titulo):
+    from .filtros import normalizar
+    return normalizar(titulo or "")
+
+
+def reposicao(titulo):
+    """Tipo de item de reposição (fralda, lenço umedecido...) ou None."""
+    t = _norm(titulo)
+    for nome, padrao, _ in _REPOSICAO_RE:
+        if padrao.search(t):
+            return nome
+    return None
+
+
+def limite_por_dia(titulo):
+    t = _norm(titulo)
+    for _, padrao, lim in _REPOSICAO_RE:
+        if padrao.search(t):
+            return lim
+    return 1
+
+
+def tipo_chave(titulo):
+    """Chave do limite por dia: o tipo de reposição, ou o tipo do produto (1 por dia)."""
+    return reposicao(titulo) or tipo_produto(titulo)
+
+
+def marca(titulo):
+    t = " " + re.sub(r"[^a-z0-9 ]+", "", _norm(titulo).replace("'s ", "s ")) + " "
+    for m in sorted({_norm(x) for x in MARCAS_REPOSICAO}, key=len, reverse=True):
+        if f" {m} " in t:
+            return m
+    return None
+
+
+_TAMANHO = re.compile(r"\b(rn|pp|p|m|g|xg|xxg|xxxg|eg|exg|g/xg|p/m|m/g|xg/xxg)\b")
+_QUANT = re.compile(r"(\d+[.,]?\d*)\s?(ml|l|g|kg|un|und|unid|unidades|fraldas|tiras|pecas|pares|pacotes?)\b")
+
+
+def tamanho(titulo):
+    """Tamanho e quantidade do item ('g', '92un'...), para marca/tamanho diferente contar como outro produto."""
+    t = _norm(titulo)
+    letras = sorted(set(m.group(1) for m in _TAMANHO.finditer(t)))
+    quant = sorted(set(f"{m.group(1).replace(',', '.')}{m.group(2)[:2]}" for m in _QUANT.finditer(t)))
+    return tuple(letras + quant)
+
+
+def mesmo_item_reposicao(a, b):
+    """Dois títulos de reposição são o MESMO produto só com o mesmo tipo, a mesma marca e o mesmo tamanho."""
+    ra, rb = reposicao(a), reposicao(b)
+    if not ra or ra != rb:
+        return False
+    ma, mb = marca(a), marca(b)
+    if ma != mb:
+        return False
+    if ma is None and not parecido(a, b):
+        return False
+    return tamanho(a) == tamanho(b)
+
+
+def contar_tipos_do_dia(estado, agora):
+    """Quantos de cada tipo já saíram hoje (ML + Shopee), pela chave de tipo_chave."""
+    from collections import Counter
+
+    hoje = agora.date().isoformat()
+    vistos, titulos = set(), []
+    for pid, quando, _, titulo in estado.get("posts_hist") or []:
+        if str(quando).startswith(hoje) and titulo:
+            vistos.add((pid, quando)); titulos.append(titulo)
+    fontes = list(estado.get("postados", {}).items()) + list(estado.get("shopee", {}).get("titulos", {}).items())
+    for pid, v in fontes:
+        if isinstance(v, dict) and str(v.get("quando", "")).startswith(hoje) and v.get("titulo") and (pid, v["quando"]) not in vistos:
+            titulos.append(v["titulo"])
+    return Counter(tipo_chave(t) for t in titulos)
+
+
+def cabe_no_dia(contagem, titulo):
+    return contagem.get(tipo_chave(titulo), 0) < limite_por_dia(titulo)
 
 
 def tipos_do_dia(estado, agora):

@@ -1416,9 +1416,9 @@ def test_mesmo_produto_outro_anuncio_nao_repete():
     assert est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê Estampa Azul", agora)
     assert est.repetido(e, "Baba Eletronica Baby Monitor Vb603 Visao Noturna Dual Audio", agora)
     assert not est.repetido(e, "Mochila Escolar Infantil Dinossauro", agora)
-    # outro anúncio do mesmo produto só sai antes do prazo se estiver 10% abaixo do menor preço já postado (17/11)
-    assert est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora, preco=37.0)
-    assert not est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora, preco=36.0)
+    # outro anúncio do mesmo produto só sai antes do prazo se estiver 5% abaixo do menor preço já postado (17/11)
+    assert est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora, preco=39.0)
+    assert not est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora, preco=37.0)
     # depois de 3 dias pode voltar
     assert not est.repetido(e, "Kit 3 Mantas Cobertor Microfibra Infantil Bebê", agora + timedelta(days=3))
     assert not parecido("Patinete Infantil 3 Rodas Led", "Boneca Reborn Realista")
@@ -3013,3 +3013,40 @@ def test_estado_carrega_historico_inicial_de_posts(tmp_path):
     (tmp_path / "estado.json").write_text("{}")
     e = est.carregar(str(tmp_path / "estado.json"))
     assert e["posts_hist"] == [["MLB1", "2026-11-06T11:05-03:00", 19.97, "Trava"]]
+
+
+def test_itens_de_reposicao_repetem_mais():
+    """Fralda, lenço, higiene (aprovado em 17/11): até 8 fraldas e 5 de cada outro item por dia; marca ou tamanho
+    diferente é outro produto; o mesmo item volta em 3 dias."""
+    from collections import Counter
+
+    from bot import ofertas, estado as est
+
+    assert ofertas.reposicao("Fralda Pampers Confort Sec Tamanho G 92 Un") == "fralda"
+    assert ofertas.reposicao("Fralda de Pano Ecológica Reutilizável") is None
+    assert ofertas.reposicao("Protetor Solar Infantil Sundown Kids FPS 50 120ml") == "protetor solar"
+    assert ofertas.reposicao("Berço Portátil Infantil") is None
+    assert ofertas.limite_por_dia("Fralda Huggies G") == 8 and ofertas.limite_por_dia("Lenço Umedecido Huggies") == 5
+    assert ofertas.limite_por_dia("Babá Eletrônica") == 1
+    c = Counter({"fralda": 7, "baba eletronica": 1})
+    assert ofertas.cabe_no_dia(c, "Fralda Huggies XG") and not ofertas.cabe_no_dia(Counter({"fralda": 8}), "Fralda Huggies XG")
+    assert not ofertas.cabe_no_dia(c, "Babá Eletrônica Baby Monitor")
+    g92 = "Fralda Pampers Confort Sec Tamanho G 92 Un"
+    assert ofertas.mesmo_item_reposicao(g92, "Fralda Pampers Confort Sec G 92 unidades")
+    assert not ofertas.mesmo_item_reposicao(g92, "Fralda Pampers Confort Sec Tamanho XG 80 Un")   # outro tamanho
+    assert not ofertas.mesmo_item_reposicao(g92, "Fralda Huggies Supreme Care G 92 Unidades")     # outra marca
+    assert not ofertas.mesmo_item_reposicao("Lenço Umedecido Pampers Aloe 48 un", "Lenço Umedecido Huggies Puro 48 un")
+
+    e = est.novo()
+    e["posts_hist"] = []
+    est.anotar_post(e, "MLB1", 90.0, AGORA - timedelta(hours=5), g92)
+    # outro tamanho e outra marca saem no mesmo dia
+    assert est.checar_repeticao(e, "MLB2", "Fralda Pampers Confort Sec Tamanho XG 80 Un", 95.0, AGORA, 4) is None
+    assert est.checar_repeticao(e, "MLB3", "Fralda Huggies Supreme Care G 92 Unidades", 95.0, AGORA, 4) is None
+    # o mesmo item só volta depois de 3 dias (ou 5% abaixo do menor preço com que saiu)
+    assert est.checar_repeticao(e, "MLB4", "Fralda Pampers Confort Sec G 92 unidades", 90.0, AGORA, 4)["bloqueado"]
+    assert not est.checar_repeticao(e, "MLB4", "Fralda Pampers Confort Sec G 92 unidades", 85.0, AGORA, 4)["bloqueado"]
+    assert est.checar_repeticao(e, "MLB1", g92, 90.0, AGORA + timedelta(days=3), 4) is None
+    # contagem do dia vem do histórico de posts
+    hoje = ofertas.contar_tipos_do_dia(e, AGORA)
+    assert hoje["fralda"] == 1

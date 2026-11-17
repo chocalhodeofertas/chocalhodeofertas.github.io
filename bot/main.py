@@ -25,7 +25,8 @@ from . import mensagens
 from .descoberta import descobrir, descobrir_areas
 from .filtros import definir_bloqueios, fora_da_faixa, motivo_bloqueio
 from .mercadolivre import AcessoNegado, ErroML, MercadoLivre, extrair_id, link_produto, renovar_token, token_do_app
-from .ofertas import avaliar, pontuacao, tipo_produto, tipos_do_dia, priorizar_tipos_novos, equilibrar_categorias, vagas_da_rodada
+from .ofertas import (avaliar, pontuacao, tipo_produto, tipos_do_dia, priorizar_tipos_novos, equilibrar_categorias,
+                      vagas_da_rodada, contar_tipos_do_dia, cabe_no_dia, tipo_chave)
 from .telegram import Telegram, TelegramErro
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -446,13 +447,14 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
     por_id = {p.id: p for p in produtos}
     hoje = agora.date().isoformat()
     tipos_hoje = tipos_do_dia(estado, agora)
+    contagem_tipos = contar_tipos_do_dia(estado, agora)
     esperar_antes = False
     for o in equilibrar_categorias(priorizar_tipos_novos(candidatas, estado, agora), estado, agora):
         if len(enviadas) >= vagas:
             break
         tp = tipo_produto(o.titulo)
-        if tp in tipos_hoje:
-            continue  # já saiu um desse tipo hoje (ex.: outra babá eletrônica)
+        if not cabe_no_dia(contagem_tipos, o.titulo):
+            continue  # já saiu o limite desse tipo hoje (1; fralda até 8; outros itens de reposição até 5)
         rep = est.checar_repeticao(estado, o.id, o.titulo, o.preco, agora, cfg.repost_dias)
         if rep and rep["bloqueado"]:
             continue  # mesmo produto (ou outro anúncio dele) já saiu nos últimos dias e não baixou 10%
@@ -481,6 +483,7 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         if o.cupom:
             est.contar_dia(estado, agora, "com_cupom")
         tipos_hoje.add(tp)
+        contagem_tipos[tipo_chave(o.titulo)] += 1
         enviadas.append(o)
         log(f"Postado: {o.id} {mensagens.brl(o.preco)} (-{round(o.desconto * 100)}%)")
         if cfg.admin_chat:

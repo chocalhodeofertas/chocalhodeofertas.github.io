@@ -71,9 +71,9 @@ jobs:
           HORA_INICIO: ${{ vars.HORA_INICIO }}
           HORA_FIM: ${{ vars.HORA_FIM }}
           POR_CATEGORIA: ${{ vars.POR_CATEGORIA || '20' }}
-          REPOST_DIAS: ${{ vars.REPOST_DIAS || '14' }}
-          # Antes do prazo, só volta se estiver 10% abaixo do MENOR preço com que já saiu (pedido do Leonardo, 17/11)
-          REPOST_QUEDA: ${{ vars.REPOST_QUEDA || '0.10' }}
+          REPOST_DIAS: ${{ vars.REPOST_DIAS || '4' }}
+          # Antes do prazo, só volta se estiver 5% abaixo do MENOR preço com que já saiu (decisão do Leonardo, 17/11 18h40)
+          REPOST_QUEDA: ${{ vars.REPOST_QUEDA || '0.05' }}
           LINK_MODO: ${{ vars.LINK_MODO }}
           LOTE_TAMANHO: ${{ vars.LOTE_TAMANHO }}
           LOTES_POR_DIA: ${{ vars.LOTES_POR_DIA || '6' }}

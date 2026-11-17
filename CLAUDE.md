@@ -61,12 +61,18 @@ Textos para o dono do projeto sempre em português do Brasil.
   preço atual = mínimo da janela (até 30 dias, contando hoje mais cedo), preço já 3% mais alto na janela e esse nível de preço
   visto em no máximo 3 dias (quem alterna entre dois preços não ganha selo). O site (`vitrine.selo`) usa a mesma função e
   mostra "Menor preço em N dias". Decisão do Leonardo apesar da cláusula 5.4 do ML.
-- Repetição (`estado.checar_repeticao`, usada em `ofertas.avaliar`, na fila do ML e na da Shopee): `REPOST_DIAS` (14 no workflow
-  desde 17/11; era 7): mesmo anúncio ou título parecido (`ofertas.parecido`, ML + Shopee) não volta antes disso; volta antes só se
-  o preço estiver `REPOST_QUEDA` (10%) abaixo do MENOR preço com que já saiu no período (era 5% abaixo do último post: variações
-  com preços diferentes voltavam como "baixou"). Todos os posts ficam em `estado.posts_hist` ([id, quando, preço, título], 45 dias;
-  semeado uma vez com `data/posts_hist_inicial.json`, refeito do histórico do git: 913 posts de 06 a 17/11). Repetição permitida
-  vira `oferta.repeticao`: aviso ao admin (`comandos.avisar_repeticao`), `posts_dia[].repete` e marca na página da fila.
+- Repetição (`estado.checar_repeticao`, usada em `ofertas.avaliar`, na fila do ML e na da Shopee): `REPOST_DIAS` (4 no workflow,
+  decisão do Leonardo em 17/11 18h40): mesmo anúncio ou título parecido (`ofertas.parecido`, ML + Shopee) não volta antes disso;
+  volta antes só se o preço estiver `REPOST_QUEDA` (5%) abaixo do MENOR preço com que já saiu no período (antes de 17/11 comparava
+  com o último post: variações com preços diferentes voltavam como "baixou"). Todos os posts ficam em `estado.posts_hist`
+  ([id, quando, preço, título], 45 dias; semeado uma vez com `data/posts_hist_inicial.json`, refeito do histórico do git: 913 posts
+  de 06 a 17/11, ML e Shopee). Repetição permitida vira `oferta.repeticao`: aviso ao admin (`comandos.avisar_repeticao`),
+  `posts_dia[].repete` e marca na página da fila.
+  Itens de reposição (`ofertas.REPOSICAO`, aprovados em 17/11): fralda (até 8 por dia), lenço umedecido, pomada de assadura,
+  shampoo/sabonete, hidratante/óleo, algodão/cotonete, protetor solar, repelente, higiene bucal, sabão/amaciante de bebê e
+  absorvente de seio (até 5 de cada por dia; `limite_por_dia`, `contar_tipos_do_dia`, `cabe_no_dia`, chave `tipo_chave`).
+  Marca (`MARCAS_REPOSICAO`) ou tamanho/quantidade (`tamanho`) diferente = outro produto (`mesmo_item_reposicao`); o mesmo item
+  volta em `REPOSICAO_DIAS` (3). Não vão para o fim da fila em `priorizar_tipos_novos`. Fora: papinha/cereal (NBCAL), protetor de mamilo.
   Tipo do dia (`ofertas.tipos_do_dia`) soma ML e Shopee; sem tipo conhecido, usa a primeira palavra que diz o que é o produto.
   `ofertas.priorizar_tipos_novos`: tipo que saiu nas últimas 48 h vai para o fim da fila (só entra se faltar alternativa).
   Rodízio de categorias (17/11, `ofertas.equilibrar_categorias`, ML e Shopee, por cima do de tipos): conta o dia em

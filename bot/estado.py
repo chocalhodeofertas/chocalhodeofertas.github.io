@@ -93,9 +93,9 @@ HIST_POSTS_DIAS = 45
 def _queda_minima():
     import os
     try:
-        return float(os.environ.get("REPOST_QUEDA") or 0.10)
+        return float(os.environ.get("REPOST_QUEDA") or 0.05)
     except ValueError:
-        return 0.10
+        return 0.05
 
 
 def anotar_post(estado, pid, preco, agora, titulo=None):
@@ -124,9 +124,11 @@ def checar_repeticao(estado, pid, titulo, preco, agora, dias=7):
     bloqueado (True = não pode sair), quando/preco (último post), menor (menor preço já postado), queda."""
     from datetime import datetime, timedelta
 
-    from .ofertas import parecido
+    from .ofertas import REPOSICAO_DIAS, mesmo_item_reposicao, parecido, reposicao
 
-    corte = agora - timedelta(days=dias)
+    # Item de reposição (fralda, lenço...): só o MESMO item (marca + tamanho) conta, e volta em REPOSICAO_DIAS
+    eh_reposicao = bool(reposicao(titulo))
+    corte = agora - timedelta(days=REPOSICAO_DIAS if eh_reposicao else dias)
     antes = []
     for p_id, quando, p_preco, p_titulo in _posts_conhecidos(estado):
         try:
@@ -135,7 +137,11 @@ def checar_repeticao(estado, pid, titulo, preco, agora, dias=7):
             continue
         if t <= corte or t > agora:
             continue
-        if p_id == pid or (titulo and p_titulo and parecido(titulo, p_titulo)):
+        if eh_reposicao:
+            igual = p_id == pid or (titulo and p_titulo and mesmo_item_reposicao(titulo, p_titulo))
+        else:
+            igual = p_id == pid or (titulo and p_titulo and parecido(titulo, p_titulo) and not reposicao(p_titulo))
+        if igual:
             antes.append((t, p_preco, p_id))
     if not antes:
         return None

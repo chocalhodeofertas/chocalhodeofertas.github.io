@@ -18,7 +18,8 @@ from datetime import datetime, timedelta
 from . import estado as est
 from . import grafico, horario, mensagens, resumos, sazonal, vitrine, whatsapp
 from .filtros import fora_da_faixa, motivo_bloqueio, normalizar
-from .ofertas import Oferta, tipo_produto, tipos_do_dia, priorizar_tipos_novos, equilibrar_categorias, vagas_da_rodada
+from .ofertas import (Oferta, tipo_produto, tipos_do_dia, priorizar_tipos_novos, equilibrar_categorias, vagas_da_rodada,
+                      contar_tipos_do_dia, cabe_no_dia, tipo_chave)
 from .shopee import MAIS_VENDIDOS, Shopee, ShopeeErro
 from .telegram import TelegramErro
 
@@ -337,14 +338,15 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
         del tipos[d]
     tipos.setdefault(hoje, [])
     tipos_hoje = tipos_do_dia(estado, agora)
+    contagem_tipos = contar_tipos_do_dia(estado, agora)
     enviadas = []
     for p in equilibrar_categorias(priorizar_tipos_novos(candidatos, estado, agora), estado, agora,
                                    categoria=lambda p: ""):
         if len(enviadas) >= vagas:
             break
         tp = tipo_produto(p.titulo)
-        if tp in tipos_hoje:
-            continue
+        if not cabe_no_dia(contagem_tipos, p.titulo):
+            continue  # limite do tipo no dia (1; fralda até 8; outros itens de reposição até 5)
         rep = est.checar_repeticao(estado, p.id, p.titulo, p.preco, agora, cfg.repost_dias)
         if rep and rep["bloqueado"]:
             continue  # mesmo produto (de outro vendedor ou do ML) já saiu nos últimos dias e não baixou 10%
@@ -382,6 +384,7 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
         est.anotar_post(estado, o.id, o.preco, agora, o.titulo)
         s["hora"].append(agora.isoformat(timespec="minutes"))
         tipos_hoje.add(tp)
+        contagem_tipos[tipo_chave(o.titulo)] += 1
         tipos[hoje] = sorted(tipos_hoje)
         est.contar_dia(estado, agora, "shopee")
         est.contar_dia(estado, agora, "posts")
