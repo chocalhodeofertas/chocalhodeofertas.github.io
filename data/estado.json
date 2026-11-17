@@ -11973,6 +11973,12 @@
    "status": "encerrado",
    "validade": "2026-11-10T23:59-03:00"
   },
+  "OFFHOJENOML": {
+   "criado": "2026-11-17T09:00-03:00",
+   "post": 930,
+   "status": "ativo",
+   "validade": "2026-11-18T23:59-03:00"
+  },
   "OFFNAMODA": {
    "criado": "2026-11-09T10:22-03:00",
    "post": 155,
@@ -12154,7 +12160,7 @@
    "validade": "2026-11-15T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5614,
+ "cupons_extra_ultimo:cupombr": 5615,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6504,
  "cupons_shopee_enviado": "2026-11-16",
@@ -34696,7 +34702,7 @@
    "shopee": 49
   },
   "2026-11-17": {
-   "cupons": 1,
+   "cupons": 2,
    "posts": 6,
    "shopee": 3
   }
@@ -39568,6 +39574,17 @@
     }
    ],
    "criado": "2026-11-17T08:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "930": {
+   "blocos": [
+    {
+     "codigo": "OFFHOJENOML",
+     "html": "<b>🎟️ OFFHOJENOML</b> 👉 <b>10% OFF</b>\nDesconto máx.: R$100\n⏰ Válido até 18/11"
+    }
+   ],
+   "criado": "2026-11-17T09:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   }
