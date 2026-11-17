@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-17",
-  "enviados": 1,
-  "ultimo": "2026-11-17T11:00:44.786Z",
+  "enviados": 2,
+  "ultimo": "2026-11-17T11:37:07.895Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -16,7 +16,7 @@
     "2026-11-17": 14
   },
   "membros_em": "2026-11-17T11:00:55.148Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 10,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -32,6 +32,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-17T11:37:07.895Z",
+        "n": "✏️ Moldes Forminha para Massinha Cortador de Modelar Kit Festa Lembrancinha Infa",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/LorzHoTdF",
+        "p": 0
       }
     ]
   },
@@ -51,5 +59,5 @@
       ]
     }
   },
-  "proximo_em": "2026-11-17T11:13:42.429Z"
+  "proximo_em": "2026-11-17T11:48:47.018Z"
 }
