@@ -95,7 +95,8 @@ def enfileirar_oferta(oferta, texto, agora=None, loja="ml", mencionar=False):
     preview = None
     cartao = None
     if m and getattr(oferta, "imagem", None):
-        preview = {"link": m.group(0), "titulo": titulo_previa(oferta), "imagem": oferta.imagem}
+        titulo = titulo_previa(oferta) if os.environ.get("PREVIA_MARCA") == "1" else oferta.titulo
+        preview = {"link": m.group(0), "titulo": titulo, "imagem": oferta.imagem}
         cartao = cartao_da_oferta(oferta)
     meta = ({"id": oferta.id, "preco": oferta.preco}  # para conferir o preço antes de sair (conferir_fila)
             if getattr(oferta, "id", None) and getattr(oferta, "preco", None) else None)

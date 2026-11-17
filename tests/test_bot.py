@@ -1536,7 +1536,7 @@ def test_whatsapp_oferta_com_previa_do_link(tmp_path, monkeypatch):
     assert whatsapp.enfileirar_oferta(o, "*Oferta*\n👉 https://meli.la/abc\n_#publi_", AGORA)
     item = json.loads(next(tmp_path.glob("*.json")).read_text())
     assert item["preview"]["link"] == "https://meli.la/abc" and item["preview"]["imagem"] == "https://img/x.jpg"
-    assert item["preview"]["titulo"].endswith(" Banheira Dobrável")  # emoji da categoria na frente
+    assert item["preview"]["titulo"] == "Banheira Dobrável"  # emoji só com PREVIA_MARCA=1 (aprovação)
     assert item["imagem"] == "https://img/x.jpg"  # reserva, se a prévia falhar
 
 
@@ -2958,7 +2958,7 @@ def test_previa_com_marca_no_whatsapp(tmp_path, monkeypatch):
     monkeypatch.delenv("PREVIA_MARCA", raising=False)
     whatsapp.enfileirar_oferta(o, "texto https://meli.la/x", agora)
     item = json.loads(next(tmp_path.glob("*.json")).read_text())
-    assert item["preview"]["imagem"] == o.imagem and item["preview"]["titulo"].startswith("🧷")
+    assert item["preview"]["imagem"] == o.imagem and item["preview"]["titulo"] == o.titulo
     for f in tmp_path.iterdir():
         f.unlink()
     # ligado: cartão com a marca vira a imagem da prévia (arquivo na fila, apagado junto com o item)
@@ -2967,6 +2967,7 @@ def test_previa_com_marca_no_whatsapp(tmp_path, monkeypatch):
     whatsapp.enfileirar_oferta(o, "texto https://meli.la/x", agora)
     item = json.loads(next(tmp_path.glob("*.json")).read_text())
     assert item["preview"]["imagem"] == item["imagem"] and item["imagem"].endswith(".png")
+    assert item["preview"]["titulo"].startswith("🧷 Fralda")
     assert Image.open(item["imagem"]).size == (1080, 1080)
     # foto não baixou: segue com a foto do anúncio
     for f in tmp_path.iterdir():
