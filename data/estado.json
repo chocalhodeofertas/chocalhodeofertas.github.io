@@ -10923,7 +10923,7 @@
   "CUPOMPRATEC": {
    "criado": "2026-11-15T12:58-03:00",
    "post": 744,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-16T23:59-03:00"
   },
   "DECORACAO1111": {
@@ -11007,7 +11007,7 @@
   "FULL1611": {
    "criado": "2026-11-16T12:37-03:00",
    "post": 850,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-16T23:59-03:00"
   },
   "HOJEMESMO": {
@@ -11163,7 +11163,7 @@
   "MODA1611": {
    "criado": "2026-11-16T09:03-03:00",
    "post": 822,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-16T23:59-03:00"
   },
   "MODAAQUI": {
@@ -11385,7 +11385,7 @@
   "TODO1511SITE": {
    "criado": "2026-11-15T19:01-03:00",
    "post": 784,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-16T23:59-03:00"
   },
   "TODOSITE1011": {
@@ -11412,6 +11412,12 @@
    "status": "esgotado",
    "validade": "2026-11-16T23:59-03:00"
   },
+  "TODOSITE1711": {
+   "criado": "2026-11-17T08:00-03:00",
+   "post": 923,
+   "status": "ativo",
+   "validade": "2026-11-17T23:59-03:00"
+  },
   "ULTIMASCHANCES": {
    "criado": "2026-11-10T11:04-03:00",
    "post": 210,
@@ -11437,7 +11443,7 @@
    "validade": "2026-11-15T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5612,
+ "cupons_extra_ultimo:cupombr": 5614,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6504,
  "cupons_shopee_enviado": "2026-11-16",
@@ -33694,6 +33700,9 @@
    "cupons": 9,
    "posts": 99,
    "shopee": 49
+  },
+  "2026-11-17": {
+   "cupons": 1
   }
  },
  "links": {
@@ -38551,6 +38560,17 @@
    "criado": "2026-11-16T12:37-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "923": {
+   "blocos": [
+    {
+     "codigo": "TODOSITE1711",
+     "html": "<b>🎟️ TODOSITE1711</b> 👉 <b>R$40 OFF</b>\nCompra mín.: R$199\n⏰ Válido até 17/11"
+    }
+   ],
+   "criado": "2026-11-17T08:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   }
  },
  "posts_dia": {
