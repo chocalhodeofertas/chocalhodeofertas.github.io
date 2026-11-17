@@ -9,6 +9,9 @@ import json
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
+from . import paginas
+from .paginas import plural
+
 RAIZ = Path(__file__).resolve().parent.parent
 ARQ = RAIZ / "docs" / "numeros-bcfc6fce.html"
 ARQ_WA = RAIZ / "data" / "wa_estado.json"
@@ -100,7 +103,7 @@ def _grafico_linha(serie, dias, titulo, hoje):
     datas = (f'<text x="{ml}" y="{A - 6}" class="eixo">{eixo[0][8:]}/{eixo[0][5:7]}</text>'
              f'<text x="{L - mr}" y="{A - 6}" class="eixo" text-anchor="end">hoje</text>')
     return (f'<svg viewBox="0 0 {L} {A}" role="img" aria-label="{html.escape(titulo)}">{grade}'
-            f'<polygon points="{area}" class="area"/><polyline points="{linha}" class="linha"/>'
+            f'<polygon points="{area}" class="area"/><polyline points="{linha}" class="linha-graf"/>'
             f'<circle cx="{x(k_fim):.1f}" cy="{y(v_fim):.1f}" r="5" class="ponto"/>'
             f'<text x="{x(k_fim) + 9:.1f}" y="{y(v_fim) + 4:.1f}" class="rotulo">{v_fim}</text>{datas}{marcas}</svg>')
 
@@ -131,13 +134,76 @@ def _grafico_barras(valores, rotulos, titulo):
     return f'<svg viewBox="0 0 {L} {A}" role="img" aria-label="{html.escape(titulo)}">{topo}{"".join(barras)}</svg>'
 
 
+def radar_horas(radar, agora, dias=7):
+    """Soma das últimas N jornadas: [entradas, saídas, mensagens] por hora (0 a 23)."""
+    horas = [[0, 0, 0] for _ in range(24)]
+    datas = {(agora.date() - timedelta(days=k)).isoformat() for k in range(dias)}
+    for dia, por_hora in (radar or {}).items():
+        if dia not in datas:
+            continue
+        for h, vals in (por_hora or {}).items():
+            for i in range(3):
+                horas[int(h)][i] += int(vals[i]) if i < len(vals) else 0
+    return horas
+
+
+def _grafico_radar(horas):
+    """Entradas para cima (roxo), saídas para baixo (rosa), uma barra por hora do dia."""
+    L, A, ml, mr, mt, mb = 640, 200, 28, 8, 12, 24
+    meio = mt + (A - mt - mb) / 2
+    hi = max([max(e, s) for e, s, _ in horas] + [1])
+    passo = (L - ml - mr) / 24
+    larg = passo * 0.6
+    partes = [f'<line x1="{ml}" x2="{L - mr}" y1="{meio:.1f}" y2="{meio:.1f}" class="base"/>',
+              f'<text x="{ml - 6}" y="{mt + 4}" class="eixo" text-anchor="end">{hi}</text>',
+              f'<text x="{ml - 6}" y="{A - mb + 2}" class="eixo" text-anchor="end">{hi}</text>']
+    alt = (A - mt - mb) / 2
+    for h, (e, s, m) in enumerate(horas):
+        x0 = ml + passo * h + (passo - larg) / 2
+        if e:
+            he = alt * e / hi
+            partes.append(f'<rect x="{x0:.1f}" y="{meio - he:.1f}" width="{larg:.1f}" height="{he:.1f}" rx="3" class="barra"/>')
+        if s:
+            hs = alt * s / hi
+            partes.append(f'<rect x="{x0:.1f}" y="{meio + 1:.1f}" width="{larg:.1f}" height="{hs:.1f}" rx="3" class="barra sai"/>')
+        partes.append(f'<rect x="{ml + passo * h:.1f}" y="{mt}" width="{passo:.1f}" height="{A - mt - mb}" class="alvo">'
+                      f'<title>{h}h: {e} entraram, {s} saíram, {m} mensagens</title></rect>')
+        if h in (0, 6, 12, 18, 23):
+            partes.append(f'<text x="{ml + passo * h + passo / 2:.1f}" y="{A - 4}" class="eixo" text-anchor="middle">{h}h</text>')
+    return (f'<svg viewBox="0 0 {L} {A}" role="img" aria-label="Entradas e saídas do grupo por hora">{"".join(partes)}</svg>'
+            '<p class="legenda"><span><i style="background:var(--roxo)"></i>Entraram</span>'
+            '<span><i style="background:var(--rosa)"></i>Saíram</span></p>')
+
+
+def _frase_radar(horas, radar):
+    entradas = sum(e for e, _, _ in horas)
+    saidas = sum(s for _, s, _ in horas)
+    msgs = sum(m for _, _, m in horas)
+    desde = min(radar) if radar else None
+    if not entradas and not saidas:
+        return ("Ninguém entrou nem saiu do grupo nos últimos 7 dias" + (f" (contando desde {desde[8:]}/{desde[5:7]})." if desde else "."))
+    melhor = max(range(24), key=lambda h: horas[h][0])
+    pior = max(range(24), key=lambda h: horas[h][1])
+    partes = [f"Nos últimos 7 dias {plural(entradas, 'pessoa entrou', 'pessoas entraram')} e "
+              f"{plural(saidas, 'saiu', 'saíram')}" + (f" (contando desde {desde[8:]}/{desde[5:7]})." if desde else ".")]
+    if entradas:
+        partes.append(f"Quem mais trouxe gente foi a faixa das {melhor}h.")
+    if saidas:
+        partes.append(f"As saídas se concentraram às {pior}h.")
+    if entradas:
+        partes.append(f"Para cada 10 que entraram, {round(10 * saidas / entradas)} saíram.")
+    partes.append(f"As pessoas mandaram {plural(msgs, 'mensagem', 'mensagens')} no grupo.")
+    return " ".join(partes)
+
+
 def gerar_html(estado, wa, agora):
     hoje = agora.date().isoformat()
     tg_hist = {d: v for d, v in (estado.get("membros_hist") or {}).items() if isinstance(v, int)}
     wa_hist = {d: v for d, v in (wa.get("membros") or {}).items() if isinstance(v, int)}
     hist = estado.get("hist_dia") or {}
     h = hist.get(hoje, {})
-    posts_tg = (estado.get("contagem_dia") or {}).get(hoje, h.get("posts", 0))
+    # total do dia (ML + Shopee); contagem_dia conta só o Mercado Livre (é o ritmo do ML)
+    posts_tg = h.get("posts") or (estado.get("contagem_dia") or {}).get(hoje, 0)
     posts_wa = wa.get("enviados", 0) if wa.get("dia") == hoje else 0
     ativos = [c for c, v in (estado.get("cupons") or {}).items() if v.get("status") == "ativo" and not c.startswith("#")]
     if wa.get("pausado_ate") and wa["pausado_ate"] > agora.isoformat():
@@ -149,18 +215,16 @@ def gerar_html(estado, wa, agora):
     else:
         wa_status = ("mudo", "Ainda sem dados")
 
-    def tile(rotulo, valor, extra=""):
-        return f'<div class="tile"><span class="rot">{rotulo}</span><b>{valor}</b><span class="extra">{extra}</span></div>'
-
     tg_atual = tg_hist[max(tg_hist)] if tg_hist else "–"
     wa_atual = wa_hist[max(wa_hist)] if wa_hist else "–"
-    tiles = "".join([
-        tile("Membros no Telegram", tg_atual, _fmt_delta(_delta(tg_hist, 1), "desde ontem") + " · "
-             + _fmt_delta(_delta(tg_hist, 7), "em 7 dias")),
-        tile("Membros no WhatsApp", wa_atual, _fmt_delta(_delta(wa_hist, 1), "desde ontem") + " · "
-             + _fmt_delta(_delta(wa_hist, 7), "em 7 dias")),
-        tile("Ofertas hoje", posts_tg, f'{h.get("shopee", 0)} da Shopee · {posts_wa} no WhatsApp · {h.get("com_cupom", 0)} com cupom'),
-        tile("Cupons", len(ativos), f'ativos agora · {h.get("cupons", 0)} postados hoje'),
+    fatos = paginas.fatos([
+        ("Membros no Telegram", tg_atual, _fmt_delta(_delta(tg_hist, 1), "desde ontem") + "<br>"
+         + _fmt_delta(_delta(tg_hist, 7), "em 7 dias")),
+        ("Membros no WhatsApp", wa_atual, _fmt_delta(_delta(wa_hist, 1), "desde ontem") + "<br>"
+         + _fmt_delta(_delta(wa_hist, 7), "em 7 dias")),
+        ("Ofertas hoje", posts_tg, f'{posts_tg - h.get("shopee", 0)} do Mercado Livre, {h.get("shopee", 0)} da Shopee, '
+                                   f'{h.get("com_cupom", 0)} com cupom'),
+        ("Cupons ativos", len(ativos), f'{h.get("cupons", 0)} postados hoje'),
     ])
     dias14 = [(agora.date() - timedelta(days=13 - k)).isoformat() for k in range(14)]
     posts14 = [(hist.get(d) or {}).get("posts", 0) for d in dias14]
@@ -176,68 +240,26 @@ def gerar_html(estado, wa, agora):
         f'<td class="num">{_brl(p.get("preco") or 0)}</td></tr>' for p in de_hoje
     ) or '<tr><td colspan="3" class="mudo">Nenhuma oferta postada hoje ainda.</td></tr>'
     apagados = (wa.get("apagados") or {}).get(hoje, 0)
+    radar = wa.get("radar") or {}
+    horas = radar_horas(radar, agora)
 
-    return f"""<!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex, nofollow, noarchive">
-<meta http-equiv="refresh" content="600">
-<title>Números do Chocalho</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Poppins:wght@400;500;600&display=swap">
-<style>
-:root {{ --bg:#f8f3fb; --surface:#fff; --ink:#2b1030; --soft:#6e5a74; --line:#e6d8ef; --grade:#efe6f5;
-  --uva:#3a0a40; --roxo:#8e2bb0; --roxo-area:rgba(142,43,176,.10); --ok:#1f8a5b; --ok-bg:#e2f4ea;
-  --alerta:#b4401c; --alerta-bg:#fde7df; color-scheme:light; }}
-@media (prefers-color-scheme: dark) {{ :root {{ --bg:#1a0a1e; --surface:#26112b; --ink:#f6ecfa; --soft:#c2afc9;
-  --line:#432449; --grade:#34203a; --uva:#f1e1fb; --roxo:#cf8ce9; --roxo-area:rgba(207,140,233,.14);
-  --ok:#6fd3a3; --ok-bg:#173327; --alerta:#ff9a7a; --alerta-bg:#3d1d14; color-scheme:dark; }} }}
-* {{ box-sizing:border-box; }}
-body {{ margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 Poppins, system-ui, sans-serif; }}
-.wrap {{ max-width:1000px; margin:0 auto; padding:24px max(16px, env(safe-area-inset-right)) 48px max(16px, env(safe-area-inset-left)); }}
-h1 {{ font:600 28px/1.1 Fredoka, Poppins, sans-serif; color:var(--uva); margin:0; }}
-h2 {{ font:600 18px/1.2 Fredoka, Poppins, sans-serif; color:var(--uva); margin:0 0 10px; }}
-.sub {{ color:var(--soft); margin:4px 0 20px; font-size:13px; }}
-.tiles {{ display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:12px; margin-bottom:24px; }}
-.tile {{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:14px 16px; display:grid; gap:2px; }}
-.tile .rot {{ font-size:12px; color:var(--soft); font-weight:500; }}
-.tile b {{ font:600 30px/1.1 Fredoka, Poppins, sans-serif; color:var(--ink); font-variant-numeric:tabular-nums; }}
-.tile .extra {{ font-size:12px; color:var(--soft); }}
-.sobe {{ color:var(--ok); }} .desce {{ color:var(--alerta); }} .mudo {{ color:var(--soft); }}
-.cartao {{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:16px; margin-bottom:16px; min-width:0; }}
-.grid2 {{ display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:0 16px; }}
-svg {{ width:100%; height:auto; display:block; }}
-.grade {{ stroke:var(--grade); stroke-width:1; }} .base {{ stroke:var(--line); stroke-width:1; }}
-.eixo {{ fill:var(--soft); font-size:11px; font-family:Poppins, sans-serif; }}
-.rotulo {{ fill:var(--ink); font-size:12px; font-weight:600; font-family:Poppins, sans-serif; }}
-.linha {{ fill:none; stroke:var(--roxo); stroke-width:2; stroke-linejoin:round; }}
-.area {{ fill:var(--roxo-area); stroke:none; }} .ponto {{ fill:var(--roxo); stroke:var(--surface); stroke-width:2; }}
-.barra {{ fill:var(--roxo); }} .alvo {{ fill:transparent; }}
-.vazio {{ color:var(--soft); font-size:13px; margin:8px 0; }}
-.pill {{ display:inline-block; font-size:12px; font-weight:600; padding:3px 10px; border-radius:999px; }}
-.pill.ok {{ background:var(--ok-bg); color:var(--ok); }} .pill.alerta {{ background:var(--alerta-bg); color:var(--alerta); }}
-.pill.mudo {{ background:var(--grade); color:var(--soft); }}
-table {{ width:100%; border-collapse:collapse; font-size:14px; }}
-td {{ padding:8px 4px; border-top:1px solid var(--line); vertical-align:top; overflow-wrap:anywhere; }}
-td.num {{ text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }}
-.wa {{ display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; font-size:14px; }}
-</style></head>
-<body><div class="wrap">
-<h1>Números do Chocalho</h1>
-<p class="sub">Atualizado em {agora:%d/%m às %H:%M} · a página recarrega sozinha a cada 10 minutos</p>
-<div class="tiles">{tiles}</div>
-<div class="grid2">
-  <section class="cartao"><h2>Membros no Telegram</h2>{_grafico_linha(tg_hist, DIAS_HIST, "membros no Telegram", agora.date())}</section>
-  <section class="cartao"><h2>Membros no WhatsApp</h2>{_grafico_linha(wa_hist, DIAS_HIST, "membros no WhatsApp", agora.date())}</section>
+    manchete = (f"{plural(posts_tg, 'oferta saiu', 'ofertas saíram')} no Telegram hoje e "
+                f"{posts_wa} no grupo do WhatsApp.")
+    corpo = f"""<h1 class="manchete">{manchete}</h1>
+<p class="quando">Atualizado em {agora:%d/%m às %H:%M}. A página recarrega sozinha a cada 10 minutos.</p>
+{fatos}
+<section><h2>Quem entra e quem sai do grupo</h2>
+<p class="nota">{html.escape(_frase_radar(horas, radar))}</p>
+{_grafico_radar(horas)}</section>
+<div class="duas">
+  <section><h2>Membros no Telegram</h2>{_grafico_linha(tg_hist, DIAS_HIST, "membros no Telegram", agora.date())}</section>
+  <section><h2>Membros no WhatsApp</h2>{_grafico_linha(wa_hist, DIAS_HIST, "membros no WhatsApp", agora.date())}</section>
 </div>
-<section class="cartao"><h2>Ofertas postadas por dia</h2>{_grafico_barras(posts14, rot14, "ofertas por dia, últimos 14 dias")}</section>
-<div class="grid2">
-  <section class="cartao"><h2>WhatsApp hoje</h2><div class="wa"><span class="pill {wa_status[0]}">{wa_status[1]}</span>
-    <span>{posts_wa} posts no grupo</span><span>{apagados} links de outras pessoas apagados</span></div></section>
-  <section class="cartao"><h2>Maiores descontos de hoje</h2><table>{linhas}</table></section>
-</div>
-</div></body></html>
-"""
+<section><h2>Ofertas por dia</h2><p class="nota">Últimos 14 dias, Telegram.</p>{_grafico_barras(posts14, rot14, "ofertas por dia, últimos 14 dias")}</section>
+<section><h2>WhatsApp hoje</h2><p class="nota"><span class="pill {wa_status[0]}">{wa_status[1]}</span>
+  {plural(posts_wa, "post", "posts")} no grupo, {plural(apagados, "link de outra pessoa apagado", "links de outras pessoas apagados")}.</p></section>
+<section><h2>Maiores descontos de hoje</h2><table>{linhas}</table></section>"""
+    return paginas.pagina("Números do Chocalho", "numeros", corpo)
 
 
 def talvez_publicar(estado, agora, tg=None, canal=None, arquivo=ARQ, arquivo_wa=ARQ_WA, log=print):

@@ -9,6 +9,9 @@ import re
 from datetime import datetime, timedelta
 from pathlib import Path
 
+from . import paginas
+from .paginas import plural
+
 RAIZ = Path(__file__).resolve().parent.parent
 ARQ = RAIZ / "docs" / "fila-4e7a91c3.html"
 ENDERECO = "https://chocalhodeofertas.github.io/fila-4e7a91c3.html"
@@ -120,7 +123,7 @@ def _loja(l):
 
 
 def _linha(hora, loja, titulo, extra, pill):
-    return (f'<li><div class="topo"><span class="hora">{html.escape(hora or "–")}</span>'
+    return (f'<li><div class="linha-topo"><span class="hora">{html.escape(hora or "–")}</span>'
             f'<span class="loja">{html.escape(loja)}</span>'
             f'<span class="pill {pill[0]}">{html.escape(pill[1])}</span></div>'
             f'<div class="nome">{html.escape(titulo)}</div>'
@@ -153,24 +156,21 @@ def gerar_html(estado, wa, itens_fila, agora):
         avisos.append(f"O grupo do WhatsApp já recebeu os {limite} posts de hoje. O que estiver na fila não sai mais hoje.")
     aviso_html = "".join(f'<p class="aviso">{html.escape(a)}</p>' for a in avisos)
 
-    def tile(rotulo, valor, extra=""):
-        return f'<div class="tile"><span class="rot">{rotulo}</span><b>{valor}</b><span class="extra">{extra}</span></div>'
-
     foram = sum(1 for h in historico if h.get("r") == "enviado")
     fora = sum(1 for h in historico if h.get("r") != "enviado")
-    tiles = "".join([
-        tile("Saíram no Telegram hoje", len(posts), "o Telegram não tem fila: aprovou, saiu"),
-        tile("Saíram no grupo hoje", f"{enviados}" + (f" de {limite}" if limite else ""),
-             (f"1 a cada {wa['intervalo_min']:g} a {wa['intervalo_max']:g} min, espalhados pelo dia" if wa.get("intervalo_max")
-              else f"1 a cada {wa['intervalo_min']:g} min" if wa.get("intervalo_min") else "WhatsApp")),
-        tile("Esperando no grupo", len(pendentes), f"{fora} ficaram de fora hoje" if fora else "fila do WhatsApp"),
-        tile("Esperando link oficial", esperando_link, "Mercado Livre: depende do lote"),
+    tiles = paginas.fatos([
+        ("Saíram no Telegram hoje", len(posts), "O Telegram não tem fila: aprovou, saiu."),
+        ("Saíram no grupo hoje", f"{enviados}" + (f" de {limite}" if limite else ""),
+         (f"1 a cada {wa['intervalo_min']:g} a {wa['intervalo_max']:g} min, espalhados pelo dia." if wa.get("intervalo_max")
+          else f"1 a cada {wa['intervalo_min']:g} min." if wa.get("intervalo_min") else "")),
+        ("Esperando no grupo", len(pendentes), f"{fora} ficaram de fora hoje." if fora else ""),
+        ("Esperando link oficial", esperando_link, "Mercado Livre, depende do lote."),
     ])
 
     # ---- esperando no grupo
     linhas_fila = "".join(
         _linha(f"{n}º", _loja(i.get("loja")), i.get("nome") or "(sem texto)",
-               f'na fila há {_ha(i["ha_min"])}' + (" · aviso/cupom: passa na frente" if (i.get("pontos") or 0) >= PONTOS_AVISO else ""),
+               f'na fila há {_ha(i["ha_min"])}' + (", aviso ou cupom: passa na frente" if (i.get("pontos") or 0) >= PONTOS_AVISO else ""),
                i["previsao"])
         for n, i in enumerate(pendentes, 1)
     ) or '<li class="vazio">Nada esperando agora.</li>'
@@ -184,7 +184,7 @@ def gerar_html(estado, wa, itens_fila, agora):
             partes.append(f'📉 menor preço em {p["selo"]} dias')
         if p.get("cupom"):
             partes.append("🎟️ com cupom")
-        return " · ".join(x for x in partes if x)
+        return ", ".join(x for x in partes if x)
 
     linhas_posts = "".join(
         _linha(p.get("hora"), _loja(p.get("loja")), p.get("titulo") or "", extra_post(p),
@@ -215,7 +215,7 @@ def gerar_html(estado, wa, itens_fila, agora):
         situacao = (f"Lotes respondidos hoje: {feitos}." if feitos else "Nenhum lote pendente agora.")
     linhas_link = "".join(
         _linha(f"{n}º", "Mercado Livre", i.get("titulo") or "",
-               " · ".join(x for x in [f'<b>{_brl(i["preco"])}</b>' if i.get("preco") else "",
+               ", ".join(x for x in [f'<b>{_brl(i["preco"])}</b>' if i.get("preco") else "",
                                       f'desconto do anúncio {round((i.get("desconto") or 0) * 100)}%' if i.get("desconto") else "",
                                       "🔁 veio de outro canal (vale 48 h)" if i.get("espelho") else ""] if x),
                ("espera", "No lote enviado") if i.get("no_lote") else ("mudo", "Próximos lotes"))
@@ -224,64 +224,27 @@ def gerar_html(estado, wa, itens_fila, agora):
     mais = esperando_link - len(fila_link.get("itens") or [])
     rodape_link = f'<p class="nota">E mais {mais} na sequência.</p>' if mais > 0 else ""
 
-    return f"""<!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex, nofollow, noarchive">
-<meta http-equiv="refresh" content="600">
-<title>Fila do Chocalho</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Poppins:wght@400;500;600&display=swap">
-<style>
-:root {{ --bg:#f8f3fb; --surface:#fff; --ink:#2b1030; --soft:#6e5a74; --line:#e6d8ef; --grade:#efe6f5;
-  --uva:#3a0a40; --roxo:#8e2bb0; --roxo-bg:#f1e3f8; --ok:#1f8a5b; --ok-bg:#e2f4ea;
-  --alerta:#b4401c; --alerta-bg:#fde7df; color-scheme:light; }}
-@media (prefers-color-scheme: dark) {{ :root {{ --bg:#1a0a1e; --surface:#26112b; --ink:#f6ecfa; --soft:#c2afc9;
-  --line:#432449; --grade:#34203a; --uva:#f1e1fb; --roxo:#cf8ce9; --roxo-bg:#3a1f44;
-  --ok:#6fd3a3; --ok-bg:#173327; --alerta:#ff9a7a; --alerta-bg:#3d1d14; color-scheme:dark; }} }}
-* {{ box-sizing:border-box; }}
-body {{ margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 Poppins, system-ui, sans-serif; }}
-.wrap {{ max-width:860px; margin:0 auto; padding:24px max(16px, env(safe-area-inset-right)) 48px max(16px, env(safe-area-inset-left)); }}
-h1 {{ font:600 28px/1.1 Fredoka, Poppins, sans-serif; color:var(--uva); margin:0; }}
-h2 {{ font:600 18px/1.2 Fredoka, Poppins, sans-serif; color:var(--uva); margin:0 0 4px; }}
-.sub {{ color:var(--soft); margin:4px 0 20px; font-size:13px; }}
-.nota {{ color:var(--soft); font-size:13px; margin:0 0 10px; }}
-.aviso {{ background:var(--alerta-bg); color:var(--alerta); border-radius:12px; padding:10px 14px; font-weight:500; margin:0 0 16px; }}
-.tiles {{ display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:12px; margin-bottom:20px; }}
-.tile {{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:14px 16px; display:grid; gap:2px; }}
-.tile .rot {{ font-size:12px; color:var(--soft); font-weight:500; }}
-.tile b {{ font:600 28px/1.1 Fredoka, Poppins, sans-serif; font-variant-numeric:tabular-nums; }}
-.tile .extra {{ font-size:12px; color:var(--soft); }}
-.cartao {{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:16px; margin-bottom:16px; min-width:0; }}
-.lista {{ list-style:none; margin:0; padding:0; }}
-.lista li {{ border-top:1px solid var(--line); padding:10px 0; }}
-.lista li:first-child {{ border-top:0; }}
-.lista li.vazio {{ color:var(--soft); font-size:14px; }}
-.topo {{ display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; font-size:12px; color:var(--soft); }}
-.hora {{ font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; min-width:38px; }}
-.nome {{ font-size:14px; overflow-wrap:anywhere; margin-top:2px; }}
-.extra {{ font-size:13px; color:var(--soft); }}
-.extra b {{ color:var(--ink); font-weight:600; }}
-.pill {{ display:inline-block; font-size:12px; font-weight:600; padding:2px 10px; border-radius:999px; margin-left:auto; text-align:right; }}
-.pill.ok {{ background:var(--ok-bg); color:var(--ok); }} .pill.fora {{ background:var(--alerta-bg); color:var(--alerta); }}
-.pill.espera {{ background:var(--roxo-bg); color:var(--roxo); }} .pill.mudo {{ background:var(--grade); color:var(--soft); }}
-</style></head>
-<body><div class="wrap">
-<h1>Fila do Chocalho</h1>
-<p class="sub">Atualizado em {agora:%d/%m às %H:%M} · muda a cada rodada do bot (uns 20 min) · para ver na hora, mande <b>fila</b> ao bot no Telegram</p>
-{aviso_html}<div class="tiles">{tiles}</div>
-<section class="cartao"><h2>Esperando para sair no grupo do WhatsApp</h2>
+    if pendentes and pendentes[0]["previsao"][0] == "espera":
+        manchete = (f"{plural(len(pendentes), 'oferta espera', 'ofertas esperam')} o grupo do WhatsApp; "
+                    f"a próxima sai por volta das {pendentes[0]['previsao'][1].removeprefix('previsão ')}.")
+    elif pendentes:
+        manchete = f"{plural(len(pendentes), 'oferta espera', 'ofertas esperam')} o grupo do WhatsApp, mas hoje não devem sair."
+    else:
+        manchete = f"Nada esperando o grupo agora. {plural(len(posts), 'oferta saiu', 'ofertas saíram')} no Telegram hoje."
+    corpo = f"""<h1 class="manchete">{manchete}</h1>
+<p class="quando">Atualizado em {agora:%d/%m às %H:%M}. Muda a cada rodada do bot (uns 20 min); para ver na hora, mande <b>fila</b> ao bot no Telegram.</p>
+{aviso_html}{tiles}
+<section><h2>Esperando para sair no grupo do WhatsApp</h2>
 <p class="nota">Na ordem em que devem sair. Sai primeiro a oferta mais forte, alternando as lojas. Oferta que espera mais de {VALIDADE_H} h é descartada.</p>
 <ul class="lista">{linhas_fila}</ul></section>
-<section class="cartao"><h2>O que saiu hoje no canal do Telegram</h2>
+<section><h2>O que saiu hoje no canal do Telegram</h2>
 <p class="nota">A etiqueta à direita diz o que aconteceu com cada oferta no grupo do WhatsApp. {foram} foram ao grupo hoje.</p>
 <ul class="lista">{linhas_posts}</ul></section>
 {bloco_outros}
-<section class="cartao"><h2>Esperando link oficial do Mercado Livre</h2>
+<section><h2>Esperando link oficial do Mercado Livre</h2>
 <p class="nota">Já aprovadas pelo bot, mas só saem depois que você gerar o link no Linkbuilder. {html.escape(situacao)}</p>
-<ul class="lista">{linhas_link}</ul>{rodape_link}</section>
-</div></body></html>
-"""
+<ul class="lista">{linhas_link}</ul>{rodape_link}</section>"""
+    return paginas.pagina("Fila do Chocalho", "fila", corpo)
 
 
 def itens_da_fila():

@@ -114,7 +114,10 @@ Textos para o dono do projeto sempre em português do Brasil.
 - Cupons da Shopee: a API não lista cupons. `comandos.postar_cupom_shopee` (`cupom shopee <texto>`) posta no canal e na fila do
   grupo com `SHOPEE_CUPONS_LINK` (link oficial do Leonardo para a página de cupons; NUNCA abrir/expandir links de afiliado dele).
   `resumos.talvez_cupons_shopee`: post diário às 9h com esse link (`CUPONS_SHOPEE_ATIVO`, ligado: aprovado em 16/11).
-- `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas, cupons, WhatsApp).
+- `paginas.py`: moldura comum das duas páginas escondidas (marca do site: Schibsted Grotesk de `docs/fonts`, roxo/uva/rosa,
+  modo escuro; abas Números/Fila; topo = frase grande com os números do dia; `fatos` = números de apoio).
+- `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas do dia = ML + Shopee, cupons, WhatsApp) e o
+  radar do grupo (`radar_horas`: entradas/saídas/mensagens por hora somadas em 7 dias, frase + barras para cima e para baixo).
 - `fila_pagina.py`: página escondida `docs/fila-4e7a91c3.html`, reescrita a cada rodada (`publicar` no fim da rodada normal):
   o que saiu hoje no canal (`estado.posts_dia`, com hora, origem do espelho, selo, cupom) e o que aconteceu com cada oferta no
   grupo do WhatsApp (`wa_estado.json: historico`, gravado por `wa/comum.mjs: anotarHistorico`: enviado / venceu / limite / pausa /

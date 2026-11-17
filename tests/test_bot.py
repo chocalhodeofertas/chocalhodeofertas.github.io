@@ -2760,3 +2760,19 @@ def test_frete_gratis_e_full_no_post():
     assert "🚚 Frete grátis" in texto and "Full" not in texto
     o3 = N(**{**vars(o), "frete_gratis": False, "full": False})
     assert "Frete" not in mensagens.montar_whatsapp(o3)
+
+
+def test_radar_do_grupo_na_pagina_de_numeros():
+    from bot import numeros
+
+    hoje = AGORA.date().isoformat()
+    velho = (AGORA.date() - timedelta(days=9)).isoformat()
+    radar = {hoje: {"19": [3, 0, 5], "10": [0, 2, 1]}, velho: {"19": [50, 0, 0]}}  # 9 dias atrás fica fora
+    horas = numeros.radar_horas(radar, AGORA)
+    assert horas[19] == [3, 0, 5] and horas[10] == [0, 2, 1] and sum(h[0] for h in horas) == 3
+    frase = numeros._frase_radar(horas, radar)
+    assert "3 pessoas entraram e 2 saíram" in frase and "faixa das 19h" in frase and "às 10h" in frase
+    assert "Para cada 10 que entraram, 7 saíram" in frase and "6 mensagens" in frase
+    h = numeros.gerar_html(est.novo(), {"radar": radar, "dia": hoje, "enviados": 1}, AGORA)
+    assert "Quem entra e quem sai do grupo" in h and "barra sai" in h and 'aria-current="page"' in h
+    assert "fila-4e7a91c3.html" in h and "Ninguém entrou" in numeros._frase_radar(numeros.radar_horas({}, AGORA), {})
