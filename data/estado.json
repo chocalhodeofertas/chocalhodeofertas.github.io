@@ -12237,6 +12237,12 @@
    "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
+  "CORREHOJEPROML": {
+   "criado": "2026-11-18T09:01-03:00",
+   "post": 1037,
+   "status": "ativo",
+   "validade": "2026-11-19T23:59-03:00"
+  },
   "COZINHA10": {
    "criado": "2026-11-11T14:25-03:00",
    "post": 347,
@@ -12820,7 +12826,7 @@
    "validade": "2026-11-15T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5621,
+ "cupons_extra_ultimo:cupombr": 5622,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6511,
  "cupons_shopee_enviado": "2026-11-17",
@@ -40438,7 +40444,7 @@
    "shopee": 50
   },
   "2026-11-18": {
-   "cupons": 1,
+   "cupons": 2,
    "posts": 6,
    "shopee": 3
   }
@@ -44989,6 +44995,17 @@
     }
    ],
    "criado": "2026-11-18T08:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1037": {
+   "blocos": [
+    {
+     "codigo": "CORREHOJEPROML",
+     "html": "<b>🎟️ CORREHOJEPROML</b> 👉 <b>10% OFF</b>\nDesconto máx.: R$100\n⏰ Válido até 19/11"
+    }
+   ],
+   "criado": "2026-11-18T09:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
