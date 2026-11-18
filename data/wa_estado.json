@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-18",
-  "enviados": 1,
-  "ultimo": "2026-11-18T11:00:46.490Z",
+  "enviados": 2,
+  "ultimo": "2026-11-18T11:37:10.329Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-18": 16
   },
   "membros_em": "2026-11-18T11:26:43.909Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 10,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -33,6 +33,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-18T11:37:10.328Z",
+        "n": "🥣 Kit C/10 Babadores Bandana Infantil Dupla Face",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/Lotb8ZTlu",
+        "p": 0
       }
     ]
   },
@@ -69,6 +77,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-18T11:07:37.967Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-18T11:46:09.651Z",
+  "ultima_categoria": "alimentacao"
 }
