@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-18",
-  "enviados": 9,
-  "ultimo": "2026-11-18T19:09:06.858Z",
+  "enviados": 10,
+  "ultimo": "2026-11-18T20:18:08.941Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -16,7 +16,7 @@
     "2026-11-17": 14,
     "2026-11-18": 22
   },
-  "membros_em": "2026-11-18T19:22:43.155Z",
+  "membros_em": "2026-11-18T20:22:49.412Z",
   "ultima_loja": "ml",
   "max_dia": 14,
   "intervalo_min": 4,
@@ -121,6 +121,14 @@
         "r": "venceu",
         "k": "https://s.shopee.com.br/5Au9ioHv9S",
         "p": 0
+      },
+      {
+        "h": "2026-11-18T20:18:08.941Z",
+        "n": "⏰ Válido até 18/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4zxrgK3",
+        "p": 9
       }
     ]
   },
@@ -172,6 +180,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-18T19:20:17.642Z",
+  "proximo_em": "2026-11-18T20:22:12.498Z",
   "ultima_categoria": "game"
 }
