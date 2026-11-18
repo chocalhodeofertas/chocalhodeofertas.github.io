@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-18",
-  "enviados": 10,
-  "ultimo": "2026-11-18T20:18:08.941Z",
+  "enviados": 11,
+  "ultimo": "2026-11-18T21:26:03.502Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -16,7 +16,7 @@
     "2026-11-17": 14,
     "2026-11-18": 22
   },
-  "membros_em": "2026-11-18T20:22:49.412Z",
+  "membros_em": "2026-11-18T21:22:54.742Z",
   "ultima_loja": "ml",
   "max_dia": 14,
   "intervalo_min": 4,
@@ -129,6 +129,14 @@
         "r": "enviado",
         "k": "https://bit.ly/4zxrgK3",
         "p": 9
+      },
+      {
+        "h": "2026-11-18T21:26:03.502Z",
+        "n": "⏰ Válido até 31/12",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4Cf6LEE",
+        "p": 9
       }
     ]
   },
@@ -180,6 +188,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-18T20:22:12.498Z",
+  "proximo_em": "2026-11-18T21:35:30.317Z",
   "ultima_categoria": "game"
 }
