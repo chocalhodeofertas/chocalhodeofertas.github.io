@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-18",
-  "enviados": 8,
-  "ultimo": "2026-11-18T18:01:05.422Z",
+  "enviados": 9,
+  "ultimo": "2026-11-18T19:09:06.858Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-18": 22
   },
   "membros_em": "2026-11-18T18:21:10.875Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -89,6 +89,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/2qWEujRdzi",
         "p": 0
+      },
+      {
+        "h": "2026-11-18T19:09:06.857Z",
+        "n": "🎮 Jogo Sonic Racing Crossworlds Launch Edition Switch Fisico",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1mhbiJZ",
+        "p": 0.36
       }
     ]
   },
@@ -140,6 +148,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-18T18:09:11.299Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-18T19:20:17.642Z",
+  "ultima_categoria": "game"
 }
