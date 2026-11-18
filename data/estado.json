@@ -12754,12 +12754,6 @@
    "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
-  "MELIOFERTAS": {
-   "criado": "2026-11-07T13:02-03:00",
-   "post": 62,
-   "status": "encerrado",
-   "validade": "2026-11-07T23:59-03:00"
-  },
   "MELIOFF18": {
    "criado": "2026-11-12T11:02-03:00",
    "post": 423,
@@ -48228,17 +48222,6 @@
     }
    ],
    "criado": "2026-11-14T10:03-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
-  },
-  "62": {
-   "blocos": [
-    {
-     "codigo": "MELIOFERTAS",
-     "html": "<b>🎟️ MELIOFERTAS</b> 👉 <b>R$0,10 OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 07/11\n👉 <a href=\"https://bit.ly/4zqYVpl\">Ativar o cupom</a>"
-    }
-   ],
-   "criado": "2026-11-07T13:02-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
