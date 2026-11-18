@@ -13038,6 +13038,12 @@
    "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
   },
+  "MOMENTOPROMO": {
+   "criado": "2026-11-18T18:08-03:00",
+   "post": 1103,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
   "MOP10SHARK": {
    "criado": "2026-11-11T14:25-03:00",
    "post": 347,
@@ -13242,6 +13248,12 @@
    "status": "encerrado",
    "validade": "2026-11-15T23:59-03:00"
   },
+  "SUPERVANTAGEM": {
+   "criado": "2026-11-18T18:08-03:00",
+   "post": 1103,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
   "TECH1111": {
    "criado": "2026-11-11T16:01-03:00",
    "post": 357,
@@ -13323,7 +13335,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5625,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6517,
+ "cupons_ml_ultimo": 6518,
  "cupons_shopee_enviado": "2026-11-18",
  "descoberta_em": "2026-11-18T08:02-03:00",
  "descobertos": {
@@ -43799,7 +43811,7 @@
    "shopee": 50
   },
   "2026-11-18": {
-   "cupons": 8,
+   "cupons": 10,
    "posts": 66,
    "shopee": 33
   }
@@ -48508,6 +48520,21 @@
    "criado": "2026-11-18T17:07-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1103": {
+   "blocos": [
+    {
+     "codigo": "MOMENTOPROMO",
+     "html": "<b>🎟️ MOMENTOPROMO</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4Cf6LEE\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "SUPERVANTAGEM",
+     "html": "<b>🎟️ SUPERVANTAGEM</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4AF916r\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-18T18:08-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "152": {
    "blocos": [
