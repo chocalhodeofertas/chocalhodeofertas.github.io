@@ -12166,7 +12166,7 @@
   "DEZOFF": {
    "criado": "2026-11-16T12:37-03:00",
    "post": 850,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-17T23:59-03:00"
   },
   "ECONOMIZEI25": {
@@ -12217,6 +12217,12 @@
    "status": "encerrado",
    "validade": "2026-11-16T23:59-03:00"
   },
+  "FULL1811": {
+   "criado": "2026-11-18T08:00-03:00",
+   "post": 1030,
+   "status": "ativo",
+   "validade": "2026-11-18T23:59-03:00"
+  },
   "HOJEMESMO": {
    "criado": "2026-11-09T10:01-03:00",
    "post": 152,
@@ -12232,7 +12238,7 @@
   "HOJETEM": {
    "criado": "2026-11-16T09:03-03:00",
    "post": 822,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-17T23:59-03:00"
   },
   "HORADOCUPOM25": {
@@ -12680,7 +12686,7 @@
    "validade": "2026-11-15T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5618,
+ "cupons_extra_ultimo:cupombr": 5620,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6511,
  "cupons_shopee_enviado": "2026-11-17",
@@ -39918,6 +39924,9 @@
    "cupons": 6,
    "posts": 100,
    "shopee": 50
+  },
+  "2026-11-18": {
+   "cupons": 1
   }
  },
  "links": {
@@ -44307,6 +44316,17 @@
   }
  },
  "posts_cupom": {
+  "1030": {
+   "blocos": [
+    {
+     "codigo": "FULL1811",
+     "html": "<b>🎟️ FULL1811</b> 👉 <b>20% OFF</b>\nCompra mín.: R$119 · Desconto máx.: R$40\n⏰ Válido até 18/11"
+    }
+   ],
+   "criado": "2026-11-18T08:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
   "152": {
    "blocos": [
     {
@@ -131087,9 +131107,18 @@
   "brinquedos": "2026-11-15",
   "passeio": "2026-11-09"
  },
- "tg_offset": 273518048,
+ "tg_offset": 273518051,
  "top5_enviado": "2026-11-17",
+ "vigias": {
+  "dolce gusto": {
+   "ids": []
+  },
+  "panela tramontina inox": {
+   "ids": []
+  }
+ },
  "vigias_avisados": {},
+ "vigias_em": null,
  "vitrine": {
   "em": "2026-11-17T21:45-03:00",
   "itens": [
