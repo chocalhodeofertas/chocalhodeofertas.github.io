@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-18",
-  "enviados": 11,
-  "ultimo": "2026-11-18T21:26:03.502Z",
+  "enviados": 12,
+  "ultimo": "2026-11-18T22:35:07.255Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -16,7 +16,7 @@
     "2026-11-17": 14,
     "2026-11-18": 22
   },
-  "membros_em": "2026-11-18T21:27:56.962Z",
+  "membros_em": "2026-11-18T22:27:59.949Z",
   "ultima_loja": "ml",
   "max_dia": 14,
   "intervalo_min": 4,
@@ -137,6 +137,14 @@
         "r": "enviado",
         "k": "https://bit.ly/4Cf6LEE",
         "p": 9
+      },
+      {
+        "h": "2026-11-18T22:35:07.255Z",
+        "n": "*🎟️ Cupons do Mercado Livre*",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4iP2Fda",
+        "p": 9
       }
     ]
   },
@@ -188,6 +196,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-18T21:35:30.317Z",
+  "proximo_em": "2026-11-18T22:43:54.410Z",
   "ultima_categoria": "game"
 }
