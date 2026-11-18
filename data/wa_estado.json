@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-18",
-  "enviados": 4,
-  "ultimo": "2026-11-18T14:48:07.612Z",
+  "enviados": 6,
+  "ultimo": "2026-11-18T16:29:56.958Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -16,7 +16,7 @@
     "2026-11-17": 14,
     "2026-11-18": 23
   },
-  "membros_em": "2026-11-18T15:57:14.838Z",
+  "membros_em": "2026-11-18T16:26:20.441Z",
   "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
@@ -57,6 +57,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/8fTxwjM742",
         "p": 9
+      },
+      {
+        "h": "2026-11-18T16:20:42.221Z",
+        "n": "🧸 Sunny Boneco Patrulha Canina 1342 Skye Focos",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/3171Zw3",
+        "p": 0.2681
+      },
+      {
+        "h": "2026-11-18T16:29:56.958Z",
+        "n": "🧸 Kit Blocos Magnéticos de Montar e Bonecos Infantil Brinquedo Educativo",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2qWEuFMADk",
+        "p": 0
       }
     ]
   },
@@ -103,6 +119,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-18T14:52:34.150Z",
-  "ultima_categoria": "alimentacao"
+  "proximo_em": "2026-11-18T16:42:29.508Z",
+  "ultima_categoria": "brinquedo"
 }
