@@ -13088,6 +13088,12 @@
    "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
+  "PLAYER1": {
+   "criado": "2026-11-18T17:07-03:00",
+   "post": 1096,
+   "status": "ativo",
+   "validade": "2026-11-18T23:59-03:00"
+  },
   "POUPAAGORA25": {
    "criado": "2026-11-17T14:02-03:00",
    "post": 971,
@@ -13253,7 +13259,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5625,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6516,
+ "cupons_ml_ultimo": 6517,
  "cupons_shopee_enviado": "2026-11-18",
  "descoberta_em": "2026-11-18T08:02-03:00",
  "descobertos": {
@@ -43503,7 +43509,7 @@
    "shopee": 50
   },
   "2026-11-18": {
-   "cupons": 7,
+   "cupons": 8,
    "posts": 60,
    "shopee": 30
   }
@@ -48195,6 +48201,17 @@
     }
    ],
    "criado": "2026-11-18T12:10-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1096": {
+   "blocos": [
+    {
+     "codigo": "PLAYER1",
+     "html": "<b>🎟️ PLAYER1</b> 👉 <b>8% OFF</b>\nCompra mín.: R$99 · Desconto máx.: R$70\n⏰ Válido até 18/11\n👉 <a href=\"https://bit.ly/4zxrgK3\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-18T17:07-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
