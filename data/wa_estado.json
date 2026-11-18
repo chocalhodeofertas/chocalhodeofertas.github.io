@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-18",
-  "enviados": 12,
-  "ultimo": "2026-11-18T22:35:07.255Z",
+  "enviados": 13,
+  "ultimo": "2026-11-18T23:43:09.490Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-18": 22
   },
   "membros_em": "2026-11-18T23:07:04.042Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -145,6 +145,14 @@
         "r": "enviado",
         "k": "https://bit.ly/4iP2Fda",
         "p": 9
+      },
+      {
+        "h": "2026-11-18T23:43:09.490Z",
+        "n": "🧸 Jogos ​​Labirinto Magnético Montessori de Madeira - Classificação de Cores pa",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7AfEPIExF1",
+        "p": 0
       }
     ]
   },
@@ -196,6 +204,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-18T22:43:54.410Z",
-  "ultima_categoria": "game"
+  "proximo_em": "2026-11-18T23:55:55.760Z",
+  "ultima_categoria": "brinquedo"
 }
