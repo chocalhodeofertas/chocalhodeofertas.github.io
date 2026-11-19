@@ -3567,7 +3567,7 @@
    "tipo": "catalogo"
   }
  },
- "aguardando_link": 76,
+ "aguardando_link": 73,
  "alertas": {
   "dia": "2026-11-19",
   "ids": [
@@ -4225,6 +4225,10 @@
   "MLB19895688": [
    "Conchas Protetoras Para Amamentacão, Buba, Transparente",
    "https://http2.mlstatic.com/D_NQ_NP_805498-MLA99904917791_112025-F.jpg"
+  ],
+  "MLB19918914": [
+   "Cetaphil Loção Advanced Hidratante Corporal para Pele Seca e Sensível 473ml - Hidratação 48h",
+   "https://http2.mlstatic.com/D_NQ_NP_824819-MLA116564958030_092026-F.jpg"
   ],
   "MLB19951122": [
    "Caçarola Panela Tramontina Professional Funda 20cm 3,6l Inox Cor Aço inox",
@@ -5873,6 +5877,10 @@
   "MLB28579921": [
    "Cadeira de Descanso Bebê Musical Polar Cinza 18kg Maxi Baby",
    "https://http2.mlstatic.com/D_NQ_NP_729247-MLA96101820207_102025-F.jpg"
+  ],
+  "MLB28580490": [
+   "Loção Hidratante Cetaphil 473ml",
+   "https://http2.mlstatic.com/D_NQ_NP_872833-MLU73178542245_112023-F.jpg"
   ],
   "MLB28634708": [
    "Buba Colher Anatomica Kit Cor Azul e Verde",
@@ -12074,6 +12082,10 @@
    "Brinquedo Capivara Pelúcia Cachecol Inverno - Capibara Filó Marrom",
    "https://http2.mlstatic.com/D_NQ_NP_809978-MLA113992674386_072026-F.jpg"
   ],
+  "MLB75952852": [
+   "Tapete Térmico Tatame Infantil Educativo Dobrável C/ Bolsa Variados Educativo",
+   "https://http2.mlstatic.com/D_NQ_NP_794285-MLA115309566843_072026-F.jpg"
+  ],
   "MLB75971196": [
    "Kit Pato Dançante E Caranguejo Fujão Brinquedos Som Bebê Movimenta Educativo Sensoriais Interativo Música Infantil",
    "https://http2.mlstatic.com/D_NQ_NP_694732-MLA113997618588_072026-F.jpg"
@@ -13004,7 +13016,7 @@
   ]
  },
  "contagem_dia": {
-  "2026-11-19": 30
+  "2026-11-19": 32
  },
  "cupons": {
   "AGORAPROMO": {
@@ -13373,6 +13385,12 @@
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
   },
+  "MELITEMCUPOM": {
+   "criado": "2026-11-19T17:17-03:00",
+   "post": 1209,
+   "status": "ativo",
+   "validade": "2026-11-23T23:59-03:00"
+  },
   "MELIVIP20": {
    "criado": "2026-11-09T13:47-03:00",
    "post": 171,
@@ -13558,6 +13576,12 @@
    "post": 311,
    "status": "encerrado",
    "validade": "2026-11-11T23:59-03:00"
+  },
+  "PARAVC": {
+   "criado": "2026-11-19T17:17-03:00",
+   "post": 1209,
+   "status": "ativo",
+   "validade": "2026-11-23T23:59-03:00"
   },
   "PARAVOCEDEZ": {
    "criado": "2026-11-11T11:50-03:00",
@@ -13760,7 +13784,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5631,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6525,
+ "cupons_ml_ultimo": 6526,
  "cupons_shopee_enviado": "2026-11-19",
  "descoberta_em": "2026-11-19T08:02-03:00",
  "descobertos": {
@@ -20778,23 +20802,23 @@
   },
   "fontes": {
    "OfertaKids": 11498,
-   "OfertasdaAdil": 159361,
-   "agirafinhababy": 58313,
+   "OfertasdaAdil": 159371,
+   "agirafinhababy": 58318,
    "alebabykids": 50334,
-   "babypromokids": 70995,
-   "blackoutmamaeebebe": 32474,
-   "boomdescontos": 176574,
-   "canalpromocoesdemamae": 64919,
-   "clubekotascriancas": 14395,
-   "comparebaby": 133616,
-   "descontinhodemamae": 73893,
-   "economiadasmamaes": 67442,
+   "babypromokids": 70997,
+   "blackoutmamaeebebe": 32494,
+   "boomdescontos": 176588,
+   "canalpromocoesdemamae": 64921,
+   "clubekotascriancas": 14402,
+   "comparebaby": 133619,
+   "descontinhodemamae": 73898,
+   "economiadasmamaes": 67444,
    "mamaecomprapromo": 42336,
    "ofertas_itens_de_bebes": 13451,
    "promobytebaby": 21223,
-   "promodebebe": 35269,
-   "promohypebaby": 36046,
-   "shopee_baby": 16479
+   "promodebebe": 35271,
+   "promohypebaby": 36047,
+   "shopee_baby": 16480
   },
   "links": {
    "https://agirafinhababy.com.br/p/0Mj0BBFEVR?r=1": "2026-11-18",
@@ -20906,6 +20930,7 @@
    "https://amzlink.to/az0oShtH9ockj": "2026-11-16",
    "https://amzlink.to/az0oiZl2N9NOp": "2026-11-17",
    "https://amzlink.to/az0prmjM7lbwx": "2026-11-17",
+   "https://amzlink.to/az0puOufdBPbQ": "2026-11-19",
    "https://amzlink.to/az0sFpvYaEFwI": "2026-11-17",
    "https://amzlink.to/az0sPfjwbGgNg": "2026-11-17",
    "https://amzlink.to/az0sRrhk7YW2L": "2026-11-17",
@@ -20922,6 +20947,7 @@
    "https://amzlink.to/az0xf7uCrUwoj": "2026-11-16",
    "https://amzlink.to/az0xgvPnnCxi2": "2026-11-19",
    "https://amzlink.to/az0xhHgbMWEOh": "2026-11-18",
+   "https://amzlink.to/az0yCp7XzDG0C": "2026-11-19",
    "https://amzlink.to/az0ys7SPAr4Hn": "2026-11-17",
    "https://amzn.swlink.pro/11so5D24": "2026-11-19",
    "https://amzn.swlink.pro/1JsSNPEx": "2026-11-16",
@@ -21008,6 +21034,7 @@
    "https://amzn.swlink.pro/Mp6vrzrc": "2026-11-19",
    "https://amzn.swlink.pro/Mpx9UH2D": "2026-11-16",
    "https://amzn.swlink.pro/Mv9yzMNc": "2026-11-18",
+   "https://amzn.swlink.pro/NQaJr855": "2026-11-19",
    "https://amzn.swlink.pro/P2Y8bATW": "2026-11-19",
    "https://amzn.swlink.pro/PUKCbWrQ": "2026-11-18",
    "https://amzn.swlink.pro/PVMQ5con": "2026-11-19",
@@ -21052,9 +21079,11 @@
    "https://amzn.swlink.pro/e2hBAQgN": "2026-11-16",
    "https://amzn.swlink.pro/eNpqceYW": "2026-11-17",
    "https://amzn.swlink.pro/f1vPDqHU": "2026-11-19",
+   "https://amzn.swlink.pro/fA97qqh3": "2026-11-19",
    "https://amzn.swlink.pro/fBrtzp7x": "2026-11-16",
    "https://amzn.swlink.pro/g6WMDEWA": "2026-11-16",
    "https://amzn.swlink.pro/g6XYKR5C": "2026-11-18",
+   "https://amzn.swlink.pro/gA2A1LWB": "2026-11-19",
    "https://amzn.swlink.pro/goijn5ME": "2026-11-19",
    "https://amzn.swlink.pro/gtifC65Z": "2026-11-18",
    "https://amzn.swlink.pro/hGU4QncS": "2026-11-17",
@@ -21122,6 +21151,7 @@
    "https://amzn.to/4o4ANTH": "2026-11-15",
    "https://amzn.to/4vQUBxE": "2026-11-18",
    "https://amzn.to/4wO0mgY": "2026-11-18",
+   "https://aqui.babypromokids.com.br/2rCVS2": "2026-11-19",
    "https://aqui.babypromokids.com.br/3adQfk": "2026-11-15",
    "https://aqui.babypromokids.com.br/3trWrY": "2026-11-18",
    "https://aqui.babypromokids.com.br/4cVPTK": "2026-11-18",
@@ -21147,12 +21177,14 @@
    "https://aqui.babypromokids.com.br/Gvuafa": "2026-11-17",
    "https://aqui.babypromokids.com.br/KX7LMR": "2026-11-18",
    "https://aqui.babypromokids.com.br/KwEaWu": "2026-11-17",
+   "https://aqui.babypromokids.com.br/Mep5t7": "2026-11-19",
    "https://aqui.babypromokids.com.br/N8anDz": "2026-11-17",
    "https://aqui.babypromokids.com.br/PLuMhQ": "2026-11-18",
    "https://aqui.babypromokids.com.br/QjeSiK": "2026-11-18",
    "https://aqui.babypromokids.com.br/QnsJfH": "2026-11-19",
    "https://aqui.babypromokids.com.br/R5kXgM": "2026-11-16",
    "https://aqui.babypromokids.com.br/RMPWQJ": "2026-11-17",
+   "https://aqui.babypromokids.com.br/SdMJZw": "2026-11-19",
    "https://aqui.babypromokids.com.br/TEvWWX": "2026-11-17",
    "https://aqui.babypromokids.com.br/Ua2aQK": "2026-11-18",
    "https://aqui.babypromokids.com.br/VgGayL": "2026-11-17",
@@ -21161,6 +21193,7 @@
    "https://aqui.babypromokids.com.br/WPUQ4B": "2026-11-17",
    "https://aqui.babypromokids.com.br/WrRVXa": "2026-11-17",
    "https://aqui.babypromokids.com.br/WuMeZT": "2026-11-17",
+   "https://aqui.babypromokids.com.br/YCmM9d": "2026-11-19",
    "https://aqui.babypromokids.com.br/YpuLYg": "2026-11-18",
    "https://aqui.babypromokids.com.br/ZMtTxz": "2026-11-18",
    "https://aqui.babypromokids.com.br/ZQCfvV": "2026-11-16",
@@ -21202,6 +21235,7 @@
    "https://aqui.babypromokids.com.br/wds7Vu": "2026-11-17",
    "https://aqui.babypromokids.com.br/wsRSCp": "2026-11-18",
    "https://aqui.babypromokids.com.br/x9wDQM": "2026-11-16",
+   "https://aqui.babypromokids.com.br/xtZ6i7": "2026-11-19",
    "https://aqui.babypromokids.com.br/yDsHGt": "2026-11-17",
    "https://aqui.babypromokids.com.br/yUz4iu": "2026-11-15",
    "https://aqui.babypromokids.com.br/z4Uu3C": "2026-11-17",
@@ -21370,6 +21404,7 @@
    "https://link.amazon/B00GIfd1w": "2026-11-15",
    "https://link.amazon/B00GuZnFp": "2026-11-17",
    "https://link.amazon/B00H2Sjly": "2026-11-18",
+   "https://link.amazon/B00H2lrHf": "2026-11-19",
    "https://link.amazon/B00HFfC5t": "2026-11-17",
    "https://link.amazon/B00HSpHDc": "2026-11-18",
    "https://link.amazon/B00IQolTI": "2026-11-17",
@@ -21749,6 +21784,7 @@
    "https://link.amazon/B01vNfIAi": "2026-11-15",
    "https://link.amazon/B01vig2bN": "2026-11-16",
    "https://link.amazon/B01vmkisv": "2026-11-16",
+   "https://link.amazon/B01vpberN": "2026-11-19",
    "https://link.amazon/B01vtva8N": "2026-11-16",
    "https://link.amazon/B01wyb26L": "2026-11-18",
    "https://link.amazon/B01x2br6K": "2026-11-18",
@@ -21803,6 +21839,7 @@
    "https://link.amazon/B02CiIJxZ": "2026-11-16",
    "https://link.amazon/B02CwF1I3": "2026-11-19",
    "https://link.amazon/B02DCRAu1": "2026-11-18",
+   "https://link.amazon/B02DQl960": "2026-11-19",
    "https://link.amazon/B02Dta5vQ": "2026-11-18",
    "https://link.amazon/B02DuPpZe": "2026-11-17",
    "https://link.amazon/B02E1QQ6h": "2026-11-18",
@@ -21994,6 +22031,7 @@
    "https://link.amazon/B03A41Sjj": "2026-11-19",
    "https://link.amazon/B03AVvaRh": "2026-11-18",
    "https://link.amazon/B03AWzlbP": "2026-11-15",
+   "https://link.amazon/B03AXaW1P": "2026-11-19",
    "https://link.amazon/B03AZubC5": "2026-11-16",
    "https://link.amazon/B03Ai83iw": "2026-11-17",
    "https://link.amazon/B03AnrqAd": "2026-11-19",
@@ -22149,6 +22187,7 @@
    "https://link.amazon/B03oPILOc": "2026-11-19",
    "https://link.amazon/B03ofRzte": "2026-11-19",
    "https://link.amazon/B03p6lxmA": "2026-11-16",
+   "https://link.amazon/B03pdRerc": "2026-11-19",
    "https://link.amazon/B03pmBGgp": "2026-11-15",
    "https://link.amazon/B03q6iWEI": "2026-11-18",
    "https://link.amazon/B03qBZZJv": "2026-11-16",
@@ -22367,6 +22406,7 @@
    "https://link.amazon/B04nrnonE": "2026-11-17",
    "https://link.amazon/B04nyor4k": "2026-11-19",
    "https://link.amazon/B04o814sJ": "2026-11-18",
+   "https://link.amazon/B04oMH6Fh": "2026-11-19",
    "https://link.amazon/B04ovdOGk": "2026-11-19",
    "https://link.amazon/B04p2gIpC": "2026-11-18",
    "https://link.amazon/B04p8uhOK": "2026-11-19",
@@ -22396,6 +22436,7 @@
    "https://link.amazon/B04vfGGj5": "2026-11-16",
    "https://link.amazon/B04vfaIO6": "2026-11-19",
    "https://link.amazon/B04vgwo79": "2026-11-19",
+   "https://link.amazon/B04vizEyw": "2026-11-19",
    "https://link.amazon/B04vyImLw": "2026-11-16",
    "https://link.amazon/B04wUcxrq": "2026-11-16",
    "https://link.amazon/B04wa2ty0": "2026-11-16",
@@ -24053,6 +24094,7 @@
    "https://link.amazon/B0cQkFfIY": "2026-11-19",
    "https://link.amazon/B0cTK20Uh": "2026-11-18",
    "https://link.amazon/B0cTMZiKi": "2026-11-18",
+   "https://link.amazon/B0cTRHLRV": "2026-11-19",
    "https://link.amazon/B0cTRq4b5": "2026-11-18",
    "https://link.amazon/B0cV6rA0b": "2026-11-17",
    "https://link.amazon/B0cVXUyqe": "2026-11-17",
@@ -24171,6 +24213,7 @@
    "https://link.amazon/B0d7A6VLw": "2026-11-19",
    "https://link.amazon/B0d7ZYMfo": "2026-11-15",
    "https://link.amazon/B0d7cIA2J": "2026-11-16",
+   "https://link.amazon/B0d8PNkbo": "2026-11-19",
    "https://link.amazon/B0d8aRKRw": "2026-11-17",
    "https://link.amazon/B0d8b198J": "2026-11-16",
    "https://link.amazon/B0d8dmppN": "2026-11-18",
@@ -24978,6 +25021,7 @@
    "https://link.amazon/B0grdrVV5": "2026-11-16",
    "https://link.amazon/B0gsbW2kN": "2026-11-19",
    "https://link.amazon/B0gscBRj3": "2026-11-18",
+   "https://link.amazon/B0gsdbPHF": "2026-11-19",
    "https://link.amazon/B0gtA94cY": "2026-11-18",
    "https://link.amazon/B0gtZF00d": "2026-11-16",
    "https://link.amazon/B0gu5mh5g": "2026-11-19",
@@ -25164,6 +25208,7 @@
    "https://link.amazon/B0hlqsBje": "2026-11-17",
    "https://link.amazon/B0hm8GcEV": "2026-11-16",
    "https://link.amazon/B0hmQKe0p": "2026-11-17",
+   "https://link.amazon/B0hn14Tum": "2026-11-19",
    "https://link.amazon/B0hn7mHj1": "2026-11-19",
    "https://link.amazon/B0hn87cWc": "2026-11-19",
    "https://link.amazon/B0hnv1hb2": "2026-11-15",
@@ -26603,6 +26648,7 @@
    "https://meli.la/2FVjcvB": "2026-11-18",
    "https://meli.la/2FZa9CX": "2026-11-18",
    "https://meli.la/2FgjnkM": "2026-11-17",
+   "https://meli.la/2FnSoQV": "2026-11-19",
    "https://meli.la/2FpC4AL": "2026-11-17",
    "https://meli.la/2FqYci4": "2026-11-19",
    "https://meli.la/2FqzBPg": "2026-11-19",
@@ -26897,6 +26943,7 @@
    "https://meli.la/2eE2AXU": "2026-11-15",
    "https://meli.la/2eKn44b": "2026-11-18",
    "https://meli.la/2eWhxf3": "2026-11-18",
+   "https://meli.la/2eceFd1": "2026-11-19",
    "https://meli.la/2ecfL5j": "2026-11-17",
    "https://meli.la/2ehj4ak": "2026-11-18",
    "https://meli.la/2ekAi93": "2026-11-16",
@@ -26970,6 +27017,7 @@
    "https://meli.la/2iw5v3o": "2026-11-16",
    "https://meli.la/2iyqWQa": "2026-11-15",
    "https://meli.la/2j4TWTJ": "2026-11-17",
+   "https://meli.la/2j7qRCt": "2026-11-19",
    "https://meli.la/2jBaAGC": "2026-11-16",
    "https://meli.la/2jBcm5E": "2026-11-15",
    "https://meli.la/2jHAi37": "2026-11-18",
@@ -27196,6 +27244,7 @@
    "https://meli.la/2zpQG3a": "2026-11-18",
    "https://meli.la/2zr8EbS": "2026-11-15",
    "https://meli.la/2zrtMYr": "2026-11-17",
+   "https://meli.la/311iBGs": "2026-11-19",
    "https://meli.la/31CZerN": "2026-11-15",
    "https://meli.la/31CzyeW": "2026-11-18",
    "https://meli.la/31EESPQ": "2026-11-16",
@@ -27377,6 +27426,7 @@
    "https://promohype.com.br/d/212520": "2026-11-19",
    "https://promohype.com.br/d/212524": "2026-11-19",
    "https://promohype.com.br/d/212527": "2026-11-19",
+   "https://promohype.com.br/d/212569": "2026-11-19",
    "https://rakuten.swlink.pro/2SS9RXZ6": "2026-11-17",
    "https://rakuten.swlink.pro/8gtPwfiE": "2026-11-17",
    "https://rakuten.swlink.pro/MjyBUiLo": "2026-11-18",
@@ -27473,6 +27523,8 @@
    "https://s.shopee.com.br/114cMyfvzi": "2026-11-19",
    "https://s.shopee.com.br/114cTRXwRk": "2026-11-19",
    "https://s.shopee.com.br/114cWOm5Cb": "2026-11-19",
+   "https://s.shopee.com.br/114cXqBj8K": "2026-11-19",
+   "https://s.shopee.com.br/114cXtA6Ql": "2026-11-19",
    "https://s.shopee.com.br/1BNvlBDgYi": "2026-11-15",
    "https://s.shopee.com.br/1BNvndDXOW": "2026-11-15",
    "https://s.shopee.com.br/1BNvx41xS3": "2026-11-15",
@@ -27631,6 +27683,7 @@
    "https://s.shopee.com.br/1C4xlkNAU": "2026-11-19",
    "https://s.shopee.com.br/1C5BkPzZC": "2026-11-19",
    "https://s.shopee.com.br/1C5CqXNRa": "2026-11-19",
+   "https://s.shopee.com.br/1C5MV2bD3": "2026-11-19",
    "https://s.shopee.com.br/1LgZ268VWc": "2026-11-19",
    "https://s.shopee.com.br/1LgtLS6dP8": "2026-11-18",
    "https://s.shopee.com.br/1LhJKwnUa8": "2026-11-16",
@@ -27898,6 +27951,7 @@
    "https://s.shopee.com.br/1gKJDJIHsU": "2026-11-19",
    "https://s.shopee.com.br/1gKJGwtP4G": "2026-11-19",
    "https://s.shopee.com.br/1gKJIJYCLU": "2026-11-19",
+   "https://s.shopee.com.br/1gKJKacuG2": "2026-11-19",
    "https://s.shopee.com.br/1qdcb2SYTX": "2026-11-15",
    "https://s.shopee.com.br/1qdch1JxkS": "2026-11-15",
    "https://s.shopee.com.br/1qdchg3P0p": "2026-11-15",
@@ -28066,6 +28120,7 @@
    "https://s.shopee.com.br/20x9Y0A47H": "2026-11-19",
    "https://s.shopee.com.br/20x9YwmETh": "2026-11-19",
    "https://s.shopee.com.br/20x9gvbOiI": "2026-11-19",
+   "https://s.shopee.com.br/20x9k3T11d": "2026-11-19",
    "https://s.shopee.com.br/2BGOYkIDnt": "2026-11-15",
    "https://s.shopee.com.br/2BGQ5PW23g": "2026-11-15",
    "https://s.shopee.com.br/2BGT0Flwxl": "2026-11-15",
@@ -28331,6 +28386,7 @@
    "https://s.shopee.com.br/2VtQ4hh7Us": "2026-11-19",
    "https://s.shopee.com.br/2VtQ9Y14Qa": "2026-11-19",
    "https://s.shopee.com.br/2VtQE3OPrQ": "2026-11-19",
+   "https://s.shopee.com.br/2VtQKyR70k": "2026-11-19",
    "https://s.shopee.com.br/2gCdSd2fA5": "2026-11-18",
    "https://s.shopee.com.br/2gCghqnM0W": "2026-11-15",
    "https://s.shopee.com.br/2gCh9AtTjh": "2026-11-16",
@@ -28507,6 +28563,7 @@
    "https://s.shopee.com.br/2qWGHSmN3j": "2026-11-19",
    "https://s.shopee.com.br/2qWGX0BHrc": "2026-11-19",
    "https://s.shopee.com.br/2qWGZraEqk": "2026-11-19",
+   "https://s.shopee.com.br/2qWGjDiHCw": "2026-11-19",
    "https://s.shopee.com.br/30oewLEjwC": "2026-11-17",
    "https://s.shopee.com.br/30pUNjJFio": "2026-11-16",
    "https://s.shopee.com.br/30pWodx0oE": "2026-11-16",
@@ -28680,6 +28737,7 @@
    "https://s.shopee.com.br/3B96ovjjVt": "2026-11-19",
    "https://s.shopee.com.br/3B96txKpJp": "2026-11-19",
    "https://s.shopee.com.br/3B970JtOdm": "2026-11-19",
+   "https://s.shopee.com.br/3B977uJ7uG": "2026-11-19",
    "https://s.shopee.com.br/3LNoqzpeiF": "2026-11-16",
    "https://s.shopee.com.br/3LRc0xfgeu": "2026-11-18",
    "https://s.shopee.com.br/3LSNF1hcs4": "2026-11-15",
@@ -28758,6 +28816,7 @@
    "https://s.shopee.com.br/3LSX2Alzzt": "2026-11-19",
    "https://s.shopee.com.br/3LSXGDCwMN": "2026-11-19",
    "https://s.shopee.com.br/3LSXHgfpjH": "2026-11-19",
+   "https://s.shopee.com.br/3LSXKDMPVz": "2026-11-19",
    "https://s.shopee.com.br/3VlqYMD2W2": "2026-11-15",
    "https://s.shopee.com.br/3VlqayRHBm": "2026-11-15",
    "https://s.shopee.com.br/3VlqbHJSsQ": "2026-11-15",
@@ -28937,6 +28996,7 @@
    "https://s.shopee.com.br/3g5ND6Wy9r": "2026-11-19",
    "https://s.shopee.com.br/3g5NEWax27": "2026-11-19",
    "https://s.shopee.com.br/3g5Nb0JYAP": "2026-11-19",
+   "https://s.shopee.com.br/3g5Ne20nvH?lp=aff": "2026-11-19",
    "https://s.shopee.com.br/3qJhaDIg1S": "2026-11-18",
    "https://s.shopee.com.br/3qNsfTSgu5": "2026-11-18",
    "https://s.shopee.com.br/3qOduvE2Xi": "2026-11-16",
@@ -29023,6 +29083,7 @@
    "https://s.shopee.com.br/3qOnlswmlk": "2026-11-19",
    "https://s.shopee.com.br/3qOnnfnYeG": "2026-11-19",
    "https://s.shopee.com.br/3qOnpVCNO0": "2026-11-19",
+   "https://s.shopee.com.br/3qOnpWT5cg?lp=aff": "2026-11-19",
    "https://s.shopee.com.br/3qOnqgVDSQ": "2026-11-19",
    "https://s.shopee.com.br/3qOntxoL5p": "2026-11-19",
    "https://s.shopee.com.br/40i411fKkR": "2026-11-15",
@@ -29215,6 +29276,7 @@
    "https://s.shopee.com.br/4B1e0LhYqA": "2026-11-19",
    "https://s.shopee.com.br/4B1eJDfiBD": "2026-11-19",
    "https://s.shopee.com.br/4B1eJSQVdm": "2026-11-19",
+   "https://s.shopee.com.br/4B1eK8W1Vh": "2026-11-19",
    "https://s.shopee.com.br/4LHR6XgnUk": "2026-11-16",
    "https://s.shopee.com.br/4LKVROJE6m": "2026-11-18",
    "https://s.shopee.com.br/4LKY7PDhJj": "2026-11-18",
@@ -29914,6 +29976,8 @@
    "https://s.shopee.com.br/5VX1deAz1R": "2026-11-19",
    "https://s.shopee.com.br/5VX1gXI0gz": "2026-11-19",
    "https://s.shopee.com.br/5VX1qJ6OzT": "2026-11-19",
+   "https://s.shopee.com.br/5VX1ucPeuX": "2026-11-19",
+   "https://s.shopee.com.br/5VX1uwiJz4": "2026-11-19",
    "https://s.shopee.com.br/5fqKS0Mph6": "2026-11-15",
    "https://s.shopee.com.br/5fqLC3ZQ4K": "2026-11-15",
    "https://s.shopee.com.br/5fqLMIlIOE": "2026-11-15",
@@ -30000,6 +30064,7 @@
    "https://s.shopee.com.br/5fqRvGMmIf": "2026-11-19",
    "https://s.shopee.com.br/5fqRyOjT6G": "2026-11-19",
    "https://s.shopee.com.br/5fqS0ElTHm": "2026-11-19",
+   "https://s.shopee.com.br/5fqS6ulQUO": "2026-11-19",
    "https://s.shopee.com.br/5q9icDljI0": "2026-11-15",
    "https://s.shopee.com.br/5q9lbW4Pio": "2026-11-15",
    "https://s.shopee.com.br/5q9luQb1WI": "2026-11-15",
@@ -30079,6 +30144,7 @@
    "https://s.shopee.com.br/5q9s6t8ApJ": "2026-11-19",
    "https://s.shopee.com.br/5q9s9lbSrS": "2026-11-19",
    "https://s.shopee.com.br/5q9sFBpKRR": "2026-11-19",
+   "https://s.shopee.com.br/5q9sJMQ2SU": "2026-11-19",
    "https://s.shopee.com.br/60TAEx9yQS?lp=aff": "2026-11-15",
    "https://s.shopee.com.br/60TBbHRjlW": "2026-11-15",
    "https://s.shopee.com.br/60TBcvCrdE": "2026-11-15",
@@ -30330,6 +30396,7 @@
    "https://s.shopee.com.br/6L68U2LKd3": "2026-11-19",
    "https://s.shopee.com.br/6L68WhyCjw": "2026-11-19",
    "https://s.shopee.com.br/6L68j121q9": "2026-11-19",
+   "https://s.shopee.com.br/6L68tlEa7b": "2026-11-19",
    "https://s.shopee.com.br/6VPNx4xlxi": "2026-11-15",
    "https://s.shopee.com.br/6VPPEkZpIs": "2026-11-15",
    "https://s.shopee.com.br/6VPR9ly6aM": "2026-11-16",
@@ -30414,6 +30481,7 @@
    "https://s.shopee.com.br/6VPYrxoxvZ": "2026-11-19",
    "https://s.shopee.com.br/6VPZ3VPipl": "2026-11-19",
    "https://s.shopee.com.br/6VPZ4YqKbP": "2026-11-19",
+   "https://s.shopee.com.br/6VPZ6z90CN": "2026-11-19",
    "https://s.shopee.com.br/6fisMywh3e": "2026-11-15",
    "https://s.shopee.com.br/6fisRjVvHZ": "2026-11-15",
    "https://s.shopee.com.br/6fisSwfZH3": "2026-11-15",
@@ -30494,6 +30562,7 @@
    "https://s.shopee.com.br/6fiyz6ljwP": "2026-11-19",
    "https://s.shopee.com.br/6fiz8XDgHX": "2026-11-19",
    "https://s.shopee.com.br/6fizFkiRKn": "2026-11-19",
+   "https://s.shopee.com.br/6fizIuQNgW": "2026-11-19",
    "https://s.shopee.com.br/6q2EKf0MD3": "2026-11-15",
    "https://s.shopee.com.br/6q2FHLRBJo": "2026-11-15",
    "https://s.shopee.com.br/6q2IjUR9sc": "2026-11-15",
@@ -30828,6 +30897,7 @@
    "https://s.shopee.com.br/7KyfwjvRG0": "2026-11-19",
    "https://s.shopee.com.br/7KyfwnyDqA": "2026-11-19",
    "https://s.shopee.com.br/7Kyg0Kg9Zh": "2026-11-19",
+   "https://s.shopee.com.br/7Kyg6AEiVe": "2026-11-19",
    "https://s.shopee.com.br/7VHzR9ReyN": "2026-11-15",
    "https://s.shopee.com.br/7VHzS2EF3m": "2026-11-15",
    "https://s.shopee.com.br/7VHzVaiAM0": "2026-11-15",
@@ -31366,6 +31436,9 @@
    "https://s.shopee.com.br/8KrCyNa4kC": "2026-11-19",
    "https://s.shopee.com.br/8KrD5yUfmE": "2026-11-19",
    "https://s.shopee.com.br/8KrD74yKgF?lp=aff": "2026-11-19",
+   "https://s.shopee.com.br/8KrDErEodA?lp=aff": "2026-11-19",
+   "https://s.shopee.com.br/8KrDHIfOxa": "2026-11-19",
+   "https://s.shopee.com.br/8KrDHnkTgZ": "2026-11-19",
    "https://s.shopee.com.br/8V9rHbQOTm": "2026-11-17",
    "https://s.shopee.com.br/8VARjgm28S": "2026-11-18",
    "https://s.shopee.com.br/8VAVcbxcTx": "2026-11-17",
@@ -31657,6 +31730,7 @@
    "https://s.shopee.com.br/8pnTmSyW0V": "2026-11-19",
    "https://s.shopee.com.br/8pnTo71eZ6": "2026-11-19",
    "https://s.shopee.com.br/8pnTocSrlS": "2026-11-19",
+   "https://s.shopee.com.br/8pnTsvMCnO": "2026-11-19",
    "https://s.shopee.com.br/904l6AqA5I": "2026-11-16",
    "https://s.shopee.com.br/906mOkVGrn": "2026-11-15",
    "https://s.shopee.com.br/906n9lst3T": "2026-11-15",
@@ -31821,6 +31895,7 @@
    "https://s.shopee.com.br/9AQKCxtyuU": "2026-11-19",
    "https://s.shopee.com.br/9AQKEY7fqs": "2026-11-19",
    "https://s.shopee.com.br/9AQKFFcdBJ": "2026-11-19",
+   "https://s.shopee.com.br/9AQKHpZWiv": "2026-11-19",
    "https://s.shopee.com.br/9KjaecFRoI": "2026-11-15",
    "https://s.shopee.com.br/9KjdQGoQgX": "2026-11-15",
    "https://s.shopee.com.br/9KjdRe24uJ": "2026-11-15",
@@ -31891,6 +31966,7 @@
    "https://s.shopee.com.br/9Kjk0u5h65": "2026-11-19",
    "https://s.shopee.com.br/9KjkGWwhVH": "2026-11-19",
    "https://s.shopee.com.br/9KjkHTQY7j": "2026-11-19",
+   "https://s.shopee.com.br/9KjkUIUVcQ": "2026-11-19",
    "https://s.shopee.com.br/9V28MT75HT": "2026-11-17",
    "https://s.shopee.com.br/9V30oB4MG4": "2026-11-15",
    "https://s.shopee.com.br/9V337frOZC": "2026-11-15",
@@ -32328,6 +32404,8 @@
    "https://s.shopee.com.br/AAIrEAoTWi": "2026-11-19",
    "https://s.shopee.com.br/AAIrEFqiXJ": "2026-11-19",
    "https://s.shopee.com.br/AAIrRE4n3y": "2026-11-19",
+   "https://s.shopee.com.br/AAIrSgu18S": "2026-11-19",
+   "https://s.shopee.com.br/AAIrTC8NHk": "2026-11-19",
    "https://s.shopee.com.br/AKc7gjmZX7": "2026-11-15",
    "https://s.shopee.com.br/AKc7pTj9Lh": "2026-11-15",
    "https://s.shopee.com.br/AKcAiVn77S": "2026-11-15",
@@ -32495,6 +32573,7 @@
    "https://s.shopee.com.br/AUvhghH2gW": "2026-11-19",
    "https://s.shopee.com.br/AUvhmUUHF1": "2026-11-19",
    "https://s.shopee.com.br/AUvhnrLzol": "2026-11-19",
+   "https://s.shopee.com.br/AUvhroODsS": "2026-11-19",
    "https://s.shopee.com.br/BVNt3tuME": "2026-11-15",
    "https://s.shopee.com.br/BVNuLNf2s": "2026-11-15",
    "https://s.shopee.com.br/BVOh2w8ED": "2026-11-15",
@@ -32758,6 +32837,7 @@
    "https://s.shopee.com.br/W8LjcLJBy": "2026-11-19",
    "https://s.shopee.com.br/W8LnuRq1h": "2026-11-19",
    "https://s.shopee.com.br/W8LpXMibe": "2026-11-19",
+   "https://s.shopee.com.br/W8LwyGPEY": "2026-11-19",
    "https://s.shopee.com.br/gReYhJJN3": "2026-11-15",
    "https://s.shopee.com.br/gRfMyVj2E": "2026-11-15",
    "https://s.shopee.com.br/gRfNy2DDV": "2026-11-15",
@@ -32837,6 +32917,8 @@
    "https://s.shopee.com.br/gRlxFig4M": "2026-11-19",
    "https://s.shopee.com.br/gRlxPrpyN": "2026-11-19",
    "https://s.shopee.com.br/gRm4JUXRP": "2026-11-19",
+   "https://s.shopee.com.br/gRm9D94Kz": "2026-11-19",
+   "https://s.shopee.com.br/gRm9snhft": "2026-11-19",
    "https://s.shopee.com.br/qiHwRFEMW": "2026-11-18",
    "https://s.shopee.com.br/qjmg8LgxU": "2026-11-16",
    "https://s.shopee.com.br/ql5Q4bI58": "2026-11-15",
@@ -32996,6 +33078,7 @@
    "https://shopee.com.br/product/615567163/23598712121?pid=affiliates&af_siteid=an_18331400000&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&tm_source=an_18331400000&utm_medium=affiliates": "2026-11-16",
    "https://shopee.com.br/product/737917708/46667989050?pid=affiliates&af_siteid=an_18331400000&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&tm_source=an_18331400000&utm_medium=affiliates": "2026-11-17",
    "https://shopee.com.br/product/742632398/58218628377?pid=affiliates&af_siteid=an_18331400000&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&tm_source=an_18331400000&utm_medium=affiliates": "2026-11-17",
+   "https://shopee.com.br/product/849173580/43306761695?pid=affiliates&af_siteid=an_18331400000&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&tm_source=an_18331400000&utm_medium=affiliates": "2026-11-19",
    "https://shopee.com.br/product/866140887/23233986331?pid=affiliates&af_siteid=an_18331400000&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&tm_source=an_18331400000&utm_medium=affiliates": "2026-11-19",
    "https://shopee.com.br/product/909214589/58270574506?pid=affiliates&af_siteid=an_18331400000&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&tm_source=an_18331400000&utm_medium=affiliates": "2026-11-16",
    "https://shopee.com.br/product/996085577/23795634114?pid=affiliates&af_siteid=an_18331400000&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&tm_source=an_18331400000&utm_medium=affiliates": "2026-11-15",
@@ -33118,6 +33201,7 @@
    "https://tinyurl.com/3r7jr3sa": "2026-11-16",
    "https://tinyurl.com/3vh4ywut": "2026-11-17",
    "https://tinyurl.com/455h5tsu": "2026-11-17",
+   "https://tinyurl.com/4855ymdk": "2026-11-19",
    "https://tinyurl.com/4aru3dfk": "2026-11-19",
    "https://tinyurl.com/4f69edp7": "2026-11-16",
    "https://tinyurl.com/5eppjc8w": "2026-11-18",
@@ -33127,6 +33211,7 @@
    "https://tinyurl.com/jkuunjnt": "2026-11-17",
    "https://tinyurl.com/mswf6t76": "2026-11-16",
    "https://tinyurl.com/mvvuhwwu": "2026-11-16",
+   "https://tinyurl.com/tp6r9ksz": "2026-11-19",
    "https://tinyurl.com/y76rxab7": "2026-11-17",
    "https://tinyurl.com/ytvwtv5t": "2026-11-16",
    "https://tinyurl.com/yvcmmxdh": "2026-11-17",
@@ -33285,6 +33370,7 @@
    "https://www.amazon.com.br/dp/B077PZ6L7C?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-18",
    "https://www.amazon.com.br/dp/B077PZ6L7C?tag=elianeadil092-20": "2026-11-18",
    "https://www.amazon.com.br/dp/B077PZ6L7C?tag=mamaeebebe066-20": "2026-11-15",
+   "https://www.amazon.com.br/dp/B07851F39W?tag=elianeadil092-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0789M146B?tag=elianeadil092-20": "2026-11-17",
    "https://www.amazon.com.br/dp/B0789SHBRL?tag=elianeadil092-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0789SHBRL?tag=mamaeebebe066-20": "2026-11-18",
@@ -33358,6 +33444,7 @@
    "https://www.amazon.com.br/dp/B07DHRL34V?tag=mamaeebebe066-20": "2026-11-18",
    "https://www.amazon.com.br/dp/B07DHRS6RN?tag=mamaeebebe066-20": "2026-11-17",
    "https://www.amazon.com.br/dp/B07DHRV94V?tag=mamaeebebe066-20": "2026-11-15",
+   "https://www.amazon.com.br/dp/B07DHRW8RM?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B07DHS1MD2?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-19",
    "https://www.amazon.com.br/dp/B07DHS1MD2?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B07DHS6SS6?tag=mamaeebebe066-20": "2026-11-16",
@@ -33454,6 +33541,7 @@
    "https://www.amazon.com.br/dp/B07L8X97SR?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B07LBM4STJ?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-18",
    "https://www.amazon.com.br/dp/B07LBM4STJ?tag=mamaeebebe066-20": "2026-11-18",
+   "https://www.amazon.com.br/dp/B07LC1SNRF?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B07LFF4LT2?tag=mamaeebebe066-20": "2026-11-17",
    "https://www.amazon.com.br/dp/B07LGZM6JC?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-18",
    "https://www.amazon.com.br/dp/B07LGZM6JC?tag=mamaeebebe066-20": "2026-11-18",
@@ -33606,6 +33694,7 @@
    "https://www.amazon.com.br/dp/B08DFCF9HW?tag=elianeadil092-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B08DJSPFFX?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-19",
    "https://www.amazon.com.br/dp/B08DJSPFFX?tag=mamaeebebe066-20": "2026-11-18",
+   "https://www.amazon.com.br/dp/B08DJSZL4V?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-19",
    "https://www.amazon.com.br/dp/B08DJSZL4V?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B08DVBJY65?tag=mamaeebebe066-20": "2026-11-18",
    "https://www.amazon.com.br/dp/B08DVWJHJS?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-15",
@@ -33891,6 +33980,8 @@
    "https://www.amazon.com.br/dp/B0BL8HN6CY?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0BLJ4FDT4?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0BLJ4SVWV?tag=mamaeebebe066-20": "2026-11-18",
+   "https://www.amazon.com.br/dp/B0BLJS7ZBW?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-19",
+   "https://www.amazon.com.br/dp/B0BLJS7ZBW?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0BLVT9X7K?tag=elianeadil092-20": "2026-11-18",
    "https://www.amazon.com.br/dp/B0BN15NTGG?tag=mamaeebebe066-20": "2026-11-16",
    "https://www.amazon.com.br/dp/B0BS6PKKV4?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-17",
@@ -34360,6 +34451,7 @@
    "https://www.amazon.com.br/dp/B0FXH6Y9G8?tag=mamaeebebe066-20": "2026-11-18",
    "https://www.amazon.com.br/dp/B0FXN957HN?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-15",
    "https://www.amazon.com.br/dp/B0FXN957HN?tag=mamaeebebe066-20": "2026-11-15",
+   "https://www.amazon.com.br/dp/B0FXNG6MJ5?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0FYJ1RKKP?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0G1CJXH5P?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-17",
    "https://www.amazon.com.br/dp/B0G1CJXH5P?tag=mamaeebebe066-20": "2026-11-17",
@@ -34386,6 +34478,7 @@
    "https://www.amazon.com.br/dp/B0GG4WYRNM?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-15",
    "https://www.amazon.com.br/dp/B0GG4WYRNM?tag=mamaeebebe066-20": "2026-11-15",
    "https://www.amazon.com.br/dp/B0GHP6DWBN?tag=clubebb-20&linkCode=ogi&th=1&psc=1": "2026-11-15",
+   "https://www.amazon.com.br/dp/B0GHP6DWBN?tag=elianeadil092-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0GHP6DWBN?tag=mamaeebebe066-20": "2026-11-15",
    "https://www.amazon.com.br/dp/B0GHPF6M7Z?tag=elianeadil092-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0GJFW5FBQ?tag=mamaeebebe066-20": "2026-11-19",
@@ -34439,6 +34532,7 @@
    "https://www.amazon.com.br/dp/B0GW48ZKYM?tag=mamaeebebe066-20": "2026-11-18",
    "https://www.amazon.com.br/dp/B0GW9KBRP8?tag=mamaeebebe066-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0GWLHZ8ZN?tag=mamaeebebe066-20": "2026-11-16",
+   "https://www.amazon.com.br/dp/B0GWMVJ7P1?tag=elianeadil092-20": "2026-11-19",
    "https://www.amazon.com.br/dp/B0GWN1NDBM?tag=mamaeebebe066-20": "2026-11-17",
    "https://www.amazon.com.br/dp/B0GXC7JNFJ?tag=elianeadil092-20": "2026-11-18",
    "https://www.amazon.com.br/dp/B0GXC7JNFJ?tag=mamaeebebe066-20": "2026-11-18",
@@ -34797,6 +34891,14 @@
     "regra": "infantil",
     "tipo": "catalogo"
    },
+   "MLB19918914": {
+    "ate": "2026-11-21T17:10-03:00",
+    "categoria": "outros",
+    "fonte": "blackoutmamaeebebe",
+    "pos": 30,
+    "regra": "infantil",
+    "tipo": "catalogo"
+   },
    "MLB20662138": {
     "ate": "2026-11-20T11:02-03:00",
     "categoria": "outros",
@@ -35057,6 +35159,14 @@
     "ate": "2026-11-21T10:02-03:00",
     "categoria": "outros",
     "fonte": "blackoutmamaeebebe",
+    "pos": 30,
+    "regra": "infantil",
+    "tipo": "catalogo"
+   },
+   "MLB28580490": {
+    "ate": "2026-11-21T17:10-03:00",
+    "categoria": "outros",
+    "fonte": "descontinhodemamae",
     "pos": 30,
     "regra": "infantil",
     "tipo": "catalogo"
@@ -35830,9 +35940,9 @@
     "tipo": "catalogo"
    },
    "MLB53601923": {
-    "ate": "2026-11-21T16:50-03:00",
+    "ate": "2026-11-21T17:10-03:00",
     "categoria": "outros",
-    "fonte": "clubekotascriancas",
+    "fonte": "blackoutmamaeebebe",
     "pos": 30,
     "regra": "infantil",
     "tipo": "catalogo"
@@ -35935,14 +36045,6 @@
    },
    "MLB56224575": {
     "ate": "2026-11-20T15:17-03:00",
-    "categoria": "outros",
-    "fonte": "clubekotascriancas",
-    "pos": 30,
-    "regra": "infantil",
-    "tipo": "catalogo"
-   },
-   "MLB56462836": {
-    "ate": "2026-11-19T17:14-03:00",
     "categoria": "outros",
     "fonte": "clubekotascriancas",
     "pos": 30,
@@ -36509,14 +36611,6 @@
     "regra": "infantil",
     "tipo": "catalogo"
    },
-   "MLB72907395": {
-    "ate": "2026-11-19T17:14-03:00",
-    "categoria": "outros",
-    "fonte": "blackoutmamaeebebe",
-    "pos": 30,
-    "regra": "infantil",
-    "tipo": "catalogo"
-   },
    "MLB72923704": {
     "ate": "2026-11-20T15:57-03:00",
     "categoria": "outros",
@@ -36789,6 +36883,14 @@
     "regra": "infantil",
     "tipo": "catalogo"
    },
+   "MLB75952852": {
+    "ate": "2026-11-21T17:10-03:00",
+    "categoria": "outros",
+    "fonte": "agirafinhababy",
+    "pos": 30,
+    "regra": "infantil",
+    "tipo": "catalogo"
+   },
    "MLB76425994": {
     "ate": "2026-11-21T10:42-03:00",
     "categoria": "outros",
@@ -37005,14 +37107,6 @@
     "regra": "infantil",
     "tipo": "catalogo"
    },
-   "MLB80160194": {
-    "ate": "2026-11-19T17:14-03:00",
-    "categoria": "outros",
-    "fonte": "clubekotascriancas",
-    "pos": 30,
-    "regra": "infantil",
-    "tipo": "catalogo"
-   },
    "MLB80328135": {
     "ate": "2026-11-20T21:07-03:00",
     "categoria": "outros",
@@ -37089,14 +37183,6 @@
     "ate": "2026-11-20T17:37-03:00",
     "categoria": "outros",
     "fonte": "clubekotascriancas",
-    "pos": 30,
-    "regra": "infantil",
-    "tipo": "catalogo"
-   },
-   "MLB81504518": {
-    "ate": "2026-11-19T16:54-03:00",
-    "categoria": "outros",
-    "fonte": "OfertasdaAdil",
     "pos": 30,
     "regra": "infantil",
     "tipo": "catalogo"
@@ -37213,6 +37299,10 @@
     "ate": "2026-11-20T14:17-03:00",
     "fonte": "boomdescontos"
    },
+   "SHP17445031554": {
+    "ate": "2026-11-21T16:50-03:00",
+    "fonte": "boomdescontos"
+   },
    "SHP17562820154": {
     "ate": "2026-11-20T12:02-03:00",
     "fonte": "shopee_baby"
@@ -37225,12 +37315,12 @@
     "ate": "2026-11-20T09:02-03:00",
     "fonte": "blackoutmamaeebebe"
    },
-   "SHP18298052245": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "boomdescontos"
-   },
    "SHP18299734362": {
     "ate": "2026-11-19T19:34-03:00",
+    "fonte": "boomdescontos"
+   },
+   "SHP18299921716": {
+    "ate": "2026-11-21T16:50-03:00",
     "fonte": "boomdescontos"
    },
    "SHP18397796849": {
@@ -37333,6 +37423,10 @@
     "ate": "2026-11-20T14:17-03:00",
     "fonte": "blackoutmamaeebebe"
    },
+   "SHP19399650709": {
+    "ate": "2026-11-21T16:50-03:00",
+    "fonte": "blackoutmamaeebebe"
+   },
    "SHP19399706800": {
     "ate": "2026-11-20T08:02-03:00",
     "fonte": "blackoutmamaeebebe"
@@ -37388,10 +37482,6 @@
    "SHP19799544918": {
     "ate": "2026-11-21T16:19-03:00",
     "fonte": "boomdescontos"
-   },
-   "SHP19897734097": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "shopee_baby"
    },
    "SHP19955068394": {
     "ate": "2026-11-20T12:22-03:00",
@@ -37524,10 +37614,6 @@
    "SHP20999662937": {
     "ate": "2026-11-21T12:39-03:00",
     "fonte": "clubekotascriancas"
-   },
-   "SHP21199851181": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "economiadasmamaes"
    },
    "SHP21228757905": {
     "ate": "2026-11-20T08:02-03:00",
@@ -37737,10 +37823,6 @@
     "ate": "2026-11-20T18:47-03:00",
     "fonte": "blackoutmamaeebebe"
    },
-   "SHP22295372662": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "clubekotascriancas"
-   },
    "SHP22297072031": {
     "ate": "2026-11-21T13:19-03:00",
     "fonte": "blackoutmamaeebebe"
@@ -37815,6 +37897,10 @@
    },
    "SHP22494631918": {
     "ate": "2026-11-20T20:27-03:00",
+    "fonte": "blackoutmamaeebebe"
+   },
+   "SHP22498033554": {
+    "ate": "2026-11-20T10:22-03:00",
     "fonte": "blackoutmamaeebebe"
    },
    "SHP22498182762": {
@@ -38041,6 +38127,10 @@
     "ate": "2026-11-20T09:22-03:00",
     "fonte": "blackoutmamaeebebe"
    },
+   "SHP22898181497": {
+    "ate": "2026-11-21T16:50-03:00",
+    "fonte": "boomdescontos"
+   },
    "SHP22898218673": {
     "ate": "2026-11-20T10:02-03:00",
     "fonte": "clubekotascriancas"
@@ -38215,10 +38305,6 @@
    },
    "SHP23199132850": {
     "ate": "2026-11-21T11:59-03:00",
-    "fonte": "blackoutmamaeebebe"
-   },
-   "SHP23199139189": {
-    "ate": "2026-11-19T17:14-03:00",
     "fonte": "blackoutmamaeebebe"
    },
    "SHP23233986331": {
@@ -38401,10 +38487,6 @@
     "ate": "2026-11-20T10:42-03:00",
     "fonte": "OfertasdaAdil"
    },
-   "SHP23597734349": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "blackoutmamaeebebe"
-   },
    "SHP23598771618": {
     "ate": "2026-11-21T08:22-03:00",
     "fonte": "economiadasmamaes"
@@ -38557,6 +38639,10 @@
     "ate": "2026-11-21T13:19-03:00",
     "fonte": "shopee_baby"
    },
+   "SHP23998797201": {
+    "ate": "2026-11-20T14:57-03:00",
+    "fonte": "agirafinhababy"
+   },
    "SHP23998822693": {
     "ate": "2026-11-19T19:14-03:00",
     "fonte": "shopee_baby"
@@ -38653,10 +38739,6 @@
     "ate": "2026-11-20T14:57-03:00",
     "fonte": "blackoutmamaeebebe"
    },
-   "SHP41353372162": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "blackoutmamaeebebe"
-   },
    "SHP41480791604": {
     "ate": "2026-11-19T18:34-03:00",
     "fonte": "boomdescontos"
@@ -38721,6 +38803,10 @@
     "ate": "2026-11-20T21:27-03:00",
     "fonte": "blackoutmamaeebebe"
    },
+   "SHP43306761695": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "shopee_baby"
+   },
    "SHP43327284969": {
     "ate": "2026-11-20T10:22-03:00",
     "fonte": "economiadasmamaes"
@@ -38769,6 +38855,10 @@
     "ate": "2026-11-21T10:22-03:00",
     "fonte": "boomdescontos"
    },
+   "SHP45220393966": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "boomdescontos"
+   },
    "SHP45254312639": {
     "ate": "2026-11-21T16:19-03:00",
     "fonte": "blackoutmamaeebebe"
@@ -38805,6 +38895,10 @@
     "ate": "2026-11-20T20:47-03:00",
     "fonte": "blackoutmamaeebebe"
    },
+   "SHP48054927464": {
+    "ate": "2026-11-21T12:39-03:00",
+    "fonte": "agirafinhababy"
+   },
    "SHP48306398651": {
     "ate": "2026-11-20T20:47-03:00",
     "fonte": "blackoutmamaeebebe"
@@ -38832,10 +38926,6 @@
    "SHP49662348557": {
     "ate": "2026-11-21T14:19-03:00",
     "fonte": "clubekotascriancas"
-   },
-   "SHP50351727081": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "economiadasmamaes"
    },
    "SHP50769150509": {
     "ate": "2026-11-20T10:02-03:00",
@@ -39080,10 +39170,6 @@
    "SHP58211595581": {
     "ate": "2026-11-20T08:02-03:00",
     "fonte": "economiadasmamaes"
-   },
-   "SHP58212431677": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "boomdescontos"
    },
    "SHP58212444955": {
     "ate": "2026-11-20T15:37-03:00",
@@ -39437,10 +39523,6 @@
     "ate": "2026-11-20T10:02-03:00",
     "fonte": "blackoutmamaeebebe"
    },
-   "SHP58267196490": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "blackoutmamaeebebe"
-   },
    "SHP58267324430": {
     "ate": "2026-11-20T12:22-03:00",
     "fonte": "clubekotascriancas"
@@ -39725,6 +39807,10 @@
     "fonte": "blackoutmamaeebebe",
     "fora": "resolvido"
    },
+   "Almofada para Pescoço Bebe Conforto fofinha Apoio de Cabeça 100% Algodão": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "OfertasdaAdil"
+   },
    "Amaciante Downy Concentrado Sensitive Hipoalergênico para Roupa de Bebê 1,35L": {
     "ate": "2026-11-20T09:42-03:00",
     "fonte": "blackoutmamaeebebe",
@@ -39778,11 +39864,6 @@
    "Aplique aqui": {
     "ate": "2026-11-20T17:37-03:00",
     "fonte": "descontinhodemamae",
-    "fora": "não achei na API"
-   },
-   "Aproveite o lookinho completo para seu pequeno praia completo para seu pequeno": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "boomdescontos",
     "fora": "não achei na API"
    },
    "Ar Condicionado Inverter Philco 12000 BTUs Frio 220V PAC12FC": {
@@ -39904,11 +39985,6 @@
     "ate": "2026-11-19T17:54-03:00",
     "fonte": "blackoutmamaeebebe",
     "fora": "resolvido"
-   },
-   "Banheira Luxo c/ Suporte Dobrável, Trocador, Saboneteira, Tanque 25L p/ até 30Kg e Mangueira de Escoamento": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "blackoutmamaeebebe",
-    "fora": "não achei na API"
    },
    "Banheira com suporte dobrável, tanque 25 L, até 30Kg - Hercules": {
     "ate": "2026-11-20T12:42-03:00",
@@ -40202,7 +40278,8 @@
    },
    "Body Bebe/ Chefinho/ Terno/ Mesverário/Temático.": {
     "ate": "2026-11-21T16:50-03:00",
-    "fonte": "boomdescontos"
+    "fonte": "boomdescontos",
+    "fora": "resolvido"
    },
    "Body Bebê Meu Primeiro Ano Novo Réveillon Branco Algodão Manga Curta Menino Menina Roupa Fim De Ano": {
     "ate": "2026-11-21T08:02-03:00",
@@ -40223,6 +40300,10 @@
     "ate": "2026-11-20T12:02-03:00",
     "fonte": "boomdescontos",
     "fora": "resolvido"
+   },
+   "Body Bebê Uv50+ Manga Longa Proteção Solar para Praia e Piscina": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "boomdescontos"
    },
    "Body Splash Cheiro de Perigo 200ml Spoiler Fragrância Feminina Perfumada Marcante para Dia e Noite": {
     "ate": "2026-11-20T08:22-03:00",
@@ -40504,11 +40585,6 @@
     "fonte": "OfertasdaAdil",
     "fora": "resolvido"
    },
-   "Caixa de Som Bluetooth JBL Boombox 4, com Auracast, IP68 Bivolt Preta": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "clubekotascriancas",
-    "fora": "resolvido"
-   },
    "Caixa álbum de fotos 15x21 160 Fotos luxo Juta Premium Personalizado com Nome Ideal para Presente": {
     "ate": "2026-11-19T19:34-03:00",
     "fonte": "blackoutmamaeebebe",
@@ -40581,11 +40657,6 @@
    },
    "Camisa Social Manga Longa Masculina Oxford": {
     "ate": "2026-11-20T18:17-03:00",
-    "fonte": "clubekotascriancas",
-    "fora": "resolvido"
-   },
-   "Camiseta Polo Infantil Menino Em Piquet Stretch Malwee": {
-    "ate": "2026-11-19T17:14-03:00",
     "fonte": "clubekotascriancas",
     "fora": "resolvido"
    },
@@ -40819,6 +40890,14 @@
     "fonte": "blackoutmamaeebebe",
     "fora": "resolvido"
    },
+   "Cesta Organizadora De Feltro Para Bebês , Bolsa De Fraldas Com Alça , Tapete Troca De Crianças": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "clubekotascriancas"
+   },
+   "Cesta Organizadora De Feltro Para Bebês, Bolsa De Fraldas Com Alça, Tapete Troca De Crianças": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "blackoutmamaeebebe"
+   },
    "Cesto Dobrável com Alças Quardrado Estampa Bichinhos Infantil Organizador Multiuso": {
     "ate": "2026-11-21T16:30-03:00",
     "fonte": "OfertasdaAdil",
@@ -40828,6 +40907,10 @@
     "ate": "2026-11-19T21:45-03:00",
     "fonte": "blackoutmamaeebebe",
     "fora": "não achei na API"
+   },
+   "Cesto Organizador de Brinquedos Bebê Infantil Quarto Porta Fraldas Roupinhas Enxoval Decoração": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "blackoutmamaeebebe"
    },
    "Cesto Redondo 400 Fios Estampado Organizador Brinquedos Menina Xadrez Rosa": {
     "ate": "2026-11-21T14:59-03:00",
@@ -41064,11 +41147,6 @@
     "fonte": "descontinhodemamae",
     "fora": "não achei na API"
    },
-   "Conjunto Saída de Maternidade Tricot Luxo 6 Peças Tamanho P 1 a 3 meses": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "blackoutmamaeebebe",
-    "fora": "resolvido"
-   },
    "Conjunto Sti Lil Infanto Juvenil Calça Moletinho Casaco com Capuz": {
     "ate": "2026-11-20T18:47-03:00",
     "fonte": "boomdescontos",
@@ -41076,7 +41154,8 @@
    },
    "Conjunto Suedine 100% Algodão Body + Calça Estampa Safari Minimalista Animais Enxoval Rn Ao Gg": {
     "ate": "2026-11-21T16:50-03:00",
-    "fonte": "boomdescontos"
+    "fonte": "boomdescontos",
+    "fora": "não achei na API"
    },
    "Conjunto Travessa Saladeira Baixelas Para Servir Ryo Maresia Areia Oxford Porcelanas": {
     "ate": "2026-11-20T12:57-03:00",
@@ -42163,11 +42242,6 @@
     "fonte": "blackoutmamaeebebe",
     "fora": "resolvido"
    },
-   "Kit 2 Macacão Bebê Com Zíper 100% Algodão": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "blackoutmamaeebebe",
-    "fora": "resolvido"
-   },
    "Kit 2 Macacão Bebê Zíper Frontal Suedine Liso e Estampado sem Pé Enxoval Unissex Rn/P/M/G": {
     "ate": "2026-11-19T18:34-03:00",
     "fonte": "boomdescontos",
@@ -42221,11 +42295,6 @@
    "Kit 2 Odorizantes de Roupas Comfort Boom Perfume em Cristais Explosão de Frescor 275g": {
     "ate": "2026-11-20T12:57-03:00",
     "fonte": "OfertasdaAdil",
-    "fora": "resolvido"
-   },
-   "Kit 2 Pares Sandália Infantil Papete Menina Casual Leve Lançamento": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "blackoutmamaeebebe",
     "fora": "resolvido"
    },
    "Kit 2 Pares Tênis Infantil Feminino Borboleta Bordada para Escola e Passeio Estilo Moderno": {
@@ -42384,8 +42453,8 @@
     "fora": "não achei na API"
    },
    "Kit 3 Mochila Grande + Mini Mochila + Bolsa Mão Conjunto Versátil para Estudantes Viagem Escola Reforçada Notebook Bolsa": {
-    "ate": "2026-11-21T15:59-03:00",
-    "fonte": "boomdescontos",
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "agirafinhababy",
     "fora": "não achei na API"
    },
    "Kit 3 Pares Sandália Babuche Infantil Menino": {
@@ -42593,11 +42662,6 @@
     "fonte": "economiadasmamaes",
     "fora": "resolvido"
    },
-   "Kit 5 Macacão Estampado Menina Roupa Infantil Bebê Zíper Algodão Macio": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "blackoutmamaeebebe",
-    "fora": "resolvido"
-   },
    "Kit 5 Ou 3 Calças Legging Infantil Cotton Algodão Confortável e Flexível Lisas Estampadas": {
     "ate": "2026-11-20T16:57-03:00",
     "fonte": "boomdescontos",
@@ -42693,11 +42757,6 @@
     "fonte": "boomdescontos",
     "fora": "resolvido"
    },
-   "Kit 600 Lenço Umedecido Baby Club Aloe Vera Caixa C/12 ou 6 Pack": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "boomdescontos",
-    "fora": "resolvido"
-   },
    "Kit 7 Saquinhos Maternidade Organizador Mala Bebê 27 x 33 MALA/VIAGEM/ROUPA MOLHADA e SECA": {
     "ate": "2026-11-20T08:02-03:00",
     "fonte": "blackoutmamaeebebe",
@@ -42724,8 +42783,9 @@
     "fora": "resolvido"
    },
    "Kit 72 Repelente Adesivo de Citronela Proteção Natural Contra Mosquitos Infantil": {
-    "ate": "2026-11-21T16:50-03:00",
-    "fonte": "OfertasdaAdil"
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "boomdescontos",
+    "fora": "resolvido"
    },
    "Kit 8 Faixinhas de Cabelo Croche/Flores para Bebê Rn Ate 2 Anos na Meia de Seda": {
     "ate": "2026-11-21T12:59-03:00",
@@ -42781,6 +42841,10 @@
     "ate": "2026-11-21T08:42-03:00",
     "fonte": "clubekotascriancas",
     "fora": "resolvido"
+   },
+   "Kit Berço Americano + NINHO bordado Meninas LINHA LUXO JARDIM": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "blackoutmamaeebebe"
    },
    "Kit Berço Americano 12Pçs personalizado com Nome bordado Meninas LINHA LUXO JARDIM": {
     "ate": "2026-11-21T10:22-03:00",
@@ -42941,11 +43005,6 @@
     "ate": "2026-11-20T08:42-03:00",
     "fonte": "blackoutmamaeebebe",
     "fora": "não achei na API"
-   },
-   "Kit Clipe de Cabelo Estrela Dopamina Presilhas Coloridas Antiderrapantes/Grampo Fofo": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "boomdescontos",
-    "fora": "resolvido"
    },
    "Kit Coala Coleção de Lançamentos - Limpadores Perfumados Coala 500ml": {
     "ate": "2026-11-20T09:42-03:00",
@@ -43142,13 +43201,17 @@
     "fonte": "clubekotascriancas",
     "fora": "resolvido"
    },
+   "Kit Mamãe e Bebê Completo Natura Shampoo, Condicionador, Colônia e Sabonetes 5 itens": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "clubekotascriancas"
+   },
    "Kit Mamãe e Bebê completo com sabonete em barra": {
     "ate": "2026-11-20T20:27-03:00",
     "fonte": "blackoutmamaeebebe",
     "fora": "resolvido"
    },
    "Kit Manicure Completo com Estojo para Bebê Recém-nascido Buba Original Tesoura Lixa Cortador": {
-    "ate": "2026-11-20T16:17-03:00",
+    "ate": "2026-11-21T17:10-03:00",
     "fonte": "blackoutmamaeebebe",
     "fora": "resolvido"
    },
@@ -43167,9 +43230,14 @@
     "fonte": "economiadasmamaes",
     "fora": "resolvido"
    },
+   "Kit Marmita Infantil com Copo 250ml Canudo e Cordinha Talher e 3 Divisórias Removíveis Escolar Fácil": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "economiadasmamaes"
+   },
    "Kit Massinha de modelar Minnie com molde e acessórios brinquedos Disney": {
     "ate": "2026-11-21T16:50-03:00",
-    "fonte": "boomdescontos"
+    "fonte": "boomdescontos",
+    "fora": "resolvido"
    },
    "Kit Maternidade Com 3 Peças Mala Luxo, Material Térmico e Impermeável + chaveiros personalizados Universo Baby": {
     "ate": "2026-11-20T12:42-03:00",
@@ -43260,6 +43328,10 @@
     "ate": "2026-11-19T19:54-03:00",
     "fonte": "boomdescontos",
     "fora": "resolvido"
+   },
+   "Kit Pano de Boca 12 unidades 30x30cm 100%algodao": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "economiadasmamaes"
    },
    "Kit Poltrona e Puff Bege Suede Decorativo Amamentação Pés Palito Fibra de Silicone - Sentta Furniture": {
     "ate": "2026-11-20T12:22-03:00",
@@ -43355,6 +43427,10 @@
     "ate": "2026-11-19T19:34-03:00",
     "fonte": "blackoutmamaeebebe",
     "fora": "resolvido"
+   },
+   "Kit Wella Professionals Invigo Nutri-Enrich Shampoo Condicionador e Válvula": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "OfertasdaAdil"
    },
    "Kit Whey Core 70% de Proteína Concentrada -900g + Pré-Treino Evoluition 300g + Creatina 150g -Soldiers Nutrition": {
     "ate": "2026-11-20T10:22-03:00",
@@ -43475,11 +43551,6 @@
     "ate": "2026-11-20T19:07-03:00",
     "fonte": "blackoutmamaeebebe",
     "fora": "resolvido"
-   },
-   "Lanolina EllaMamy 50g Creme Amamentação Protege Seios e Previne Rachaduras nos Mamilos": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "boomdescontos",
-    "fora": "não achei na API"
    },
    "Laptop Infantil Bilíngue com Mouse Brinquedo Educativo 3 Anos Menina Rosa Mini": {
     "ate": "2026-11-19T19:34-03:00",
@@ -43718,7 +43789,8 @@
    },
    "MODELO LINDO, PRÁTICO E FUNCIONAL Disponível em outras cores": {
     "ate": "2026-11-21T16:50-03:00",
-    "fonte": "clubekotascriancas"
+    "fonte": "clubekotascriancas",
+    "fora": "não achei na API"
    },
    "Macacão Com Fator Proteção FPU50+ Bebê Protegido no Verão": {
     "ate": "2026-11-20T12:57-03:00",
@@ -43777,11 +43849,13 @@
    },
    "Manta Bebe Saida de Maternidade Antialergica Premium Diversas cores": {
     "ate": "2026-11-21T16:50-03:00",
-    "fonte": "boomdescontos"
+    "fonte": "boomdescontos",
+    "fora": "não achei na API"
    },
    "Manta Bebe Saida de Maternidade Antialergica Premium Menino Menina Macia Soft Bolha Pipoquinha": {
     "ate": "2026-11-21T16:50-03:00",
-    "fonte": "blackoutmamaeebebe"
+    "fonte": "blackoutmamaeebebe",
+    "fora": "resolvido"
    },
    "Manta Bebê Personalizada com Nome Bordado Maternidade Tricô menino ou menina Saída de maternidade": {
     "ate": "2026-11-20T18:47-03:00",
@@ -43828,11 +43902,6 @@
     "fonte": "boomdescontos",
     "fora": "resolvido"
    },
-   "Meia calça infantil com coração de renda Lavável sem perder o formato Pernas difíceis de respirar": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "economiadasmamaes",
-    "fora": "resolvido"
-   },
    "Meia de Renda Menina com Babado - Batizado": {
     "ate": "2026-11-21T10:42-03:00",
     "fonte": "economiadasmamaes",
@@ -43862,6 +43931,10 @@
     "ate": "2026-11-20T09:42-03:00",
     "fonte": "blackoutmamaeebebe",
     "fora": "resolvido"
+   },
+   "Micro-ondas Mondial Mo 01 21 B Potencia 1200w 60hz 21 Litros": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "clubekotascriancas"
    },
    "Micro-ondas Philco 33L Pintura Limpa Fácil PM36": {
     "ate": "2026-11-20T11:02-03:00",
@@ -43938,10 +44011,9 @@
     "fonte": "economiadasmamaes",
     "fora": "resolvido"
    },
-   "Mochila Escolar Xeryus 17 Spider Man 14952 Azul e Vermelho - Infantil": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "economiadasmamaes",
-    "fora": "resolvido"
+   "Mochila Escolar de rodinha Minnie + Lancheira TÉRMICA + Estojo": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "agirafinhababy"
    },
    "Mochila Infantil Bordada Personalizada Com Nome De Veludo Para Meninos E Meninas Fofa De Urso Escola Viagens": {
     "ate": "2026-11-19T17:54-03:00",
@@ -43960,7 +44032,8 @@
    },
    "Mochila Multifuncional Para Fraldas De Mamãe, À Prova D água, Bolsa Maternidade Com Suporte Garrafa, Grande Armazenam": {
     "ate": "2026-11-21T16:50-03:00",
-    "fonte": "blackoutmamaeebebe"
+    "fonte": "blackoutmamaeebebe",
+    "fora": "não achei na API"
    },
    "Moda Toalha de Banho Bebê Toalha de Infantil Vestível Absorventede Secagem Rápida para Crianças Super Macia": {
     "ate": "2026-11-20T20:27-03:00",
@@ -44072,6 +44145,10 @@
     "fonte": "boomdescontos",
     "fora": "não achei na API"
    },
+   "Organizador de Brinquedos Bancada Infantil 3 Gavetas Com Rodinhas em MDF": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "blackoutmamaeebebe"
+   },
    "PERSONALIZE COM AS FOTOS DE QUEM VOCÊ MAIS AMA Já garante esse enfeite lindo para a sua árvore de Natal": {
     "ate": "2026-11-20T14:57-03:00",
     "fonte": "clubekotascriancas",
@@ -44139,7 +44216,8 @@
    },
    "Penteadeira suspensa escrivaninha infantil com espelho formato de flor em MDF": {
     "ate": "2026-11-21T16:50-03:00",
-    "fonte": "boomdescontos"
+    "fonte": "boomdescontos",
+    "fora": "resolvido"
    },
    "Peça já essa peça incrível e estilosa": {
     "ate": "2026-11-19T17:34-03:00",
@@ -44151,21 +44229,33 @@
     "fonte": "boomdescontos",
     "fora": "não achei na API"
    },
+   "Pijama Feminino Amamentação Curto Para Gestantes Pós Parto Verão com Renda Ultra Confort": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "blackoutmamaeebebe"
+   },
+   "Pijama Feminino Amamentação Curto Para Gestantes Pós Parto Verão com Renda Ultra Confort.": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "clubekotascriancas"
+   },
    "Pijama Feminino Amamentação Pós-Parto Gestantes Para Dormir no Verão": {
     "ate": "2026-11-21T12:39-03:00",
-    "fonte": "agirafinhababy"
+    "fonte": "agirafinhababy",
+    "fora": "resolvido"
    },
    "Pijama Feminino Americano Botões Frente Manga curta com Calça Algodão Amamentação Verde Poá": {
     "ate": "2026-11-20T10:22-03:00",
-    "fonte": "blackoutmamaeebebe"
+    "fonte": "blackoutmamaeebebe",
+    "fora": "resolvido"
    },
    "Pijama Infantil Estampa Sortida Kids Menina Menino Criança Regata Estampado Verão Manga Curta Calor Roupa Dormir": {
     "ate": "2026-11-21T08:02-03:00",
-    "fonte": "economiadasmamaes"
+    "fonte": "economiadasmamaes",
+    "fora": "não achei na API"
    },
    "Pijama Infantil Feminino Verão Capivara Capyclub": {
     "ate": "2026-11-20T14:57-03:00",
-    "fonte": "agirafinhababy"
+    "fonte": "agirafinhababy",
+    "fora": "resolvido"
    },
    "Pijama Kigurumi Infantil Personagens Fantasia": {
     "ate": "2026-11-19T18:54-03:00",
@@ -44248,7 +44338,7 @@
     "fonte": "boomdescontos"
    },
    "Poltrona de Amamentação decorativa em Bouclé com Puff para Quarto de Bebê": {
-    "ate": "2026-11-20T16:57-03:00",
+    "ate": "2026-11-21T17:10-03:00",
     "fonte": "blackoutmamaeebebe"
    },
    "Poltrona de Amamentação e Descanso com Balanço e Puff no SUEDE, LINHO, BOUCLÉ HELENA": {
@@ -44362,6 +44452,10 @@
    "Quadriciclo Infantil Carrinho De Passeio Com Empurrador Haste Pedal Motoquinha Maral": {
     "ate": "2026-11-20T09:22-03:00",
     "fonte": "blackoutmamaeebebe"
+   },
+   "Quadriciclo Infantil Carrinho de Passeio com Empurrador Musical e Farol Brinquedo Andador Multmaxx": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "agirafinhababy"
    },
    "Quadriciclo para Criança Totokinha Sport com Encaixe Geométrico 3 Cores": {
     "ate": "2026-11-21T13:59-03:00",
@@ -44619,17 +44713,9 @@
     "ate": "2026-11-21T09:22-03:00",
     "fonte": "babypromokids"
    },
-   "Sandália Baby MEL Sandália Infantil Menina Jelly Aranha Confortável Macia Antiderrapante Sandalinha Bebê Menina Passeio": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "blackoutmamaeebebe"
-   },
    "Sandália Chinelo Botons Ursinho Lançamento Confortável 23/24AO35/36": {
     "ate": "2026-11-20T08:22-03:00",
     "fonte": "economiadasmamaes"
-   },
-   "Sandália Infantil Confortável Leve Macio Para Passeio Verão": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "blackoutmamaeebebe"
    },
    "Sandália Infantil Feminina Branca com Strass Brilho e Elegância Casual Confortável": {
     "ate": "2026-11-21T11:39-03:00",
@@ -44787,10 +44873,6 @@
     "ate": "2026-11-19T20:25-03:00",
     "fonte": "clubekotascriancas"
    },
-   "Saída maternidade Vestido Menina Listra Laço e Rendas com calça tamanho RN.": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "blackoutmamaeebebe"
-   },
    "Seu bebê mais limpinho em todas as refeições": {
     "ate": "2026-11-20T12:02-03:00",
     "fonte": "boomdescontos"
@@ -44947,10 +45029,6 @@
     "ate": "2026-11-20T10:42-03:00",
     "fonte": "boomdescontos"
    },
-   "Tenis Baby Renucci Menina Menino Star Bebe Confortavel": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "boomdescontos"
-   },
    "Tenis Infantil Led Menino Aranha": {
     "ate": "2026-11-20T10:02-03:00",
     "fonte": "boomdescontos"
@@ -45021,6 +45099,10 @@
    },
    "Toalha de Banho Bebê Secagem Rápida Macia": {
     "ate": "2026-11-21T08:02-03:00",
+    "fonte": "boomdescontos"
+   },
+   "Toalha de Banho Para Bebê 100% algodão Com Capuz": {
+    "ate": "2026-11-21T17:10-03:00",
     "fonte": "boomdescontos"
    },
    "Toalha de Banho Para Bebê 100% algodão Com Capuz Super Macia Absorvente Para Recém-nascidos Crianças Para Banho": {
@@ -45143,6 +45225,10 @@
     "ate": "2026-11-20T17:37-03:00",
     "fonte": "economiadasmamaes"
    },
+   "Tênis infantil Menino Menina Tênis casual de malha estudante de corrida com Com Luz LED que acende ao pisar": {
+    "ate": "2026-11-21T17:10-03:00",
+    "fonte": "blackoutmamaeebebe"
+   },
    "Tênis infantil Sapatos infantis casuais para meninos Bebê 1-10 Anos Moda tênis de corrida para meninas Leve e macio": {
     "ate": "2026-11-20T17:17-03:00",
     "fonte": "economiadasmamaes"
@@ -45191,25 +45277,9 @@
     "ate": "2026-11-21T16:50-03:00",
     "fonte": "blackoutmamaeebebe"
    },
-   "Vestido Bordado 100% algodão - Pronta Entrega": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "blackoutmamaeebebe"
-   },
-   "Vestido Bordado 100% algodão - Pronta Entrega.": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "clubekotascriancas"
-   },
-   "Vestido De Festa Infantil Feminino WFRV Para Aniversário/Casamento/Princesa/Natal": {
-    "ate": "2026-11-19T17:14-03:00",
-    "fonte": "economiadasmamaes"
-   },
    "Vestido Feminino Curto Estampado com Alça de Regulagem e Elastex": {
     "ate": "2026-11-21T14:59-03:00",
     "fonte": "OfertasdaAdil"
-   },
-   "Vestido Infantil Bebê Bordado Delicado Menina M G 1 Ano Vestido Baby Bordado Meninas Vestido Aarração lateral": {
-    "ate": "2026-11-19T16:54-03:00",
-    "fonte": "blackoutmamaeebebe"
    },
    "Vestido Infantil Bebê Menina Verde Vermelho Rosa Azul Natal 100% Algodão Celina Diversas Cores": {
     "ate": "2026-11-21T15:59-03:00",
@@ -45426,7 +45496,7 @@
   }
  },
  "fila_link": {
-  "em": "2026-11-19T16:50-03:00",
+  "em": "2026-11-19T17:10-03:00",
   "itens": [
    {
     "desconto": 0.607,
@@ -45443,6 +45513,14 @@
     "no_lote": false,
     "preco": 53.5,
     "titulo": "Natura Papai E Bebê - Kit Presente Colônias - 2 X 50ml"
+   },
+   {
+    "desconto": 0.755,
+    "espelho": false,
+    "id": "MLB69559107",
+    "no_lote": false,
+    "preco": 18.99,
+    "titulo": "Envelope Com 105 Figurinhas Álbum Copa Do Mundo 2026"
    },
    {
     "desconto": 0.515,
@@ -45467,14 +45545,6 @@
     "no_lote": false,
     "preco": 509.89,
     "titulo": "Berço Portátil Bebê Acoplado Co-bed Connect Maxi Baby - Bege"
-   },
-   {
-    "desconto": 0.432,
-    "espelho": true,
-    "id": "MLB59323863",
-    "no_lote": true,
-    "preco": 1063.21,
-    "titulo": "Travel System Carrinho Com Bebê Conforto Rio 22 Mon Amour Burigotto"
    },
    {
     "desconto": 0.401,
@@ -45515,14 +45585,6 @@
     "no_lote": false,
     "preco": 69.23,
     "titulo": "Kit Granado Bebê Hora do Banho Trio Shampoo Condicionador Sabonete Líquido"
-   },
-   {
-    "desconto": 0.628,
-    "espelho": false,
-    "id": "MLB35938057",
-    "no_lote": false,
-    "preco": 29.0,
-    "titulo": "2 Trava Tranca Cadeado P/ Geladeira Armário Guarda Roupa Kit Cor Branco"
    },
    {
     "desconto": 0.341,
@@ -45581,6 +45643,14 @@
     "titulo": "Berço Americano 3 em 1 para Colchão 70x130cm Quindim Multimóveis BB0536PA Cor Br"
    },
    {
+    "desconto": 0.222,
+    "espelho": true,
+    "id": "MLB59323863",
+    "no_lote": true,
+    "preco": 1089.0,
+    "titulo": "Travel System Carrinho Com Bebê Conforto Rio 22 Mon Amour Burigotto"
+   },
+   {
     "desconto": 0.522,
     "espelho": false,
     "id": "MLB24838553",
@@ -45629,11 +45699,11 @@
     "titulo": "Escova de dente infantil Mam Baby's Brush 6+ meses cor rosa"
    }
   ],
-  "total": 76
+  "total": 73
  },
  "fraldas_enviado": "2026-11-19",
  "fraldas_ml": {
-  "em": "2026-11-19T16:50-03:00",
+  "em": "2026-11-19T17:10-03:00",
   "itens": [
    {
     "id": "MLB18392608",
@@ -45876,9 +45946,9 @@
   },
   "2026-11-19": {
    "com_cupom": 4,
-   "cupons": 9,
-   "posts": 60,
-   "shopee": 30
+   "cupons": 11,
+   "posts": 64,
+   "shopee": 32
   }
  },
  "links": {
@@ -47752,8 +47822,8 @@
   "2026-11-18": 2,
   "2026-11-19": 2
  },
- "membros_lido_em": "2026-11-19T16",
- "numeros_em": "2026-11-19T16:50-03:00",
+ "membros_lido_em": "2026-11-19T17",
+ "numeros_em": "2026-11-19T17:10-03:00",
  "pacote_enviado": "2026-11-08",
  "pacote_usados": {
   "MLB17876024": "2026-11-08",
@@ -47931,9 +48001,9 @@
    "titulo": "Mustela Hydra creme hidratante bebê com palha orgânica"
   },
   "MLB19569079": {
-   "desconto": 0.409,
-   "preco": 259.9,
-   "quando": "2026-11-07T21:02-03:00",
+   "desconto": 0.449,
+   "preco": 242.39,
+   "quando": "2026-11-19T17:10-03:00",
    "titulo": "Cama Elástica Pula Pula Trampolim JustFun 1,40m com Rede de Proteção e 36 Molas"
   },
   "MLB19694274": {
@@ -48511,9 +48581,9 @@
    "titulo": "Brinquedo Pelúcia Infantil Ursinho Reza Bege 18056 - Buba"
   },
   "MLB35090823": {
-   "desconto": 0.283,
-   "preco": 128.99,
-   "quando": "2026-11-15T09:02-03:00",
+   "desconto": 0.352,
+   "preco": 116.6,
+   "quando": "2026-11-19T17:10-03:00",
    "titulo": "Fisher-price Tablet De Aprendizagem Cresce Comigo - Mattel"
   },
   "MLB35340738": {
@@ -50812,6 +50882,21 @@
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
+  "1209": {
+   "blocos": [
+    {
+     "codigo": "MELITEMCUPOM",
+     "html": "<b>🎟️ MELITEMCUPOM</b> 👉 <b>30% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 23/11\n👉 <a href=\"https://bit.ly/4AHf4aD\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "PARAVC",
+     "html": "<b>🎟️ PARAVC</b> 👉 <b>30% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 23/11\n👉 <a href=\"https://bit.ly/4kZIyMb\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-19T17:17-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
   "152": {
    "blocos": [
     {
@@ -52962,6 +53047,90 @@
     "tipo": null,
     "titulo": "Coloring Book Booboo Goods Livro de Desenho Ursinhos Cute A5 50 Folhas 180g para Colorir e Pintar",
     "vendas": 1263
+   },
+   {
+    "a_partir": false,
+    "categoria": "brinquedo",
+    "cupom": false,
+    "de": 439.9,
+    "fonte": null,
+    "hora": "17:10",
+    "id": "MLB19569079",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_691563-MLA118345386152_102026-F.jpg",
+    "link": "https://meli.la/2nSqsJA",
+    "link_wa": "https://meli.la/2nSqsJA",
+    "loja": "ml",
+    "normal": null,
+    "nota": 0,
+    "preco": 242.39,
+    "repete": null,
+    "selo": null,
+    "tipo": "catalogo",
+    "titulo": "Cama Elástica Pula Pula Trampolim JustFun 1,40m com Rede de Proteção e 36 Molas",
+    "vendas": 0
+   },
+   {
+    "a_partir": false,
+    "categoria": "brinquedo",
+    "cupom": false,
+    "de": 179.99,
+    "fonte": null,
+    "hora": "17:10",
+    "id": "MLB35090823",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_930205-MLA99502382540_112025-F.jpg",
+    "link": "https://meli.la/1bpKoJg",
+    "link_wa": "https://meli.la/1bpKoJg",
+    "loja": "ml",
+    "normal": null,
+    "nota": 0,
+    "preco": 116.6,
+    "repete": null,
+    "selo": null,
+    "tipo": "catalogo",
+    "titulo": "Fisher-price Tablet De Aprendizagem Cresce Comigo - Mattel",
+    "vendas": 0
+   },
+   {
+    "a_partir": false,
+    "categoria": "quarto",
+    "cupom": false,
+    "de": null,
+    "fonte": "economiadasmamaes",
+    "hora": "17:20",
+    "id": "SHP18899359612",
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-7r98o-lyz4fmwj7nsx04",
+    "link": "https://s.shopee.com.br/7VI6JrW4Sv",
+    "link_wa": "https://s.shopee.com.br/6VPZ81ZStt",
+    "loja": "shopee",
+    "normal": null,
+    "nota": 4.9,
+    "preco": 29.99,
+    "repete": null,
+    "selo": null,
+    "tipo": null,
+    "titulo": "Kit Brinquedo Bebe Chocalho Mordedor Silicone Macio Bola Colorida 8 Peça Presente Para Menina e Menino Móbile ",
+    "vendas": 699
+   },
+   {
+    "a_partir": false,
+    "categoria": "",
+    "cupom": false,
+    "de": null,
+    "fonte": "blackoutmamaeebebe",
+    "hora": "17:20",
+    "id": "SHP42978496587",
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-81zuo-ml5ciwtfztomc0",
+    "link": "https://s.shopee.com.br/gRmBe0O8G",
+    "link_wa": "https://s.shopee.com.br/1BO2mYyU7P",
+    "loja": "shopee",
+    "normal": null,
+    "nota": 4.8,
+    "preco": 60.9,
+    "repete": null,
+    "selo": null,
+    "tipo": null,
+    "titulo": "Kit 6 Cuecas Boxer Infantil Polo Cotton 100% Algodão Forro Duplo Confortável",
+    "vendas": 1830
    }
   ]
  },
@@ -59607,6 +59776,30 @@
    "2026-11-19T16:27-03:00",
    8.0,
    "Coloring Book Booboo Goods Livro de Desenho Ursinhos Cute A5 50 Folhas 180g para"
+  ],
+  [
+   "MLB19569079",
+   "2026-11-19T17:10-03:00",
+   242.39,
+   "Cama Elástica Pula Pula Trampolim JustFun 1,40m com Rede de Proteção e 36 Molas"
+  ],
+  [
+   "MLB35090823",
+   "2026-11-19T17:10-03:00",
+   116.6,
+   "Fisher-price Tablet De Aprendizagem Cresce Comigo - Mattel"
+  ],
+  [
+   "SHP18899359612",
+   "2026-11-19T17:20-03:00",
+   29.99,
+   "Kit Brinquedo Bebe Chocalho Mordedor Silicone Macio Bola Colorida 8 Peça Present"
+  ],
+  [
+   "SHP42978496587",
+   "2026-11-19T17:20-03:00",
+   60.9,
+   "Kit 6 Cuecas Boxer Infantil Polo Cotton 100% Algodão Forro Duplo Confortável"
   ]
  ],
  "precos": {
@@ -64103,11 +64296,11 @@
     ],
     [
      "2026-11-19",
-     69.9
+     64.09
     ],
     [
      "2026-11-19",
-     64.09
+     69.9
     ]
    ],
    "min": 59.9
@@ -65862,6 +66055,10 @@
     [
      "2026-11-19",
      65.0
+    ],
+    [
+     "2026-11-19",
+     63.29
     ]
    ],
    "min": 39.77
@@ -66559,11 +66756,11 @@
    "historico": [
     [
      "2026-11-19",
-     29.54
+     31.23
     ],
     [
      "2026-11-19",
-     31.23
+     29.54
     ]
    ],
    "min": 29.54
@@ -67761,9 +67958,13 @@
     [
      "2026-11-18",
      19.3
+    ],
+    [
+     "2026-11-19",
+     18.9
     ]
    ],
-   "min": 19.3
+   "min": 18.9
   },
   "MLB24708509": {
    "historico": [
@@ -68795,6 +68996,10 @@
     [
      "2026-11-19",
      702.0
+    ],
+    [
+     "2026-11-19",
+     738.0
     ]
    ],
    "min": 600.0
@@ -68925,9 +69130,13 @@
     [
      "2026-11-17",
      329.99
+    ],
+    [
+     "2026-11-19",
+     314.0
     ]
    ],
-   "min": 329.99
+   "min": 314.0
   },
   "MLB26134722": {
    "historico": [
@@ -70206,6 +70415,10 @@
     [
      "2026-11-19",
      115.7
+    ],
+    [
+     "2026-11-19",
+     119.0
     ]
    ],
    "min": 113.9
@@ -78431,11 +78644,11 @@
     ],
     [
      "2026-11-19",
-     253.96
+     219.0
     ],
     [
      "2026-11-19",
-     219.0
+     253.96
     ]
    ],
    "min": 219.0
@@ -79665,11 +79878,11 @@
     ],
     [
      "2026-11-19",
-     28.26
+     32.9
     ],
     [
      "2026-11-19",
-     32.9
+     28.26
     ]
    ],
    "min": 27.55
@@ -81594,15 +81807,15 @@
     ],
     [
      "2026-11-19",
-     3975.14
-    ],
-    [
-     "2026-11-19",
      4259.0
     ],
     [
      "2026-11-19",
      4579.9
+    ],
+    [
+     "2026-11-19",
+     3975.14
     ]
    ],
    "min": 3965.0
@@ -82951,6 +83164,10 @@
     [
      "2026-11-19",
      20.36
+    ],
+    [
+     "2026-11-19",
+     19.9
     ]
    ],
    "min": 16.8
@@ -83191,11 +83408,11 @@
     ],
     [
      "2026-11-19",
-     1089.0
+     1063.21
     ],
     [
      "2026-11-19",
-     1063.21
+     1089.0
     ]
    ],
    "min": 1063.21
@@ -83986,6 +84203,10 @@
     [
      "2026-11-12",
      409.9
+    ],
+    [
+     "2026-11-19",
+     413.65
     ]
    ],
    "min": 367.91
@@ -85910,6 +86131,10 @@
     [
      "2026-11-18",
      565.0
+    ],
+    [
+     "2026-11-19",
+     529.9
     ]
    ],
    "min": 426.69
@@ -88422,6 +88647,10 @@
     [
      "2026-11-16",
      76.53
+    ],
+    [
+     "2026-11-19",
+     78.9
     ]
    ],
    "min": 74.17
@@ -89283,11 +89512,11 @@
    "historico": [
     [
      "2026-11-19",
-     18.99
+     50.0
     ],
     [
      "2026-11-19",
-     50.0
+     18.99
     ]
    ],
    "min": 18.99
@@ -97134,6 +97363,10 @@
     [
      "2026-11-19",
      329.0
+    ],
+    [
+     "2026-11-19",
+     324.0
     ]
    ],
    "min": 252.99
@@ -113404,6 +113637,10 @@
     [
      "2026-11-19",
      39.98
+    ],
+    [
+     "2026-11-19",
+     39.99
     ]
    ],
    "min": 39.98
@@ -115254,6 +115491,10 @@
     [
      "2026-11-18",
      20.0
+    ],
+    [
+     "2026-11-19",
+     26.9
     ]
    ],
    "min": 20.0
@@ -129333,6 +129574,10 @@
     [
      "2026-11-19",
      21.99
+    ],
+    [
+     "2026-11-19",
+     22.91
     ]
    ],
    "min": 21.99
@@ -138155,7 +138400,7 @@
   ]
  },
  "resumo_enviado": "2026-11-18",
- "rodada_n": 340,
+ "rodada_n": 341,
  "shopee": {
   "acompanhados": {
    "SHP10215035738": {
@@ -138164,7 +138409,7 @@
    },
    "SHP10968517012": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:51-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP11090547065": {
     "ate": "2026-12-19",
@@ -138172,7 +138417,7 @@
    },
    "SHP11537046159": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:51-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP11742437515": {
     "ate": "2026-12-18",
@@ -138192,7 +138437,7 @@
    },
    "SHP12814967635": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:51-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP13047203639": {
     "ate": "2026-12-19",
@@ -138204,7 +138449,7 @@
    },
    "SHP13283726155": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:51-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP13604313647": {
     "ate": "2026-12-19",
@@ -138216,7 +138461,7 @@
    },
    "SHP13875263387": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP14066947765": {
     "ate": "2026-12-19",
@@ -138228,7 +138473,7 @@
    },
    "SHP14373993934": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:51-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP14447766572": {
     "ate": "2026-12-19",
@@ -138252,7 +138497,7 @@
    },
    "SHP14632932375": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:51-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP14748104159": {
     "ate": "2026-12-19",
@@ -138280,7 +138525,7 @@
    },
    "SHP15289365427": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:51-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP15691271888": {
     "ate": "2026-12-19",
@@ -138320,7 +138565,7 @@
    },
    "SHP17180642490": {
     "ate": "2026-12-18",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP17301365970": {
     "ate": "2026-12-19",
@@ -138404,7 +138649,7 @@
    },
    "SHP18298128179": {
     "ate": "2026-12-15",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP18298978076": {
     "ate": "2026-12-18",
@@ -138488,7 +138733,7 @@
    },
    "SHP18799006736": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:00-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP18799096812": {
     "ate": "2026-12-19",
@@ -138508,7 +138753,7 @@
    },
    "SHP18897985217": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP18898868524": {
     "ate": "2026-12-19",
@@ -138520,7 +138765,7 @@
    },
    "SHP18899359612": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP18899381113": {
     "ate": "2026-12-19",
@@ -138540,7 +138785,7 @@
    },
    "SHP18899895250": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP18925950833": {
     "ate": "2026-12-19",
@@ -138636,7 +138881,7 @@
    },
    "SHP19299303170": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP19299650901": {
     "ate": "2026-12-19",
@@ -138696,7 +138941,7 @@
    },
    "SHP19599043004": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T14:22-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP19599048892": {
     "ate": "2026-12-19",
@@ -138792,7 +139037,7 @@
    },
    "SHP19899259306": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP19899648224": {
     "ate": "2026-12-19",
@@ -138804,7 +139049,7 @@
    },
    "SHP19899773583": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP19964624577": {
     "ate": "2026-12-19",
@@ -138820,7 +139065,7 @@
    },
    "SHP19999773566": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP20097685110": {
     "ate": "2026-12-19",
@@ -138868,7 +139113,7 @@
    },
    "SHP20198321071": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP20199323262": {
     "ate": "2026-12-15",
@@ -138880,7 +139125,7 @@
    },
    "SHP20199894311": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP20297411767": {
     "ate": "2026-12-17",
@@ -138888,7 +139133,7 @@
    },
    "SHP20297515276": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP20297635238": {
     "ate": "2026-12-19",
@@ -138920,7 +139165,7 @@
    },
    "SHP20299836604": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP20299895614": {
     "ate": "2026-12-19",
@@ -139140,7 +139385,7 @@
    },
    "SHP21199893362": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP21207939378": {
     "ate": "2026-12-19",
@@ -139152,7 +139397,7 @@
    },
    "SHP21297732100": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:00-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP21297991332": {
     "ate": "2026-12-19",
@@ -139188,7 +139433,7 @@
    },
    "SHP21397737584": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP21398324995": {
     "ate": "2026-12-19",
@@ -139232,7 +139477,7 @@
    },
    "SHP21598330491": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP21599231941": {
     "ate": "2026-12-19",
@@ -139340,7 +139585,7 @@
    },
    "SHP22093737875": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22093859063": {
     "ate": "2026-12-19",
@@ -139412,7 +139657,7 @@
    },
    "SHP22098377364": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22098569008": {
     "ate": "2026-12-19",
@@ -139507,8 +139752,8 @@
     "visto": "2026-11-19T16:51-03:00"
    },
    "SHP22195063052": {
-    "ate": "2026-12-13",
-    "visto": "2026-11-19T11:31-03:00"
+    "ate": "2026-12-19",
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22195082112": {
     "ate": "2026-12-19",
@@ -139604,7 +139849,7 @@
    },
    "SHP22293577075": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22293928154": {
     "ate": "2026-12-19",
@@ -139636,7 +139881,7 @@
    },
    "SHP22294642771": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22296478880": {
     "ate": "2026-12-19",
@@ -139644,7 +139889,7 @@
    },
    "SHP22296700159": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22296962694": {
     "ate": "2026-12-19",
@@ -139700,7 +139945,7 @@
    },
    "SHP22298929134": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22299178417": {
     "ate": "2026-12-19",
@@ -139740,7 +139985,7 @@
    },
    "SHP22394360261": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T12:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22394366630": {
     "ate": "2026-12-19",
@@ -139776,7 +140021,7 @@
    },
    "SHP22394634541": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22394636674": {
     "ate": "2026-12-19",
@@ -139784,7 +140029,7 @@
    },
    "SHP22394860809": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22395184906": {
     "ate": "2026-12-19",
@@ -139840,7 +140085,7 @@
    },
    "SHP22398990698": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22399173523": {
     "ate": "2026-12-17",
@@ -139912,15 +140157,15 @@
    },
    "SHP22497311280": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22497315220": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22497914336": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22497975179": {
     "ate": "2026-12-19",
@@ -139952,7 +140197,7 @@
    },
    "SHP22498705080": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22498771408": {
     "ate": "2026-12-19",
@@ -139960,7 +140205,7 @@
    },
    "SHP22498787903": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22498789661": {
     "ate": "2026-12-19",
@@ -139988,7 +140233,7 @@
    },
    "SHP22499054580": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22499253929": {
     "ate": "2026-12-19",
@@ -139996,7 +140241,7 @@
    },
    "SHP22499425999": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22499449923": {
     "ate": "2026-12-19",
@@ -140032,7 +140277,7 @@
    },
    "SHP22593060346": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22594196096": {
     "ate": "2026-12-19",
@@ -140076,7 +140321,7 @@
    },
    "SHP22598118425": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22598402826": {
     "ate": "2026-12-16",
@@ -140128,7 +140373,7 @@
    },
    "SHP22694143078": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22694217022": {
     "ate": "2026-12-19",
@@ -140148,7 +140393,7 @@
    },
    "SHP22694667918": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22694706559": {
     "ate": "2026-12-19",
@@ -140164,7 +140409,7 @@
    },
    "SHP22695169581": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22697353080": {
     "ate": "2026-12-19",
@@ -140264,7 +140509,7 @@
    },
    "SHP22794141945": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22794197638": {
     "ate": "2026-12-19",
@@ -140292,7 +140537,7 @@
    },
    "SHP22794871872": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22795318244": {
     "ate": "2026-12-19",
@@ -140412,7 +140657,7 @@
    },
    "SHP22993514822": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22993631621": {
     "ate": "2026-12-19",
@@ -140444,7 +140689,7 @@
    },
    "SHP22994198991": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22994381122": {
     "ate": "2026-12-19",
@@ -140496,7 +140741,7 @@
    },
    "SHP22998677839": {
     "ate": "2026-12-13",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP22998768336": {
     "ate": "2026-12-19",
@@ -140524,11 +140769,11 @@
    },
    "SHP23092409051": {
     "ate": "2026-12-17",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23092811726": {
     "ate": "2026-12-15",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23092899343": {
     "ate": "2026-12-19",
@@ -140628,7 +140873,7 @@
    },
    "SHP23192462910": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23192751958": {
     "ate": "2026-12-17",
@@ -140644,7 +140889,7 @@
    },
    "SHP23193631976": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23193721532": {
     "ate": "2026-12-19",
@@ -140676,7 +140921,7 @@
    },
    "SHP23194332857": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T15:43-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23194398522": {
     "ate": "2026-12-19",
@@ -140684,7 +140929,7 @@
    },
    "SHP23194642345": {
     "ate": "2026-12-16",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23194808032": {
     "ate": "2026-12-19",
@@ -140700,7 +140945,7 @@
    },
    "SHP23195555854": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23197595875": {
     "ate": "2026-12-19",
@@ -140732,7 +140977,7 @@
    },
    "SHP23199139189": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23199200478": {
     "ate": "2026-12-19",
@@ -140916,7 +141161,7 @@
    },
    "SHP23395382157": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T14:22-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23396808146": {
     "ate": "2026-12-19",
@@ -140932,7 +141177,7 @@
    },
    "SHP23398019424": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23398216775": {
     "ate": "2026-12-19",
@@ -140952,7 +141197,7 @@
    },
    "SHP23398676576": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T14:22-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23398902784": {
     "ate": "2026-12-19",
@@ -141012,7 +141257,7 @@
    },
    "SHP23494442971": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23494812890": {
     "ate": "2026-12-19",
@@ -141068,7 +141313,7 @@
    },
    "SHP23498654675": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23498656445": {
     "ate": "2026-12-16",
@@ -141076,7 +141321,7 @@
    },
    "SHP23498694913": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23498712958": {
     "ate": "2026-12-19",
@@ -141092,11 +141337,11 @@
    },
    "SHP23499187035": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23499346925": {
     "ate": "2026-12-12",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23499368309": {
     "ate": "2026-12-19",
@@ -141132,7 +141377,7 @@
    },
    "SHP23592957774": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23593144205": {
     "ate": "2026-12-19",
@@ -141176,7 +141421,7 @@
    },
    "SHP23598068812": {
     "ate": "2026-12-16",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23598129164": {
     "ate": "2026-12-19",
@@ -141316,7 +141561,7 @@
    },
    "SHP23698711829": {
     "ate": "2026-12-12",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23698978626": {
     "ate": "2026-12-18",
@@ -141368,7 +141613,7 @@
    },
    "SHP23793856777": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23794046555": {
     "ate": "2026-12-19",
@@ -141392,7 +141637,7 @@
    },
    "SHP23794419826": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23794736791": {
     "ate": "2026-12-19",
@@ -141408,7 +141653,7 @@
    },
    "SHP23797342230": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23797550642": {
     "ate": "2026-12-19",
@@ -141416,11 +141661,11 @@
    },
    "SHP23797637727": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23797752726": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23798071629": {
     "ate": "2026-12-19",
@@ -141436,11 +141681,11 @@
    },
    "SHP23798854352": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23798911858": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23799021337": {
     "ate": "2026-12-19",
@@ -141476,7 +141721,7 @@
    },
    "SHP23892579031": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23892803207": {
     "ate": "2026-12-15",
@@ -141532,7 +141777,7 @@
    },
    "SHP23898181578": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23898221939": {
     "ate": "2026-12-19",
@@ -141584,7 +141829,7 @@
    },
    "SHP23994264295": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23994330600": {
     "ate": "2026-12-19",
@@ -141596,7 +141841,7 @@
    },
    "SHP23994733158": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23994813280": {
     "ate": "2026-12-19",
@@ -141604,7 +141849,7 @@
    },
    "SHP23994836650": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP23997360502": {
     "ate": "2026-12-19",
@@ -141660,7 +141905,7 @@
    },
    "SHP25557267005": {
     "ate": "2026-12-18",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP25689606519": {
     "ate": "2026-12-19",
@@ -141684,7 +141929,7 @@
    },
    "SHP26313492876": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP26331091441": {
     "ate": "2026-12-19",
@@ -141764,7 +142009,7 @@
    },
    "SHP28341456148": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP28344237190": {
     "ate": "2026-12-19",
@@ -141800,7 +142045,7 @@
    },
    "SHP29183930800": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP29342195493": {
     "ate": "2026-12-16",
@@ -141812,7 +142057,7 @@
    },
    "SHP29537552078": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP2972045294": {
     "ate": "2026-12-19",
@@ -142020,7 +142265,7 @@
    },
    "SHP42815719104": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP42879661811": {
     "ate": "2026-12-19",
@@ -142035,8 +142280,8 @@
     "visto": "2026-11-19T15:43-03:00"
    },
    "SHP42978496587": {
-    "ate": "2026-12-15",
-    "visto": "2026-11-19T10:44-03:00"
+    "ate": "2026-12-19",
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP42984785024": {
     "ate": "2026-12-19",
@@ -142160,7 +142405,7 @@
    },
    "SHP45111142436": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP45112524964": {
     "ate": "2026-12-19",
@@ -142232,7 +142477,7 @@
    },
    "SHP46802017676": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T14:46-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP46806113236": {
     "ate": "2026-12-19",
@@ -142340,7 +142585,7 @@
    },
    "SHP49061808308": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T14:22-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP49118055951": {
     "ate": "2026-12-19",
@@ -142476,7 +142721,7 @@
    },
    "SHP52217239969": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP52313988847": {
     "ate": "2026-12-19",
@@ -142548,7 +142793,7 @@
    },
    "SHP53908618959": {
     "ate": "2026-12-16",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP54106503961": {
     "ate": "2026-12-19",
@@ -142595,8 +142840,8 @@
     "visto": "2026-11-19T16:27-03:00"
    },
    "SHP55267635379": {
-    "ate": "2026-12-15",
-    "visto": "2026-11-19T10:44-03:00"
+    "ate": "2026-12-19",
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP55615214779": {
     "ate": "2026-12-14",
@@ -142652,11 +142897,11 @@
    },
    "SHP57054796969": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP57059645704": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP57206016016": {
     "ate": "2026-12-19",
@@ -142712,7 +142957,7 @@
    },
    "SHP58107325952": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58200051971": {
     "ate": "2026-12-19",
@@ -142868,7 +143113,7 @@
    },
    "SHP58204221403": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58204393424": {
     "ate": "2026-12-19",
@@ -142892,7 +143137,7 @@
    },
    "SHP58204842674": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T14:22-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58204848256": {
     "ate": "2026-12-19",
@@ -142920,7 +143165,7 @@
    },
    "SHP58205947255": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58206034785": {
     "ate": "2026-12-19",
@@ -142984,7 +143229,7 @@
    },
    "SHP58208471527": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58208482904": {
     "ate": "2026-12-19",
@@ -143112,7 +143357,7 @@
    },
    "SHP58211936933": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58211960956": {
     "ate": "2026-12-17",
@@ -143136,7 +143381,7 @@
    },
    "SHP58212769539": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58212780414": {
     "ate": "2026-12-19",
@@ -143156,7 +143401,7 @@
    },
    "SHP58213011395": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58213107256": {
     "ate": "2026-12-16",
@@ -143180,7 +143425,7 @@
    },
    "SHP58213395771": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58213474889": {
     "ate": "2026-12-14",
@@ -143292,11 +143537,11 @@
    },
    "SHP58215880575": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T12:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58215894704": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58215984165": {
     "ate": "2026-12-19",
@@ -143308,7 +143553,7 @@
    },
    "SHP58216276122": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58216423802": {
     "ate": "2026-12-12",
@@ -143316,7 +143561,7 @@
    },
    "SHP58216425795": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58216475375": {
     "ate": "2026-12-19",
@@ -143388,7 +143633,7 @@
    },
    "SHP58217241138": {
     "ate": "2026-12-18",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58217248961": {
     "ate": "2026-12-19",
@@ -143428,7 +143673,7 @@
    },
    "SHP58217540465": {
     "ate": "2026-12-15",
-    "visto": "2026-11-19T10:10-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58217578146": {
     "ate": "2026-12-19",
@@ -143500,7 +143745,7 @@
    },
    "SHP58218866507": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58218945658": {
     "ate": "2026-12-19",
@@ -143576,7 +143821,7 @@
    },
    "SHP58220294116": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58220326078": {
     "ate": "2026-12-19",
@@ -143604,7 +143849,7 @@
    },
    "SHP58250163807": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58250376979": {
     "ate": "2026-12-19",
@@ -143644,7 +143889,7 @@
    },
    "SHP58251231612": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58251247400": {
     "ate": "2026-12-19",
@@ -143656,7 +143901,7 @@
    },
    "SHP58251362954": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58251465024": {
     "ate": "2026-12-19",
@@ -143740,7 +143985,7 @@
    },
    "SHP58253938494": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58254130164": {
     "ate": "2026-12-19",
@@ -143748,7 +143993,7 @@
    },
    "SHP58254209937": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58254239657": {
     "ate": "2026-12-19",
@@ -143848,7 +144093,7 @@
    },
    "SHP58257124984": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58257144801": {
     "ate": "2026-12-19",
@@ -143864,7 +144109,7 @@
    },
    "SHP58257299712": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T14:46-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58257350363": {
     "ate": "2026-12-18",
@@ -143876,7 +144121,7 @@
    },
    "SHP58257535711": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58257561563": {
     "ate": "2026-12-19",
@@ -143892,19 +144137,19 @@
    },
    "SHP58257692352": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T14:22-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58257712601": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58257979473": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58258006595": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58258050868": {
     "ate": "2026-12-19",
@@ -143916,7 +144161,7 @@
    },
    "SHP58258341439": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58258524163": {
     "ate": "2026-12-19",
@@ -143932,7 +144177,7 @@
    },
    "SHP58258626127": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58258881523": {
     "ate": "2026-12-19",
@@ -143952,7 +144197,7 @@
    },
    "SHP58259568016": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58259649647": {
     "ate": "2026-12-19",
@@ -144096,7 +144341,7 @@
    },
    "SHP58262131036": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58262233431": {
     "ate": "2026-12-19",
@@ -144104,7 +144349,7 @@
    },
    "SHP58262380981": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58262610150": {
     "ate": "2026-12-19",
@@ -144124,7 +144369,7 @@
    },
    "SHP58263359703": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58263377800": {
     "ate": "2026-12-19",
@@ -144156,7 +144401,7 @@
    },
    "SHP58263756217": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58264214431": {
     "ate": "2026-12-19",
@@ -144172,11 +144417,11 @@
    },
    "SHP58264247219": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:00-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58264255349": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T14:22-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58264261527": {
     "ate": "2026-12-19",
@@ -144184,7 +144429,7 @@
    },
    "SHP58264493337": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58264632380": {
     "ate": "2026-12-19",
@@ -144200,7 +144445,7 @@
    },
    "SHP58264904412": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T13:45-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58264962192": {
     "ate": "2026-12-19",
@@ -144228,7 +144473,7 @@
    },
    "SHP58265411430": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58265466882": {
     "ate": "2026-12-19",
@@ -144428,7 +144673,7 @@
    },
    "SHP58267718302": {
     "ate": "2026-12-16",
-    "visto": "2026-11-19T09:44-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58267727158": {
     "ate": "2026-12-19",
@@ -144444,7 +144689,7 @@
    },
    "SHP58267897360": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T14:22-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58268073953": {
     "ate": "2026-12-19",
@@ -144452,15 +144697,15 @@
    },
    "SHP58268112796": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58268165028": {
     "ate": "2026-12-19",
     "visto": "2026-11-19T15:00-03:00"
    },
    "SHP58268229063": {
-    "ate": "2026-12-15",
-    "visto": "2026-11-19T10:27-03:00"
+    "ate": "2026-12-19",
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58268383425": {
     "ate": "2026-12-19",
@@ -144493,6 +144738,10 @@
    "SHP58268843941": {
     "ate": "2026-12-19",
     "visto": "2026-11-19T16:51-03:00"
+   },
+   "SHP58268897186": {
+    "ate": "2026-12-19",
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58269078098": {
     "ate": "2026-12-19",
@@ -144540,7 +144789,7 @@
    },
    "SHP58269972296": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58269992338": {
     "ate": "2026-12-19",
@@ -144564,11 +144813,11 @@
    },
    "SHP58271036666": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T11:31-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58271136680": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP58271561881": {
     "ate": "2026-12-19",
@@ -144588,7 +144837,7 @@
    },
    "SHP8088565853": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:27-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP8470000426": {
     "ate": "2026-12-17",
@@ -144616,18 +144865,18 @@
    },
    "SHP9379081984": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T12:28-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    },
    "SHP9879082764": {
     "ate": "2026-12-19",
-    "visto": "2026-11-19T16:00-03:00"
+    "visto": "2026-11-19T17:20-03:00"
    }
   },
-  "cat": 4,
+  "cat": 6,
   "hora": [
-   "2026-11-19T16:00-03:00",
-   "2026-11-19T16:00-03:00",
-   "2026-11-19T16:27-03:00"
+   "2026-11-19T16:27-03:00",
+   "2026-11-19T17:20-03:00",
+   "2026-11-19T17:20-03:00"
   ],
   "postados": {
    "SHP12016728643": "2026-11-17T21:34-03:00",
@@ -144659,6 +144908,7 @@
    "SHP18698032904": "2026-11-17T10:22-03:00",
    "SHP18827605238": "2026-11-19T13:28-03:00",
    "SHP18897985217": "2026-11-12T08:28-03:00",
+   "SHP18899359612": "2026-11-19T17:20-03:00",
    "SHP18899692095": "2026-11-19T08:13-03:00",
    "SHP18899895250": "2026-11-12T09:14-03:00",
    "SHP18997980959": "2026-11-19T15:28-03:00",
@@ -144876,7 +145126,7 @@
    "SHP41518716769": "2026-11-18T08:13-03:00",
    "SHP41676934699": "2026-11-13T16:51-03:00",
    "SHP42611910801": "2026-11-19T11:00-03:00",
-   "SHP42978496587": "2026-11-15T14:46-03:00",
+   "SHP42978496587": "2026-11-19T17:20-03:00",
    "SHP43201053975": "2026-11-14T17:37-03:00",
    "SHP43225182025": "2026-11-12T10:16-03:00",
    "SHP43380800198": "2026-11-15T12:12-03:00",
@@ -145000,8 +145250,8 @@
    "SHP58269508582": "2026-11-19T16:27-03:00",
    "SHP8470000426": "2026-11-17T12:44-03:00"
   },
-  "termo": 12,
-  "termo_epoca": 0,
+  "termo": 15,
+  "termo_epoca": 1,
   "tipos": {
    "2026-11-19": [
     "apoio",
@@ -145009,6 +145259,7 @@
     "bancadinha",
     "barbie",
     "bau",
+    "berco",
     "biblia",
     "bolha",
     "boneca",
@@ -145026,10 +145277,12 @@
     "cotonete",
     "cozinha de brinquedo",
     "cubo",
+    "cueca",
     "cueiro",
     "desitin",
     "elastico",
     "escova",
+    "fisher",
     "fone",
     "fralda",
     "garrafinha",
@@ -145050,6 +145303,7 @@
     "pelucia",
     "pistola",
     "porta",
+    "pula pula",
     "relogio",
     "repelente",
     "sabonete",
@@ -145196,6 +145450,11 @@
     "preco": 29.9,
     "quando": "2026-11-12T08:28-03:00",
     "titulo": "Conjunto Infantil Masculino De Verão - Bermuda + Camiseta Dry-Fit Veste 2 a 12 a"
+   },
+   "SHP18899359612": {
+    "preco": 29.99,
+    "quando": "2026-11-19T17:20-03:00",
+    "titulo": "Kit Brinquedo Bebe Chocalho Mordedor Silicone Macio Bola Colorida 8 Peça Present"
    },
    "SHP18899692095": {
     "preco": 11.9,
@@ -146204,7 +146463,7 @@
    },
    "SHP42978496587": {
     "preco": 60.9,
-    "quando": "2026-11-15T14:46-03:00",
+    "quando": "2026-11-19T17:20-03:00",
     "titulo": "Kit 6 Cuecas Boxer Infantil Polo Cotton 100% Algodão Forro Duplo Confortável"
    },
    "SHP43201053975": {
@@ -146795,7 +147054,7 @@
  "vigias_avisados": {},
  "vigias_em": "2026-11-19T16:19-03:00",
  "vitrine": {
-  "em": "2026-11-19T16:50-03:00",
+  "em": "2026-11-19T17:10-03:00",
   "itens": [
    {
     "categoria": "higiene",
@@ -146950,6 +147209,17 @@
     "loja": "ml",
     "preco": 125.0,
     "titulo": "Assento Booster Burigotto Protege para Carro, Preto, de 15 a 36 kg"
+   },
+   {
+    "categoria": "quarto",
+    "de": 599.0,
+    "desconto": 0.57,
+    "id": "MLB52899518",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_633860-MLA99477493138_112025-F.jpg",
+    "link": "https://meli.la/251qNQx",
+    "loja": "ml",
+    "preco": 257.75,
+    "titulo": "Berço Cosco Kids, Cozzy, Rosa Pastel"
    },
    {
     "categoria": "brinquedo",
@@ -147425,6 +147695,17 @@
     "titulo": "Maleta 48 Carrinhos + Tapete Pista 40x60 Estacionamento Brinquedo Infantil Presente Criança - Super Brasileiri"
    },
    {
+    "categoria": "gestante",
+    "de": 239.0,
+    "desconto": 0.418,
+    "id": "MLB76495391",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_815058-MLA115732461789_082026-F.jpg",
+    "link": "https://meli.la/2V3BWkf",
+    "loja": "ml",
+    "preco": 138.99,
+    "titulo": "Kit Bolsa Maternidade Com Mochila E Trocador Completo Impermeável Bebê Menino Menina Ric Deveras Bege"
+   },
+   {
     "categoria": "higiene",
     "de": 150.0,
     "desconto": 0.507,
@@ -147434,34 +147715,36 @@
     "loja": "ml",
     "preco": 73.9,
     "titulo": "Troninho Privadinha Carros Assento Redutor Pinico Infantil Para desfralde Marca styll baby Disney"
-   },
-   {
-    "categoria": "outros",
-    "de": 400.0,
-    "desconto": 0.505,
-    "id": "MLB74264632",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_892305-MLA113557287901_062026-F.jpg",
-    "link": "https://meli.la/1LMLVPM",
-    "loja": "ml",
-    "preco": 197.99,
-    "titulo": "Cercadinho MMI Infantil Grande Retangular Cinza para Bebês e Crianças"
-   },
-   {
-    "categoria": "brinquedo",
-    "de": 229.95,
-    "desconto": 0.5,
-    "id": "MLB63158085",
-    "imagem": "https://http2.mlstatic.com/D_NQ_NP_630465-MLA119888186361_102026-F.jpg",
-    "link": "https://meli.la/2EuZcwv",
-    "loja": "ml",
-    "preco": 115.0,
-    "titulo": "Mobile Musical Berço Bebê Projetor Estrelas Controle Remoto Rotação 360"
    }
   ]
  },
- "vitrine_assinatura": "a290120756034f1f673063f4e86d4778d368db1e",
- "vitrine_publicada_em": "2026-11-19T16:19-03:00",
+ "vitrine_assinatura": "0590290c6339f8e3c3fd717988ca76eb9330eea0",
+ "vitrine_publicada_em": "2026-11-19T17:10-03:00",
  "vitrine_shopee": [
+  {
+   "a_partir": false,
+   "categoria": "outros",
+   "de": null,
+   "em": "2026-11-19T17:20-03:00",
+   "id": "SHP42978496587",
+   "imagem": "https://cf.shopee.com.br/file/br-11134207-81zuo-ml5ciwtfztomc0",
+   "link": "https://s.shopee.com.br/9zzRInVFzY",
+   "loja": "shopee",
+   "preco": 60.9,
+   "titulo": "Kit 6 Cuecas Boxer Infantil Polo Cotton 100% Algodão Forro Duplo Confortável"
+  },
+  {
+   "a_partir": false,
+   "categoria": "quarto",
+   "de": null,
+   "em": "2026-11-19T17:20-03:00",
+   "id": "SHP18899359612",
+   "imagem": "https://cf.shopee.com.br/file/br-11134207-7r98o-lyz4fmwj7nsx04",
+   "link": "https://s.shopee.com.br/9fMatqWYL2",
+   "loja": "shopee",
+   "preco": 29.99,
+   "titulo": "Kit Brinquedo Bebe Chocalho Mordedor Silicone Macio Bola Colorida 8 Peça Presente Para Menina e Menino Móbile "
+  },
   {
    "a_partir": false,
    "categoria": "livro",
@@ -147797,30 +148080,6 @@
    "loja": "shopee",
    "preco": 49.9,
    "titulo": "Kit 6 Peças 3 Conjuntos de Roupa Infantil Menina Verão Feminino"
-  },
-  {
-   "a_partir": true,
-   "categoria": "roupa",
-   "de": null,
-   "em": "2026-11-19T08:13-03:00",
-   "id": "SHP18899692095",
-   "imagem": "https://cf.shopee.com.br/file/br-11134207-820lt-mvb0jrm3zyf5c9",
-   "link": "https://s.shopee.com.br/80EMJl2YZk",
-   "loja": "shopee",
-   "preco": 11.9,
-   "titulo": "Chinelo Infantil Menina Chinela de Dedo infantil dos rosa Personalizados Macio  sandália  infantil  Promoção  "
-  },
-  {
-   "a_partir": false,
-   "categoria": "quarto",
-   "de": null,
-   "em": "2026-11-19T08:13-03:00",
-   "id": "SHP23092250306",
-   "imagem": "https://cf.shopee.com.br/file/br-11134207-820lh-mp0vp3i1r9xf55",
-   "link": "https://s.shopee.com.br/5fqRWzacTY",
-   "loja": "shopee",
-   "preco": 28.9,
-   "titulo": "Jogo Lençol Solteiro 02 Peças Microfibra Estampas Infantis Criança Azul Rosa Verde"
   }
  ],
  "wa_conferidos": {
