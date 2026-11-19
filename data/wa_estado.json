@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-19",
-  "enviados": 7,
-  "ultimo": "2026-11-19T16:52:07.539Z",
+  "enviados": 8,
+  "ultimo": "2026-11-19T18:01:08.671Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-18": 22,
     "2026-11-19": 22
   },
-  "membros_em": "2026-11-19T17:00:13.324Z",
-  "ultima_loja": "ml",
+  "membros_em": "2026-11-19T18:00:17.969Z",
+  "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -82,6 +82,22 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-19T18:01:08.671Z",
+        "n": "👕 Calça Jeans Infantil Wide Leg Cargo Black Juvenil 6 ao 14 ALTO PADRÃO LINHA P",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/qlC3dKqAM",
+        "p": 0.1002
+      },
+      {
+        "h": "2026-11-19T18:01:13.762Z",
+        "n": "🛏️ Naninha Ursinho Algodão Doce Bebê Antialérgica Azul Recém-Nascido 0 a 24 Mes",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/2jyCfJr",
+        "p": 0.36
       }
     ]
   },
@@ -145,6 +161,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-19T16:58:08.194Z",
-  "ultima_categoria": "quarto"
+  "proximo_em": "2026-11-19T18:10:14.705Z",
+  "ultima_categoria": "roupa"
 }
