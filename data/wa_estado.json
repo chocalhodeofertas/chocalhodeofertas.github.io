@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-19",
-  "enviados": 5,
-  "ultimo": "2026-11-19T14:35:09.052Z",
+  "enviados": 6,
+  "ultimo": "2026-11-19T15:43:08.262Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -65,6 +65,14 @@
         "l": "ml",
         "r": "enviado",
         "k": "https://bit.ly/4khLHXr",
+        "p": 9
+      },
+      {
+        "h": "2026-11-19T15:43:08.262Z",
+        "n": "⏰ Válido até 20/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
         "p": 9
       }
     ]
@@ -129,6 +137,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-19T14:46:12.351Z",
+  "proximo_em": "2026-11-19T15:48:55.510Z",
   "ultima_categoria": "quarto"
 }
