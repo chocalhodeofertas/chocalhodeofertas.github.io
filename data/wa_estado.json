@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-19",
-  "enviados": 3,
-  "ultimo": "2026-11-19T12:18:09.326Z",
+  "enviados": 4,
+  "ultimo": "2026-11-19T13:26:03.501Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-19": 21
   },
   "membros_em": "2026-11-19T13:00:37.889Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -49,6 +49,14 @@
         "l": "ml",
         "r": "enviado",
         "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-19T13:26:03.500Z",
+        "n": "Antes de fechar a compra, passe na página de cupons e ative os que servem para v",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8fTxwjM742",
         "p": 9
       }
     ]
@@ -108,6 +116,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-19T12:22:29.632Z",
+  "proximo_em": "2026-11-19T13:30:41.497Z",
   "ultima_categoria": "quarto"
 }
