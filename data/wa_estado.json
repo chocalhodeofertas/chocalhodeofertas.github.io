@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-19",
-  "enviados": 12,
-  "ultimo": "2026-11-19T22:35:09.436Z",
+  "enviados": 13,
+  "ultimo": "2026-11-19T23:43:05.312Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-19": 20
   },
   "membros_em": "2026-11-19T23:14:18.023Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -226,6 +226,30 @@
         "r": "enviado",
         "k": "https://meli.la/2HDXPjg",
         "p": 0.282
+      },
+      {
+        "h": "2026-11-19T23:31:54.236Z",
+        "n": "👕 Kit 3 Short Boxer Infantil Curto Cotton Menina 96%Algodão Ideal para Usar com",
+        "l": "shopee",
+        "r": "venceu",
+        "k": "https://s.shopee.com.br/5LDbkgbJ9G",
+        "p": 0
+      },
+      {
+        "h": "2026-11-19T23:31:54.238Z",
+        "n": "✨ Berço Bebê Infantil Mini Cama Life Compacto Amadeirado Design Moderno American",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/1wzdTGN",
+        "p": 0.3551
+      },
+      {
+        "h": "2026-11-19T23:43:05.311Z",
+        "n": "🎉 Sacola PVC transparente com alça Presentes 40/50 PCS Bolsa De Lembrança De An",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8pnTyQPBJa",
+        "p": 0
       }
     ]
   },
@@ -299,6 +323,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-19T22:39:14.126Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-19T23:55:26.640Z",
+  "ultima_categoria": "festa"
 }
