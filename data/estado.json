@@ -12923,7 +12923,7 @@
   "FULL1811": {
    "criado": "2026-11-18T08:00-03:00",
    "post": 1030,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-18T23:59-03:00"
   },
   "HOJEMESMO": {
@@ -13109,7 +13109,7 @@
   "MODA1811": {
    "criado": "2026-11-18T12:10-03:00",
    "post": 1060,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-18T23:59-03:00"
   },
   "MODAESPECIAL": {
@@ -13217,7 +13217,7 @@
   "OFFHOJENOML": {
    "criado": "2026-11-17T09:00-03:00",
    "post": 930,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-18T23:59-03:00"
   },
   "OFFNAMODA": {
@@ -13225,6 +13225,12 @@
    "post": 155,
    "status": "encerrado",
    "validade": "2026-11-09T23:59-03:00"
+  },
+  "OFICIAIS1911": {
+   "criado": "2026-11-19T08:01-03:00",
+   "post": 1140,
+   "status": "ativo",
+   "validade": "2026-11-19T23:59-03:00"
   },
   "OLHAOARABE20": {
    "criado": "2026-11-09T13:36-03:00",
@@ -13247,7 +13253,7 @@
   "PLAYER1": {
    "criado": "2026-11-18T17:07-03:00",
    "post": 1096,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-18T23:59-03:00"
   },
   "POUPAAGORA25": {
@@ -13419,7 +13425,7 @@
    "validade": "2026-11-15T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5626,
+ "cupons_extra_ultimo:cupombr": 5628,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6519,
  "cupons_shopee_enviado": "2026-11-18",
@@ -44010,6 +44016,9 @@
    "cupons": 11,
    "posts": 100,
    "shopee": 50
+  },
+  "2026-11-19": {
+   "cupons": 1
   }
  },
  "links": {
@@ -48752,6 +48761,17 @@
     }
    ],
    "criado": "2026-11-18T19:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1140": {
+   "blocos": [
+    {
+     "codigo": "OFICIAIS1911",
+     "html": "<b>🎟️ OFICIAIS1911</b> 👉 <b>20% OFF</b>\nCompra mín.: R$89 · Desconto máx.: R$50\n⏰ Válido até 19/11"
+    }
+   ],
+   "criado": "2026-11-19T08:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
