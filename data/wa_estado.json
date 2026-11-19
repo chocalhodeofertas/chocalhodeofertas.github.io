@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-19",
-  "enviados": 10,
-  "ultimo": "2026-11-19T20:18:10.055Z",
+  "enviados": 11,
+  "ultimo": "2026-11-19T21:26:07.572Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-19": 21
   },
   "membros_em": "2026-11-19T21:00:33.748Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -210,6 +210,14 @@
         "r": "enviado",
         "k": "https://bit.ly/4AHf4aD",
         "p": 9
+      },
+      {
+        "h": "2026-11-19T21:26:07.572Z",
+        "n": "🛏️ Kit Brinquedo Bebe Chocalho Mordedor Silicone Macio Bola Colorida 8 Peça Pre",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6VPZ81ZStt",
+        "p": 0
       }
     ]
   },
@@ -278,6 +286,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-19T20:30:07.226Z",
-  "ultima_categoria": "escola"
+  "proximo_em": "2026-11-19T21:38:59.902Z",
+  "ultima_categoria": "quarto"
 }
