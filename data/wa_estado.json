@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-19",
-  "enviados": 2,
-  "ultimo": "2026-11-19T11:09:07.385Z",
+  "enviados": 3,
+  "ultimo": "2026-11-19T12:18:09.326Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -42,6 +42,14 @@
         "r": "enviado",
         "k": "https://meli.la/2319ZGf",
         "p": 0.1392
+      },
+      {
+        "h": "2026-11-19T12:18:09.326Z",
+        "n": "⏰ Válido até 20/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -100,6 +108,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-19T11:14:09.485Z",
+  "proximo_em": "2026-11-19T12:22:29.632Z",
   "ultima_categoria": "quarto"
 }
