@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-20",
-  "enviados": 9,
-  "ultimo": "2026-11-20T19:09:07.572Z",
+  "enviados": 10,
+  "ultimo": "2026-11-20T20:18:07.295Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-20": 21
   },
   "membros_em": "2026-11-20T19:43:20.306Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -106,6 +106,14 @@
         "r": "enviado",
         "k": "https://bit.ly/4t9ra9V",
         "p": 9
+      },
+      {
+        "h": "2026-11-20T20:18:07.295Z",
+        "n": "✨ Tenda Toca Cabana Castelo Infantil menino e menina",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/5VX3TirgFs",
+        "p": 0.1808
       }
     ]
   },
@@ -184,6 +192,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-20T19:15:48.094Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-20T20:23:22.941Z",
+  "ultima_categoria": "outros"
 }
