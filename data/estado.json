@@ -13155,6 +13155,12 @@
    "status": "encerrado",
    "validade": "2026-11-19T23:59-03:00"
   },
+  "BLACKDELUXO": {
+   "criado": "2026-11-20T15:01-03:00",
+   "post": 1304,
+   "status": "ativo",
+   "validade": "2026-11-21T23:59-03:00"
+  },
   "BUDBLACK": {
    "criado": "2026-11-10T18:32-03:00",
    "post": 250,
@@ -13830,7 +13836,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5640,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6530,
+ "cupons_ml_ultimo": 6531,
  "cupons_shopee_enviado": "2026-11-20",
  "descoberta_em": "2026-11-20T08:02-03:00",
  "descobertos": {
@@ -46935,7 +46941,7 @@
   },
   "2026-11-20": {
    "com_cupom": 1,
-   "cupons": 4,
+   "cupons": 5,
    "posts": 50,
    "shopee": 25
   }
@@ -52005,6 +52011,17 @@
    "criado": "2026-11-20T10:04-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1304": {
+   "blocos": [
+    {
+     "codigo": "BLACKDELUXO",
+     "html": "<b>🎟️ BLACKDELUXO</b> 👉 <b>10% OFF</b>\nCompra mín.: R$499,90 · Desconto máx.: R$150\n👉 <a href=\"https://bit.ly/4t9ra9V\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-20T15:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "206": {
    "blocos": [
