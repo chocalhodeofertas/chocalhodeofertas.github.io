@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-20",
-  "enviados": 10,
-  "ultimo": "2026-11-20T20:18:07.295Z",
+  "enviados": 11,
+  "ultimo": "2026-11-20T21:26:09.453Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-20": 21
   },
   "membros_em": "2026-11-20T20:44:19.539Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -114,6 +114,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/5VX3TirgFs",
         "p": 0.1808
+      },
+      {
+        "h": "2026-11-20T21:26:09.453Z",
+        "n": "🧸 Ursinho Que Reza Azul Urso De Pelucia Hipoalergênico Buba",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2SeUJJV",
+        "p": 0.36
+      },
+      {
+        "h": "2026-11-20T21:26:14.570Z",
+        "n": "👕 Kit 2 Pares Sandália Babuche Infantil Menino Leve Confortável Lançamento",
+        "l": "shopee",
+        "r": "venceu",
+        "k": "https://s.shopee.com.br/3LSYmDz7Mu",
+        "p": 0.1503
       }
     ]
   },
@@ -192,6 +208,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-20T20:23:22.941Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-20T21:32:42.192Z",
+  "ultima_categoria": "brinquedo"
 }
