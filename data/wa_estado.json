@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-20",
-  "enviados": 4,
-  "ultimo": "2026-11-20T13:26:04.031Z",
+  "enviados": 5,
+  "ultimo": "2026-11-20T14:35:08.271Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-20": 21
   },
   "membros_em": "2026-11-20T14:02:21.971Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -57,6 +57,14 @@
         "l": "shopee",
         "r": "enviado",
         "k": "https://s.shopee.com.br/8fTxwjM742",
+        "p": 9
+      },
+      {
+        "h": "2026-11-20T14:35:08.271Z",
+        "n": "⏰ Válido até 11/01",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4t5OSUk",
         "p": 9
       }
     ]
@@ -136,6 +144,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-20T13:33:29.229Z",
+  "proximo_em": "2026-11-20T14:46:53.741Z",
   "ultima_categoria": "passeio"
 }
