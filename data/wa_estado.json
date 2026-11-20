@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-20",
-  "enviados": 6,
-  "ultimo": "2026-11-20T15:43:08.049Z",
+  "enviados": 7,
+  "ultimo": "2026-11-20T16:52:09.004Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-20": 21
   },
   "membros_em": "2026-11-20T16:25:08.041Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -74,6 +74,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/2gCq5ti2Ex",
         "p": 9
+      },
+      {
+        "h": "2026-11-20T16:52:09.004Z",
+        "n": "👕 Kit 5 CAMISETAS Lisas Básicas MENINO Coloridas Verão Algodão Confortável",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/5fqTKTyQGC",
+        "p": 0.1503
+      },
+      {
+        "h": "2026-11-20T16:52:14.100Z",
+        "n": "🛁 Rede de proteção para banheira Buba - Rosa",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/32SXnV5",
+        "p": 0.36
       }
     ]
   },
@@ -152,6 +168,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-20T15:54:14.270Z",
-  "ultima_categoria": "passeio"
+  "proximo_em": "2026-11-20T17:01:32.786Z",
+  "ultima_categoria": "roupa"
 }
