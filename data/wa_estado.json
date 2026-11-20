@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-20",
-  "enviados": 11,
-  "ultimo": "2026-11-20T21:26:09.453Z",
+  "enviados": 12,
+  "ultimo": "2026-11-20T22:35:06.246Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-19": 21,
     "2026-11-20": 21
   },
-  "membros_em": "2026-11-20T21:44:26.193Z",
-  "ultima_loja": "ml",
+  "membros_em": "2026-11-20T22:44:32.047Z",
+  "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -130,6 +130,14 @@
         "r": "venceu",
         "k": "https://s.shopee.com.br/3LSYmDz7Mu",
         "p": 0.1503
+      },
+      {
+        "h": "2026-11-20T22:35:06.246Z",
+        "n": "🛁 Kit 12 Toalhas Umedecidas Upa Bebê Flip Top 140un (1680)",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6VPajD2JQ4",
+        "p": 0.0667
       }
     ]
   },
@@ -208,6 +216,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-20T21:32:42.192Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-20T22:40:57.342Z",
+  "ultima_categoria": "higiene"
 }
