@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-20",
-  "enviados": 3,
-  "ultimo": "2026-11-20T12:18:06.042Z",
+  "enviados": 4,
+  "ultimo": "2026-11-20T13:26:04.031Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-20": 21
   },
   "membros_em": "2026-11-20T13:02:14.268Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -50,6 +50,14 @@
         "r": "enviado",
         "k": "https://meli.la/1ux7351",
         "p": 0.1994
+      },
+      {
+        "h": "2026-11-20T13:26:04.031Z",
+        "n": "Antes de fechar a compra, passe na página de cupons e ative os que servem para v",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8fTxwjM742",
+        "p": 9
       }
     ]
   },
@@ -128,6 +136,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-20T12:30:10.565Z",
+  "proximo_em": "2026-11-20T13:33:29.229Z",
   "ultima_categoria": "passeio"
 }
