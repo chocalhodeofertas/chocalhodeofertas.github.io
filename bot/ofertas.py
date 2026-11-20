@@ -318,21 +318,37 @@ def _norm(titulo):
     return normalizar(titulo or "")
 
 
+# Acessórios que citam o item de reposição no título, mas não são ele (20/11: trocador "de fralda",
+# lixeira "para fraldas", "bolha de sabão" infantil, viseira "anti shampoo", mordedor "escova de dentes")
+_NAO_E_REPOSICAO = {
+    "fralda": re.compile(r"\b(trocador|porta|lixeira|lixo|cesto|organizador|bolsa|mochila|pano|boca|ombro|toalha|"
+                         r"saida maternidade|saquinhos?|capa|cueiro|tecido|reutilizave\w*|aquecedor|dispenser|"
+                         r"bordad\w*|boneca|brinquedo)\b"),
+    "shampoo e sabonete": re.compile(r"\b(esponja|viseira|chapeu|protetor|dispenser|saboneteira|porta (shampoo|sabonete)|"
+                                     r"brinquedo|banheira)\b"),
+    "roupa de bebe (lavar)": re.compile(r"\b(bolhas?|bolinhas?|lanca|brinquedo|pistola|maquina de bolha)\b"),
+    "higiene bucal": re.compile(r"\b(mordedor|brinquedo)\b"),
+}
+
+
+def _reposicao(titulo):
+    t = _norm(titulo)
+    for nome, padrao, lim in _REPOSICAO_RE:
+        if padrao.search(t):
+            nao = _NAO_E_REPOSICAO.get(nome)
+            if nao and nao.search(t):
+                continue
+            return nome, lim
+    return None, 1
+
+
 def reposicao(titulo):
     """Tipo de item de reposição (fralda, lenço umedecido...) ou None."""
-    t = _norm(titulo)
-    for nome, padrao, _ in _REPOSICAO_RE:
-        if padrao.search(t):
-            return nome
-    return None
+    return _reposicao(titulo)[0]
 
 
 def limite_por_dia(titulo):
-    t = _norm(titulo)
-    for _, padrao, lim in _REPOSICAO_RE:
-        if padrao.search(t):
-            return lim
-    return 1
+    return _reposicao(titulo)[1]
 
 
 def tipo_chave(titulo):

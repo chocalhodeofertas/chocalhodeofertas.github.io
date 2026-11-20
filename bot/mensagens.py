@@ -38,6 +38,8 @@ MODELOS_ALVO = [
 # características técnicas ou promessas (cláusula 5.4). Primeiro que casar vale.
 FRASES_PRODUTO = [
     # Acessórios primeiro (o título costuma citar o item "grande" onde eles vão)
+    (r"porta.?dent|guarda.?dent|fada do dente|album dental|dentinhos? de leite|dentes? de leite", None,
+     ["🦷 Pra guardar o primeiro dentinho", "🧚 A Fada do Dente aprova", "🦷 Lembrança do primeiro dentinho"]),
     (r"trocador", "do trocador", ["🧷 Pra trocar fralda em qualquer lugar", "🧷 Troca de fralda sem perrengue"]),
     (r"organizador|cesto|porta fralda|porta treco", None, ["🧺 Pra deixar tudo organizado", "🧺 Cada coisa no seu lugar"]),
     (r"mosquiteiro|tela mosquiteira", "do mosquiteiro", ["🦟 Pra deixar os mosquitos longe", "🌙 Soninho sem pernilongo"]),
@@ -187,6 +189,18 @@ def _titulo_curto(titulo, limite=110):
     return titulo if len(titulo) <= limite else titulo[: limite - 1].rstrip() + "…"
 
 
+# Categoria do ML vale para a frase só quando o título confirma (20/11: um porta-dentes da categoria
+# "quarto" saiu com "Pra deixar o quarto do bebê pronto"). Brinquedo tem frases que servem para tudo.
+_CATEGORIA_LIVRE = {"brinquedo", "jogo", "game"}
+
+
+def _categoria_confere(oferta):
+    from .shopee_ofertas import categoria_do_titulo
+
+    cat = oferta.categoria
+    return cat in _CATEGORIA_LIVRE or (bool(cat) and categoria_do_titulo(oferta.titulo or "") == cat)
+
+
 def _abertura(oferta, rng):
     """Frase de abertura que combina com o produto.
 
@@ -205,7 +219,7 @@ def _abertura(oferta, rng):
         if sorte < 0.85 and alvo and tem_de:
             return rng.choice(MODELOS_ALVO).format(alvo=alvo)
         return rng.choice(marca)
-    proprias = CHAMADAS.get(oferta.categoria)
+    proprias = CHAMADAS.get(oferta.categoria) if _categoria_confere(oferta) else None
     if proprias and sorte < 0.6:
         return rng.choice(proprias)
     return rng.choice(marca)

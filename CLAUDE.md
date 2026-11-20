@@ -73,6 +73,8 @@ Textos para o dono do projeto sempre em português do Brasil.
   absorvente de seio (até 5 de cada por dia; `limite_por_dia`, `contar_tipos_do_dia`, `cabe_no_dia`, chave `tipo_chave`).
   Marca (`MARCAS_REPOSICAO`) ou tamanho/quantidade (`tamanho`) diferente = outro produto (`mesmo_item_reposicao`); o mesmo item
   volta em `REPOSICAO_DIAS` (3). Não vão para o fim da fila em `priorizar_tipos_novos`. Fora: papinha/cereal (NBCAL), protetor de mamilo.
+  Acessório que só cita o item não conta (`_NAO_E_REPOSICAO`, 20/11): trocador/lixeira/porta/pano "de fralda", "bolha de sabão",
+  viseira "anti shampoo", mordedor "escova de dentes".
   Tipo do dia (`ofertas.tipos_do_dia`) soma ML e Shopee; sem tipo conhecido, usa a primeira palavra que diz o que é o produto.
   `ofertas.priorizar_tipos_novos`: tipo que saiu nas últimas 48 h vai para o fim da fila (só entra se faltar alternativa).
   Rodízio de categorias (17/11, `ofertas.equilibrar_categorias`, ML e Shopee, por cima do de tipos): conta o dia em
@@ -89,7 +91,8 @@ Textos para o dono do projeto sempre em português do Brasil.
 - Frete no post (ML): `mercadolivre.entrega` lê `shipping.free_shipping` e `logistic_type == "fulfillment"` de cada anúncio
   (`InfoProduto.envio`); `lote.conferir_anuncio` guarda o do anúncio que o link abre (`info.frete`) e `main._com_frete` põe na oferta;
   `mensagens._linhas_preco` mostra "🚚 Frete grátis · ⚡ Full (entrega rápida)" só quando é verdade. Sem anúncio conhecido, não mostra.
-- `mensagens.py`: `preco_por_unidade` (fralda descartável: por fralda; lenço umedecido: a cada 100; só com quantidade clara no título). Textos do Telegram/WhatsApp, frases de abertura por produto, linha de cupom, Shopee ("A partir de", nota e vendas).
+- `mensagens.py`: frase da categoria do ML (`CHAMADAS`) só quando o título confirma a categoria (`_categoria_confere`;
+  brinquedo/jogo/game livres): 20/11, porta-dentes da categoria "quarto" saiu com "quarto do bebê pronto". `preco_por_unidade` (fralda descartável: por fralda; lenço umedecido: a cada 100; só com quantidade clara no título). Textos do Telegram/WhatsApp, frases de abertura por produto, linha de cupom, Shopee ("A partir de", nota e vendas).
 - `lote.py`: lote do Linkbuilder (não existe API oficial do ML para gerar link; é manual). Cada link oficial abre UM anúncio
   (o vencedor quando o lote foi montado): `estado.links_item` guarda qual (lotes antigos vieram de `data/links_item_inicial.json`).
   `lote.conferir_anuncio` (na rodada e antes de postar): anúncio fora da lista de ativos do catálogo (pausado/sem estoque) →

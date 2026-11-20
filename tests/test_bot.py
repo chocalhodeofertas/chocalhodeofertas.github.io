@@ -608,11 +608,20 @@ def test_ritmo_guarda_posts_para_a_noite():
 def test_chamada_por_categoria():
     import random as _r
     o = avaliar(prod(), info(70, 100), est.novo(), AGORA)
-    o.categoria = "fralda"
+    o.categoria = "brinquedo"
     o.titulo = "Produto generico qualquer"
     textos = {mensagens._abertura(o, _r.Random(i)) for i in range(40)}
-    assert any(t in mensagens.CHAMADAS["fralda"] for t in textos)
+    assert any(t in mensagens.CHAMADAS["brinquedo"] for t in textos)
     assert any(t in mensagens.ABERTURAS for t in textos)
+    # Categoria do ML que o título não confirma não vira frase (porta-dentes na categoria "quarto")
+    o.categoria, o.titulo = "quarto", "Porta Dentes Infantil Com Porta Moedas E Aplicativo Cor Azul"
+    textos = {mensagens._abertura(o, _r.Random(i)) for i in range(80)}
+    assert not any(t in mensagens.CHAMADAS["quarto"] for t in textos)
+    assert any("dentinho" in t or "Fada do Dente" in t for t in textos)
+    o.titulo = "Produto generico qualquer"
+    assert not any(mensagens._abertura(o, _r.Random(i)) in mensagens.CHAMADAS["quarto"] for i in range(40))
+    o.titulo = "Lençol Avulso Infantil Estampado"
+    assert any(mensagens._abertura(o, _r.Random(i)) in mensagens.CHAMADAS["quarto"] for i in range(80))
 
 
 def test_abertura_combina_com_o_produto():
@@ -3013,6 +3022,20 @@ def test_estado_carrega_historico_inicial_de_posts(tmp_path):
     (tmp_path / "estado.json").write_text("{}")
     e = est.carregar(str(tmp_path / "estado.json"))
     assert e["posts_hist"] == [["MLB1", "2026-11-06T11:05-03:00", 19.97, "Trava"]]
+
+
+def test_acessorio_nao_conta_como_item_de_reposicao():
+    from bot import ofertas
+    for t in ["Trocador De Fralda Bebê Impermeável Dobrável", "Lixeira Para Fraldas Rister Baby 10l",
+              "Cesto Para Bebes Porta Roupa Fraldas Organizador", "Pano de Boca Kit 6 Unidades Paninho Fralda de Bebe",
+              "Kit 30 Caixas Massinha de Modelar + 30 Bolha de Sabão + 30 Cortador Forminha Infantil",
+              "Lança Bolhas Sabão Automático Brinquedo Infantil", "Viseira Proteção Banho Bebê Anti Shampoo",
+              "Mordedor para Bebê Silicone Massageador Escovinha Banana Escova Dentes"]:
+        assert ofertas.reposicao(t) is None, t
+        assert ofertas.limite_por_dia(t) == 1, t
+    assert ofertas.reposicao("Fralda Pampers Confort Sec Tamanho G, 92 Un") == "fralda"
+    assert ofertas.reposicao("Sabão Líquido para Roupas Delicadas Bebê Lavanda 3,8 Litros") == "roupa de bebe (lavar)"
+    assert ofertas.reposicao("Escova de Dente Infantil Colgate Tandy 2 unidades") == "higiene bucal"
 
 
 def test_itens_de_reposicao_repetem_mais():
