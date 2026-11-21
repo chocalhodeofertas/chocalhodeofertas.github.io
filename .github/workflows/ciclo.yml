@@ -38,6 +38,16 @@ jobs:
 
       - run: npm ci --prefix wa --no-audit --no-fund
 
+      # A fila do grupo do WhatsApp (fila_wa/) passa de um ciclo para o outro: antes, o que esperava na troca
+      # de ciclo sumia sem registro (21/11). Itens com mais de 3 h vencem do mesmo jeito.
+      - name: Recuperar a fila do WhatsApp
+        uses: actions/cache/restore@v4
+        continue-on-error: true
+        with:
+          path: fila_wa
+          key: fila-wa-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: fila-wa-
+
       - name: Rodar em ciclo
         run: |
           git config user.name "chocalho-bot"
@@ -71,7 +81,7 @@ jobs:
           HORA_INICIO: ${{ vars.HORA_INICIO }}
           HORA_FIM: ${{ vars.HORA_FIM }}
           POR_CATEGORIA: ${{ vars.POR_CATEGORIA || '20' }}
-          REPOST_DIAS: ${{ vars.REPOST_DIAS || '4' }}
+          REPOST_DIAS: ${{ vars.REPOST_DIAS || '6' }}  # 6 dias: decisão do Leonardo em 21/11 (com 4, 2/3 dos posts eram repetidos)
           # Antes do prazo, só volta se estiver 5% abaixo do MENOR preço com que já saiu (decisão do Leonardo, 17/11 18h40)
           REPOST_QUEDA: ${{ vars.REPOST_QUEDA || '0.05' }}
           LINK_MODO: ${{ vars.LINK_MODO }}
@@ -115,6 +125,14 @@ jobs:
           WHATSAPP_GRUPO: ${{ vars.WHATSAPP_GRUPO || 'https://chat.whatsapp.com/FOwEWWIjfKoFWmD8Xsv5lq' }}
           AFILIADO_MATT_WORD: ${{ vars.AFILIADO_MATT_WORD || 'chocalhodeofertas' }}
           AFILIADO_MATT_TOOL: ${{ vars.AFILIADO_MATT_TOOL || '39326742' }}
+
+      - name: Guardar a fila do WhatsApp
+        if: always()
+        uses: actions/cache/save@v4
+        continue-on-error: true
+        with:
+          path: fila_wa
+          key: fila-wa-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Disparar a próxima execução
         if: always()

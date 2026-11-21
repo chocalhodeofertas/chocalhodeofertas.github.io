@@ -61,8 +61,8 @@ Textos para o dono do projeto sempre em português do Brasil.
   preço atual = mínimo da janela (até 30 dias, contando hoje mais cedo), preço já 3% mais alto na janela e esse nível de preço
   visto em no máximo 3 dias (quem alterna entre dois preços não ganha selo). O site (`vitrine.selo`) usa a mesma função e
   mostra "Menor preço em N dias". Decisão do Leonardo apesar da cláusula 5.4 do ML.
-- Repetição (`estado.checar_repeticao`, usada em `ofertas.avaliar`, na fila do ML e na da Shopee): `REPOST_DIAS` (4 no workflow,
-  decisão do Leonardo em 17/11 18h40): mesmo anúncio ou título parecido (`ofertas.parecido`, ML + Shopee) não volta antes disso;
+- Repetição (`estado.checar_repeticao`, usada em `ofertas.avaliar`, na fila do ML e na da Shopee): `REPOST_DIAS` (6 no workflow,
+  decisão do Leonardo em 21/11; era 4 desde 17/11 e 2/3 dos posts de 18-19/11 eram repetidos): mesmo anúncio ou título parecido (`ofertas.parecido`, ML + Shopee) não volta antes disso;
   volta antes só se o preço estiver `REPOST_QUEDA` (5%) abaixo do MENOR preço com que já saiu no período (antes de 17/11 comparava
   com o último post: variações com preços diferentes voltavam como "baixou"). Todos os posts ficam em `estado.posts_hist`
   ([id, quando, preço, título], 45 dias; semeado uma vez com `data/posts_hist_inicial.json`, refeito do histórico do git: 913 posts
@@ -113,8 +113,9 @@ Textos para o dono do projeto sempre em português do Brasil.
   A API não tem oferta relâmpago; `listType` 2 (top) e 0 trazem produtos gerais, não usamos.
   Regras: nota ≥ 4,7, vendas ≥ 500 (200 se veio do espelho), comissão ≥ 3% (era 5%; fralda quase sempre paga 3%), só preço final; "de/por" só com queda vista pelo próprio bot.
   Links via `generateShortLink` com subId `telegram` / `whatsapp`.
-- `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/`; o serviço (Baileys) posta com aquecimento automático
-  (4 → 10 → 14 → 20 posts/dia nos dias 0, 4, 8 e 14 desde a conexão), só das 7h às 23h, alterna ML/Shopee,
+- `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/` (fora do git; passa de um ciclo para o outro pelo cache do Actions,
+  passos "Recuperar/Guardar a fila do WhatsApp" no ciclo.yml, 21/11: antes sumia na troca de ciclo); o serviço (Baileys) posta com aquecimento automático
+  (4 → 10 → 14 → 20 → 25 → 30 posts/dia nos dias 0, 4, 8, 11, 18 e 25 desde a conexão em 10/11; acelerado a pedido dele em 21/11), só das 7h às 23h, alterna ML/Shopee,
   intervalo sorteado de 4 a 13 min (`WA_INTERVALO_MIN/MAX`) e o limite do dia espalhado pelas horas (`comum.mjs: cotaAteAgora`;
   às 12h só pode ter saído 4/16 do limite); avisa quando cai por mais de 10 min, quando volta e quando a pausa de segurança acaba;
   Radar (`comum.mjs: anotarRadar`): `wa_estado.json: radar[dia][hora] = [entradas, saídas, mensagens]`, 45 dias, só contagens;
@@ -126,7 +127,7 @@ Textos para o dono do projeto sempre em português do Brasil.
   Prévia do link (é a prévia do próprio link, `linkPreview`, não imagem anexa): com `PREVIA_MARCA=1` (aprovado e ligado em 17/11)
   a imagem da prévia é o cartão com a marca (`arte.cartao_previa`: foto do produto num cartão branco, fundo lavanda, logo embaixo,
   sem preço), gerado em `whatsapp.cartao_da_oferta` e salvo na fila; foto que não baixa → foto do anúncio.
-  Título da prévia = nome do produto, sem emoji (decisão dele). Imagem anexa só se a prévia falhar.
+  Título da prévia = nome do produto, sem emoji (decisão dele), curto (`whatsapp.titulo_previa`, até 48 letras, 21/11). Imagem anexa só se a prévia falhar.
   Prévia só para o admin: `tools/previa_cartao_wa`.
   Menção oculta (`mencionar` no item → `mentions` com todos os participantes, sem "@" no texto): SÓ pelo comando `marcar <texto|meli.la>`
   do Leonardo (`comandos.marcar`, até 2/dia); nunca automático (decisão de 17/11).
@@ -190,6 +191,8 @@ Textos para o dono do projeto sempre em português do Brasil.
   abre do GitHub (não: cai em account-verification) e por que a Shopee recusou cada produto de uma busca.
   Nenhuma ferramenta abre link de afiliado (a antiga `ver_pagina_ml` foi apagada em 16/11).
 - `previa_busca "fralda g; mochila infantil"`: manda só para o admin as respostas da busca sob pedido e a prévia dos cupons da Shopee.
+- `sondar_campos "MLB.. MLB..; itemId itemId"`: tudo o que as APIs do ML (produto de catálogo, atributos, anúncios, descrição,
+  categoria, busca de catálogo) e da Shopee (campos do productOfferV2) entregam (saida/campos_*.json, sem links).
 - `sondar_shopee`: mostra categorias (productCatIds) e tipos de lista que a API da Shopee devolve (só leitura).
 - `achar_canais_tg "termo; termo"`: procura canais públicos de ofertas de bebê no Telegram e mede links/posts infantis (saida/canais_tg.md).
 - `previa_cartao_wa`: manda só para o admin o cartão da prévia do WhatsApp das 3 últimas ofertas do dia.

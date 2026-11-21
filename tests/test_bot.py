@@ -1534,6 +1534,15 @@ def test_titulo_da_capa_prefere_duas_linhas():
         assert len(linhas) == 2
 
 
+def test_titulo_curto_na_previa_do_whatsapp():
+    from bot.whatsapp import titulo_previa
+    t = titulo_previa("Bicicleta Infantil Aro 12 Freio Tambor 1 Marcha Cestinha Nathor C/ Rodinha Menina de 90cm a 1m")
+    assert t == "Bicicleta Infantil Aro 12 Freio Tambor 1 Marcha"
+    assert len(titulo_previa("Capa Colchão Impermeável Antialérgica Protetor Material Hospitalar Segura Xixi")) <= 48
+    assert not titulo_previa("Kit Brinquedos Educativos Montessori Para Bebês de 1 Ano com Caixa").endswith(" de")
+    assert titulo_previa("Banheira Dobrável") == "Banheira Dobrável"
+
+
 def test_whatsapp_oferta_com_previa_do_link(tmp_path, monkeypatch):
     import json
     from bot import whatsapp

@@ -78,6 +78,24 @@ def cartao_da_oferta(oferta, session=None):
         return None
 
 
+TITULO_PREVIA_MAX = 48
+_FIM_RUIM = {"de", "da", "do", "das", "dos", "com", "e", "para", "pra", "p", "em", "a", "o", "-", "+", "|", "/", "c", "sem", "kit"}
+
+
+def titulo_previa(titulo, maximo=TITULO_PREVIA_MAX):
+    """Nome curto para a prévia do link (21/11: o nome inteiro ocupava muito espaço no grupo).
+    Corta numa palavra inteira, sem reticências e sem terminar em "de", "com", "+"..."""
+    t = re.sub(r"\s+", " ", (titulo or "").replace("|", " ").strip())
+    if len(t) <= maximo:
+        return t
+    palavras = t[:maximo + 1].split(" ")
+    if len(t) > maximo + 1 and t[maximo + 1] != " ":
+        palavras = palavras[:-1]  # a última foi cortada no meio
+    while palavras and palavras[-1].lower().strip(",.;:-") in _FIM_RUIM | {""}:
+        palavras.pop()
+    return " ".join(palavras).rstrip(",.;:-") or t[:maximo]
+
+
 def enfileirar_oferta(oferta, texto, agora=None, loja="ml", mencionar=False):
     """Oferta para o grupo como texto com a prévia grande do link (foto + nome do produto),
     igual aos grupos de ofertas grandes. O serviço monta a prévia com a foto do anúncio;
@@ -86,7 +104,7 @@ def enfileirar_oferta(oferta, texto, agora=None, loja="ml", mencionar=False):
     preview = None
     cartao = None
     if m and getattr(oferta, "imagem", None):
-        preview = {"link": m.group(0), "titulo": oferta.titulo, "imagem": oferta.imagem}
+        preview = {"link": m.group(0), "titulo": titulo_previa(oferta.titulo), "imagem": oferta.imagem}
         cartao = cartao_da_oferta(oferta)
     meta = ({"id": oferta.id, "preco": oferta.preco}  # para conferir o preço antes de sair (conferir_fila)
             if getattr(oferta, "id", None) and getattr(oferta, "preco", None) else None)

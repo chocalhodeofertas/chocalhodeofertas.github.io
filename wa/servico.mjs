@@ -16,8 +16,8 @@ import { PASTA_AUTH, RAIZ, abrirSessao, anotarHistorico, anotarRadar, avisar, co
 const FILA = path.resolve(RAIZ, process.env.WA_FILA || "fila_wa");
 // Aquecimento automático: o ritmo sobe sozinho conforme o número ganha
 // histórico. WA_MAX_DIA (variável do GitHub) trava um valor fixo.
-const RAMPA = [ // [a partir do dia, posts por dia]
-  [0, 4], [4, 10], [8, 14], [14, 20],
+const RAMPA = [ // [a partir do dia, posts por dia]; 21/11: o Leonardo pediu para acelerar (número conectado em 10/11)
+  [0, 4], [4, 10], [8, 14], [11, 20], [18, 25], [25, 30],
 ];
 const VALIDADE_ITEM = 3 * 60 * 60 * 1000; // oferta parada há mais de 3h na fila não sai
 const FIM = Date.now() + Number(process.env.WA_HORAS || 5.6) * 3600 * 1000;
