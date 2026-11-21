@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 21,
-  "ultimo": "2026-11-21T22:55:08.110Z",
+  "enviados": 22,
+  "ultimo": "2026-11-21T23:03:59.046Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-21": 21
   },
   "membros_em": "2026-11-21T22:59:16.982Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -250,6 +250,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/AAIup7RoYb",
         "p": 0
+      },
+      {
+        "h": "2026-11-21T23:03:59.045Z",
+        "n": "🧸 Brinquedo Montessori de Madeira com Labirinto de Contas e Atividades Interati",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1Y4PSKo",
+        "p": 0.2609
       }
     ]
   },
@@ -342,6 +350,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T23:03:51.845Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-21T23:10:00.631Z",
+  "ultima_categoria": "brinquedo"
 }
