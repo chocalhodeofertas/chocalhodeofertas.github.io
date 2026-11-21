@@ -7,6 +7,7 @@ import json
 import subprocess
 import sys
 import urllib.request
+import wave
 from pathlib import Path
 
 
@@ -22,9 +23,10 @@ def main(args: str) -> None:
         nome, url = par.split("=", 1)
         arq = Path("/tmp") / (nome + Path(url).suffix)
         urllib.request.urlretrieve(url, arq)
-        # decodifica com o ffmpeg do runner (o PyAV instalado pode não bater com o faster-whisper)
-        bruto = subprocess.run(["ffmpeg", "-v", "error", "-i", str(arq), "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
-                               check=True, capture_output=True).stdout
+        # lê o WAV direto (o PyAV instalado pode não bater com o faster-whisper)
+        # (o runner não tem ffmpeg: mande WAV mono 16 kHz)
+        with wave.open(str(arq)) as w:
+            bruto = w.readframes(w.getnframes())
         audio = np.frombuffer(bruto, np.int16).astype(np.float32) / 32768
         segs, _ = modelo.transcribe(audio, language="pt", word_timestamps=True)
         res = []
