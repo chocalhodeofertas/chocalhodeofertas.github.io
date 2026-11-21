@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 12,
-  "ultimo": "2026-11-21T21:24:20.207Z",
+  "enviados": 14,
+  "ultimo": "2026-11-21T21:39:23.903Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-21": 22
   },
   "membros_em": "2026-11-21T21:10:13.987Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -178,6 +178,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6fj2ZhXci7",
         "p": 0
+      },
+      {
+        "h": "2026-11-21T21:31:51.846Z",
+        "n": "🛁 Kit 2 Sabonete Infantil Pom Pom Óleo de Amêndoas 70g",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6Amlz6EFSf",
+        "p": 0
+      },
+      {
+        "h": "2026-11-21T21:39:23.903Z",
+        "n": "✨ Aspirador Nasal Elétrico Epsilon Recarregável Azul para Bebê",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1ZFTWFJ",
+        "p": 0.36
       }
     ]
   },
@@ -263,6 +279,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T21:31:44.254Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-21T21:47:22.615Z",
+  "ultima_categoria": "outros"
 }
