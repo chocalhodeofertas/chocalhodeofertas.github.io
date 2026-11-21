@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 19,
-  "ultimo": "2026-11-21T22:36:12.083Z",
+  "enviados": 20,
+  "ultimo": "2026-11-21T22:46:22.208Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -234,6 +234,14 @@
         "r": "enviado",
         "k": "https://meli.la/24D46LX",
         "p": 0.33
+      },
+      {
+        "h": "2026-11-21T22:46:22.208Z",
+        "n": "⏰ Válido até 22/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -319,6 +327,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T22:46:14.517Z",
+  "proximo_em": "2026-11-21T22:55:01.614Z",
   "ultima_categoria": "brinquedo"
 }
