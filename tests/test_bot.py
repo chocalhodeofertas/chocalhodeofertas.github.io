@@ -3144,3 +3144,10 @@ def test_mesma_foto_conta_como_o_mesmo_produto(monkeypatch):
     # mais barato 5%: pode voltar
     rep = foto.checar(estado, "SHP7", "Combo Patoguejo Ligeiro", 90.0, "http://f/b.jpg", agora, 6, log=lambda m: None)
     assert rep and not rep["bloqueado"]
+
+
+def test_item_de_idoso_e_marmita_sem_sinal_infantil_fica_de_fora():
+    from bot.filtros import fora_da_faixa
+    assert fora_da_faixa("LMKB Grade Proteção Cama Idoso E Barra Apoio Dobrável Para Cama", "outros")
+    assert fora_da_faixa("Bolsa Térmica Marmitex Lancheira Lanche Academia Colorida", "outros")
+    assert fora_da_faixa("Grade de Proteção Dobrável para Cama de Bebê e Idoso – Drakar", "outros") is None

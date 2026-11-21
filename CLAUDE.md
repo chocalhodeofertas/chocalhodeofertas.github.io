@@ -91,7 +91,7 @@ Textos para o dono do projeto sempre em português do Brasil.
   Origem visível para o admin: `espelho.fonte` → linha "🔁 Copiada do canal @x" na cópia do ML, aviso no post da Shopee
   e lista no resumo diário (`posts_dia[].fonte`). Shopee: `shopee_ofertas.do_espelho` confere por itemId.
 - `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica, fralda geriátrica/incontinência) e `fora_da_faixa` (casa/adulto, exige sinal infantil;
-  17/11: escritório/igreja sem sinal infantil e protetor/adesivo de seios de silicone, "fita up").
+  17/11: escritório/igreja sem sinal infantil; 21/11: idoso, marmitex/marmita, academia e protetor/adesivo de seios de silicone, "fita up").
 - Frete no post (ML): `mercadolivre.entrega` lê `shipping.free_shipping` e `logistic_type == "fulfillment"` de cada anúncio
   (`InfoProduto.envio`); `lote.conferir_anuncio` guarda o do anúncio que o link abre (`info.frete`) e `main._com_frete` põe na oferta;
   `mensagens._linhas_preco` mostra "🚚 Frete grátis · ⚡ Full (entrega rápida)" só quando é verdade. Sem anúncio conhecido, não mostra.

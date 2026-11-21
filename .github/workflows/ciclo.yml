@@ -83,6 +83,8 @@ jobs:
           POR_CATEGORIA: ${{ vars.POR_CATEGORIA || '20' }}
           REPOST_DIAS: ${{ vars.REPOST_DIAS || '6' }}  # 6 dias: decisão do Leonardo em 21/11 (com 4, 2/3 dos posts eram repetidos)
           # Antes do prazo, só volta se estiver 5% abaixo do MENOR preço com que já saiu (decisão do Leonardo, 17/11 18h40)
+          # Mesmo produto pela foto (bot/foto.py, 21/11). Para desligar: vars.FOTO_IGUAL=0
+          FOTO_IGUAL: ${{ vars.FOTO_IGUAL || '1' }}
           REPOST_QUEDA: ${{ vars.REPOST_QUEDA || '0.05' }}
           LINK_MODO: ${{ vars.LINK_MODO }}
           LOTE_TAMANHO: ${{ vars.LOTE_TAMANHO }}

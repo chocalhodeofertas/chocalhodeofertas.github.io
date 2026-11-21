@@ -105,7 +105,7 @@ _GAMES_FORA = re.compile(r"\b(headset|fone|cadeira|microfone|mouse|teclado|monit
 _CASA_ADULTO = re.compile(
     r"\b(torneira|pia|queen|king|hotel|spa|gelo|passaros|pombos|morcegos|mantimentos?|churrasqueira|"
     r"furadeira|parafusadeira|ferramentas?|pneus?|notebook|smartphone|air ?fryer|cafeteira|"
-    r"panela de pressao|aspirador de po|escritorio|igreja)\b"
+    r"panela de pressao|aspirador de po|escritorio|igreja|idosos?|marmitex|marmitas?|academia)\b"
 )
 # "Casal"/"solteiro" só é problema quando o item não é de bebê nem diz que é infantil
 # (berço acoplado à cama de casal e jogo de cama solteiro infantil podem)
