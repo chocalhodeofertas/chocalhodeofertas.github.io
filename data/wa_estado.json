@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 8,
-  "ultimo": "2026-11-21T18:01:05.940Z",
+  "enviados": 9,
+  "ultimo": "2026-11-21T19:09:08.351Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-20": 22,
     "2026-11-21": 22
   },
-  "membros_em": "2026-11-21T18:05:01.336Z",
+  "membros_em": "2026-11-21T19:05:06.668Z",
   "ultima_loja": "ml",
   "max_dia": 14,
   "intervalo_min": 4,
@@ -90,6 +90,14 @@
         "r": "enviado",
         "k": "https://meli.la/14TmAC5",
         "p": 0.36
+      },
+      {
+        "h": "2026-11-21T19:09:08.350Z",
+        "n": "⏰ Válido até 21/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -175,6 +183,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T18:06:24.924Z",
+  "proximo_em": "2026-11-21T19:18:31.678Z",
   "ultima_categoria": "higiene"
 }
