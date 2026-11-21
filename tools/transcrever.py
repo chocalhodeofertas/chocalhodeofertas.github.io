@@ -12,6 +12,7 @@ from pathlib import Path
 
 def main(args: str) -> None:
     subprocess.run([sys.executable, "-m", "pip", "install", "-q", "faster-whisper"], check=True)
+    import numpy as np
     from faster_whisper import WhisperModel
 
     saida = Path("saida")
@@ -21,7 +22,11 @@ def main(args: str) -> None:
         nome, url = par.split("=", 1)
         arq = Path("/tmp") / (nome + Path(url).suffix)
         urllib.request.urlretrieve(url, arq)
-        segs, _ = modelo.transcribe(str(arq), language="pt", word_timestamps=True)
+        # decodifica com o ffmpeg do runner (o PyAV instalado pode não bater com o faster-whisper)
+        bruto = subprocess.run(["ffmpeg", "-v", "error", "-i", str(arq), "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+                               check=True, capture_output=True).stdout
+        audio = np.frombuffer(bruto, np.int16).astype(np.float32) / 32768
+        segs, _ = modelo.transcribe(audio, language="pt", word_timestamps=True)
         res = []
         for s in segs:
             res.append({"inicio": round(s.start, 2), "fim": round(s.end, 2), "texto": s.text.strip(),
