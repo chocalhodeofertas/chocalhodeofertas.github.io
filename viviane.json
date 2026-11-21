@@ -1,0 +1,327 @@
+[
+ {
+  "inicio": 0.0,
+  "fim": 5.5,
+  "texto": "Essa frauda custou R$32 em uma semana e R$58 na outra.",
+  "palavras": [
+   {
+    "inicio": 0.0,
+    "fim": 0.24,
+    "texto": "Essa"
+   },
+   {
+    "inicio": 0.24,
+    "fim": 0.76,
+    "texto": "frauda"
+   },
+   {
+    "inicio": 0.76,
+    "fim": 1.16,
+    "texto": "custou"
+   },
+   {
+    "inicio": 1.16,
+    "fim": 1.46,
+    "texto": "R"
+   },
+   {
+    "inicio": 1.46,
+    "fim": 1.88,
+    "texto": "$32"
+   },
+   {
+    "inicio": 1.88,
+    "fim": 2.54,
+    "texto": "em"
+   },
+   {
+    "inicio": 2.54,
+    "fim": 2.7,
+    "texto": "uma"
+   },
+   {
+    "inicio": 2.7,
+    "fim": 3.12,
+    "texto": "semana"
+   },
+   {
+    "inicio": 3.12,
+    "fim": 3.86,
+    "texto": "e"
+   },
+   {
+    "inicio": 3.86,
+    "fim": 4.06,
+    "texto": "R"
+   },
+   {
+    "inicio": 4.06,
+    "fim": 4.62,
+    "texto": "$58"
+   },
+   {
+    "inicio": 4.62,
+    "fim": 5.14,
+    "texto": "na"
+   },
+   {
+    "inicio": 5.14,
+    "fim": 5.5,
+    "texto": "outra."
+   }
+  ]
+ },
+ {
+  "inicio": 5.96,
+  "fim": 9.9,
+  "texto": "No 11 do 11, ela saiu no nosso grupo por R$32,99.",
+  "palavras": [
+   {
+    "inicio": 5.96,
+    "fim": 6.12,
+    "texto": "No"
+   },
+   {
+    "inicio": 6.12,
+    "fim": 6.4,
+    "texto": "11"
+   },
+   {
+    "inicio": 6.4,
+    "fim": 6.58,
+    "texto": "do"
+   },
+   {
+    "inicio": 6.58,
+    "fim": 6.96,
+    "texto": "11,"
+   },
+   {
+    "inicio": 7.12,
+    "fim": 7.28,
+    "texto": "ela"
+   },
+   {
+    "inicio": 7.28,
+    "fim": 7.58,
+    "texto": "saiu"
+   },
+   {
+    "inicio": 7.58,
+    "fim": 7.7,
+    "texto": "no"
+   },
+   {
+    "inicio": 7.7,
+    "fim": 7.94,
+    "texto": "nosso"
+   },
+   {
+    "inicio": 7.94,
+    "fim": 8.34,
+    "texto": "grupo"
+   },
+   {
+    "inicio": 8.34,
+    "fim": 8.6,
+    "texto": "por"
+   },
+   {
+    "inicio": 8.6,
+    "fim": 8.84,
+    "texto": "R"
+   },
+   {
+    "inicio": 8.84,
+    "fim": 9.28,
+    "texto": "$32"
+   },
+   {
+    "inicio": 9.28,
+    "fim": 9.9,
+    "texto": ",99."
+   }
+  ]
+ },
+ {
+  "inicio": 10.72,
+  "fim": 13.86,
+  "texto": "Uma semana depois, R$58,79.",
+  "palavras": [
+   {
+    "inicio": 10.72,
+    "fim": 10.94,
+    "texto": "Uma"
+   },
+   {
+    "inicio": 10.94,
+    "fim": 11.24,
+    "texto": "semana"
+   },
+   {
+    "inicio": 11.24,
+    "fim": 11.58,
+    "texto": "depois,"
+   },
+   {
+    "inicio": 12.06,
+    "fim": 12.3,
+    "texto": "R"
+   },
+   {
+    "inicio": 12.3,
+    "fim": 12.8,
+    "texto": "$58"
+   },
+   {
+    "inicio": 12.8,
+    "fim": 13.86,
+    "texto": ",79."
+   }
+  ]
+ },
+ {
+  "inicio": 14.62,
+  "fim": 19.04,
+  "texto": "O nosso bote vigia o preço todo dia e avisa no grupo na hora que cai.",
+  "palavras": [
+   {
+    "inicio": 14.62,
+    "fim": 14.76,
+    "texto": "O"
+   },
+   {
+    "inicio": 14.76,
+    "fim": 14.92,
+    "texto": "nosso"
+   },
+   {
+    "inicio": 14.92,
+    "fim": 15.38,
+    "texto": "bote"
+   },
+   {
+    "inicio": 15.38,
+    "fim": 15.78,
+    "texto": "vigia"
+   },
+   {
+    "inicio": 15.78,
+    "fim": 15.86,
+    "texto": "o"
+   },
+   {
+    "inicio": 15.86,
+    "fim": 16.14,
+    "texto": "preço"
+   },
+   {
+    "inicio": 16.14,
+    "fim": 16.56,
+    "texto": "todo"
+   },
+   {
+    "inicio": 16.56,
+    "fim": 17.06,
+    "texto": "dia"
+   },
+   {
+    "inicio": 17.06,
+    "fim": 17.28,
+    "texto": "e"
+   },
+   {
+    "inicio": 17.28,
+    "fim": 17.6,
+    "texto": "avisa"
+   },
+   {
+    "inicio": 17.6,
+    "fim": 17.76,
+    "texto": "no"
+   },
+   {
+    "inicio": 17.76,
+    "fim": 18.04,
+    "texto": "grupo"
+   },
+   {
+    "inicio": 18.04,
+    "fim": 18.28,
+    "texto": "na"
+   },
+   {
+    "inicio": 18.28,
+    "fim": 18.56,
+    "texto": "hora"
+   },
+   {
+    "inicio": 18.56,
+    "fim": 18.76,
+    "texto": "que"
+   },
+   {
+    "inicio": 18.76,
+    "fim": 19.04,
+    "texto": "cai."
+   }
+  ]
+ },
+ {
+  "inicio": 19.42,
+  "fim": 22.18,
+  "texto": "Toca no botão e entra no grupo. É de graça!",
+  "palavras": [
+   {
+    "inicio": 19.42,
+    "fim": 19.7,
+    "texto": "Toca"
+   },
+   {
+    "inicio": 19.7,
+    "fim": 19.82,
+    "texto": "no"
+   },
+   {
+    "inicio": 19.82,
+    "fim": 20.28,
+    "texto": "botão"
+   },
+   {
+    "inicio": 20.28,
+    "fim": 20.48,
+    "texto": "e"
+   },
+   {
+    "inicio": 20.48,
+    "fim": 20.72,
+    "texto": "entra"
+   },
+   {
+    "inicio": 20.72,
+    "fim": 20.88,
+    "texto": "no"
+   },
+   {
+    "inicio": 20.88,
+    "fim": 21.22,
+    "texto": "grupo."
+   },
+   {
+    "inicio": 21.54,
+    "fim": 21.64,
+    "texto": "É"
+   },
+   {
+    "inicio": 21.64,
+    "fim": 21.74,
+    "texto": "de"
+   },
+   {
+    "inicio": 21.74,
+    "fim": 22.18,
+    "texto": "graça!"
+   }
+  ]
+ }
+]
