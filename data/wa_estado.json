@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 17,
-  "ultimo": "2026-11-21T22:18:42.331Z",
+  "enviados": 18,
+  "ultimo": "2026-11-21T22:28:06.697Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-21": 22
   },
   "membros_em": "2026-11-21T22:10:22.409Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -218,6 +218,14 @@
         "r": "enviado",
         "k": "https://meli.la/1K2CveE",
         "p": 0.1455
+      },
+      {
+        "h": "2026-11-21T22:28:06.697Z",
+        "n": "🧷 Huggies Fralda Descartável Premium Natural Care Hipoalergênica RN - 34UN",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/9Kjnp2VWPe",
+        "p": 0
       }
     ]
   },
@@ -303,6 +311,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T22:28:00.529Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-21T22:36:06.224Z",
+  "ultima_categoria": "fralda"
 }
