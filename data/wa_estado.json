@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 6,
-  "ultimo": "2026-11-21T15:43:16.288Z",
+  "enviados": 7,
+  "ultimo": "2026-11-21T16:52:06.616Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-21": 22
   },
   "membros_em": "2026-11-21T16:03:31.681Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -74,6 +74,14 @@
         "r": "enviado",
         "k": "https://meli.la/186zW1g",
         "p": 0.36
+      },
+      {
+        "h": "2026-11-21T16:52:06.616Z",
+        "n": "✨ Anel Formatura Abc Infantil Regulavél Colorido Com Caixinha",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/1W0w3aYsOn",
+        "p": 0
       }
     ]
   },
@@ -159,6 +167,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T15:52:51.395Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-21T17:01:56.919Z",
+  "ultima_categoria": "outros"
 }
