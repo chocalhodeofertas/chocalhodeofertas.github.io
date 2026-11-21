@@ -13777,6 +13777,12 @@
    "status": "encerrado",
    "validade": "2026-11-20T23:59-03:00"
   },
+  "HOJENOMELI10": {
+   "criado": "2026-11-21T17:11-03:00",
+   "post": 1428,
+   "status": "ativo",
+   "validade": "2026-11-22T23:59-03:00"
+  },
   "HOJENOML": {
    "criado": "2026-11-10T18:32-03:00",
    "post": 250,
@@ -14252,7 +14258,7 @@
    "validade": "2026-11-20T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5651,
+ "cupons_extra_ultimo:cupombr": 5652,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6533,
  "cupons_shopee_enviado": "2026-11-21",
@@ -48691,7 +48697,7 @@
   },
   "2026-11-21": {
    "com_cupom": 1,
-   "cupons": 6,
+   "cupons": 7,
    "posts": 62,
    "shopee": 32
   }
@@ -54062,6 +54068,17 @@
    "criado": "2026-11-21T15:05-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1428": {
+   "blocos": [
+    {
+     "codigo": "HOJENOMELI10",
+     "html": "<b>🎟️ HOJENOMELI10</b> 👉 <b>10% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$30\n⏰ Válido até 22/11"
+    }
+   ],
+   "criado": "2026-11-21T17:11-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "250": {
    "blocos": [
