@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 28,
-  "ultimo": "2026-11-21T23:43:00.969Z",
+  "enviados": 29,
+  "ultimo": "2026-11-21T23:49:29.782Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-21": 21
   },
   "membros_em": "2026-11-21T23:19:58.444Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -306,6 +306,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/7VI9fVReIS",
         "p": 0
+      },
+      {
+        "h": "2026-11-21T23:49:29.782Z",
+        "n": "🛁 Garmastan Pomada Amamentação 20g - Cuidado para Seios Sensíveis",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2RoFpT8",
+        "p": 0.1683
       }
     ]
   },
@@ -398,6 +406,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T23:49:25.789Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-21T23:59:29.001Z",
+  "ultima_categoria": "higiene"
 }
