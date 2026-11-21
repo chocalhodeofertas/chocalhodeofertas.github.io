@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 22,
-  "ultimo": "2026-11-21T23:03:59.046Z",
+  "enviados": 25,
+  "ultimo": "2026-11-21T23:24:03.479Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-20": 22,
     "2026-11-21": 21
   },
-  "membros_em": "2026-11-21T22:59:16.982Z",
+  "membros_em": "2026-11-21T23:19:58.444Z",
   "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
@@ -258,6 +258,30 @@
         "r": "enviado",
         "k": "https://meli.la/1Y4PSKo",
         "p": 0.2609
+      },
+      {
+        "h": "2026-11-21T23:10:10.727Z",
+        "n": "👕 Kit 10 ou 6 peças 5 ou 3 Conjunto Verão Roupa Menina Infantil Camiseta e Shor",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8VAgqtqovZ",
+        "p": 0
+      },
+      {
+        "h": "2026-11-21T23:18:33.296Z",
+        "n": "🧸 Xuxão Apoio Urso Banguela Fúria Da Noite Gigante 100cm Pelúcia Preto",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2rEVfVu",
+        "p": 0.236
+      },
+      {
+        "h": "2026-11-21T23:24:03.479Z",
+        "n": "⏰ Válido até 22/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -350,6 +374,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T23:10:00.631Z",
+  "proximo_em": "2026-11-21T23:30:02.412Z",
   "ultima_categoria": "brinquedo"
 }
