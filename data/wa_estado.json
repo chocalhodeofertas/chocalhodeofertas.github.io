@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 11,
-  "ultimo": "2026-11-21T21:13:19.282Z",
+  "enviados": 12,
+  "ultimo": "2026-11-21T21:24:20.207Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-21": 22
   },
   "membros_em": "2026-11-21T21:10:13.987Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -170,6 +170,14 @@
         "r": "enviado",
         "k": "https://meli.la/2xAyqfq",
         "p": 0.2866
+      },
+      {
+        "h": "2026-11-21T21:24:20.207Z",
+        "n": "🧷 Kit 10 Toalhas Umedecidas Turminha da Bagunça 120 Folhas C/ Tampa 98% Água Le",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6fj2ZhXci7",
+        "p": 0
       }
     ]
   },
@@ -255,6 +263,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T21:24:13.145Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-21T21:31:44.254Z",
+  "ultima_categoria": "fralda"
 }
