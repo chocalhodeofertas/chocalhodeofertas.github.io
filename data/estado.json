@@ -13441,7 +13441,7 @@
   "FULL2011": {
    "criado": "2026-11-20T08:04-03:00",
    "post": 1250,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-20T23:59-03:00"
   },
   "HOJENOML": {
@@ -13735,7 +13735,7 @@
   "OFFSEMPREML": {
    "criado": "2026-11-19T09:01-03:00",
    "post": 1147,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-20T23:59-03:00"
   },
   "OFICIAIS1911": {
@@ -13743,6 +13743,12 @@
    "post": 1140,
    "status": "encerrado",
    "validade": "2026-11-19T23:59-03:00"
+  },
+  "OFICIAIS2111": {
+   "criado": "2026-11-21T08:00-03:00",
+   "post": 1356,
+   "status": "ativo",
+   "validade": "2026-11-21T23:59-03:00"
   },
   "OPORTUNIDADEML": {
    "criado": "2026-11-11T11:00-03:00",
@@ -13951,11 +13957,11 @@
   "VOCE10": {
    "criado": "2026-11-19T11:39-03:00",
    "post": 1167,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-20T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5642,
+ "cupons_extra_ultimo:cupombr": 5644,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6532,
  "cupons_shopee_enviado": "2026-11-20",
@@ -47342,6 +47348,9 @@
    "cupons": 5,
    "posts": 100,
    "shopee": 50
+  },
+  "2026-11-21": {
+   "cupons": 1
   }
  },
  "links": {
@@ -52456,6 +52465,17 @@
     }
    ],
    "criado": "2026-11-20T15:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1356": {
+   "blocos": [
+    {
+     "codigo": "OFICIAIS2111",
+     "html": "<b>🎟️ OFICIAIS2111</b> 👉 <b>20% OFF</b>\nDesconto máx.: R$50\n⏰ Válido até 21/11"
+    }
+   ],
+   "criado": "2026-11-21T08:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
