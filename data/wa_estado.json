@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-20",
-  "enviados": 12,
-  "ultimo": "2026-11-20T22:35:06.246Z",
+  "enviados": 13,
+  "ultimo": "2026-11-20T23:43:10.192Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-19": 21,
     "2026-11-20": 22
   },
-  "membros_em": "2026-11-20T23:04:48.797Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-21T00:04:52.195Z",
+  "ultima_loja": "ml",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -138,6 +138,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6VPajD2JQ4",
         "p": 0.0667
+      },
+      {
+        "h": "2026-11-20T23:43:10.192Z",
+        "n": "✨ Assento Booster Burigotto Protege para Carro, Preto, de 15 a 36 kg",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2VSM8sU",
+        "p": 0.3
       }
     ]
   },
@@ -223,6 +231,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-20T22:40:57.342Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-20T23:55:40.418Z",
+  "ultima_categoria": "outros"
 }
