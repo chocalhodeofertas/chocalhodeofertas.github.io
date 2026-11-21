@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 15,
-  "ultimo": "2026-11-21T21:47:30.591Z",
+  "enviados": 17,
+  "ultimo": "2026-11-21T22:18:42.331Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-20": 22,
     "2026-11-21": 22
   },
-  "membros_em": "2026-11-21T21:10:13.987Z",
+  "membros_em": "2026-11-21T22:10:22.409Z",
   "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
@@ -202,6 +202,22 @@
         "r": "enviado",
         "k": "https://meli.la/1vyezPy",
         "p": 0.1728
+      },
+      {
+        "h": "2026-11-21T22:11:42.922Z",
+        "n": "🛁 Dove Sabonete em Barra Original 90g 8 Unidades",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2gcBpCj",
+        "p": 0.2182
+      },
+      {
+        "h": "2026-11-21T22:18:42.331Z",
+        "n": "🛁 Escova de dente infantil Mam Baby's Brush 6+ meses cor rosa",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1K2CveE",
+        "p": 0.1455
       }
     ]
   },
@@ -287,6 +303,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T21:53:43.520Z",
+  "proximo_em": "2026-11-21T22:28:00.529Z",
   "ultima_categoria": "higiene"
 }
