@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 7,
-  "ultimo": "2026-11-21T16:52:06.616Z",
+  "enviados": 8,
+  "ultimo": "2026-11-21T18:01:05.940Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-20": 22,
     "2026-11-21": 22
   },
-  "membros_em": "2026-11-21T17:04:52.650Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-21T18:05:01.336Z",
+  "ultima_loja": "ml",
   "max_dia": 14,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -82,6 +82,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/1W0w3aYsOn",
         "p": 0
+      },
+      {
+        "h": "2026-11-21T18:01:05.940Z",
+        "n": "🛁 Talco Pom Pom de Amido de Milho Para Bebê 200g",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/14TmAC5",
+        "p": 0.36
       }
     ]
   },
@@ -167,6 +175,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T17:01:56.919Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-21T18:06:24.924Z",
+  "ultima_categoria": "higiene"
 }
