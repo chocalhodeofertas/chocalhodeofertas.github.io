@@ -16,8 +16,10 @@ import { PASTA_AUTH, RAIZ, abrirSessao, anotarHistorico, anotarRadar, avisar, co
 const FILA = path.resolve(RAIZ, process.env.WA_FILA || "fila_wa");
 // Aquecimento automático: o ritmo sobe sozinho conforme o número ganha
 // histórico. WA_MAX_DIA (variável do GitHub) trava um valor fixo.
-const RAMPA = [ // [a partir do dia, posts por dia]; 21/11: o Leonardo pediu para acelerar (número conectado em 10/11)
-  [0, 4], [4, 10], [8, 14], [11, 20], [18, 25], [25, 30],
+// 21/11: o Leonardo pediu para acompanhar o Telegram (~100/dia): 60 em 21/11, 80 em 23/11 e 100 a partir de 25/11
+// (número conectado em 10/11). Com 4 a 13 min entre posts, das 7h às 23h, 100 é perto do máximo possível.
+const RAMPA = [ // [a partir do dia (contado pela data de Brasília), posts por dia]
+  [0, 4], [4, 10], [8, 14], [11, 60], [13, 80], [15, 100],
 ];
 const VALIDADE_ITEM = 3 * 60 * 60 * 1000; // oferta parada há mais de 3h na fila não sai
 const FIM = Date.now() + Number(process.env.WA_HORAS || 5.6) * 3600 * 1000;
@@ -45,7 +47,8 @@ fs.mkdirSync(FILA, { recursive: true });
 
 const estado = lerEstado();
 estado.inicio = estado.inicio || new Date().toISOString();
-const diasConectado = Math.floor((Date.now() - Date.parse(estado.inicio)) / 86400000);
+const dataBR = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo" }).format(d);
+const diasConectado = Math.round((Date.parse(dataBR(new Date())) - Date.parse(dataBR(new Date(estado.inicio)))) / 86400000);
 const degrau = RAMPA.filter(([d]) => diasConectado >= d).pop();
 const MAX_DIA = Number(process.env.WA_MAX_DIA || degrau[1]);
 const INTERVALO_MIN = Number(process.env.WA_INTERVALO_MIN || 4);

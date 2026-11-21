@@ -119,7 +119,8 @@ Textos para o dono do projeto sempre em português do Brasil.
   Links via `generateShortLink` com subId `telegram` / `whatsapp`.
 - `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/` (fora do git; passa de um ciclo para o outro pelo cache do Actions,
   passos "Recuperar/Guardar a fila do WhatsApp" no ciclo.yml, 21/11: antes sumia na troca de ciclo); o serviço (Baileys) posta com aquecimento automático
-  (4 → 10 → 14 → 20 → 25 → 30 posts/dia nos dias 0, 4, 8, 11, 18 e 25 desde a conexão em 10/11; acelerado a pedido dele em 21/11), só das 7h às 23h, alterna ML/Shopee,
+  (4 → 10 → 14 → 60 → 80 → 100 posts/dia nos dias 0, 4, 8, 11, 13 e 15 desde a conexão em 10/11, contados pela data de Brasília;
+  decisão dele em 21/11: acompanhar o Telegram, 100/dia a partir de 25/11), só das 7h às 23h, alterna ML/Shopee,
   intervalo sorteado de 4 a 13 min (`WA_INTERVALO_MIN/MAX`) e o limite do dia espalhado pelas horas (`comum.mjs: cotaAteAgora`;
   às 12h só pode ter saído 4/16 do limite); avisa quando cai por mais de 10 min, quando volta e quando a pausa de segurança acaba;
   Radar (`comum.mjs: anotarRadar`): `wa_estado.json: radar[dia][hora] = [entradas, saídas, mensagens]`, 45 dias, só contagens;
