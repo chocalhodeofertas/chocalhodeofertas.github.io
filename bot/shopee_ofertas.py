@@ -16,6 +16,7 @@ import re
 from datetime import datetime, timedelta
 
 from . import estado as est
+from . import foto
 from . import grafico, horario, mensagens, resumos, sazonal, vitrine, whatsapp
 from .filtros import fora_da_faixa, motivo_bloqueio, normalizar
 from .ofertas import (Oferta, tipo_produto, tipos_do_dia, priorizar_tipos_novos, equilibrar_categorias, vagas_da_rodada,
@@ -347,7 +348,7 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
         tp = tipo_produto(p.titulo)
         if not cabe_no_dia(contagem_tipos, p.titulo):
             continue  # limite do tipo no dia (1; fralda até 8; outros itens de reposição até 5)
-        rep = est.checar_repeticao(estado, p.id, p.titulo, p.preco, agora, cfg.repost_dias)
+        rep = foto.checar(estado, p.id, p.titulo, p.preco, p.imagem, agora, cfg.repost_dias, log=log)
         if rep and rep["bloqueado"]:
             continue  # mesmo produto (de outro vendedor ou do ML) já saiu nos últimos dias e não baixou 10%
         if enviadas and esperar:

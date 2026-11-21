@@ -481,10 +481,121 @@ def assinatura(titulo):
 
 
 def parecido(a, b):
-    """True se os dois títulos parecem o mesmo produto (ou um bem parecido)."""
-    wa, wb = assinatura(a), assinatura(b)
+    """True se os dois títulos parecem o mesmo produto (ou um bem parecido). Ver `comparar_titulos`."""
+    return comparar_titulos(a, b)["igual"]
+
+
+# Palavras comuns em títulos de produto infantil: contam pouco (peso 0,3) na comparação
+_COMUNS = {"brinquedo", "brinquedos", "educativo", "educativa", "musical", "interativo", "interativa", "som", "sons",
+           "luz", "luzes", "presente", "sensorial", "montessori", "colorido", "colorida", "coloridos", "conjunto",
+           "cor", "cores", "tamanho", "unico", "grande", "pequeno", "pequena", "mini", "super", "premium", "macio",
+           "macia", "fofo", "fofa", "divertido", "divertida", "kids", "pecas", "peca", "pcs", "unidades", "un", "und",
+           "silicone", "plastico", "tecido", "algodao", "pelucia", "jogo", "boneco", "boneca", "anos", "meses", "ano",
+           "mes", "idade", "crianca", "infantis", "bebes", "recem", "nascido", "rn", "menino", "menina", "meninos",
+           "meninas", "unissex", "qualidade", "alta", "lindo", "linda", "novo", "nova", "top", "melhor", "promocao",
+           "atividades", "atividade", "movimento", "desenvolvimento", "coordenacao", "motora", "aprendizado"}
+_CORES = {"preto", "preta", "branco", "branca", "rosa", "azul", "verde", "amarelo", "amarela", "vermelho", "vermelha",
+          "cinza", "lilas", "roxo", "roxa", "bege", "marrom", "laranja", "dourado", "prata", "nude", "off", "white",
+          "pink", "blue", "claro", "clara", "escuro", "escura", "bebe"}
+# Medida/quantidade: "100cm", "aro 12", "kit 30", "30 caixas"... valores diferentes = produtos diferentes
+_MEDIDA = re.compile(r"(\d+(?:[.,]\d+)?)\s?(cm|mm|m|ml|l|kg|g|polegadas|pol)\b")
+_CONTAGEM = re.compile(r"\b(?:kit|aro|com|c)\s?(\d+)\b|\b(\d+)\s?(pecas|pcs|unidades|un|und|caixas|pares|potes|"
+                       r"bolas|bonecos|carrinhos|livros|cartas|blocos|fraldas|lencos|folhas|cores|em 1|em1|velocidades)\b")
+
+
+def _raiz(p):
+    """Singular simples: "mordedores" e "mordedor", "bolas" e "bola" contam como a mesma palavra."""
+    if len(p) > 5 and p.endswith("es") and p[-3] in "rsz":
+        return p[:-2]
+    if len(p) > 3 and p.endswith("s") and not p.endswith("ss") and not p.isdigit():
+        return p[:-1]
+    return p
+
+
+_CORES_R = {_raiz(p) for p in _CORES}
+_COMUNS_R = {_raiz(p) for p in _COMUNS}
+
+
+def _palavras_titulo(titulo):
+    from .filtros import normalizar
+
+    return [_raiz(p) for p in re.findall(r"[a-z0-9]+", normalizar(titulo or "")) if len(p) > 1 or p.isdigit()]
+
+
+def _medidas(titulo):
+    from .filtros import normalizar
+
+    t = normalizar(titulo or "")
+    med = {}
+    for v, u in _MEDIDA.findall(t):
+        u = {"mm": "cm", "m": "cm", "l": "ml", "kg": "g", "pol": "polegadas"}.get(u, u)
+        valor = float(v.replace(",", "."))
+        valor = valor / 10 if u == "cm" and re.search(rf"{re.escape(v)}\s?mm", t) else valor
+        med.setdefault(u, set()).add(valor * (100 if re.search(rf"\b{re.escape(v)}\s?m\b", t) else 1))
+    for m in _CONTAGEM.finditer(t):
+        if m.group(1):
+            chave = "aro" if m.group(0).startswith("aro") else "kit"
+            med.setdefault(chave, set()).add(float(m.group(1)))
+        else:
+            med.setdefault(m.group(3).replace(" ", ""), set()).add(float(m.group(2)))
+    return med
+
+
+def _codigos(titulo):
+    """Códigos de modelo/referência ("18056", "vb603", "scf551"): dois códigos diferentes = dois produtos."""
+    return {p for p in _palavras_titulo(titulo)
+            if len(p) >= 4 and sum(ch.isdigit() for ch in p) >= 3 and not re.fullmatch(r"(19|20)\d\d", p)}
+
+
+def _medidas_brigam(a, b):
+    ma, mb = _medidas(a), _medidas(b)
+    if any(ma[u].isdisjoint(mb[u]) for u in ma.keys() & mb.keys()):
+        return True
+    ca, cb = _codigos(a), _codigos(b)
+    return bool(ca and cb and ca.isdisjoint(cb))
+
+
+def _peso(p):
+    if p in _CORES or _raiz(p) in _CORES_R:
+        return 0.0
+    if p in _COMUNS or _raiz(p) in _COMUNS_R or p.isdigit():
+        return 0.3
+    return 1.0
+
+
+def comparar_titulos(a, b):
+    """Diz se dois títulos são o mesmo produto, anunciado de jeitos diferentes (21/11).
+
+    - Usa o título inteiro, não só o começo; palavras raras ("caranguejo", "banguela") valem mais que as comuns
+      ("brinquedo", "musical"); cor não conta (cor diferente do mesmo produto é o mesmo produto).
+    - Medida ou quantidade diferente ("kit 10" x "kit 30", "25cm" x "100cm", "aro 12" x "aro 16") = outro produto.
+    - Código de modelo diferente ("1328" x "1342") = outro produto.
+    - O "nome" do produto (as duas primeiras palavras raras de um dos títulos) tem de aparecer no outro.
+    Devolve {"igual": bool, "nota": 0 a 1, "motivo": str}."""
+    wa, wb = [_raiz(p) for p in assinatura(a)], [_raiz(p) for p in assinatura(b)]
     if not wa or not wb:
-        return False
+        return {"igual": False, "nota": 0.0, "motivo": "sem palavras"}
+    if _medidas_brigam(a, b):
+        return {"igual": False, "nota": 0.0, "motivo": "medida, quantidade ou modelo diferente"}
+    vazias = _VAZIAS | {_raiz(p) for p in _VAZIAS}
+    pa = {p for p in _palavras_titulo(a) if p not in vazias}
+    pb = {p for p in _palavras_titulo(b) if p not in vazias}
+    raras_a = [p for p in wa if _peso(p) == 1.0]
+    raras_b = [p for p in wb if _peso(p) == 1.0]
+    comuns = pa & pb
+    peso_comum = sum(_peso(p) for p in comuns)
+    peso_a, peso_b = sum(_peso(p) for p in pa), sum(_peso(p) for p in pb)
+    nota = peso_comum / min(peso_a, peso_b) if min(peso_a, peso_b) else 0.0
+    raras_comuns = sum(1 for p in comuns if _peso(p) == 1.0)
+    # O "nome" do produto: as duas primeiras palavras raras de um dos títulos têm de estar no outro
+    nome_bate = bool((raras_a and set(raras_a[:2]) <= pb) or (raras_b and set(raras_b[:2]) <= pa))
+    # Regra antiga (continua valendo): as 3 primeiras palavras iguais, ou metade das 8 primeiras
     sa, sb = set(wa), set(wb)
-    comuns = len(sa & sb)
-    return (comuns >= 3 and comuns / len(sa | sb) >= 0.5) or (len(wa) >= 3 and wa[:3] == wb[:3])
+    antiga = (len(sa & sb) >= 3 and len(sa & sb) / len(sa | sb) >= 0.5) or (len(wa) >= 3 and wa[:3] == wb[:3])
+    if antiga and nome_bate:
+        return {"igual": True, "nota": round(max(nota, 0.5), 2), "motivo": "título quase igual"}
+    if nome_bate and raras_comuns >= 3 and nota >= 0.6:
+        return {"igual": True, "nota": round(nota, 2), "motivo": "mesmas palavras raras"}
+    if antiga and raras_comuns >= 2:
+        return {"igual": True, "nota": round(max(nota, 0.5), 2), "motivo": "título quase igual"}
+    return {"igual": False, "nota": round(nota, 2), "motivo": "títulos diferentes"}

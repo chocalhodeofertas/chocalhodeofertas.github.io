@@ -62,7 +62,11 @@ Textos para o dono do projeto sempre em português do Brasil.
   visto em no máximo 3 dias (quem alterna entre dois preços não ganha selo). O site (`vitrine.selo`) usa a mesma função e
   mostra "Menor preço em N dias". Decisão do Leonardo apesar da cláusula 5.4 do ML.
 - Repetição (`estado.checar_repeticao`, usada em `ofertas.avaliar`, na fila do ML e na da Shopee): `REPOST_DIAS` (6 no workflow,
-  decisão do Leonardo em 21/11; era 4 desde 17/11 e 2/3 dos posts de 18-19/11 eram repetidos): mesmo anúncio ou título parecido (`ofertas.parecido`, ML + Shopee) não volta antes disso;
+  decisão do Leonardo em 21/11; era 4 desde 17/11 e 2/3 dos posts de 18-19/11 eram repetidos): mesmo anúncio, título parecido (`ofertas.parecido` → `comparar_titulos`, 21/11: título inteiro, palavras raras
+  valem mais que as comuns, cor não conta, plural vira singular; medida/quantidade/código de modelo diferente = outro produto; as duas
+  primeiras palavras raras de um título têm de estar no outro) ou a MESMA FOTO (`bot/foto.py`, 21/11: impressão digital dHash de 64 bits,
+  `estado.fotos_hash` por id, 45 dias; ≤ 5 bits = mesma foto, ≤ 10 com título parecido; não vale para reposição nem medida diferente;
+  `foto.checar` = título e, se nada, foto; só na hora de postar, ML e Shopee; `FOTO_IGUAL=0` desliga) não volta antes disso;
   volta antes só se o preço estiver `REPOST_QUEDA` (5%) abaixo do MENOR preço com que já saiu no período (antes de 17/11 comparava
   com o último post: variações com preços diferentes voltavam como "baixou"). Todos os posts ficam em `estado.posts_hist`
   ([id, quando, preço, título], 45 dias; semeado uma vez com `data/posts_hist_inicial.json`, refeito do histórico do git: 913 posts
@@ -193,6 +197,7 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `previa_busca "fralda g; mochila infantil"`: manda só para o admin as respostas da busca sob pedido e a prévia dos cupons da Shopee.
 - `sondar_campos "MLB.. MLB..; itemId itemId"`: tudo o que as APIs do ML (produto de catálogo, atributos, anúncios, descrição,
   categoria, busca de catálogo) e da Shopee (campos do productOfferV2) entregam (saida/campos_*.json, sem links).
+- `testar_fotos [dias]`: calibra a comparação pela foto com os posts reais (pares de foto igual/parecida e o que o título diz).
 - `sondar_shopee`: mostra categorias (productCatIds) e tipos de lista que a API da Shopee devolve (só leitura).
 - `achar_canais_tg "termo; termo"`: procura canais públicos de ofertas de bebê no Telegram e mede links/posts infantis (saida/canais_tg.md).
 - `previa_cartao_wa`: manda só para o admin o cartão da prévia do WhatsApp das 3 últimas ofertas do dia.

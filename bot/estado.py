@@ -119,9 +119,10 @@ def _posts_conhecidos(estado):
     return saida
 
 
-def checar_repeticao(estado, pid, titulo, preco, agora, dias=7):
+def checar_repeticao(estado, pid, titulo, preco, agora, dias=7, mesmos=()):
     """None = nunca saiu no período. Senão, dict com:
-    bloqueado (True = não pode sair), quando/preco (último post), menor (menor preço já postado), queda."""
+    bloqueado (True = não pode sair), quando/preco (último post), menor (menor preço já postado), queda.
+    mesmos: ids de outros anúncios já reconhecidos como o mesmo produto (pela foto: bot/foto.py)."""
     from datetime import datetime, timedelta
 
     from .ofertas import REPOSICAO_DIAS, mesmo_item_reposicao, parecido, reposicao
@@ -137,7 +138,9 @@ def checar_repeticao(estado, pid, titulo, preco, agora, dias=7):
             continue
         if t <= corte or t > agora:
             continue
-        if eh_reposicao:
+        if p_id in mesmos:
+            igual = True
+        elif eh_reposicao:
             igual = p_id == pid or (titulo and p_titulo and mesmo_item_reposicao(titulo, p_titulo))
         else:
             igual = p_id == pid or (titulo and p_titulo and parecido(titulo, p_titulo) and not reposicao(p_titulo))
@@ -151,7 +154,7 @@ def checar_repeticao(estado, pid, titulo, preco, agora, dias=7):
     queda = (1 - preco / menor) if (preco and menor) else 0.0
     return {"bloqueado": not (menor and queda >= _queda_minima() - 1e-9), "quando": ultimo[0].isoformat(timespec="minutes"),
             "preco": ultimo[1], "menor": menor, "queda": round(queda, 3), "mesmo_anuncio": ultimo[2] == pid,
-            "vezes": len(antes)}
+            "vezes": len(antes), "pela_foto": bool(mesmos) and ultimo[2] in mesmos}
 
 
 def registrar_post(estado, pid, preco, agora, titulo=None, desconto=None):

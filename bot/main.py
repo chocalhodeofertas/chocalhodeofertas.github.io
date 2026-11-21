@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
-from . import afiliado, cofre, comandos, cupom_oferta, cupons_ml, espelho, grafico, horario, lote, resumos, vitrine, whatsapp
+from . import afiliado, cofre, comandos, cupom_oferta, cupons_ml, espelho, foto, grafico, horario, lote, resumos, vitrine, whatsapp
 from . import estado as est
 from . import mensagens
 from .descoberta import descobrir, descobrir_areas
@@ -455,9 +455,9 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         tp = tipo_produto(o.titulo)
         if not cabe_no_dia(contagem_tipos, o.titulo):
             continue  # já saiu o limite desse tipo hoje (1; fralda até 8; outros itens de reposição até 5)
-        rep = est.checar_repeticao(estado, o.id, o.titulo, o.preco, agora, cfg.repost_dias)
+        rep = foto.checar(estado, o.id, o.titulo, o.preco, o.imagem, agora, cfg.repost_dias, log=log)
         if rep and rep["bloqueado"]:
-            continue  # mesmo produto (ou outro anúncio dele) já saiu nos últimos dias e não baixou 10%
+            continue  # mesmo produto (outro anúncio, título parecido ou mesma foto) já saiu nos últimos dias e não baixou 5%
         if rep:
             o.repeticao = rep
         if esperar_antes:
@@ -672,6 +672,7 @@ def main(argv=None):
 
     estado = est.carregar(ARQ_ESTADO)
     definir_bloqueios(estado.get("bloqueados"))
+    foto.limpar(estado, datetime.now(FUSO))
     if args.modo == "rapido":
         # Entre as rodadas: só suas mensagens e o canal de cupons (leve)
         try:

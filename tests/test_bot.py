@@ -13,6 +13,12 @@ from bot.main import Config, Produto, carregar_produtos, rodar
 from bot.mercadolivre import AcessoNegado, InfoProduto, MercadoLivre, extrair_id
 from bot.ofertas import avaliar
 
+
+@pytest.fixture(autouse=True)
+def _sem_baixar_fotos(monkeypatch):
+    """Os testes não baixam fotos da internet: a comparação pela foto tem testes próprios."""
+    monkeypatch.setenv("FOTO_IGUAL", "0")
+
 FUSO = ZoneInfo("America/Sao_Paulo")
 AGORA = datetime(2026, 11, 5, 15, 0, tzinfo=FUSO)
 
@@ -3082,3 +3088,59 @@ def test_itens_de_reposicao_repetem_mais():
     # contagem do dia vem do histórico de posts
     hoje = ofertas.contar_tipos_do_dia(e, AGORA)
     assert hoje["fralda"] == 1
+
+
+def test_comparar_titulos_reconhece_o_mesmo_produto():
+    from bot.ofertas import comparar_titulos, parecido
+    assert parecido("Kit Brinquedo Pato Dançante e Caranguejo Fujão Infantil com Música Luz Movimento Educativo",
+                    "Pato Dançante Musical + Caranguejo Fujão Interativo Luz Som Movimento Brinquedo Bebê Infantil")
+    assert parecido("Pelúcia Banguela Fúria da Noite 100cm de Satin Preto para Abraçar",
+                    "Xuxão Apoio Urso Banguela Fúria Da Noite Gigante 100cm Pelúcia Preto")
+    assert parecido("Kit 8 peças Mordedor para Bebe Sensorial Macio com Chocalho",
+                    "Kit Chocalho Bebe E Mordedores 8 Peças Estímulo Sensorial Brinquedo")
+    # medida, quantidade ou modelo diferente = outro produto
+    assert not parecido("Pelúcia Banguela Fúria da Noite 100cm de Satin", "Pelucia Banguela Fúria Da Noite 25cm Fofo")
+    assert not parecido("Kit 30 Caixas Massinha de Modelar + 30 Bolha de Sabão", "Kit 10 Caixas Massinha Modelar + 10 Bolha Sabão")
+    assert not parecido("Bicicleta Infantil Aro 12 Nathor Menina", "Bicicleta Infantil Aro 16 Nathor Menina")
+    assert not parecido("Boneco Pelúcia Chase Patrulha Canina 1328 Sunny", "Sunny Boneco Patrulha Canina 1342 Skye")
+    # produtos diferentes com palavras parecidas
+    assert not parecido("Kit 3 Bolas Surpresa Mini Brands", "Mini Geladeira Mini brands Brinquedo Infantil Minis + 2 Cap Surpresa")
+    assert not parecido("Pinico Troninho Infantil Desfralde Buba", "Banheira Infantil Dobrável Buba")
+    assert comparar_titulos("Tapete De Atividades Para Bebê Piano Musical", "Tapete De Atividades Musical Bebê Piano Rosa")["igual"]
+
+
+def test_mesma_foto_conta_como_o_mesmo_produto(monkeypatch):
+    from PIL import Image, ImageDraw
+
+    from bot import foto
+    monkeypatch.setenv("FOTO_IGUAL", "1")
+    agora = datetime(2026, 11, 21, 15, 0, tzinfo=ZoneInfo("America/Sao_Paulo"))
+
+    def desenho(desloca=0, outro=False):
+        img = Image.new("RGB", (400, 400), "white")
+        d = ImageDraw.Draw(img)
+        if outro:
+            d.rectangle((40, 250, 360, 380), fill="navy")
+            d.ellipse((150, 20, 250, 120), fill="orange")
+        else:
+            d.ellipse((60 + desloca, 60, 340 + desloca, 340), fill="red")
+            d.rectangle((150 + desloca, 150, 250 + desloca, 380), fill="green")
+        return img
+
+    a, b, c = foto.impressao(desenho()), foto.impressao(desenho().resize((800, 800))), foto.impressao(desenho(outro=True))
+    assert foto.distancia(a, b) <= foto.IGUAL
+    assert foto.distancia(a, c) > foto.PARECIDA
+    hashes = {"http://f/a.jpg": a, "http://f/b.jpg": b, "http://f/c.jpg": c}
+    monkeypatch.setattr(foto, "baixar", lambda url, session=None: hashes.get(url))
+    estado = est.novo_estado() if hasattr(est, "novo_estado") else {"postados": {}, "contagem_dia": {}}
+    estado["posts_hist"] = [["MLB1", (agora - timedelta(days=2)).isoformat(timespec="minutes"), 100.0,
+                             "Kit Brinquedo Pato Dançante e Caranguejo"]]
+    foto.da_oferta(estado, "MLB1", "http://f/a.jpg", agora)
+    # outro anúncio, título bem diferente, mesma foto: é repetição (e não baixou 5%)
+    rep = foto.checar(estado, "SHP9", "Combo Patoguejo Ligeiro", 99.0, "http://f/b.jpg", agora, 6, log=lambda m: None)
+    assert rep and rep["bloqueado"] and rep["pela_foto"]
+    # foto diferente: não é repetição
+    assert foto.checar(estado, "SHP8", "Combo Patoguejo Ligeiro", 99.0, "http://f/c.jpg", agora, 6, log=lambda m: None) is None
+    # mais barato 5%: pode voltar
+    rep = foto.checar(estado, "SHP7", "Combo Patoguejo Ligeiro", 90.0, "http://f/b.jpg", agora, 6, log=lambda m: None)
+    assert rep and not rep["bloqueado"]
