@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 35,
-  "ultimo": "2026-11-22T19:05:08.543Z",
+  "enviados": 36,
+  "ultimo": "2026-11-22T19:21:07.664Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-21": 21,
     "2026-11-22": 28
   },
-  "membros_em": "2026-11-22T18:43:05.685Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-22T19:20:24.299Z",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -362,6 +362,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/9pg5bmB6SV",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T19:21:07.664Z",
+        "n": "✨ Kit Adesivos Repelente para Bebê e Crianças com 144 Unidades de Citronela",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1eRK2ka",
+        "p": 0.2449
       }
     ]
   },
@@ -511,6 +519,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T19:13:07.108Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-22T19:30:41.448Z",
+  "ultima_categoria": "outros"
 }
