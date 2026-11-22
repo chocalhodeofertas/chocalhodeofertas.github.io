@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 5,
-  "ultimo": "2026-11-22T11:39:15.079Z",
+  "enviados": 6,
+  "ultimo": "2026-11-22T11:49:00.334Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 23
   },
   "membros_em": "2026-11-22T11:00:35.816Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -66,6 +66,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/4VeYvq7dPm",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T11:49:00.334Z",
+        "n": "🚼 Canguru Ergonômico Baby Bear 12 Posições Azul Marinho Premium 4 em 1",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1X3YCwu",
+        "p": 0.1895
       }
     ]
   },
@@ -175,6 +183,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T11:48:54.654Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-22T11:57:43.767Z",
+  "ultima_categoria": "passeio"
 }
