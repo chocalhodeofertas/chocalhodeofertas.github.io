@@ -13905,12 +13905,6 @@
    "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
-  "APROVEITAAGORA": {
-   "criado": "2026-11-11T13:00-03:00",
-   "post": 330,
-   "status": "encerrado",
-   "validade": "2026-11-12T23:59-03:00"
-  },
   "AQUITEMCUPOM30": {
    "criado": "2026-11-20T10:04-03:00",
    "post": 1264,
@@ -54657,17 +54651,6 @@
     }
    ],
    "criado": "2026-11-22T10:01-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
-  },
-  "330": {
-   "blocos": [
-    {
-     "codigo": "APROVEITAAGORA",
-     "html": "<b>🎟️ APROVEITAAGORA</b> 👉 <b>30% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$30\n⏰ Válido até 12/11"
-    }
-   ],
-   "criado": "2026-11-11T13:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
