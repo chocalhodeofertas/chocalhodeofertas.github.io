@@ -3151,3 +3151,100 @@ def test_item_de_idoso_e_marmita_sem_sinal_infantil_fica_de_fora():
     assert fora_da_faixa("LMKB Grade Proteção Cama Idoso E Barra Apoio Dobrável Para Cama", "outros")
     assert fora_da_faixa("Bolsa Térmica Marmitex Lancheira Lanche Academia Colorida", "outros")
     assert fora_da_faixa("Grade de Proteção Dobrável para Cama de Bebê e Idoso – Drakar", "outros") is None
+
+
+# ---------- links de afiliado dos carrosséis (21/11) ----------
+
+def test_links_carrossel_pedido_shopee_ml_e_lote(tmp_path):
+    from types import SimpleNamespace
+    from bot import links_carrossel as lc
+    pedidos = tmp_path / "carrosseis.json"
+    pedidos.write_text(json.dumps([{"id": "mala", "titulo": "A mala da maternidade", "itens": [
+        {"id": "123", "nome": "Saída maternidade"},
+        {"id": "MLB1", "nome": "Berço"},
+        {"id": "MLB2", "nome": "Poltrona"}]}]))
+
+    class Shp:
+        def item(self, i):
+            return SimpleNamespace(link_produto=f"https://shopee.com.br/p/{i}", link="padrao")
+
+        def link_curto(self, url, subs):
+            assert subs == ["tiktok"]
+            return "https://s.shopee.com.br/abc"
+
+    class ML:
+        def catalogo(self, pid):
+            return SimpleNamespace(item_id="MLB900", disponivel=True)
+
+    tg = TGFalso()
+    estado = {"links": {"MLB1": "https://meli.la/um"}}
+    agora = datetime(2026, 11, 21, 22, tzinfo=ZoneInfo("America/Sao_Paulo"))
+    lc.processar(tg, "admin", estado, ML(), agora, shp=Shp(), caminho=pedidos)
+    textos = [t for _, _, t in tg.enviados]
+    assert "https://s.shopee.com.br/abc" in textos[0] and "https://meli.la/um" in textos[0]
+    assert "falta o link oficial" in textos[0] and "(parcial)" in textos[0]
+    assert "Linkbuilder" in textos[1] and estado["lote_extra"]["ids"] == ["MLB2"]
+    # não repete
+    lc.processar(tg, "admin", estado, ML(), agora, shp=Shp(), caminho=pedidos)
+    assert len(tg.enviados) == 2
+    # o Leonardo devolve o link: sai a mensagem completa
+    from bot import lote
+    ok, _ = lote.aplicar_resposta(estado, "https://meli.la/dois")
+    assert ok
+    lc.processar(tg, "admin", estado, ML(), agora, shp=Shp(), caminho=pedidos)
+    final = tg.enviados[-1][2]
+    assert "https://meli.la/dois" in final and "parcial" not in final and "falta" not in final
+    lc.processar(tg, "admin", estado, ML(), agora, shp=Shp(), caminho=pedidos)
+    assert len(tg.enviados) == 3
+
+
+def test_links_carrossel_do_bot_e_shopee_falha():
+    from types import SimpleNamespace
+    from bot import links_carrossel as lc
+    tg = TGFalso()
+    ofs = [SimpleNamespace(titulo="Banheira", link="https://meli.la/x"),
+           SimpleNamespace(titulo="Mochila", link="https://s.shopee.com.br/y")]
+    lc.do_carrossel(tg, "admin", "Hora do banho", ofs)
+    t = tg.enviados[0][2]
+    assert t.index("Banheira") < t.index("Mochila") and "https://meli.la/x" in t and "#publi" in t
+    assert "não consegui gerar o link da Shopee" in lc.mensagem("x", [("Saída", None, "123")], False)
+
+
+def test_links_carrossel_refaz_shopee_e_libera_lote_vencido(tmp_path):
+    from types import SimpleNamespace
+    from bot import links_carrossel as lc
+    pedidos = tmp_path / "carrosseis.json"
+    pedidos.write_text(json.dumps([{"id": "p", "titulo": "T", "itens": [{"id": "SHPabc", "nome": "Ruim"},
+                                                                        {"id": "77", "nome": "Saída"}]}]))
+
+    class Shp:
+        ok = False
+
+        def item(self, i):
+            if not self.ok:
+                raise RuntimeError("fora do ar")
+            return SimpleNamespace(link_produto="u", link="l")
+
+        def link_curto(self, url, subs):
+            return "https://s.shopee.com.br/z"
+
+    shp, tg = Shp(), TGFalso()
+    agora = datetime(2026, 11, 21, 22, tzinfo=ZoneInfo("America/Sao_Paulo"))
+    estado = {"lote_extra": {"dia": "2026-11-10", "ids": ["MLB9"], "urls": []}}
+    lc.processar(tg, "admin", estado, None, agora, shp=shp, caminho=pedidos)  # id inválido não derruba
+    assert estado["lote_extra"] is None  # lote velho liberado
+    assert len(tg.enviados) == 1
+    lc.processar(tg, "admin", estado, None, agora, shp=shp, caminho=pedidos)
+    assert len(tg.enviados) == 1  # nada mudou: não repete
+    shp.ok = True
+    lc.processar(tg, "admin", estado, None, agora, shp=shp, caminho=pedidos)
+    assert len(tg.enviados) == 1  # "SHPabc" nunca vira link: segue parcial, sem mensagem nova
+    assert estado["carrosseis_links"]["p"]["itens"][1]["link"] == "https://s.shopee.com.br/z"
+
+
+def test_pegar_nao_atropela_lote_de_carrossel():
+    from bot import busca
+    estado = {"busca": {"itens": [{"id": "MLB5", "item_id": "MLB55", "titulo": "x"}]},
+              "lote_extra": {"dia": "2026-11-21", "ids": ["MLB1"], "urls": [], "origem": "carrossel"}}
+    msg = busca.pegar("1", TGFalso(), estado, None, datetime(2026, 11, 21, tzinfo=ZoneInfo("America/Sao_Paulo")))
+    assert "carrossel" in msg and estado["lote_extra"]["ids"] == ["MLB1"]

@@ -714,6 +714,14 @@ def main(argv=None):
                 resumos.rodar(tg, cfg, estado, datetime.now(FUSO), ml, log)
             except Exception as e:  # noqa: BLE001 — os resumos nunca derrubam a rodada
                 log(f"Aviso: resumo do dia falhou: {type(e).__name__}: {e}")
+            if cfg.admin_chat:  # links de afiliado dos carrosséis montados fora do bot
+                from . import links_carrossel
+                try:
+                    if links_carrossel.ler_pedidos():
+                        links_carrossel.processar(tg, cfg.admin_chat, estado, ml, datetime.now(FUSO),
+                                                  shp=resumos._shopee(log), log=log)
+                except Exception as e:  # noqa: BLE001 — nunca derruba a rodada
+                    log(f"Aviso: links do carrossel falharam: {type(e).__name__}: {e}")
             if horario.ativo(agora, cfg.hora_inicio, cfg.hora_fim):
                 cupons_ml.processar(tg, cfg, estado, agora, log)
             comandos.verificar_cupons(tg, cfg, estado, agora, log)

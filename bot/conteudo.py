@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from datetime import date, timedelta
 from types import SimpleNamespace
 
-from . import arte, instagram_pub
+from . import arte, instagram_pub, links_carrossel
 from .mensagens import _abertura, _titulo_curto, brl
 from .telegram import TelegramErro
 
@@ -346,6 +346,7 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
                 slides = arte.carrossel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
                 tg.enviar_album(chat, [arte.png(s) for s in slides], f"🎠 {k}. {hora} — carrossel (o Reel falhou)")
                 tg.enviar_texto(chat, legenda_carrossel(tema, ofs, rng))
+            links_carrossel.do_carrossel(tg, chat, titulo, ofs, log)
             stories += list(zip(ofs, fotos))
             _registrar_usados(estado, agora, carr)
             _registrar_tema(estado, agora, tema)
@@ -364,6 +365,7 @@ def montar_e_enviar(tg, chat, estado, agora, rng=random, log=print, session=None
             leg = legenda_carrossel(tema, ofs, rng)
             tg.enviar_texto(chat, leg)
             instagram_pub.oferecer(tg, chat, estado, agora, "carrossel", pngs, leg, ofs, hora)
+            links_carrossel.do_carrossel(tg, chat, titulo, ofs, log)
             if not dia_lanc and agora.weekday() in (0, 2, 4, 6) and not any(t == "reel" for t in usados):
                 try:
                     mp4 = arte.reel(ofs, fotos, titulo, capa_foto, tema.destaque, estilo)
@@ -460,6 +462,7 @@ def enviar_tema(tg, chat, estado, agora, nome, formato="carrossel", rng=random, 
         tg.enviar_album(chat, pngs, "🎠 Carrossel temático (na ordem)")
     leg = legenda_carrossel(tema, ofs, rng)
     tg.enviar_texto(chat, leg)
+    links_carrossel.do_carrossel(tg, chat, titulo, ofs)
     if formato != "reel":
         instagram_pub.oferecer(tg, chat, estado, agora, "carrossel", pngs, leg, ofs)
     for o, f in zip(ofs, fotos):

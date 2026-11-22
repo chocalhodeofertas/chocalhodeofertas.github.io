@@ -94,6 +94,9 @@ def pegar(texto, tg, estado, cfg, agora):
     sem_link = [r for r in escolhidos if r["id"] not in estado.get("links", {}) and r.get("item_id")]
     if not sem_link:
         return "✅ Esses produtos já têm link; entram no canal quando estiverem em promoção."
+    if (estado.get("lote_extra") or {}).get("origem") == "carrossel":
+        return ("⏳ Há um lote do Linkbuilder de um carrossel esperando os links. Mande os links dele primeiro "
+                "e depois repita o <b>pegar</b>.")
     urls = [lote.url_linkbuilder(r["item_id"]) for r in sem_link]
     estado["lote_extra"] = {"dia": agora.date().isoformat(), "ids": [r["id"] for r in sem_link], "urls": urls}
     tg.enviar_texto(cfg.admin_chat, lote.texto_lote(urls).replace("Lote 1 de até 1 hoje", "Lote da sua busca"),

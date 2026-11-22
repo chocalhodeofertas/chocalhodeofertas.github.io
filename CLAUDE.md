@@ -172,6 +172,13 @@ Textos para o dono do projeto sempre em português do Brasil.
   histórico) ou 10% abaixo com selo de menor preço; até `ALERTA_MAX_DIA` (5) por dia.
   Quando o post sai sem selo, o aviso explica (`nota_sem_selo`: histórico menor que 14 dias ou regra do selo não batida).
 - `tiktok.py`: renderizador dos carrosséis 1080x1350 (capa, produto, CTA).
+- `links_carrossel.py` (21/11, pedido do Leonardo): a cada carrossel gerado, o admin recebe no Telegram UMA mensagem com o
+  link de afiliado de cada produto, na ordem dos slides, para responder os comentários. Carrossel do bot (pacote, "carrossel
+  <tema>", reel): `do_carrossel` com o link oficial da oferta. Carrossel montado pelo Claude: pedido em
+  `pedidos/carrosseis.json` ([{id, titulo, itens: [{id: MLB do catálogo ou itemId da Shopee, nome}]}]), lido pelo `main`
+  a cada rodada: Shopee pela API (`shp.item` + `link_curto`, etiqueta `tiktok`); ML pelo `estado.links`; o que faltar
+  vai num lote do Linkbuilder (`estado.lote_extra`) e, quando os links voltam, sai a mensagem completa. Feito fica em
+  `estado.carrosseis_links` (não repete; parcial desiste depois de 7 dias). Nunca abre link de afiliado.
 - `instagram.py`: cliente da API do Instagram (login unificado; segredos `INSTAGRAM_TOKEN`/`INSTAGRAM_USER_ID`, token sem validade).
   `metricas()` tenta tudo junto e, se falhar, uma a uma; o que não vier fica em `ausentes`.
 - `insights_ig.py`: chamado pelo ciclo a cada rodada. 1x/dia grava `data/instagram/AAAA-MM-DD.json` (conta só no dia anterior,
