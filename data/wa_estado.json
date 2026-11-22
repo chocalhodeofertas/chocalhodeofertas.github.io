@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 16,
-  "ultimo": "2026-11-22T14:01:09.726Z",
+  "enviados": 17,
+  "ultimo": "2026-11-22T14:16:06.500Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 25
   },
   "membros_em": "2026-11-22T13:42:07.782Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -154,6 +154,14 @@
         "r": "enviado",
         "k": "https://meli.la/1y5jvVU",
         "p": 0.41
+      },
+      {
+        "h": "2026-11-22T14:16:06.499Z",
+        "n": "👕 Kit 6 Peças Roupa Infantil Menina Conjunto Verão Algodão 3 Camisetas + 3 Shor",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8VAhr92H1f",
+        "p": 0.1
       }
     ]
   },
@@ -273,6 +281,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T14:06:55.354Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-22T14:23:50.077Z",
+  "ultima_categoria": "roupa"
 }
