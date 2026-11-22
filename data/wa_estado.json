@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 36,
-  "ultimo": "2026-11-22T19:21:07.664Z",
+  "enviados": 37,
+  "ultimo": "2026-11-22T19:36:09.665Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 28
   },
   "membros_em": "2026-11-22T19:20:24.299Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -370,6 +370,30 @@
         "r": "enviado",
         "k": "https://meli.la/1eRK2ka",
         "p": 0.2449
+      },
+      {
+        "h": "2026-11-22T19:36:09.665Z",
+        "n": "🧸 Trem de Madeira Pedagógico Números Brinquedo Educativo Montessori Encaixe Inf",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8VAiDjvWHF",
+        "p": 0.1502
+      },
+      {
+        "h": "2026-11-22T19:36:14.798Z",
+        "n": "👕 Babador Bandana Bebe Algodao Ajuste Regulavel Botão 5pcs",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/1z41TtX",
+        "p": 0.241
+      },
+      {
+        "h": "2026-11-22T19:36:14.799Z",
+        "n": "✨ Kit Com 600 Lenços Umedecidos Baby Free Plus",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/2XfH35H",
+        "p": 0.2345
       }
     ]
   },
@@ -519,6 +543,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T19:30:41.448Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-22T19:47:32.363Z",
+  "ultima_categoria": "brinquedo"
 }
