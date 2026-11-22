@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 41,
-  "ultimo": "2026-11-22T20:40:07.300Z",
+  "enviados": 42,
+  "ultimo": "2026-11-22T20:57:08.809Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 28
   },
   "membros_em": "2026-11-22T20:20:33.052Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -458,6 +458,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/AUvmgKjQSx",
         "p": 0.1604
+      },
+      {
+        "h": "2026-11-22T20:57:08.809Z",
+        "n": "🛁 Toalha De Banho Bublim C/capuz Neutro Bege/urso 76085487",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2Qhpy3K",
+        "p": 0.2996
       }
     ]
   },
@@ -612,6 +620,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T20:51:11.602Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-22T21:04:08.473Z",
+  "ultima_categoria": "higiene"
 }
