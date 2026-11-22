@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 26,
-  "ultimo": "2026-11-22T16:41:08.594Z",
+  "enviados": 27,
+  "ultimo": "2026-11-22T16:57:05.016Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 27
   },
   "membros_em": "2026-11-22T16:42:39.118Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -234,6 +234,14 @@
         "r": "enviado",
         "k": "https://meli.la/1wX7Xqf",
         "p": 0.3337
+      },
+      {
+        "h": "2026-11-22T16:57:05.016Z",
+        "n": "📚 365 Desenhos para Colorir Branco Espiral Livro Infantil Educativo Criatividad",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6VPdWNhFf1",
+        "p": 0
       }
     ]
   },
@@ -368,6 +376,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T16:50:59.791Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-22T17:07:36.876Z",
+  "ultima_categoria": "livro"
 }
