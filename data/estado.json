@@ -14338,12 +14338,6 @@
    "status": "ativo",
    "validade": "2026-11-23T23:59-03:00"
   },
-  "PARAVOCEDEZ": {
-   "criado": "2026-11-11T11:50-03:00",
-   "post": 318,
-   "status": "encerrado",
-   "validade": "2026-11-12T23:59-03:00"
-  },
   "PLAYER1": {
    "criado": "2026-11-18T17:07-03:00",
    "post": 1096,
@@ -54312,17 +54306,6 @@
     }
    ],
    "criado": "2026-11-22T10:01-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
-  },
-  "318": {
-   "blocos": [
-    {
-     "codigo": "PARAVOCEDEZ",
-     "html": "<b>🎟️ PARAVOCEDEZ</b> 👉 <b>10% OFF</b>\nDesconto máx.: R$30\n⏰ Válido até 12/11"
-    }
-   ],
-   "criado": "2026-11-11T11:50-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
