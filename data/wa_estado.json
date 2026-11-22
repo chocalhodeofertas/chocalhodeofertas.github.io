@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 52,
-  "ultimo": "2026-11-22T23:36:08.784Z",
+  "enviados": 53,
+  "ultimo": "2026-11-22T23:53:04.531Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 27
   },
   "membros_em": "2026-11-22T23:21:05.151Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -602,6 +602,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/2qWLcJPD3l",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T23:53:04.531Z",
+        "n": "🤰 Bolsa Mochila Maternidade Lequeen Tradicional Multifuncional ReforçAda Azul M",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/26notwX",
+        "p": 0.3057
       }
     ]
   },
@@ -766,6 +774,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T23:40:20.781Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-22T23:57:39.396Z",
+  "ultima_categoria": "gestante"
 }
