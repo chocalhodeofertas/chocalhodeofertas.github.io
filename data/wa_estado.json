@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 49,
-  "ultimo": "2026-11-22T22:49:07.198Z",
+  "enviados": 50,
+  "ultimo": "2026-11-22T23:05:08.610Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 28
   },
   "membros_em": "2026-11-22T22:20:53.146Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -578,6 +578,14 @@
         "r": "enviado",
         "k": "https://meli.la/1y8cgyd",
         "p": 0.2411
+      },
+      {
+        "h": "2026-11-22T23:05:08.610Z",
+        "n": "✨ 3 Palavrinhas | Bíblia Para Crianças",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/60TNND9RB3",
+        "p": 0
       }
     ]
   },
@@ -717,7 +725,7 @@
       ],
       "19": [
         0,
-        1,
+        2,
         0
       ],
       "07": [
@@ -737,6 +745,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T22:59:11.007Z",
-  "ultima_categoria": "gestante"
+  "proximo_em": "2026-11-22T23:15:02.220Z",
+  "ultima_categoria": "outros"
 }
