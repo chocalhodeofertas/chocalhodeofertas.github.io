@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 30,
-  "ultimo": "2026-11-21T23:59:35.762Z",
+  "enviados": 31,
+  "ultimo": "2026-11-22T00:07:46.991Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-21": 21
   },
   "membros_em": "2026-11-21T23:19:58.444Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -322,6 +322,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/3g5R8kBPvB",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T00:07:46.991Z",
+        "n": "🛁 Atentu Assento Redutor Infantil Com Escada Para Vaso Sanitário Cor Cinza Liso",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1ie74Ys",
+        "p": 0.3122
       }
     ]
   },
@@ -419,6 +427,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T00:07:37.272Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-22T00:14:09.446Z",
+  "ultima_categoria": "higiene"
 }
