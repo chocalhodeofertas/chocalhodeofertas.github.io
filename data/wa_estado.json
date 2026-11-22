@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 44,
-  "ultimo": "2026-11-22T21:29:09.155Z",
+  "enviados": 45,
+  "ultimo": "2026-11-22T21:45:07.925Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 29
   },
   "membros_em": "2026-11-22T21:20:42.607Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -514,6 +514,30 @@
         "r": "venceu",
         "k": "https://s.shopee.com.br/1qdoFrmZHk",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T21:45:07.925Z",
+        "n": "🧸 Kit Limpeza Infantil Mini Vassoura Rodo Pá Brinquedo Educativo Cabo de Madeir",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/4LL9GS1g8e",
+        "p": 0
+      },
+      {
+        "h": "2026-11-22T21:45:13.058Z",
+        "n": "✨ Grade de Cama com Tela de Segurança Tubo de Aço 68cm Branca",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/1QvtnKt",
+        "p": 0.228
+      },
+      {
+        "h": "2026-11-22T21:45:18.188Z",
+        "n": "✨ Fralda Calça Mamy Poko Superproteção Jumbo Xg 24 Unidades Extra Grande (xg) Se",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/1B1eL6U",
+        "p": 0.2278
       }
     ]
   },
@@ -668,6 +692,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T21:38:22.244Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-22T21:55:51.545Z",
+  "ultima_categoria": "brinquedo"
 }
