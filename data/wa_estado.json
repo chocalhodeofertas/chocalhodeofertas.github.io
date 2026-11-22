@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 32,
-  "ultimo": "2026-11-22T18:16:08.270Z",
+  "enviados": 33,
+  "ultimo": "2026-11-22T18:33:04.266Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 28
   },
   "membros_em": "2026-11-22T17:42:50.201Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -322,6 +322,30 @@
         "r": "venceu",
         "k": "https://s.shopee.com.br/4VeZCLKghL",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T18:31:39.870Z",
+        "n": "👕 Kit 3 Ou Duas Calças Infantil Calças Resistentes Com Bolsos Calça Infantil Sl",
+        "l": "shopee",
+        "r": "venceu",
+        "k": "https://s.shopee.com.br/6VPdbT7rP1",
+        "p": 0
+      },
+      {
+        "h": "2026-11-22T18:31:39.871Z",
+        "n": "🛁 Escova de Dentes Infantil Oral B Kids, para uma Limpeza Completa, Cerdas Maci",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/2td63Qb",
+        "p": 0.2575
+      },
+      {
+        "h": "2026-11-22T18:33:04.266Z",
+        "n": "🧷 Kit 2 peças necessaire maleta transparente organizadora para itens de higiene",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2La4e9wtRK",
+        "p": 0
       }
     ]
   },
@@ -461,6 +485,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T18:26:24.910Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-22T18:43:16.778Z",
+  "ultima_categoria": "fralda"
 }
