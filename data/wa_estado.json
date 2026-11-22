@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 6,
-  "ultimo": "2026-11-22T11:49:00.334Z",
+  "enviados": 7,
+  "ultimo": "2026-11-22T11:57:50.807Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 23
   },
   "membros_em": "2026-11-22T11:00:35.816Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -74,6 +74,14 @@
         "r": "enviado",
         "k": "https://meli.la/1X3YCwu",
         "p": 0.1895
+      },
+      {
+        "h": "2026-11-22T11:57:50.806Z",
+        "n": "✨ Kit 6 Cuecas Boxer INFANTIL Sem Costura em Microfibra RP",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3LSbY2L3Qn",
+        "p": 0
       }
     ]
   },
@@ -183,6 +191,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T11:57:43.767Z",
-  "ultima_categoria": "passeio"
+  "proximo_em": "2026-11-22T12:08:07.975Z",
+  "ultima_categoria": "outros"
 }
