@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 12,
-  "ultimo": "2026-11-22T12:57:06.110Z",
+  "enviados": 13,
+  "ultimo": "2026-11-22T13:13:08.733Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -122,6 +122,14 @@
         "r": "enviado",
         "k": "https://meli.la/1KArZ7G",
         "p": 0.2979
+      },
+      {
+        "h": "2026-11-22T13:13:08.733Z",
+        "n": "⏰ Válido até 10/01",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/3WDsVA9",
+        "p": 9
       }
     ]
   },
@@ -236,6 +244,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T13:05:53.853Z",
+  "proximo_em": "2026-11-22T13:20:39.249Z",
   "ultima_categoria": "passeio"
 }
