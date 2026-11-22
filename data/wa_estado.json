@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 28,
-  "ultimo": "2026-11-22T17:13:06.838Z",
+  "enviados": 29,
+  "ultimo": "2026-11-22T17:29:08.647Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 27
   },
   "membros_em": "2026-11-22T16:42:39.118Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -250,6 +250,22 @@
         "r": "enviado",
         "k": "https://meli.la/17nPXDN",
         "p": 0.36
+      },
+      {
+        "h": "2026-11-22T17:26:43.065Z",
+        "n": "👕 camiseta infantil unissex manga curta 100% algodão lisa casual confortavel ca",
+        "l": "shopee",
+        "r": "venceu",
+        "k": "https://s.shopee.com.br/1C9mlFW4v",
+        "p": 0
+      },
+      {
+        "h": "2026-11-22T17:29:08.647Z",
+        "n": "🧷 Kit C/3 Lenço Umedecido Lara Baby Premium 100 Unidades Total 300",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7fbaxh2kR2",
+        "p": 0
       }
     ]
   },
@@ -367,6 +383,11 @@
         2,
         0
       ],
+      "14": [
+        1,
+        0,
+        0
+      ],
       "07": [
         2,
         0,
@@ -384,6 +405,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T17:22:49.878Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-22T17:36:23.867Z",
+  "ultima_categoria": "fralda"
 }
