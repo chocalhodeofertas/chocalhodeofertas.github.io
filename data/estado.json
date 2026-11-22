@@ -14076,6 +14076,12 @@
    "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
+  "MELIACHA25": {
+   "criado": "2026-11-22T10:01-03:00",
+   "post": 1485,
+   "status": "ativo",
+   "validade": "2027-01-10T23:59-03:00"
+  },
   "MELIGARANTE22": {
    "criado": "2026-11-21T10:04-03:00",
    "post": 1371,
@@ -14340,12 +14346,6 @@
    "status": "ativo",
    "validade": "2026-12-13T23:59-03:00"
   },
-  "SEMPREAQUI": {
-   "criado": "2026-11-11T10:00-03:00",
-   "post": 302,
-   "status": "encerrado",
-   "validade": "2026-11-12T23:59-03:00"
-  },
   "SITETODO1511": {
    "criado": "2026-11-15T19:01-03:00",
    "post": 784,
@@ -14439,7 +14439,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5658,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6533,
+ "cupons_ml_ultimo": 6534,
  "cupons_shopee_enviado": "2026-11-22",
  "descoberta_em": "2026-11-22T08:02-03:00",
  "descobertos": {
@@ -48459,7 +48459,7 @@
   },
   "2026-11-22": {
    "com_cupom": 2,
-   "cupons": 2,
+   "cupons": 3,
    "posts": 12,
    "shopee": 6
   }
@@ -53967,14 +53967,14 @@
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
-  "302": {
+  "1485": {
    "blocos": [
     {
-     "codigo": "SEMPREAQUI",
-     "html": "<b>🎟️ SEMPREAQUI</b> 👉 <b>15% OFF</b>\nDesconto máx.: R$80\n⏰ Válido até 12/11"
+     "codigo": "MELIACHA25",
+     "html": "<b>🎟️ MELIACHA25</b> 👉 <b>25% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 10/01\n👉 <a href=\"https://bit.ly/3WDsVA9\">Ativar o cupom</a>"
     }
    ],
-   "criado": "2026-11-11T10:00-03:00",
+   "criado": "2026-11-22T10:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
