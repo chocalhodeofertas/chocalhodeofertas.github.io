@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 10,
-  "ultimo": "2026-11-22T12:24:10.492Z",
+  "enviados": 11,
+  "ultimo": "2026-11-22T12:41:09.055Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 24
   },
   "membros_em": "2026-11-22T12:01:01.376Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -106,6 +106,14 @@
         "r": "enviado",
         "k": "https://meli.la/1BiQrX9",
         "p": 0.17
+      },
+      {
+        "h": "2026-11-22T12:41:09.055Z",
+        "n": "🧷 100/200/300 Lenços Umedecidos POWERCLEAN Antiembaçantes e de Limpeza – Óculos",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7fbalCh1dZ",
+        "p": 0
       }
     ]
   },
@@ -220,6 +228,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T12:28:47.858Z",
-  "ultima_categoria": "quarto"
+  "proximo_em": "2026-11-22T12:52:03.629Z",
+  "ultima_categoria": "fralda"
 }
