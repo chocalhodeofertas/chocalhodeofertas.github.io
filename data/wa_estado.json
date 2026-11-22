@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 23,
-  "ultimo": "2026-11-22T15:53:10.596Z",
+  "enviados": 24,
+  "ultimo": "2026-11-22T16:09:07.741Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 26
   },
   "membros_em": "2026-11-22T15:42:28.616Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -210,6 +210,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/AKcM0pTOH2",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T16:09:07.741Z",
+        "n": "🎮 Controle Sem Fio Playstation Dualshock 4 Preto Ps4 Unica",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2UibUYp",
+        "p": 0.342
       }
     ]
   },
@@ -322,6 +330,11 @@
         1,
         0
       ],
+      "13": [
+        1,
+        0,
+        0
+      ],
       "07": [
         2,
         0,
@@ -339,6 +352,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T15:57:10.989Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-22T16:14:47.822Z",
+  "ultima_categoria": "game"
 }
