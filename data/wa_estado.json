@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 33,
-  "ultimo": "2026-11-22T18:33:04.266Z",
+  "enviados": 34,
+  "ultimo": "2026-11-22T18:49:06.585Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-21": 21,
     "2026-11-22": 28
   },
-  "membros_em": "2026-11-22T17:42:50.201Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-22T18:43:05.685Z",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -346,6 +346,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/2La4e9wtRK",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T18:49:06.585Z",
+        "n": "✨ Kit de 165 Balões Redondos Macaron Dazzy em Látex Para Aniversários, Chás de B",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/11vFyrM",
+        "p": 0.2477
       }
     ]
   },
@@ -485,6 +493,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T18:43:16.778Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-22T18:56:34.944Z",
+  "ultima_categoria": "festa"
 }
