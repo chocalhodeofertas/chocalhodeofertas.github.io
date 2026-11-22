@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 31,
-  "ultimo": "2026-11-22T18:01:09.472Z",
+  "enviados": 32,
+  "ultimo": "2026-11-22T18:16:08.270Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 28
   },
   "membros_em": "2026-11-22T17:42:50.201Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -306,6 +306,22 @@
         "r": "venceu",
         "k": "https://meli.la/2y5Z2CS",
         "p": 0.3068
+      },
+      {
+        "h": "2026-11-22T18:16:08.270Z",
+        "n": "🛁 Hipoglós Creme Preventivo de Assaduras, 120g",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2oFgpa5",
+        "p": 0.2786
+      },
+      {
+        "h": "2026-11-22T18:16:13.401Z",
+        "n": "🧸 Brinquedo Educativo Labirinto Montessori Jogo Cores Infantil",
+        "l": "shopee",
+        "r": "venceu",
+        "k": "https://s.shopee.com.br/4VeZCLKghL",
+        "p": 0
       }
     ]
   },
@@ -445,6 +461,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T18:06:38.137Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-22T18:26:24.910Z",
+  "ultima_categoria": "higiene"
 }
