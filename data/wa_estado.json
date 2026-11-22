@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 29,
-  "ultimo": "2026-11-22T17:29:08.647Z",
+  "enviados": 30,
+  "ultimo": "2026-11-22T17:45:07.986Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -15,10 +15,10 @@
     "2026-11-19": 21,
     "2026-11-20": 22,
     "2026-11-21": 21,
-    "2026-11-22": 27
+    "2026-11-22": 28
   },
-  "membros_em": "2026-11-22T16:42:39.118Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-22T17:42:50.201Z",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -266,6 +266,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/7fbaxh2kR2",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T17:45:07.986Z",
+        "n": "🧸 Kit 8 Dinossauros Dino World em Borracha Soft 3-6 anos",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/33fvxVS",
+        "p": 0.356
       }
     ]
   },
@@ -405,6 +413,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T17:36:23.867Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-22T17:56:48.052Z",
+  "ultima_categoria": "brinquedo"
 }
