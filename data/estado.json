@@ -14381,12 +14381,6 @@
    "status": "ativo",
    "validade": "2026-12-17T23:59-03:00"
   },
-  "PROMOCOMTECH": {
-   "criado": "2026-11-11T13:31-03:00",
-   "post": 336,
-   "status": "encerrado",
-   "validade": "2026-11-12T23:59-03:00"
-  },
   "PROMOFLASH22": {
    "criado": "2026-11-12T11:02-03:00",
    "post": 423,
@@ -54668,17 +54662,6 @@
     }
    ],
    "criado": "2026-11-22T10:01-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
-  },
-  "336": {
-   "blocos": [
-    {
-     "codigo": "PROMOCOMTECH",
-     "html": "<b>🎟️ PROMOCOMTECH</b> 👉 <b>12% OFF</b>\nCompra mín.: R$199 · Desconto máx.: R$300\n⏰ Válido até 12/11"
-    }
-   ],
-   "criado": "2026-11-11T13:31-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
