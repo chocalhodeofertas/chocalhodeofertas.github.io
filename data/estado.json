@@ -13687,12 +13687,6 @@
    "status": "esgotado",
    "validade": "2026-11-19T23:59-03:00"
   },
-  "BELEZALUXO": {
-   "criado": "2026-11-11T08:00-03:00",
-   "post": 286,
-   "status": "encerrado",
-   "validade": "2026-11-11T23:59-03:00"
-  },
   "BELEZAVERAO": {
    "criado": "2026-11-18T19:02-03:00",
    "post": 1110,
@@ -13702,13 +13696,13 @@
   "BLACKDELUXO": {
    "criado": "2026-11-20T15:01-03:00",
    "post": 1304,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
   "CASA2111": {
    "criado": "2026-11-21T12:04-03:00",
    "post": 1385,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
   "CHEGOUCUPOM25": {
@@ -13746,12 +13740,6 @@
    "post": 744,
    "status": "encerrado",
    "validade": "2026-11-16T23:59-03:00"
-  },
-  "DECORACAO1111": {
-   "criado": "2026-11-11T08:00-03:00",
-   "post": 287,
-   "status": "encerrado",
-   "validade": "2026-11-11T23:59-03:00"
   },
   "DESCONTAOMELI": {
    "criado": "2026-11-14T18:37-03:00",
@@ -13807,12 +13795,6 @@
    "status": "ativo",
    "validade": "2026-11-22T23:59-03:00"
   },
-  "FULL1111": {
-   "criado": "2026-11-11T08:00-03:00",
-   "post": 287,
-   "status": "encerrado",
-   "validade": "2026-11-11T23:59-03:00"
-  },
   "FULL1211": {
    "criado": "2026-11-12T08:01-03:00",
    "post": 404,
@@ -13842,6 +13824,12 @@
    "post": 1250,
    "status": "encerrado",
    "validade": "2026-11-20T23:59-03:00"
+  },
+  "FULL2211": {
+   "criado": "2026-11-22T08:01-03:00",
+   "post": 1470,
+   "status": "ativo",
+   "validade": "2026-11-22T23:59-03:00"
   },
   "GOLDEOFERTA": {
    "criado": "2026-11-21T19:41-03:00",
@@ -13873,16 +13861,10 @@
    "status": "ativo",
    "validade": "2026-12-18T23:59-03:00"
   },
-  "LOJASOFICIAIS1111": {
-   "criado": "2026-11-11T08:00-03:00",
-   "post": 287,
-   "status": "encerrado",
-   "validade": "2026-11-11T23:59-03:00"
-  },
   "LOJASOFICIAIS2111": {
    "criado": "2026-11-21T15:05-03:00",
    "post": 1415,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
   "MAISCUPONS30": {
@@ -13960,7 +13942,7 @@
   "MELIMAIS2111": {
    "criado": "2026-11-21T09:04-03:00",
    "post": 1363,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
   "MELIOFF18": {
@@ -13986,12 +13968,6 @@
    "post": 971,
    "status": "ativo",
    "validade": "2026-12-17T23:59-03:00"
-  },
-  "MODA1111": {
-   "criado": "2026-11-11T08:00-03:00",
-   "post": 287,
-   "status": "encerrado",
-   "validade": "2026-11-11T23:59-03:00"
   },
   "MODA1411": {
    "criado": "2026-11-14T12:02-03:00",
@@ -14128,7 +14104,7 @@
   "OFICIAIS2111": {
    "criado": "2026-11-21T08:00-03:00",
    "post": 1356,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
   "OPORTUNIDADEML": {
@@ -14215,12 +14191,6 @@
    "status": "encerrado",
    "validade": "2026-11-12T23:59-03:00"
   },
-  "SITETODO1111": {
-   "criado": "2026-11-11T08:00-03:00",
-   "post": 288,
-   "status": "encerrado",
-   "validade": "2026-11-11T23:59-03:00"
-  },
   "SITETODO1511": {
    "criado": "2026-11-15T19:01-03:00",
    "post": 784,
@@ -14260,14 +14230,8 @@
   "TODO2011SITE": {
    "criado": "2026-11-20T08:04-03:00",
    "post": 1250,
-   "status": "ativo",
-   "validade": "2026-11-21T23:59-03:00"
-  },
-  "TODOSITE1111": {
-   "criado": "2026-11-11T08:00-03:00",
-   "post": 287,
    "status": "encerrado",
-   "validade": "2026-11-11T23:59-03:00"
+   "validade": "2026-11-21T23:59-03:00"
   },
   "TODOSITE1511": {
    "criado": "2026-11-15T19:01-03:00",
@@ -14290,7 +14254,7 @@
   "TUDOCASA2111": {
    "criado": "2026-11-21T15:05-03:00",
    "post": 1415,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
   "VALEAGORA25": {
@@ -14318,7 +14282,7 @@
    "validade": "2026-11-20T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5655,
+ "cupons_extra_ultimo:cupombr": 5657,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6533,
  "cupons_shopee_enviado": "2026-11-21",
@@ -48180,6 +48144,9 @@
    "cupons": 9,
    "posts": 100,
    "shopee": 50
+  },
+  "2026-11-22": {
+   "cupons": 1
   }
  },
  "links": {
@@ -53632,52 +53599,14 @@
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
-  "286": {
+  "1470": {
    "blocos": [
     {
-     "codigo": "BELEZALUXO",
-     "html": "<b>🎟️ BELEZALUXO</b> 👉 <b>10% OFF</b>\nCompra mín.: R$199 · Desconto máx.: R$50\n⏰ Válido até 11/11\n👉 <a href=\"https://bit.ly/3VdPU4e\">Ativar o cupom</a>"
+     "codigo": "FULL2211",
+     "html": "<b>🎟️ FULL2211</b> 👉 <b>20% OFF</b>\nDesconto máx.: R$40\n⏰ Válido até 22/11"
     }
    ],
-   "criado": "2026-11-11T08:00-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
-  },
-  "287": {
-   "blocos": [
-    {
-     "codigo": "TODOSITE1111",
-     "html": "<b>🎟️ TODOSITE1111</b> 👉 <b>25% OFF</b>\nCompra mín.: R$219 · Desconto máx.: R$60\n⏰ Válido até 11/11"
-    },
-    {
-     "codigo": "DECORACAO1111",
-     "html": "<b>🎟️ DECORACAO1111</b> 👉 <b>35% OFF</b>\n⏰ Válido até 11/11"
-    },
-    {
-     "codigo": "LOJASOFICIAIS1111",
-     "html": "<b>🎟️ LOJASOFICIAIS1111</b> 👉 <b>35% OFF</b>\n⏰ Válido até 11/11"
-    },
-    {
-     "codigo": "MODA1111",
-     "html": "<b>🎟️ MODA1111</b> 👉 <b>35% OFF</b>\n⏰ Válido até 11/11"
-    },
-    {
-     "codigo": "FULL1111",
-     "html": "<b>🎟️ FULL1111</b> 👉 <b>35% OFF</b>\n⏰ Válido até 11/11"
-    }
-   ],
-   "criado": "2026-11-11T08:00-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
-  },
-  "288": {
-   "blocos": [
-    {
-     "codigo": "SITETODO1111",
-     "html": "<b>🎟️ SITETODO1111</b> 👉 <b>R$111 OFF</b>\nCompra mín.: R$999\n⏰ Válido até 11/11"
-    }
-   ],
-   "criado": "2026-11-11T08:00-03:00",
+   "criado": "2026-11-22T08:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
