@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 29,
-  "ultimo": "2026-11-21T23:49:29.782Z",
+  "enviados": 30,
+  "ultimo": "2026-11-21T23:59:35.762Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-21": 21
   },
   "membros_em": "2026-11-21T23:19:58.444Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -314,6 +314,14 @@
         "r": "enviado",
         "k": "https://meli.la/2RoFpT8",
         "p": 0.1683
+      },
+      {
+        "h": "2026-11-21T23:59:35.762Z",
+        "n": "✨ Leave-In Creme De Pentear Verdi Natural Infantil Vegano Lavanda e Laranja Doce",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3g5R8kBPvB",
+        "p": 0
       }
     ]
   },
@@ -411,6 +419,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-21T23:59:29.001Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-22T00:07:37.272Z",
+  "ultima_categoria": "outros"
 }
