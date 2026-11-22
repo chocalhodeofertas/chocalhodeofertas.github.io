@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 21,
-  "ultimo": "2026-11-22T15:20:09.073Z",
+  "enviados": 22,
+  "ultimo": "2026-11-22T15:37:07.758Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 27
   },
   "membros_em": "2026-11-22T14:42:14.053Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -194,6 +194,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/4LL8rRz7Py",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T15:37:07.758Z",
+        "n": "🧸 Penteadeira Infantil Menina Acessórios Princesa Maquiagem Cor Rosa",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2kY91AL",
+        "p": 0.3503
       }
     ]
   },
@@ -318,6 +326,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T15:32:55.666Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-22T15:46:16.318Z",
+  "ultima_categoria": "brinquedo"
 }
