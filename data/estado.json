@@ -14033,12 +14033,6 @@
    "status": "ativo",
    "validade": "2026-12-13T23:59-03:00"
   },
-  "DESCONTOJA": {
-   "criado": "2026-11-11T14:00-03:00",
-   "post": 342,
-   "status": "encerrado",
-   "validade": "2026-11-12T23:59-03:00"
-  },
   "DEZOFF": {
    "criado": "2026-11-16T12:37-03:00",
    "post": 850,
@@ -54841,17 +54835,6 @@
     }
    ],
    "criado": "2026-11-22T10:01-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
-  },
-  "342": {
-   "blocos": [
-    {
-     "codigo": "DESCONTOJA",
-     "html": "<b>🎟️ DESCONTOJA</b> 👉 <b>18% OFF</b>\nCompra mín.: R$99 · Desconto máx.: R$60\n⏰ Válido até 12/11"
-    }
-   ],
-   "criado": "2026-11-11T14:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
