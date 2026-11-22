@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 47,
-  "ultimo": "2026-11-22T22:17:07.560Z",
+  "enviados": 48,
+  "ultimo": "2026-11-22T22:32:11.659Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -15,10 +15,10 @@
     "2026-11-19": 21,
     "2026-11-20": 22,
     "2026-11-21": 21,
-    "2026-11-22": 29
+    "2026-11-22": 28
   },
-  "membros_em": "2026-11-22T21:20:42.607Z",
-  "ultima_loja": "ml",
+  "membros_em": "2026-11-22T22:20:53.146Z",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -562,6 +562,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-22T22:32:11.659Z",
+        "n": "🧸 Tapete Infantil de Atividades 150 x 120 x 0,6cm Dupla Face Urso Tatame Térmic",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/BVaMrYsl6",
+        "p": 0
       }
     ]
   },
@@ -721,6 +729,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T22:23:56.943Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-22T22:44:52.191Z",
+  "ultima_categoria": "brinquedo"
 }
