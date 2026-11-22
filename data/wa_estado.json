@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 48,
-  "ultimo": "2026-11-22T22:32:11.659Z",
+  "enviados": 49,
+  "ultimo": "2026-11-22T22:49:07.198Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 28
   },
   "membros_em": "2026-11-22T22:20:53.146Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -570,6 +570,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/BVaMrYsl6",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T22:49:07.198Z",
+        "n": "🤰 Trocador Anatômico Fixo Linho Cinza Batistela Baby 69x46cm",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1y8cgyd",
+        "p": 0.2411
       }
     ]
   },
@@ -729,6 +737,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T22:44:52.191Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-22T22:59:11.007Z",
+  "ultima_categoria": "gestante"
 }
