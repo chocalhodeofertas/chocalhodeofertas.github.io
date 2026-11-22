@@ -73,4 +73,4 @@ for t in [x.strip() for x in termo.split("|") if x.strip()][:4]:
         continue
     print("vieram", len(achados))
     for p in achados:
-        print(f"  {aprovado(p) or 'OK':14} nota {p.nota} vendas {p.vendas} comissão {p.comissao:.3f} R$ {p.preco} | {p.titulo[:70]}")
+        print(f"  {aprovado(p) or 'OK':14} {p.id} nota {p.nota} vendas {p.vendas} comissão {p.comissao:.3f} R$ {p.preco} | {p.titulo[:70]}")
