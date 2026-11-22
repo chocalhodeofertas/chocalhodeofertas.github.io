@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 38,
-  "ultimo": "2026-11-22T19:53:05.889Z",
+  "enviados": 39,
+  "ultimo": "2026-11-22T20:09:06.720Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 28
   },
   "membros_em": "2026-11-22T19:20:24.299Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -434,6 +434,14 @@
         "r": "venceu",
         "k": "https://s.shopee.com.br/1BO7KWTQNY",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T20:09:06.720Z",
+        "n": "🎉 Garrafa De Alce Água Infantil Criança Portátil Com Canudo Desenho Fantasia Pa",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8fU8JD2xOh",
+        "p": 0
       }
     ]
   },
@@ -583,6 +591,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T20:04:14.306Z",
-  "ultima_categoria": "passeio"
+  "proximo_em": "2026-11-22T20:18:13.419Z",
+  "ultima_categoria": "festa"
 }
