@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 15,
-  "ultimo": "2026-11-22T13:45:07.107Z",
+  "enviados": 16,
+  "ultimo": "2026-11-22T14:01:09.726Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 25
   },
   "membros_em": "2026-11-22T13:42:07.782Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -146,6 +146,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6fj3aToAe2",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T14:01:09.726Z",
+        "n": "🛁 Termômetro De Banheira Para Banho Bebê Medidor de Temperatura da Água Analógi",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1y5jvVU",
+        "p": 0.41
       }
     ]
   },
@@ -265,6 +273,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T13:57:44.104Z",
-  "ultima_categoria": "alimentacao"
+  "proximo_em": "2026-11-22T14:06:55.354Z",
+  "ultima_categoria": "higiene"
 }
