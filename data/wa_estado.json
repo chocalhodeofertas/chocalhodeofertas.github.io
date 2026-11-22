@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 39,
-  "ultimo": "2026-11-22T20:09:06.720Z",
+  "enviados": 40,
+  "ultimo": "2026-11-22T20:25:09.298Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-21": 21,
     "2026-11-22": 28
   },
-  "membros_em": "2026-11-22T19:20:24.299Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-22T20:20:33.052Z",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -442,6 +442,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/8fU8JD2xOh",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T20:25:09.297Z",
+        "n": "🧸 Piscina de Bolinhas Lelor Infantil com 50 Bolinhas, Estampa Fundo do Mar",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/29sFqaC",
+        "p": 0.312
       }
     ]
   },
@@ -591,6 +599,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T20:18:13.419Z",
-  "ultima_categoria": "festa"
+  "proximo_em": "2026-11-22T20:37:36.574Z",
+  "ultima_categoria": "brinquedo"
 }
