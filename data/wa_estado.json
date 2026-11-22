@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 43,
-  "ultimo": "2026-11-22T21:13:06.609Z",
+  "enviados": 44,
+  "ultimo": "2026-11-22T21:29:09.155Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -15,10 +15,10 @@
     "2026-11-19": 21,
     "2026-11-20": 22,
     "2026-11-21": 21,
-    "2026-11-22": 28
+    "2026-11-22": 29
   },
-  "membros_em": "2026-11-22T20:20:33.052Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-22T21:20:42.607Z",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -474,6 +474,30 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6q2UIhfeym",
         "p": 0.0876
+      },
+      {
+        "h": "2026-11-22T21:29:09.155Z",
+        "n": "✨ 2 Trava Tranca Cadeado P/ Geladeira Armário Guarda Roupa Kit Cor Branco",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2Y7zwmX",
+        "p": 0.36
+      },
+      {
+        "h": "2026-11-22T21:29:14.289Z",
+        "n": "🧸 Jogo de Memória em Madeira para Crianças /Infantil Pinos Coloridos Xadrez 3D ",
+        "l": "shopee",
+        "r": "venceu",
+        "k": "https://s.shopee.com.br/5AuG97Yg4q",
+        "p": 0
+      },
+      {
+        "h": "2026-11-22T21:29:19.418Z",
+        "n": "✨ Kit Bota Feminina Infantil E Bolsa Infantil Menina Blogueira",
+        "l": "shopee",
+        "r": "venceu",
+        "k": "https://s.shopee.com.br/BVaEFLsDL",
+        "p": 0
       }
     ]
   },
@@ -628,6 +652,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T21:18:38.722Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-22T21:38:22.244Z",
+  "ultima_categoria": "roupa"
 }
