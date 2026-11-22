@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
-  "dia": "2026-11-21",
-  "enviados": 44,
-  "ultimo": "2026-11-22T01:59:02.338Z",
+  "dia": "2026-11-22",
+  "enviados": 3,
+  "ultimo": "2026-11-22T11:18:40.059Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,121 +18,17 @@
     "2026-11-22": 23
   },
   "membros_em": "2026-11-22T11:00:35.816Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
   "caiu_em": null,
   "avisou_queda": false,
   "historico": {
-    "dia": "2026-11-21",
+    "dia": "2026-11-22",
     "itens": [
       {
-        "h": "2026-11-21T11:00:14.751Z",
-        "n": "⏰ Válido até 21/11",
-        "l": "ml",
-        "r": "enviado",
-        "k": null,
-        "p": 9
-      },
-      {
-        "h": "2026-11-21T11:09:32.640Z",
-        "n": "👕 Saída De Maternidade Em Tricô Rosa Bebê Rosa 0 A 3 Meses",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/2h1Bo2E",
-        "p": 0.2051
-      },
-      {
-        "h": "2026-11-21T12:18:10.378Z",
-        "n": "⏰ Válido até 21/11",
-        "l": "ml",
-        "r": "enviado",
-        "k": null,
-        "p": 9
-      },
-      {
-        "h": "2026-11-21T13:26:06.449Z",
-        "n": "Antes de fechar a compra, passe na página de cupons e ative os que servem para v",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/8fTxwjM742",
-        "p": 9
-      },
-      {
-        "h": "2026-11-21T14:35:06.630Z",
-        "n": "⏰ Válido até 10/01",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://bit.ly/4iUr8iE",
-        "p": 9
-      },
-      {
-        "h": "2026-11-21T15:43:16.288Z",
-        "n": "🧸 Envelope Com 105 Figurinhas Álbum Copa Do Mundo 2026",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/186zW1g",
-        "p": 0.36
-      },
-      {
-        "h": "2026-11-21T16:52:06.616Z",
-        "n": "✨ Anel Formatura Abc Infantil Regulavél Colorido Com Caixinha",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/1W0w3aYsOn",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T18:01:05.940Z",
-        "n": "🛁 Talco Pom Pom de Amido de Milho Para Bebê 200g",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/14TmAC5",
-        "p": 0.36
-      },
-      {
-        "h": "2026-11-21T19:09:08.350Z",
-        "n": "⏰ Válido até 21/11",
-        "l": "ml",
-        "r": "enviado",
-        "k": null,
-        "p": 9
-      },
-      {
-        "h": "2026-11-21T19:29:50.184Z",
-        "n": "✏️ Tênis de Led e Chinelo Infantil Meninas Skay Divertido Uso Casual e Escolar",
-        "l": "shopee",
-        "r": "venceu",
-        "k": "https://s.shopee.com.br/AAIuQj4gFC",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T19:29:55.309Z",
-        "n": "👕 Papete Infantil Lisa Leve Macia Menino Menina Criança Antiderrapante Sandália",
-        "l": "shopee",
-        "r": "venceu",
-        "k": "https://s.shopee.com.br/3g5QhG8qmq",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T19:48:57.070Z",
-        "n": "🎉 15 Caixas Massinha Modelar + 15 Giz de Cera + 15 Colorir/Atividades + 30 Cort",
-        "l": "shopee",
-        "r": "venceu",
-        "k": "https://s.shopee.com.br/6q2STsGjkp",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T19:49:02.189Z",
-        "n": "✨ Maiô manga longa infantil juvenil com ziper - 2 ao 16",
-        "l": "shopee",
-        "r": "venceu",
-        "k": "https://s.shopee.com.br/6VPc5iF0tE",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T20:18:08.916Z",
+        "h": "2026-11-22T11:01:37.182Z",
         "n": "⏰ Válido até 22/11",
         "l": "ml",
         "r": "enviado",
@@ -140,300 +36,20 @@
         "p": 9
       },
       {
-        "h": "2026-11-21T20:47:21.544Z",
-        "n": "🧸 Volante Educativo Interativo Infantil Com Som Realista Brinquedo De Criança S",
-        "l": "shopee",
-        "r": "venceu",
-        "k": "https://s.shopee.com.br/5AuEYp65t6",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T20:47:26.663Z",
-        "n": "🎉 Feriado Presente Diário Festival de Música Férias Aniversário Festa festas e ",
-        "l": "shopee",
-        "r": "venceu",
-        "k": "https://s.shopee.com.br/AKcKimN1sX",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T21:00:27.952Z",
-        "n": "🎉 Vestido Barrado Manga Infantil Menina Estampado Casual Festa Luxo 4 a 12 Anos",
-        "l": "shopee",
-        "r": "venceu",
-        "k": "https://s.shopee.com.br/9fMdw5z7E9",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T21:13:19.282Z",
-        "n": "✨ Andador Educativo Empurrar Infantil Bebê Musical Brinquedo Atentu Rosa",
+        "h": "2026-11-22T11:12:47.735Z",
+        "n": "🛏️ Mantinha Para Bebê Buba Estrelinhas Cinza",
         "l": "ml",
         "r": "enviado",
-        "k": "https://meli.la/2xAyqfq",
-        "p": 0.2866
+        "k": "https://meli.la/1b1Envu",
+        "p": 0.2068
       },
       {
-        "h": "2026-11-21T21:24:20.207Z",
-        "n": "🧷 Kit 10 Toalhas Umedecidas Turminha da Bagunça 120 Folhas C/ Tampa 98% Água Le",
+        "h": "2026-11-22T11:18:40.059Z",
+        "n": "👕 Kit Sortido 2 ou 6 Peças Roupa Infantil Verão Menina Conjunto Infantil Bebê M",
         "l": "shopee",
         "r": "enviado",
-        "k": "https://s.shopee.com.br/6fj2ZhXci7",
+        "k": "https://s.shopee.com.br/20xDwjpazf",
         "p": 0
-      },
-      {
-        "h": "2026-11-21T21:31:51.846Z",
-        "n": "🛁 Kit 2 Sabonete Infantil Pom Pom Óleo de Amêndoas 70g",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/6Amlz6EFSf",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T21:39:23.903Z",
-        "n": "✨ Aspirador Nasal Elétrico Epsilon Recarregável Azul para Bebê",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/1ZFTWFJ",
-        "p": 0.36
-      },
-      {
-        "h": "2026-11-21T21:47:30.591Z",
-        "n": "✨ Sabonete Líquido Glicerina Da Cabeça Aos Pés Johnson's Baby, 400ml",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/1vyezPy",
-        "p": 0.1728
-      },
-      {
-        "h": "2026-11-21T22:11:42.922Z",
-        "n": "🛁 Dove Sabonete em Barra Original 90g 8 Unidades",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/2gcBpCj",
-        "p": 0.2182
-      },
-      {
-        "h": "2026-11-21T22:18:42.331Z",
-        "n": "🛁 Escova de dente infantil Mam Baby's Brush 6+ meses cor rosa",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/1K2CveE",
-        "p": 0.1455
-      },
-      {
-        "h": "2026-11-21T22:28:06.697Z",
-        "n": "🧷 Huggies Fralda Descartável Premium Natural Care Hipoalergênica RN - 34UN",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/9Kjnp2VWPe",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T22:36:12.083Z",
-        "n": "🧸 Mesinha Infantil Com 2 Cadeiras Educativa Alfabeto Completo Atacarejo Kids",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/24D46LX",
-        "p": 0.33
-      },
-      {
-        "h": "2026-11-21T22:46:22.208Z",
-        "n": "⏰ Válido até 22/11",
-        "l": "ml",
-        "r": "enviado",
-        "k": null,
-        "p": 9
-      },
-      {
-        "h": "2026-11-21T22:55:08.110Z",
-        "n": "🧷 Fralda Turma da Mônica Baby Jumbo P com 30un",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/AAIup7RoYb",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T23:03:59.045Z",
-        "n": "🧸 Brinquedo Montessori de Madeira com Labirinto de Contas e Atividades Interati",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/1Y4PSKo",
-        "p": 0.2609
-      },
-      {
-        "h": "2026-11-21T23:10:10.727Z",
-        "n": "👕 Kit 10 ou 6 peças 5 ou 3 Conjunto Verão Roupa Menina Infantil Camiseta e Shor",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/8VAgqtqovZ",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T23:18:33.296Z",
-        "n": "🧸 Xuxão Apoio Urso Banguela Fúria Da Noite Gigante 100cm Pelúcia Preto",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/2rEVfVu",
-        "p": 0.236
-      },
-      {
-        "h": "2026-11-21T23:24:03.479Z",
-        "n": "⏰ Válido até 22/11",
-        "l": "ml",
-        "r": "enviado",
-        "k": null,
-        "p": 9
-      },
-      {
-        "h": "2026-11-21T23:30:11.066Z",
-        "n": "👕 Kit 8 Peças Bebê Suedine Canelado 100% Algodão 4 Conjuntos Body Manga Longa C",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/6Amm5hh2BX",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T23:38:40.495Z",
-        "n": "🤰 Almofada De Amamentação Para Bebe Travesseiro Super Macio Algodão - Safari Ci",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/2Kzxy6F",
-        "p": 0.2263
-      },
-      {
-        "h": "2026-11-21T23:43:00.968Z",
-        "n": "🧸 Chocalho Mordedor Bebê Sensorial Mão Agarrar Texturas Silicone Coloridas Livr",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/7VI9fVReIS",
-        "p": 0
-      },
-      {
-        "h": "2026-11-21T23:49:29.782Z",
-        "n": "🛁 Garmastan Pomada Amamentação 20g - Cuidado para Seios Sensíveis",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/2RoFpT8",
-        "p": 0.1683
-      },
-      {
-        "h": "2026-11-21T23:59:35.762Z",
-        "n": "✨ Leave-In Creme De Pentear Verdi Natural Infantil Vegano Lavanda e Laranja Doce",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/3g5R8kBPvB",
-        "p": 0
-      },
-      {
-        "h": "2026-11-22T00:07:46.991Z",
-        "n": "🛁 Atentu Assento Redutor Infantil Com Escada Para Vaso Sanitário Cor Cinza Liso",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/1ie74Ys",
-        "p": 0.3122
-      },
-      {
-        "h": "2026-11-22T00:14:18.625Z",
-        "n": "✨ KIT VÁLVULA SPRAY 18/410 COLÔNIA MAMAE E BEBE DE 100ML COLÔNIA ÁGUAS REFIL ESS",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/gRpZk9m6D",
-        "p": 0
-      },
-      {
-        "h": "2026-11-22T00:25:37.940Z",
-        "n": "✨ Torre de Aprendizagem Montessori 4 em 1 Infantil Ajustável, em MDF Branco",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/32zqUzt",
-        "p": 0.2
-      },
-      {
-        "h": "2026-11-22T00:34:54.354Z",
-        "n": "1️⃣ 🧸 LEGO Minecraft - A Batalha da Lava no Nether - 99 Peças - 21266",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/1XMuqAC",
-        "p": 9
-      },
-      {
-        "h": "2026-11-22T00:41:52.701Z",
-        "n": "✏️ Kit 20 Cx Massinha de Modelar + 40 Molde Cortador Lembrancinha Kit Festa Infa",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/1BO6BbbJ5s",
-        "p": 0
-      },
-      {
-        "h": "2026-11-22T00:47:42.786Z",
-        "n": "✨ Babá Eletrônica Monitor 2.4 Sem Fio Zoom Baby On Maxi Baby",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/1oUxMqd",
-        "p": 0.3334
-      },
-      {
-        "h": "2026-11-22T01:00:48.044Z",
-        "n": "👕 Short Boxer Infantil Curto Cotton Menina 96%Algodão Ideal para Usar com Saias",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/4fxyN2G7o9",
-        "p": 0
-      },
-      {
-        "h": "2026-11-22T01:13:09.678Z",
-        "n": "🧸 Brinquedo Cubo Didático Madeira Montessori Infantil 5 Em 1 Atacarejo Kids",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/2iMHs2A",
-        "p": 0.292
-      },
-      {
-        "h": "2026-11-22T01:17:30.996Z",
-        "n": "✨ Bíblia Infantil Ilustrada Letras Grandes",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/70Lt8oc6vK",
-        "p": 0
-      },
-      {
-        "h": "2026-11-22T01:24:25.574Z",
-        "n": "🧸 Massa De Modelar E Escultura De Cerâmica Fria Polar 1kg - Das White pasta",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/2egqC2Z",
-        "p": 0.18
-      },
-      {
-        "h": "2026-11-22T01:29:06.372Z",
-        "n": "🎉 Kit 20 Caixas de Massinha de Modelar + 20 Bolha de Sabão + 20 Cortador Molde ",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/1BO6ERjTZl",
-        "p": 0
-      },
-      {
-        "h": "2026-11-22T01:39:33.964Z",
-        "n": "🛁 Suporte de Chuveiro e Banho para Bebê com Pato Fofo: Altura Ajustável, Baby c",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/2y3JGhr",
-        "p": 0.1653
-      },
-      {
-        "h": "2026-11-22T01:46:10.338Z",
-        "n": "🧸 Carrinho de Controle Remoto Unicórnio Recarregável Luzes Coloridas Brinquedo ",
-        "l": "shopee",
-        "r": "enviado",
-        "k": "https://s.shopee.com.br/3Vm114jZW0",
-        "p": 0
-      },
-      {
-        "h": "2026-11-22T01:59:02.338Z",
-        "n": "✨ Blend De Óleos Essenciais Soninho Bebê Aromathérapie",
-        "l": "ml",
-        "r": "enviado",
-        "k": "https://meli.la/2wfXNut",
-        "p": 0.1501
       }
     ]
   },
@@ -535,9 +151,14 @@
         2,
         0,
         0
+      ],
+      "08": [
+        1,
+        0,
+        1
       ]
     }
   },
-  "proximo_em": "2026-11-22T02:04:16.820Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-22T11:26:03.609Z",
+  "ultima_categoria": "roupa"
 }
