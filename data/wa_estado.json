@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 30,
-  "ultimo": "2026-11-22T17:45:07.986Z",
+  "enviados": 31,
+  "ultimo": "2026-11-22T18:01:09.472Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 28
   },
   "membros_em": "2026-11-22T17:42:50.201Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -274,6 +274,38 @@
         "r": "enviado",
         "k": "https://meli.la/33fvxVS",
         "p": 0.356
+      },
+      {
+        "h": "2026-11-22T18:01:09.472Z",
+        "n": "👕 kit 4 peças mijão calça e body manga longa infantil bebe masculino e feminino",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3g5SDlQuIk",
+        "p": 0
+      },
+      {
+        "h": "2026-11-22T18:02:09.655Z",
+        "n": "✨ Bike De Equilíbrio Infantil Com Guidão Ajustável E Seguro Cor Lilás",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/2pwW1yL",
+        "p": 0.3337
+      },
+      {
+        "h": "2026-11-22T18:02:09.656Z",
+        "n": "✨ Shampoo Johnson's Baby Glicerina Hipoalergênico 750ml",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/28xGnDR",
+        "p": 0.3133
+      },
+      {
+        "h": "2026-11-22T18:02:09.657Z",
+        "n": "🛁 Sabonete Líquido Glicerina Da Cabeça Aos Pés Johnson's Baby, 750ml",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/2y5Z2CS",
+        "p": 0.3068
       }
     ]
   },
@@ -413,6 +445,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T17:56:48.052Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-22T18:06:38.137Z",
+  "ultima_categoria": "roupa"
 }
