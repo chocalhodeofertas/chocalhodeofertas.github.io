@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 25,
-  "ultimo": "2026-11-22T16:25:11.051Z",
+  "enviados": 26,
+  "ultimo": "2026-11-22T16:41:08.594Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -15,10 +15,10 @@
     "2026-11-19": 21,
     "2026-11-20": 22,
     "2026-11-21": 21,
-    "2026-11-22": 26
+    "2026-11-22": 27
   },
-  "membros_em": "2026-11-22T15:42:28.616Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-22T16:42:39.118Z",
+  "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -226,6 +226,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6Amn6jz5mY",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T16:41:08.594Z",
+        "n": "✨ Bicicleta Bebê 4 Rodas Sem Pedal MSP Kids Vermelha, Bicicleta de Equilíbrio In",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1wX7Xqf",
+        "p": 0.3337
       }
     ]
   },
@@ -339,8 +347,8 @@
         0
       ],
       "13": [
+        3,
         2,
-        1,
         0
       ],
       "07": [
@@ -360,6 +368,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T16:32:12.728Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-22T16:50:59.791Z",
+  "ultima_categoria": "outros"
 }
