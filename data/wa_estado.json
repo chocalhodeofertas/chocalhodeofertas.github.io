@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 24,
-  "ultimo": "2026-11-22T16:09:07.741Z",
+  "enviados": 25,
+  "ultimo": "2026-11-22T16:25:11.051Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 26
   },
   "membros_em": "2026-11-22T15:42:28.616Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -218,6 +218,14 @@
         "r": "enviado",
         "k": "https://meli.la/2UibUYp",
         "p": 0.342
+      },
+      {
+        "h": "2026-11-22T16:25:11.051Z",
+        "n": "👕 Conjunto Bebê Masculino Curto Infantil Básico Liso Algodão com Recorte Bordo ",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6Amn6jz5mY",
+        "p": 0
       }
     ]
   },
@@ -331,8 +339,8 @@
         0
       ],
       "13": [
+        2,
         1,
-        0,
         0
       ],
       "07": [
@@ -352,6 +360,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T16:14:47.822Z",
-  "ultima_categoria": "game"
+  "proximo_em": "2026-11-22T16:32:12.728Z",
+  "ultima_categoria": "roupa"
 }
