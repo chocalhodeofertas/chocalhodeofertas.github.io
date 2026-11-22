@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 50,
-  "ultimo": "2026-11-22T23:05:08.610Z",
+  "enviados": 52,
+  "ultimo": "2026-11-22T23:36:08.784Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -15,9 +15,9 @@
     "2026-11-19": 21,
     "2026-11-20": 22,
     "2026-11-21": 21,
-    "2026-11-22": 28
+    "2026-11-22": 27
   },
-  "membros_em": "2026-11-22T22:20:53.146Z",
+  "membros_em": "2026-11-22T23:21:05.151Z",
   "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
@@ -586,6 +586,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/60TNND9RB3",
         "p": 0
+      },
+      {
+        "h": "2026-11-22T23:21:04.721Z",
+        "n": "🧸 Kit 3 Bolas Surpresa Cápsula Mini Brands Hc-3006 Azul Colecionável Miniatura ",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/27UXmEV",
+        "p": 0.36
+      },
+      {
+        "h": "2026-11-22T23:36:08.784Z",
+        "n": "✨ Kit Até 10 Cuecas Boxer Microfibra Infantil Juvenil Masculino Tam 02 a 10 Anos",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2qWLcJPD3l",
+        "p": 0
       }
     ]
   },
@@ -728,6 +744,11 @@
         2,
         0
       ],
+      "20": [
+        1,
+        0,
+        0
+      ],
       "07": [
         2,
         0,
@@ -745,6 +766,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T23:15:02.220Z",
+  "proximo_em": "2026-11-22T23:40:20.781Z",
   "ultima_categoria": "outros"
 }
