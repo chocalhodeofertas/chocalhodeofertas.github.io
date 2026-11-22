@@ -13975,12 +13975,6 @@
   "2026-11-22": 28
  },
  "cupons": {
-  "AGORAPROMO": {
-   "criado": "2026-11-11T16:01-03:00",
-   "post": 357,
-   "status": "encerrado",
-   "validade": "2026-11-12T23:59-03:00"
-  },
   "AQUITEMCUPOM30": {
    "criado": "2026-11-20T10:04-03:00",
    "post": 1264,
@@ -14460,12 +14454,6 @@
    "post": 1103,
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
-  },
-  "TECH1111": {
-   "criado": "2026-11-11T16:01-03:00",
-   "post": 357,
-   "status": "encerrado",
-   "validade": "2026-11-11T23:59-03:00"
   },
   "TECHSEMPRE": {
    "criado": "2026-11-12T13:00-03:00",
@@ -54943,21 +54931,6 @@
    "criado": "2026-11-22T10:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
-  },
-  "357": {
-   "blocos": [
-    {
-     "codigo": "AGORAPROMO",
-     "html": "<b>🎟️ AGORAPROMO</b> 👉 <b>25% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$30\n⏰ Válido até 12/11"
-    },
-    {
-     "codigo": "TECH1111",
-     "html": "<b>🎟️ TECH1111</b> 👉 <b>R$220 OFF</b>\nCompra mín.: R$1499\n⏰ Válido até 11/11"
-    }
-   ],
-   "criado": "2026-11-11T16:01-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "368": {
    "blocos": [
