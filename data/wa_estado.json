@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-21",
-  "enviados": 31,
-  "ultimo": "2026-11-22T00:07:46.991Z",
+  "enviados": 33,
+  "ultimo": "2026-11-22T00:25:37.940Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-20": 22,
     "2026-11-21": 21
   },
-  "membros_em": "2026-11-21T23:19:58.444Z",
+  "membros_em": "2026-11-22T00:22:21.370Z",
   "ultima_loja": "ml",
   "max_dia": 60,
   "intervalo_min": 4,
@@ -330,6 +330,22 @@
         "r": "enviado",
         "k": "https://meli.la/1ie74Ys",
         "p": 0.3122
+      },
+      {
+        "h": "2026-11-22T00:14:18.625Z",
+        "n": "✨ KIT VÁLVULA SPRAY 18/410 COLÔNIA MAMAE E BEBE DE 100ML COLÔNIA ÁGUAS REFIL ESS",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/gRpZk9m6D",
+        "p": 0
+      },
+      {
+        "h": "2026-11-22T00:25:37.940Z",
+        "n": "✨ Torre de Aprendizagem Montessori 4 em 1 Infantil Ajustável, em MDF Branco",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/32zqUzt",
+        "p": 0.2
       }
     ]
   },
@@ -427,6 +443,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T00:14:09.446Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-22T00:34:46.384Z",
+  "ultima_categoria": "brinquedo"
 }
