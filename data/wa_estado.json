@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 26,
-  "ultimo": "2026-11-23T15:01:05.765Z",
+  "enviados": 28,
+  "ultimo": "2026-11-23T15:25:06.684Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -242,6 +242,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/3Vm3YWddmj",
         "p": 0.1782
+      },
+      {
+        "h": "2026-11-23T15:13:06.677Z",
+        "n": "🥣 Garrafinha Infantil Aventuras Astronauta 380ml Azul Buba",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2figWHV",
+        "p": 0.2773
+      },
+      {
+        "h": "2026-11-23T15:25:06.684Z",
+        "n": "✏️ Caderno Caligrafia Infantil Letra Cursiva Alfabetização",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2BGfxdC2Pr",
+        "p": 0
       }
     ]
   },
@@ -416,6 +432,11 @@
         1,
         0
       ],
+      "12": [
+        1,
+        0,
+        0
+      ],
       "07": [
         3,
         0,
@@ -428,6 +449,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T15:08:15.630Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-23T15:37:45.704Z",
+  "ultima_categoria": "escola"
 }
