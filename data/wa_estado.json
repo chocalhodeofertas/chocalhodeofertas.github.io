@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 47,
-  "ultimo": "2026-11-23T19:13:09.385Z",
+  "enviados": 48,
+  "ultimo": "2026-11-23T19:25:06.502Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T19:08:27.469Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -442,6 +442,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-23T19:25:06.502Z",
+        "n": "👕 Conjunto Infantil Regata Estampada e Short Liso 100% Algodão Kit de 6, 3, 2 e",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/30pnARNvSd",
+        "p": 0
       }
     ]
   },
@@ -633,6 +641,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T19:21:57.866Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-23T19:37:33.862Z",
+  "ultima_categoria": "roupa"
 }
