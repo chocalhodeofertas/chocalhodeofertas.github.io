@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 8,
-  "ultimo": "2026-11-23T12:02:05.516Z",
+  "enviados": 10,
+  "ultimo": "2026-11-23T12:22:17.705Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -90,6 +90,22 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-23T12:16:30.406Z",
+        "n": "🚼 Carrinho de Bebê Cosco Kids, Toffy, Bege",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1jWTKBM",
+        "p": 0.2494
+      },
+      {
+        "h": "2026-11-23T12:22:17.704Z",
+        "n": "🥣 Pano De Boca Luxo Branco Bordado 35cmx35cm C/ 3 Unidades 100% Algodão Cremer",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1UaAGLa",
+        "p": 0.1063
       }
     ]
   },
@@ -263,9 +279,14 @@
         3,
         0,
         0
+      ],
+      "09": [
+        0,
+        1,
+        0
       ]
     }
   },
-  "proximo_em": "2026-11-23T12:12:56.107Z",
+  "proximo_em": "2026-11-23T12:31:25.199Z",
   "ultima_categoria": "alimentacao"
 }
