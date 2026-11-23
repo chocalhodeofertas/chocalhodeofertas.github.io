@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 17,
-  "ultimo": "2026-11-23T13:25:14.399Z",
+  "enviados": 18,
+  "ultimo": "2026-11-23T13:33:55.638Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T12:52:53.479Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -162,6 +162,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/Lp06SnO9c",
         "p": 9
+      },
+      {
+        "h": "2026-11-23T13:33:55.638Z",
+        "n": "🧷 1000 Lenços umedecidos +maleta cada pacote de refil com 100 lenços por pacote",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6AmoeDO3O9",
+        "p": 0.1359
       }
     ]
   },
@@ -348,6 +356,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T13:33:48.003Z",
+  "proximo_em": "2026-11-23T13:45:21.344Z",
   "ultima_categoria": "fralda"
 }
