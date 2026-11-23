@@ -14481,6 +14481,12 @@
    "status": "encerrado",
    "validade": "2026-11-13T23:59-03:00"
   },
+  "CUPOMDEHOJE25": {
+   "criado": "2026-11-23T11:00-03:00",
+   "post": 1603,
+   "status": "ativo",
+   "validade": "2026-12-19T23:59-03:00"
+  },
   "CUPOMPRATEC": {
    "criado": "2026-11-15T12:58-03:00",
    "post": 744,
@@ -14492,6 +14498,12 @@
    "post": 678,
    "status": "encerrado",
    "validade": "2026-11-15T23:59-03:00"
+  },
+  "DESCONTEI25": {
+   "criado": "2026-11-23T11:00-03:00",
+   "post": 1603,
+   "status": "ativo",
+   "validade": "2026-11-24T23:59-03:00"
   },
   "DESCONTODOML25": {
    "criado": "2026-11-13T10:32-03:00",
@@ -14636,6 +14648,12 @@
    "post": 1485,
    "status": "ativo",
    "validade": "2027-01-10T23:59-03:00"
+  },
+  "MELIACHA30": {
+   "criado": "2026-11-23T11:00-03:00",
+   "post": 1603,
+   "status": "ativo",
+   "validade": "2026-12-20T23:59-03:00"
   },
   "MELIGARANTE22": {
    "criado": "2026-11-21T10:04-03:00",
@@ -14949,6 +14967,12 @@
    "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
+  "VALEAGORA20": {
+   "criado": "2026-11-23T11:00-03:00",
+   "post": 1603,
+   "status": "ativo",
+   "validade": "2027-01-10T23:59-03:00"
+  },
   "VIPNOML": {
    "criado": "2026-11-15T09:04-03:00",
    "post": 712,
@@ -14964,7 +14988,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5669,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6536,
+ "cupons_ml_ultimo": 6537,
  "cupons_shopee_enviado": "2026-11-23",
  "descoberta_em": "2026-11-23T08:02-03:00",
  "descobertos": {
@@ -48621,7 +48645,7 @@
   },
   "2026-11-23": {
    "com_cupom": 3,
-   "cupons": 4,
+   "cupons": 8,
    "posts": 18,
    "shopee": 9
   }
@@ -54534,6 +54558,29 @@
    "criado": "2026-11-23T10:06-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1603": {
+   "blocos": [
+    {
+     "codigo": "DESCONTEI25",
+     "html": "<b>🎟️ DESCONTEI25</b> 👉 <b>25% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n👉 <a href=\"https://bit.ly/4Cd8Cts\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "VALEAGORA20",
+     "html": "<b>🎟️ VALEAGORA20</b> 👉 <b>20% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 10/01\n👉 <a href=\"https://bit.ly/48sP4nq\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "CUPOMDEHOJE25",
+     "html": "<b>🎟️ CUPOMDEHOJE25</b> 👉 <b>25% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 19/12\n👉 <a href=\"https://bit.ly/3Vw9s3Y\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "MELIACHA30",
+     "html": "<b>🎟️ MELIACHA30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 20/12\n👉 <a href=\"https://bit.ly/4CbwNZd\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-23T11:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "423": {
    "blocos": [
