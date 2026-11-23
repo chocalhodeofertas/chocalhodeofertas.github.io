@@ -15043,6 +15043,12 @@
    "status": "ativo",
    "validade": "2026-12-13T23:59-03:00"
   },
+  "SITE2311TODO": {
+   "criado": "2026-11-23T15:00-03:00",
+   "post": 1637,
+   "status": "ativo",
+   "validade": "2026-11-24T23:59-03:00"
+  },
   "SITETODO1511": {
    "criado": "2026-11-15T19:01-03:00",
    "post": 784,
@@ -15054,6 +15060,12 @@
    "post": 1549,
    "status": "encerrado",
    "validade": "2026-11-22T23:59-03:00"
+  },
+  "SITETODO2311": {
+   "criado": "2026-11-23T15:00-03:00",
+   "post": 1637,
+   "status": "ativo",
+   "validade": "2026-11-23T23:59-03:00"
   },
   "SOUVIP25": {
    "criado": "2026-11-19T10:59-03:00",
@@ -15084,6 +15096,12 @@
    "post": 1549,
    "status": "ativo",
    "validade": "2026-11-23T23:59-03:00"
+  },
+  "TODO2311SITE": {
+   "criado": "2026-11-23T15:00-03:00",
+   "post": 1637,
+   "status": "ativo",
+   "validade": "2026-11-24T23:59-03:00"
   },
   "TODOSITE1511": {
    "criado": "2026-11-15T19:01-03:00",
@@ -15140,7 +15158,7 @@
    "validade": "2026-11-20T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5674,
+ "cupons_extra_ultimo:cupombr": 5675,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6543,
  "cupons_shopee_enviado": "2026-11-23",
@@ -49080,7 +49098,7 @@
   },
   "2026-11-23": {
    "com_cupom": 5,
-   "cupons": 9,
+   "cupons": 12,
    "posts": 47,
    "shopee": 24
   }
@@ -55075,6 +55093,25 @@
    "criado": "2026-11-23T13:12-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1637": {
+   "blocos": [
+    {
+     "codigo": "TODO2311SITE",
+     "html": "<b>🎟️ TODO2311SITE</b> 👉 <b>R$50 OFF</b>\nCompra mín.: R$399\n⏰ Válido até 24/11"
+    },
+    {
+     "codigo": "SITETODO2311",
+     "html": "<b>🎟️ SITETODO2311</b> 👉 <b>R$30 OFF</b>\nCompra mín.: R$150\n⏰ Válido até 23/11"
+    },
+    {
+     "codigo": "SITE2311TODO",
+     "html": "<b>🎟️ SITE2311TODO</b> 👉 <b>R$120 OFF</b>\nCompra mín.: R$999\n⏰ Válido até 24/11"
+    }
+   ],
+   "criado": "2026-11-23T15:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "478": {
    "blocos": [
