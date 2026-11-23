@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 41,
-  "ultimo": "2026-11-23T18:01:06.899Z",
+  "enviados": 42,
+  "ultimo": "2026-11-23T18:13:06.593Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T18:06:18.917Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -362,6 +362,30 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-23T18:13:06.593Z",
+        "n": "🧸 Quebra-Cabeça Magnético de Feições Humanas Brinquedo Montessori Educativo par",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/1gKPUMG3fW",
+        "p": 0
+      },
+      {
+        "h": "2026-11-23T18:13:11.730Z",
+        "n": "✨ Capacete de Proteção para Bebê isBOM, Rosa-claro com Rosto Sorridente Ajustáve",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/1fx7uCZ",
+        "p": 0.2367
+      },
+      {
+        "h": "2026-11-23T18:13:16.864Z",
+        "n": "🛁 Lenços Umedecidos Upa Bebê com 140 Unidades Higiene Toalhinhas Sem Alcool Pac",
+        "l": "ml",
+        "r": "venceu",
+        "k": "https://meli.la/2Kmfudb",
+        "p": 0.2166
       }
     ]
   },
@@ -553,6 +577,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T18:05:31.833Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-23T18:21:03.917Z",
+  "ultima_categoria": "brinquedo"
 }
