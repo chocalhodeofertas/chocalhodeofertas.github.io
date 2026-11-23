@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 40,
-  "ultimo": "2026-11-23T17:49:07.124Z",
+  "enviados": 41,
+  "ultimo": "2026-11-23T18:01:06.899Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-22": 29,
     "2026-11-23": 31
   },
-  "membros_em": "2026-11-23T17:23:08.969Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-23T18:06:18.917Z",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -354,6 +354,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/7pv2reiy19",
         "p": 0
+      },
+      {
+        "h": "2026-11-23T18:01:06.899Z",
+        "n": "⏰ Válido até 24/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -545,6 +553,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T17:56:07.526Z",
+  "proximo_em": "2026-11-23T18:05:31.833Z",
   "ultima_categoria": "roupa"
 }
