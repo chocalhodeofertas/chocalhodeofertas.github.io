@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 13,
-  "ultimo": "2026-11-23T12:47:49.025Z",
+  "enviados": 14,
+  "ultimo": "2026-11-23T12:52:23.188Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -15,9 +15,9 @@
     "2026-11-20": 22,
     "2026-11-21": 21,
     "2026-11-22": 29,
-    "2026-11-23": 32
+    "2026-11-23": 31
   },
-  "membros_em": "2026-11-23T11:52:27.878Z",
+  "membros_em": "2026-11-23T12:52:53.479Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -129,6 +129,14 @@
         "l": "shopee",
         "r": "enviado",
         "k": "https://s.shopee.com.br/50arBzcA5p",
+        "p": 0
+      },
+      {
+        "h": "2026-11-23T12:52:23.188Z",
+        "n": "🧸 Lousa Mágica LED 30x20cm - Brinquedo Educativo Infantil para Escrever e Desen",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/5VX7nDfqs0",
         "p": 0
       }
     ]
@@ -311,6 +319,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T12:52:15.203Z",
-  "ultima_categoria": "livro"
+  "proximo_em": "2026-11-23T13:05:03.548Z",
+  "ultima_categoria": "brinquedo"
 }
