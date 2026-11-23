@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 25,
-  "ultimo": "2026-11-23T14:49:49.868Z",
+  "enviados": 26,
+  "ultimo": "2026-11-23T15:01:05.765Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 30
   },
   "membros_em": "2026-11-23T14:49:39.968Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -234,6 +234,14 @@
         "r": "enviado",
         "k": "https://meli.la/25ST9SH",
         "p": 0.3441
+      },
+      {
+        "h": "2026-11-23T15:01:05.765Z",
+        "n": "👕 Chinelo Infantil Bebê Antiderrapante Sandália Macia Leve Confotável Lançament",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3Vm3YWddmj",
+        "p": 0.1782
       }
     ]
   },
@@ -420,6 +428,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T15:00:29.573Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-23T15:08:15.630Z",
+  "ultima_categoria": "roupa"
 }
