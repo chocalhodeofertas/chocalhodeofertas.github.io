@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 11,
-  "ultimo": "2026-11-23T12:31:32.367Z",
+  "enviados": 12,
+  "ultimo": "2026-11-23T12:42:46.518Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 32
   },
   "membros_em": "2026-11-23T11:52:27.878Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -114,6 +114,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/8fTxwjM742",
         "p": 9
+      },
+      {
+        "h": "2026-11-23T12:42:46.518Z",
+        "n": "🛏️ Mini Berço 3 Em 1 Americano Com Rodízios Grade De Proteção Removível E Colch",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2mLmAyu",
+        "p": 0.1768
       }
     ]
   },
@@ -295,6 +303,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T12:42:42.778Z",
-  "ultima_categoria": "alimentacao"
+  "proximo_em": "2026-11-23T12:47:40.150Z",
+  "ultima_categoria": "quarto"
 }
