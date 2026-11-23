@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 37,
-  "ultimo": "2026-11-23T17:13:26.514Z",
+  "enviados": 38,
+  "ultimo": "2026-11-23T17:25:09.408Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-22": 29,
     "2026-11-23": 31
   },
-  "membros_em": "2026-11-23T16:53:46.258Z",
-  "ultima_loja": "ml",
+  "membros_em": "2026-11-23T17:23:08.969Z",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -330,6 +330,14 @@
         "r": "enviado",
         "k": "https://meli.la/2g8afbw",
         "p": 0.3
+      },
+      {
+        "h": "2026-11-23T17:25:09.407Z",
+        "n": "✨ Kit 24 pulseiras lindas infantis de miçanga-youyi",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6fj5PlAzju",
+        "p": 0
       }
     ]
   },
@@ -521,6 +529,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T17:17:55.587Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-23T17:32:13.584Z",
+  "ultima_categoria": "outros"
 }
