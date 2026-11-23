@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 42,
-  "ultimo": "2026-11-23T18:13:06.593Z",
+  "enviados": 43,
+  "ultimo": "2026-11-23T18:25:07.869Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T18:06:18.917Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -386,6 +386,14 @@
         "r": "venceu",
         "k": "https://meli.la/2Kmfudb",
         "p": 0.2166
+      },
+      {
+        "h": "2026-11-23T18:25:07.869Z",
+        "n": "🛁 Talco em Gel Granado Bebê Dermocalmante 80g",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1CKwBu9",
+        "p": 0.2165
       }
     ]
   },
@@ -577,6 +585,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T18:21:03.917Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-23T18:33:39.089Z",
+  "ultima_categoria": "higiene"
 }
