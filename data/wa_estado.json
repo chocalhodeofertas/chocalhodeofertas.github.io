@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 18,
-  "ultimo": "2026-11-23T13:33:55.638Z",
+  "enviados": 19,
+  "ultimo": "2026-11-23T13:45:28.142Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T12:52:53.479Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -170,6 +170,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6AmoeDO3O9",
         "p": 0.1359
+      },
+      {
+        "h": "2026-11-23T13:45:28.142Z",
+        "n": "✨ Pistola de Água Elétrica Automática Kizumba para Crianças Pistola Água Elétric",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1Z2344J",
+        "p": 0.36
       }
     ]
   },
@@ -356,6 +364,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T13:45:21.344Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-23T13:50:30.348Z",
+  "ultima_categoria": "brinquedo"
 }
