@@ -14959,6 +14959,12 @@
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
   },
+  "OFERTASEMPREML": {
+   "criado": "2026-11-23T16:01-03:00",
+   "post": 1640,
+   "status": "ativo",
+   "validade": "2026-11-24T23:59-03:00"
+  },
   "OFERTASML25": {
    "criado": "2026-11-15T12:58-03:00",
    "post": 743,
@@ -15158,7 +15164,7 @@
    "validade": "2026-11-20T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5675,
+ "cupons_extra_ultimo:cupombr": 5676,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6543,
  "cupons_shopee_enviado": "2026-11-23",
@@ -49276,7 +49282,7 @@
   },
   "2026-11-23": {
    "com_cupom": 5,
-   "cupons": 12,
+   "cupons": 13,
    "posts": 49,
    "shopee": 26
   }
@@ -55290,6 +55296,17 @@
    "criado": "2026-11-23T15:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1640": {
+   "blocos": [
+    {
+     "codigo": "OFERTASEMPREML",
+     "html": "<b>🎟️ OFERTASEMPREML</b> 👉 <b>10% OFF</b>\nCompra mín.: R$199 · Desconto máx.: R$200\n⏰ Válido até 24/11"
+    }
+   ],
+   "criado": "2026-11-23T16:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "478": {
    "blocos": [

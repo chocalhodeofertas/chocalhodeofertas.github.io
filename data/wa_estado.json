@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 45,
-  "ultimo": "2026-11-23T18:49:10.497Z",
+  "enviados": 46,
+  "ultimo": "2026-11-23T19:01:06.406Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T18:06:18.917Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -426,6 +426,14 @@
         "r": "enviado",
         "k": "https://meli.la/2hfeUnr",
         "p": 0.2244
+      },
+      {
+        "h": "2026-11-23T19:01:06.406Z",
+        "n": "✨ Suspensório Gravata Borboleta Infantil Criança Menino Menina Varias Cores",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3B9DJhXdpn",
+        "p": 0
       }
     ]
   },
@@ -617,6 +625,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T18:53:49.878Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-23T19:08:45.782Z",
+  "ultima_categoria": "outros"
 }
