@@ -14517,6 +14517,12 @@
    "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
+  "MELIMAISXPT1122": {
+   "criado": "2026-11-23T09:01-03:00",
+   "post": 1586,
+   "status": "ativo",
+   "validade": "2026-11-24T23:59-03:00"
+  },
   "MELIOFF18": {
    "criado": "2026-11-12T11:02-03:00",
    "post": 423,
@@ -14582,6 +14588,12 @@
    "post": 1052,
    "status": "ativo",
    "validade": "2026-12-18T23:59-03:00"
+  },
+  "OFERTAML": {
+   "criado": "2026-11-23T09:01-03:00",
+   "post": 1586,
+   "status": "ativo",
+   "validade": "2026-11-24T23:59-03:00"
   },
   "OFERTAPRATEC": {
    "criado": "2026-11-13T13:04-03:00",
@@ -14794,7 +14806,7 @@
    "validade": "2026-11-20T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5666,
+ "cupons_extra_ultimo:cupombr": 5668,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6534,
  "cupons_shopee_enviado": "2026-11-22",
@@ -47938,7 +47950,7 @@
   },
   "2026-11-23": {
    "com_cupom": 1,
-   "cupons": 1,
+   "cupons": 3,
    "posts": 6,
    "shopee": 3
   }
@@ -53799,6 +53811,21 @@
    "criado": "2026-11-23T08:06-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1586": {
+   "blocos": [
+    {
+     "codigo": "MELIMAISXPT1122",
+     "html": "<b>🎟️ MELIMAISXPT1122</b> 👉 <b>15% OFF</b>\n⭐ Exclusivo Meli+\nDesconto máx.: R$90\n⏰ Válido até 24/11"
+    },
+    {
+     "codigo": "OFERTAML",
+     "html": "<b>🎟️ OFERTAML</b> 👉 <b>10% OFF</b>\nDesconto máx.: R$200\n⏰ Válido até 24/11"
+    }
+   ],
+   "criado": "2026-11-23T09:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "423": {
    "blocos": [
