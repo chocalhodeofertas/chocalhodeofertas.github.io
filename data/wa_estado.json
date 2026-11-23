@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 30,
-  "ultimo": "2026-11-23T15:48:10.491Z",
+  "enviados": 31,
+  "ultimo": "2026-11-23T16:01:08.611Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T15:53:31.157Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -274,6 +274,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/9zzXLcg8BR",
         "p": 0
+      },
+      {
+        "h": "2026-11-23T16:01:08.610Z",
+        "n": "⚽ Rmira 6.5 Skate Infantil Elétrico Hoverboard Bluetooth Led 12km/h, Skate Crian",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1XwECE4",
+        "p": 0.41
       }
     ]
   },
@@ -465,6 +473,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T15:58:54.532Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-23T16:06:13.667Z",
+  "ultima_categoria": "esporte"
 }

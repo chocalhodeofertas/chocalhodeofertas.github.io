@@ -14987,12 +14987,6 @@
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
   },
-  "TECHSEMPRE": {
-   "criado": "2026-11-12T13:00-03:00",
-   "post": 441,
-   "status": "encerrado",
-   "validade": "2026-11-13T23:59-03:00"
-  },
   "TODO1511SITE": {
    "criado": "2026-11-15T19:01-03:00",
    "post": 784,
@@ -15066,9 +15060,9 @@
    "validade": "2026-11-20T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5671,
+ "cupons_extra_ultimo:cupombr": 5672,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6542,
+ "cupons_ml_ultimo": 6543,
  "cupons_shopee_enviado": "2026-11-23",
  "descoberta_em": "2026-11-23T08:02-03:00",
  "descobertos": {
@@ -55104,17 +55098,6 @@
    "criado": "2026-11-23T11:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
-  },
-  "441": {
-   "blocos": [
-    {
-     "codigo": "TECHSEMPRE",
-     "html": "<b>🎟️ TECHSEMPRE</b> 👉 <b>R$400 OFF</b>\nCompra mín.: R$2.699\n⏰ Válido até 13/11"
-    }
-   ],
-   "criado": "2026-11-12T13:00-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "478": {
    "blocos": [
