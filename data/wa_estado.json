@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 44,
-  "ultimo": "2026-11-23T18:37:08.635Z",
+  "enviados": 45,
+  "ultimo": "2026-11-23T18:49:10.497Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T18:06:18.917Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -418,6 +418,14 @@
         "r": "venceu",
         "k": "https://meli.la/1L8ghEq",
         "p": 0.2322
+      },
+      {
+        "h": "2026-11-23T18:49:10.497Z",
+        "n": "🧸 Jogo Pescaria Magnética Imã Madeira Educativo Pedagógico",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2hfeUnr",
+        "p": 0.2244
       }
     ]
   },
@@ -609,6 +617,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T18:48:19.008Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-23T18:53:49.878Z",
+  "ultima_categoria": "brinquedo"
 }
