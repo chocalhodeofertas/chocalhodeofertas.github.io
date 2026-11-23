@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 7,
-  "ultimo": "2026-11-23T11:57:59.183Z",
+  "enviados": 8,
+  "ultimo": "2026-11-23T12:02:05.516Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 32
   },
   "membros_em": "2026-11-23T11:52:27.878Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -82,6 +82,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/8KrJ6FCUnu",
         "p": 0
+      },
+      {
+        "h": "2026-11-23T12:02:05.516Z",
+        "n": "⏰ Válido até 24/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -258,6 +266,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T12:01:59.260Z",
+  "proximo_em": "2026-11-23T12:12:56.107Z",
   "ultima_categoria": "alimentacao"
 }
