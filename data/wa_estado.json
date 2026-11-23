@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 16,
-  "ultimo": "2026-11-23T13:15:54.888Z",
+  "enviados": 17,
+  "ultimo": "2026-11-23T13:25:14.399Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -153,6 +153,14 @@
         "l": "ml",
         "r": "enviado",
         "k": "https://bit.ly/3XiNcuR",
+        "p": 9
+      },
+      {
+        "h": "2026-11-23T13:25:14.399Z",
+        "n": "Fralda Descartavel Enzzo Mega Pacotão Recém Nascido Rn 100 Unidades",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/Lp06SnO9c",
         "p": 9
       }
     ]
@@ -323,6 +331,11 @@
       ]
     },
     "2026-11-23": {
+      "10": [
+        0,
+        1,
+        0
+      ],
       "07": [
         3,
         0,
@@ -335,6 +348,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T13:25:05.765Z",
+  "proximo_em": "2026-11-23T13:33:48.003Z",
   "ultima_categoria": "fralda"
 }
