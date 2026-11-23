@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 19,
-  "ultimo": "2026-11-23T13:45:28.142Z",
+  "enviados": 20,
+  "ultimo": "2026-11-23T13:50:40.689Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -15,10 +15,10 @@
     "2026-11-20": 22,
     "2026-11-21": 21,
     "2026-11-22": 29,
-    "2026-11-23": 31
+    "2026-11-23": 30
   },
-  "membros_em": "2026-11-23T12:52:53.479Z",
-  "ultima_loja": "ml",
+  "membros_em": "2026-11-23T13:53:06.078Z",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -178,6 +178,14 @@
         "r": "enviado",
         "k": "https://meli.la/1Z2344J",
         "p": 0.36
+      },
+      {
+        "h": "2026-11-23T13:50:40.689Z",
+        "n": "🛏️ Manta Cobertor de Bebê c/ Naninha Para Menina Menino Infantil Mantinha Premi",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/W8Rv5Hdnd",
+        "p": 0
       }
     ]
   },
@@ -364,6 +372,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T13:50:30.348Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-23T14:01:38.656Z",
+  "ultima_categoria": "quarto"
 }
