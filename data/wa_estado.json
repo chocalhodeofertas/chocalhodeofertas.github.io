@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 23,
-  "ultimo": "2026-11-23T14:25:11.735Z",
+  "enviados": 24,
+  "ultimo": "2026-11-23T14:37:09.934Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 30
   },
   "membros_em": "2026-11-23T13:53:06.078Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -210,6 +210,14 @@
         "r": "enviado",
         "k": "https://meli.la/26x2CFm",
         "p": 0.2984
+      },
+      {
+        "h": "2026-11-23T14:37:09.934Z",
+        "n": "✏️ Moldes Forminha para Massinha Cortador de Modelar Kit Festa Lembrancinha Infa",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/9pg75DM6kq",
+        "p": 0
       }
     ]
   },
@@ -396,6 +404,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T14:36:23.944Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-23T14:48:32.652Z",
+  "ultima_categoria": "escola"
 }
