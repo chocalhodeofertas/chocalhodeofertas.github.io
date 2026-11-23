@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 64,
-  "ultimo": "2026-11-23T22:36:51.272Z",
+  "enviados": 65,
+  "ultimo": "2026-11-23T22:49:05.670Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-22": 29,
     "2026-11-23": 30
   },
-  "membros_em": "2026-11-23T21:45:06.103Z",
+  "membros_em": "2026-11-23T22:51:54.436Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -586,6 +586,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/2qWNHGkhfG",
         "p": 0
+      },
+      {
+        "h": "2026-11-23T22:49:05.670Z",
+        "n": "🛁 Bolsa Com Kit Para Cuidados De Higiene ESaúde Do Seu Bebê Com13 Peças Contém ",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6fj5qcpFGA",
+        "p": 0
       }
     ]
   },
@@ -782,6 +790,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T22:47:06.183Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-23T23:00:25.685Z",
+  "ultima_categoria": "higiene"
 }
