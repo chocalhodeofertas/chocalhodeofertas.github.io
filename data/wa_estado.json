@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 31,
-  "ultimo": "2026-11-23T16:01:08.611Z",
+  "enviados": 32,
+  "ultimo": "2026-11-23T16:13:11.492Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T15:53:31.157Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -282,6 +282,14 @@
         "r": "enviado",
         "k": "https://meli.la/1XwECE4",
         "p": 0.41
+      },
+      {
+        "h": "2026-11-23T16:13:11.492Z",
+        "n": "👕 Macacão Jeans Infantil Feminino 1 a 4 Anos Jardineira Kids Com Elástico na Ci",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/70LvmeUbdn",
+        "p": 0
       }
     ]
   },
@@ -473,6 +481,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T16:06:13.667Z",
-  "ultima_categoria": "esporte"
+  "proximo_em": "2026-11-23T16:25:44.301Z",
+  "ultima_categoria": "roupa"
 }
