@@ -14663,6 +14663,12 @@
    "status": "encerrado",
    "validade": "2026-11-18T23:59-03:00"
   },
+  "OFFSEMPRE": {
+   "criado": "2026-11-23T10:06-03:00",
+   "post": 1594,
+   "status": "ativo",
+   "validade": "2026-11-23T23:59-03:00"
+  },
   "OFFSEMPREML": {
    "criado": "2026-11-19T09:01-03:00",
    "post": 1147,
@@ -14840,7 +14846,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5669,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6534,
+ "cupons_ml_ultimo": 6535,
  "cupons_shopee_enviado": "2026-11-23",
  "descoberta_em": "2026-11-23T08:02-03:00",
  "descobertos": {
@@ -48226,7 +48232,7 @@
   },
   "2026-11-23": {
    "com_cupom": 3,
-   "cupons": 3,
+   "cupons": 4,
    "posts": 12,
    "shopee": 6
   }
@@ -54118,6 +54124,17 @@
    "criado": "2026-11-23T09:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1594": {
+   "blocos": [
+    {
+     "codigo": "OFFSEMPRE",
+     "html": "<b>🎟️ OFFSEMPRE</b> 👉 <b>R$250 OFF</b>\n⏰ Válido até 23/11\n👉 <a href=\"https://bit.ly/3XiNcuR\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-23T10:06-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "423": {
    "blocos": [
