@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 38,
-  "ultimo": "2026-11-23T17:25:09.408Z",
+  "enviados": 39,
+  "ultimo": "2026-11-23T17:37:05.626Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T17:23:08.969Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -338,6 +338,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6fj5PlAzju",
         "p": 0
+      },
+      {
+        "h": "2026-11-23T17:37:05.626Z",
+        "n": "🧸 Cozinha Infantil Brinquedo Com Luz 33 Acessórios Sai Água Azul",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1mVS3Vj",
+        "p": 0.3008
       }
     ]
   },
@@ -529,6 +537,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T17:32:13.584Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-23T17:42:45.683Z",
+  "ultima_categoria": "brinquedo"
 }
