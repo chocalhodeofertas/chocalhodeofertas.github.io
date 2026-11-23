@@ -14605,12 +14605,6 @@
    "status": "ativo",
    "validade": "2027-01-11T23:59-03:00"
   },
-  "BEAUTY5": {
-   "criado": "2026-11-12T18:38-03:00",
-   "post": 478,
-   "status": "ativo",
-   "validade": "2026-12-31T23:59-03:00"
-  },
   "BEBESPETS1511": {
    "criado": "2026-11-15T15:03-03:00",
    "post": 760,
@@ -14658,12 +14652,6 @@
    "post": 1037,
    "status": "encerrado",
    "validade": "2026-11-19T23:59-03:00"
-  },
-  "COZINHA5": {
-   "criado": "2026-11-12T18:38-03:00",
-   "post": 478,
-   "status": "encerrado",
-   "validade": "2026-11-13T23:59-03:00"
   },
   "CUPOMDEHOJE25": {
    "criado": "2026-11-23T11:00-03:00",
@@ -14910,12 +14898,6 @@
    "post": 1103,
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
-  },
-  "MOP5SHARK": {
-   "criado": "2026-11-12T18:38-03:00",
-   "post": 478,
-   "status": "encerrado",
-   "validade": "2026-11-13T23:59-03:00"
   },
   "OFERTAJA25": {
    "criado": "2026-11-18T11:03-03:00",
@@ -55987,25 +55969,6 @@
    "criado": "2026-11-23T16:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
-  },
-  "478": {
-   "blocos": [
-    {
-     "codigo": "BEAUTY5",
-     "html": "<b>🎟️ BEAUTY5</b> 👉 <b>5%</b> ⬆️\nCompra mín.: Sem compra mínima · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4zHyTyl\">Ativar o cupom</a>"
-    },
-    {
-     "codigo": "COZINHA5",
-     "html": "<b>🎟️ COZINHA5</b> 👉 <b>5% OFF</b>\nCompra mín.: Sem compra mínima · Desconto máx.: R$99\n👉 <a href=\"https://bit.ly/4iN2bEv\">Ativar o cupom</a>"
-    },
-    {
-     "codigo": "MOP5SHARK",
-     "html": "<b>🎟️ MOP5SHARK</b> 👉 <b>5% OFF</b>\nCompra mín.: Sem compra mínima · Desconto máx.: R$39\n👉 <a href=\"https://bit.ly/4BWkLTk\">Ativar o cupom</a>"
-    }
-   ],
-   "criado": "2026-11-12T18:38-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "509": {
    "blocos": [
