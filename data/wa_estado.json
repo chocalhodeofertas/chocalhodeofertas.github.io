@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 54,
-  "ultimo": "2026-11-23T00:09:05.412Z",
+  "enviados": 56,
+  "ultimo": "2026-11-23T00:40:08.665Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -15,9 +15,9 @@
     "2026-11-19": 21,
     "2026-11-20": 22,
     "2026-11-21": 21,
-    "2026-11-22": 27
+    "2026-11-22": 29
   },
-  "membros_em": "2026-11-22T23:21:05.151Z",
+  "membros_em": "2026-11-23T00:21:21.850Z",
   "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
@@ -618,6 +618,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/5VX6nUuFDj",
         "p": 0
+      },
+      {
+        "h": "2026-11-23T00:25:07.161Z",
+        "n": "1️⃣ 🛁 Termômetro De Banheira Para Banho Bebê Medidor de Temperatura da Água…",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1y5jvVU",
+        "p": 9
+      },
+      {
+        "h": "2026-11-23T00:40:08.665Z",
+        "n": "👕 Tênis Feminino Infantil Meninas Calce Fácil Confortável Macio Leve Antiderrap",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/gRr5a4j6Y",
+        "p": 0
       }
     ]
   },
@@ -787,6 +803,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T00:13:24.674Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-23T00:52:11.125Z",
+  "ultima_categoria": "roupa"
 }
