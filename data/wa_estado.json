@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 36,
-  "ultimo": "2026-11-23T17:01:49.018Z",
+  "enviados": 37,
+  "ultimo": "2026-11-23T17:13:26.514Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 31
   },
   "membros_em": "2026-11-23T16:53:46.258Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -322,6 +322,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/2BGg2uTT75",
         "p": 0
+      },
+      {
+        "h": "2026-11-23T17:13:26.514Z",
+        "n": "🛁 Água De Colônia Natura Papai E Bebê Sem Álcool 100ml",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2g8afbw",
+        "p": 0.3
       }
     ]
   },
@@ -513,6 +521,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T17:13:19.545Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-23T17:17:55.587Z",
+  "ultima_categoria": "higiene"
 }
