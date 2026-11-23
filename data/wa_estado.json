@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 5,
-  "ultimo": "2026-11-23T11:41:57.207Z",
+  "enviados": 6,
+  "ultimo": "2026-11-23T11:49:36.767Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 32
   },
   "membros_em": "2026-11-23T11:01:00.023Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -66,6 +66,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/AKcNTUK7SL",
         "p": 0
+      },
+      {
+        "h": "2026-11-23T11:49:36.767Z",
+        "n": "👕 Saída De Maternidade Vermelha Luxo /saída De Hospital Vermelho 0 A 3 Meses",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1wWCrvm",
+        "p": 0.1173
       }
     ]
   },
@@ -242,6 +250,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T11:49:29.640Z",
+  "proximo_em": "2026-11-23T11:57:49.041Z",
   "ultima_categoria": "roupa"
 }
