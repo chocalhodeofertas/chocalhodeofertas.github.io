@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 2,
-  "ultimo": "2026-11-23T11:13:47.113Z",
+  "enviados": 3,
+  "ultimo": "2026-11-23T11:22:50.107Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 32
   },
   "membros_em": "2026-11-23T11:01:00.023Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -42,6 +42,14 @@
         "r": "enviado",
         "k": "https://meli.la/2z5eN3j",
         "p": 0.3008
+      },
+      {
+        "h": "2026-11-23T11:22:50.107Z",
+        "n": "👕 Conjunto Infantil Menino Mauricinho – Camisa e Short Verão",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7KyltTznbT",
+        "p": 0
       }
     ]
   },
@@ -218,6 +226,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T11:22:38.337Z",
-  "ultima_categoria": "passeio"
+  "proximo_em": "2026-11-23T11:33:44.697Z",
+  "ultima_categoria": "roupa"
 }
