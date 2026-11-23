@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-22",
-  "enviados": 53,
-  "ultimo": "2026-11-22T23:53:04.531Z",
+  "enviados": 54,
+  "ultimo": "2026-11-23T00:09:05.412Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-22": 27
   },
   "membros_em": "2026-11-22T23:21:05.151Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 60,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -610,6 +610,14 @@
         "r": "enviado",
         "k": "https://meli.la/26notwX",
         "p": 0.3057
+      },
+      {
+        "h": "2026-11-23T00:09:05.412Z",
+        "n": "✨ Óculos de Sol Infantil em Forma de Gatinho 😎 Proteção UV400 - Leve, Colorido ",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/5VX6nUuFDj",
+        "p": 0
       }
     ]
   },
@@ -774,6 +782,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-22T23:57:39.396Z",
-  "ultima_categoria": "gestante"
+  "proximo_em": "2026-11-23T00:13:24.674Z",
+  "ultima_categoria": "outros"
 }
