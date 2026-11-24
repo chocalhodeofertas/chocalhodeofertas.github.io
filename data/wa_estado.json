@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 26,
-  "ultimo": "2026-11-24T15:54:07.926Z",
+  "enviados": 27,
+  "ultimo": "2026-11-24T16:35:55.146Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-23": 30,
     "2026-11-24": 30
   },
-  "membros_em": "2026-11-24T15:31:52.547Z",
+  "membros_em": "2026-11-24T16:32:00.459Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -234,6 +234,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/1W10qt2Mts",
         "p": 0
+      },
+      {
+        "h": "2026-11-24T16:35:55.146Z",
+        "n": "👕 Sandálias Babuche Dino Bebe Menino Escola Dia a Dia Antiderrapante Presente L",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8pnbdEQDGp",
+        "p": 0
       }
     ]
   },
@@ -430,6 +438,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T16:04:28.236Z",
-  "ultima_categoria": "passeio"
+  "proximo_em": "2026-11-24T16:43:02.694Z",
+  "ultima_categoria": "roupa"
 }
