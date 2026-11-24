@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 70,
-  "ultimo": "2026-11-24T00:06:14.497Z",
+  "enviados": 72,
+  "ultimo": "2026-11-24T00:18:37.477Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-23": 30
   },
   "membros_em": "2026-11-23T23:53:54.334Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -634,6 +634,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/2La666J8UM",
         "p": 9
+      },
+      {
+        "h": "2026-11-24T00:13:20.839Z",
+        "n": "✨ KIT 03 SHORTS INFANTIL PARA ESCOLA, PARA O DIA A DIA PROMOÇAO 2026!",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/4fy1ZPOXLK",
+        "p": 0
+      },
+      {
+        "h": "2026-11-24T00:18:37.477Z",
+        "n": "✨ Macaquinho Infanto-juvenil Feminino Estampado Curto Verão Casual Confortável",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/gRsoueHjQ",
+        "p": 0
       }
     ]
   },
@@ -830,6 +846,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T00:13:12.456Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-24T00:26:44.658Z",
+  "ultima_categoria": "outros"
 }
