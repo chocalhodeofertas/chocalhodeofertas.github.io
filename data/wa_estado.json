@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 23,
-  "ultimo": "2026-11-24T15:25:52.322Z",
+  "enviados": 24,
+  "ultimo": "2026-11-24T15:35:38.482Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-23": 30,
     "2026-11-24": 30
   },
-  "membros_em": "2026-11-24T15:01:03.964Z",
+  "membros_em": "2026-11-24T15:31:52.547Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -209,6 +209,14 @@
         "l": "shopee",
         "r": "enviado",
         "k": "https://s.shopee.com.br/9Kjs8MJjit",
+        "p": 0
+      },
+      {
+        "h": "2026-11-24T15:35:38.482Z",
+        "n": "🛁 Toalha Umedecida Meu Bebê Ultra 500 Folhas",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/20xHPqf5I4",
         "p": 0
       }
     ]
@@ -406,6 +414,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T15:35:31.145Z",
-  "ultima_categoria": "festa"
+  "proximo_em": "2026-11-24T15:43:00.855Z",
+  "ultima_categoria": "higiene"
 }
