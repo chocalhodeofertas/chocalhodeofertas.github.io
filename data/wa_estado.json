@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 21,
-  "ultimo": "2026-11-24T15:14:32.575Z",
+  "enviados": 22,
+  "ultimo": "2026-11-24T15:19:00.023Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-24": 30
   },
   "membros_em": "2026-11-24T15:01:03.964Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -194,6 +194,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-24T15:19:00.023Z",
+        "n": "👕 Cesto De Roupa Grande 40x70/30x50CM Caixa Cesto Dobrável Para Roupas E Brinqu",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2VtXzNGaQY",
+        "p": 0
       }
     ]
   },
@@ -390,6 +398,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T15:18:48.664Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-24T15:25:44.547Z",
+  "ultima_categoria": "roupa"
 }
