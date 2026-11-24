@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 44,
-  "ultimo": "2026-11-24T20:41:16.061Z",
+  "enviados": 45,
+  "ultimo": "2026-11-24T21:05:52.577Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-23": 30,
     "2026-11-24": 29
   },
-  "membros_em": "2026-11-24T20:58:02.484Z",
+  "membros_em": "2026-11-24T21:02:26.781Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -378,6 +378,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/114kZglYDa",
         "p": 0
+      },
+      {
+        "h": "2026-11-24T21:05:52.577Z",
+        "n": "👕 Kit 2 Pares Sandália Infantil Papete Menina Casual Leve Lançamento",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2La8BpHexy",
+        "p": 0
       }
     ]
   },
@@ -581,6 +589,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T20:49:44.067Z",
-  "ultima_categoria": "escola"
+  "proximo_em": "2026-11-24T21:17:14.606Z",
+  "ultima_categoria": "roupa"
 }
