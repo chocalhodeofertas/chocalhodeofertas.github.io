@@ -3248,3 +3248,55 @@ def test_pegar_nao_atropela_lote_de_carrossel():
               "lote_extra": {"dia": "2026-11-21", "ids": ["MLB1"], "urls": [], "origem": "carrossel"}}
     msg = busca.pegar("1", TGFalso(), estado, None, datetime(2026, 11, 21, tzinfo=ZoneInfo("America/Sao_Paulo")))
     assert "carrossel" in msg and estado["lote_extra"]["ids"] == ["MLB1"]
+
+
+def test_ml_para_de_insistir_no_403_policyagent():
+    from types import SimpleNamespace as N
+    from bot.mercadolivre import AcessoNegado, MercadoLivre
+
+    class Sessao:
+        chamadas = []
+
+        def get(self, url, params=None, headers=None, timeout=None):
+            self.chamadas.append(url)
+            if url.endswith("/items"):
+                return N(status_code=403, text='{"blocked_by":"PolicyAgent","status":403}', json=lambda: {})
+            return N(status_code=200, text="{}", json=lambda: {"name": "Produto", "pictures": []})
+
+    s = Sessao()
+    ml = MercadoLivre("tok", session=s)
+    for i in range(10):
+        try:
+            ml.catalogo(f"MLB{i}", "Produto", None)
+        except AcessoNegado:
+            pass
+    assert ml.items_bloqueado
+    assert sum(1 for u in s.chamadas if u.endswith("/items")) == 3  # parou depois de 3 recusas seguidas
+
+
+def test_log_aguenta_saida_cheia(monkeypatch, capsys):
+    import builtins
+    from bot import main
+    tentativas = {"n": 0}
+    original = builtins.print
+
+    def print_falho(*a, **k):
+        tentativas["n"] += 1
+        if tentativas["n"] < 3:
+            raise BlockingIOError(11, "write could not complete without blocking")
+        original(*a, **k)
+
+    monkeypatch.setattr(builtins, "print", print_falho)
+    monkeypatch.setattr(main.time, "sleep", lambda s: None)
+    main.log("linha importante")  # não levanta
+    monkeypatch.setattr(builtins, "print", original)
+    assert "linha importante" in capsys.readouterr().out and tentativas["n"] == 3
+
+
+def test_aviso_de_bloqueio_do_ml_uma_vez_por_dia():
+    from bot import comandos
+    e = est.novo()
+    tg = TGCmd()
+    agora = datetime.fromisoformat("2026-11-24T14:00-03:00")
+    assert comandos.avisar_ml_bloqueado(tg, cfg_cmd(), e, agora, log=lambda m: None)
+    assert not comandos.avisar_ml_bloqueado(tg, cfg_cmd(), e, agora, log=lambda m: None)

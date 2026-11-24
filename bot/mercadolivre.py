@@ -83,10 +83,18 @@ def _imagem_grande(url: Optional[str]) -> Optional[str]:
     return re.sub(r"-I\.(jpg|webp|png)$", r"-O.\1", url)
 
 
+# Desde 23/11/2026 o ML recusa /products/{id}/items (403 PolicyAgent) para o nosso tipo de acesso. Depois de
+# BLOQUEIO_SEGUIDOS recusas seguidas, o cliente para de chamar esse recurso até o fim do processo (uma rodada):
+# eram ~2 mil chamadas recusadas por rodada e milhares de linhas de log, que travavam o print e derrubavam a rodada.
+BLOQUEIO_SEGUIDOS = 3
+
+
 class MercadoLivre:
     def __init__(self, access_token: Optional[str] = None, session=None):
         self.token = access_token
         self.s = session or requests.Session()
+        self.recusas_items = 0
+        self.items_bloqueado = False
 
     def _get(self, caminho, params=None):
         headers = {"Accept": "application/json", "User-Agent": "chocalho-de-ofertas/1.0"}
@@ -96,8 +104,15 @@ class MercadoLivre:
             r = self.s.get(API + caminho, params=params, headers=headers, timeout=25)
         except requests.RequestException as e:
             raise ErroML(f"falha de conexão com o Mercado Livre ({type(e).__name__})")
+        anuncios = caminho.startswith("/products/") and caminho.endswith("/items")
         if r.status_code in (401, 403):
+            if anuncios and r.status_code == 403 and "PolicyAgent" in r.text:
+                self.recusas_items += 1
+                if self.recusas_items >= BLOQUEIO_SEGUIDOS:
+                    self.items_bloqueado = True
             raise AcessoNegado(f"HTTP {r.status_code} em {caminho}: {_resumo(r.text)}")
+        if anuncios:
+            self.recusas_items = 0
         if r.status_code >= 400:
             raise ErroML(f"HTTP {r.status_code} em {caminho}: {_resumo(r.text)}")
         return r.json()
@@ -139,6 +154,8 @@ class MercadoLivre:
             fotos = dados.get("pictures") or []
             imagem = _imagem_grande(fotos[0].get("url")) if fotos else None
         total = 0
+        if self.items_bloqueado:
+            raise AcessoNegado("anúncios do catálogo bloqueados pelo ML nesta rodada (403 PolicyAgent)")
         try:
             dados = self._get(f"/products/{pid}/items", {"limit": 20})
             ofertas = dados.get("results") or []
@@ -165,6 +182,8 @@ class MercadoLivre:
         """Procura um anúncio nas páginas seguintes do catálogo (além dos 20 primeiros).
         Retorna (preço, preço "de") se está ativo, None se não está, e levanta ErroML se não deu para conferir."""
         for inicio in range(20, min(total, maximo), 20):
+            if self.items_bloqueado:
+                raise AcessoNegado("anúncios do catálogo bloqueados pelo ML nesta rodada (403 PolicyAgent)")
             dados = self._get(f"/products/{pid}/items", {"limit": 20, "offset": inicio})
             for o in dados.get("results") or []:
                 if o.get("item_id") == item_id and o.get("price"):

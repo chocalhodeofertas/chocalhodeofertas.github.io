@@ -118,7 +118,14 @@ def dormir(segundos):
 
 
 def log(msg):
-    print(msg, flush=True)
+    """print que não derruba a rodada: com a saída cheia (pipe sem bloqueio, dividido com o serviço do WhatsApp),
+    o print levantava BlockingIOError e a rodada inteira caía. Tenta de novo por até ~2 s e, se não der, desiste da linha."""
+    for _ in range(40):
+        try:
+            print(msg, flush=True)
+            return
+        except BlockingIOError:
+            time.sleep(0.05)
 
 
 def carregar_produtos(caminho=ARQ_PRODUTOS):
@@ -303,7 +310,8 @@ def buscar_infos(ml: MercadoLivre, produtos, estado=None):
         try:
             return p.id, ml.catalogo(p.id, titulo, imagem)
         except (ErroML, AcessoNegado) as e:
-            log(f"Aviso: {p.id}: {e}")
+            if not getattr(ml, "items_bloqueado", False):
+                log(f"Aviso: {p.id}: {e}")
             return p.id, None
 
     catalogo = [p for p in produtos if p.tipo == "catalogo"]
@@ -312,6 +320,10 @@ def buscar_infos(ml: MercadoLivre, produtos, estado=None):
             if info:
                 infos[pid] = info
                 cache[pid] = [info.titulo, info.imagem]
+    if getattr(ml, "items_bloqueado", False):
+        log(f"⚠️ O Mercado Livre recusou a lista de anúncios do catálogo (403 PolicyAgent): sem preço para "
+            f"{len(catalogo) - len([p for p in catalogo if p.id in infos])} de {len(catalogo)} produtos nesta rodada. "
+            "Parei de consultar até a próxima rodada.")
     return infos
 
 
@@ -356,12 +368,15 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
     """Uma rodada completa. Retorna a lista de ofertas enviadas."""
     agora = agora or datetime.now(FUSO)
     infos = buscar_infos(ml, produtos, estado)
+    if getattr(ml, "items_bloqueado", False):
+        comandos.avisar_ml_bloqueado(tg, cfg, estado, agora, log)
 
     candidatas = []
     for p in produtos:
         info = infos.get(p.id)
         if not info:
-            log(f"Sem dados para {p.id} (linha {p.linha}) — anúncio pode ter sido removido.")
+            if not getattr(ml, "items_bloqueado", False):
+                log(f"Sem dados para {p.id} (linha {p.linha}) — anúncio pode ter sido removido.")
             continue
         motivo = motivo_bloqueio(info.titulo) or fora_da_faixa(
             info.titulo, p.categoria, (estado.get("descobertos", {}).get(p.id)

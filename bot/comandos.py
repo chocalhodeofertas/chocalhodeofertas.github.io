@@ -742,6 +742,24 @@ def ultimo_post(estado):
     return max(datas) if datas else None
 
 
+def avisar_ml_bloqueado(tg, cfg, estado, agora, log=print):
+    """1 aviso por dia ao admin quando o ML recusa a lista de anúncios do catálogo (sem preço = sem oferta do ML)."""
+    hoje = agora.date().isoformat()
+    if not cfg.admin_chat or estado.get("aviso_ml_bloqueado") == hoje:
+        return False
+    texto = ("⚠️ <b>O Mercado Livre está recusando os preços do catálogo</b> (erro 403 PolicyAgent em "
+             "/products/{id}/items, desde 23/11).\nSem preço não sai oferta do ML; a Shopee segue normal. "
+             "O bot parou de insistir a cada rodada para não piorar o bloqueio.\nMe chame no Claude para resolver.")
+    try:
+        tg.enviar_texto(cfg.admin_chat, texto, html=True)
+        estado["aviso_ml_bloqueado"] = hoje
+        log("Aviso de bloqueio do ML enviado.")
+        return True
+    except Exception as e:  # noqa: BLE001
+        log(f"Aviso: não consegui avisar o bloqueio do ML: {e}")
+        return False
+
+
 def avisar_se_parado(tg, cfg, estado, agora, log=print):
     """Rodando, mas sem postar nada há horas (token vencido, loja fora do ar...): avisa 1x por dia."""
     hoje = agora.date().isoformat()

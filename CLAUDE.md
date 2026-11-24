@@ -97,6 +97,12 @@ Textos para o dono do projeto sempre em português do Brasil.
   `mensagens._linhas_preco` mostra "🚚 Frete grátis · ⚡ Full (entrega rápida)" só quando é verdade. Sem anúncio conhecido, não mostra.
 - `mensagens.py`: frase da categoria do ML (`CHAMADAS`) só quando o título confirma a categoria (`_categoria_confere`;
   brinquedo/jogo/game livres): 20/11, porta-dentes da categoria "quarto" saiu com "quarto do bebê pronto". `preco_por_unidade` (fralda descartável: por fralda; lenço umedecido: a cada 100; só com quantidade clara no título). Textos do Telegram/WhatsApp, frases de abertura por produto, linha de cupom, Shopee ("A partir de", nota e vendas).
+- Bloqueio do ML (desde 23/11/2026): `/products/{id}/items` responde 403 `PA_UNAUTHORIZED_RESULT_FROM_POLICIES` (PolicyAgent),
+  com e sem token, e `/products/{id}` passou a vir com `buy_box_winner: null` → a API não dá mais preço de catálogo ao app.
+  Funciona: `/products/{id}` (ficha), `/products/search`, `/highlights`, categorias, `/users`. Outros apps viram o mesmo na mesma noite.
+  Proteção (`mercadolivre.BLOQUEIO_SEGUIDOS`): 3 recusas seguidas → `items_bloqueado`, o cliente para de chamar até o fim da rodada;
+  log vira 1 linha de resumo; `comandos.avisar_ml_bloqueado` avisa o admin 1x/dia. `main.log` tenta de novo em `BlockingIOError`
+  (a enxurrada de avisos travava o stdout e derrubava a rodada). Sondas: `tools/sondar_acesso_ml`, `tools/sondar_preco_alternativo`.
 - `lote.py`: lote do Linkbuilder (não existe API oficial do ML para gerar link; é manual). Cada link oficial abre UM anúncio
   (o vencedor quando o lote foi montado): `estado.links_item` guarda qual (lotes antigos vieram de `data/links_item_inicial.json`).
   `lote.conferir_anuncio` (na rodada e antes de postar): anúncio fora da lista de ativos do catálogo (pausado/sem estoque) →
