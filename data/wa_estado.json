@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 7,
-  "ultimo": "2026-11-24T12:27:32.918Z",
+  "enviados": 8,
+  "ultimo": "2026-11-24T12:39:59.256Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-24": 30
   },
   "membros_em": "2026-11-24T12:00:27.135Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -82,6 +82,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-24T12:39:59.255Z",
+        "n": "🧸 Girafas Estica e Gruda Melman Pop it Tubo Tiktok Com luz Led Brilha Brinquedo",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/20xHDSpebm",
+        "p": 0
       }
     ]
   },
@@ -278,6 +286,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T12:39:49.267Z",
-  "ultima_categoria": "livro"
+  "proximo_em": "2026-11-24T12:49:08.447Z",
+  "ultima_categoria": "brinquedo"
 }
