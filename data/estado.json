@@ -14713,12 +14713,6 @@
    "status": "encerrado",
    "validade": "2026-11-22T23:59-03:00"
   },
-  "FULL1311": {
-   "criado": "2026-11-13T08:00-03:00",
-   "post": 509,
-   "status": "encerrado",
-   "validade": "2026-11-13T23:59-03:00"
-  },
   "FULL1611": {
    "criado": "2026-11-16T12:37-03:00",
    "post": 850,
@@ -14742,6 +14736,12 @@
    "post": 1470,
    "status": "encerrado",
    "validade": "2026-11-22T23:59-03:00"
+  },
+  "FULL2411": {
+   "criado": "2026-11-24T08:01-03:00",
+   "post": 1666,
+   "status": "ativo",
+   "validade": "2026-11-24T23:59-03:00"
   },
   "GOLDEOFERTA": {
    "criado": "2026-11-21T19:41-03:00",
@@ -14854,7 +14854,7 @@
   "MELITEMCUPOM": {
    "criado": "2026-11-19T17:17-03:00",
    "post": 1209,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-23T23:59-03:00"
   },
   "MELIVIP22": {
@@ -14962,7 +14962,7 @@
   "OFFSEMPRE": {
    "criado": "2026-11-23T10:06-03:00",
    "post": 1594,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-23T23:59-03:00"
   },
   "OFFSEMPREML": {
@@ -14986,7 +14986,7 @@
   "PARAVC": {
    "criado": "2026-11-19T17:17-03:00",
    "post": 1209,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-23T23:59-03:00"
   },
   "PLAYER1": {
@@ -15052,7 +15052,7 @@
   "SITETODO2311": {
    "criado": "2026-11-23T15:00-03:00",
    "post": 1637,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-23T23:59-03:00"
   },
   "SOUVIP25": {
@@ -15082,7 +15082,7 @@
   "TODO2211SITE": {
    "criado": "2026-11-22T19:04-03:00",
    "post": 1549,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-23T23:59-03:00"
   },
   "TODO2311SITE": {
@@ -15118,7 +15118,7 @@
   "TODOSITE2311": {
    "criado": "2026-11-23T08:06-03:00",
    "post": 1579,
-   "status": "ativo",
+   "status": "encerrado",
    "validade": "2026-11-23T23:59-03:00"
   },
   "TUDOCASA2111": {
@@ -15146,7 +15146,7 @@
    "validade": "2026-11-20T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5678,
+ "cupons_extra_ultimo:cupombr": 5680,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6546,
  "cupons_shopee_enviado": "2026-11-23",
@@ -50854,6 +50854,9 @@
    "cupons": 13,
    "posts": 73,
    "shopee": 50
+  },
+  "2026-11-24": {
+   "cupons": 1
   }
  },
  "links": {
@@ -56871,14 +56874,14 @@
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
-  "509": {
+  "1666": {
    "blocos": [
     {
-     "codigo": "FULL1311",
-     "html": "<b>🎟️ FULL1311</b> 👉 <b>25% OFF</b>\nCompra mín.: R$119 · Desconto máx.: R$40\n⏰ Válido até 13/11"
+     "codigo": "FULL2411",
+     "html": "<b>🎟️ FULL2411</b> 👉 <b>25% OFF</b>\nCompra mín.: R$159 · Desconto máx.: R$45\n⏰ Válido até 24/11"
     }
    ],
-   "criado": "2026-11-13T08:00-03:00",
+   "criado": "2026-11-24T08:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
