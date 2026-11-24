@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 40,
-  "ultimo": "2026-11-24T19:44:52.342Z",
+  "enviados": 41,
+  "ultimo": "2026-11-24T19:57:44.618Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-23": 30,
     "2026-11-24": 29
   },
-  "membros_em": "2026-11-24T19:32:40.760Z",
+  "membros_em": "2026-11-24T19:54:21.404Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -346,6 +346,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6VPh3iA1GF",
         "p": 0
+      },
+      {
+        "h": "2026-11-24T19:57:44.618Z",
+        "n": "🧸 Kit Chocalho e Mordedor Bebê 8 Peças Colorido Silicone Macio Presente Menino ",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/30pouA5Wgt",
+        "p": 0
       }
     ]
   },
@@ -549,6 +557,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T19:57:34.761Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-24T20:08:11.900Z",
+  "ultima_categoria": "brinquedo"
 }
