@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 49,
-  "ultimo": "2026-11-24T22:16:53.225Z",
+  "enviados": 50,
+  "ultimo": "2026-11-24T22:24:22.701Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-23": 30,
     "2026-11-24": 29
   },
-  "membros_em": "2026-11-24T22:02:34.261Z",
+  "membros_em": "2026-11-24T22:19:31.741Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -418,6 +418,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/5VXA206SlD",
         "p": 0
+      },
+      {
+        "h": "2026-11-24T22:24:22.701Z",
+        "n": "👕 Conjunto Infantil Menino Camisa UV Manga Longa + Sunga Boxer Praia Piscina Ve",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7KyoEPUpLF",
+        "p": 0
       }
     ]
   },
@@ -621,6 +629,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T22:21:27.566Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-24T22:36:16.428Z",
+  "ultima_categoria": "roupa"
 }
