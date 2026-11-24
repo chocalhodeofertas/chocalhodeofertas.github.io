@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 5,
-  "ultimo": "2026-11-24T12:06:33.621Z",
+  "enviados": 6,
+  "ultimo": "2026-11-24T12:18:52.420Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -66,6 +66,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6VPgYS0mbb",
         "p": 0.1179
+      },
+      {
+        "h": "2026-11-24T12:18:52.420Z",
+        "n": "Antes de fechar a compra, passe na página de cupons e ative os que servem para v",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8fTxwjM742",
+        "p": 9
       }
     ]
   },
@@ -262,6 +270,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T12:18:46.126Z",
+  "proximo_em": "2026-11-24T12:27:24.437Z",
   "ultima_categoria": "livro"
 }
