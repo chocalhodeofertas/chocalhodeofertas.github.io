@@ -14130,6 +14130,12 @@
    "status": "encerrado",
    "validade": "2026-11-15T23:59-03:00"
   },
+  "QUEROOFFHOJE": {
+   "criado": "2026-11-24T10:05-03:00",
+   "post": 1675,
+   "status": "ativo",
+   "validade": "2026-11-24T23:59-03:00"
+  },
   "QUEROPROMO30": {
    "criado": "2026-11-16T11:04-03:00",
    "post": 836,
@@ -14265,7 +14271,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5683,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6546,
+ "cupons_ml_ultimo": 6548,
  "cupons_shopee_enviado": "2026-11-24",
  "descoberta_em": "2026-11-24T08:02-03:00",
  "descobertos": {
@@ -47387,7 +47393,7 @@
    "shopee": 50
   },
   "2026-11-24": {
-   "cupons": 2,
+   "cupons": 3,
    "posts": 6,
    "shopee": 6
   }
@@ -53427,6 +53433,17 @@
     }
    ],
    "criado": "2026-11-24T09:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1675": {
+   "blocos": [
+    {
+     "codigo": "QUEROOFFHOJE",
+     "html": "<b>🎟️ QUEROOFFHOJE</b> 👉 <b>R$250 OFF</b>\n⏰ Válido até 24/11\n👉 <a href=\"https://bit.ly/4fqZ309\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-24T10:05-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
