@@ -13790,6 +13790,12 @@
    "status": "encerrado",
    "validade": "2026-11-16T23:59-03:00"
   },
+  "CURTAMELI": {
+   "criado": "2026-11-24T16:01-03:00",
+   "post": 1705,
+   "status": "ativo",
+   "validade": "2026-11-25T23:59-03:00"
+  },
   "DESCONTAOMELI": {
    "criado": "2026-11-14T18:37-03:00",
    "post": 678,
@@ -14295,7 +14301,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5688,
+ "cupons_extra_ultimo:cupombr": 5689,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6554,
  "cupons_shopee_enviado": "2026-11-24",
@@ -49013,7 +49019,7 @@
    "shopee": 50
   },
   "2026-11-24": {
-   "cupons": 14,
+   "cupons": 15,
    "posts": 27,
    "shopee": 27
   }
@@ -55143,6 +55149,17 @@
     }
    ],
    "criado": "2026-11-24T15:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1705": {
+   "blocos": [
+    {
+     "codigo": "CURTAMELI",
+     "html": "<b>🎟️ CURTAMELI</b> 👉 <b>10% OFF</b>\nCompra mín.: R$199 · Desconto máx.: R$100\n⏰ Válido até 25/11"
+    }
+   ],
+   "criado": "2026-11-24T16:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
