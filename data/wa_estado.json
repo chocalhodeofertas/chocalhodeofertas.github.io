@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 37,
-  "ultimo": "2026-11-24T19:03:14.804Z",
+  "enviados": 38,
+  "ultimo": "2026-11-24T19:08:54.270Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-24": 29
   },
   "membros_em": "2026-11-24T18:32:29.444Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -322,6 +322,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-24T19:08:54.270Z",
+        "n": "🧸 Kit 3 Brinquedo Sensorial para Bebê - Ventosa Adesiva Gira Spinner Atividade ",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/4qHT1jwXk8",
+        "p": 0
       }
     ]
   },
@@ -525,6 +533,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T19:08:47.654Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-24T19:20:45.062Z",
+  "ultima_categoria": "brinquedo"
 }
