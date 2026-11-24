@@ -14058,18 +14058,6 @@
    "status": "ativo",
    "validade": "2027-01-11T23:59-03:00"
   },
-  "OFERTAS22": {
-   "criado": "2026-11-13T13:02-03:00",
-   "post": 544,
-   "status": "ativo",
-   "validade": "2026-12-31T23:59-03:00"
-  },
-  "OFERTAS25": {
-   "criado": "2026-11-13T13:02-03:00",
-   "post": 544,
-   "status": "ativo",
-   "validade": "2026-12-31T23:59-03:00"
-  },
   "OFERTASEMPREML": {
    "criado": "2026-11-23T16:01-03:00",
    "post": 1640,
@@ -14307,7 +14295,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5686,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6553,
+ "cupons_ml_ultimo": 6554,
  "cupons_shopee_enviado": "2026-11-24",
  "descoberta_em": "2026-11-24T08:02-03:00",
  "descobertos": {
@@ -54285,21 +54273,6 @@
     }
    ],
    "criado": "2026-11-24T12:07-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
-  },
-  "544": {
-   "blocos": [
-    {
-     "codigo": "OFERTAS25",
-     "html": "<b>🎟️ OFERTAS25</b> 👉 <b>25% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4C2mbfb\">Ativar o cupom</a>"
-    },
-    {
-     "codigo": "OFERTAS22",
-     "html": "<b>🎟️ OFERTAS22</b> 👉 <b>22% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4t2zUPc\">Ativar o cupom</a>"
-    }
-   ],
-   "criado": "2026-11-13T13:02-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
