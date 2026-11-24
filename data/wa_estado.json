@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 75,
-  "ultimo": "2026-11-24T00:49:07.119Z",
+  "enviados": 76,
+  "ultimo": "2026-11-24T01:01:08.500Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-22": 29,
     "2026-11-23": 30
   },
-  "membros_em": "2026-11-24T00:51:17.906Z",
+  "membros_em": "2026-11-24T02:00:31.895Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -674,6 +674,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/8AXtmNZmrc",
         "p": 0
+      },
+      {
+        "h": "2026-11-24T01:01:08.500Z",
+        "n": "🎉 Kit 10/20/30 Sacos de Presente PVC Transparente com alça Bolsa De Lembrança A",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6VPfoKgwad",
+        "p": 0
       }
     ]
   },
@@ -870,6 +878,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T00:53:09.199Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-24T01:06:28.930Z",
+  "ultima_categoria": "festa"
 }
