@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-23",
-  "enviados": 68,
-  "ultimo": "2026-11-23T23:27:37.366Z",
+  "enviados": 69,
+  "ultimo": "2026-11-23T23:56:28.804Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-22": 29,
     "2026-11-23": 30
   },
-  "membros_em": "2026-11-23T22:53:40.670Z",
+  "membros_em": "2026-11-23T23:53:54.334Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -618,6 +618,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/9AQQstAoME",
         "p": 0
+      },
+      {
+        "h": "2026-11-23T23:56:28.804Z",
+        "n": "🧸 Brinquedo Infantil Didático Giro Mágico Gira Gira Divertido e Educativo",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7pv3KlO3gy",
+        "p": 0.0682
       }
     ]
   },
@@ -814,6 +822,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-23T23:39:00.319Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-24T00:06:07.226Z",
+  "ultima_categoria": "brinquedo"
 }
