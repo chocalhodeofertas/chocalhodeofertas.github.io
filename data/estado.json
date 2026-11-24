@@ -14046,12 +14046,6 @@
    "status": "ativo",
    "validade": "2026-11-24T23:59-03:00"
   },
-  "OFERTAPRATEC": {
-   "criado": "2026-11-13T13:04-03:00",
-   "post": 546,
-   "status": "encerrado",
-   "validade": "2026-11-14T23:59-03:00"
-  },
   "OFERTAS18": {
    "criado": "2026-11-20T10:04-03:00",
    "post": 1264,
@@ -54275,17 +54269,6 @@
    "criado": "2026-11-24T12:07-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
-  },
-  "546": {
-   "blocos": [
-    {
-     "codigo": "OFERTAPRATEC",
-     "html": "<b>🎟️ OFERTAPRATEC</b> 👉 <b>R$300 OFF</b>\nCompra mín.: R$2.699\n⏰ Válido até 14/11"
-    }
-   ],
-   "criado": "2026-11-13T13:04-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "605": {
    "blocos": [
