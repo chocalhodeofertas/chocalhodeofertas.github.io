@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 9,
-  "ultimo": "2026-11-24T12:49:14.743Z",
+  "enviados": 10,
+  "ultimo": "2026-11-24T13:05:25.004Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-24": 30
   },
   "membros_em": "2026-11-24T13:00:35.698Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -98,6 +98,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/8KrKleDoGC",
         "p": 0
+      },
+      {
+        "h": "2026-11-24T13:05:25.004Z",
+        "n": "⏰ Válido até 24/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4fqZ309",
+        "p": 9
       }
     ]
   },
@@ -294,6 +302,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T12:59:16.737Z",
+  "proximo_em": "2026-11-24T13:12:10.681Z",
   "ultima_categoria": "brinquedo"
 }
