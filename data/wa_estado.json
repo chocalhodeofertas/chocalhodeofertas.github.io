@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 30,
-  "ultimo": "2026-11-24T17:02:07.884Z",
+  "enviados": 31,
+  "ultimo": "2026-11-24T17:34:51.866Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-23": 30,
     "2026-11-24": 30
   },
-  "membros_em": "2026-11-24T16:32:00.459Z",
+  "membros_em": "2026-11-24T17:32:14.899Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -266,6 +266,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6VPgsk7S8t",
         "p": 0
+      },
+      {
+        "h": "2026-11-24T17:34:51.866Z",
+        "n": "🧸 Triciclo Carrinho Motoca C/ Guia Passeio e Pedal Avespa Colorido Infantil Emp",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/5AuJKXmqKL",
+        "p": 0
       }
     ]
   },
@@ -462,6 +470,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T17:08:30.662Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-24T17:39:50.231Z",
+  "ultima_categoria": "brinquedo"
 }
