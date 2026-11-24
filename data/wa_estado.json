@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 13,
-  "ultimo": "2026-11-24T14:01:48.962Z",
+  "enviados": 14,
+  "ultimo": "2026-11-24T14:10:04.849Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-24": 30
   },
   "membros_em": "2026-11-24T14:00:45.218Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -130,6 +130,14 @@
         "r": "enviado",
         "k": "https://bit.ly/497v9dQ",
         "p": 9
+      },
+      {
+        "h": "2026-11-24T14:10:04.849Z",
+        "n": "✨ JAMI JAMI Carteira Feminina/Carteira Infantil Zíper Porta Moedas e Porta Cartõ",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/1W10iVnHuN",
+        "p": 0
       }
     ]
   },
@@ -326,6 +334,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T14:09:58.192Z",
-  "ultima_categoria": "alimentacao"
+  "proximo_em": "2026-11-24T14:18:08.643Z",
+  "ultima_categoria": "outros"
 }

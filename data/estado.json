@@ -13764,6 +13764,12 @@
    "status": "encerrado",
    "validade": "2026-11-19T23:59-03:00"
   },
+  "CORREPROMELI25": {
+   "criado": "2026-11-24T11:11-03:00",
+   "post": 1682,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
   "CUPOMDEHOJE25": {
    "criado": "2026-11-23T11:00-03:00",
    "post": 1603,
@@ -13925,6 +13931,12 @@
    "post": 1163,
    "status": "ativo",
    "validade": "2027-01-11T23:59-03:00"
+  },
+  "MELHORNOML30": {
+   "criado": "2026-11-24T11:11-03:00",
+   "post": 1682,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
   },
   "MELIACHA25": {
    "criado": "2026-11-22T10:01-03:00",
@@ -14124,6 +14136,12 @@
    "status": "ativo",
    "validade": "2026-12-17T23:59-03:00"
   },
+  "PROMOSCERTAS30": {
+   "criado": "2026-11-24T11:11-03:00",
+   "post": 1682,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
   "PROMOTEC": {
    "criado": "2026-11-14T13:04-03:00",
    "post": 643,
@@ -14244,6 +14262,12 @@
    "status": "ativo",
    "validade": "2027-01-10T23:59-03:00"
   },
+  "VEMPROMELI30": {
+   "criado": "2026-11-24T11:11-03:00",
+   "post": 1682,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
   "VIPNOML": {
    "criado": "2026-11-15T09:04-03:00",
    "post": 712,
@@ -14259,7 +14283,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5683,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6551,
+ "cupons_ml_ultimo": 6552,
  "cupons_shopee_enviado": "2026-11-24",
  "descoberta_em": "2026-11-24T08:02-03:00",
  "descobertos": {
@@ -47578,7 +47602,7 @@
    "shopee": 50
   },
   "2026-11-24": {
-   "cupons": 5,
+   "cupons": 9,
    "posts": 10,
    "shopee": 10
   }
@@ -53644,6 +53668,29 @@
     }
    ],
    "criado": "2026-11-24T11:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1682": {
+   "blocos": [
+    {
+     "codigo": "MELHORNOML30",
+     "html": "<b>🎟️ MELHORNOML30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/48Arsx6\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "CORREPROMELI25",
+     "html": "<b>🎟️ CORREPROMELI25</b> 👉 <b>25% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4l5zDJ8\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "VEMPROMELI30",
+     "html": "<b>🎟️ VEMPROMELI30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4jaHtyw\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "PROMOSCERTAS30",
+     "html": "<b>🎟️ PROMOSCERTAS30</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4iZGote\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-24T11:11-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
