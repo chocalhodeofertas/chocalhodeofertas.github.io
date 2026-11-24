@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 19,
-  "ultimo": "2026-11-24T14:57:18.615Z",
+  "enviados": 20,
+  "ultimo": "2026-11-24T15:07:09.000Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-23": 30,
     "2026-11-24": 30
   },
-  "membros_em": "2026-11-24T14:00:45.218Z",
+  "membros_em": "2026-11-24T15:01:03.964Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -177,6 +177,14 @@
         "l": "shopee",
         "r": "enviado",
         "k": "https://s.shopee.com.br/7VIDvB1Yx7",
+        "p": 0
+      },
+      {
+        "h": "2026-11-24T15:07:09.000Z",
+        "n": "🛁 Kit Shampoo e Condicionador Hidra Kids Cachinhos 300ml",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/9fMiVeXzZD",
         "p": 0
       }
     ]
@@ -374,6 +382,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T15:07:02.190Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-24T15:14:27.267Z",
+  "ultima_categoria": "higiene"
 }
