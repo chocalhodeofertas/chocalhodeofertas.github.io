@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 6,
-  "ultimo": "2026-11-24T12:18:52.420Z",
+  "enviados": 7,
+  "ultimo": "2026-11-24T12:27:32.918Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-24": 30
   },
   "membros_em": "2026-11-24T12:00:27.135Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -73,6 +73,14 @@
         "l": "shopee",
         "r": "enviado",
         "k": "https://s.shopee.com.br/8fTxwjM742",
+        "p": 9
+      },
+      {
+        "h": "2026-11-24T12:27:32.918Z",
+        "n": "⏰ Válido até 25/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
         "p": 9
       }
     ]
@@ -270,6 +278,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T12:27:24.437Z",
+  "proximo_em": "2026-11-24T12:39:49.267Z",
   "ultima_categoria": "livro"
 }
