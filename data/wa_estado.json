@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 52,
-  "ultimo": "2026-11-24T22:44:58.168Z",
+  "enviados": 53,
+  "ultimo": "2026-11-24T23:06:43.304Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-23": 30,
     "2026-11-24": 29
   },
-  "membros_em": "2026-11-24T22:55:11.607Z",
+  "membros_em": "2026-11-24T23:05:11.763Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -442,6 +442,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6q2XetNutB",
         "p": 0
+      },
+      {
+        "h": "2026-11-24T23:06:43.304Z",
+        "n": "🎉 Brinquedos educativos infantis cartoon pequenos blocos de construção presente",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3LSfVy7j3E",
+        "p": 0
       }
     ]
   },
@@ -645,6 +653,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T22:52:43.043Z",
+  "proximo_em": "2026-11-24T23:13:28.096Z",
   "ultima_categoria": "festa"
 }
