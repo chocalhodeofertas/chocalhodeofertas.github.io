@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 11,
-  "ultimo": "2026-11-24T13:44:54.171Z",
+  "enviados": 12,
+  "ultimo": "2026-11-24T13:55:09.671Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-24": 30
   },
   "membros_em": "2026-11-24T13:00:35.698Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -114,6 +114,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/Lp3Jrn475",
         "p": 0.15
+      },
+      {
+        "h": "2026-11-24T13:55:09.670Z",
+        "n": "Fralda Descartavel Enzzo Mega Pacotão Recém Nascido Rn 100 Unidades",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/Lp06SnO9c",
+        "p": 9
       }
     ]
   },
@@ -310,6 +318,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T13:55:02.387Z",
+  "proximo_em": "2026-11-24T14:01:43.419Z",
   "ultima_categoria": "alimentacao"
 }
