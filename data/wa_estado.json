@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 47,
-  "ultimo": "2026-11-24T21:44:32.774Z",
+  "enviados": 48,
+  "ultimo": "2026-11-24T22:04:55.887Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-23": 30,
     "2026-11-24": 29
   },
-  "membros_em": "2026-11-24T21:02:26.781Z",
+  "membros_em": "2026-11-24T22:02:34.261Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -402,6 +402,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/Lp3qntotx",
         "p": 0
+      },
+      {
+        "h": "2026-11-24T22:04:55.887Z",
+        "n": "🛁 Kit 2 Toalhas de Banho para Bebê com Capuz Infantil Felpuda 70x70cm Enxoval P",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/80EV0IZUGn",
+        "p": 0
       }
     ]
   },
@@ -605,6 +613,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T21:55:33.891Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-24T22:16:42.984Z",
+  "ultima_categoria": "higiene"
 }
