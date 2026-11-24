@@ -13904,6 +13904,12 @@
    "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
+  "M0D4TUHS": {
+   "criado": "2026-11-24T15:00-03:00",
+   "post": 1701,
+   "status": "ativo",
+   "validade": "2026-11-25T23:59-03:00"
+  },
   "MAISCUPONS30": {
    "criado": "2026-11-19T10:59-03:00",
    "post": 1163,
@@ -14289,7 +14295,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5687,
+ "cupons_extra_ultimo:cupombr": 5688,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6554,
  "cupons_shopee_enviado": "2026-11-24",
@@ -48771,7 +48777,7 @@
    "shopee": 50
   },
   "2026-11-24": {
-   "cupons": 13,
+   "cupons": 14,
    "posts": 25,
    "shopee": 25
   }
@@ -54892,6 +54898,17 @@
    "criado": "2026-11-24T12:07-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1701": {
+   "blocos": [
+    {
+     "codigo": "M0D4TUHS",
+     "html": "<b>🎟️ M0D4TUHS</b> 👉 <b>15% OFF</b>\n📂 Moda\n⏰ Válido até 25/11"
+    }
+   ],
+   "criado": "2026-11-24T15:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "605": {
    "blocos": [
