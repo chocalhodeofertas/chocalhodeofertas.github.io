@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 62,
-  "ultimo": "2026-11-25T18:53:07.568Z",
+  "enviados": 64,
+  "ultimo": "2026-11-25T19:10:09.380Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -522,6 +522,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/AKcR3af0MQ",
         "p": 0
+      },
+      {
+        "h": "2026-11-25T19:02:07.995Z",
+        "n": "⏰ Válido até 26/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-25T19:10:09.380Z",
+        "n": "🧷 Fralda Pampers Confort Sec Jumbo Plus G com 128un",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8KrMhB3ABx",
+        "p": 0
       }
     ]
   },
@@ -730,6 +746,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T18:57:57.267Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-25T19:14:48.621Z",
+  "ultima_categoria": "fralda"
 }
