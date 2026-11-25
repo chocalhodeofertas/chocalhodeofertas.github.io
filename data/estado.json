@@ -14623,6 +14623,12 @@
    "status": "encerrado",
    "validade": "2026-11-18T23:59-03:00"
   },
+  "PM52MP66": {
+   "criado": "2026-11-25T18:01-03:00",
+   "post": 1820,
+   "status": "ativo",
+   "validade": "2026-11-26T23:59-03:00"
+  },
   "POUPAAGORA22": {
    "criado": "2026-11-19T10:59-03:00",
    "post": 1163,
@@ -14828,7 +14834,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5709,
+ "cupons_extra_ultimo:cupombr": 5711,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6568,
  "cupons_shopee_enviado": "2026-11-25",
@@ -53815,7 +53821,7 @@
   "2026-11-25": {
    "com_cupom": 7,
    "copias": 34,
-   "cupons": 13,
+   "cupons": 14,
    "posts": 78,
    "shopee": 67
   }
@@ -60107,6 +60113,17 @@
    "criado": "2026-11-25T16:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1820": {
+   "blocos": [
+    {
+     "codigo": "PM52MP66",
+     "html": "<b>🎟️ PM52MP66</b> 👉 <b>R$1.000 OFF</b>\nCompra mín.: R$3.500\n⏰ Válido até 26/11"
+    }
+   ],
+   "criado": "2026-11-25T18:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "678": {
    "blocos": [
