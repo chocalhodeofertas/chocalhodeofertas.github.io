@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 36,
-  "ultimo": "2026-11-25T15:50:14.527Z",
+  "enviados": 40,
+  "ultimo": "2026-11-25T16:10:11.512Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-24": 31,
     "2026-11-25": 31
   },
-  "membros_em": "2026-11-25T14:58:16.574Z",
+  "membros_em": "2026-11-25T15:58:49.370Z",
   "ultima_loja": "shopee",
   "max_dia": 110,
   "intervalo_min": 3,
@@ -314,6 +314,38 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/2La9OUqrfk",
         "p": 0
+      },
+      {
+        "h": "2026-11-25T15:56:48.900Z",
+        "n": "🚼 Carrinho de Bebê Cosco Kids, Toffy, Bege",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1jWTKBM",
+        "p": 0.2795
+      },
+      {
+        "h": "2026-11-25T16:00:23.857Z",
+        "n": "👕 Kit Pares de Meias Infantil e Bebê Menino com Estampas Divertidas",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7VIFXoJyKG",
+        "p": 0
+      },
+      {
+        "h": "2026-11-25T16:05:32.633Z",
+        "n": "✨ Andador Infantil Musical Para Bebê Empurrador Compacto 3 Ajustes de Altura La ",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2pjgaDS",
+        "p": 0.2137
+      },
+      {
+        "h": "2026-11-25T16:10:11.512Z",
+        "n": "👕 Babuche Infantil Menina Sandália Papete Feminina Abelha Flor Margarida Confor",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3B9GP88YHW",
+        "p": 0
       }
     ]
   },
@@ -522,6 +554,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T15:56:40.786Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-25T16:17:20.234Z",
+  "ultima_categoria": "roupa"
 }
