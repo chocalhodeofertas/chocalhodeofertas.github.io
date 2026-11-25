@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 9,
-  "ultimo": "2026-11-25T12:35:10.739Z",
+  "enviados": 13,
+  "ultimo": "2026-11-25T13:28:01.589Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-24": 31,
     "2026-11-25": 31
   },
-  "membros_em": "2026-11-25T12:01:10.650Z",
+  "membros_em": "2026-11-25T13:01:22.696Z",
   "ultima_loja": "shopee",
   "max_dia": 100,
   "intervalo_min": 4,
@@ -97,6 +97,38 @@
         "l": "shopee",
         "r": "enviado",
         "k": "https://s.shopee.com.br/qlLQgIQkb",
+        "p": 0
+      },
+      {
+        "h": "2026-11-25T13:00:57.441Z",
+        "n": "⏰ Válido até 25/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4ATx95v",
+        "p": 9
+      },
+      {
+        "h": "2026-11-25T13:06:32.860Z",
+        "n": "🧷 Promo Pack 4 Lenços Umedecidos Free Wipes nº 2 – Higiene Completa (200 un.)",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6q2Yc4T0TF",
+        "p": 0.1419
+      },
+      {
+        "h": "2026-11-25T13:15:40.503Z",
+        "n": "🧸 Celular Infantil Musical telefone Interativo com mordedor Educativo Sensorial",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/80EW0jOq14",
+        "p": 0
+      },
+      {
+        "h": "2026-11-25T13:28:01.589Z",
+        "n": "🧷 Lenços Umedecidos Pampers Carícia de Bebê 576 unidades",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/50auRhX0dF",
         "p": 0
       }
     ]
@@ -306,6 +338,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T12:39:51.654Z",
-  "ultima_categoria": "alimentacao"
+  "proximo_em": "2026-11-25T13:40:13.531Z",
+  "ultima_categoria": "fralda"
 }
