@@ -14442,6 +14442,12 @@
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
   },
+  "MELI782YHDL": {
+   "criado": "2026-11-25T15:01-03:00",
+   "post": 1798,
+   "status": "ativo",
+   "validade": "2026-11-26T23:59-03:00"
+  },
   "MELIACHA25": {
    "criado": "2026-11-22T10:01-03:00",
    "post": 1485,
@@ -14809,7 +14815,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5704,
+ "cupons_extra_ultimo:cupombr": 5705,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6566,
  "cupons_shopee_enviado": "2026-11-25",
@@ -51627,7 +51633,7 @@
   "2026-11-25": {
    "com_cupom": 5,
    "copias": 25,
-   "cupons": 10,
+   "cupons": 11,
    "posts": 58,
    "shopee": 50
   }
@@ -57863,6 +57869,17 @@
    "criado": "2026-11-25T11:03-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1798": {
+   "blocos": [
+    {
+     "codigo": "MELI782YHDL",
+     "html": "<b>🎟️ MELI782YHDL</b> 👉 <b>15% OFF</b>\n📂 Moda\nDesconto máx.: R$20\n⏰ Válido até 26/11"
+    }
+   ],
+   "criado": "2026-11-25T15:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "678": {
    "blocos": [
