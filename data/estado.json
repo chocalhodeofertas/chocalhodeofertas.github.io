@@ -54700,6 +54700,7 @@
   "MLB16600897": "https://meli.la/1CKwBu9",
   "MLB17335972": "https://meli.la/2egPVwF",
   "MLB17336025": "https://meli.la/1Ew1jm9",
+  "MLB17336082": "https://meli.la/2ukJxFK",
   "MLB17456589": "https://meli.la/1QNCBdY",
   "MLB17489277": "https://meli.la/1HtwReq",
   "MLB17775077": "https://meli.la/336Fv5N",
@@ -54746,6 +54747,7 @@
   "MLB19516361": "https://meli.la/1zcyuvR",
   "MLB19516362": "https://meli.la/2GuZr42",
   "MLB19525428": "https://meli.la/2fbKpCt",
+  "MLB19543873": "https://meli.la/1SaVxqS",
   "MLB19567034": "https://meli.la/1dj5YPY",
   "MLB19567262": "https://meli.la/2L6vsoB",
   "MLB19569079": "https://meli.la/2nSqsJA",
@@ -54877,6 +54879,7 @@
   "MLB26604880": "https://meli.la/2j4asH8",
   "MLB26675721": "https://meli.la/27DfbWM",
   "MLB26678497": "https://meli.la/33GvKGC",
+  "MLB26720364": "https://meli.la/1zfPFRW",
   "MLB26725453": "https://meli.la/1K3ydra",
   "MLB26727193": "https://meli.la/2ZpfcSP",
   "MLB26758009": "https://meli.la/2Y7b8X6",
@@ -54970,6 +54973,7 @@
   "MLB35938057": "https://meli.la/2Y7zwmX",
   "MLB35964156": "https://meli.la/2FHw9WJ",
   "MLB36021110": "https://meli.la/2JXViJ6",
+  "MLB36363177": "https://meli.la/2vWXiHD",
   "MLB36436855": "https://meli.la/2w1vR4r",
   "MLB36523870": "https://meli.la/2bNdD2t",
   "MLB36555516": "https://meli.la/29Pt6ph",
@@ -55741,6 +55745,7 @@
   "MLB81506699": "https://meli.la/2DspfGU",
   "MLB81557658": "https://meli.la/1X94a6T",
   "MLB81565711": "https://meli.la/2p1YMAs",
+  "MLB81743254": "https://meli.la/1rwqEwE",
   "MLB81912158": "https://meli.la/254vpeV",
   "MLB82276953": "https://meli.la/1TUgpxm",
   "MLB82440483": "https://meli.la/1y5jvVU",
@@ -55758,6 +55763,7 @@
   "MLB16600897": "MLB8034300110",
   "MLB17335972": "MLB4149003984",
   "MLB17336025": "MLB3646373243",
+  "MLB17336082": "MLB2750724730",
   "MLB17456589": "MLB2743144148",
   "MLB17489277": "MLB2743167754",
   "MLB17775077": "MLB2688888551",
@@ -55802,6 +55808,7 @@
   "MLB19516361": "MLB3338977450",
   "MLB19516362": "MLB4855488272",
   "MLB19525428": "MLB3793787558",
+  "MLB19543873": "MLB3528809513",
   "MLB19567034": "MLB3781236609",
   "MLB19567262": "MLB4903684734",
   "MLB19569079": "MLB2791944770",
@@ -55926,6 +55933,7 @@
   "MLB26591881": "MLB3533930397",
   "MLB26604880": "MLB3695312773",
   "MLB26678497": "MLB4677817123",
+  "MLB26720364": "MLB3483435009",
   "MLB26727193": "MLB4652761727",
   "MLB26758009": "MLB3756012847",
   "MLB26816126": "MLB3611839701",
@@ -56011,6 +56019,7 @@
   "MLB35938057": "MLB8003352454",
   "MLB35964156": "MLB5383845596",
   "MLB36021110": "MLB3665737763",
+  "MLB36363177": "MLB7985440600",
   "MLB36436855": "MLB4648803608",
   "MLB36523870": "MLB6434964930",
   "MLB36555516": "MLB6759050896",
@@ -56708,29 +56717,14 @@
   "MLB81421290": "MLB5484716445",
   "MLB81557658": "MLB5522720775",
   "MLB81565711": "MLB5598761467",
+  "MLB81743254": "MLB7961945284",
   "MLB81912158": "MLB7979925830",
   "MLB82276953": "MLB7995404068",
   "MLB82440483": "MLB5457561937",
   "MLB9228977": "MLB3544942779",
   "MLB9412100": "MLB4053861862"
  },
- "lote": {
-  "dia": "2026-11-25",
-  "ids": [
-   "MLB36363177",
-   "MLB19543873",
-   "MLB17336082",
-   "MLB81743254",
-   "MLB26720364"
-  ],
-  "urls": [
-   "https://produto.mercadolivre.com.br/MLB-7985440600-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-3528809513-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-2750724730-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-7961945284-produto-_JM",
-   "https://produto.mercadolivre.com.br/MLB-3483435009-produto-_JM"
-  ]
- },
+ "lote": null,
  "lote_enviado_em": "2026-11-06",
  "lote_extra": null,
  "lotes_dia": {
@@ -180536,7 +180530,7 @@
   "brinquedos": "2026-11-15",
   "passeio": "2026-11-09"
  },
- "tg_offset": 273518070,
+ "tg_offset": 273518071,
  "top5_enviado": "2026-11-24",
  "vigias": {
   "dolce gusto": {
