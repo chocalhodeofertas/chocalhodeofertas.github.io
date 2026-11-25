@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 5,
-  "ultimo": "2026-11-25T12:00:55.389Z",
+  "enviados": 6,
+  "ultimo": "2026-11-25T12:08:59.109Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-25": 31
   },
   "membros_em": "2026-11-25T12:01:10.650Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 100,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -65,6 +65,14 @@
         "l": "ml",
         "r": "enviado",
         "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-25T12:08:59.109Z",
+        "n": "Antes de fechar a compra, passe na página de cupons e ative os que servem para v",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8fTxwjM742",
         "p": 9
       }
     ]
@@ -274,6 +282,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T12:08:54.427Z",
+  "proximo_em": "2026-11-25T12:14:31.623Z",
   "ultima_categoria": "roupa"
 }
