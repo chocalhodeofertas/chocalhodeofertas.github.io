@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 77,
-  "ultimo": "2026-11-25T21:04:06.634Z",
+  "enviados": 78,
+  "ultimo": "2026-11-25T21:13:06.362Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -642,6 +642,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-25T21:13:06.362Z",
+        "n": "*🎟️ Cupons do Mercado Livre*",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/3VKnCP6",
+        "p": 9
       }
     ]
   },
@@ -850,6 +858,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T21:07:58.162Z",
+  "proximo_em": "2026-11-25T21:16:29.283Z",
   "ultima_categoria": "outros"
 }
