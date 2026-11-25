@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 90,
-  "ultimo": "2026-11-25T22:57:10.999Z",
+  "enviados": 91,
+  "ultimo": "2026-11-25T23:06:08.277Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-24": 31,
     "2026-11-25": 31
   },
-  "membros_em": "2026-11-25T22:52:06.020Z",
+  "membros_em": "2026-11-25T23:03:45.690Z",
   "ultima_loja": "shopee",
   "max_dia": 110,
   "intervalo_min": 3,
@@ -746,6 +746,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/1W12odJdHD",
         "p": 0
+      },
+      {
+        "h": "2026-11-25T23:06:08.277Z",
+        "n": "🧸 CASINHA de brinquedo infantil masculino feminino (zp-1728)",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/9AQTu2wO17",
+        "p": 0
       }
     ]
   },
@@ -952,8 +960,15 @@
         0,
         2
       ]
+    },
+    "2026-11-25": {
+      "20": [
+        1,
+        0,
+        0
+      ]
     }
   },
-  "proximo_em": "2026-11-25T23:01:23.947Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-25T23:09:30.976Z",
+  "ultima_categoria": "brinquedo"
 }
