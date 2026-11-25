@@ -14293,12 +14293,6 @@
    "status": "ativo",
    "validade": "2026-11-25T23:59-03:00"
   },
-  "DESCONTAOMELI": {
-   "criado": "2026-11-14T18:37-03:00",
-   "post": 678,
-   "status": "encerrado",
-   "validade": "2026-11-15T23:59-03:00"
-  },
   "DESCONTEI25": {
    "criado": "2026-11-23T11:00-03:00",
    "post": 1603,
@@ -60324,17 +60318,6 @@
     }
    ],
    "criado": "2026-11-25T18:10-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
-  },
-  "678": {
-   "blocos": [
-    {
-     "codigo": "DESCONTAOMELI",
-     "html": "<b>🎟️ DESCONTAOMELI</b> 👉 <b>10% OFF</b>\nCompra mín.: R$79\n⏰ Válido até 15/11"
-    }
-   ],
-   "criado": "2026-11-14T18:37-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
