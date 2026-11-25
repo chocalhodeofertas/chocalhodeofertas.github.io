@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 67,
-  "ultimo": "2026-11-25T19:36:09.509Z",
+  "enviados": 68,
+  "ultimo": "2026-11-25T19:45:06.886Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-25": 31
   },
   "membros_em": "2026-11-25T19:34:44.606Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 110,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -562,6 +562,14 @@
         "r": "enviado",
         "k": "https://meli.la/2eBPdUe",
         "p": 0.2673
+      },
+      {
+        "h": "2026-11-25T19:45:06.886Z",
+        "n": "👕 Kit 3 Vestidos Infantis Menina Estampado Alça de Amarrar Verão ENVIO CORES E ",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/AKcR65vFBV",
+        "p": 0
       }
     ]
   },
@@ -770,6 +778,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T19:44:03.725Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-25T19:48:11.175Z",
+  "ultima_categoria": "roupa"
 }
