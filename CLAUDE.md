@@ -121,13 +121,16 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `shopee_ofertas.py`: ofertas da Shopee por cima das do ML (limite próprio: `SHOPEE_MAX_DIA` 50, `SHOPEE_MAX_HORA` 4).
   Busca: 3 palavras-chave + 2 categorias infantis por rodada (`CATEGORIAS`, mais vendidos, páginas 1 a 3 em rodízio).
   A API não tem oferta relâmpago; `listType` 2 (top) e 0 trazem produtos gerais, não usamos.
+  Cópias dos canais (25/11): cota PRÓPRIA, fora das 50 da Shopee do bot (`vagas_copias`, `ESPELHO_MAX_DIA` 100 enquanto o ML
+  está bloqueado, 50 quando voltar; `ESPELHO_MAX_HORA` 8, `ESPELHO_MAX_RODADA` 3). Cópia = `espelho_fonte(pid)`; conta em
+  `hist_dia.copias` (o `hist_dia.shopee` segue sendo o total) e `shopee.hora_copias`; `posts_hoje(..., copias=)`.
   Regras: nota ≥ 4,7, vendas ≥ 500 (200 se veio do espelho), comissão ≥ 3% (era 5%; fralda quase sempre paga 3%), só preço final; "de/por" só com queda vista pelo próprio bot.
   Links via `generateShortLink` com subId `telegram` / `whatsapp`.
 - `whatsapp.py` + `wa/servico.mjs`: fila em `fila_wa/` (fora do git; passa de um ciclo para o outro pelo cache do Actions,
   passos "Recuperar/Guardar a fila do WhatsApp" no ciclo.yml, 21/11: antes sumia na troca de ciclo); o serviço (Baileys) posta com aquecimento automático
-  (4 → 10 → 14 → 60 → 80 → 100 posts/dia nos dias 0, 4, 8, 11, 13 e 15 desde a conexão em 10/11, contados pela data de Brasília;
-  decisão dele em 21/11: acompanhar o Telegram, 100/dia a partir de 25/11), só das 7h às 23h, alterna ML/Shopee,
-  intervalo sorteado de 4 a 13 min (`WA_INTERVALO_MIN/MAX`) e o limite do dia espalhado pelas horas (`comum.mjs: cotaAteAgora`;
+  (4 → 10 → 14 → 60 → 80 → 110 → 130 → 150 posts/dia nos índices 0, 4, 8, 11, 13, 15, 16 e 17 de `RAMPA`, contados pela data
+  de Brasília; 25/11 ainda era 80. Decisão dele em 25/11: 150/dia no grupo (50 Shopee + 50 ML + 50 copiadas): 110 em 26/11, 130 em 27/11, 150 a partir de 28/11), só das 7h às 23h, alterna ML/Shopee,
+  intervalo sorteado de 3 a 8 min (`WA_INTERVALO_MIN/MAX`, fixos no ciclo.yml desde 25/11; era 4 a 13) e o limite do dia espalhado pelas horas (`comum.mjs: cotaAteAgora`;
   às 12h só pode ter saído 4/16 do limite); avisa quando cai por mais de 10 min, quando volta e quando a pausa de segurança acaba;
   Radar (`comum.mjs: anotarRadar`): `wa_estado.json: radar[dia][hora] = [entradas, saídas, mensagens]`, 45 dias, só contagens;
   `whatsapp.conferir_fila` (a cada rodada, ~20 min): reconfere pela API o preço do que espera no grupo; subiu > 2% ou acabou → sai da fila

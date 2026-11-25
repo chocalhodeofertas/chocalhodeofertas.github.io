@@ -67,7 +67,8 @@ jobs:
           WA_FILA: fila_wa
           WA_HORAS: "5.6"
           WA_MAX_DIA: ${{ vars.WA_MAX_DIA }}
-          WA_INTERVALO_MIN: ${{ vars.WA_INTERVALO_MIN }}
+          WA_INTERVALO_MIN: '3'  # 25/11: 3 a 8 min para caber 150 posts/dia (era 4 a 13)
+          WA_INTERVALO_MAX: '8'
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CANAL: ${{ secrets.TELEGRAM_CANAL }}
           TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.TELEGRAM_ADMIN_CHAT_ID || '787296152' }}
@@ -101,6 +102,11 @@ jobs:
           SHOPEE_ATIVO: ${{ vars.SHOPEE_ATIVO || '1' }}
           SHOPEE_MAX_DIA: ${{ vars.SHOPEE_MAX_DIA || '50' }}
           SHOPEE_MAX_HORA: ${{ vars.SHOPEE_MAX_HORA || '4' }}
+          # Cópias dos canais de ofertas: cota própria, fora das 50 da Shopee do bot (25/11). 100 enquanto o ML
+          # está bloqueado (todas da Shopee); voltar para 50 quando o ML voltar.
+          ESPELHO_MAX_DIA: ${{ vars.ESPELHO_MAX_DIA || '100' }}
+          ESPELHO_MAX_HORA: ${{ vars.ESPELHO_MAX_HORA || '8' }}
+          ESPELHO_MAX_RODADA: ${{ vars.ESPELHO_MAX_RODADA || '3' }}
           # Datas com postagem também na virada (23h30 da véspera à 1h): Black Friday e 12.12
           DATAS_MEIA_NOITE: ${{ vars.DATAS_MEIA_NOITE || '2026-11-27,2026-12-12' }}
           # Formatos novos (aprovados pelo Leonardo em 15/11)

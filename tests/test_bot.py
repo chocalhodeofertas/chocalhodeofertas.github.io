@@ -3300,3 +3300,45 @@ def test_aviso_de_bloqueio_do_ml_uma_vez_por_dia():
     agora = datetime.fromisoformat("2026-11-24T14:00-03:00")
     assert comandos.avisar_ml_bloqueado(tg, cfg_cmd(), e, agora, log=lambda m: None)
     assert not comandos.avisar_ml_bloqueado(tg, cfg_cmd(), e, agora, log=lambda m: None)
+
+
+def test_shopee_copias_tem_cota_propria(monkeypatch, tmp_path):
+    """25/11: copiadas dos canais não gastam as 50 da Shopee do bot (e vice-versa)."""
+    from bot import shopee_ofertas as so
+    monkeypatch.setenv("SHOPEE_ATIVO", "1")
+    monkeypatch.setenv("WA_FILA", str(tmp_path))
+    monkeypatch.setenv("SHOPEE_MAX_RODADA", "1")
+    monkeypatch.setenv("ESPELHO_MAX_RODADA", "1")
+
+    class Shp:
+        def buscar(self, termo, **k):
+            return [_produto_shopee(id="SHP1", titulo="Mochila Infantil Escolar Dinossauro"),
+                    _produto_shopee(id="SHP2", titulo="Quebra Cabeça Infantil Madeira 100 Peças")]
+
+        def link_curto(self, url, subs):
+            return f"https://s.shopee.com.br/{subs[0]}"
+
+    class Tg:
+        def __init__(self): self.posts = []
+        def enviar_oferta(self, chat, legenda, imagem=None): self.posts.append(legenda)
+        def enviar_texto(self, *a, **k): pass
+
+    class Cfg:
+        hora_inicio, hora_fim, repost_dias, intervalo_min, intervalo_max, canal = 8, 22, 3, 0, 0, "@c"
+        admin_chat = ""
+
+    e = est.novo()
+    e["espelho"] = {"shopee": {"SHP2": {"ate": "2026-12-31T00:00", "fonte": "canalx"}}, "ml": {}, "fontes": {},
+                    "links": {}, "shopee_titulos": {}}
+    monkeypatch.setattr(so, "do_espelho", lambda *a, **k: [])
+    agora = AGORA.replace(hour=20)
+    feitas = so.rodar(Cfg, Tg(), e, agora, rng=random.Random(1), shp=Shp(), log=lambda m: None)
+    # 1 vaga para as nossas e 1 para as copiadas: as duas saem na mesma rodada
+    assert sorted(o.id for o in feitas) == ["SHP1", "SHP2"]
+    h = e["hist_dia"][agora.date().isoformat()]
+    assert h["shopee"] == 2 and h["copias"] == 1
+    assert so.posts_hoje(e, agora) == 1 and so.posts_hoje(e, agora, copias=True) == 1
+    assert len(e["shopee"]["hora"]) == 1 and len(e["shopee"]["hora_copias"]) == 1
+    # cota das copiadas acabou: só as nossas seguem (e vice-versa)
+    monkeypatch.setenv("ESPELHO_MAX_DIA", "1")
+    assert so.vagas_copias(Cfg, e, agora) == 0

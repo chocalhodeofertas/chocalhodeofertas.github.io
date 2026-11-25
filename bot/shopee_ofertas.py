@@ -79,12 +79,27 @@ def _estado(estado):
     return s
 
 
-def posts_hoje(estado, agora):
-    return estado.get("hist_dia", {}).get(agora.date().isoformat(), {}).get("shopee", 0)
+def posts_hoje(estado, agora, copias=False):
+    """Posts da Shopee hoje. copias=False: só as NOSSAS (a cota de 50); copias=True: só as copiadas dos canais.
+    "shopee" no histórico do dia é o total (página de números); "copias" é a parte copiada."""
+    h = estado.get("hist_dia", {}).get(agora.date().isoformat(), {})
+    return h.get("copias", 0) if copias else h.get("shopee", 0) - h.get("copias", 0)
 
 
-def posts_ultima_hora(estado, agora):
-    return sum(1 for q in _estado(estado)["hora"] if (agora - datetime.fromisoformat(q)).total_seconds() < 3600)
+def posts_ultima_hora(estado, agora, copias=False):
+    lista = _estado(estado).setdefault("hora_copias", []) if copias else _estado(estado)["hora"]
+    return sum(1 for q in lista if (agora - datetime.fromisoformat(q)).total_seconds() < 3600)
+
+
+# Cópias dos canais de ofertas (decisão do Leonardo, 25/11): cota PRÓPRIA, fora das 50 ofertas da Shopee do bot,
+# para não competirem. ESPELHO_MAX_DIA no ciclo.yml: 100 enquanto o ML está bloqueado (todas da Shopee, porque
+# oferta copiada do ML também depende do preço da API do ML), 50 quando o ML voltar.
+def vagas_copias(cfg, estado, agora):
+    max_dia = int(os.environ.get("ESPELHO_MAX_DIA") or 50)
+    max_hora = int(os.environ.get("ESPELHO_MAX_HORA") or 8)
+    max_rodada = int(os.environ.get("ESPELHO_MAX_RODADA") or 3)
+    return vagas_da_rodada(agora, max_rodada, max_hora, max_dia, posts_ultima_hora(estado, agora, True),
+                           posts_hoje(estado, agora, True), cfg.hora_inicio, cfg.hora_fim)
 
 
 def preco_de_pelo_historico(estado, pid, preco, agora):
@@ -316,9 +331,11 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
     max_hora = int(os.environ.get("SHOPEE_MAX_HORA") or 4)
     max_rodada = int(os.environ.get("SHOPEE_MAX_RODADA") or 2)
     s = _estado(estado)
-    s["hora"] = [q for q in s["hora"] if (agora - datetime.fromisoformat(q)).total_seconds() < 3600]
+    for chave in ("hora", "hora_copias"):
+        s[chave] = [q for q in s.setdefault(chave, []) if (agora - datetime.fromisoformat(q)).total_seconds() < 3600]
     vagas = vagas_da_rodada(agora, max_rodada, max_hora, max_dia, posts_ultima_hora(estado, agora),
                             posts_hoje(estado, agora), cfg.hora_inicio, cfg.hora_fim)
+    vagas_cop = vagas_copias(cfg, estado, agora)
     candidatos = buscar_candidatos(shp, estado, agora, cfg.repost_dias, log)
     try:
         corte = agora - timedelta(days=cfg.repost_dias)
@@ -331,7 +348,7 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
         candidatos.sort(key=lambda p: pontos(p, estado, agora), reverse=True)
     except Exception as e:  # noqa: BLE001 — acompanhar nunca atrapalha os posts
         log(f"Shopee: acompanhamento falhou: {type(e).__name__}: {e}")
-    if not vagas or not candidatos:
+    if not (vagas or vagas_cop) or not candidatos:
         return []
     hoje = agora.date().isoformat()
     tipos = s.setdefault("tipos", {})
@@ -341,10 +358,15 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
     tipos_hoje = tipos_do_dia(estado, agora)
     contagem_tipos = contar_tipos_do_dia(estado, agora)
     enviadas = []
+    feitas = {False: 0, True: 0}  # quantas nossas / copiadas saíram nesta rodada
+    limite = {False: vagas, True: vagas_cop}
     for p in equilibrar_categorias(priorizar_tipos_novos(candidatos, estado, agora), estado, agora,
                                    categoria=lambda p: ""):
-        if len(enviadas) >= vagas:
+        if feitas[False] >= vagas and feitas[True] >= vagas_cop:
             break
+        copia = bool(espelho_fonte(estado, p.id))
+        if feitas[copia] >= limite[copia]:
+            continue  # a cota desta fila (nossas ou copiadas) acabou nesta rodada; a outra segue
         tp = tipo_produto(p.titulo)
         if not cabe_no_dia(contagem_tipos, p.titulo):
             continue  # limite do tipo no dia (1; fralda até 8; outros itens de reposição até 5)
@@ -383,7 +405,10 @@ def rodar(cfg, tg, estado, agora, rng=random, esperar=None, log=print, shp=None)
         s["postados"][o.id] = agora.isoformat(timespec="minutes")
         s.setdefault("titulos", {})[o.id] = {"titulo": o.titulo[:80], "quando": agora.isoformat(timespec="minutes"), "preco": o.preco}
         est.anotar_post(estado, o.id, o.preco, agora, o.titulo)
-        s["hora"].append(agora.isoformat(timespec="minutes"))
+        s["hora_copias" if copia else "hora"].append(agora.isoformat(timespec="minutes"))
+        if copia:
+            est.contar_dia(estado, agora, "copias")
+        feitas[copia] += 1
         tipos_hoje.add(tp)
         contagem_tipos[tipo_chave(o.titulo)] += 1
         tipos[hoje] = sorted(tipos_hoje)

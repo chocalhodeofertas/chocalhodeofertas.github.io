@@ -222,8 +222,8 @@ def gerar_html(estado, wa, agora):
          + _fmt_delta(_delta(tg_hist, 7), "em 7 dias")),
         ("Membros no WhatsApp", wa_atual, _fmt_delta(_delta(wa_hist, 1), "desde ontem") + "<br>"
          + _fmt_delta(_delta(wa_hist, 7), "em 7 dias")),
-        ("Ofertas hoje", posts_tg, f'{posts_tg - h.get("shopee", 0)} do Mercado Livre, {h.get("shopee", 0)} da Shopee, '
-                                   f'{h.get("com_cupom", 0)} com cupom'),
+        ("Ofertas hoje", posts_tg, f'{posts_tg - h.get("shopee", 0)} do Mercado Livre, {h.get("shopee", 0)} da Shopee '
+                                   f'({h.get("copias", 0)} copiadas de canais), {h.get("com_cupom", 0)} com cupom'),
         ("Cupons ativos", len(ativos), f'{h.get("cupons", 0)} postados hoje'),
     ])
     dias14 = [(agora.date() - timedelta(days=13 - k)).isoformat() for k in range(14)]

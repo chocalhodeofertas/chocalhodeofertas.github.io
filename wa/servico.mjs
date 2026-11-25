@@ -3,7 +3,7 @@
 // apaga links que outras pessoas mandarem no grupo.
 //
 // Ritmo (para não parecer robô): no máximo WA_MAX_DIA posts por dia, espalhados pelo dia, com um intervalo
-// sorteado entre WA_INTERVALO_MIN e WA_INTERVALO_MAX minutos (padrão 4 a 13), "digitando..." antes de cada um.
+// sorteado entre WA_INTERVALO_MIN e WA_INTERVALO_MAX minutos (padrão 3 a 8 desde 25/11; era 4 a 13), "digitando..." antes de cada um.
 import fs from "node:fs";
 import path from "node:path";
 
@@ -18,8 +18,11 @@ const FILA = path.resolve(RAIZ, process.env.WA_FILA || "fila_wa");
 // histórico. WA_MAX_DIA (variável do GitHub) trava um valor fixo.
 // 21/11: o Leonardo pediu para acompanhar o Telegram (~100/dia): 60 em 21/11, 80 em 23/11 e 100 a partir de 25/11
 // (número conectado em 10/11). Com 4 a 13 min entre posts, das 7h às 23h, 100 é perto do máximo possível.
+// 25/11 (dia 15 da conta, ainda em 80): ele pediu 150/dia no grupo (50 Shopee do bot + 50 ML do bot + 50 copiadas;
+// sem o ML, 100 copiadas). Sobe em 3 degraus para não assustar o WhatsApp: 110 em 26/11, 130 em 27/11, 150 a partir
+// de 28/11. Para caber 150 das 7h às 23h, o intervalo sorteado passou a 3 a 8 min (ciclo.yml).
 const RAMPA = [ // [a partir do dia (contado pela data de Brasília), posts por dia]
-  [0, 4], [4, 10], [8, 14], [11, 60], [13, 80], [15, 100],
+  [0, 4], [4, 10], [8, 14], [11, 60], [13, 80], [15, 110], [16, 130], [17, 150],
 ];
 const VALIDADE_ITEM = 3 * 60 * 60 * 1000; // oferta parada há mais de 3h na fila não sai
 const FIM = Date.now() + Number(process.env.WA_HORAS || 5.6) * 3600 * 1000;
@@ -51,8 +54,8 @@ const dataBR = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_
 const diasConectado = Math.round((Date.parse(dataBR(new Date())) - Date.parse(dataBR(new Date(estado.inicio)))) / 86400000);
 const degrau = RAMPA.filter(([d]) => diasConectado >= d).pop();
 const MAX_DIA = Number(process.env.WA_MAX_DIA || degrau[1]);
-const INTERVALO_MIN = Number(process.env.WA_INTERVALO_MIN || 4);
-const INTERVALO_MAX = Math.max(INTERVALO_MIN, Number(process.env.WA_INTERVALO_MAX || 13));
+const INTERVALO_MIN = Number(process.env.WA_INTERVALO_MIN || 3);
+const INTERVALO_MAX = Math.max(INTERVALO_MIN, Number(process.env.WA_INTERVALO_MAX || 8));
 estado.max_dia = MAX_DIA; // para o comando "fila" e a página da fila mostrarem o ritmo de hoje
 estado.intervalo_min = INTERVALO_MIN;
 estado.intervalo_max = INTERVALO_MAX;
