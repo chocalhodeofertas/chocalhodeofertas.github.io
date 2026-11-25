@@ -14197,6 +14197,12 @@
    "status": "ativo",
    "validade": "2027-01-11T23:59-03:00"
   },
+  "AVANT25": {
+   "criado": "2026-11-25T18:10-03:00",
+   "post": 1821,
+   "status": "ativo",
+   "validade": "2026-11-26T23:59-03:00"
+  },
   "BEBESPETS1511": {
    "criado": "2026-11-15T15:03-03:00",
    "post": 760,
@@ -14836,7 +14842,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5712,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6568,
+ "cupons_ml_ultimo": 6569,
  "cupons_shopee_enviado": "2026-11-25",
  "descoberta_em": "2026-11-25T08:02-03:00",
  "descobertos": {
@@ -53821,7 +53827,7 @@
   "2026-11-25": {
    "com_cupom": 7,
    "copias": 34,
-   "cupons": 14,
+   "cupons": 15,
    "posts": 78,
    "shopee": 67
   }
@@ -60122,6 +60128,17 @@
     }
    ],
    "criado": "2026-11-25T18:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1821": {
+   "blocos": [
+    {
+     "codigo": "AVANT25",
+     "html": "<b>🎟️ AVANT25</b> 👉 <b>25% OFF</b>\nCompra mín.: Sem compra mínima · Desconto máx.: R$145\n👉 <a href=\"https://bit.ly/3VKnCP6\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-25T18:10-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
