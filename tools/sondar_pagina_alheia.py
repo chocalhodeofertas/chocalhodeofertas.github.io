@@ -13,7 +13,7 @@ import requests
 
 from bot.espelho import _UA
 
-canais = " ".join(sys.argv[1:]).split() or ["babypromokids", "descontinhodemamae", "economiadasmamaes"]
+canais = " ".join(sys.argv[1:]).split() or ["babypromokids", "descontinhodemamae", "promodebebe", "canalpromocoesdemamae", "mamaecomprapromo"]
 proprios = re.compile(r"chocalho", re.I)
 links = []
 for c in canais:
@@ -29,9 +29,18 @@ for c in canais:
 from bot import espelho  # noqa: E402
 
 print("\n== com as funções do bot (espelho.ler_pagina / _pagina_util)")
-for canal, url in links[:6]:
+for canal, url in links[:12]:
     final, cartao = espelho.ler_pagina(url)
     print(f"@{canal}: útil={espelho._pagina_util(cartao)} | {json.dumps(cartao, ensure_ascii=False)[:230]}")
+    try:  # componentes crus do 1º cartão (preço, promoções, parcelas, frete) para ver como vêm Pix e cupom
+        h = requests.get(url, headers={**_UA, "Accept-Language": "pt-BR,pt;q=0.9"}, timeout=25).text
+        i = h.find('"polycards":')
+        c0 = json.JSONDecoder().raw_decode(h[i + 12:])[0][0]
+        for comp in c0.get("components", []):
+            if comp.get("type") in ("price", "promotions", "installments", "shipping", "highlight", "coupon"):
+                print("   CRU", comp.get("type"), json.dumps(comp.get(comp.get("type")), ensure_ascii=False)[:600])
+    except Exception as e:  # noqa: BLE001
+        print("   CRU erro", type(e).__name__)
 print()
 for canal, url in links[:0]:
     if proprios.search(canal):
