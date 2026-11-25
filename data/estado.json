@@ -14431,6 +14431,12 @@
    "status": "ativo",
    "validade": "2026-12-20T23:59-03:00"
   },
+  "MELIAGORA": {
+   "criado": "2026-11-25T09:00-03:00",
+   "post": 1735,
+   "status": "ativo",
+   "validade": "2026-11-26T23:59-03:00"
+  },
   "MELIGARANTE22": {
    "criado": "2026-11-21T10:04-03:00",
    "post": 1371,
@@ -14774,7 +14780,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5699,
+ "cupons_extra_ultimo:cupombr": 5701,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6558,
  "cupons_shopee_enviado": "2026-11-24",
@@ -49178,7 +49184,7 @@
    "shopee": 50
   },
   "2026-11-25": {
-   "cupons": 1,
+   "cupons": 2,
    "posts": 3,
    "shopee": 3
   }
@@ -55331,6 +55337,17 @@
     }
    ],
    "criado": "2026-11-25T08:07-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1735": {
+   "blocos": [
+    {
+     "codigo": "MELIAGORA",
+     "html": "<b>🎟️ MELIAGORA</b> 👉 <b>10% OFF</b>\nDesconto máx.: R$200\n⏰ Válido até 26/11"
+    }
+   ],
+   "criado": "2026-11-25T09:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
