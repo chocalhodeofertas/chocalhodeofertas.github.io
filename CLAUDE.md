@@ -88,7 +88,8 @@ Textos para o dono do projeto sempre em português do Brasil.
 - `espelho.py`: lê canais de ofertas do Telegram (`FONTES_OFERTAS_TG`, padrão no ciclo.yml) pela sessão Telethon;
   links do ML/Shopee viram candidatos por 48 h (`estado.espelho`). ML: catálogo direto; anúncio avulso → busca o catálogo pelo título.
   Passam pelos mesmos filtros (regra "infantil", NBCAL, repetição); desconto mínimo 10% e +20% na pontuação.
-  Origem visível para o admin: `espelho.fonte` → linha "🔁 Copiada do canal @x" na cópia do ML, aviso no post da Shopee
+  Origem visível para o admin: `espelho.fonte` → aviso "🔁 ML/Shopee: postei uma oferta copiada do canal @x" a cada cópia
+  (25/11: o texto para copiar e colar no WhatsApp e a arte deixaram de ser mandados ao admin; `comandos.enviar_copias` ficou só no modo teste)
   e lista no resumo diário (`posts_dia[].fonte`). Shopee: `shopee_ofertas.do_espelho` confere por itemId.
 - `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica, fralda geriátrica/incontinência) e `fora_da_faixa` (casa/adulto, exige sinal infantil;
   17/11: escritório/igreja sem sinal infantil; 21/11: idoso, marmitex/marmita, academia e protetor/adesivo de seios de silicone, "fita up").

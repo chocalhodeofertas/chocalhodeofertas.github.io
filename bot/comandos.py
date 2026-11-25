@@ -230,10 +230,6 @@ def postar_link(link, tg, ml, estado, cfg, agora, session=None, rng=random, menc
     est.registrar_post(estado, pid, preco, agora, info.titulo, oferta.desconto)
     if oferta.cupom:
         est.contar_dia(estado, agora, "com_cupom")
-    try:
-        enviar_copias(tg, cfg.admin_chat, oferta, rng)
-    except TelegramErro:
-        pass
     desc = f" (-{round(oferta.desconto * 100)}%)" if de else ""
     return f"✅ Postado: {info.titulo[:70]} — {mensagens.brl(preco)}{desc}"
 

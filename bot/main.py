@@ -501,11 +501,15 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         contagem_tipos[tipo_chave(o.titulo)] += 1
         enviadas.append(o)
         log(f"Postado: {o.id} {mensagens.brl(o.preco)} (-{round(o.desconto * 100)}%)")
-        if cfg.admin_chat:
+        # 25/11: o WhatsApp é automático, então não manda mais o texto para copiar e colar (nem a arte).
+        # Fica só o aviso de origem quando a oferta foi copiada de outro canal (ele quer saber de onde veio).
+        canal = espelho.fonte(estado, o.id)
+        if canal and cfg.admin_chat:
             try:
-                comandos.enviar_copias(tg, cfg.admin_chat, o, rng, fonte=espelho.fonte(estado, o.id))
+                tg.enviar_texto(cfg.admin_chat, f"🔁 ML: postei uma oferta copiada do canal @{canal}\n"
+                                f"{o.titulo[:80]}\n{o.link}")
             except TelegramErro as e:
-                log(f"Aviso: não consegui mandar a cópia para você: {e}")
+                log(f"Aviso: não consegui avisar a origem da cópia: {e}")
     return enviadas
 
 
