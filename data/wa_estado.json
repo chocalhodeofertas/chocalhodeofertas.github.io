@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 58,
-  "ultimo": "2026-11-25T18:18:09.266Z",
+  "enviados": 59,
+  "ultimo": "2026-11-25T18:27:08.541Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-25": 31
   },
   "membros_em": "2026-11-25T17:59:27.246Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 110,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -490,6 +490,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/114lvbvg3C",
         "p": 0
+      },
+      {
+        "h": "2026-11-25T18:27:08.541Z",
+        "n": "🛁 Pampers Lenços Umedecidos de Aloe Vera, 192 Unidades",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1GFrQkz",
+        "p": 0.2284
       }
     ]
   },
@@ -698,6 +706,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T18:24:30.996Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-25T18:33:46.799Z",
+  "ultima_categoria": "higiene"
 }
