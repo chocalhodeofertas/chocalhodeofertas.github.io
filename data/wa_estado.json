@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 76,
-  "ultimo": "2026-11-25T20:55:10.039Z",
+  "enviados": 77,
+  "ultimo": "2026-11-25T21:04:06.634Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-25": 31
   },
   "membros_em": "2026-11-25T20:35:02.190Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 110,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -634,6 +634,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/qlLs2fgpi",
         "p": 0
+      },
+      {
+        "h": "2026-11-25T21:04:06.634Z",
+        "n": "⏰ Válido até 26/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -842,6 +850,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T21:02:53.698Z",
+  "proximo_em": "2026-11-25T21:07:58.162Z",
   "ultima_categoria": "outros"
 }
