@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 66,
-  "ultimo": "2026-11-25T19:28:06.913Z",
+  "enviados": 67,
+  "ultimo": "2026-11-25T19:36:09.509Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-24": 31,
     "2026-11-25": 31
   },
-  "membros_em": "2026-11-25T18:59:48.347Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-25T19:34:44.606Z",
+  "ultima_loja": "ml",
   "max_dia": 110,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -554,6 +554,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/AKcR5ekdIc",
         "p": 0
+      },
+      {
+        "h": "2026-11-25T19:36:09.508Z",
+        "n": "✨ Fralda Descartável Pom Pom Proteção de Mãe XG com 38 Unidades",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2eBPdUe",
+        "p": 0.2673
       }
     ]
   },
@@ -762,6 +770,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T19:31:38.575Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-25T19:44:03.725Z",
+  "ultima_categoria": "fralda"
 }
