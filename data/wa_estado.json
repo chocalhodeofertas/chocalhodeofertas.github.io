@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 59,
-  "ultimo": "2026-11-25T18:27:08.541Z",
+  "enviados": 62,
+  "ultimo": "2026-11-25T18:53:07.568Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-24": 31,
     "2026-11-25": 31
   },
-  "membros_em": "2026-11-25T17:59:27.246Z",
-  "ultima_loja": "ml",
+  "membros_em": "2026-11-25T18:59:48.347Z",
+  "ultima_loja": "shopee",
   "max_dia": 110,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -498,6 +498,30 @@
         "r": "enviado",
         "k": "https://meli.la/1GFrQkz",
         "p": 0.2284
+      },
+      {
+        "h": "2026-11-25T18:35:11.021Z",
+        "n": "✨ Camisa Básica Polo Infantil",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/AAJ0qpV1HI",
+        "p": 0
+      },
+      {
+        "h": "2026-11-25T18:44:05.316Z",
+        "n": "🧸 Kit Cozinha Infantil de Brinquedo Modelo Novo Eletrodomésticos Utensílios C/ ",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2gCzwJs3de",
+        "p": 0
+      },
+      {
+        "h": "2026-11-25T18:53:07.568Z",
+        "n": "✨ Anel De Formatura ABC Infantil Regulavel Com Caixinha Capelo ou Saquinho Banha",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/AKcR3af0MQ",
+        "p": 0
       }
     ]
   },
@@ -706,6 +730,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T18:33:46.799Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-25T18:57:57.267Z",
+  "ultima_categoria": "outros"
 }
