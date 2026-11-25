@@ -136,9 +136,28 @@ def ler_cartao(texto):
     rotulo = (preco.get("discount_label") or {}).get("text") or ""
     if not md.get("id") or not atual:
         return None
-    return {"produto": md.get("product_id"), "item": md.get("id"), "preco": float(atual),
+    pix = None
+    normal = float(atual)
+    if "pix" in rotulo.lower():
+        # "46% OFF no Pix": o preço grande é o do Pix; o normal vem em "ou {price_total} em outros meios"
+        parc = preco.get("installments") or {}
+        total = next((v["price"]["value"] for v in parc.get("values") or []
+                      if v.get("key") == "price_total" and (v.get("price") or {}).get("value")), None)
+        pix, normal = float(atual), (float(total) if total else None)
+    cupom = None
+    for pr in comps.get("promotions") or []:
+        if pr.get("type") != "coupon":
+            continue
+        valor = next((v["price"]["value"] for v in pr.get("values") or [] if (v.get("price") or {}).get("value")), None)
+        pct = re.search(r"(\d+(?:[.,]\d+)?)\s*%\s*OFF", pr.get("text") or "", re.I)
+        if valor:
+            cupom = {"preco": float(valor)}
+        elif pct:
+            cupom = {"desconto": f"{pct.group(1).replace('.', ',')}% OFF"}
+        break
+    return {"produto": md.get("product_id"), "item": md.get("id"), "preco": normal,
             "de": (preco.get("previous_price") or {}).get("value"), "rotulo": rotulo,
-            "titulo": ((comps.get("title") or {}).get("text") or "")[:150], "pix": "pix" in rotulo.lower()}
+            "titulo": ((comps.get("title") or {}).get("text") or "")[:150], "pix": pix, "cupom": cupom}
 
 
 def ler_pagina(url, session=None, timeout=20):
@@ -152,8 +171,22 @@ def ler_pagina(url, session=None, timeout=20):
 
 
 def _pagina_util(cartao):
-    """Cartão que serve de preço: de catálogo, com preço e sem ser o preço "no Pix" (o post não mostra Pix)."""
-    return bool(cartao and cartao.get("produto") and cartao.get("preco") and not cartao.get("pix"))
+    """Cartão que serve de preço: de catálogo e com o preço normal (no "no Pix", o normal vem nas parcelas)."""
+    return bool(cartao and cartao.get("produto") and cartao.get("preco"))
+
+
+def extras_pagina(estado, pid, preco):
+    """(preço no Pix, cupom do anúncio no formato do cupom_oferta) lidos na página; None quando não há.
+    O Pix só conta se for menor que o preço do post; o cupom com preço só conta se economizar R$ 1+."""
+    pg = (_estado(estado)["ml"].get(pid) or {}).get("pagina") or {}
+    pix = pg.get("pix") if pg.get("pix") and preco and pg["pix"] < preco - 0.5 else None
+    c = pg.get("cupom") or {}
+    cupom = None
+    if c.get("preco") and preco and preco - c["preco"] >= 1:
+        cupom = {"origem": "pagina", "preco": round(c["preco"], 2), "economia": round(preco - c["preco"], 2), "desconto": ""}
+    elif c.get("desconto"):
+        cupom = {"origem": "pagina", "preco": None, "economia": 0.0, "desconto": c["desconto"]}
+    return pix, cupom
 
 
 def info_pagina(estado, pid, cache=None):
@@ -182,7 +215,8 @@ def reler_pagina(estado, pid, agora, session=None, ler=None):
     _, cartao = (ler or ler_pagina)(reg.get("url"), session)
     if not _pagina_util(cartao) or cartao["item"] != pg["item"]:
         return None
-    pg.update(preco=cartao["preco"], de=cartao["de"], rotulo=cartao["rotulo"], lido=agora.isoformat(timespec="minutes"))
+    pg.update(preco=cartao["preco"], de=cartao["de"], rotulo=cartao["rotulo"], pix=cartao.get("pix"),
+              cupom=cartao.get("cupom"), lido=agora.isoformat(timespec="minutes"))
     return info_pagina(estado, pid)
 
 
@@ -285,7 +319,7 @@ def coletar(ml, estado, agora, log=print, ler=None, expandir_url=expandir, ler_p
                 elif _loja(url) == "ml":
                     final, cartao = ler_pagina_url(url, sess)  # abre uma vez (como antes) e lê o preço do cartão
                     if _pagina_util(cartao):
-                        pagina = {**{k: cartao[k] for k in ("item", "preco", "de", "rotulo", "titulo")},
+                        pagina = {**{k: cartao.get(k) for k in ("item", "preco", "de", "rotulo", "titulo", "pix", "cupom")},
                                   "url": url, "lido": agora.isoformat(timespec="minutes")}
                 else:
                     final = expandir_url(url, sess)

@@ -93,7 +93,11 @@ Textos para o dono do projeto sempre em português do Brasil.
   e lista no resumo diário (`posts_dia[].fonte`). Shopee: `shopee_ofertas.do_espelho` confere por itemId.
 - Preço pela página do link de OUTRO canal (25/11, aprovado pelo Leonardo): com a API sem preço, `espelho.coletar` abre o
   meli.la do canal de origem (já abria para achar o produto) com `ler_pagina` e lê o 1º cartão (`ler_cartao`: produto, anúncio,
-  preço, "de", selo). Serve (`_pagina_util`) se é de catálogo, tem preço e o selo NÃO é "no Pix". Fica em `espelho.ml[pid].pagina`
+  preço, "de", selo, Pix, cupom). Serve (`_pagina_util`) se é de catálogo e tem preço normal. "N% OFF no Pix": o preço grande do
+  cartão é o do Pix e o normal vem em `installments` ("ou {price_total} em outros meios"). Cupom: `promotions` tipo coupon, com
+  preço ("{1} com Cupom") ou percentual ("15% OFF com Cupom"). No post (`espelho.extras_pagina`, chamado no `main` antes de
+  postar): linha "💠 R$ X no Pix" (`oferta.preco_pix`, `mensagens._linhas_preco`) e o cupom do anúncio no formato de
+  `cupom_oferta` (origem "pagina"), que ganha do cupom do canal quando economiza igual ou mais. Fica em `espelho.ml[pid].pagina`
   (com a url de origem e a hora). `main.buscar_infos` usa `espelho.info_pagina` quando a API não deu o produto; o lote pede o
   link do MESMO anúncio (`info.item_id`). Antes de postar, `main._reconferir` → `espelho.reler_pagina` (relê se lido há mais de
   `PAGINA_RELER_MIN` 60 min; sumiu/mudou de anúncio/não abriu → não posta). Reputação não é checada nessas (o cartão não traz o vendedor).

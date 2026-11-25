@@ -500,6 +500,11 @@ def rodar(modo, cfg: Config, ml, tg, estado, produtos, agora=None, rng=random, t
         if o is None:
             continue  # tenta a próxima da fila, sem esperar de novo
         o.cupom = cupom_oferta.escolher_cupom(estado, o, agora, log=log)
+        # 25/11: copiada com preço da página do canal de origem → Pix e cupom do anúncio que a página mostra
+        pix, cupom_pag = espelho.extras_pagina(estado, o.id, o.preco)
+        o.preco_pix = pix
+        if cupom_pag and (not o.cupom or (cupom_pag["preco"] and cupom_pag["economia"] >= o.cupom.get("economia", 0))):
+            o.cupom = cupom_pag
         try:
             grafico.enviar_oferta(tg, cfg.canal, mensagens.montar_telegram(o, rng), o, estado, agora, log)
         except TelegramErro as e:

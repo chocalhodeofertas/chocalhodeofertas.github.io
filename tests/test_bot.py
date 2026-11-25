@@ -3393,3 +3393,43 @@ def test_espelho_rele_a_pagina_antes_de_postar():
     assert espelho.reler_pagina(e, "MLB2106", depois, ler=lambda u, s=None: (u, espelho.ler_cartao(
         _pagina_canal("MLB2106", "MLB999", 30.0)))) is None
     assert espelho.reler_pagina(e, "MLB2106", depois, ler=lambda u, s=None: (u, None)) is None
+
+
+def test_pagina_do_canal_traz_pix_e_cupom():
+    """Formatos reais (25/11): "46% OFF no Pix" com o normal em "outros meios"; cupom com preço ou só percentual."""
+    import json as _j
+    from types import SimpleNamespace as N
+    from bot import espelho
+
+    def pagina(price, promos=None):
+        comps = [{"type": "title", "title": {"text": "Loção Hidratante Infantil 473ml"}}, {"type": "price", "price": price}]
+        if promos:
+            comps.append({"type": "promotions", "promotions": promos})
+        card = {"metadata": {"id": "MLB32", "product_id": "MLB21"}, "components": comps}
+        return '{"polycards":' + _j.dumps([card]) + "}"
+
+    pix = espelho.ler_cartao(pagina(
+        {"previous_price": {"value": 143.9}, "current_price": {"value": 77.27}, "discount_label": {"text": "46% OFF no Pix"},
+         "installments": {"text": "ou {price_total} em outros meios",
+                          "values": [{"key": "price_total", "type": "price", "price": {"value": 90.91}}]}},
+        [{"type": "coupon", "text": "15% OFF com Cupom"}]))
+    assert pix["preco"] == 90.91 and pix["pix"] == 77.27 and pix["cupom"] == {"desconto": "15% OFF"}
+    assert espelho._pagina_util(pix)
+    cup = espelho.ler_cartao(pagina(
+        {"previous_price": {"value": 79.99}, "current_price": {"value": 49.33}, "discount_label": {"text": "38% OFF"}},
+        [{"type": "coupon", "text": "{1} com Cupom", "values": [{"key": "1", "type": "price", "price": {"value": 39.46}}]}]))
+    assert cup["preco"] == 49.33 and cup["pix"] is None and cup["cupom"] == {"preco": 39.46}
+
+    e = est.novo()
+    espelho._estado(e)["ml"]["MLB21"] = {"ate": "2026-12-31T00:00", "pagina": {**{k: pix[k] for k in ("item", "preco", "de", "pix", "cupom")}}}
+    p, c = espelho.extras_pagina(e, "MLB21", 90.91)
+    assert p == 77.27 and c == {"origem": "pagina", "preco": None, "economia": 0.0, "desconto": "15% OFF"}
+    espelho._estado(e)["ml"]["MLB21"]["pagina"]["cupom"] = {"preco": 39.46}
+    assert espelho.extras_pagina(e, "MLB21", 49.33)[1]["preco"] == 39.46
+    # post mostra a linha do Pix e o cupom do anúncio
+    o = N(titulo="Loção Hidratante Infantil 473ml", preco=90.91, preco_de=143.9, desconto=.37, categoria="higiene",
+          link="https://meli.la/x", preco_pix=77.27,
+          cupom={"origem": "pagina", "preco": None, "economia": 0.0, "desconto": "15% OFF"})
+    t = mensagens.montar_telegram(o, random.Random(1))
+    assert "💠 <b>R$ 77,27</b> no Pix" in t and "Tem cupom de <b>15% OFF</b> no anúncio" in t
+    assert "💠 *R$ 77,27* no Pix" in mensagens.montar_whatsapp(o, random.Random(1))
