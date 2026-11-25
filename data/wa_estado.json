@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 48,
-  "ultimo": "2026-11-25T16:51:07.703Z",
+  "enviados": 51,
+  "ultimo": "2026-11-25T17:17:08.850Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-24": 31,
     "2026-11-25": 31
   },
-  "membros_em": "2026-11-25T15:58:49.370Z",
+  "membros_em": "2026-11-25T16:59:15.542Z",
   "ultima_loja": "shopee",
   "max_dia": 110,
   "intervalo_min": 3,
@@ -410,6 +410,30 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/1qdsqIzE9o",
         "p": 0
+      },
+      {
+        "h": "2026-11-25T16:59:10.157Z",
+        "n": "🧷 Fralda Infantil Personal Baby Protect & Sec Tamanho G Com 78 Tiras",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/9073RvIptb",
+        "p": 0.1466
+      },
+      {
+        "h": "2026-11-25T17:08:06.479Z",
+        "n": "🧸 Brinquedo Blocos de Montar Infantil Educativo Animais De Brinquedo Anime Mini",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/AAJ0mRmZHf",
+        "p": 0
+      },
+      {
+        "h": "2026-11-25T17:17:08.850Z",
+        "n": "✨ Elásticos de Cabelo Pequenos para Penteados Infantil Feminino Preto e Colorido",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/Lp54pLQHz",
+        "p": 0
       }
     ]
   },
@@ -618,6 +642,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T16:54:45.224Z",
+  "proximo_em": "2026-11-25T17:21:02.751Z",
   "ultima_categoria": "outros"
 }
