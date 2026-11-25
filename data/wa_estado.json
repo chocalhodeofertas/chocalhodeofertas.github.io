@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 73,
-  "ultimo": "2026-11-25T20:29:06.640Z",
+  "enviados": 75,
+  "ultimo": "2026-11-25T20:46:08.248Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-24": 31,
     "2026-11-25": 31
   },
-  "membros_em": "2026-11-25T19:34:44.606Z",
+  "membros_em": "2026-11-25T20:35:02.190Z",
   "ultima_loja": "shopee",
   "max_dia": 110,
   "intervalo_min": 3,
@@ -610,6 +610,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/9pgAZEWd1o",
         "p": 0
+      },
+      {
+        "h": "2026-11-25T20:38:08.603Z",
+        "n": "✨ Kit Mala Maternidade Com 4 Peças. Bolsas de Bebê personalizada. Nick Baby Bols",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/114m3gdbcu",
+        "p": 0
+      },
+      {
+        "h": "2026-11-25T20:46:08.248Z",
+        "n": "🧷 Fralda Descartável Babysec Galinha Pintadinha Premium Mega P - 34 Unidades",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/4B1npD8u95",
+        "p": 0
       }
     ]
   },
@@ -818,6 +834,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T20:35:48.704Z",
+  "proximo_em": "2026-11-25T20:51:07.714Z",
   "ultima_categoria": "fralda"
 }
