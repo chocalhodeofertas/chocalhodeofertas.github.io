@@ -143,6 +143,18 @@ footer a { text-underline-offset:3px; }
   transform:translateY(110%); transition:transform .35s cubic-bezier(.2,.8,.2,1); }
 .fixo.on { transform:none; }
 .fixo .cta { width:100%; min-height:52px; font-size:17px; box-shadow:none; }
+.planob { position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom)); z-index:40; max-width:520px; margin:0 auto;
+  background:var(--branco); color:var(--texto); border:1px solid var(--linha); border-radius:18px; padding:18px 18px 16px;
+  box-shadow:0 12px 40px rgba(30,5,36,.28); transform:translateY(16px); opacity:0; transition:transform .2s ease, opacity .2s ease; }
+.planob.on { transform:none; opacity:1; }
+.planob-titulo { margin:0 32px 6px 0; font-weight:800; font-size:18px; color:var(--uva); }
+.planob-texto { margin:0 0 14px; font-size:15px; line-height:1.45; color:var(--suave); }
+.planob-copiar { width:100%; min-height:50px; border:0; border-radius:12px; background:var(--pink); color:#fff; font:inherit; font-weight:800; font-size:16px; cursor:pointer; }
+.planob-copiar:active { background:var(--pink-2); }
+.planob-msg { margin:10px 0 0; font-size:14px; color:var(--uva); min-height:0; word-break:break-all; }
+.planob-msg:empty { display:none; }
+.planob-fechar { position:absolute; top:8px; right:8px; width:40px; height:40px; border:0; background:none; font-size:26px; line-height:1; color:var(--suave); cursor:pointer; border-radius:10px; }
+@media (prefers-reduced-motion: reduce) { .planob { transition:none; } }
 
 @media (min-width: 900px) {
   .heroi { grid-template-columns:1.1fr .9fr; grid-template-areas:'texto palco' 'stats palco'; align-items:end; gap:0 40px; padding-top:44px; }
@@ -276,23 +288,55 @@ footer a { text-underline-offset:3px; }
   }
 })();
 </script>
+<div class="planob" id="planob" hidden role="dialog" aria-live="polite" aria-labelledby="planob-titulo">
+  <p class="planob-titulo" id="planob-titulo">O WhatsApp não abriu?</p>
+  <p class="planob-texto">Copie o link do grupo, cole em qualquer conversa sua do WhatsApp e toque nele. Ou toque nos <b>⋯</b> no canto da tela e escolha <b>Abrir no navegador</b>.</p>
+  <button type="button" class="planob-copiar" id="planob-copiar">Copiar link do grupo</button>
+  <p class="planob-msg" id="planob-msg" aria-live="polite"></p>
+  <button type="button" class="planob-fechar" id="planob-fechar" aria-label="Fechar aviso">×</button>
+</div>
 <script>
-/* Botão do WhatsApp: abre o app direto (inclusive dentro do Instagram) e registra o Lead no Pixel. */
+/* Botão do WhatsApp: registra o Lead no Pixel e abre o convite do grupo.
+   Android: link oficial do convite (o próprio Android abre o WhatsApp comum ou o Business).
+   iPhone: whatsapp:// e, se não abrir, o link oficial. Plano B: se em ~2,5 s a pessoa ainda
+   estiver no site, aparece o aviso com "Copiar link do grupo". */
 (function () {
-  var ua = navigator.userAgent || "";
+  var ua = navigator.userAgent || "", saiu = false, timer = null;
+  var aviso = document.getElementById("planob"), copiar = document.getElementById("planob-copiar"),
+      fechar = document.getElementById("planob-fechar"), msg = document.getElementById("planob-msg"), linkAtual = "";
+  function marcarSaida() { if (document.hidden) { saiu = true; esconder(); } }
+  document.addEventListener("visibilitychange", marcarSaida);
+  window.addEventListener("pagehide", function () { saiu = true; });
+  function mostrar() { if (!aviso || saiu || document.hidden) return; aviso.hidden = false; aviso.classList.add("on"); }
+  function esconder() { if (aviso) { aviso.classList.remove("on"); aviso.hidden = true; } }
+  function vigiar() { saiu = false; clearTimeout(timer); timer = setTimeout(mostrar, 2500); }
+  function copiarTexto(t) {
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(t);
+    return new Promise(function (ok, erro) {
+      try { var c = document.createElement("textarea"); c.value = t; c.setAttribute("readonly", "");
+        c.style.position = "fixed"; c.style.opacity = "0"; document.body.appendChild(c); c.select();
+        document.execCommand("copy"); document.body.removeChild(c); ok(); } catch (e) { erro(e); }
+    });
+  }
+  if (copiar) copiar.addEventListener("click", function () {
+    copiarTexto(linkAtual).then(function () {
+      msg.textContent = "Link copiado! Cole em qualquer conversa sua do WhatsApp e toque nele.";
+    }, function () { msg.textContent = "Não deu para copiar. O link é: " + linkAtual; });
+  });
+  if (fechar) fechar.addEventListener("click", esconder);
   document.querySelectorAll("a.cta[data-wa]").forEach(function (a) {
     a.addEventListener("click", function (ev) {
       if (window.fbq) { try { fbq("track", "Lead"); } catch (e) {} }
       var codigo = a.getAttribute("data-wa"), web = a.href;
+      linkAtual = web; if (msg) msg.textContent = "";
       if (!codigo) return;
       if (/android/i.test(ua)) {
-        ev.preventDefault();
-        location.href = "intent://chat/?code=" + codigo + "#Intent;scheme=whatsapp;package=com.whatsapp;" +
-          "S.browser_fallback_url=" + encodeURIComponent(web) + ";end";
+        ev.preventDefault(); vigiar();
+        location.href = web;
       } else if (/iphone|ipad|ipod/i.test(ua)) {
-        ev.preventDefault();
+        ev.preventDefault(); vigiar();
         location.href = "whatsapp://chat?code=" + codigo;
-        setTimeout(function () { location.href = web; }, 1600);
+        setTimeout(function () { if (!saiu) location.href = web; }, 1600);
       }
     });
   });

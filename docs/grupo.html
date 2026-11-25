@@ -38,8 +38,7 @@ small { color:#D9C3E6; display:block; max-width:340px; margin:0 auto; font-size:
     if (window.fbq) { try { fbq('track', 'Lead'); } catch (e) {} }
     if (!codigo) { location.href = web; return; }
     if (/android/i.test(ua)) {
-      location.href = "intent://chat/?code=" + codigo + "#Intent;scheme=whatsapp;package=com.whatsapp;" +
-        "S.browser_fallback_url=" + encodeURIComponent(web) + ";end";
+      location.href = web;
     } else if (/iphone|ipad|ipod/i.test(ua)) {
       location.href = "whatsapp://chat?code=" + codigo;
       setTimeout(function () { location.href = web; }, 1600);

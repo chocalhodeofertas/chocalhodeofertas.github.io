@@ -166,6 +166,7 @@ Textos para o dono do projeto sempre em português do Brasil.
   `resumos.talvez_cupons_shopee`: post diário às 9h com esse link (`CUPONS_SHOPEE_ATIVO`, ligado: aprovado em 16/11).
 - `paginas.py`: moldura comum das duas páginas escondidas (marca do site: Schibsted Grotesk de `docs/fonts`, roxo/uva/rosa,
   modo escuro; abas Números/Fila; topo = frase grande com os números do dia; `fatos` = números de apoio).
+- Botão do WhatsApp no site (`bot/vitrine_pagina.html`, 25/11): Lead no toque; Android vai direto ao link oficial `https://chat.whatsapp.com/<código>` (sem `intent://`, para abrir também o WhatsApp Business); iPhone tenta `whatsapp://` e cai no link oficial em 1,6 s. Plano B (`#planob`): se 2,5 s depois do toque a pessoa ainda está no site, aparece "O WhatsApp não abriu?" com "Copiar link do grupo" e a dica de abrir no navegador. `grupo.html` (`vitrine.gerar_grupo_html`) também sem `intent://`.
 - `numeros.py`: página escondida `docs/numeros-bcfc6fce.html` (membros, ofertas do dia = ML + Shopee, cupons, WhatsApp) e o
   radar do grupo (`radar_horas`: entradas/saídas/mensagens por hora somadas em 7 dias, frase + barras para cima e para baixo).
 - `fila_pagina.py`: página escondida `docs/fila-4e7a91c3.html`, reescrita a cada rodada (`publicar` no fim da rodada normal):

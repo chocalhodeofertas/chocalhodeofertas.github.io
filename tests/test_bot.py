@@ -908,7 +908,8 @@ def test_vitrine_com_grupo_whatsapp(tmp_path):
     assert "Entrar no grupo do WhatsApp" in h and 'href="https://chat.whatsapp.com/' in h and 'data-wa="' in h and "t.me/c" in h
     g = (tmp_path / "grupo.html").read_text()
     assert "fbq('init','1828540891726257')" in g and "fbq('init','1828540891726257')" in h
-    assert '"X"' in g and "intent://chat/?code=" in g and "whatsapp://chat?code=" in g
+    assert '"X"' in g and "intent://" not in g and "whatsapp://chat?code=" in g
+    assert 'id="planob"' in h and "intent://" not in h and "planob-copiar" in h
 
 
 def test_arte_da_oferta():
