@@ -1880,7 +1880,8 @@ def test_espelho_coleta_e_vira_candidato(monkeypatch):
 
     destinos = {"https://meli.la/x1": "https://www.mercadolivre.com.br/p/MLB555?wid=",
                 "https://s.shopee.com.br/abc": "https://shopee.com.br/Fralda-i.123456.777777"}
-    n = espelho.coletar(None, e, AGORA, log=lambda m: None, ler=ler, expandir_url=lambda u, s=None: destinos[u])
+    n = espelho.coletar(None, e, AGORA, log=lambda m: None, ler=ler, expandir_url=lambda u, s=None: destinos[u],
+                        ler_pagina_url=lambda u, s=None: (destinos[u], None))
     assert n == 2 and lidos[0] == [("@promosbaby", None), ("Canal Teste", None)]
     assert e["espelho"]["fontes"]["@promosbaby"] == 11
     assert espelho.candidatos_ml(e, AGORA)["MLB555"]["regra"] == "infantil"
@@ -1888,7 +1889,8 @@ def test_espelho_coleta_e_vira_candidato(monkeypatch):
     assert espelho.eh_do_espelho(e, "MLB555")
     # link repetido não conta de novo; depois de 48 h o candidato expira
     assert espelho.coletar(None, e, AGORA, log=lambda m: None, ler=lambda l: [[(12, "https://meli.la/x1")], []],
-                           expandir_url=lambda u, s=None: destinos[u]) == 0
+                           expandir_url=lambda u, s=None: destinos[u],
+                           ler_pagina_url=lambda u, s=None: (destinos[u], None)) == 0
     assert espelho.candidatos_ml(e, AGORA + timedelta(hours=49)) == {}
 
 
@@ -1921,7 +1923,7 @@ def test_espelho_link_sem_produto_usa_o_nome(monkeypatch):
     destinos = {"https://meli.la/abc": "https://www.mercadolivre.com.br/social/fulano?matt_word=x",
                 "https://s.shopee.com.br/xyz": "https://s.shopee.com.br/xyz"}
     n = espelho.coletar(ML(), e, AGORA, log=lambda m: None, ler=lambda l: [[(1, msg_ml), (2, msg_shp)]],
-                        expandir_url=lambda u, s=None: destinos[u])
+                        expandir_url=lambda u, s=None: destinos[u], ler_pagina_url=lambda u, s=None: (destinos[u], None))
     assert n == 2
     assert "MLB321" in espelho.candidatos_ml(e, AGORA)
     assert list(espelho.titulos_shopee(e, AGORA)) == ["Banheira Dobrável Infantil Com Termômetro"]
@@ -3341,3 +3343,53 @@ def test_shopee_copias_tem_cota_propria(monkeypatch, tmp_path):
     # cota das copiadas acabou: só as nossas seguem (e vice-versa)
     monkeypatch.setenv("ESPELHO_MAX_DIA", "1")
     assert so.vagas_copias(Cfg, e, agora) == 0
+
+
+
+def _pagina_canal(produto, item, preco, de=None, rotulo="20% OFF", titulo="Trem De Madeira Com Números"):
+    import json as _j
+    comps = [{"type": "title", "title": {"text": titulo}},
+             {"type": "price", "price": {"current_price": {"value": preco}, "previous_price": {"value": de},
+                                         "discount_label": {"text": rotulo}}}]
+    card = {"metadata": {"id": item, "product_id": produto}, "components": comps}
+    return '<html><script>{"polycards":' + _j.dumps([card]) + '}</script></html>'
+
+
+def test_espelho_le_o_preco_na_pagina_do_outro_canal(monkeypatch):
+    """25/11: com a API do ML sem preço, a cópia usa o preço do cartão da página do link do outro canal."""
+    from bot import espelho
+    e = est.novo()
+    monkeypatch.setenv("FONTES_OFERTAS_TG", "@canal")
+    msg = "Trem de madeira com números\nhttps://meli.la/outro1"
+    pagina = _pagina_canal("MLB2106", "MLB7361", 33.57, 56.9, "41% OFF")
+    n = espelho.coletar(None, e, AGORA, log=lambda m: None, ler=lambda l: [[(1, msg)]],
+                        ler_pagina_url=lambda u, s=None: ("https://www.mercadolivre.com.br/social/canal",
+                                                          espelho.ler_cartao(pagina)))
+    assert n == 1
+    reg = e["espelho"]["ml"]["MLB2106"]
+    assert reg["pagina"]["item"] == "MLB7361" and reg["pagina"]["preco"] == 33.57 and reg["pagina"]["url"] == "https://meli.la/outro1"
+    info = espelho.info_pagina(e, "MLB2106")
+    assert info.preco == 33.57 and info.preco_original == 56.9 and info.item_id == "MLB7361"
+    assert info.ativos == {"MLB7361": (33.57, 56.9)}
+    # preço "no Pix" não serve (o post não mostra Pix) e cartão sem catálogo também não
+    assert not espelho._pagina_util(espelho.ler_cartao(_pagina_canal("MLB1", "MLB2", 10.0, 20.0, "39% OFF no Pix")))
+    assert not espelho._pagina_util(espelho.ler_cartao(_pagina_canal(None, "MLB2", 10.0, 20.0)))
+
+
+def test_espelho_rele_a_pagina_antes_de_postar():
+    from bot import espelho
+    e = est.novo()
+    espelho._estado(e)["ml"]["MLB2106"] = {"ate": "2026-12-31T00:00", "fonte": "canal", "pagina": {
+        "item": "MLB7361", "preco": 33.57, "de": 56.9, "rotulo": "41% OFF", "titulo": "Trem", "url": "https://meli.la/outro1",
+        "lido": (AGORA - timedelta(hours=3)).isoformat(timespec="minutes")}}
+    # subiu: relê e devolve o preço novo (quem decide se ainda é oferta é a avaliação normal)
+    info = espelho.reler_pagina(e, "MLB2106", AGORA, ler=lambda u, s=None: (u, espelho.ler_cartao(
+        _pagina_canal("MLB2106", "MLB7361", 45.0, 56.9))))
+    assert info.preco == 45.0 and e["espelho"]["ml"]["MLB2106"]["pagina"]["lido"] == AGORA.isoformat(timespec="minutes")
+    # lido há pouco: não abre de novo
+    assert espelho.reler_pagina(e, "MLB2106", AGORA, ler=lambda u, s=None: 1 / 0).preco == 45.0
+    # mudou de anúncio ou a página não abriu: não confirma (não posta)
+    depois = AGORA + timedelta(hours=2)
+    assert espelho.reler_pagina(e, "MLB2106", depois, ler=lambda u, s=None: (u, espelho.ler_cartao(
+        _pagina_canal("MLB2106", "MLB999", 30.0)))) is None
+    assert espelho.reler_pagina(e, "MLB2106", depois, ler=lambda u, s=None: (u, None)) is None

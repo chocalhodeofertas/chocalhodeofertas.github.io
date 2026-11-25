@@ -320,6 +320,16 @@ def buscar_infos(ml: MercadoLivre, produtos, estado=None):
             if info:
                 infos[pid] = info
                 cache[pid] = [info.titulo, info.imagem]
+    # 25/11: sem preço pela API, as ofertas copiadas de outros canais usam o preço lido na página do link deles
+    da_pagina = 0
+    for p in catalogo:
+        if p.id not in infos and estado is not None:
+            info = espelho.info_pagina(estado, p.id, cache)
+            if info:
+                infos[p.id] = info
+                da_pagina += 1
+    if da_pagina:
+        log(f"{da_pagina} produto(s) com o preço lido na página do link do canal de origem (API do ML sem preço).")
     if getattr(ml, "items_bloqueado", False):
         log(f"⚠️ O Mercado Livre recusou a lista de anúncios do catálogo (403 PolicyAgent): sem preço para "
             f"{len(catalogo) - len([p for p in catalogo if p.id in infos])} de {len(catalogo)} produtos nesta rodada. "
@@ -353,7 +363,13 @@ def _reconferir(ml, produto, oferta, estado, cfg, agora):
         else:
             info = ml.itens([produto.id]).get(produto.id)
     except (ErroML, AcessoNegado):
-        return oferta  # sem como conferir agora: vale a consulta de minutos atrás
+        if not (espelho._estado(estado)["ml"].get(produto.id) or {}).get("pagina"):
+            return oferta  # sem como conferir agora: vale a consulta de minutos atrás
+        # preço da página do outro canal: relê antes de postar; sem confirmar, não posta
+        info = espelho.reler_pagina(estado, produto.id, agora)
+        if info is None:
+            log(f"{oferta.id}: não consegui confirmar o preço na página do canal de origem; pulei.")
+            return None
     if not lote.conferir_anuncio(estado, produto.id, info, log, getattr(ml, "procurar_anuncio", None)):
         return None  # o anúncio do link pausou/saiu: não posta link quebrado
     nova = avaliar_oferta(cfg, estado, produto, info, agora)

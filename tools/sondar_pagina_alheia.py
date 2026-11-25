@@ -26,7 +26,14 @@ for c in canais:
     print(f"canal {c}: {len(achados)} links meli.la")
     links += [(c, u) for u in achados[-3:]]
 
-for canal, url in links[:8]:
+from bot import espelho  # noqa: E402
+
+print("\n== com as funções do bot (espelho.ler_pagina / _pagina_util)")
+for canal, url in links[:6]:
+    final, cartao = espelho.ler_pagina(url)
+    print(f"@{canal}: útil={espelho._pagina_util(cartao)} | {json.dumps(cartao, ensure_ascii=False)[:230]}")
+print()
+for canal, url in links[:0]:
     if proprios.search(canal):
         continue
     try:

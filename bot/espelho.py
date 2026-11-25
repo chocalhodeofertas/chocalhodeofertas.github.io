@@ -7,9 +7,10 @@ Fontes em FONTES_OFERTAS_TG (separadas por vírgula): @usuario, link t.me ou o t
 (a conta do Telegram conectada ao bot precisa ter entrado no canal).
 """
 import asyncio
+import json
 import os
 import re
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 import requests
 
@@ -108,6 +109,83 @@ def expandir(url, session=None, timeout=10):
         return url
 
 
+# ---------- preço pela página do link de OUTRO canal (25/11) ----------
+# Desde 23/11 a API do ML não dá mais preço de catálogo. O link de afiliado de outro canal abre a vitrine dele no ML,
+# e o 1º cartão dessa página ("polycards") é o produto divulgado, com o anúncio, o preço atual e o "de".
+# O bot já abria esses links para descobrir o produto; agora também lê o cartão. NUNCA vale para os links do
+# Leonardo (regra dele): só links que chegam das fontes do espelho.
+PAGINA_RELER_MIN = 60  # antes de postar, preço lido há mais que isso é relido na página
+
+
+def ler_cartao(texto):
+    """1º cartão da página (produto do link) → {produto, item, preco, de, rotulo, titulo, pix} ou None."""
+    i = (texto or "").find('"polycards":')
+    if i < 0:
+        return None
+    try:
+        cartoes, _ = json.JSONDecoder().raw_decode(texto[i + len('"polycards":'):])
+    except ValueError:
+        return None
+    if not isinstance(cartoes, list) or not cartoes:
+        return None
+    c = cartoes[0]
+    md = c.get("metadata") or {}
+    comps = {x.get("type"): x.get(x.get("type")) for x in c.get("components") or []}
+    preco = comps.get("price") or {}
+    atual = (preco.get("current_price") or {}).get("value")
+    rotulo = (preco.get("discount_label") or {}).get("text") or ""
+    if not md.get("id") or not atual:
+        return None
+    return {"produto": md.get("product_id"), "item": md.get("id"), "preco": float(atual),
+            "de": (preco.get("previous_price") or {}).get("value"), "rotulo": rotulo,
+            "titulo": ((comps.get("title") or {}).get("text") or "")[:150], "pix": "pix" in rotulo.lower()}
+
+
+def ler_pagina(url, session=None, timeout=20):
+    """Abre o link (de outro canal) como navegador e lê o cartão do produto. (url final, cartão ou None)."""
+    s = session or requests
+    try:
+        r = s.get(url, allow_redirects=True, timeout=timeout, headers={**_UA, "Accept-Language": "pt-BR,pt;q=0.9"})
+        return r.url, ler_cartao(r.text)
+    except requests.RequestException:
+        return url, None
+
+
+def _pagina_util(cartao):
+    """Cartão que serve de preço: de catálogo, com preço e sem ser o preço "no Pix" (o post não mostra Pix)."""
+    return bool(cartao and cartao.get("produto") and cartao.get("preco") and not cartao.get("pix"))
+
+
+def info_pagina(estado, pid, cache=None):
+    """InfoProduto montado com o preço lido na página do outro canal (quando a API recusa). None se não houver."""
+    from .mercadolivre import InfoProduto
+    pg = (_estado(estado)["ml"].get(pid) or {}).get("pagina")
+    if not pg or not pg.get("preco") or not pg.get("item"):
+        return None
+    titulo, imagem = (cache or {}).get(pid) or (pg.get("titulo"), None)
+    de = pg.get("de")
+    return InfoProduto(id=pid, titulo=titulo or pg.get("titulo") or pid, preco=pg["preco"],
+                       preco_original=float(de) if de else None, imagem=imagem, disponivel=True,
+                       item_id=pg["item"], ativos={pg["item"]: (pg["preco"], float(de) if de else None)}, total=1)
+
+
+def reler_pagina(estado, pid, agora, session=None, ler=None):
+    """Relê o link do outro canal antes do post. Devolve o InfoProduto atualizado, ou None se o cartão sumiu,
+    mudou de anúncio ou não deu para ler (aí não posta: sem confirmar o preço, não sai)."""
+    reg = _estado(estado)["ml"].get(pid) or {}
+    pg = reg.get("pagina")
+    if not pg:
+        return None
+    lido = datetime.fromisoformat(pg["lido"]) if pg.get("lido") else None
+    if lido and (agora - lido).total_seconds() < PAGINA_RELER_MIN * 60:
+        return info_pagina(estado, pid)
+    _, cartao = (ler or ler_pagina)(reg.get("url"), session)
+    if not _pagina_util(cartao) or cartao["item"] != pg["item"]:
+        return None
+    pg.update(preco=cartao["preco"], de=cartao["de"], rotulo=cartao["rotulo"], lido=agora.isoformat(timespec="minutes"))
+    return info_pagina(estado, pid)
+
+
 def classificar(url):
     """('ml', tipo, id) | ('shopee', item_id) | None."""
     if "shopee.com" in url:
@@ -164,7 +242,7 @@ def _catalogo_por_titulo(ml, titulo):
 
 # ---------- rodada ----------
 
-def coletar(ml, estado, agora, log=print, ler=None, expandir_url=expandir):
+def coletar(ml, estado, agora, log=print, ler=None, expandir_url=expandir, ler_pagina_url=ler_pagina):
     """Lê as fontes e guarda os produtos achados como candidatos por 48 h. Retorna quantos entraram."""
     fontes = fontes_configuradas()
     if not fontes:
@@ -201,8 +279,17 @@ def coletar(ml, estado, agora, log=print, ler=None, expandir_url=expandir):
                 if url in e["links"]:
                     continue
                 e["links"][url] = agora.date().isoformat()
-                final = url if classificar(url) else expandir_url(url, sess)
-                alvo = classificar(final)
+                pagina = None
+                if classificar(url):
+                    final = url
+                elif _loja(url) == "ml":
+                    final, cartao = ler_pagina_url(url, sess)  # abre uma vez (como antes) e lê o preço do cartão
+                    if _pagina_util(cartao):
+                        pagina = {**{k: cartao[k] for k in ("item", "preco", "de", "rotulo", "titulo")},
+                                  "url": url, "lido": agora.isoformat(timespec="minutes")}
+                else:
+                    final = expandir_url(url, sess)
+                alvo = ("ml", "catalogo", cartao["produto"]) if pagina else classificar(final)
                 if not alvo:
                     # Link de afiliado que não mostra o produto (vitrine "social" do ML, encurtador da Shopee
                     # que só abre no app): procura o produto pelo nome escrito na mensagem
@@ -232,6 +319,8 @@ def coletar(ml, estado, agora, log=print, ler=None, expandir_url=expandir):
                     novos += 1
                 e["ml"][pid] = {"tipo": "catalogo", "categoria": "outros", "regra": "infantil",
                                 "pos": 30, "ate": ate, "fonte": fonte}
+                if pagina:
+                    e["ml"][pid]["pagina"] = pagina
     limpar(estado, agora)
     if novos:
         log(f"Espelho: {novos} produto(s) novo(s) vindos dos canais de ofertas.")

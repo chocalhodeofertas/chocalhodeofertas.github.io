@@ -91,6 +91,13 @@ Textos para o dono do projeto sempre em português do Brasil.
   Origem visível para o admin: `espelho.fonte` → aviso "🔁 ML/Shopee: postei uma oferta copiada do canal @x" a cada cópia
   (25/11: o texto para copiar e colar no WhatsApp e a arte deixaram de ser mandados ao admin; `comandos.enviar_copias` ficou só no modo teste)
   e lista no resumo diário (`posts_dia[].fonte`). Shopee: `shopee_ofertas.do_espelho` confere por itemId.
+- Preço pela página do link de OUTRO canal (25/11, aprovado pelo Leonardo): com a API sem preço, `espelho.coletar` abre o
+  meli.la do canal de origem (já abria para achar o produto) com `ler_pagina` e lê o 1º cartão (`ler_cartao`: produto, anúncio,
+  preço, "de", selo). Serve (`_pagina_util`) se é de catálogo, tem preço e o selo NÃO é "no Pix". Fica em `espelho.ml[pid].pagina`
+  (com a url de origem e a hora). `main.buscar_infos` usa `espelho.info_pagina` quando a API não deu o produto; o lote pede o
+  link do MESMO anúncio (`info.item_id`). Antes de postar, `main._reconferir` → `espelho.reler_pagina` (relê se lido há mais de
+  `PAGINA_RELER_MIN` 60 min; sumiu/mudou de anúncio/não abriu → não posta). Reputação não é checada nessas (o cartão não traz o vendedor).
+  Nunca vale para links do Leonardo. Sonda: `tools/sondar_pagina_alheia` (links da página pública t.me/s, sem a sessão do bot).
 - `filtros.py`: bloqueios (NBCAL, remédio, +14 anos, réplica, fralda geriátrica/incontinência) e `fora_da_faixa` (casa/adulto, exige sinal infantil;
   17/11: escritório/igreja sem sinal infantil; 21/11: idoso, marmitex/marmita, academia e protetor/adesivo de seios de silicone, "fita up").
 - Frete no post (ML): `mercadolivre.entrega` lê `shipping.free_shipping` e `logistic_type == "fulfillment"` de cada anúncio
