@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 57,
-  "ultimo": "2026-11-24T23:52:50.724Z",
+  "enviados": 58,
+  "ultimo": "2026-11-25T00:05:42.472Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-24": 29
   },
   "membros_em": "2026-11-24T23:05:11.763Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 80,
   "intervalo_min": 4,
   "intervalo_max": 13,
@@ -482,6 +482,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/6AmqwL1MQA",
         "p": 0
+      },
+      {
+        "h": "2026-11-25T00:05:42.472Z",
+        "n": "1️⃣ 👕 Conjunto Infantil Masculino De Verão - Camisa + Bermuda - Tamanho 2 A…",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/9KjsFSvaMz",
+        "p": 9
       }
     ]
   },
@@ -685,6 +693,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-24T23:57:36.612Z",
+  "proximo_em": "2026-11-25T00:13:05.385Z",
   "ultima_categoria": "outros"
 }
