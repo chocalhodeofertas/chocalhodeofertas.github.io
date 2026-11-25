@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 57,
-  "ultimo": "2026-11-25T18:09:07.043Z",
+  "enviados": 58,
+  "ultimo": "2026-11-25T18:18:09.266Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-25": 31
   },
   "membros_em": "2026-11-25T17:59:27.246Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 110,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -482,6 +482,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-25T18:18:09.266Z",
+        "n": "👕 Meia Babado Feminina Infantil Batizado - Princesa-Fofa",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/114lvbvg3C",
+        "p": 0
       }
     ]
   },
@@ -690,6 +698,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-25T18:12:26.998Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-25T18:24:30.996Z",
+  "ultima_categoria": "roupa"
 }
