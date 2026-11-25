@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-24",
-  "enviados": 61,
-  "ultimo": "2026-11-25T00:36:40.605Z",
+  "enviados": 62,
+  "ultimo": "2026-11-25T00:44:32.181Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -15,9 +15,9 @@
     "2026-11-21": 21,
     "2026-11-22": 29,
     "2026-11-23": 30,
-    "2026-11-24": 29
+    "2026-11-24": 31
   },
-  "membros_em": "2026-11-25T00:08:12.774Z",
+  "membros_em": "2026-11-25T01:54:36.005Z",
   "ultima_loja": "shopee",
   "max_dia": 80,
   "intervalo_min": 4,
@@ -514,6 +514,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/9Kjsko6zn0",
         "p": 0
+      },
+      {
+        "h": "2026-11-25T00:44:32.181Z",
+        "n": "🧸 Jogo De Correspondência De Garrafas , Emparelhamento De Memória Criativa De P",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/AUvq9p2oCB",
+        "p": 0
       }
     ]
   },
@@ -714,9 +722,14 @@
         0,
         1,
         0
+      ],
+      "22": [
+        2,
+        0,
+        2
       ]
     }
   },
-  "proximo_em": "2026-11-25T00:44:23.334Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-25T00:51:04.837Z",
+  "ultima_categoria": "brinquedo"
 }
