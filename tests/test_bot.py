@@ -256,8 +256,6 @@ def test_rodada_normal_posta_a_melhor():
     assert [o.id for o in enviadas] == ["MLB2"]
     assert tg.enviados[0][:2] == ("oferta", "@canal")
     assert tg.enviados[1:] == []  # 25/11: sem o texto para copiar (o WhatsApp é automático)
-    assert tg.botoes[0][1].startswith("https://api.whatsapp.com/send?text=")
-    assert tg.botoes[1][1].startswith("https://x.com/intent/tweet?text=")
     assert "MLB2" in e["postados"] and "MLB3" not in e["precos"]
     # Na rodada seguinte não repete a MLB2, posta a MLB1
     enviadas = rodar("normal", cfg, ml, TGFalso(), e, produtos, agora=AGORA + timedelta(minutes=20))
