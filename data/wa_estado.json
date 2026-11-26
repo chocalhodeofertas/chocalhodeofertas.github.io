@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 77,
-  "ultimo": "2026-11-26T19:22:11.585Z",
+  "enviados": 78,
+  "ultimo": "2026-11-26T19:42:53.065Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-25": 32,
     "2026-11-26": 28
   },
-  "membros_em": "2026-11-26T18:37:18.579Z",
+  "membros_em": "2026-11-26T19:37:28.054Z",
   "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
@@ -642,6 +642,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/60TTc7YbTK",
         "p": 0
+      },
+      {
+        "h": "2026-11-26T19:42:53.065Z",
+        "n": "👕 Conjunto Infantil Masculino Fim de Ano - Blusa + Bermuda Dry-Fit",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7pv7q1LGOe",
+        "p": 0
       }
     ]
   },
@@ -874,6 +882,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T19:27:04.988Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-26T19:50:02.121Z",
+  "ultima_categoria": "roupa"
 }
