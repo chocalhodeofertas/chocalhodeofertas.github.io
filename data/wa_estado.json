@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 24,
-  "ultimo": "2026-11-26T13:13:16.378Z",
+  "enviados": 26,
+  "ultimo": "2026-11-26T13:28:20.046Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-26": 30
   },
   "membros_em": "2026-11-26T13:06:50.807Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -218,6 +218,22 @@
         "r": "enviado",
         "k": "https://bit.ly/4j27Eaw",
         "p": 9
+      },
+      {
+        "h": "2026-11-26T13:20:24.764Z",
+        "n": "⏰ Válido até 23/12",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4APacjA",
+        "p": 9
+      },
+      {
+        "h": "2026-11-26T13:28:20.046Z",
+        "n": "🧷 CALÇA Sumikko fralda Ajustável total max P/M/G/XG/XXG/XXXG/4XG/5XG 50 e 100 u",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/5LDmNfwuRu",
+        "p": 0.05
       }
     ]
   },
@@ -440,6 +456,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T13:20:20.670Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-26T13:35:42.101Z",
+  "ultima_categoria": "fralda"
 }
