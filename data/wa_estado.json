@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 42,
-  "ultimo": "2026-11-26T15:03:05.737Z",
+  "enviados": 43,
+  "ultimo": "2026-11-26T15:11:07.717Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-26": 30
   },
   "membros_em": "2026-11-26T15:07:31.181Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -362,6 +362,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-26T15:11:07.717Z",
+        "n": "🥣 Kit Alimentação Bebê Infantil Refeição Silicone Papinha Cor Alimentar Pratinh",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/BVgN6zeCO",
+        "p": 0
       }
     ]
   },
@@ -584,6 +592,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T15:06:51.039Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-26T15:15:01.385Z",
+  "ultima_categoria": "alimentacao"
 }
