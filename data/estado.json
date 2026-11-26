@@ -14591,6 +14591,12 @@
    "status": "ativo",
    "validade": "2026-11-26T23:59-03:00"
   },
+  "B6HMELI": {
+   "criado": "2026-11-26T12:02-03:00",
+   "post": 1890,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
   "BEBESPETS1511": {
    "criado": "2026-11-15T15:03-03:00",
    "post": 760,
@@ -14890,6 +14896,12 @@
    "post": 1735,
    "status": "ativo",
    "validade": "2026-11-26T23:59-03:00"
+  },
+  "MELIEI8": {
+   "criado": "2026-11-26T12:02-03:00",
+   "post": 1890,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
   },
   "MELIGARANTE22": {
    "criado": "2026-11-21T10:04-03:00",
@@ -15300,7 +15312,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5728,
+ "cupons_extra_ultimo:cupombr": 5729,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6579,
  "cupons_shopee_enviado": "2026-11-26",
@@ -55418,7 +55430,7 @@
   "2026-11-26": {
    "com_cupom": 10,
    "copias": 13,
-   "cupons": 15,
+   "cupons": 17,
    "posts": 35,
    "shopee": 25
   }
@@ -61905,6 +61917,21 @@
    "criado": "2026-11-26T11:31-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1890": {
+   "blocos": [
+    {
+     "codigo": "B6HMELI",
+     "html": "<b>🎟️ B6HMELI</b> 👉 <b>R$150 OFF</b>\nCompra mín.: R$1.099\n⏰ Válido até 27/11"
+    },
+    {
+     "codigo": "MELIEI8",
+     "html": "<b>🎟️ MELIEI8</b> 👉 <b>R$40 OFF</b>\nCompra mín.: R$399\n⏰ Válido até 27/11"
+    }
+   ],
+   "criado": "2026-11-26T12:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "743": {
    "blocos": [
