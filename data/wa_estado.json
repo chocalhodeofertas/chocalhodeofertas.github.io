@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 37,
-  "ultimo": "2026-11-26T14:34:24.308Z",
+  "enviados": 40,
+  "ultimo": "2026-11-26T14:51:23.376Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-26": 30
   },
   "membros_em": "2026-11-26T14:07:07.401Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -322,6 +322,30 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-26T14:41:22.226Z",
+        "n": "✨ ANA1108 Kit 500 Elastico de cabelo+50 peças Mini Rabicó Xuxinha+50 unidades Mi",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/Lp6UmaDya",
+        "p": 0
+      },
+      {
+        "h": "2026-11-26T14:45:35.967Z",
+        "n": "🛏️ Berço Portátil Infantil Cercado Desmontável Com Tela 2 Alturas Colchonete Ro",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2zi74ho",
+        "p": 0.266
+      },
+      {
+        "h": "2026-11-26T14:51:23.376Z",
+        "n": "🎉 Vestido infantil verde de princesa com tema de sereia, para fantasia e brinca",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/5VXCf9BrLf",
+        "p": 0
       }
     ]
   },
@@ -544,6 +568,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T14:41:13.941Z",
-  "ultima_categoria": "escola"
+  "proximo_em": "2026-11-26T14:55:29.887Z",
+  "ultima_categoria": "festa"
 }
