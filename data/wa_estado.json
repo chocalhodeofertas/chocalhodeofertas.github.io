@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 12,
-  "ultimo": "2026-11-26T12:04:52.826Z",
+  "enviados": 17,
+  "ultimo": "2026-11-26T12:31:58.518Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-25": 32,
     "2026-11-26": 30
   },
-  "membros_em": "2026-11-26T12:00:42.377Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-26T12:06:26.781Z",
+  "ultima_loja": "ml",
   "max_dia": 130,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -122,6 +122,46 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/3qOyYLA7m1",
         "p": 0
+      },
+      {
+        "h": "2026-11-26T12:10:20.362Z",
+        "n": "⏰ Válido até 27/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-26T12:15:25.482Z",
+        "n": "👕 Sandália Papete Infantil Menina Feminino Transparente Aranha Glitter Confortá",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/1W13mWg4v1",
+        "p": 0
+      },
+      {
+        "h": "2026-11-26T12:20:46.849Z",
+        "n": "✨ Fralda Pampers Premium Care Tamanho XXG 112 Unidades",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2uyFbXT",
+        "p": 0.2603
+      },
+      {
+        "h": "2026-11-26T12:28:08.523Z",
+        "n": "✨ Short Bermuda Infantil Juvenil Tactel Menino Praia Com Bolso Premium Escola La",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2gD1BwwvzJ",
+        "p": 0
+      },
+      {
+        "h": "2026-11-26T12:31:58.518Z",
+        "n": "✨ Fralda Pampers Premium Care Tamanho M 160 Unidades",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2ifmV9f",
+        "p": 0.2603
       }
     ]
   },
@@ -344,6 +384,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T12:10:15.666Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-26T12:37:32.048Z",
+  "ultima_categoria": "fralda"
 }
