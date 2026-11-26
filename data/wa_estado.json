@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-25",
-  "enviados": 98,
-  "ultimo": "2026-11-26T00:07:06.817Z",
+  "enviados": 99,
+  "ultimo": "2026-11-26T00:16:07.609Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-25": 32
   },
   "membros_em": "2026-11-26T00:06:10.974Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 110,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -810,6 +810,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/4fy4JdtOqR",
         "p": 9
+      },
+      {
+        "h": "2026-11-26T00:16:07.609Z",
+        "n": "🛁 Kit Infantil Shampoo e Condicionador Turminha da Bagunça 500ml",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8VAnFiMFhW",
+        "p": 0
       }
     ]
   },
@@ -1025,6 +1033,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T00:15:01.357Z",
-  "ultima_categoria": "festa"
+  "proximo_em": "2026-11-26T00:21:27.520Z",
+  "ultima_categoria": "higiene"
 }
