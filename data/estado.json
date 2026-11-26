@@ -15233,6 +15233,12 @@
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
   },
+  "TDS50BF26": {
+   "criado": "2026-11-26T18:30-03:00",
+   "post": 1929,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
   "TODO1511SITE": {
    "criado": "2026-11-15T19:01-03:00",
    "post": 784,
@@ -15354,7 +15360,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5743,
+ "cupons_extra_ultimo:cupombr": 5744,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6586,
  "cupons_shopee_enviado": "2026-11-26",
@@ -58500,7 +58506,7 @@
   "2026-11-26": {
    "com_cupom": 13,
    "copias": 21,
-   "cupons": 27,
+   "cupons": 28,
    "posts": 68,
    "shopee": 55
   }
@@ -65082,6 +65088,17 @@
    "criado": "2026-11-26T18:07-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1929": {
+   "blocos": [
+    {
+     "codigo": "TDS50BF26",
+     "html": "<b>🎟️ TDS50BF26</b> 👉 <b>R$50 OFF</b>\nCompra mín.: R$249\n⏰ Válido até 27/11"
+    }
+   ],
+   "criado": "2026-11-26T18:30-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "784": {
    "blocos": [
