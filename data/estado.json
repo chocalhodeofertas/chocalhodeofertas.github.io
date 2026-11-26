@@ -15053,6 +15053,12 @@
    "status": "ativo",
    "validade": "2026-12-20T23:59-03:00"
   },
+  "PROMOAGORA": {
+   "criado": "2026-11-26T10:00-03:00",
+   "post": 1871,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
   "PROMOSCERTAS30": {
    "criado": "2026-11-24T11:11-03:00",
    "post": 1682,
@@ -15240,7 +15246,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5721,
+ "cupons_extra_ultimo:cupombr": 5722,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6574,
  "cupons_shopee_enviado": "2026-11-26",
@@ -54187,7 +54193,7 @@
   "2026-11-26": {
    "com_cupom": 6,
    "copias": 10,
-   "cupons": 5,
+   "cupons": 6,
    "posts": 22,
    "shopee": 16
   }
@@ -60585,6 +60591,17 @@
     }
    ],
    "criado": "2026-11-26T09:08-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1871": {
+   "blocos": [
+    {
+     "codigo": "PROMOAGORA",
+     "html": "<b>🎟️ PROMOAGORA</b> 👉 <b>10% OFF</b>\nDesconto máx.: R$100\n⏰ Válido até 27/11"
+    }
+   ],
+   "criado": "2026-11-26T10:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
