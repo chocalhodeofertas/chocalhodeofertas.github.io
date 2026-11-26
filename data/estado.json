@@ -15155,6 +15155,12 @@
    "status": "ativo",
    "validade": "2026-12-20T23:59-03:00"
   },
+  "SUPEROFERTA": {
+   "criado": "2026-11-26T11:00-03:00",
+   "post": 1882,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
   "SUPERPROMO35": {
    "criado": "2026-11-26T10:19-03:00",
    "post": 1873,
@@ -15288,7 +15294,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5724,
+ "cupons_extra_ultimo:cupombr": 5725,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6577,
  "cupons_shopee_enviado": "2026-11-26",
@@ -54985,7 +54991,7 @@
   "2026-11-26": {
    "com_cupom": 9,
    "copias": 11,
-   "cupons": 13,
+   "cupons": 14,
    "posts": 29,
    "shopee": 20
   }
@@ -61444,6 +61450,17 @@
    "criado": "2026-11-26T10:19-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1882": {
+   "blocos": [
+    {
+     "codigo": "SUPEROFERTA",
+     "html": "<b>🎟️ SUPEROFERTA</b> 👉 <b>25% OFF</b>\nDesconto máx.: R$55\n⏰ Válido até 27/11"
+    }
+   ],
+   "criado": "2026-11-26T11:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "743": {
    "blocos": [
