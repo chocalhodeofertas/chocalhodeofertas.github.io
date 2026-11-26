@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 89,
-  "ultimo": "2026-11-26T22:11:46.957Z",
+  "enviados": 92,
+  "ultimo": "2026-11-26T22:28:22.155Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-26": 28
   },
   "membros_em": "2026-11-26T21:37:53.732Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -738,6 +738,30 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-26T22:16:21.636Z",
+        "n": "🎉 Massa De Modelar Massinha Com Cortador Personalizados Para Festa De Aniversar",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/gRxSyWadH",
+        "p": 0.1763
+      },
+      {
+        "h": "2026-11-26T22:21:19.477Z",
+        "n": "👕 Kit Monocromático 10 Peças Menino Algodão Conjunto Masculino Infantil Manga C",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/AAJ2nBPl3o",
+        "p": 0
+      },
+      {
+        "h": "2026-11-26T22:28:22.155Z",
+        "n": "✨ kit 10 calcinhas infantil de excelente qualidade de algodão sortidas com forro",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/4fy6FQOxAi",
+        "p": 0
       }
     ]
   },
@@ -970,6 +994,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T22:16:15.194Z",
-  "ultima_categoria": "brinquedo"
+  "proximo_em": "2026-11-26T22:33:54.857Z",
+  "ultima_categoria": "outros"
 }
