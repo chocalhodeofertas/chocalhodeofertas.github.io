@@ -14573,6 +14573,12 @@
   "2026-11-26": 6
  },
  "cupons": {
+  "APROVEITANOML30": {
+   "criado": "2026-11-26T10:11-03:00",
+   "post": 1872,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
   "AQUITEMCUPOM30": {
    "criado": "2026-11-20T10:04-03:00",
    "post": 1264,
@@ -15215,6 +15221,12 @@
    "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
+  "TUDODEBOM25": {
+   "criado": "2026-11-26T10:11-03:00",
+   "post": 1872,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
   "TUDODEBOM30": {
    "criado": "2026-11-25T11:03-03:00",
    "post": 1753,
@@ -15226,6 +15238,12 @@
    "post": 1603,
    "status": "ativo",
    "validade": "2027-01-10T23:59-03:00"
+  },
+  "VALEAPENANOMELI30": {
+   "criado": "2026-11-26T10:11-03:00",
+   "post": 1872,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
   },
   "VEMPROMELI30": {
    "criado": "2026-11-24T11:11-03:00",
@@ -15248,7 +15266,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5722,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6574,
+ "cupons_ml_ultimo": 6575,
  "cupons_shopee_enviado": "2026-11-26",
  "descoberta_em": "2026-11-26T08:02-03:00",
  "descobertos": {
@@ -54193,7 +54211,7 @@
   "2026-11-26": {
    "com_cupom": 6,
    "copias": 10,
-   "cupons": 6,
+   "cupons": 9,
    "posts": 22,
    "shopee": 16
   }
@@ -60604,6 +60622,25 @@
    "criado": "2026-11-26T10:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1872": {
+   "blocos": [
+    {
+     "codigo": "VALEAPENANOMELI30",
+     "html": "<b>🎟️ VALEAPENANOMELI30</b> 👉 <b>30% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4j27Eaw\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "APROVEITANOML30",
+     "html": "<b>🎟️ APROVEITANOML30</b> 👉 <b>30% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4Cn2XRD\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "TUDODEBOM25",
+     "html": "<b>🎟️ TUDODEBOM25</b> 👉 <b>25% OFF*</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4AUOQ4D\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-26T10:11-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "743": {
    "blocos": [
