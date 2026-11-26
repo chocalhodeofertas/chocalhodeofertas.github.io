@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 33,
-  "ultimo": "2026-11-26T14:09:20.693Z",
+  "enviados": 36,
+  "ultimo": "2026-11-26T14:27:17.581Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-26": 30
   },
   "membros_em": "2026-11-26T14:07:07.401Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -290,6 +290,30 @@
         "r": "enviado",
         "k": "https://meli.la/2aczmgX",
         "p": 0.2692
+      },
+      {
+        "h": "2026-11-26T14:16:53.718Z",
+        "n": "👕 Papete Infantil Masculina Sandália Menino Flexível Confortável e Macia",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/Lp6ULKFdr",
+        "p": 0
+      },
+      {
+        "h": "2026-11-26T14:21:40.072Z",
+        "n": "✨ Cadeira De Carro Infantil Reclinável 5 Posições 0-36kg Proteção Contra Impacto",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1GHQPZP",
+        "p": 0.275
+      },
+      {
+        "h": "2026-11-26T14:27:17.581Z",
+        "n": "✏️ Telas Para Pintura 10x15cm 5 10 15 20 Telas Escolar Infantil Artesanato em Vá",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/AUvsc1a6Md",
+        "p": 0
       }
     ]
   },
@@ -512,6 +536,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T14:16:44.331Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-26T14:34:15.389Z",
+  "ultima_categoria": "escola"
 }
