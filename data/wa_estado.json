@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 27,
-  "ultimo": "2026-11-26T13:35:52.266Z",
+  "enviados": 28,
+  "ultimo": "2026-11-26T13:43:48.457Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-26": 30
   },
   "membros_em": "2026-11-26T13:06:50.807Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -242,6 +242,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/3B9Hs0GAJ1",
         "p": 9
+      },
+      {
+        "h": "2026-11-26T13:43:48.457Z",
+        "n": "🎉 [Natal] Decoração De Para Casa 4 Nós Trem/Pintado Com Papai Noel Brinquedos I",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/30prau4Mt6",
+        "p": 0
       }
     ]
   },
@@ -464,6 +472,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T13:43:39.476Z",
-  "ultima_categoria": "fralda"
+  "proximo_em": "2026-11-26T13:49:53.139Z",
+  "ultima_categoria": "festa"
 }
