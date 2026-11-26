@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 31,
-  "ultimo": "2026-11-26T14:01:36.134Z",
+  "enviados": 32,
+  "ultimo": "2026-11-26T14:06:02.136Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-26": 30
   },
   "membros_em": "2026-11-26T13:06:50.807Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -274,6 +274,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-26T14:06:02.136Z",
+        "n": "🧸 Tapete Termico Infantil Bebe Estampas Atividades Educativo Tapetinho Lavável ",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8VAoBMqvkh",
+        "p": 0
       }
     ]
   },
@@ -496,6 +504,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T14:05:55.678Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-26T14:09:15.824Z",
+  "ultima_categoria": "brinquedo"
 }
