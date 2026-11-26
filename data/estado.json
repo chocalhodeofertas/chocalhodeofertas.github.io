@@ -15215,6 +15215,12 @@
    "status": "encerrado",
    "validade": "2026-11-24T23:59-03:00"
   },
+  "SOHOJE": {
+   "criado": "2026-11-26T20:26-03:00",
+   "post": 1945,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
   "SOUVIP25": {
    "criado": "2026-11-19T10:59-03:00",
    "post": 1163,
@@ -15360,7 +15366,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5747,
+ "cupons_extra_ultimo:cupombr": 5748,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6589,
  "cupons_shopee_enviado": "2026-11-26",
@@ -59127,7 +59133,7 @@
   "2026-11-26": {
    "com_cupom": 13,
    "copias": 23,
-   "cupons": 31,
+   "cupons": 32,
    "posts": 79,
    "shopee": 66
   }
@@ -65744,6 +65750,17 @@
     }
    ],
    "criado": "2026-11-26T20:08-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1945": {
+   "blocos": [
+    {
+     "codigo": "SOHOJE",
+     "html": "<b>🎟️ SOHOJE</b> 👉 <b>20% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 27/11"
+    }
+   ],
+   "criado": "2026-11-26T20:26-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
