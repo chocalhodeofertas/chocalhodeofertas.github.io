@@ -14825,6 +14825,12 @@
    "status": "ativo",
    "validade": "2027-01-11T23:59-03:00"
   },
+  "MAISDESCONTODEZ": {
+   "criado": "2026-11-26T11:31-03:00",
+   "post": 1886,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
   "MAISOFERTAS25": {
    "criado": "2026-11-18T11:03-03:00",
    "post": 1052,
@@ -15294,7 +15300,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5725,
+ "cupons_extra_ultimo:cupombr": 5726,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6578,
  "cupons_shopee_enviado": "2026-11-26",
@@ -55090,7 +55096,7 @@
   "2026-11-26": {
    "com_cupom": 10,
    "copias": 12,
-   "cupons": 14,
+   "cupons": 15,
    "posts": 32,
    "shopee": 22
   }
@@ -61564,6 +61570,17 @@
     }
    ],
    "criado": "2026-11-26T11:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1886": {
+   "blocos": [
+    {
+     "codigo": "MAISDESCONTODEZ",
+     "html": "<b>🎟️ MAISDESCONTODEZ</b> 👉 <b>10% OFF</b>\nCompra mín.: R$79\n⏰ Válido até 27/11"
+    }
+   ],
+   "criado": "2026-11-26T11:31-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
