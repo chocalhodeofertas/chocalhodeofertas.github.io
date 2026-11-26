@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 85,
-  "ultimo": "2026-11-26T21:30:47.964Z",
+  "enviados": 86,
+  "ultimo": "2026-11-26T21:41:39.944Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-25": 32,
     "2026-11-26": 28
   },
-  "membros_em": "2026-11-26T20:37:41.075Z",
-  "ultima_loja": "ml",
+  "membros_em": "2026-11-26T21:37:53.732Z",
+  "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -706,6 +706,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-26T21:41:39.944Z",
+        "n": "🧸 MEDOOSI Jogo de Desafio de Corda e Nós | Quebra-Cabeça Lógico, Brinquedo Desa",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3qOzCpC8cl",
+        "p": 0
       }
     ]
   },
@@ -938,6 +946,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T21:36:32.480Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-26T21:47:13.005Z",
+  "ultima_categoria": "brinquedo"
 }
