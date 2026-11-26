@@ -14573,6 +14573,12 @@
   "2026-11-26": 13
  },
  "cupons": {
+  "ACHADINHO": {
+   "criado": "2026-11-26T18:07-03:00",
+   "post": 1928,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
   "AMLQOGSTENZ": {
    "criado": "2026-11-26T14:01-03:00",
    "post": 1905,
@@ -14872,6 +14878,12 @@
    "post": 1682,
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
+  },
+  "MELHOROFERTA": {
+   "criado": "2026-11-26T18:07-03:00",
+   "post": 1928,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
   },
   "MELI782YHDL": {
    "criado": "2026-11-25T15:01-03:00",
@@ -15342,7 +15354,7 @@
    "validade": "2026-11-25T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5741,
+ "cupons_extra_ultimo:cupombr": 5742,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6585,
  "cupons_shopee_enviado": "2026-11-26",
@@ -58242,7 +58254,7 @@
   "2026-11-26": {
    "com_cupom": 13,
    "copias": 21,
-   "cupons": 25,
+   "cupons": 27,
    "posts": 68,
    "shopee": 55
   }
@@ -64807,6 +64819,21 @@
     }
    ],
    "criado": "2026-11-26T16:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "1928": {
+   "blocos": [
+    {
+     "codigo": "ACHADINHO",
+     "html": "<b>🎟️ ACHADINHO</b> 👉 <b>R$150 OFF</b>\nCompra mín.: R$1499\n⏰ Válido até 27/11"
+    },
+    {
+     "codigo": "MELHOROFERTA",
+     "html": "<b>🎟️ MELHOROFERTA</b> 👉 <b>10% OFF</b>\nCompra mín.: R$199\n⏰ Válido até 27/11"
+    }
+   ],
+   "criado": "2026-11-26T18:07-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
