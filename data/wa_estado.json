@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 48,
-  "ultimo": "2026-11-26T15:48:10.651Z",
+  "enviados": 51,
+  "ultimo": "2026-11-26T16:10:08.479Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-25": 32,
     "2026-11-26": 30
   },
-  "membros_em": "2026-11-26T15:07:31.181Z",
+  "membros_em": "2026-11-26T16:07:47.954Z",
   "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
@@ -410,6 +410,30 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/4LLFP0589p",
         "p": 0.067
+      },
+      {
+        "h": "2026-11-26T15:55:06.319Z",
+        "n": "👕 Kit Sortido 4 Camisetas Polo Menino Infantil Manga Curta Verão",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7fbhMPFV0Q",
+        "p": 0
+      },
+      {
+        "h": "2026-11-26T16:02:07.432Z",
+        "n": "⏰ Válido até 26/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4A9bJBg",
+        "p": 9
+      },
+      {
+        "h": "2026-11-26T16:10:08.479Z",
+        "n": "✨ Fone De Ouvido Bluetooth Orelha Gatinho Infantil Led Sem Fio",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/5VXCm3Sdi9",
+        "p": 0
       }
     ]
   },
@@ -625,6 +649,11 @@
       ]
     },
     "2026-11-26": {
+      "13": [
+        0,
+        1,
+        0
+      ],
       "08": [
         0,
         2,
@@ -632,6 +661,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T15:53:49.041Z",
+  "proximo_em": "2026-11-26T16:14:45.648Z",
   "ultima_categoria": "outros"
 }
