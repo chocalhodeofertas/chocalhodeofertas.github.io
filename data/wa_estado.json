@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 66,
-  "ultimo": "2026-11-26T18:01:08.873Z",
+  "enviados": 67,
+  "ultimo": "2026-11-26T18:08:41.305Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-26": 28
   },
   "membros_em": "2026-11-26T17:36:58.231Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -554,6 +554,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-26T18:08:41.305Z",
+        "n": "✨ Blusa Térmica UV Infatil Blusa com Proteção Solar para Menino + Menina UV50 Mo",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/1W149PJBYA",
+        "p": 0
       }
     ]
   },
@@ -786,6 +794,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T18:08:33.204Z",
-  "ultima_categoria": "higiene"
+  "proximo_em": "2026-11-26T18:16:14.773Z",
+  "ultima_categoria": "outros"
 }
