@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 70,
-  "ultimo": "2026-11-26T18:30:08.726Z",
+  "enviados": 73,
+  "ultimo": "2026-11-26T18:52:11.201Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-25": 32,
     "2026-11-26": 28
   },
-  "membros_em": "2026-11-26T17:36:58.231Z",
+  "membros_em": "2026-11-26T18:37:18.579Z",
   "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
@@ -586,6 +586,30 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/AUvssEZJvd",
         "p": 0
+      },
+      {
+        "h": "2026-11-26T18:37:08.205Z",
+        "n": "✨ Creme Preventivo De Assaduras Bepantol Baby 120g",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3B9I9gqayQ",
+        "p": 0
+      },
+      {
+        "h": "2026-11-26T18:45:09.228Z",
+        "n": "🧸 Squishy Cubo de Gelo Macio Anti Estresse Brinquedo de Apertar Infantil Elásti",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3qOz0KZ9xs",
+        "p": 0
+      },
+      {
+        "h": "2026-11-26T18:52:11.201Z",
+        "n": "🧷 Kit 400 Toalhas Umedecidas Chameguinho Baby Lenço Umedecido para Bebê Higiene",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2BGl1lFRLh",
+        "p": 0
       }
     ]
   },
@@ -818,6 +842,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-26T18:35:56.863Z",
-  "ultima_categoria": "outros"
+  "proximo_em": "2026-11-26T18:56:50.919Z",
+  "ultima_categoria": "fralda"
 }
