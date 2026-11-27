@@ -19211,6 +19211,12 @@
    "status": "ativo",
    "validade": "2026-11-27T23:59-03:00"
   },
+  "BLACKVIP": {
+   "criado": "2026-11-27T18:02-03:00",
+   "post": 2094,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
   "BLACKVIPMELI": {
    "criado": "2026-11-27T11:51-03:00",
    "post": 2039,
@@ -20118,9 +20124,9 @@
    "validade": "2026-11-28T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5798,
+ "cupons_extra_ultimo:cupombr": 5799,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6610,
+ "cupons_ml_ultimo": 6612,
  "cupons_shopee_enviado": "2026-11-27",
  "descoberta_em": "2026-11-27T08:02-03:00",
  "descobertos": {
@@ -71308,7 +71314,7 @@
   "2026-11-27": {
    "com_cupom": 16,
    "copias": 17,
-   "cupons": 35,
+   "cupons": 36,
    "posts": 73,
    "shopee": 50
   }
@@ -78443,6 +78449,17 @@
     }
    ],
    "criado": "2026-11-27T17:09-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "2094": {
+   "blocos": [
+    {
+     "codigo": "BLACKVIP",
+     "html": "<b>🎟️ BLACKVIP</b> 👉 <b>18% OFF</b>\nCompra mín.: R$599 · Desconto máx.: R$250\n⏰ Válido até 27/11\n👉 <a href=\"https://bit.ly/4tom2yY\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-27T18:02-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
