@@ -18179,6 +18179,12 @@
    "status": "ativo",
    "validade": "2026-12-23T23:59-03:00"
   },
+  "APROVEITANOML25": {
+   "criado": "2026-11-27T10:09-03:00",
+   "post": 2014,
+   "status": "ativo",
+   "validade": "2026-12-20T23:59-03:00"
+  },
   "APROVEITANOML30": {
    "criado": "2026-11-26T10:11-03:00",
    "post": 1872,
@@ -18299,9 +18305,21 @@
    "status": "encerrado",
    "validade": "2026-11-19T23:59-03:00"
   },
+  "CORREPROAPP30": {
+   "criado": "2026-11-27T10:09-03:00",
+   "post": 2014,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
   "CORREPROMELI25": {
    "criado": "2026-11-24T11:11-03:00",
    "post": 1682,
+   "status": "ativo",
+   "validade": "2026-12-31T23:59-03:00"
+  },
+  "CORREPROMELI30": {
+   "criado": "2026-11-27T10:09-03:00",
+   "post": 2014,
    "status": "ativo",
    "validade": "2026-12-31T23:59-03:00"
   },
@@ -18659,6 +18677,12 @@
    "status": "ativo",
    "validade": "2026-11-28T23:59-03:00"
   },
+  "MELIOFF35": {
+   "criado": "2026-11-27T10:09-03:00",
+   "post": 2014,
+   "status": "ativo",
+   "validade": "2026-12-23T23:59-03:00"
+  },
   "MELIOW7": {
    "criado": "2026-11-26T09:08-03:00",
    "post": 1856,
@@ -18682,6 +18706,12 @@
    "post": 971,
    "status": "ativo",
    "validade": "2026-12-17T23:59-03:00"
+  },
+  "MELIVIP35": {
+   "criado": "2026-11-27T10:09-03:00",
+   "post": 2014,
+   "status": "ativo",
+   "validade": "2026-12-23T23:59-03:00"
   },
   "MELIXF9": {
    "criado": "2026-11-26T08:06-03:00",
@@ -19112,7 +19142,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5777,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6600,
+ "cupons_ml_ultimo": 6601,
  "cupons_shopee_enviado": "2026-11-27",
  "descoberta_em": "2026-11-27T08:02-03:00",
  "descobertos": {
@@ -64791,7 +64821,7 @@
   "2026-11-27": {
    "com_cupom": 6,
    "copias": 9,
-   "cupons": 17,
+   "cupons": 22,
    "posts": 21,
    "shopee": 15
   }
@@ -71724,6 +71754,33 @@
     }
    ],
    "criado": "2026-11-27T10:02-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "2014": {
+   "blocos": [
+    {
+     "codigo": "APROVEITANOML25",
+     "html": "<b>🎟️ APROVEITANOML25</b> 👉 <b>25% OFF</b>\n⏰ Válido até 20/12\n👉 <a href=\"https://bit.ly/4jAsdwh\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "CORREPROAPP30",
+     "html": "<b>🎟️ CORREPROAPP30</b> 👉 <b>30% OFF</b>\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4j2KH8v\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "CORREPROMELI30",
+     "html": "<b>🎟️ CORREPROMELI30</b> 👉 <b>30% OFF</b>\n⏰ Válido até 31/12\n👉 <a href=\"https://bit.ly/4fKUuhh\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "MELIOFF35",
+     "html": "<b>🎟️ MELIOFF35</b> 👉 <b>35% OFF</b>\n⏰ Válido até 23/12\n👉 <a href=\"https://bit.ly/49eXvmp\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "MELIVIP35",
+     "html": "<b>🎟️ MELIVIP35</b> 👉 <b>35% OFF</b>\n⏰ Válido até 23/12\n👉 <a href=\"https://bit.ly/4jDapk4\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-27T10:09-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
