@@ -227,6 +227,7 @@ async function postar(item) {
         info.jpegThumbnail = imageMessage?.jpegThumbnail ? Buffer.from(imageMessage.jpegThumbnail) : undefined;
         info.highQualityThumbnail = imageMessage || undefined;
       }
+      if (!info.jpegThumbnail) console.log(`Aviso: prévia do link sem foto (${pv.imagem ? "a foto não carregou" : "a oferta veio sem foto"}).`);
       await sock.sendMessage(grupo, { text: item.texto, linkPreview: info, ...extra });
       return;
     } catch (e) {

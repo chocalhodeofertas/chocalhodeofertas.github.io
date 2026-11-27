@@ -103,6 +103,11 @@ def economia(preco, info):
         return 0.0
     if info["maximo"]:
         e = min(e, info["maximo"])
+    # 27/11: "S1Y3OJMASUJ — R$100 OFF" sem compra mínima no post de origem deixou fralda de R$ 90 "por R$ 0,00".
+    # Cupom que tira mais de 30% sem compra mínima conhecida quase sempre tem regra que não veio no post: não usa.
+    # E nenhum cupom do canal deixa o produto pela metade ou menos.
+    if (not info["minimo"] and e > preco * 0.3) or e > preco * 0.5:
+        return 0.0
     return round(min(e, preco), 2)
 
 

@@ -113,7 +113,9 @@ Textos para o dono do projeto sempre em português do Brasil.
   com e sem token, e `/products/{id}` passou a vir com `buy_box_winner: null` → a API não dá mais preço de catálogo ao app.
   Funciona: `/products/{id}` (ficha), `/products/search`, `/highlights`, categorias, `/users`. Outros apps viram o mesmo na mesma noite.
   Proteção (`mercadolivre.BLOQUEIO_SEGUIDOS`): 3 recusas seguidas → `items_bloqueado`, o cliente para de chamar até o fim da rodada;
-  log vira 1 linha de resumo; `comandos.avisar_ml_bloqueado` avisa o admin 1x/dia. `main.log` tenta de novo em `BlockingIOError`
+  log vira 1 linha de resumo; `comandos.avisar_ml_bloqueado` avisa o admin 1x/dia.
+  Foto: sem a lista de anúncios o post copiado saía sem foto (e o WhatsApp sem a imagem da prévia); 27/11: `ml.ficha` (só /products/{id})
+  dá nome e foto para o `cache` de `main` e `_reconferir` mantém a foto da oferta quando a releitura da página não traz. `main.log` tenta de novo em `BlockingIOError`
   (a enxurrada de avisos travava o stdout e derrubava a rodada). Sondas: `tools/sondar_acesso_ml`, `tools/sondar_preco_alternativo`.
 - `lote.py`: lote do Linkbuilder (não existe API oficial do ML para gerar link; é manual). Cada link oficial abre UM anúncio
   (o vencedor quando o lote foi montado): `estado.links_item` guarda qual (lotes antigos vieram de `data/links_item_inicial.json`).
@@ -125,6 +127,8 @@ Textos para o dono do projeto sempre em português do Brasil.
   em `estado.reputacao`) não entra no lote: troca pelo anúncio de outro vendedor do catálogo até 5% mais caro
   (`InfoProduto.vendedores`); sem alternativa, fica de fora. Amarelo, verde e "sem cor" entram. Falha na consulta não barra.
   Sonda: `tools/sondar_reputacao` (cor do vendedor de cada item do lote pendente, só API).
+- Cupom do canal na oferta (`cupom_oferta.economia`, 27/11): sem compra mínima conhecida, cupom que tira mais de 30% não entra, e nenhum
+  deixa o produto pela metade ("S1Y3OJMASUJ R$100 OFF" zerou uma fralda de R$ 90).
 - `cupons_ml.py` + `cupom_oferta.py`: lê cupons (canal oficial do ML + @cupombr via Telethon) e aplica o melhor cupom compatível na oferta.
   O "cupom do anúncio" (`cupom_oferta.cupom_da_pagina`) lia a página abrindo o meli.la do Leonardo a cada post: DESLIGADO em 16/11
   (regra dele: o bot não abre links de afiliado). Só volta com `CUPOM_DA_PAGINA=1`, se ele pedir. Ainda abrem o link, só quando

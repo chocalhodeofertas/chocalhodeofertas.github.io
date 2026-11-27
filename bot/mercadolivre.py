@@ -143,6 +143,13 @@ class MercadoLivre:
                 )
         return resultado
 
+    def ficha(self, pid):
+        """(nome, foto grande) da ficha do produto de catálogo. /products/{id} segue liberado mesmo com o
+        bloqueio de 23/11 (só /products/{id}/items é recusado)."""
+        dados = self._get(f"/products/{pid}")
+        fotos = dados.get("pictures") or []
+        return dados.get("name") or "", (_imagem_grande(fotos[0].get("url")) if fotos else None)
+
     def catalogo(self, pid, titulo=None, imagem=None):
         """Produto de catálogo: pega o menor preço entre as lojas que vendem.
 

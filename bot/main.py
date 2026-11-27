@@ -308,18 +308,27 @@ def buscar_infos(ml: MercadoLivre, produtos, estado=None):
     def um(p):
         titulo, imagem = cache.get(p.id, (None, None))
         try:
-            return p.id, ml.catalogo(p.id, titulo, imagem)
+            return p.id, ml.catalogo(p.id, titulo, imagem), None
         except (ErroML, AcessoNegado) as e:
             if not getattr(ml, "items_bloqueado", False):
                 log(f"Aviso: {p.id}: {e}")
-            return p.id, None
+            # 27/11: sem a lista de anúncios, o post copiado saía sem foto (e sem a prévia do link no WhatsApp).
+            # A ficha do produto continua liberada: pega nome e foto dela.
+            if imagem or not hasattr(ml, "ficha"):
+                return p.id, None, None
+            try:
+                return p.id, None, ml.ficha(p.id)
+            except (ErroML, AcessoNegado):
+                return p.id, None, None
 
     catalogo = [p for p in produtos if p.tipo == "catalogo"]
     with ThreadPoolExecutor(max_workers=6) as ex:
-        for pid, info in ex.map(um, catalogo):
+        for pid, info, ficha in ex.map(um, catalogo):
             if info:
                 infos[pid] = info
                 cache[pid] = [info.titulo, info.imagem]
+            elif ficha and ficha[1]:
+                cache[pid] = [cache.get(pid, [None])[0] or ficha[0], ficha[1]]
     # 25/11: sem preço pela API, as ofertas copiadas de outros canais usam o preço lido na página do link deles
     da_pagina = 0
     for p in catalogo:
@@ -377,6 +386,8 @@ def _reconferir(ml, produto, oferta, estado, cfg, agora):
         log(f"{oferta.id}: o preço mudou antes do post; pulei.")
         return None
     nova.categoria = oferta.categoria
+    if not nova.imagem:
+        nova.imagem = oferta.imagem  # a releitura da página do outro canal não traz foto
     return nova
 
 

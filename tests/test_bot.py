@@ -3433,3 +3433,14 @@ def test_pagina_do_canal_traz_pix_e_cupom():
     t = mensagens.montar_telegram(o, random.Random(1))
     assert "💠 <b>R$ 77,27</b> no Pix" in t and "Tem cupom de <b>15% OFF</b> no anúncio" in t
     assert "💠 *R$ 77,27* no Pix" in mensagens.montar_whatsapp(o, random.Random(1))
+
+
+def test_cupom_que_zeraria_o_preco_nao_entra():
+    from bot.cupom_oferta import economia, info_do_bloco
+    info = info_do_bloco("<b>🎟️ S1Y3OJMASUJ</b> 👉 <b>R$100 OFF</b>\n⭐ Vale para o site todo\n⏰ Válido até 27/11")
+    assert economia(90.86, info) == 0.0      # fralda de R$ 90 não sai "por R$ 0,00"
+    assert economia(279.0, info) == 0.0      # 36% sem compra mínima conhecida: não usa
+    assert economia(600.0, info) == 100.0    # numa compra grande, vale
+    com_minimo = info_do_bloco("<b>🎟️ X</b> 👉 <b>R$40 OFF</b>\nCompra mín.: R$99\n⭐ Vale para o site todo")
+    assert economia(110.0, com_minimo) == 40.0
+    assert economia(70.0, info_do_bloco("<b>🎟️ Y</b> 👉 <b>20% OFF</b>\n⭐ Vale para o site todo")) == 14.0
