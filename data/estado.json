@@ -18773,6 +18773,12 @@
    "status": "ativo",
    "validade": "2026-11-27T23:59-03:00"
   },
+  "PROMOHOJEPRACASA": {
+   "criado": "2026-11-27T09:40-03:00",
+   "post": 2009,
+   "status": "ativo",
+   "validade": "2026-11-28T23:59-03:00"
+  },
   "PROMOSCERTAS30": {
    "criado": "2026-11-24T11:11-03:00",
    "post": 1682,
@@ -18996,7 +19002,7 @@
    "validade": "2026-11-28T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5773,
+ "cupons_extra_ultimo:cupombr": 5774,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6599,
  "cupons_shopee_enviado": "2026-11-27",
@@ -64566,7 +64572,7 @@
   "2026-11-27": {
    "com_cupom": 6,
    "copias": 9,
-   "cupons": 12,
+   "cupons": 13,
    "posts": 21,
    "shopee": 15
   }
@@ -71460,6 +71466,17 @@
    "criado": "2026-11-27T09:04-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "2009": {
+   "blocos": [
+    {
+     "codigo": "PROMOHOJEPRACASA",
+     "html": "<b>🎟️ PROMOHOJEPRACASA</b> 👉 <b>20% OFF</b>\nCompra mín.: R$599\n⏰ Válido até 28/11"
+    }
+   ],
+   "criado": "2026-11-27T09:40-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
   "836": {
    "blocos": [
