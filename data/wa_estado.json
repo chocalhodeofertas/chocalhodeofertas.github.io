@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 22,
-  "ultimo": "2026-11-27T13:43:52.964Z",
+  "enviados": 25,
+  "ultimo": "2026-11-27T14:04:25.744Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-27": 28
   },
   "membros_em": "2026-11-27T13:09:33.640Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -250,6 +250,30 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/AAJ3oRKyUG",
         "p": 0.0937
+      },
+      {
+        "h": "2026-11-27T13:51:19.611Z",
+        "n": "🥣 Kit C/3 Babador Bandana de Bebê 100% Algodão 23cm x 18cm - Sortidas ANJIN.B",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8AXzOrEesN",
+        "p": 0
+      },
+      {
+        "h": "2026-11-27T13:58:23.672Z",
+        "n": "🧸 Cama Elástica Pula Pula Infantil Trampolim 1,4 Metros Atentu",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/182h9X2",
+        "p": 0.41
+      },
+      {
+        "h": "2026-11-27T14:04:25.744Z",
+        "n": "⏰ Válido até 27/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4eUo7fS",
+        "p": 9
       }
     ]
   },
@@ -482,8 +506,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T13:51:12.295Z",
-  "ultima_categoria": "fralda",
+  "proximo_em": "2026-11-27T14:08:01.454Z",
+  "ultima_categoria": "brinquedo",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
