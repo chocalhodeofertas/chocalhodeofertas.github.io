@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 4,
-  "ultimo": "2026-11-27T11:10:10.675Z",
+  "enviados": 5,
+  "ultimo": "2026-11-27T11:25:30.474Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-27": 28
   },
   "membros_em": "2026-11-27T11:08:52.043Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -106,6 +106,14 @@
         "r": "enviado",
         "k": "https://meli.la/2dR7d3w",
         "p": 0.3684
+      },
+      {
+        "h": "2026-11-27T11:25:30.474Z",
+        "n": "🧷 Huggies Fralda Descartável Máxima Proteção P - 48 Un",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8VApfyliTA",
+        "p": 0.0901
       }
     ]
   },
@@ -338,7 +346,7 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T11:14:02.175Z",
+  "proximo_em": "2026-11-27T11:31:43.273Z",
   "ultima_categoria": "fralda",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
