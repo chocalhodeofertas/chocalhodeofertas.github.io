@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 82,
-  "ultimo": "2026-11-27T20:41:01.282Z",
+  "enviados": 84,
+  "ultimo": "2026-11-27T20:51:55.200Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-26": 28,
     "2026-11-27": 28
   },
-  "membros_em": "2026-11-27T19:44:40.081Z",
+  "membros_em": "2026-11-27T20:45:06.618Z",
   "ultima_loja": "ml",
   "max_dia": 150,
   "intervalo_min": 3,
@@ -730,6 +730,22 @@
         "r": "enviado",
         "k": "https://meli.la/2tCbVH2",
         "p": 0.2258
+      },
+      {
+        "h": "2026-11-27T20:45:43.919Z",
+        "n": "🧸 Volante Educativo Interativo Infantil Com Som Realista Brinquedo De Criança S",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/AUvuevuRBm",
+        "p": 0
+      },
+      {
+        "h": "2026-11-27T20:51:55.200Z",
+        "n": "🛁 Banheira Bebê Dobrável Com Suporte Termômetro E Almofada Cor Cinza",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2HcPWSz",
+        "p": 0.2872
       }
     ]
   },
@@ -962,8 +978,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T20:45:36.434Z",
-  "ultima_categoria": "alimentacao",
+  "proximo_em": "2026-11-27T20:56:57.121Z",
+  "ultima_categoria": "higiene",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
