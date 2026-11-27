@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 116,
-  "ultimo": "2026-11-27T01:00:52.935Z",
+  "enviados": 119,
+  "ultimo": "2026-11-27T02:40:00.138Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-25": 32,
     "2026-11-26": 28
   },
-  "membros_em": "2026-11-27T00:41:34.296Z",
+  "membros_em": "2026-11-27T02:30:03.328Z",
   "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
@@ -954,6 +954,54 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/7pv89n1GJ7",
         "p": 0
+      },
+      {
+        "h": "2026-11-27T01:07:17.427Z",
+        "n": "⏰ Válido até 26/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/3WOJj0L",
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T01:13:54.306Z",
+        "n": "⏰ Válido até 27/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T01:17:31.729Z",
+        "n": "✨ Kit 2 Mantas Bebê Pipoquinha Macias Quentes Enxoval Recém Nascido Menino Menin",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/1W14dZ35q0",
+        "p": 0
+      },
+      {
+        "h": "2026-11-27T02:32:58.118Z",
+        "n": "⏰ Válido até 26/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4jAnMl9",
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T02:36:49.033Z",
+        "n": "⏰ Válido até 27/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T02:40:00.138Z",
+        "n": "✏️ Lixa de Unha Elétrico Aparador Cortador Para Bebê Infantil Com Estojo ES",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/5LDnJh99ci",
+        "p": 0
       }
     ]
   },
@@ -1186,6 +1234,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T01:07:09.525Z",
-  "ultima_categoria": "escola"
+  "proximo_em": "2026-11-27T02:46:44.318Z",
+  "ultima_categoria": "escola",
+  "virada_dia": "2026-11-26",
+  "virada_enviados": 3
 }
