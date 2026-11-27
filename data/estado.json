@@ -18275,6 +18275,12 @@
    "status": "encerrado",
    "validade": "2026-11-26T23:59-03:00"
   },
+  "CORREAQUIML": {
+   "criado": "2026-11-27T10:02-03:00",
+   "post": 2013,
+   "status": "ativo",
+   "validade": "2027-05-31T23:59-03:00"
+  },
   "CORREBLACK": {
    "criado": "2026-11-27T00:00-03:00",
    "post": 1974,
@@ -18447,7 +18453,7 @@
    "criado": "2026-11-27T10:00-03:00",
    "post": 2010,
    "status": "ativo",
-   "validade": "2026-11-28T23:59-03:00"
+   "validade": "2026-11-27T23:59-03:00"
   },
   "HORADOCUPOM25": {
    "criado": "2026-11-17T14:02-03:00",
@@ -18855,7 +18861,7 @@
    "criado": "2026-11-27T10:00-03:00",
    "post": 2010,
    "status": "ativo",
-   "validade": "2026-11-28T23:59-03:00"
+   "validade": "2026-11-27T23:59-03:00"
   },
   "PROMOAGORA": {
    "criado": "2026-11-26T10:00-03:00",
@@ -18983,6 +18989,12 @@
    "status": "ativo",
    "validade": "2026-11-27T23:59-03:00"
   },
+  "TEMOFERTA": {
+   "criado": "2026-11-27T10:02-03:00",
+   "post": 2013,
+   "status": "ativo",
+   "validade": "2027-05-31T23:59-03:00"
+  },
   "TODO2011SITE": {
    "criado": "2026-11-20T08:04-03:00",
    "post": 1250,
@@ -19100,7 +19112,7 @@
  },
  "cupons_extra_ultimo:cupombr": 5776,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6599,
+ "cupons_ml_ultimo": 6600,
  "cupons_shopee_enviado": "2026-11-27",
  "descoberta_em": "2026-11-27T08:02-03:00",
  "descobertos": {
@@ -64779,7 +64791,7 @@
   "2026-11-27": {
    "com_cupom": 6,
    "copias": 9,
-   "cupons": 15,
+   "cupons": 17,
    "posts": 21,
    "shopee": 15
   }
@@ -71689,14 +71701,29 @@
    "blocos": [
     {
      "codigo": "PRECINHOBLACK",
-     "html": "<b>🎟️ PRECINHOBLACK</b> 👉 <b>R$300 OFF</b>\n⏰ Válido até 28/11"
+     "html": "<b>🎟️ PRECINHOBLACK</b> 👉 <b>R$300 OFF*</b> ⬆️\n⏰ Válido até 27/11"
     },
     {
      "codigo": "HORABLACK",
-     "html": "<b>🎟️ HORABLACK</b> 👉 <b>20% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 28/11"
+     "html": "<b>🎟️ HORABLACK</b> 👉 <b>20% OFF*</b> ⬆️\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 27/11"
     }
    ],
    "criado": "2026-11-27T10:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
+  },
+  "2013": {
+   "blocos": [
+    {
+     "codigo": "CORREAQUIML",
+     "html": "<b>🎟️ CORREAQUIML</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/05\n👉 <a href=\"https://bit.ly/4jcQF5K\">Ativar o cupom</a>"
+    },
+    {
+     "codigo": "TEMOFERTA",
+     "html": "<b>🎟️ TEMOFERTA</b> 👉 <b>30% OFF</b>\nCompra mín.: R$1 · Desconto máx.: R$500\n⏰ Válido até 31/05\n👉 <a href=\"https://bit.ly/4A5scX7\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-27T10:02-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
