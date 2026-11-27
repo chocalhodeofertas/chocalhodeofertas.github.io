@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 37,
-  "ultimo": "2026-11-27T15:09:56.343Z",
+  "enviados": 39,
+  "ultimo": "2026-11-27T15:24:18.021Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -370,6 +370,22 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-27T15:17:16.328Z",
+        "n": "✨ Cotonetes Hastes Flexíveis Enlace Para Bebês Com 50 Unidades",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6fjBiEq8d9",
+        "p": 0
+      },
+      {
+        "h": "2026-11-27T15:24:18.021Z",
+        "n": "✨ Fralda Descartável Turma da Mônica Baby M 50 Unidades 12 h",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1wYBGNu",
+        "p": 0.3486
       }
     ]
   },
@@ -602,8 +618,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T15:17:09.798Z",
-  "ultima_categoria": "outros",
+  "proximo_em": "2026-11-27T15:28:49.383Z",
+  "ultima_categoria": "fralda",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
