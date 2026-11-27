@@ -18899,6 +18899,12 @@
    "status": "encerrado",
    "validade": "2026-11-21T23:59-03:00"
   },
+  "BLACKMELI": {
+   "criado": "2026-11-27T15:01-03:00",
+   "post": 2064,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
   "BLACKVIPMELI": {
    "criado": "2026-11-27T11:51-03:00",
    "post": 2039,
@@ -19782,9 +19788,9 @@
    "validade": "2026-11-28T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5787,
+ "cupons_extra_ultimo:cupombr": 5788,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6607,
+ "cupons_ml_ultimo": 6608,
  "cupons_shopee_enviado": "2026-11-27",
  "descoberta_em": "2026-11-27T08:02-03:00",
  "descobertos": {
@@ -69107,7 +69113,7 @@
   "2026-11-27": {
    "com_cupom": 11,
    "copias": 15,
-   "cupons": 29,
+   "cupons": 30,
    "posts": 53,
    "shopee": 39
   }
@@ -76180,6 +76186,17 @@
     }
    ],
    "criado": "2026-11-27T14:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "2064": {
+   "blocos": [
+    {
+     "codigo": "BLACKMELI",
+     "html": "<b>🎟️ BLACKMELI</b> 👉 <b>20% OFF</b>\nCompra mín.: R$199 · Desconto máx.: R$60\n⏰ Válido até 27/11\n👉 <a href=\"https://bit.ly/4Cn4Ttc\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-27T15:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
