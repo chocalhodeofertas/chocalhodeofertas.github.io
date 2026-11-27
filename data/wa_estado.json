@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 50,
-  "ultimo": "2026-11-27T16:36:46.952Z",
+  "enviados": 53,
+  "ultimo": "2026-11-27T16:55:35.579Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-26": 28,
     "2026-11-27": 28
   },
-  "membros_em": "2026-11-27T15:43:15.350Z",
+  "membros_em": "2026-11-27T16:43:37.506Z",
   "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
@@ -474,6 +474,30 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/8fUGDeqsXE",
         "p": 0
+      },
+      {
+        "h": "2026-11-27T16:45:14.618Z",
+        "n": "🛁 Creme Antiassaduras Bepantol para assadura Baby Hipoalergênico 100g",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2hp4gFL",
+        "p": 0.2294
+      },
+      {
+        "h": "2026-11-27T16:52:10.315Z",
+        "n": "✨ Carro Elétrico Infantil Controle Remoto Bateria 6v Marcha Frente/Ré Bluetooth ",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2A9xAaY",
+        "p": 0.2768
+      },
+      {
+        "h": "2026-11-27T16:55:35.579Z",
+        "n": "👕 Pijama Blogueirinha Americano Feminino Shortdoll Aberto na Frente Gestante Ma",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/9zzdpFemGh",
+        "p": 0
       }
     ]
   },
@@ -706,8 +730,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T16:42:09.979Z",
-  "ultima_categoria": "brinquedo",
+  "proximo_em": "2026-11-27T16:58:55.416Z",
+  "ultima_categoria": "roupa",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
