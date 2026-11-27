@@ -18457,6 +18457,12 @@
    "status": "encerrado",
    "validade": "2026-11-19T23:59-03:00"
   },
+  "BFIN2711XX": {
+   "criado": "2026-11-27T11:10-03:00",
+   "post": 2027,
+   "status": "ativo",
+   "validade": "2026-11-28T23:59-03:00"
+  },
   "BLACK25BABY": {
    "criado": "2026-11-25T16:00-03:00",
    "post": 1805,
@@ -19340,7 +19346,7 @@
    "validade": "2026-11-28T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5778,
+ "cupons_extra_ultimo:cupombr": 5780,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6602,
  "cupons_shopee_enviado": "2026-11-27",
@@ -65665,7 +65671,7 @@
   "2026-11-27": {
    "com_cupom": 6,
    "copias": 12,
-   "cupons": 24,
+   "cupons": 25,
    "posts": 28,
    "shopee": 21
   }
@@ -72647,6 +72653,17 @@
     }
    ],
    "criado": "2026-11-27T11:03-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "2027": {
+   "blocos": [
+    {
+     "codigo": "BFIN2711XX",
+     "html": "<b>🎟️ BFIN2711XX</b> 👉 <b>R$1200 OFF</b>\nCompra mín.: R$4000\n⏰ Válido até 28/11"
+    }
+   ],
+   "criado": "2026-11-27T11:10-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
