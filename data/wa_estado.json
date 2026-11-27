@@ -1,12 +1,11 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 0,
-  "ultimo": "2026-11-27T03:07:44.771Z",
+  "enviados": 1,
+  "ultimo": "2026-11-27T03:38:17.098Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
-    "2026-11-17": 14,
     "2026-11-18": 22,
     "2026-11-19": 21,
     "2026-11-20": 22,
@@ -15,9 +14,10 @@
     "2026-11-23": 30,
     "2026-11-24": 31,
     "2026-11-25": 32,
-    "2026-11-26": 28
+    "2026-11-26": 28,
+    "2026-11-27": 28
   },
-  "membros_em": "2026-11-27T02:30:03.328Z",
+  "membros_em": "2026-11-27T03:30:22.802Z",
   "ultima_loja": "ml",
   "max_dia": 130,
   "intervalo_min": 3,
@@ -42,6 +42,46 @@
         "r": "enviado",
         "k": "https://bit.ly/4AVW88h",
         "p": 9
+      },
+      {
+        "h": "2026-11-27T03:12:50.756Z",
+        "n": "⏰ Válido até 28/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T03:18:48.096Z",
+        "n": "🎉 saia tule infantil 30cm [ para festas, etc ] - C&S BAZAR -",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/6L6KWmmYdu",
+        "p": 0
+      },
+      {
+        "h": "2026-11-27T03:24:37.089Z",
+        "n": "⏰ Válido até 28/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T03:31:47.806Z",
+        "n": "👕 Conjunto De10/50/100 Laços De Cabelo Coloridos10/50/100 Para Criança Elástico",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/1LheZzvySX",
+        "p": 0
+      },
+      {
+        "h": "2026-11-27T03:38:17.098Z",
+        "n": "✨ Fralda Pampers Pants Premium Care XXG 60 unidades",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/1SaVxqS",
+        "p": 0.2547
       }
     ]
   },
@@ -274,8 +314,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T03:12:41.604Z",
-  "ultima_categoria": "higiene",
+  "proximo_em": "2026-11-27T03:45:47.783Z",
+  "ultima_categoria": "fralda",
   "virada_dia": "2026-11-27",
-  "virada_enviados": 2
+  "virada_enviados": 6
 }
