@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 75,
-  "ultimo": "2026-11-27T19:53:32.930Z",
+  "enviados": 77,
+  "ultimo": "2026-11-27T20:09:46.068Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -674,6 +674,22 @@
         "r": "enviado",
         "k": "https://meli.la/2XZCMTq",
         "p": 0.3891
+      },
+      {
+        "h": "2026-11-27T20:01:57.251Z",
+        "n": "⏰ Válido até 27/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/49iAwH2",
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T20:09:46.068Z",
+        "n": "⏰ Válido até 28/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -906,7 +922,7 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T20:00:22.895Z",
+  "proximo_em": "2026-11-27T20:14:04.518Z",
   "ultima_categoria": "higiene",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
