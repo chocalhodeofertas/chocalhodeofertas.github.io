@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 26,
-  "ultimo": "2026-11-27T14:08:10.945Z",
+  "enviados": 28,
+  "ultimo": "2026-11-27T14:23:00.146Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-27": 28
   },
   "membros_em": "2026-11-27T14:10:01.198Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -282,6 +282,22 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-27T14:15:22.543Z",
+        "n": "⏰ Válido até 28/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T14:23:00.146Z",
+        "n": "👕 Kit 3 Tênis Bebê Menino – Conforto e Segurança para Brincadeiras - Envio Rápi",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/40iQUR2bZv",
+        "p": 0.2847
       }
     ]
   },
@@ -514,8 +530,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T14:15:16.201Z",
-  "ultima_categoria": "brinquedo",
+  "proximo_em": "2026-11-27T14:29:04.644Z",
+  "ultima_categoria": "roupa",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
