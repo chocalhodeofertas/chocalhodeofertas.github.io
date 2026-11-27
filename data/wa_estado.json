@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 59,
-  "ultimo": "2026-11-27T17:54:05.500Z",
+  "enviados": 61,
+  "ultimo": "2026-11-27T18:09:20.767Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -546,6 +546,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/3B9JknuB8U",
         "p": 0
+      },
+      {
+        "h": "2026-11-27T18:01:53.683Z",
+        "n": "⏰ Válido até 27/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4Cn4Ttc",
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T18:09:20.767Z",
+        "n": "🧸 Blocos de Montar Magnéticos Construção Brinquedo Infantil",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/Lp8OhZAtz",
+        "p": 0.1497
       }
     ]
   },
@@ -778,8 +794,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T18:01:49.380Z",
-  "ultima_categoria": "higiene",
+  "proximo_em": "2026-11-27T18:14:00.806Z",
+  "ultima_categoria": "brinquedo",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
