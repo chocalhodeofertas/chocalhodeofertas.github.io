@@ -19611,6 +19611,12 @@
    "status": "ativo",
    "validade": "2026-11-27T23:59-03:00"
   },
+  "SALDOMPAGORA": {
+   "criado": "2026-11-27T15:21-03:00",
+   "post": 2068,
+   "status": "ativo",
+   "validade": "2026-11-28T23:59-03:00"
+  },
   "SITE2311TODO": {
    "criado": "2026-11-23T15:00-03:00",
    "post": 1637,
@@ -19816,7 +19822,7 @@
    "validade": "2026-11-28T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5788,
+ "cupons_extra_ultimo:cupombr": 5789,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6608,
  "cupons_shopee_enviado": "2026-11-27",
@@ -69265,7 +69271,7 @@
   "2026-11-27": {
    "com_cupom": 11,
    "copias": 15,
-   "cupons": 30,
+   "cupons": 31,
    "posts": 55,
    "shopee": 41
   }
@@ -76349,6 +76355,17 @@
     }
    ],
    "criado": "2026-11-27T15:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "2068": {
+   "blocos": [
+    {
+     "codigo": "SALDOMPAGORA",
+     "html": "<b>🎟️ SALDOMPAGORA</b> 👉 <b>R$50 OFF</b>\nCompra mín.: R$350\n⏰ Válido até 28/11"
+    }
+   ],
+   "criado": "2026-11-27T15:21-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
