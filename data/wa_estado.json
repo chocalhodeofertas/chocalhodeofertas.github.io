@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 12,
-  "ultimo": "2026-11-27T12:44:13.102Z",
+  "enviados": 13,
+  "ultimo": "2026-11-27T12:51:13.350Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-27": 28
   },
   "membros_em": "2026-11-27T12:09:04.931Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -170,6 +170,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-27T12:51:13.350Z",
+        "n": "👕 Kit 6/9/12/18 Pares De Meia Bebê Infantil Para Menina",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8fUFwYEpYb",
+        "p": 0
       }
     ]
   },
@@ -402,8 +410,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T12:51:06.183Z",
-  "ultima_categoria": "brinquedo",
+  "proximo_em": "2026-11-27T12:56:01.548Z",
+  "ultima_categoria": "roupa",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
