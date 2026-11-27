@@ -19013,6 +19013,12 @@
   "2026-11-27": 20
  },
  "cupons": {
+  "ACABANDO": {
+   "criado": "2026-11-27T17:01-03:00",
+   "post": 2083,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
   "ACHADINHO": {
    "criado": "2026-11-26T18:07-03:00",
    "post": 1928,
@@ -19715,6 +19721,12 @@
    "status": "encerrado",
    "validade": "2026-11-18T23:59-03:00"
   },
+  "PLSPQEWMAD": {
+   "criado": "2026-11-27T17:01-03:00",
+   "post": 2084,
+   "status": "ativo",
+   "validade": "2026-11-28T23:59-03:00"
+  },
   "PM52MP66": {
    "criado": "2026-11-25T18:01-03:00",
    "post": 1820,
@@ -20016,9 +20028,9 @@
    "validade": "2026-11-28T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5793,
+ "cupons_extra_ultimo:cupombr": 5794,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6609,
+ "cupons_ml_ultimo": 6610,
  "cupons_shopee_enviado": "2026-11-27",
  "descoberta_em": "2026-11-27T08:02-03:00",
  "descobertos": {
@@ -70623,7 +70635,7 @@
   "2026-11-27": {
    "com_cupom": 14,
    "copias": 16,
-   "cupons": 32,
+   "cupons": 34,
    "posts": 66,
    "shopee": 46
   }
@@ -77723,6 +77735,28 @@
     }
    ],
    "criado": "2026-11-27T16:06-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "2083": {
+   "blocos": [
+    {
+     "codigo": "ACABANDO",
+     "html": "<b>🎟️ ACABANDO</b> 👉 <b>15% OFF</b>\nCompra mín.: R$599 · Desconto máx.: R$200\n⏰ Válido até 27/11\n👉 <a href=\"https://bit.ly/49iAwH2\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-27T17:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "2084": {
+   "blocos": [
+    {
+     "codigo": "PLSPQEWMAD",
+     "html": "<b>🎟️ PLSPQEWMAD</b> 👉 <b>R$25 OFF</b>\nCompra mín.: R$159\n⏰ Válido até 28/11"
+    }
+   ],
+   "criado": "2026-11-27T17:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
