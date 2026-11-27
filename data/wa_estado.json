@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 15,
-  "ultimo": "2026-11-27T13:00:09.164Z",
+  "enviados": 16,
+  "ultimo": "2026-11-27T13:05:28.265Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-27": 28
   },
   "membros_em": "2026-11-27T12:09:04.931Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -194,6 +194,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/9076LRsbtm",
         "p": 0
+      },
+      {
+        "h": "2026-11-27T13:05:28.265Z",
+        "n": "⏰ Válido até 28/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -426,7 +434,7 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T13:05:20.775Z",
+  "proximo_em": "2026-11-27T13:09:57.848Z",
   "ultima_categoria": "higiene",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
