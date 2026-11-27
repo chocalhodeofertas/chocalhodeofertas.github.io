@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 77,
-  "ultimo": "2026-11-27T20:09:46.068Z",
+  "enviados": 78,
+  "ultimo": "2026-11-27T20:14:12.412Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -690,6 +690,14 @@
         "r": "enviado",
         "k": null,
         "p": 9
+      },
+      {
+        "h": "2026-11-27T20:14:12.412Z",
+        "n": "⏰ Válido até 28/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -922,7 +930,7 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T20:14:04.518Z",
+  "proximo_em": "2026-11-27T20:21:41.257Z",
   "ultima_categoria": "higiene",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
