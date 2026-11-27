@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 16,
-  "ultimo": "2026-11-27T13:05:28.265Z",
+  "enviados": 18,
+  "ultimo": "2026-11-27T13:18:02.164Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-26": 28,
     "2026-11-27": 28
   },
-  "membros_em": "2026-11-27T12:09:04.931Z",
+  "membros_em": "2026-11-27T13:09:33.640Z",
   "ultima_loja": "ml",
   "max_dia": 150,
   "intervalo_min": 3,
@@ -201,6 +201,22 @@
         "l": "ml",
         "r": "enviado",
         "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T13:10:03.862Z",
+        "n": "⏰ Válido até 31/05",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4jcQF5K",
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T13:18:02.164Z",
+        "n": "⏰ Válido até 20/12",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4jAsdwh",
         "p": 9
       }
     ]
@@ -434,7 +450,7 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T13:09:57.848Z",
+  "proximo_em": "2026-11-27T13:23:46.337Z",
   "ultima_categoria": "higiene",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
