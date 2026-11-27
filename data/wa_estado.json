@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 70,
-  "ultimo": "2026-11-27T19:15:05.761Z",
+  "enviados": 72,
+  "ultimo": "2026-11-27T19:27:59.173Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-27": 28
   },
   "membros_em": "2026-11-27T18:44:07.526Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -634,6 +634,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/7AfSbeVD4Z",
         "p": 0.1401
+      },
+      {
+        "h": "2026-11-27T19:22:57.808Z",
+        "n": "👕 CAMISETA LED BLUSA PERSONAGENS MENINO INFATIL VERAO HOMEM ARANHA HULK PRESENT",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8KrQ0CyfPE",
+        "p": 0
+      },
+      {
+        "h": "2026-11-27T19:27:59.173Z",
+        "n": "🛁 Hipoglós Creme Preventivo de Assaduras, 120g",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2oFgpa5",
+        "p": 0.4428
       }
     ]
   },
@@ -866,8 +882,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T19:22:47.590Z",
-  "ultima_categoria": "outros",
+  "proximo_em": "2026-11-27T19:35:15.191Z",
+  "ultima_categoria": "higiene",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
