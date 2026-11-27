@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 88,
-  "ultimo": "2026-11-27T21:15:02.576Z",
+  "enviados": 89,
+  "ultimo": "2026-11-27T21:21:08.967Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-26": 28,
     "2026-11-27": 28
   },
-  "membros_em": "2026-11-27T20:45:06.618Z",
+  "membros_em": "2026-11-27T21:20:58.327Z",
   "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
@@ -778,6 +778,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/3g5aZZoSit",
         "p": 0.1875
+      },
+      {
+        "h": "2026-11-27T21:21:08.967Z",
+        "n": "✨ Kit 10 Saquinho Organizador Maternidade Bebê Enxoval Roupinha Pvc com Zíper",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/1qdwOav1lj",
+        "p": 0
       }
     ]
   },
@@ -1010,8 +1018,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T21:18:50.605Z",
-  "ultima_categoria": "livro",
+  "proximo_em": "2026-11-27T21:27:32.366Z",
+  "ultima_categoria": "outros",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
