@@ -14913,6 +14913,12 @@
    "status": "encerrado",
    "validade": "2026-11-25T23:59-03:00"
   },
+  "MADRUXPTMANA": {
+   "criado": "2026-11-27T08:00-03:00",
+   "post": 1994,
+   "status": "ativo",
+   "validade": "2026-11-28T23:59-03:00"
+  },
   "MAISCUPONS30": {
    "criado": "2026-11-19T10:59-03:00",
    "post": 1163,
@@ -15315,6 +15321,12 @@
    "status": "ativo",
    "validade": "2026-11-27T23:59-03:00"
   },
+  "SOHOJEBF": {
+   "criado": "2026-11-27T08:00-03:00",
+   "post": 1995,
+   "status": "ativo",
+   "validade": "2026-11-28T23:59-03:00"
+  },
   "SOUVIP25": {
    "criado": "2026-11-19T10:59-03:00",
    "post": 1163,
@@ -15472,7 +15484,7 @@
    "validade": "2026-11-28T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5765,
+ "cupons_extra_ultimo:cupombr": 5769,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6597,
  "cupons_shopee_enviado": "2026-11-26",
@@ -58812,7 +58824,7 @@
   "2026-11-27": {
    "com_cupom": 2,
    "copias": 5,
-   "cupons": 6,
+   "cupons": 8,
    "posts": 11,
    "shopee": 9
   }
@@ -65655,6 +65667,28 @@
     }
    ],
    "criado": "2026-11-27T00:22-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1994": {
+   "blocos": [
+    {
+     "codigo": "MADRUXPTMANA",
+     "html": "<b>🎟️ MADRUXPTMANA</b> 👉 <b>R$1200 OFF</b>\nCompra mín.: R$4000\n⏰ Válido até 28/11"
+    }
+   ],
+   "criado": "2026-11-27T08:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "1995": {
+   "blocos": [
+    {
+     "codigo": "SOHOJEBF",
+     "html": "<b>🎟️ SOHOJEBF</b> 👉 <b>12% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 28/11"
+    }
+   ],
+   "criado": "2026-11-27T08:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
