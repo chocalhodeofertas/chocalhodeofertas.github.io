@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 84,
-  "ultimo": "2026-11-27T20:51:55.200Z",
+  "enviados": 85,
+  "ultimo": "2026-11-27T20:57:03.861Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-27": 28
   },
   "membros_em": "2026-11-27T20:45:06.618Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -746,6 +746,14 @@
         "r": "enviado",
         "k": "https://meli.la/2HcPWSz",
         "p": 0.2872
+      },
+      {
+        "h": "2026-11-27T20:57:03.861Z",
+        "n": "🧸 Lançador de Avião Catapulta Brinquedo Planador Pistola Infantil Tiro ao Alvo",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/W8Yku227V",
+        "p": 0
       }
     ]
   },
@@ -978,8 +986,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T20:56:57.121Z",
-  "ultima_categoria": "higiene",
+  "proximo_em": "2026-11-27T21:01:40.012Z",
+  "ultima_categoria": "brinquedo",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
