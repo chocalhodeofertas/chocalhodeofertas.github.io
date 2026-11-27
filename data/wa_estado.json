@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 45,
-  "ultimo": "2026-11-27T15:54:49.147Z",
+  "enviados": 46,
+  "ultimo": "2026-11-27T16:01:31.776Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-27": 28
   },
   "membros_em": "2026-11-27T15:43:15.350Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -434,6 +434,14 @@
         "r": "enviado",
         "k": "https://meli.la/283ej8g",
         "p": 0.288
+      },
+      {
+        "h": "2026-11-27T16:01:31.776Z",
+        "n": "🧸 GIRO MÁGICO BRINQUEDO INFANTIL EDUCATIVO 3D COLORIDO",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2LaCdENHAW",
+        "p": 0
       }
     ]
   },
@@ -666,7 +674,7 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T16:01:23.036Z",
+  "proximo_em": "2026-11-27T16:04:57.019Z",
   "ultima_categoria": "brinquedo",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
