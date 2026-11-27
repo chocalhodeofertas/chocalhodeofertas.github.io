@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 14,
-  "ultimo": "2026-11-27T12:56:08.876Z",
+  "enviados": 15,
+  "ultimo": "2026-11-27T13:00:09.164Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-27": 28
   },
   "membros_em": "2026-11-27T12:09:04.931Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -186,6 +186,14 @@
         "r": "enviado",
         "k": "https://meli.la/2eBPdUe",
         "p": 0.3159
+      },
+      {
+        "h": "2026-11-27T13:00:09.164Z",
+        "n": "🛁 Toalha de Banho Para Bebê 100% algodão Com Capuz Super Macia Absorvente Para ",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/9076LRsbtm",
+        "p": 0
       }
     ]
   },
@@ -418,8 +426,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T13:00:01.756Z",
-  "ultima_categoria": "fralda",
+  "proximo_em": "2026-11-27T13:05:20.775Z",
+  "ultima_categoria": "higiene",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }

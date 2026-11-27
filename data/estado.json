@@ -18443,6 +18443,12 @@
    "status": "encerrado",
    "validade": "2026-11-22T23:59-03:00"
   },
+  "HORABLACK": {
+   "criado": "2026-11-27T10:00-03:00",
+   "post": 2010,
+   "status": "ativo",
+   "validade": "2026-11-28T23:59-03:00"
+  },
   "HORADOCUPOM25": {
    "criado": "2026-11-17T14:02-03:00",
    "post": 971,
@@ -18845,6 +18851,12 @@
    "status": "ativo",
    "validade": "2026-12-20T23:59-03:00"
   },
+  "PRECINHOBLACK": {
+   "criado": "2026-11-27T10:00-03:00",
+   "post": 2010,
+   "status": "ativo",
+   "validade": "2026-11-28T23:59-03:00"
+  },
   "PROMOAGORA": {
    "criado": "2026-11-26T10:00-03:00",
    "post": 1871,
@@ -19086,7 +19098,7 @@
    "validade": "2026-11-28T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5775,
+ "cupons_extra_ultimo:cupombr": 5776,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
  "cupons_ml_ultimo": 6599,
  "cupons_shopee_enviado": "2026-11-27",
@@ -64767,7 +64779,7 @@
   "2026-11-27": {
    "com_cupom": 6,
    "copias": 9,
-   "cupons": 13,
+   "cupons": 15,
    "posts": 21,
    "shopee": 15
   }
@@ -71672,6 +71684,21 @@
    "criado": "2026-11-27T09:40-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "2010": {
+   "blocos": [
+    {
+     "codigo": "PRECINHOBLACK",
+     "html": "<b>🎟️ PRECINHOBLACK</b> 👉 <b>R$300 OFF</b>\n⏰ Válido até 28/11"
+    },
+    {
+     "codigo": "HORABLACK",
+     "html": "<b>🎟️ HORABLACK</b> 👉 <b>20% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$100\n⏰ Válido até 28/11"
+    }
+   ],
+   "criado": "2026-11-27T10:00-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupons do Mercado Livre</b>"
   },
   "836": {
    "blocos": [
