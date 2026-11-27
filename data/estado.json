@@ -19423,6 +19423,12 @@
    "status": "encerrado",
    "validade": "2026-11-26T23:59-03:00"
   },
+  "QEQPLAMDPRASD": {
+   "criado": "2026-11-27T14:01-03:00",
+   "post": 2060,
+   "status": "ativo",
+   "validade": "2026-11-28T23:59-03:00"
+  },
   "QUEROJA30": {
    "criado": "2026-11-25T11:03-03:00",
    "post": 1753,
@@ -19498,6 +19504,12 @@
   "SUPEROFERTA": {
    "criado": "2026-11-26T11:00-03:00",
    "post": 1882,
+   "status": "ativo",
+   "validade": "2026-11-27T23:59-03:00"
+  },
+  "SUPEROFF": {
+   "criado": "2026-11-27T14:01-03:00",
+   "post": 2059,
    "status": "ativo",
    "validade": "2026-11-27T23:59-03:00"
   },
@@ -19646,9 +19658,9 @@
    "validade": "2026-11-28T23:59-03:00"
   }
  },
- "cupons_extra_ultimo:cupombr": 5786,
+ "cupons_extra_ultimo:cupombr": 5787,
  "cupons_extra_ultimo:cupombr:erro_dia": "2026-11-14",
- "cupons_ml_ultimo": 6606,
+ "cupons_ml_ultimo": 6607,
  "cupons_shopee_enviado": "2026-11-27",
  "descoberta_em": "2026-11-27T08:02-03:00",
  "descobertos": {
@@ -68184,7 +68196,7 @@
   "2026-11-27": {
    "com_cupom": 11,
    "copias": 15,
-   "cupons": 27,
+   "cupons": 29,
    "posts": 50,
    "shopee": 37
   }
@@ -75241,6 +75253,28 @@
     }
    ],
    "criado": "2026-11-27T11:51-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "2059": {
+   "blocos": [
+    {
+     "codigo": "SUPEROFF",
+     "html": "<b>🎟️ SUPEROFF</b> 👉 <b>R$250 OFF</b>\nCompra mín.: R$1.499\n⏰ Válido até 27/11\n👉 <a href=\"https://bit.ly/4jcWzUc\">Ativar o cupom</a>"
+    }
+   ],
+   "criado": "2026-11-27T14:01-03:00",
+   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
+   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
+  },
+  "2060": {
+   "blocos": [
+    {
+     "codigo": "QEQPLAMDPRASD",
+     "html": "<b>🎟️ QEQPLAMDPRASD</b> 👉 <b>20% OFF</b>\nCompra mín.: R$79 · Desconto máx.: R$60\n⏰ Válido até 28/11"
+    }
+   ],
+   "criado": "2026-11-27T14:01-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
