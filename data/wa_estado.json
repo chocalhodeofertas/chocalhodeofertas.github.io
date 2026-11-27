@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 58,
-  "ultimo": "2026-11-27T17:47:39.420Z",
+  "enviados": 59,
+  "ultimo": "2026-11-27T17:54:05.500Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -538,6 +538,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/3qP0XeAcFt",
         "p": 0.0835
+      },
+      {
+        "h": "2026-11-27T17:54:05.500Z",
+        "n": "🛁 Sabonete Líquido Granado Glicerina Bebê 500ml",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3B9JknuB8U",
+        "p": 0
       }
     ]
   },
@@ -770,8 +778,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T17:53:55.984Z",
-  "ultima_categoria": "roupa",
+  "proximo_em": "2026-11-27T18:01:49.380Z",
+  "ultima_categoria": "higiene",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
