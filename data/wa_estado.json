@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-26",
-  "enviados": 104,
-  "ultimo": "2026-11-26T23:55:12.523Z",
+  "enviados": 107,
+  "ultimo": "2026-11-27T00:13:02.442Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-25": 32,
     "2026-11-26": 28
   },
-  "membros_em": "2026-11-26T23:07:34.985Z",
+  "membros_em": "2026-11-27T00:08:05.655Z",
   "ultima_loja": "shopee",
   "max_dia": 130,
   "intervalo_min": 3,
@@ -858,6 +858,30 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/3g5Z8NrdQq",
         "p": 0
+      },
+      {
+        "h": "2026-11-27T00:02:31.691Z",
+        "n": "⏰ Válido até 27/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T00:06:55.267Z",
+        "n": "⏰ Válido até 23/12",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://bit.ly/4APAnXs",
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T00:13:02.442Z",
+        "n": "🛁 kit 3 peças Higiene Bucal para Bebê 3 em 1 Escova de Dentes Silicone Limpador",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7AfRKfTT0h",
+        "p": 0
       }
     ]
   },
@@ -1090,6 +1114,6 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T00:02:23.148Z",
-  "ultima_categoria": "roupa"
+  "proximo_em": "2026-11-27T00:20:16.578Z",
+  "ultima_categoria": "higiene"
 }
