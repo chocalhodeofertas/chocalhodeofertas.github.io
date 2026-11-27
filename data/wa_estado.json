@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 73,
-  "ultimo": "2026-11-27T19:35:24.347Z",
+  "enviados": 75,
+  "ultimo": "2026-11-27T19:53:32.930Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-26": 28,
     "2026-11-27": 28
   },
-  "membros_em": "2026-11-27T18:44:07.526Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-27T19:44:40.081Z",
+  "ultima_loja": "ml",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -658,6 +658,22 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/3VmAFziVA9",
         "p": 0.0602
+      },
+      {
+        "h": "2026-11-27T19:46:35.736Z",
+        "n": "✨ Shampoo Johnson's Baby Glicerina Hipoalergênico 750ml",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/28xGnDR",
+        "p": 0.316
+      },
+      {
+        "h": "2026-11-27T19:53:32.930Z",
+        "n": "🛁 2 em 1 Shampoo e Condicionador Infantil JOHNSON’S 400ml",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2XZCMTq",
+        "p": 0.3891
       }
     ]
   },
@@ -890,8 +906,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T19:38:43.745Z",
-  "ultima_categoria": "outros",
+  "proximo_em": "2026-11-27T20:00:22.895Z",
+  "ultima_categoria": "higiene",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
