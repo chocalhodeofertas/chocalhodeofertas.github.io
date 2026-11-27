@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 5,
-  "ultimo": "2026-11-27T11:25:30.474Z",
+  "enviados": 10,
+  "ultimo": "2026-11-27T12:31:24.436Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-26": 28,
     "2026-11-27": 28
   },
-  "membros_em": "2026-11-27T11:08:52.043Z",
+  "membros_em": "2026-11-27T12:09:04.931Z",
   "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
@@ -114,6 +114,46 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/8VApfyliTA",
         "p": 0.0901
+      },
+      {
+        "h": "2026-11-27T12:04:54.540Z",
+        "n": "⏰ Válido até 28/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
+      },
+      {
+        "h": "2026-11-27T12:11:48.944Z",
+        "n": "🚼 Carrinho De Passeio Bebê Alça Reversível Fechamento Compacto Bandeja Removíve",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2xVEHxQ",
+        "p": 0.29
+      },
+      {
+        "h": "2026-11-27T12:18:23.007Z",
+        "n": "🧷 Kit C/12 Lenço Umedecido Lara Baby Premium 100 Unidades Total 1200",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8AXzKh8ssG",
+        "p": 0
+      },
+      {
+        "h": "2026-11-27T12:26:07.635Z",
+        "n": "✨ Fralda Descartável Turma da Mônica Baby XG Pacote 42 Unidades",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2iDJHoN",
+        "p": 0.3486
+      },
+      {
+        "h": "2026-11-27T12:31:24.436Z",
+        "n": "🧸 Brinquedo de Macaco de Equilíbrio Jogo de Tabuleiro Montessori Brinquedo de M",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/40iQNTidav",
+        "p": 0
       }
     ]
   },
@@ -346,8 +386,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T11:31:43.273Z",
-  "ultima_categoria": "fralda",
+  "proximo_em": "2026-11-27T12:37:32.872Z",
+  "ultima_categoria": "brinquedo",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
