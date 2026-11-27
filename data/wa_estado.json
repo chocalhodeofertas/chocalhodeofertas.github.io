@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 36,
-  "ultimo": "2026-11-27T15:06:06.471Z",
+  "enviados": 37,
+  "ultimo": "2026-11-27T15:09:56.343Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-26": 28,
     "2026-11-27": 28
   },
-  "membros_em": "2026-11-27T14:10:01.198Z",
+  "membros_em": "2026-11-27T15:10:36.541Z",
   "ultima_loja": "ml",
   "max_dia": 150,
   "intervalo_min": 3,
@@ -362,6 +362,14 @@
         "r": "enviado",
         "k": "https://bit.ly/4jzrwTV",
         "p": 9
+      },
+      {
+        "h": "2026-11-27T15:09:56.343Z",
+        "n": "⏰ Válido até 28/11",
+        "l": "ml",
+        "r": "enviado",
+        "k": null,
+        "p": 9
       }
     ]
   },
@@ -594,7 +602,7 @@
       ]
     }
   },
-  "proximo_em": "2026-11-27T15:09:47.242Z",
+  "proximo_em": "2026-11-27T15:17:09.798Z",
   "ultima_categoria": "outros",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
