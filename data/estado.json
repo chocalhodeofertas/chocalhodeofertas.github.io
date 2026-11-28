@@ -20128,12 +20128,6 @@
    "status": "encerrado",
    "validade": "2026-11-27T23:59-03:00"
   },
-  "OFFHOJENOML": {
-   "criado": "2026-11-17T09:00-03:00",
-   "post": 930,
-   "status": "encerrado",
-   "validade": "2026-11-18T23:59-03:00"
-  },
   "OFFSEMPRE": {
    "criado": "2026-11-23T10:06-03:00",
    "post": 1594,
@@ -78764,17 +78758,6 @@
     }
    ],
    "criado": "2026-11-28T08:04-03:00",
-   "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
-   "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
-  },
-  "930": {
-   "blocos": [
-    {
-     "codigo": "OFFHOJENOML",
-     "html": "<b>🎟️ OFFHOJENOML</b> 👉 <b>10% OFF</b>\nDesconto máx.: R$100\n⏰ Válido até 18/11"
-    }
-   ],
-   "criado": "2026-11-17T09:00-03:00",
    "rodape": "Cupons têm quantidade e prazo limitados. Ative no app antes de comprar.",
    "titulo": "🎟️ <b>Cupom do Mercado Livre</b>"
   },
