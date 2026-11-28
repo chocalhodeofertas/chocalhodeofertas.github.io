@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-28",
-  "enviados": 25,
-  "ultimo": "2026-11-28T13:13:08.534Z",
+  "enviados": 28,
+  "ultimo": "2026-11-28T13:32:31.093Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-28": 27
   },
   "membros_em": "2026-11-28T13:01:06.696Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -226,6 +226,30 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/gS02jv5tO",
         "p": 0
+      },
+      {
+        "h": "2026-11-28T13:19:55.173Z",
+        "n": "🚼 Cadeirinha Cosco Kids, Progress, 0 a 36kg, Preto",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2PJCTUP",
+        "p": 0.0923
+      },
+      {
+        "h": "2026-11-28T13:25:45.963Z",
+        "n": "👕 Kit 2 Pares Chinelo Sandalia Feminino Infantil Slim Calçado Criança Menina Ki",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/2gD4Ql0zoL",
+        "p": 0
+      },
+      {
+        "h": "2026-11-28T13:32:31.093Z",
+        "n": "🛁 Pomada Bepantol Baby 120g Creme Preventivo Assaduras Hipoalergênico",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/18q9R3K",
+        "p": 0.3495
       }
     ]
   },
@@ -465,7 +489,7 @@
       ]
     }
   },
-  "proximo_em": "2026-11-28T13:19:45.368Z",
+  "proximo_em": "2026-11-28T13:39:47.212Z",
   "ultima_categoria": "higiene",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
