@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-28",
-  "enviados": 36,
-  "ultimo": "2026-11-28T14:20:49.285Z",
+  "enviados": 39,
+  "ultimo": "2026-11-28T14:48:49.844Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-27": 27,
     "2026-11-28": 27
   },
-  "membros_em": "2026-11-28T13:52:42.430Z",
+  "membros_em": "2026-11-28T14:52:55.284Z",
   "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
@@ -314,6 +314,30 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/Lp9jtoD3P",
         "p": 0
+      },
+      {
+        "h": "2026-11-28T14:33:56.175Z",
+        "n": "✨ Cozinha De Brinquedo Infantil Completa Princess Replay Kids",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2nvA4BA",
+        "p": 0.2185
+      },
+      {
+        "h": "2026-11-28T14:43:43.324Z",
+        "n": "🧷 Kit 2 Fraldas Turma da Mônica Baby Jumbo RN com 36un cada",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/8fUHgmjEIr",
+        "p": 0.1652
+      },
+      {
+        "h": "2026-11-28T14:48:49.844Z",
+        "n": "🧸 Tapete Infantil Bebê Térmico Dobrável Lavável Multicolorido para Brincar Enga",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/40iS8Yf2yL",
+        "p": 0
       }
     ]
   },
@@ -553,8 +577,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-28T14:28:06.535Z",
-  "ultima_categoria": "outros",
+  "proximo_em": "2026-11-28T14:55:29.882Z",
+  "ultima_categoria": "brinquedo",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
