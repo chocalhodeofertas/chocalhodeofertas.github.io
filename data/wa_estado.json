@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-28",
-  "enviados": 21,
-  "ultimo": "2026-11-28T12:52:56.009Z",
+  "enviados": 22,
+  "ultimo": "2026-11-28T13:00:01.250Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-27": 27,
     "2026-11-28": 27
   },
-  "membros_em": "2026-11-28T12:00:38.433Z",
+  "membros_em": "2026-11-28T13:01:06.696Z",
   "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
@@ -193,6 +193,14 @@
         "l": "shopee",
         "r": "enviado",
         "k": "https://s.shopee.com.br/4qHYzIgRIT",
+        "p": 0
+      },
+      {
+        "h": "2026-11-28T13:00:01.250Z",
+        "n": "✨ Babá Eletrônica com Monitor Visão Noturna Áudio Bidirecional Sensor de Tempera",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/1gKXE1wI4l",
         "p": 0
       }
     ]
@@ -433,8 +441,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-28T12:59:55.399Z",
-  "ultima_categoria": "roupa",
+  "proximo_em": "2026-11-28T13:05:18.601Z",
+  "ultima_categoria": "outros",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
