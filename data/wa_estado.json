@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-28",
-  "enviados": 31,
-  "ultimo": "2026-11-28T13:51:21.018Z",
+  "enviados": 32,
+  "ultimo": "2026-11-28T13:56:22.800Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,8 +17,8 @@
     "2026-11-27": 27,
     "2026-11-28": 27
   },
-  "membros_em": "2026-11-28T13:01:06.696Z",
-  "ultima_loja": "shopee",
+  "membros_em": "2026-11-28T13:52:42.430Z",
+  "ultima_loja": "ml",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -274,6 +274,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/7Kyu1aoLIY",
         "p": 0
+      },
+      {
+        "h": "2026-11-28T13:56:22.800Z",
+        "n": "🧸 LEGO Classic Caixa Média de Peças Criativas 10696; peças LEGO em 35 cores dif",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2Sosy4k",
+        "p": 0.2857
       }
     ]
   },
@@ -513,8 +521,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-28T13:56:15.675Z",
-  "ultima_categoria": "higiene",
+  "proximo_em": "2026-11-28T13:59:33.479Z",
+  "ultima_categoria": "brinquedo",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
