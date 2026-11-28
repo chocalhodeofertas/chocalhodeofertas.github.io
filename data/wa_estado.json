@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-28",
-  "enviados": 56,
-  "ultimo": "2026-11-28T16:49:47.393Z",
+  "enviados": 57,
+  "ultimo": "2026-11-28T17:01:34.950Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-28": 27
   },
   "membros_em": "2026-11-28T16:53:47.762Z",
-  "ultima_loja": "shopee",
+  "ultima_loja": "ml",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -474,6 +474,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/7VIKRIdXQi",
         "p": 0
+      },
+      {
+        "h": "2026-11-28T17:01:34.950Z",
+        "n": "🧸 Bicicleta de Equilíbrio Brinq Kids Brinquei Vermelho para Crianças 12m+",
+        "l": "ml",
+        "r": "enviado",
+        "k": "https://meli.la/2bKrgJ9",
+        "p": 0.2894
       }
     ]
   },
@@ -713,8 +721,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-28T16:56:07.791Z",
-  "ultima_categoria": "outros",
+  "proximo_em": "2026-11-28T17:09:33.245Z",
+  "ultima_categoria": "brinquedo",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
