@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-28",
-  "enviados": 28,
-  "ultimo": "2026-11-28T13:32:31.093Z",
+  "enviados": 29,
+  "ultimo": "2026-11-28T13:39:58.563Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -18,7 +18,7 @@
     "2026-11-28": 27
   },
   "membros_em": "2026-11-28T13:01:06.696Z",
-  "ultima_loja": "ml",
+  "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
   "intervalo_max": 8,
@@ -250,6 +250,14 @@
         "r": "enviado",
         "k": "https://meli.la/18q9R3K",
         "p": 0.3495
+      },
+      {
+        "h": "2026-11-28T13:39:58.563Z",
+        "n": "🧷 Fralda Turma da Mônica Baby Jumbo RN com 36un",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/3LSlFhutxw",
+        "p": 0.1581
       }
     ]
   },
@@ -489,8 +497,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-28T13:39:47.212Z",
-  "ultima_categoria": "higiene",
+  "proximo_em": "2026-11-28T13:45:52.242Z",
+  "ultima_categoria": "fralda",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
