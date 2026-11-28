@@ -1,8 +1,8 @@
 {
   "inicio": "2026-11-10T14:43:38.586Z",
   "dia": "2026-11-27",
-  "enviados": 108,
-  "ultimo": "2026-11-28T00:50:31.778Z",
+  "enviados": 109,
+  "ultimo": "2026-11-28T00:56:23.061Z",
   "grupo": "120363431175807801@g.us",
   "conectado": true,
   "membros": {
@@ -17,7 +17,7 @@
     "2026-11-26": 28,
     "2026-11-27": 27
   },
-  "membros_em": "2026-11-28T00:21:50.855Z",
+  "membros_em": "2026-11-28T01:22:00.315Z",
   "ultima_loja": "shopee",
   "max_dia": 150,
   "intervalo_min": 3,
@@ -938,6 +938,14 @@
         "r": "enviado",
         "k": "https://s.shopee.com.br/30pu17Yxhp",
         "p": 0
+      },
+      {
+        "h": "2026-11-28T00:56:23.061Z",
+        "n": "✨ Sapatilha Infantil Menina Ploc Anatômica Flexível e Delicada",
+        "l": "shopee",
+        "r": "enviado",
+        "k": "https://s.shopee.com.br/7KytBW82Xp",
+        "p": 0
       }
     ]
   },
@@ -1177,8 +1185,8 @@
       ]
     }
   },
-  "proximo_em": "2026-11-28T00:54:40.928Z",
-  "ultima_categoria": "brinquedo",
+  "proximo_em": "2026-11-28T00:59:35.357Z",
+  "ultima_categoria": "outros",
   "virada_dia": "2026-11-27",
   "virada_enviados": 6
 }
